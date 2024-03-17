@@ -1,0 +1,370 @@
+<div><span>Q1</span> - <p>   nbsp;<strong><img src="https://docs.google.com/drawings/d/sHK1PAhdWDF0LUeJdrYGomQ/image?w=73&h=52&rev=1&ac=1"></strong><img src="https://gateoverflow.in/?qa=blob&qa_blobid=214942699162919152"><strong><img src="https://docs.google.com/drawings/d/sg3pYMtYr9mEZEV9y8iuUgA/image?w=59&h=84&rev=1&ac=1"></strong><img src="https://gateoverflow.in/?qa=blob&qa_blobid=214942699162919152"><strong><img src="https://docs.google.com/drawings/d/sGXwvW-98BPNp1_QhsNajUQ/image?w=73&h=52&rev=1&ac=1"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=1819414050751234175"> <img src="https://docs.google.com/drawings/d/srpA7h_3oGtJR7ThfotYIJg/image?w=61&h=79&rev=1&ac=1"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=1819414050751234175"><img src="https://docs.google.com/drawings/d/shE0VGYLUmF2JdZo-LT8rDQ/image?w=63&h=60&rev=1&ac=1"></strong></p>
+
+<p>What is the minimum number of tables required to represent this E-R diagram in the relational model? Considering that    nbsp;for both R1 and R2 cardinality is 1:1</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Under what condition does the selection operation distribute over theta join operation?</p>
+
+<p>Let R and S are two relations then which one of the following statements about the above condition is TRUE?</p>
+
+<ol start="1" style="list-style-type:lower-roman">
+	<li>σ C   nbsp;(R ⋈   nbsp;S) ≡   nbsp; (σ C1   nbsp;(R)) ⋈ (σ C2   nbsp;(S))</li>
+	<li>σ C   nbsp;(R ⋈ S) ≡ (σ C   nbsp;(R)) ⋈   nbsp;S</li>
+	<li>σ C   nbsp;(R ⋈ S ) ≡σ C2   nbsp;( (σ C1   nbsp;(R)) ⋈ S)</li>
+	<li>σ C   nbsp;(R ⋈   nbsp;S ) ≡   nbsp;σ C1   nbsp;(    nbsp;R ⋈ (σ C2   nbsp; (S)))</li>
+</ol>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>i, iii</li>
+	<li>i, ii, iii, iv</li>
+	<li>ii, iii</li>
+	<li>i, ii</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Suppose that the transaction T1 and T2 access the same database items.</p>
+
+<p>
+    [             T1        amp; T2;        read(X)           amp;;     nbsp;X=X-N           amp;;                  amp; read(X);                    amp; X=X+N;       write(X)           amp;;                amp; write (X);                ]
+</p>
+
+<p>Which one of the following statements is correct about these two transactions?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>Dirty Read will occur</li>
+	<li>Lost update will occur</li>
+	<li>Both T1 and T2 are serial schedule</li>
+	<li>This is an example of uncommitted data problem</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p><img src="https://gateoverflow.in/?qa=blob&qa_blobid=8587637091031364824"></p>
+
+<p>Each dealer owns one or more cars and each car is owned by at-most one dealer. If Dealer table   nbsp;has 20 tuples and Cars table has 60 tuples then owns table can have maximum _____ number of tuples</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Two transactions of T1 and T2 are given as follows:<br>
+T1: R1(A) W1(A)    nbsp;R1(B)    nbsp;W1(B)<br>
+T2 :  R2(B) W2(B)    nbsp;R2(C)    nbsp;W2(C)</p>
+
+<p>Total number of Conflict Serializable schedules    nbsp;formed by T1 and T2 are</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>2</li>
+	<li>70</li>
+	<li>54</li>
+	<li>12</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>In SQL the statement</p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+→ Select * from R ,S </pre>
+
+<p>   nbsp;   nbsp;is equivalent to:</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select * from R natural join S
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select * from R inner join S
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select * from R cross join S
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select * from R union join S
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following schedule for transactions T1, T2 , these transactions have two phase locking:</p>
+
+<table border="0" cellpadding="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>T1:</td>
+			<td>lock- S(A)<br>
+			Read (A)<br>
+			Lock –X (B)<br>
+			Read (B)<br>
+			B = A +B<br>
+			Write (B)<br>
+			Unlock (A)    nbsp;   nbsp;   nbsp;<br>
+			   nbsp;Unlock(B)</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>lock-X(A)<br>
+			Lock- S(B)<br>
+			write (A)<br>
+			Read (B)<br>
+			Unlock(A)<br>
+			Unlock(B)</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>
+    [              T1:   amp; Lock_S(A);                     amp; Read (A);                  amp; Lock _X (B);                     amp; Read (B);                    amp; B = A + B;                    amp; Write (B);                   amp; Unlock (A);                              amp;            nbsp;   nbsp;Unlock(B)            nbsp;;              T2:   amp; Lock_X(A);                    amp; Lock_S(B);     amp;Write(A);                      amp; Read(B);                    amp; Unlock(A);                    amp; Unlock(B)            nbsp;;                  ]
+</p>
+
+<p>Which one of the statements below is the correct statement about T1 and T2?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>T1 and T2 are deadlock free</li>
+	<li>T1 and T2 results in a deadlock</li>
+	<li>T1 and T2 are serial schedule</li>
+	<li>none of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>The rule that a value of a foreign key must appear as a value of some specific table is called a</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>Referential constraint</li>
+	<li>Index</li>
+	<li>Integrity constraint</li>
+	<li>Functional dependency</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following database with primary keys in <strong>Bold</strong></p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+Project(<strong>P_No</strong>,    nbsp;P_Name, P_Incharge) Employee(<strong>E_No</strong>, E_Name)   nbsp;Assigned_To(<strong>P_No</strong>, <strong>E_No</strong>)</pre>
+
+<p>Which    nbsp;sentence    nbsp;represent the following    nbsp;relational algebra?</p>
+
+<p>Employee ⋈ (Assigned_To) ÷ ( Π P_No (Project) )</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>List names of the employees working on all projects.</li>
+	<li>List project number of    nbsp;all the employees working on    nbsp;projects.</li>
+	<li>List details of the employees working on at least one    nbsp;projects.</li>
+	<li>List details of the employees working on all the projects.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the relation R(A, B, C, D, E) with the set of function dependencies: F = { AB → C,  &nbsp;    nbsp;D → E,  &nbsp; A → D }   nbsp; The candidate Key is _____</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>BC    nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>AB    nbsp;   nbsp;   nbsp;</li>
+	<li>BAC    nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>AD</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following database schedule with 3 transactions, T1 ,T2 and T3. Where r stands for READ, w for WRITE.</p>
+
+<p>S : r2 (A); r1 (B); w2 (A); r2 (B); r3 (A); w1 (B); w3(A); w2 (B)</p>
+
+<p>Which one of the following statements about the above schedule is TRUE?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>the schedule is    nbsp;serializable</li>
+	<li>the schedule is not    nbsp;serializable</li>
+	<li>schedule will not execute</li>
+	<li>this schedule have deadlock</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which one is NOT True among these statements:</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>In B+-tree, data pointers are stored only at the leaf nodes of the tree</li>
+	<li>Any   nbsp;B-tree is a search tree may not be always balanced</li>
+	<li>In a B-tree, every value of the search field appears once at some level in the tree</li>
+	<li>The leaf nodes of the B+-tree are linked together to provide ordered access on the search field to the records</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>A student can register for at most p   nbsp;courses and each course can have at most v students. Each student is enrolled to at least one course and each course has at least one student.</p>
+
+<p>This schema is normalized into three tables:<br>
+Student, Registers, Courses</p>
+
+<p>The number of tuples in student and course tables are X and Y respectively. Which of the following need not be<strong> </strong>correct?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>Y ≥ 1</li>
+	<li>Y ≤ p ^*   nbsp;X</li>
+	<li>X ≥ v ^*    nbsp;Y</li>
+	<li>X    gt; 0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - Let there is a Table named Stud_records  with 3000 records of fixed length, each record size is 50 Bytes and records are stored in a block of size 512 Bytes, If secondary index is built on the key field of size 10 Bytes and a block pointer of size 5 Bytes , then the number of first level index blocks are ______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Let R = (A,B,C), and let r1 and r2 both be relations on schema R.   nbsp;Select   nbsp;a   nbsp;SQL expression   nbsp;among these options that is equivalent to the following query. Π AB(r1) ⋈Π BC(r2)</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select r1.A, r2.B, r2.C   nbsp;from r1, r2   nbsp;where r1.B = r2.B
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select * from r1 where (A, B, C) in (select *from r2)
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select r1.A    nbsp;from r1 where (A, B, C) not in (select ∗ from r2)</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+select r1.A   nbsp;, r2.B , r1.C   nbsp; from r1, r2 where r1.B = r2.B</pre>
+
+	<p>   nbsp;</p>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>The FD A → B,  &nbsp;   nbsp;DB →   nbsp;C implies</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>DA → C</li>
+	<li>A → C</li>
+	<li>B → A</li>
+	<li>DB → A</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>This is an Instance of Sailors Relation</p>
+
+<p>
+    Sailors Table   nbsp;[        S_ID amp; S_Name amp; Rating    amp; Age       nbsp;;          18  amp; Jones      amp; 3  amp; 30.00       nbsp;;          41       nbsp;  amp; Jonah      amp; 6       nbsp;  amp; 56.00       nbsp;       nbsp;       nbsp;;          22       nbsp;   amp; Ahab      amp; 7       nbsp;  amp; 44.00       nbsp;;          63       nbsp;   amp; Moby   amp; Null       nbsp;  amp; 15.00       nbsp;;             ]
+</p>
+
+<p>Consider the following query:</p>
+
+<p>   nbsp;Find the names of sailors with a higher rating than all sailors with age    lt; 21.</p>
+
+<p>Which one among these SQL queries attempt to obtain the answer to this question?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT S.sname FROM Sailors S WHERE NOT EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age    lt; 21    nbsp;AND S.rating    lt;= S2.rating )</pre>
+	</li>
+	<li>
+	<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT * FROM Sailors S WHERE S.rating    gt; ANY ( SELECT S2.rating FROM Sailors S2 WHERE S2.age    lt; 21 )
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT S.sname FROM Sailors S WHERE EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age    lt; 21 AND S.rating    lt;= S2.rating )</pre>
+	</li>
+	<li>
+	<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT S.sname FROM Sailors S WHERE S.rating    gt;ALL ( SELECT S2.rating    nbsp;FROM Sailors S2 WHERE S2.age    lt; 21 )
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>R (A,B,C,D) is a relation.   nbsp;Which of the following does not have a lossless join dependency preserving BCNF decomposition</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>A → B,  B → CD</li>
+	<li>A → B,  B → C,  C → D</li>
+	<li>AB → C,&nbsp; C → AD</li>
+	<li>A → BCD</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Which is the best file organization when data is frequently added or deleted from a file?</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>Sequential</li>
+	<li>Direct</li>
+	<li>Index sequential</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What is the Minimum space utilization for a B+ Tree index node:</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>80 %</li>
+	<li>60 %</li>
+	<li>50 %</li>
+	<li>75 %</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>A transaction is in __________ state after the final statement has been executed.</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>partially committed</li>
+	<li>active</li>
+	<li>committed</li>
+	<li>aborted</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Consider the following set of relations:    nbsp;   nbsp;<br>
+EMP(<strong>eno</strong>, ename, dno)<br>
+DEPT(<strong>dno</strong>,dname)<br>
+Primary key columns are in <strong>bold</strong>   nbsp;and dno in EMP is a <em>foreign key</em> referring primary key of DEPT table.</p>
+
+<p>Now consider the following queries:</p>
+
+<p><strong>QUERY : 1</strong></p>
+
+<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT * FROM emp e, dept d WHERE e.dno = d.dno;</pre>
+
+<p><strong>QUERY : 2</strong></p>
+
+<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT * FROM emp NATURAL JOIN dept ;</pre>
+
+<p>Then which of the following statements are <strong>TRUE</strong> regarding the above queries?</p>
+
+<ol start="1" style="list-style-type: upper-roman;">
+	<li>Both Query:1 and Query:2 returns same no of rows.</li>
+	<li>Both Query:1 and Query:2 returns same no of columns.</li>
+	<li>Both Query:1 and Query:2 returns different no of rows.</li>
+	<li>Both Query:1 and Query:2 returns different no of columns.</li>
+</ol>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>I, II only</li>
+	<li>I, IV only</li>
+	<li>II, III only</li>
+	<li>III, IV only</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Given R(A,B,C,D,E) with the set of FDs,<br>
+FAB→CD,    nbsp;ABC → E, C → A<br>
+the normal form of R is</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>2NF</li>
+	<li>BCNF</li>
+	<li>4NF</li>
+	<li>3NF</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - Let the search key field of a B+ tree is 4 Bytes , the disk block size is 199 Bytes , and the index pointer is 3 Bytes, then the order of B+ tree is _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Checkpoints are a part of</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>Recovery measures</li>
+	<li>Security measures</li>
+	<li>Concurrency measures</li>
+	<li>Authorization measures</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>Consider the following relations<br>
+Employee (E#, Ename, salary, Bdate, D#)<br>
+Department (D#, Dname, mgremp#, Location)<br>
+Dependent (E#, DependentName)</p>
+
+<p>Which among these tuple calculus queries represent the following condition:</p>
+
+<p>List the names of mangers who have at least one dependent.</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[mgremp#] ∧ m[E#] = u[mgremp#])</li>
+	<li>e[Ename] | e ∈ EMPLOYEE ∧ ∃d (d ∈ DEPARTMENT ∧ d[Ename] = ‘manager’ ∧ e[D#] = d[D#])</li>
+	<li>m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ e[E#] = u[mgremp#] ∧ m[D#] = u[mgremp#])</li>
+	<li>e[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[D#] ∧ m[E#] = u[D#])</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>What does the following relational algebra expression represent ?</p>
+
+<p>Consider the relations given below with keys in <strong>Bold</strong> :<br>
+Branch (<strong>branch no</strong>, street,    nbsp;city)<br>
+Staff (<strong>staff No</strong>, name, salary, branch No, position, DOB)<br>
+propertyForRent (<strong>property No, staff No</strong>, rent)</p>
+
+<p>Answer this    nbsp;query in relational algebra :</p>
+
+<p>List the Staff Numbers of    nbsp;Staffs who have not rent any property</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>ΠstaffNo (Staff) - Π propertyNo (propertyForRent)</li>
+	<li>Π staffNo (Staff) U Π staffNo (propertyForRent)</li>
+	<li>Π staffNo (Staff) -    nbsp;Π staffNo (propertyForRent)</li>
+	<li>Π staffNo (Staff) * ΠstaffNo(rent)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>What does the following Tuple Relational Calculus query produce?</p>
+
+<p>The expression σ<sub>θ1   nbsp;</sub>(E1 ⋈<sub>θ2   nbsp;</sub>E2) is the same as:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;E1 ⋈<sub>θ1^ θ2   nbsp;</sub>E2</li>
+	<li>   nbsp;(σ<sub>θ1</sub> E1) ∧   nbsp;(σ<sub>θ2</sub> E2 )</li>
+	<li>   nbsp;E1 ⋈ <sub>θ1∨ θ2   nbsp;</sub>E2</li>
+	<li>   nbsp;None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>A functional dependency of the form x → y is trivial if</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>y ⊆ x</li>
+	<li>y ⊂ x</li>
+	<li>x ⊆ y</li>
+	<li>x ⊂ y</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>Consider the join of relation <strong>R</strong> with a relation <strong>S</strong>. If <strong>R</strong> has m tuples and <strong>S</strong> has n tuples, then the maximum and minimum sizes of the join, respectively,   nbsp;are __________.</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>m+n and 0</li>
+	<li>m+n and |m-n|</li>
+	<li>mn and 0</li>
+	<li>mn and m+n</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '86626', 'text': '<p>&nbsp;<strong><img alt="" height="52" src="https://docs.google.com/drawings/d/sHK1PAhdWDF0LUeJdrYGomQ/image?w=73&amp;h=52&amp;rev=1&amp;ac=1" width="73"></strong><img alt="" height="17" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=214942699162919152" width="58"><strong><img alt="" height="85" src="https://docs.google.com/drawings/d/sg3pYMtYr9mEZEV9y8iuUgA/image?w=59&amp;h=84&amp;rev=1&amp;ac=1" width="59"></strong><img alt="" height="16" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=214942699162919152" width="55"><strong><img alt="" height="52" src="https://docs.google.com/drawings/d/sGXwvW-98BPNp1_QhsNajUQ/image?w=73&amp;h=52&amp;rev=1&amp;ac=1" width="73"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=1819414050751234175"> <img alt="" height="87" src="https://docs.google.com/drawings/d/srpA7h_3oGtJR7ThfotYIJg/image?w=61&amp;h=79&amp;rev=1&amp;ac=1" width="67"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=1819414050751234175"><img alt="" height="60" src="https://docs.google.com/drawings/d/shE0VGYLUmF2JdZo-LT8rDQ/image?w=63&amp;h=60&amp;rev=1&amp;ac=1" width="63"></strong></p>\n\n<p>What is the minimum number of tables required to represent this E-R diagram in the relational model? Considering that &nbsp;for both R1 and R2 cardinality is $1:1$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n\t<li>$5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86627', 'text': '<p>Under what condition does the selection operation distribute over theta join operation?</p>\n\n<p>Let $R$ and $S$ are two relations then which one of the following statements about the above condition is TRUE?</p>\n\n<ol start="1" style="list-style-type:lower-roman">\n\t<li>$\\sigma C&nbsp;(R \\bowtie&nbsp;S) \\equiv&nbsp; (\\sigma C1&nbsp;(R)) \\bowtie (\\sigma C2&nbsp;(S))$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie S) \\equiv (\\sigma C&nbsp;(R)) \\bowtie&nbsp;S$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie S ) \\equiv \\sigma C2&nbsp;( (\\sigma C1&nbsp;(R)) \\bowtie S)$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie&nbsp;S ) \\equiv &nbsp;\\sigma C1&nbsp;( &nbsp;R \\bowtie (\\sigma C2&nbsp; (S)))$</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>i, iii</li>\n\t<li>i, ii, iii, iv</li>\n\t<li>ii, iii</li>\n\t<li>i, ii</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1,relational-algebra', 'category': 'Databases'}, {'contents': '', 'post_id': '86628', 'text': '<p>Suppose that the transaction T1 and T2 access the same database items.</p>\n\n<p>$$\\begin{array}{|l|l|} \\hline T1 &amp; T2 \\\\ \\hline \\text{read(X)} &amp; {} \\\\&nbsp;X=X-N &amp; {} \\\\ \\hline {} &amp; \\text{read(X)} \\\\ {} &amp; X=X+N \\\\ \\hline \\text{write(X)} &amp; {} \\\\ \\hline {} &amp; \\text{write (X)} \\\\ \\hline \\end{array}$$</p>\n\n<p>Which one of the following statements is correct about these two transactions?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Dirty Read will occur</li>\n\t<li>Lost update will occur</li>\n\t<li>Both T1 and T2 are serial schedule</li>\n\t<li>This is an example of uncommitted data problem</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86629', 'text': '<p><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=8587637091031364824"></p>\n\n<p>Each dealer owns one or more cars and each car is owned by at-most one dealer. If Dealer table&nbsp;has $20$ tuples and Cars table has $60$ tuples then owns table can have maximum _____ number of tuples</p>', 'type': 'Numerical', 'answer': '60', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86630', 'text': '<p>Two transactions of $T1$ and $T2$ are given as follows:<br>\n$T1: \\text{R1(A) W1(A) &nbsp;R1(B) &nbsp;W1(B)}$<br>\n$T2 : \\text{ R2(B) W2(B) &nbsp;R2(C) &nbsp;W2(C)}$</p>\n\n<p>Total number of Conflict Serializable schedules &nbsp;formed by $T1$ and $T2$ are</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$2$</li>\n\t<li>$70$</li>\n\t<li>$54$</li>\n\t<li>$12$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86631', 'text': '<p>In SQL the statement</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n→ Select * from R ,S </pre>\n\n<p>&nbsp;&nbsp;is equivalent to:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R natural join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R inner join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R cross join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R union join S\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86632', 'text': '<p>Consider the following schedule for transactions T1, T2 , these transactions have two phase locking:</p>\n\n<table border="0" cellpadding="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>T1:</td>\n\t\t\t<td>lock- S(A)<br>\n\t\t\tRead (A)<br>\n\t\t\tLock –X (B)<br>\n\t\t\tRead (B)<br>\n\t\t\tB = A +B<br>\n\t\t\tWrite (B)<br>\n\t\t\tUnlock (A) &nbsp;&nbsp;&nbsp;<br>\n\t\t\t&nbsp;Unlock(B)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>T2</td>\n\t\t\t<td>lock-X(A)<br>\n\t\t\tLock- S(B)<br>\n\t\t\twrite (A)<br>\n\t\t\tRead (B)<br>\n\t\t\tUnlock(A)<br>\n\t\t\tUnlock(B)</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>$$\\begin{array}{||l|} \\hline T1: &amp; \\text{Lock_S(A)} \\\\ &amp; \\text{Read (A)} \\\\ &amp; \\text{Lock _X (B)} \\\\ &amp; \\text{Read (B)} \\\\ &amp; \\text{B = A + B} \\\\ &amp; \\text{Write (B)} \\\\ &amp; \\text{Unlock (A)} \\\\ &amp;&nbsp;&nbsp;\\text{Unlock(B)}&nbsp; \\\\ \\hline T2: &amp; \\text{Lock_X(A)} \\\\ &amp; \\text{Lock_S(B)} \\\\&amp;\\text{Write(A)} \\\\ &amp; \\text{Read(B)} \\\\ &amp; \\text{Unlock(A)} \\\\ &amp; \\text{Unlock(B)}&nbsp; \\\\ \\hline \\end{array}$$</p>\n\n<p>Which one of the statements below is the correct statement about T1 and T2?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>T1 and T2 are deadlock free</li>\n\t<li>T1 and T2 results in a deadlock</li>\n\t<li>T1 and T2 are serial schedule</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86634', 'text': '<p>The rule that a value of a foreign key must appear as a value of some specific table is called a</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Referential constraint</li>\n\t<li>Index</li>\n\t<li>Integrity constraint</li>\n\t<li>Functional dependency</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86635', 'text': '<p>Consider the following database with primary keys in <strong>Bold</strong></p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nProject(<strong>P_No</strong>, &nbsp;P_Name, P_Incharge) Employee(<strong>E_No</strong>, E_Name)&nbsp;Assigned_To(<strong>P_No</strong>, <strong>E_No</strong>)</pre>\n\n<p>Which &nbsp;sentence &nbsp;represent the following &nbsp;relational algebra?</p>\n\n<p>Employee $\\bowtie$ (Assigned_To) $\\div$ ( $\\Pi$ P_No (Project) )</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>List names of the employees working on all projects.</li>\n\t<li>List project number of &nbsp;all the employees working on &nbsp;projects.</li>\n\t<li>List details of the employees working on at least one &nbsp;projects.</li>\n\t<li>List details of the employees working on all the projects.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86636', 'text': '<p>Consider the relation $R(A, B, C, D, E)$ with the set of function dependencies: $F = \\{ AB \\rightarrow C, \\ \\&nbsp; &nbsp;D \\rightarrow E, \\ \\&nbsp; A \\rightarrow D \\}$&nbsp; The candidate Key is _____</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>BC &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>AB &nbsp;&nbsp;&nbsp;</li>\n\t<li>BAC &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>AD</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86637', 'text': '<p>Consider the following database schedule with $3$ transactions, $T1$ ,$T2$ and $T3$. Where $r$ stands for READ, w for WRITE.</p>\n\n<p>$S : r2 (A); r1 (B); w2 (A); r2 (B); r3 (A); w1 (B); w3(A); w2 (B)$</p>\n\n<p>Which one of the following statements about the above schedule is TRUE?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>the schedule is &nbsp;serializable</li>\n\t<li>the schedule is not &nbsp;serializable</li>\n\t<li>schedule will not execute</li>\n\t<li>this schedule have deadlock</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86638', 'text': '<p>Which one is NOT True among these statements:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>In B+-tree, data pointers are stored only at the leaf nodes of the tree</li>\n\t<li>Any&nbsp;B-tree is a search tree may not be always balanced</li>\n\t<li>In a B-tree, every value of the search field appears once at some level in the tree</li>\n\t<li>The leaf nodes of the B+-tree are linked together to provide ordered access on the search field to the records</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86640', 'text': '<p>A student can register for at most $p$&nbsp;courses and each course can have at most $v$ students. Each student is enrolled to at least one course and each course has at least one student.</p>\n\n<p>This schema is normalized into three tables:<br>\n$\\textbf{Student, Registers, Courses}$</p>\n\n<p>The number of tuples in student and course tables are $X$ and $Y$ respectively. Which of the following need not be<strong> </strong>correct?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$Y \\geq 1$</li>\n\t<li>$Y \\leq p ^*&nbsp;X$</li>\n\t<li>$X \\geq v ^* &nbsp;Y$</li>\n\t<li>$X &gt; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86641', 'text': 'Let there is a Table named Stud_records  with $3000$ records of fixed length, each record size is $50$ Bytes and records are stored in a block of size $512$ Bytes, If secondary index is built on the key field of size $10$ Bytes and a block pointer of size $5$ Bytes , then the number of first level index blocks are ______', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86643', 'text': '<p>Let $R = (A,B,C)$, and let $r1$ and $r2$ both be relations on schema $R$.&nbsp;Select&nbsp;a&nbsp;SQL expression&nbsp;among these options that is equivalent to the following query. $ \\Pi AB(r1) \\bowtie \\Pi BC(r2)$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A, r2.B, r2.C&nbsp;from r1, r2&nbsp;where r1.B = r2.B\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from r1 where (A, B, C) in (select *from r2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A &nbsp;from r1 where (A, B, C) not in (select ∗ from r2)</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A&nbsp;, r2.B , r1.C&nbsp; from r1, r2 where r1.B = r2.B</pre>\n\n\t<p>&nbsp;</p>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86644', 'text': '<p>The FD $A \\rightarrow B, \\ \\&nbsp;&nbsp;DB \\rightarrow&nbsp;C$ implies</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$DA \\rightarrow C$</li>\n\t<li>$A \\rightarrow C$</li>\n\t<li>$B \\rightarrow A$</li>\n\t<li>$DB \\rightarrow A$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86645', 'text': '<p>This is an Instance of Sailors Relation</p>\n\n<p>$$\\overset{\\text{Sailors Table}} {&nbsp;\\begin{array}{|l|l|} \\hline \\text{S_ID} &amp; \\text{S_Name} &amp; \\text{Rating} &amp; \\text{Age}&nbsp;\\\\ \\hline 18 &amp; \\text{Jones} &amp; 3 &amp; 30.00&nbsp; \\\\ \\hline 41&nbsp;&amp; \\text{Jonah} &amp; 6&nbsp;&amp; 56.00&nbsp;&nbsp;&nbsp;\\\\ \\hline 22&nbsp;&amp; \\text{Ahab} &amp; 7&nbsp;&amp; 44.00&nbsp; \\\\ \\hline 63&nbsp;&amp; \\text{Moby} &amp; \\text{Null}&nbsp;&amp; 15.00&nbsp; \\\\ \\hline \\end{array}}$$</p>\n\n<p>Consider the following query:</p>\n\n<p>&nbsp;Find the names of sailors with a higher rating than all sailors with age &lt; 21.</p>\n\n<p>Which one among these SQL queries attempt to obtain the answer to this question?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE NOT EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age &lt; 21 &nbsp;AND S.rating &lt;= S2.rating )</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM Sailors S WHERE S.rating &gt; ANY ( SELECT S2.rating FROM Sailors S2 WHERE S2.age &lt; 21 )\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age &lt; 21 AND S.rating &lt;= S2.rating )</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE S.rating &gt;ALL ( SELECT S2.rating &nbsp;FROM Sailors S2 WHERE S2.age &lt; 21 )\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86646', 'text': '<p>$R (A,B,C,D)$ is a relation.&nbsp;Which of the following does not have a lossless join dependency preserving BCNF decomposition</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$A \\rightarrow B, \\ B \\rightarrow CD$</li>\n\t<li>$A \\rightarrow B, \\ B \\rightarrow C, \\ C \\rightarrow D$</li>\n\t<li>$AB \\rightarrow C,\\&nbsp; C \\rightarrow AD$</li>\n\t<li>$A \\rightarrow BCD$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86647', 'text': '<p>Which is the best file organization when data is frequently added or deleted from a file?</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Sequential</li>\n\t<li>Direct</li>\n\t<li>Index sequential</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86648', 'text': '<p>What is the Minimum space utilization for a $B+$ Tree index node:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$80 \\%$</li>\n\t<li>$60 \\%$</li>\n\t<li>$50 \\%$</li>\n\t<li>$75 \\%$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86649', 'text': '<p>A transaction is in __________ state after the final statement has been executed.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>partially committed</li>\n\t<li>active</li>\n\t<li>committed</li>\n\t<li>aborted</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86650', 'text': '<p>Consider the following set of relations: &nbsp;&nbsp;<br>\nEMP(<strong>eno</strong>, ename, dno)<br>\nDEPT(<strong>dno</strong>,dname)<br>\nPrimary key columns are in <strong>bold</strong>&nbsp;and dno in EMP is a <em>foreign key</em> referring primary key of DEPT table.</p>\n\n<p>Now consider the following queries:</p>\n\n<p><strong>QUERY : 1</strong></p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM emp e, dept d WHERE e.dno = d.dno;</pre>\n\n<p><strong>QUERY : 2</strong></p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM emp NATURAL JOIN dept ;</pre>\n\n<p>Then which of the following statements are <strong>TRUE</strong> regarding the above queries?</p>\n\n<ol start="1" style="list-style-type: upper-roman;">\n\t<li>Both Query:1 and Query:2 returns same no of rows.</li>\n\t<li>Both Query:1 and Query:2 returns same no of columns.</li>\n\t<li>Both Query:1 and Query:2 returns different no of rows.</li>\n\t<li>Both Query:1 and Query:2 returns different no of columns.</li>\n</ol>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>I, II only</li>\n\t<li>I, IV only</li>\n\t<li>II, III only</li>\n\t<li>III, IV only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1,natural-join', 'category': 'Databases'}, {'contents': '', 'post_id': '86651', 'text': '<p>Given R(A,B,C,D,E) with the set of FDs,<br>\nF{AB→CD, &nbsp;ABC → E, C → A}<br>\nthe normal form of R is</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>2NF</li>\n\t<li>BCNF</li>\n\t<li>4NF</li>\n\t<li>3NF</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86652', 'text': 'Let the search key field of a B+ tree is 4 Bytes , the disk block size is 199 Bytes , and the index pointer is 3 Bytes, then the order of B+ tree is _______', 'type': 'Numerical', 'answer': '29', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86654', 'text': '<p>Checkpoints are a part of</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Recovery measures</li>\n\t<li>Security measures</li>\n\t<li>Concurrency measures</li>\n\t<li>Authorization measures</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86655', 'text': '<p>Consider the following relations<br>\nEmployee (E#, Ename, salary, Bdate, D#)<br>\nDepartment (D#, Dname, mgremp#, Location)<br>\nDependent (E#, DependentName)</p>\n\n<p>Which among these tuple calculus queries represent the following condition:</p>\n\n<p>List the names of mangers who have at least one dependent.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>{m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[mgremp#] ∧ m[E#] = u[mgremp#])}</li>\n\t<li>{e[Ename] | e ∈ EMPLOYEE ∧ ∃d (d ∈ DEPARTMENT ∧ d[Ename] = ‘manager’ ∧ e[D#] = d[D#])}</li>\n\t<li>{m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ e[E#] = u[mgremp#] ∧ m[D#] = u[mgremp#])}</li>\n\t<li>{e[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[D#] ∧ m[E#] = u[D#])}</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86656', 'text': '<p>What does the following relational algebra expression represent ?</p>\n\n<p>Consider the relations given below with keys in <strong>Bold</strong> :<br>\nBranch (<strong>branch no</strong>, street, &nbsp;city)<br>\nStaff (<strong>staff No</strong>, name, salary, branch No, position, DOB)<br>\npropertyForRent (<strong>property No, staff No</strong>, rent)</p>\n\n<p>Answer this &nbsp;query in relational algebra :</p>\n\n<p>List the Staff Numbers of &nbsp;Staffs who have not rent any property</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ΠstaffNo (Staff) - Π propertyNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) U Π staffNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) - &nbsp;Π staffNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) * ΠstaffNo(rent)</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86657', 'text': '<p>What does the following Tuple Relational Calculus query produce?</p>\n\n<p>The expression σ<sub>θ1&nbsp;</sub>(E1 ⋈<sub>θ2&nbsp;</sub>E2) is the same as:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;E1 ⋈<sub>θ1^ θ2&nbsp;</sub>E2</li>\n\t<li>&nbsp;(σ<sub>θ1</sub> E1) ∧&nbsp;(σ<sub>θ2</sub> E2 )</li>\n\t<li>&nbsp;E1 ⋈ <sub>θ1∨ θ2&nbsp;</sub>E2</li>\n\t<li>&nbsp;None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86658', 'text': '<p>A functional dependency of the form x → y is trivial if</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>y ⊆ x</li>\n\t<li>y ⊂ x</li>\n\t<li>x ⊆ y</li>\n\t<li>x ⊂ y</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86659', 'text': '<p>Consider the join of relation <strong>R</strong> with a relation <strong>S</strong>. If <strong>R</strong> has $m$ tuples and <strong>S</strong> has $n$ tuples, then the maximum and minimum sizes of the join, respectively,&nbsp;are __________.</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$m+n$ and $0$</li>\n\t<li>$m+n$ and $|m-n|$</li>\n\t<li>$mn$ and $0$</li>\n\t<li>$mn$ and $m+n$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}]
+      let data={'name': 'Test by Bikram | Databases | Test 1', 'duration': '90', 'total_qs': '30', 'total_qs_one': 0, 'total_qs_two': 30, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 60, 'total_marks': 60, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 60, 'question': [{'contents': '', 'post_id': '86626', 'text': '<p>&nbsp;<strong><img alt="" height="52" src="https://docs.google.com/drawings/d/sHK1PAhdWDF0LUeJdrYGomQ/image?w=73&amp;h=52&amp;rev=1&amp;ac=1" width="73"></strong><img alt="" height="17" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=214942699162919152" width="58"><strong><img alt="" height="85" src="https://docs.google.com/drawings/d/sg3pYMtYr9mEZEV9y8iuUgA/image?w=59&amp;h=84&amp;rev=1&amp;ac=1" width="59"></strong><img alt="" height="16" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=214942699162919152" width="55"><strong><img alt="" height="52" src="https://docs.google.com/drawings/d/sGXwvW-98BPNp1_QhsNajUQ/image?w=73&amp;h=52&amp;rev=1&amp;ac=1" width="73"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=1819414050751234175"> <img alt="" height="87" src="https://docs.google.com/drawings/d/srpA7h_3oGtJR7ThfotYIJg/image?w=61&amp;h=79&amp;rev=1&amp;ac=1" width="67"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=1819414050751234175"><img alt="" height="60" src="https://docs.google.com/drawings/d/shE0VGYLUmF2JdZo-LT8rDQ/image?w=63&amp;h=60&amp;rev=1&amp;ac=1" width="63"></strong></p>\n\n<p>What is the minimum number of tables required to represent this E-R diagram in the relational model? Considering that &nbsp;for both R1 and R2 cardinality is $1:1$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n\t<li>$5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86627', 'text': '<p>Under what condition does the selection operation distribute over theta join operation?</p>\n\n<p>Let $R$ and $S$ are two relations then which one of the following statements about the above condition is TRUE?</p>\n\n<ol start="1" style="list-style-type:lower-roman">\n\t<li>$\\sigma C&nbsp;(R \\bowtie&nbsp;S) \\equiv&nbsp; (\\sigma C1&nbsp;(R)) \\bowtie (\\sigma C2&nbsp;(S))$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie S) \\equiv (\\sigma C&nbsp;(R)) \\bowtie&nbsp;S$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie S ) \\equiv \\sigma C2&nbsp;( (\\sigma C1&nbsp;(R)) \\bowtie S)$</li>\n\t<li>$\\sigma C&nbsp;(R \\bowtie&nbsp;S ) \\equiv &nbsp;\\sigma C1&nbsp;( &nbsp;R \\bowtie (\\sigma C2&nbsp; (S)))$</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>i, iii</li>\n\t<li>i, ii, iii, iv</li>\n\t<li>ii, iii</li>\n\t<li>i, ii</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1,relational-algebra', 'category': 'Databases'}, {'contents': '', 'post_id': '86628', 'text': '<p>Suppose that the transaction T1 and T2 access the same database items.</p>\n\n<p>$$\\begin{array}{|l|l|} \\hline T1 &amp; T2 \\\\ \\hline \\text{read(X)} &amp; {} \\\\&nbsp;X=X-N &amp; {} \\\\ \\hline {} &amp; \\text{read(X)} \\\\ {} &amp; X=X+N \\\\ \\hline \\text{write(X)} &amp; {} \\\\ \\hline {} &amp; \\text{write (X)} \\\\ \\hline \\end{array}$$</p>\n\n<p>Which one of the following statements is correct about these two transactions?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Dirty Read will occur</li>\n\t<li>Lost update will occur</li>\n\t<li>Both T1 and T2 are serial schedule</li>\n\t<li>This is an example of uncommitted data problem</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86629', 'text': '<p><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=8587637091031364824"></p>\n\n<p>Each dealer owns one or more cars and each car is owned by at-most one dealer. If Dealer table&nbsp;has $20$ tuples and Cars table has $60$ tuples then owns table can have maximum _____ number of tuples</p>', 'type': 'Numerical', 'answer': '60', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86630', 'text': '<p>Two transactions of $T1$ and $T2$ are given as follows:<br>\n$T1: \\text{R1(A) W1(A) &nbsp;R1(B) &nbsp;W1(B)}$<br>\n$T2 : \\text{ R2(B) W2(B) &nbsp;R2(C) &nbsp;W2(C)}$</p>\n\n<p>Total number of Conflict Serializable schedules &nbsp;formed by $T1$ and $T2$ are</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$2$</li>\n\t<li>$70$</li>\n\t<li>$54$</li>\n\t<li>$12$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86631', 'text': '<p>In SQL the statement</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n→ Select * from R ,S </pre>\n\n<p>&nbsp;&nbsp;is equivalent to:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R natural join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R inner join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R cross join S\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from R union join S\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86632', 'text': '<p>Consider the following schedule for transactions T1, T2 , these transactions have two phase locking:</p>\n\n<table border="0" cellpadding="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>T1:</td>\n\t\t\t<td>lock- S(A)<br>\n\t\t\tRead (A)<br>\n\t\t\tLock –X (B)<br>\n\t\t\tRead (B)<br>\n\t\t\tB = A +B<br>\n\t\t\tWrite (B)<br>\n\t\t\tUnlock (A) &nbsp;&nbsp;&nbsp;<br>\n\t\t\t&nbsp;Unlock(B)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>T2</td>\n\t\t\t<td>lock-X(A)<br>\n\t\t\tLock- S(B)<br>\n\t\t\twrite (A)<br>\n\t\t\tRead (B)<br>\n\t\t\tUnlock(A)<br>\n\t\t\tUnlock(B)</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>$$\\begin{array}{||l|} \\hline T1: &amp; \\text{Lock_S(A)} \\\\ &amp; \\text{Read (A)} \\\\ &amp; \\text{Lock _X (B)} \\\\ &amp; \\text{Read (B)} \\\\ &amp; \\text{B = A + B} \\\\ &amp; \\text{Write (B)} \\\\ &amp; \\text{Unlock (A)} \\\\ &amp;&nbsp;&nbsp;\\text{Unlock(B)}&nbsp; \\\\ \\hline T2: &amp; \\text{Lock_X(A)} \\\\ &amp; \\text{Lock_S(B)} \\\\&amp;\\text{Write(A)} \\\\ &amp; \\text{Read(B)} \\\\ &amp; \\text{Unlock(A)} \\\\ &amp; \\text{Unlock(B)}&nbsp; \\\\ \\hline \\end{array}$$</p>\n\n<p>Which one of the statements below is the correct statement about T1 and T2?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>T1 and T2 are deadlock free</li>\n\t<li>T1 and T2 results in a deadlock</li>\n\t<li>T1 and T2 are serial schedule</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86634', 'text': '<p>The rule that a value of a foreign key must appear as a value of some specific table is called a</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Referential constraint</li>\n\t<li>Index</li>\n\t<li>Integrity constraint</li>\n\t<li>Functional dependency</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86635', 'text': '<p>Consider the following database with primary keys in <strong>Bold</strong></p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nProject(<strong>P_No</strong>, &nbsp;P_Name, P_Incharge) Employee(<strong>E_No</strong>, E_Name)&nbsp;Assigned_To(<strong>P_No</strong>, <strong>E_No</strong>)</pre>\n\n<p>Which &nbsp;sentence &nbsp;represent the following &nbsp;relational algebra?</p>\n\n<p>Employee $\\bowtie$ (Assigned_To) $\\div$ ( $\\Pi$ P_No (Project) )</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>List names of the employees working on all projects.</li>\n\t<li>List project number of &nbsp;all the employees working on &nbsp;projects.</li>\n\t<li>List details of the employees working on at least one &nbsp;projects.</li>\n\t<li>List details of the employees working on all the projects.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86636', 'text': '<p>Consider the relation $R(A, B, C, D, E)$ with the set of function dependencies: $F = \\{ AB \\rightarrow C, \\ \\&nbsp; &nbsp;D \\rightarrow E, \\ \\&nbsp; A \\rightarrow D \\}$&nbsp; The candidate Key is _____</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>BC &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>AB &nbsp;&nbsp;&nbsp;</li>\n\t<li>BAC &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>AD</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86637', 'text': '<p>Consider the following database schedule with $3$ transactions, $T1$ ,$T2$ and $T3$. Where $r$ stands for READ, w for WRITE.</p>\n\n<p>$S : r2 (A); r1 (B); w2 (A); r2 (B); r3 (A); w1 (B); w3(A); w2 (B)$</p>\n\n<p>Which one of the following statements about the above schedule is TRUE?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>the schedule is &nbsp;serializable</li>\n\t<li>the schedule is not &nbsp;serializable</li>\n\t<li>schedule will not execute</li>\n\t<li>this schedule have deadlock</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86638', 'text': '<p>Which one is NOT True among these statements:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>In B+-tree, data pointers are stored only at the leaf nodes of the tree</li>\n\t<li>Any&nbsp;B-tree is a search tree may not be always balanced</li>\n\t<li>In a B-tree, every value of the search field appears once at some level in the tree</li>\n\t<li>The leaf nodes of the B+-tree are linked together to provide ordered access on the search field to the records</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86640', 'text': '<p>A student can register for at most $p$&nbsp;courses and each course can have at most $v$ students. Each student is enrolled to at least one course and each course has at least one student.</p>\n\n<p>This schema is normalized into three tables:<br>\n$\\textbf{Student, Registers, Courses}$</p>\n\n<p>The number of tuples in student and course tables are $X$ and $Y$ respectively. Which of the following need not be<strong> </strong>correct?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$Y \\geq 1$</li>\n\t<li>$Y \\leq p ^*&nbsp;X$</li>\n\t<li>$X \\geq v ^* &nbsp;Y$</li>\n\t<li>$X &gt; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86641', 'text': 'Let there is a Table named Stud_records  with $3000$ records of fixed length, each record size is $50$ Bytes and records are stored in a block of size $512$ Bytes, If secondary index is built on the key field of size $10$ Bytes and a block pointer of size $5$ Bytes , then the number of first level index blocks are ______', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86643', 'text': '<p>Let $R = (A,B,C)$, and let $r1$ and $r2$ both be relations on schema $R$.&nbsp;Select&nbsp;a&nbsp;SQL expression&nbsp;among these options that is equivalent to the following query. $ \\Pi AB(r1) \\bowtie \\Pi BC(r2)$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A, r2.B, r2.C&nbsp;from r1, r2&nbsp;where r1.B = r2.B\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect * from r1 where (A, B, C) in (select *from r2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A &nbsp;from r1 where (A, B, C) not in (select ∗ from r2)</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nselect r1.A&nbsp;, r2.B , r1.C&nbsp; from r1, r2 where r1.B = r2.B</pre>\n\n\t<p>&nbsp;</p>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86644', 'text': '<p>The FD $A \\rightarrow B, \\ \\&nbsp;&nbsp;DB \\rightarrow&nbsp;C$ implies</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$DA \\rightarrow C$</li>\n\t<li>$A \\rightarrow C$</li>\n\t<li>$B \\rightarrow A$</li>\n\t<li>$DB \\rightarrow A$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86645', 'text': '<p>This is an Instance of Sailors Relation</p>\n\n<p>$$\\overset{\\text{Sailors Table}} {&nbsp;\\begin{array}{|l|l|} \\hline \\text{S_ID} &amp; \\text{S_Name} &amp; \\text{Rating} &amp; \\text{Age}&nbsp;\\\\ \\hline 18 &amp; \\text{Jones} &amp; 3 &amp; 30.00&nbsp; \\\\ \\hline 41&nbsp;&amp; \\text{Jonah} &amp; 6&nbsp;&amp; 56.00&nbsp;&nbsp;&nbsp;\\\\ \\hline 22&nbsp;&amp; \\text{Ahab} &amp; 7&nbsp;&amp; 44.00&nbsp; \\\\ \\hline 63&nbsp;&amp; \\text{Moby} &amp; \\text{Null}&nbsp;&amp; 15.00&nbsp; \\\\ \\hline \\end{array}}$$</p>\n\n<p>Consider the following query:</p>\n\n<p>&nbsp;Find the names of sailors with a higher rating than all sailors with age &lt; 21.</p>\n\n<p>Which one among these SQL queries attempt to obtain the answer to this question?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE NOT EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age &lt; 21 &nbsp;AND S.rating &lt;= S2.rating )</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM Sailors S WHERE S.rating &gt; ANY ( SELECT S2.rating FROM Sailors S2 WHERE S2.age &lt; 21 )\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE EXISTS ( SELECT * FROM Sailors S2 WHERE S2.age &lt; 21 AND S.rating &lt;= S2.rating )</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname FROM Sailors S WHERE S.rating &gt;ALL ( SELECT S2.rating &nbsp;FROM Sailors S2 WHERE S2.age &lt; 21 )\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86646', 'text': '<p>$R (A,B,C,D)$ is a relation.&nbsp;Which of the following does not have a lossless join dependency preserving BCNF decomposition</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$A \\rightarrow B, \\ B \\rightarrow CD$</li>\n\t<li>$A \\rightarrow B, \\ B \\rightarrow C, \\ C \\rightarrow D$</li>\n\t<li>$AB \\rightarrow C,\\&nbsp; C \\rightarrow AD$</li>\n\t<li>$A \\rightarrow BCD$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86647', 'text': '<p>Which is the best file organization when data is frequently added or deleted from a file?</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Sequential</li>\n\t<li>Direct</li>\n\t<li>Index sequential</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86648', 'text': '<p>What is the Minimum space utilization for a $B+$ Tree index node:</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$80 \\%$</li>\n\t<li>$60 \\%$</li>\n\t<li>$50 \\%$</li>\n\t<li>$75 \\%$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86649', 'text': '<p>A transaction is in __________ state after the final statement has been executed.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>partially committed</li>\n\t<li>active</li>\n\t<li>committed</li>\n\t<li>aborted</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86650', 'text': '<p>Consider the following set of relations: &nbsp;&nbsp;<br>\nEMP(<strong>eno</strong>, ename, dno)<br>\nDEPT(<strong>dno</strong>,dname)<br>\nPrimary key columns are in <strong>bold</strong>&nbsp;and dno in EMP is a <em>foreign key</em> referring primary key of DEPT table.</p>\n\n<p>Now consider the following queries:</p>\n\n<p><strong>QUERY : 1</strong></p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM emp e, dept d WHERE e.dno = d.dno;</pre>\n\n<p><strong>QUERY : 2</strong></p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT * FROM emp NATURAL JOIN dept ;</pre>\n\n<p>Then which of the following statements are <strong>TRUE</strong> regarding the above queries?</p>\n\n<ol start="1" style="list-style-type: upper-roman;">\n\t<li>Both Query:1 and Query:2 returns same no of rows.</li>\n\t<li>Both Query:1 and Query:2 returns same no of columns.</li>\n\t<li>Both Query:1 and Query:2 returns different no of rows.</li>\n\t<li>Both Query:1 and Query:2 returns different no of columns.</li>\n</ol>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>I, II only</li>\n\t<li>I, IV only</li>\n\t<li>II, III only</li>\n\t<li>III, IV only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1,natural-join', 'category': 'Databases'}, {'contents': '', 'post_id': '86651', 'text': '<p>Given R(A,B,C,D,E) with the set of FDs,<br>\nF{AB→CD, &nbsp;ABC → E, C → A}<br>\nthe normal form of R is</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>2NF</li>\n\t<li>BCNF</li>\n\t<li>4NF</li>\n\t<li>3NF</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86652', 'text': 'Let the search key field of a B+ tree is 4 Bytes , the disk block size is 199 Bytes , and the index pointer is 3 Bytes, then the order of B+ tree is _______', 'type': 'Numerical', 'answer': '29', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-dbms-1,numerical-answers', 'category': 'Databases'}, {'contents': '', 'post_id': '86654', 'text': '<p>Checkpoints are a part of</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Recovery measures</li>\n\t<li>Security measures</li>\n\t<li>Concurrency measures</li>\n\t<li>Authorization measures</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86655', 'text': '<p>Consider the following relations<br>\nEmployee (E#, Ename, salary, Bdate, D#)<br>\nDepartment (D#, Dname, mgremp#, Location)<br>\nDependent (E#, DependentName)</p>\n\n<p>Which among these tuple calculus queries represent the following condition:</p>\n\n<p>List the names of mangers who have at least one dependent.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>{m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[mgremp#] ∧ m[E#] = u[mgremp#])}</li>\n\t<li>{e[Ename] | e ∈ EMPLOYEE ∧ ∃d (d ∈ DEPARTMENT ∧ d[Ename] = ‘manager’ ∧ e[D#] = d[D#])}</li>\n\t<li>{m[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ e[E#] = u[mgremp#] ∧ m[D#] = u[mgremp#])}</li>\n\t<li>{e[Ename] | m ∈ EMPLOYEE ∧ ∃u, t (t ∈ DEPENDENT ∧ u ∈ DEPARTMENT ∧ t[E#] = u[D#] ∧ m[E#] = u[D#])}</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86656', 'text': '<p>What does the following relational algebra expression represent ?</p>\n\n<p>Consider the relations given below with keys in <strong>Bold</strong> :<br>\nBranch (<strong>branch no</strong>, street, &nbsp;city)<br>\nStaff (<strong>staff No</strong>, name, salary, branch No, position, DOB)<br>\npropertyForRent (<strong>property No, staff No</strong>, rent)</p>\n\n<p>Answer this &nbsp;query in relational algebra :</p>\n\n<p>List the Staff Numbers of &nbsp;Staffs who have not rent any property</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ΠstaffNo (Staff) - Π propertyNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) U Π staffNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) - &nbsp;Π staffNo (propertyForRent)</li>\n\t<li>Π staffNo (Staff) * ΠstaffNo(rent)</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86657', 'text': '<p>What does the following Tuple Relational Calculus query produce?</p>\n\n<p>The expression σ<sub>θ1&nbsp;</sub>(E1 ⋈<sub>θ2&nbsp;</sub>E2) is the same as:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;E1 ⋈<sub>θ1^ θ2&nbsp;</sub>E2</li>\n\t<li>&nbsp;(σ<sub>θ1</sub> E1) ∧&nbsp;(σ<sub>θ2</sub> E2 )</li>\n\t<li>&nbsp;E1 ⋈ <sub>θ1∨ θ2&nbsp;</sub>E2</li>\n\t<li>&nbsp;None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86658', 'text': '<p>A functional dependency of the form x → y is trivial if</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>y ⊆ x</li>\n\t<li>y ⊂ x</li>\n\t<li>x ⊆ y</li>\n\t<li>x ⊂ y</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}, {'contents': '', 'post_id': '86659', 'text': '<p>Consider the join of relation <strong>R</strong> with a relation <strong>S</strong>. If <strong>R</strong> has $m$ tuples and <strong>S</strong> has $n$ tuples, then the maximum and minimum sizes of the join, respectively,&nbsp;are __________.</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$m+n$ and $0$</li>\n\t<li>$m+n$ and $|m-n|$</li>\n\t<li>$mn$ and $0$</li>\n\t<li>$mn$ and $m+n$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-dbms-1', 'category': 'Databases'}]}]}
+      </script>
+      

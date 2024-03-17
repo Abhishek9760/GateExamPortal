@@ -1,0 +1,228 @@
+<div><span>Q1</span> - <p>Consider an intermediate representation(IR) that has only assignment statements and unconditional, conditional goto(branch) statements.<br>
+Consider the following control flow graph of a program P which has 8 basic blocks :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=4750945861519461217"></p>
+
+<p><br>
+“Minimum” how many Branch statements(conditional or unconditional) does the program P has _______</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following program.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+L0: e := 0
+b := 1
+d := 2
+L1: a := b + 2
+c := d + 5
+e := e + c
+f := a * a
+if f    lt; c goto L3
+L2: e := e + f
+goto L4
+L3: e := e + 2
+L4: d := d + 4
+b := b - 4
+if b != d goto L1
+L5:</pre>
+
+<p>Identify the basic blocks and draw the CFG(control flow graph) for the code above. Let the number of basics blocks(nodes) be M and edges be N then M+N is _______   nbsp;( We have special designated entry and exit nodes in the CFG which should be included in M, N.)</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>DAG representation of a basic block allows</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Automatic detection of local common subexpressions</li>
+	<li>Detection of induction variables</li>
+	<li>Automatic detection of loop variant</li>
+	<li>None of the mentioned</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following basic block, in which all variables are integers.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a := b + c
+z := a * a
+x := 0
+y := a
+w := a * a
+u := 3
+v := u + w</pre>
+
+<p>Assume that the only variables that are live at the exit of this block are  and .<br>
+Consider the following transformation of the given basic block after applying a particular optimization.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a := b + c
+z := a * a
+w := a * a
+u := 3
+v := u + w</pre>
+
+<p>Which of the following best describes the optimization that has been performed?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>algebraic simplification</li>
+	<li>common sub-expression elimination</li>
+	<li>copy propagation</li>
+	<li>dead code elimination</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>A node p in a control flow graph(CFG) dominates a node q if every path from the entry node to q goes through p. We say that node p is a dominator of node q.<br>
+The dominator set of node q,  DOM(q), is formed by all nodes that dominate q. By definition, each node dominates itself, therefore, q  DOM(q).<br>
+Consider the following control flow graph(CFG) of a program P in low level intermediate representation, which has 8 basic blocks(nodes) :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=9090697399518023469"></p>
+
+<p><br>
+Which of the following is Dom(8) ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>{1,2,3,4,5,6,7,8}</li>
+	<li>{1,2,3,6,7,8}</li>
+	<li>{1,2,3,8}</li>
+	<li>{6,7,8}</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following Control Graph G:</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=4545490243966503819"></p>
+
+<p>For the above CFG of basic blocks, which of the following is Correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>All possible statements have been combined to form the right number of Basic Blocks.</li>
+	<li>The Basic Block C and D can be combined together</li>
+	<li>The Basic Block D and E can be combined together</li>
+	<li>The Basic Block E and F can be combined together</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>A node p in a control flow graph(CFG) dominates a node q if every path from the entry node to q goes through p. We say that node p is a dominator of node q.<br>
+The dominator set of node q,  DOM(q), is formed by all nodes that dominate q. By definition, each node dominates itself, therefore, q ∈DOM(q).<br>
+Consider the following control flow graph(CFG) of a program P in low level intermediate representation, which has 10 basic blocks(nodes) :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=5832795228854436150"></p>
+
+<p><br>
+Which of the following is/are correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>DOM(1)={1}</li>
+	<li>DOM(2)={1,2}</li>
+	<li>DOM(3)={1,2,3}</li>
+	<li>DOM(10)={1,2,10}</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>A node p in a control flow graph(CFG) N dominates a node q if every path from the entry node to q goes through p. We say that node p is a dominator of node q.<br>
+The dominator set of node q, DOM(q), is formed by all nodes that dominate q. By definition, each node dominates itself, therefore, q∈DOM(q)</p>
+
+<ul>
+	<li>p dominates q, written p≤q, i.e. p∈DOM(q).</li>
+	<li>p properly (strictly) dominates q, written p   lt;q if p≤q and p≠q.</li>
+	<li>p immediately (or directly) dominates q, if p   lt;q and there is no node t such that p   lt;t   lt;q.</li>
+</ul>
+
+<p>We say p is the immediate dominator of q and write p=IDOM(q)<br>
+Consider the following control flow graph(CFG) of a program P in low level intermediate representation, which has 8 basic blocks(nodes) :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=6371213926062274616"></p>
+
+<p><br>
+Which node is the immediate dominator of node 8?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following program.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+L0: e := 0
+b := 1
+d := 2
+L1: a := b + 2
+c := d + 5
+e := e + c
+f := a * a
+if f    lt; c goto L3
+L2: e := e + f
+goto L4
+L3: e := e + 2
+L4: d := d + 4
+b := b - 4
+if b != d goto L1
+L5:</pre>
+
+<p>This program uses six temporaries, . Assume that the only variable that is live on exit from this program is .<br>
+Maximum how many variables will be live simultaneously (at some program point)?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following program :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+u = v + 1
+w = u - v
+x = x + w
+y = u - w
+z = x + y</pre>
+
+<p>The above code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have at most two source operands and one destination operand. Assume that all variables are dead after this code segment.</p>
+
+<p>What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following basic block, in which all variables are integers.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a := b + c
+z := a * a
+x := 0
+y := b + c
+w := y * y
+u := x + 3
+v := u + w</pre>
+
+<p>Assume that the only variables that are live at the exit of this block are  and .<br>
+Consider the following transformation of the given basic block after applying a particular optimization.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a := b + c
+z := a * a
+x := 0
+y := a
+w := y * y
+u := x + 3
+v := u + w</pre>
+
+<p>Which of the following best describes the optimization that has been performed?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>algebraic simplification</li>
+	<li>common sub-expression elimination</li>
+	<li>copy propagation</li>
+	<li>dead code elimination</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which of the following statements regarding SSA form (Static Single Assignment form) of an intermediate representation is False?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If a program is in SSA form, then use of a variable is reached by exactly one definition of that variable.</li>
+	<li>Flow of control in SSA form remains the same as in the non-SSA form.</li>
+	<li>Since every variable has exactly one definition in the program text, so there are no loops in SSA form</li>
+	<li>Some compiler optimizations perform better on SSA forms.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Which of the following three-Address code satisfies the below expression?<br>
+
+    a+(b × a)+b+c+d
+</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>t_1=a+b, t_2=b × t_1, t_3=t_2+c, t_4=t_3+d</li>
+	<li>t_1=a+b, t_2=b × t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d</li>
+	<li>t_1=a × b, t_2=b × t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the following basic block :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+// live  ? 
+a = b + 1
+c = a - b
+d = d + c
+e = a - c
+f = d + e
+// live f,e</pre>
+
+<p>At the bottom of the basic block, variables  are live. What will be the variables that will be live at the beginning of the basic block i.e. what belongs to ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the following Control flow graph (CFG) of a program :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=17284451182473111233"></p>
+
+<p><br>
+For the above CFG of basic blocks, Which of the following is Correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>All Possible Statements have been combined to form the right number of Basic Blocks.</li>
+	<li>The Basic Blocks 1, 2,3 can be combined together.</li>
+	<li>The Basic Block 4 and 5 can be combined together.</li>
+	<li>The Basic Block 5 and 6 can be combined together.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '386904', 'text': '<p>Consider an intermediate representation(IR) that has only assignment statements and unconditional, conditional goto(branch) statements.<br>\nConsider the following control flow graph of a program $\\text{P}$ which has $8$ basic blocks :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=4750945861519461217"></p>\n\n<p><br>\n“Minimum” how many Branch statements(conditional or unconditional) does the program $\\text{P}$ has _______</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386906', 'text': '<p>Consider the following program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nL0: e := 0\nb := 1\nd := 2\nL1: a := b + 2\nc := d + 5\ne := e + c\nf := a * a\nif f &lt; c goto L3\nL2: e := e + f\ngoto L4\nL3: e := e + 2\nL4: d := d + 4\nb := b - 4\nif b != d goto L1\nL5:</pre>\n\n<p>Identify the basic blocks and draw the CFG(control flow graph) for the code above. Let the number of basics blocks(nodes) be $\\text{M}$ and edges be $\\text{N}$ then $\\text{M+N}$ is _______&nbsp;( We have special designated entry and exit nodes in the CFG which should be included in $\\text{M, N.)}$</p>', 'type': 'Numerical', 'answer': '17', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386918', 'text': '<p>DAG representation of a basic block allows</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Automatic detection of local common subexpressions</li>\n\t<li>Detection of induction variables</li>\n\t<li>Automatic detection of loop variant</li>\n\t<li>None of the mentioned</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,directed-acyclic-graph,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386922', 'text': '<p>Consider the following basic block, in which all variables are integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := a\nw := a * a\nu := 3\nv := u + w</pre>\n\n<p>Assume that the only variables that are live at the exit of this block are $\\textsf{v}$ and $\\textsf{z}.$<br>\nConsider the following transformation of the given basic block after applying a particular optimization.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nw := a * a\nu := 3\nv := u + w</pre>\n\n<p>Which of the following best describes the optimization that has been performed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>algebraic simplification</li>\n\t<li>common sub-expression elimination</li>\n\t<li>copy propagation</li>\n\t<li>dead code elimination</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386914', 'text': '<p>A node $p$ in a control flow graph(CFG) dominates a node $q$ if every path from the entry node to $q$ goes through $p.$ We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q, \\;\\text{DOM}(q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $q \\; \\text{DOM}(q).$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $8$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" height="283" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=9090697399518023469" width="230"></p>\n\n<p><br>\nWhich of the following is $\\text{Dom(8)} ?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\{1,2,3,4,5,6,7,8\\}$</li>\n\t<li>$\\{1,2,3,6,7,8\\}$</li>\n\t<li>$\\{1,2,3,8\\}$</li>\n\t<li>$\\{6,7,8\\}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386900', 'text': '<p>Consider the following Control Graph $\\text{G}:$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=4545490243966503819"></p>\n\n<p>For the above CFG of basic blocks, which of the following is Correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All possible statements have been combined to form the right number of Basic Blocks.</li>\n\t<li>The Basic Block $\\text{C}$ and $\\text{D}$ can be combined together</li>\n\t<li>The Basic Block $\\text{D}$ and $\\text{E}$ can be combined together</li>\n\t<li>The Basic Block $\\text{E}$ and $\\text{F}$ can be combined together</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386910', 'text': '<p>A node $p$ in a control flow graph(CFG) dominates a node $q$ if every path from the entry node to $q$ goes through $p$. We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q, \\;\\text{DOM}(q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $q \\in \\operatorname{DOM}(q).$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $10$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=5832795228854436150"></p>\n\n<p><br>\nWhich of the following is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\operatorname{DOM}(1)=\\{1\\}$</li>\n\t<li>$\\operatorname{DOM}(2)=\\{1,2\\}$</li>\n\t<li>$\\operatorname{DOM}(3)=\\{1,2,3\\}$</li>\n\t<li>$\\operatorname{DOM}(10)=\\{1,2,10\\}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386912', 'text': '<p>A node $p$ in a control flow graph(CFG) $\\text{N}$ dominates a node $q$ if every path from the entry node to $q$ goes through $p$. We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q,\\; \\text{DOM(}q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $\\mathrm{q} \\in \\operatorname{DOM}(\\mathrm{q})$</p>\n\n<ul>\n\t<li>$\\mathrm{p}$ dominates $\\mathrm{q}$, written $\\mathrm{p} \\leq \\mathrm{q}$, i.e. $\\mathrm{p} \\in \\operatorname{DOM}(\\mathrm{q})$.</li>\n\t<li>$\\mathrm{p}$ properly (strictly) dominates $\\mathrm{q}$, written $\\mathrm{p}&lt;\\mathrm{q}$ if $\\mathrm{p} \\leq \\mathrm{q}$ and $\\mathrm{p} \\neq \\mathrm{q}$.</li>\n\t<li>$\\mathrm{p}$ immediately (or directly) dominates $\\mathrm{q}$, if $\\mathrm{p}&lt;\\mathrm{q}$ and there is no node $t$ such that $\\mathrm{p}&lt;\\mathrm{t}&lt;\\mathrm{q}$.</li>\n</ul>\n\n<p>We say $p$ is the immediate dominator of $q$ and write $p=\\operatorname{IDOM}(q)$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $8$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6371213926062274616"></p>\n\n<p><br>\nWhich node is the immediate dominator of node $8?$</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386898', 'text': '<p>Consider the following program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nL0: e := 0\nb := 1\nd := 2\nL1: a := b + 2\nc := d + 5\ne := e + c\nf := a * a\nif f &lt; c goto L3\nL2: e := e + f\ngoto L4\nL3: e := e + 2\nL4: d := d + 4\nb := b - 4\nif b != d goto L1\nL5:</pre>\n\n<p>This program uses six temporaries, $\\textsf{a-f}.$ Assume that the only variable that is live on exit from this program is $\\textsf{e}.$<br>\nMaximum how many variables will be live simultaneously (at some program point)?</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386908', 'text': '<p>Consider the following program :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nu = v + 1\nw = u - v\nx = x + w\ny = u - w\nz = x + y</pre>\n\n<p>The above code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have at most two source operands and one destination operand. Assume that all variables are dead after this code segment.</p>\n\n<p>What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,code-optimization,register-allocation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386924', 'text': '<p>Consider the following basic block, in which all variables are integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := b + c\nw := y * y\nu := x + 3\nv := u + w</pre>\n\n<p>Assume that the only variables that are live at the exit of this block are $\\textsf{v}$ and $\\textsf{z}.$<br>\nConsider the following transformation of the given basic block after applying a particular optimization.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := a\nw := y * y\nu := x + 3\nv := u + w</pre>\n\n<p>Which of the following best describes the optimization that has been performed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>algebraic simplification</li>\n\t<li>common sub-expression elimination</li>\n\t<li>copy propagation</li>\n\t<li>dead code elimination</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386916', 'text': '<p>Which of the following statements regarding SSA form (Static Single Assignment form) of an intermediate representation is False?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If a program is in SSA form, then use of a variable is reached by exactly one definition of that variable.</li>\n\t<li>Flow of control in SSA form remains the same as in the non-SSA form.</li>\n\t<li>Since every variable has exactly one definition in the program text, so there are no loops in SSA form</li>\n\t<li>Some compiler optimizations perform better on SSA forms.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,static-single-assignment,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386902', 'text': '<p>Which of the following three-Address code satisfies the below expression?<br>\n$$a+(b \\times a)+b+c+d$$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t_1=a+b, t_2=b \\times t_1, t_3=t_2+c, t_4=t_3+d$</li>\n\t<li>$t_1=a+b, t_2=b \\times t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d$</li>\n\t<li>$t_1=a \\times b, t_2=b \\times t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,three-address-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386920', 'text': '<p>Consider the following basic block :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// live { ? }\na = b + 1\nc = a - b\nd = d + c\ne = a - c\nf = d + e\n// live {f,e}</pre>\n\n<p>At the bottom of the basic block, variables $\\textsf{f, e}$ are live. What will be the variables that will be live at the beginning of the basic block i.e. what belongs to $\\textsf{Live \\{ ? \\}} ?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\textsf{a}$</li>\n\t<li>$\\textsf{b}$</li>\n\t<li>$\\textsf{c}$</li>\n\t<li>$\\textsf{d}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,multiple-selects,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386926', 'text': '<p>Consider the following Control flow graph (CFG) of a program :</p>\n\n<p style="text-align:center"><img alt="" height="366" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=17284451182473111233" width="345"></p>\n\n<p><br>\nFor the above CFG of basic blocks, Which of the following is Correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All Possible Statements have been combined to form the right number of Basic Blocks.</li>\n\t<li>The Basic Blocks $1, 2,3$ can be combined together.</li>\n\t<li>The Basic Block $4$ and $5$ can be combined together.</li>\n\t<li>The Basic Block $5$ and $6$ can be combined together.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,1-mark', 'category': 'Compiler Design'}]
+      let data={'name': 'GO Classes Test Series 2024 | Compiler Design | Test 3', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '386904', 'text': '<p>Consider an intermediate representation(IR) that has only assignment statements and unconditional, conditional goto(branch) statements.<br>\nConsider the following control flow graph of a program $\\text{P}$ which has $8$ basic blocks :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=4750945861519461217"></p>\n\n<p><br>\n“Minimum” how many Branch statements(conditional or unconditional) does the program $\\text{P}$ has _______</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386906', 'text': '<p>Consider the following program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nL0: e := 0\nb := 1\nd := 2\nL1: a := b + 2\nc := d + 5\ne := e + c\nf := a * a\nif f &lt; c goto L3\nL2: e := e + f\ngoto L4\nL3: e := e + 2\nL4: d := d + 4\nb := b - 4\nif b != d goto L1\nL5:</pre>\n\n<p>Identify the basic blocks and draw the CFG(control flow graph) for the code above. Let the number of basics blocks(nodes) be $\\text{M}$ and edges be $\\text{N}$ then $\\text{M+N}$ is _______&nbsp;( We have special designated entry and exit nodes in the CFG which should be included in $\\text{M, N.)}$</p>', 'type': 'Numerical', 'answer': '17', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386918', 'text': '<p>DAG representation of a basic block allows</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Automatic detection of local common subexpressions</li>\n\t<li>Detection of induction variables</li>\n\t<li>Automatic detection of loop variant</li>\n\t<li>None of the mentioned</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,directed-acyclic-graph,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386922', 'text': '<p>Consider the following basic block, in which all variables are integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := a\nw := a * a\nu := 3\nv := u + w</pre>\n\n<p>Assume that the only variables that are live at the exit of this block are $\\textsf{v}$ and $\\textsf{z}.$<br>\nConsider the following transformation of the given basic block after applying a particular optimization.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nw := a * a\nu := 3\nv := u + w</pre>\n\n<p>Which of the following best describes the optimization that has been performed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>algebraic simplification</li>\n\t<li>common sub-expression elimination</li>\n\t<li>copy propagation</li>\n\t<li>dead code elimination</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386914', 'text': '<p>A node $p$ in a control flow graph(CFG) dominates a node $q$ if every path from the entry node to $q$ goes through $p.$ We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q, \\;\\text{DOM}(q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $q \\; \\text{DOM}(q).$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $8$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" height="283" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=9090697399518023469" width="230"></p>\n\n<p><br>\nWhich of the following is $\\text{Dom(8)} ?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\{1,2,3,4,5,6,7,8\\}$</li>\n\t<li>$\\{1,2,3,6,7,8\\}$</li>\n\t<li>$\\{1,2,3,8\\}$</li>\n\t<li>$\\{6,7,8\\}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386900', 'text': '<p>Consider the following Control Graph $\\text{G}:$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=4545490243966503819"></p>\n\n<p>For the above CFG of basic blocks, which of the following is Correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All possible statements have been combined to form the right number of Basic Blocks.</li>\n\t<li>The Basic Block $\\text{C}$ and $\\text{D}$ can be combined together</li>\n\t<li>The Basic Block $\\text{D}$ and $\\text{E}$ can be combined together</li>\n\t<li>The Basic Block $\\text{E}$ and $\\text{F}$ can be combined together</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386910', 'text': '<p>A node $p$ in a control flow graph(CFG) dominates a node $q$ if every path from the entry node to $q$ goes through $p$. We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q, \\;\\text{DOM}(q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $q \\in \\operatorname{DOM}(q).$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $10$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=5832795228854436150"></p>\n\n<p><br>\nWhich of the following is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\operatorname{DOM}(1)=\\{1\\}$</li>\n\t<li>$\\operatorname{DOM}(2)=\\{1,2\\}$</li>\n\t<li>$\\operatorname{DOM}(3)=\\{1,2,3\\}$</li>\n\t<li>$\\operatorname{DOM}(10)=\\{1,2,10\\}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386912', 'text': '<p>A node $p$ in a control flow graph(CFG) $\\text{N}$ dominates a node $q$ if every path from the entry node to $q$ goes through $p$. We say that node $p$ is a dominator of node $q.$<br>\nThe dominator set of node $q,\\; \\text{DOM(}q),$ is formed by all nodes that dominate $q.$ By definition, each node dominates itself, therefore, $\\mathrm{q} \\in \\operatorname{DOM}(\\mathrm{q})$</p>\n\n<ul>\n\t<li>$\\mathrm{p}$ dominates $\\mathrm{q}$, written $\\mathrm{p} \\leq \\mathrm{q}$, i.e. $\\mathrm{p} \\in \\operatorname{DOM}(\\mathrm{q})$.</li>\n\t<li>$\\mathrm{p}$ properly (strictly) dominates $\\mathrm{q}$, written $\\mathrm{p}&lt;\\mathrm{q}$ if $\\mathrm{p} \\leq \\mathrm{q}$ and $\\mathrm{p} \\neq \\mathrm{q}$.</li>\n\t<li>$\\mathrm{p}$ immediately (or directly) dominates $\\mathrm{q}$, if $\\mathrm{p}&lt;\\mathrm{q}$ and there is no node $t$ such that $\\mathrm{p}&lt;\\mathrm{t}&lt;\\mathrm{q}$.</li>\n</ul>\n\n<p>We say $p$ is the immediate dominator of $q$ and write $p=\\operatorname{IDOM}(q)$<br>\nConsider the following control flow graph(CFG) of a program $\\text{P}$ in low level intermediate representation, which has $8$ basic blocks(nodes) :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6371213926062274616"></p>\n\n<p><br>\nWhich node is the immediate dominator of node $8?$</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386898', 'text': '<p>Consider the following program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nL0: e := 0\nb := 1\nd := 2\nL1: a := b + 2\nc := d + 5\ne := e + c\nf := a * a\nif f &lt; c goto L3\nL2: e := e + f\ngoto L4\nL3: e := e + 2\nL4: d := d + 4\nb := b - 4\nif b != d goto L1\nL5:</pre>\n\n<p>This program uses six temporaries, $\\textsf{a-f}.$ Assume that the only variable that is live on exit from this program is $\\textsf{e}.$<br>\nMaximum how many variables will be live simultaneously (at some program point)?</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,intermediate-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386908', 'text': '<p>Consider the following program :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nu = v + 1\nw = u - v\nx = x + w\ny = u - w\nz = x + y</pre>\n\n<p>The above code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have at most two source operands and one destination operand. Assume that all variables are dead after this code segment.</p>\n\n<p>What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,numerical-answers,goclasses,compiler-design,code-optimization,register-allocation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386924', 'text': '<p>Consider the following basic block, in which all variables are integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := b + c\nw := y * y\nu := x + 3\nv := u + w</pre>\n\n<p>Assume that the only variables that are live at the exit of this block are $\\textsf{v}$ and $\\textsf{z}.$<br>\nConsider the following transformation of the given basic block after applying a particular optimization.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na := b + c\nz := a * a\nx := 0\ny := a\nw := y * y\nu := x + 3\nv := u + w</pre>\n\n<p>Which of the following best describes the optimization that has been performed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>algebraic simplification</li>\n\t<li>common sub-expression elimination</li>\n\t<li>copy propagation</li>\n\t<li>dead code elimination</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,code-optimization,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386916', 'text': '<p>Which of the following statements regarding SSA form (Static Single Assignment form) of an intermediate representation is False?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If a program is in SSA form, then use of a variable is reached by exactly one definition of that variable.</li>\n\t<li>Flow of control in SSA form remains the same as in the non-SSA form.</li>\n\t<li>Since every variable has exactly one definition in the program text, so there are no loops in SSA form</li>\n\t<li>Some compiler optimizations perform better on SSA forms.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,static-single-assignment,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386902', 'text': '<p>Which of the following three-Address code satisfies the below expression?<br>\n$$a+(b \\times a)+b+c+d$$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t_1=a+b, t_2=b \\times t_1, t_3=t_2+c, t_4=t_3+d$</li>\n\t<li>$t_1=a+b, t_2=b \\times t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d$</li>\n\t<li>$t_1=a \\times b, t_2=b \\times t_1, t_3=a+t_2, t_4=t_3+c, t_5=t_4+d$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,three-address-code,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386920', 'text': '<p>Consider the following basic block :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// live { ? }\na = b + 1\nc = a - b\nd = d + c\ne = a - c\nf = d + e\n// live {f,e}</pre>\n\n<p>At the bottom of the basic block, variables $\\textsf{f, e}$ are live. What will be the variables that will be live at the beginning of the basic block i.e. what belongs to $\\textsf{Live \\{ ? \\}} ?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\textsf{a}$</li>\n\t<li>$\\textsf{b}$</li>\n\t<li>$\\textsf{c}$</li>\n\t<li>$\\textsf{d}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,multiple-selects,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '386926', 'text': '<p>Consider the following Control flow graph (CFG) of a program :</p>\n\n<p style="text-align:center"><img alt="" height="366" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=17284451182473111233" width="345"></p>\n\n<p><br>\nFor the above CFG of basic blocks, Which of the following is Correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All Possible Statements have been combined to form the right number of Basic Blocks.</li>\n\t<li>The Basic Blocks $1, 2,3$ can be combined together.</li>\n\t<li>The Basic Block $4$ and $5$ can be combined together.</li>\n\t<li>The Basic Block $5$ and $6$ can be combined together.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-3,goclasses,compiler-design,intermediate-code,1-mark', 'category': 'Compiler Design'}]}]}
+      </script>
+      

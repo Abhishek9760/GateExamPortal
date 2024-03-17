@@ -1,0 +1,557 @@
+<div><span>Q1</span> - <p>What will be the output of the following C program:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+#define hello "myhello" "myhi"
+int main()
+
+    printf(hello);
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>myhello   nbsp;</li>
+	<li>myhi</li>
+	<li>myhellomyhi</li>
+	<li>myhello myhi</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the maximum value printed by the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+    int i = 0;
+    char* p = "THISISRIDICULOUS";
+    while(*(p+i) != '')
+    
+        printf("
+    
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What will be the output of the following C program:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+  char* my_words[] = "Abin", "Mahesh", "Seema", "Palak";
+  char *p;
+  p = my_words[3];
+  printf("
+  printf("
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>ak, S</li>
+	<li>, a</li>
+	<li>Possible Runtime Error</li>
+	<li>ak, a</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following C program fragment:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+double a = getMyDouble();
+float b, c;
+b = getMyFloat();
+c = a + b;</pre>
+
+<p><br>
+If the assembly instruction corresponding to the addition is "ADD R0, R1" where R0 is having the value corresponding to the variable b, the minimum required size in bytes of the register R0 is _____ bytes.</p>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following C program:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+extern int getMyMonth();
+int main()
+
+    enum Month January, February, March, April,
+        May, June, July, August, September,
+        October, November, December;
+    int my_month = getMyMonth();
+    int my_inc=0;
+    switch(my_month)
+    
+        case January:
+        case March:
+        case May:
+        case July:
+        case August:
+        case October:
+        case December:
+        my_inc++;
+        default:
+        my_inc += 30;
+        case February: 
+        my_inc -=2;
+    
+    printf("
+</pre>
+
+<p><br>
+What will be the output of the above program if the external function getMyMonth() returns 1?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>31</li>
+	<li>30</li>
+	<li>28</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>The number of characters (including whitespaces if any) printed by the following C program is</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#define sum(a, b) #a "+"#b "=
+#include   lt;stdio.h   gt;
+int main()
+
+  printf(sum(6,9), 6+9);
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following C program:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+   char* disease = "COVID-19";
+   (*disease)++;
+   printf("
+
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>DPWJE-20</li>
+	<li>DOVID-19</li>
+	<li>COVID-19</li>
+	<li>Possible Runtime Error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+   int myinc = 0;
+   if(++myinc    amp;   amp; –myinc)
+   
+     myinc–;
+   
+   printf("
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following C structure declaration.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct abc
+
+    double myfield1;
+    int myfield2;
+myobj;</pre>
+
+<p><br>
+Which of the following pointer declarations would not cause any undefined behaviour for the above given structure fields?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char *p = (char*)    amp;myobj.myfield2;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int *p = (int*)    amp;myobj.myfield1;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+double *p = (double*)    amp;myobj.myfield2;</pre>
+	</li>
+	<li><br>
+	Both B and C</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main()
+
+    int a[10][20][30]=0;
+    printf("
+       a[10][20] - a[10][10], a[10] - a[5]);
+    return 0;
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>1 300 100</li>
+	<li>600 300 100</li>
+	<li>1 100 5</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+   int myinc = -1;
+   if(++myinc || –myinc)
+   
+     myinc–;
+   
+   printf("
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>How many 1s will be printed by the below function when called with the argument 9? (Assume sizeof int as 4 bytes)</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int fun(int a)
+
+    char *arr[] = "0000", "0001","0010","0011","0100",
+        "0101","0110","0111","1000","1001","
+        1010","1011","1100","1101","1110","1111";
+    unsigned char* p = (unsigned char*)    amp;a ;
+    p+=3;
+    int i;
+    for(i = 0; i    lt; sizeof a; i++)  
+        int d = (*p)   gt;   gt;4; 
+        printf("
+        d = (*p)    amp; 0xf;
+        printf("
+        p–;
+    
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Which of the below statement is a correct way to print the statement “Hello World”? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf ("Hello World"); 
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf ("
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char *p = "Hello";
+printf(p, " World");
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char * p = "Hello 
+char *q = "World";
+printf(p,q);
+</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Which of the following assignments causes an overflow? (Assume size of int is 4 bytes and long int is 8 bytes)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>int a = 123456789;</li>
+	<li>int a = 123456789123456789L;</li>
+	<li>unsigned a = 123456789;</li>
+	<li>long int a = 123456789123456789;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>If the values printed by the following C program are a,b,c and d respectively, then a+2b+3c+4d =_____</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+#include   lt;string.h   gt;
+int main()
+
+    char* p = "GATE Overflow";
+    char q[] = "GATE Overflow";
+    printf("
+        sizeof(*p), sizeof(q), strlen(p), strlen(q));
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdlib.h   gt;
+int* fun();
+int main()
+
+    int a = 5;
+    int *p =    amp;a;
+    p = fun();
+    printf("
+    return 0;
+
+int* fun()
+
+    int *a =(int*) malloc(sizeof(int));
+    *a = 1;
+    return a;
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdlib.h   gt;
+
+struct node
+
+    int value;
+    struct node * next;
+;
+void init_list(struct node *list)
+
+    list = malloc(sizeof(struct node));
+    list -   gt; value = 5;
+    list -   gt; value++;
+
+#include   lt;stdio.h   gt;
+int main()
+
+    struct node *list;
+    init_list(list);
+    printf("
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>5</li>
+	<li>Garbage Value</li>
+	<li>6</li>
+	<li>Possible Runtime Error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p><br>
+Match the following expressions with the functions they are doing:</p>
+
+<p><br>
+[                                                               <br>
+<br>                                                                 nbsp;A.                                                                    amp;                                                   nbsp;!(n    amp; n-1)                                                                  amp;1.                                                                    amp;                  nbsp;Sets the (d+1)^th   nbsp;bit from right of n to 1;                                                                 <br>
+B.                                                                    amp;                                              nbsp; n | (1   lt;   lt;d)                                                                  amp;2. amp; Unsets the (d+1)^th   nbsp;   nbsp;bit from right of n   nbsp;to 0;                                                                                                                                    nbsp;<br>
+C.                                                                    amp;                                        nbsp; n    amp; (1   lt;   lt;d)                                                                  amp;3.                                        amp; Checks if n is a power of 2;                                                                 <br>
+D.                                                                    amp;                                      nbsp;  n ^   nbsp;(1   lt;   lt;d)                                                                  amp;4.        amp; Complements the (d+1)^th   nbsp;   nbsp;bit from right of n;                                                                                                                                       nbsp;<br>                                                                   nbsp;                                                                    amp;                                                                   nbsp;                                                                  amp;5.                                                     amp; Something else;                                                                                                                                           nbsp;                                                                   nbsp;                                                               nbsp;<br> ]<br></p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A-3, B-1, C-2, D-4</li>
+	<li>A-3, B-2, C -1, D-4</li>
+	<li>A-3, B-1, C-5, D-4</li>
+	<li>A-5, B-2, C-1, D- 3</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Which of the following is the correct replacement for "   lt;my_decl   gt;" to define a global integer variable?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+   lt;my_decl   gt; my_global;
+int main()
+
+    printf("
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>global int</li>
+	<li>extern int</li>
+	<li>static int</li>
+	<li>int</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+struct my_struct
+
+    int field1;
+    float field2;
+    double field3;
+;
+int main()
+
+    struct my_struct try1, try2;
+    try1.field1 = 10.1;
+    try1.field2 = 10.1;
+    try1.field3 = 10.1;
+    try2 = try1;
+    printf("
+    try2.field1, try2.field2, try2.field3);
+ 
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>10  10.1  10.1</li>
+	<li>10.1  10.1  10.1</li>
+	<li>Possible Runtime Error</li>
+	<li>Garbage Value   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider the following C program fragment:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int my_array[20][10];
+int main()
+
+    int *p = my_array, i;
+    for(i = 0; i    lt; 10*20; i++)
+    
+       *(p+X) = i;
+    
+    ...
+</pre>
+
+<p>The correct replacement for 'X' so that every position in the array my_array gets initialized is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>(i / 20) * 10 + (i
+	<li>(i 
+	<li>(i / 10) * 20 + (i
+	<li>(i 
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Which of the following correctly declare a pointer to function returning a pointer to an integer and accepting a pointer to a one-dimensional integer array of size 10 as input?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int * (*p)(int * my_array[10])</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int * (*p)(int (* my_array)[10])</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int * p(int * my_array[10])</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int * (*p) (int * my_array)</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void foo(int a, int *p1, int **p2)
+
+    **p2 = 5;
+    *p1 = 6;
+    a = 7;
+
+int main()
+
+    int a, *p1 =    amp;a, **p2 =    amp;p1;
+    a = 9;
+    foo(a, p1, p2);
+    printf("
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+    int a = 1, b = 0;
+    printf("
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+    int a, b = 2, c = 3;
+    a = b, c++;
+    printf("
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>Compiler Error</li>
+	<li>3    nbsp;3  4</li>
+	<li>2  2  4</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>Consider the following C code fragment (…   nbsp;denote further statements):</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int my_array[30][40][50];
+    init_array(   amp;my_array);
+    ...
+</pre>
+
+<p><br>
+Which of the following is a valid declaration for the function init_array? Mark all the correct options.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void init_array(int ** array[30][40][50]);</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void init_array(int (* array)[30][40][50]);</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void init_array(int *** array);</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void init_array(int ** array[30][40]);</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>The number of times the "return" statement gets executed when the following function is called with an argument 5 is ______</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+unsigned int fib(unsigned int n)
+
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    return fib(n-1) + fib(n-2);
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if (x != 0)
+    a = b;
+else
+    a = c;</pre>
+
+<p><br>
+What of the following can functionally substitute the if-else statement given above?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a = (!!x)*b || c;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a = b || c;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a = (x   gt;0)? c : b;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+a = (!!x)*b + !x * c;</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>What will be the output of the following C program?(Assume IEEE -754 standard being Used)</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+
+  float a = 8.0625;
+  if(a == 8.0625)
+   
+     printf("1");
+   
+  else
+   
+     printf("0");
+   
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#define macro(a,b) (a+b)
+#include   lt;stdio.h   gt;
+int main()
+
+    printf("
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '342509', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#define hello "myhello" "myhi"\nint main()\n{\n    printf(hello);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>myhello&nbsp;</li>\n\t<li>myhi</li>\n\t<li>myhellomyhi</li>\n\t<li>myhello myhi</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,macros', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342511', 'text': '<p>What will be the maximum value printed by the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int i = 0;\n    char* p = "THISISRIDICULOUS";\n    while(*(p+i) != \'\\0\')\n    {\n        printf("%d ", *(p+i++) - \'A\');\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '20', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342548', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n  char* my_words[] = {"Abin", "Mahesh", "Seema", "Palak"};\n  char *p;\n  p = my_words[3];\n  printf("%s, ", p+3);\n  printf("%c", *p+3);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>ak, S</li>\n\t<li>, a</li>\n\t<li>Possible Runtime Error</li>\n\t<li>ak, a</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,strings', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342531', 'text': '<p>Consider the following C program fragment:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndouble a = getMyDouble();\nfloat b, c;\nb = getMyFloat();\nc = a + b;</pre>\n\n<p><br>\nIf the assembly instruction corresponding to the addition is "ADD R0, R1" where R0 is having the value corresponding to the variable b, the minimum required size in bytes of the register R0 is _____ bytes.</p>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '8', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,data-types', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342540', 'text': '<p>Consider the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nextern int getMyMonth();\nint main()\n{\n    enum Month {January, February, March, April,\n        May, June, July, August, September,\n        October, November, December};\n    int my_month = getMyMonth();\n    int my_inc=0;\n    switch(my_month)\n    {\n        case January:\n        case March:\n        case May:\n        case July:\n        case August:\n        case October:\n        case December:\n        my_inc++;\n        default:\n        my_inc += 30;\n        case February: \n        my_inc -=2;\n    }\n    printf("%d", my_inc);\n}</pre>\n\n<p><br>\nWhat will be the output of the above program if the external function getMyMonth() returns $1?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$31$</li>\n\t<li>$30$</li>\n\t<li>$28$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342544', 'text': '<p>The number of characters (including whitespaces if any) printed by the following C program is</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define sum(a, b) #a "+"#b "=%d"\n#include&lt;stdio.h&gt;\nint main()\n{\n  printf(sum(6,9), 6+9);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '6', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,macros', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342546', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   char* disease = "COVID-19";\n   (*disease)++;\n   printf("%s",disease);\n}\n\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>DPWJE-$20$</li>\n\t<li>DOVID-$19$</li>\n\t<li>COVID-$19$</li>\n\t<li>Possible Runtime Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342527', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   int myinc = 0;\n   if(++myinc &amp;&amp; --myinc)\n   {\n     myinc--;\n   }\n   printf("%d", myinc);\n}\n</pre>', 'type': 'Numerical', 'answer': '0', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342525', 'text': '<p>Consider the following C structure declaration.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct abc\n{\n    double myfield1;\n    int myfield2;\n}myobj;</pre>\n\n<p><br>\nWhich of the following pointer declarations would not cause any undefined behaviour for the above given structure fields?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *p = (char*) &amp;myobj.myfield2;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p = (int*) &amp;myobj.myfield1;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndouble *p = (double*) &amp;myobj.myfield2;</pre>\n\t</li>\n\t<li><br>\n\tBoth $B$ and $C$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342518', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int a[10][20][30]={0};\n    printf("%d %d %d",&amp;a+1 - &amp;a, \n       a[10][20] - a[10][10], a[10] - a[5]);\n    return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>1 300 100</li>\n\t<li>600 300 100</li>\n\t<li>1 100 5</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342529', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   int myinc = -1;\n   if(++myinc || --myinc)\n   {\n     myinc--;\n   }\n   printf("%d", myinc);\n}\n</pre>', 'type': 'Numerical', 'answer': '-2', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342515', 'text': '<p>How many $1s$ will be printed by the below function when called with the argument $9?$ (Assume sizeof int as $4$ bytes)</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint fun(int a)\n{\n    char *arr[] = {"0000", "0001","0010","0011","0100",\n        "0101","0110","0111","1000","1001","\n        1010","1011","1100","1101","1110","1111"};\n    unsigned char* p = (unsigned char*) &amp;a ;\n    p+=3;\n    int i;\n    for(i = 0; i &lt; sizeof a; i++) { \n        int d = (*p)&gt;&gt;4; \n        printf("%s", arr[d]);\n        d = (*p) &amp; 0xf;\n        printf("%s ", arr[d]);\n        p--;\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342542', 'text': '<p>Which of the below statement is a correct way to print the statement “Hello World”? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf ("Hello World"); \n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf ("%s", "Hello World"); \n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *p = "Hello";\nprintf(p, " World");\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar * p = "Hello %s";\nchar *q = "World";\nprintf(p,q);\n</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'A;B;D', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,pointers,multiple-selects', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342534', 'text': '<p>Which of the following assignments causes an overflow? (Assume size of int is $4$ bytes and long int is $8$ bytes)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>int a = 123456789;</li>\n\t<li>int a = 123456789123456789L;</li>\n\t<li>unsigned a = 123456789;</li>\n\t<li>long int a = 123456789123456789;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,data-types', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342523', 'text': '<p>If the values printed by the following C program are $a,b,c$ and $d$ respectively, then $a+2b+3c+4d = $_____</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\nint main()\n{\n    char* p = "GATE Overflow";\n    char q[] = "GATE Overflow";\n    printf("%lu %lu %lu %lu",\n        sizeof(*p), sizeof(q), strlen(p), strlen(q));\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '120', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers,strings', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342517', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdlib.h&gt;\nint* fun();\nint main()\n{\n    int a = 5;\n    int *p = &amp;a;\n    p = fun();\n    printf("%d",*p);\n    return 0;\n}\nint* fun()\n{\n    int *a =(int*) malloc(sizeof(int));\n    *a = 1;\n    return a;\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342504', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdlib.h&gt;\n\nstruct node\n{\n    int value;\n    struct node * next;\n};\nvoid init_list(struct node *list)\n{\n    list = malloc(sizeof(struct node));\n    list -&gt; value = 5;\n    list -&gt; value++;\n}\n#include&lt;stdio.h&gt;\nint main()\n{\n    struct node *list;\n    init_list(list);\n    printf("%d", list-&gt; value);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>Garbage Value</li>\n\t<li>$6$</li>\n\t<li>Possible Runtime Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342512', 'text': '<p><br>\nMatch the following expressions with the functions they are doing:</p>\n\n<p>$<br>\n\\begin{array}{|cc|cl|}<br>\n\\hline<br>\n&nbsp;A. &amp;&nbsp;\\text{!(n &amp; n-1)} &amp;1.&amp; &nbsp;\\text{Sets the }{(d+1})^{th}\\text{&nbsp;bit from right of n to 1}\\\\ \\hline<br>\nB. &amp;&nbsp; \\text{n | (1&lt;&lt;d)}&amp;2.&amp; \\text{Unsets the }{(d+1)}^{th}\\text{&nbsp;&nbsp;bit from right of n&nbsp;to 0}\\\\ \\hline&nbsp;<br>\nC. &amp;&nbsp; \\text{n &amp; (1&lt;&lt;d)}&amp;3.&amp; \\text{Checks if n is a power of 2}\\\\ \\hline<br>\nD. &amp;&nbsp; \\text{ n ^&nbsp;(1&lt;&lt;d)}&amp;4.&amp; \\text{Complements the }{(d+1)}^{th}\\text{&nbsp;&nbsp;bit from right of n}\\\\ \\hline&nbsp;<br>\n&nbsp;&amp;&nbsp; &amp;5.&amp; \\text{Something else}\\\\ \\hline&nbsp;&nbsp;&nbsp;<br>\n\\end{array}<br>\n$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$A-3, B-1, C-2, D-4$</li>\n\t<li>$A-3, B-2, C -1, D-4$</li>\n\t<li>$A-3, B-1, C-5, D-4$</li>\n\t<li>$A-5, B-2, C-1, D- 3$</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators,match-the-following', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342539', 'text': '<p>Which of the following is the correct replacement for "&lt;my_decl&gt;" to define a global integer variable?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n&lt;my_decl&gt; my_global;\nint main()\n{\n    printf("%d", my_global);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>global int</li>\n\t<li>extern int</li>\n\t<li>static int</li>\n\t<li>int</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342537', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct my_struct\n{\n    int field1;\n    float field2;\n    double field3;\n};\nint main()\n{\n    struct my_struct try1, try2;\n    try1.field1 = 10.1;\n    try1.field2 = 10.1;\n    try1.field3 = 10.1;\n    try2 = try1;\n    printf("%d %.1f %.1lf",\n    try2.field1, try2.field2, try2.field3);\n} \n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$10\\; 10.1\\; 10.1$</li>\n\t<li>$10.1\\; 10.1\\; 10.1$</li>\n\t<li>Possible Runtime Error</li>\n\t<li>Garbage Value&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342522', 'text': '<p>Consider the following C program fragment:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint my_array[20][10];\nint main()\n{\n    int *p = my_array, i;\n    for(i = 0; i &lt; 10*20; i++)\n    {\n       *(p+X) = i;\n    }\n    ...\n}</pre>\n\n<p>The correct replacement for \'X\' so that every position in the array my_array gets initialized is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>(i / 20) * 10 + (i% 20) * 10;</li>\n\t<li>(i % 20) * 10 + (i /&nbsp;20) * 10;</li>\n\t<li>(i / 10) * 20 + (i% 10) * 20;</li>\n\t<li>(i % 10) + (i / 10) * 10;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342536', 'text': '<p>Which of the following correctly declare a pointer to function returning a pointer to an integer and accepting a pointer to a one-dimensional integer array of size $10$ as input?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p)(int * my_array[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p)(int (* my_array)[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * p(int * my_array[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p) (int * my_array)</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342506', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid foo(int a, int *p1, int **p2)\n{\n    **p2 = 5;\n    *p1 = 6;\n    a = 7;\n}\nint main()\n{\n    int a, *p1 = &amp;a, **p2 = &amp;p1;\n    a = 9;\n    foo(a, p1, p2);\n    printf("%d", a);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers,parameter-passing', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342513', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int a = 1, b = 0;\n    printf("%d", ~a | ~b &amp; a &amp;&amp; ++b - a);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '0', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342519', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int a, b = 2, c = 3;\n    a = b, c++;\n    printf("%d %d %d", a, b, c);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Compiler Error</li>\n\t<li>$3\\;&nbsp;3\\; 4$</li>\n\t<li>$2\\; 2\\; 4$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342550', 'text': '<p>Consider the following C code fragment (…&nbsp;denote further statements):</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int my_array[30][40][50];\n    init_array(&amp;my_array);\n    ...\n}</pre>\n\n<p><br>\nWhich of the following is a valid declaration for the function init_array? Mark all the correct options.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int ** array[30][40][50]);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int (* array)[30][40][50]);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int *** array);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int ** array[30][40]);</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,parameter-passing,pointers,multiple-selects', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342521', 'text': '<p>The number of times the "return" statement gets executed when the following function is called with an argument $5$ is ______</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nunsigned int fib(unsigned int n)\n{\n    if(n == 0) return 0;\n    if(n == 1) return 1;\n    return fib(n-1) + fib(n-2);\n}\n</pre>', 'type': 'Numerical', 'answer': '15', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,recursion', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342514', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (x != 0)\n    a = b;\nelse\n    a = c;</pre>\n\n<p><br>\nWhat of the following can functionally substitute the if-else statement given above?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (!!x)*b || c;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = b || c;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (x&gt;0)? c : b;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (!!x)*b + !x * c;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342533', 'text': '<p>What will be the output of the following C program?(Assume IEEE -$754$ standard being Used)</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n  float a = 8.0625;\n  if(a == 8.0625)\n   {\n     printf("1");\n   }\n  else\n   {\n     printf("0");\n   }\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342507', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define macro(a,b) (a+b)\n#include&lt;stdio.h&gt;\nint main()\n{\n    printf("%d", macro(3,4) * macro(3,4));\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '49', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,macros', 'category': 'Programming in C'}]
+      let data={'name': 'GO 2022 Programming 1', 'duration': '90', 'total_qs': '30', 'total_qs_one': 10, 'total_qs_two': 20, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 50, 'total_marks': 50, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 50, 'question': [{'contents': '', 'post_id': '342509', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#define hello "myhello" "myhi"\nint main()\n{\n    printf(hello);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>myhello&nbsp;</li>\n\t<li>myhi</li>\n\t<li>myhellomyhi</li>\n\t<li>myhello myhi</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,macros', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342511', 'text': '<p>What will be the maximum value printed by the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int i = 0;\n    char* p = "THISISRIDICULOUS";\n    while(*(p+i) != \'\\0\')\n    {\n        printf("%d ", *(p+i++) - \'A\');\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '20', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342548', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n  char* my_words[] = {"Abin", "Mahesh", "Seema", "Palak"};\n  char *p;\n  p = my_words[3];\n  printf("%s, ", p+3);\n  printf("%c", *p+3);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>ak, S</li>\n\t<li>, a</li>\n\t<li>Possible Runtime Error</li>\n\t<li>ak, a</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,strings', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342531', 'text': '<p>Consider the following C program fragment:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndouble a = getMyDouble();\nfloat b, c;\nb = getMyFloat();\nc = a + b;</pre>\n\n<p><br>\nIf the assembly instruction corresponding to the addition is "ADD R0, R1" where R0 is having the value corresponding to the variable b, the minimum required size in bytes of the register R0 is _____ bytes.</p>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '8', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,data-types', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342540', 'text': '<p>Consider the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nextern int getMyMonth();\nint main()\n{\n    enum Month {January, February, March, April,\n        May, June, July, August, September,\n        October, November, December};\n    int my_month = getMyMonth();\n    int my_inc=0;\n    switch(my_month)\n    {\n        case January:\n        case March:\n        case May:\n        case July:\n        case August:\n        case October:\n        case December:\n        my_inc++;\n        default:\n        my_inc += 30;\n        case February: \n        my_inc -=2;\n    }\n    printf("%d", my_inc);\n}</pre>\n\n<p><br>\nWhat will be the output of the above program if the external function getMyMonth() returns $1?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$31$</li>\n\t<li>$30$</li>\n\t<li>$28$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342544', 'text': '<p>The number of characters (including whitespaces if any) printed by the following C program is</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define sum(a, b) #a "+"#b "=%d"\n#include&lt;stdio.h&gt;\nint main()\n{\n  printf(sum(6,9), 6+9);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '6', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,macros', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342546', 'text': '<p>What will be the output of the following C program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   char* disease = "COVID-19";\n   (*disease)++;\n   printf("%s",disease);\n}\n\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>DPWJE-$20$</li>\n\t<li>DOVID-$19$</li>\n\t<li>COVID-$19$</li>\n\t<li>Possible Runtime Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342527', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   int myinc = 0;\n   if(++myinc &amp;&amp; --myinc)\n   {\n     myinc--;\n   }\n   printf("%d", myinc);\n}\n</pre>', 'type': 'Numerical', 'answer': '0', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342525', 'text': '<p>Consider the following C structure declaration.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct abc\n{\n    double myfield1;\n    int myfield2;\n}myobj;</pre>\n\n<p><br>\nWhich of the following pointer declarations would not cause any undefined behaviour for the above given structure fields?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *p = (char*) &amp;myobj.myfield2;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p = (int*) &amp;myobj.myfield1;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndouble *p = (double*) &amp;myobj.myfield2;</pre>\n\t</li>\n\t<li><br>\n\tBoth $B$ and $C$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342518', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int a[10][20][30]={0};\n    printf("%d %d %d",&amp;a+1 - &amp;a, \n       a[10][20] - a[10][10], a[10] - a[5]);\n    return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>1 300 100</li>\n\t<li>600 300 100</li>\n\t<li>1 100 5</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342529', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n   int myinc = -1;\n   if(++myinc || --myinc)\n   {\n     myinc--;\n   }\n   printf("%d", myinc);\n}\n</pre>', 'type': 'Numerical', 'answer': '-2', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342515', 'text': '<p>How many $1s$ will be printed by the below function when called with the argument $9?$ (Assume sizeof int as $4$ bytes)</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint fun(int a)\n{\n    char *arr[] = {"0000", "0001","0010","0011","0100",\n        "0101","0110","0111","1000","1001","\n        1010","1011","1100","1101","1110","1111"};\n    unsigned char* p = (unsigned char*) &amp;a ;\n    p+=3;\n    int i;\n    for(i = 0; i &lt; sizeof a; i++) { \n        int d = (*p)&gt;&gt;4; \n        printf("%s", arr[d]);\n        d = (*p) &amp; 0xf;\n        printf("%s ", arr[d]);\n        p--;\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342542', 'text': '<p>Which of the below statement is a correct way to print the statement “Hello World”? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf ("Hello World"); \n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf ("%s", "Hello World"); \n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *p = "Hello";\nprintf(p, " World");\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar * p = "Hello %s";\nchar *q = "World";\nprintf(p,q);\n</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'A;B;D', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,pointers,multiple-selects', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342534', 'text': '<p>Which of the following assignments causes an overflow? (Assume size of int is $4$ bytes and long int is $8$ bytes)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>int a = 123456789;</li>\n\t<li>int a = 123456789123456789L;</li>\n\t<li>unsigned a = 123456789;</li>\n\t<li>long int a = 123456789123456789;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,data-types', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342523', 'text': '<p>If the values printed by the following C program are $a,b,c$ and $d$ respectively, then $a+2b+3c+4d = $_____</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\nint main()\n{\n    char* p = "GATE Overflow";\n    char q[] = "GATE Overflow";\n    printf("%lu %lu %lu %lu",\n        sizeof(*p), sizeof(q), strlen(p), strlen(q));\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '120', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers,strings', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342517', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdlib.h&gt;\nint* fun();\nint main()\n{\n    int a = 5;\n    int *p = &amp;a;\n    p = fun();\n    printf("%d",*p);\n    return 0;\n}\nint* fun()\n{\n    int *a =(int*) malloc(sizeof(int));\n    *a = 1;\n    return a;\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342504', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdlib.h&gt;\n\nstruct node\n{\n    int value;\n    struct node * next;\n};\nvoid init_list(struct node *list)\n{\n    list = malloc(sizeof(struct node));\n    list -&gt; value = 5;\n    list -&gt; value++;\n}\n#include&lt;stdio.h&gt;\nint main()\n{\n    struct node *list;\n    init_list(list);\n    printf("%d", list-&gt; value);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>Garbage Value</li>\n\t<li>$6$</li>\n\t<li>Possible Runtime Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342512', 'text': '<p><br>\nMatch the following expressions with the functions they are doing:</p>\n\n<p>$<br>\n\\begin{array}{|cc|cl|}<br>\n\\hline<br>\n&nbsp;A. &amp;&nbsp;\\text{!(n &amp; n-1)} &amp;1.&amp; &nbsp;\\text{Sets the }{(d+1})^{th}\\text{&nbsp;bit from right of n to 1}\\\\ \\hline<br>\nB. &amp;&nbsp; \\text{n | (1&lt;&lt;d)}&amp;2.&amp; \\text{Unsets the }{(d+1)}^{th}\\text{&nbsp;&nbsp;bit from right of n&nbsp;to 0}\\\\ \\hline&nbsp;<br>\nC. &amp;&nbsp; \\text{n &amp; (1&lt;&lt;d)}&amp;3.&amp; \\text{Checks if n is a power of 2}\\\\ \\hline<br>\nD. &amp;&nbsp; \\text{ n ^&nbsp;(1&lt;&lt;d)}&amp;4.&amp; \\text{Complements the }{(d+1)}^{th}\\text{&nbsp;&nbsp;bit from right of n}\\\\ \\hline&nbsp;<br>\n&nbsp;&amp;&nbsp; &amp;5.&amp; \\text{Something else}\\\\ \\hline&nbsp;&nbsp;&nbsp;<br>\n\\end{array}<br>\n$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$A-3, B-1, C-2, D-4$</li>\n\t<li>$A-3, B-2, C -1, D-4$</li>\n\t<li>$A-3, B-1, C-5, D-4$</li>\n\t<li>$A-5, B-2, C-1, D- 3$</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators,match-the-following', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342539', 'text': '<p>Which of the following is the correct replacement for "&lt;my_decl&gt;" to define a global integer variable?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n&lt;my_decl&gt; my_global;\nint main()\n{\n    printf("%d", my_global);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>global int</li>\n\t<li>extern int</li>\n\t<li>static int</li>\n\t<li>int</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342537', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct my_struct\n{\n    int field1;\n    float field2;\n    double field3;\n};\nint main()\n{\n    struct my_struct try1, try2;\n    try1.field1 = 10.1;\n    try1.field2 = 10.1;\n    try1.field3 = 10.1;\n    try2 = try1;\n    printf("%d %.1f %.1lf",\n    try2.field1, try2.field2, try2.field3);\n} \n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$10\\; 10.1\\; 10.1$</li>\n\t<li>$10.1\\; 10.1\\; 10.1$</li>\n\t<li>Possible Runtime Error</li>\n\t<li>Garbage Value&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342522', 'text': '<p>Consider the following C program fragment:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint my_array[20][10];\nint main()\n{\n    int *p = my_array, i;\n    for(i = 0; i &lt; 10*20; i++)\n    {\n       *(p+X) = i;\n    }\n    ...\n}</pre>\n\n<p>The correct replacement for \'X\' so that every position in the array my_array gets initialized is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>(i / 20) * 10 + (i% 20) * 10;</li>\n\t<li>(i % 20) * 10 + (i /&nbsp;20) * 10;</li>\n\t<li>(i / 10) * 20 + (i% 10) * 20;</li>\n\t<li>(i % 10) + (i / 10) * 10;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342536', 'text': '<p>Which of the following correctly declare a pointer to function returning a pointer to an integer and accepting a pointer to a one-dimensional integer array of size $10$ as input?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p)(int * my_array[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p)(int (* my_array)[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * p(int * my_array[10])</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint * (*p) (int * my_array)</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-programming-1,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342506', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid foo(int a, int *p1, int **p2)\n{\n    **p2 = 5;\n    *p1 = 6;\n    a = 7;\n}\nint main()\n{\n    int a, *p1 = &amp;a, **p2 = &amp;p1;\n    a = 9;\n    foo(a, p1, p2);\n    printf("%d", a);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers,parameter-passing', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342513', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int a = 1, b = 0;\n    printf("%d", ~a | ~b &amp; a &amp;&amp; ++b - a);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '0', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342519', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n    int a, b = 2, c = 3;\n    a = b, c++;\n    printf("%d %d %d", a, b, c);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Compiler Error</li>\n\t<li>$3\\;&nbsp;3\\; 4$</li>\n\t<li>$2\\; 2\\; 4$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342550', 'text': '<p>Consider the following C code fragment (…&nbsp;denote further statements):</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int my_array[30][40][50];\n    init_array(&amp;my_array);\n    ...\n}</pre>\n\n<p><br>\nWhich of the following is a valid declaration for the function init_array? Mark all the correct options.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int ** array[30][40][50]);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int (* array)[30][40][50]);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int *** array);</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid init_array(int ** array[30][40]);</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-programming-1,parameter-passing,pointers,multiple-selects', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342521', 'text': '<p>The number of times the "return" statement gets executed when the following function is called with an argument $5$ is ______</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nunsigned int fib(unsigned int n)\n{\n    if(n == 0) return 0;\n    if(n == 1) return 1;\n    return fib(n-1) + fib(n-2);\n}\n</pre>', 'type': 'Numerical', 'answer': '15', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,recursion', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342514', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (x != 0)\n    a = b;\nelse\n    a = c;</pre>\n\n<p><br>\nWhat of the following can functionally substitute the if-else statement given above?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (!!x)*b || c;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = b || c;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (x&gt;0)? c : b;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\na = (!!x)*b + !x * c;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-programming-1,operators', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342533', 'text': '<p>What will be the output of the following C program?(Assume IEEE -$754$ standard being Used)</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main()\n{\n  float a = 8.0625;\n  if(a == 8.0625)\n   {\n     printf("1");\n   }\n  else\n   {\n     printf("0");\n   }\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,pointers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '342507', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define macro(a,b) (a+b)\n#include&lt;stdio.h&gt;\nint main()\n{\n    printf("%d", macro(3,4) * macro(3,4));\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '49', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-programming-1,numerical-answers,macros', 'category': 'Programming in C'}]}]}
+      </script>
+      

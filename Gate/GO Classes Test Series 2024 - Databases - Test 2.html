@@ -1,0 +1,212 @@
+<div><span>Q1</span> - <p>Consider the following ER diagram showing a Customer entity:</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=11136768498704607367"></p>
+
+<p><br>
+“Email” is a multi-valued attribute, So, A customer may have any number of email ids (possibly zero as well).<br>
+We convert this ER diagram into the relational model. Minimum how many relations are needed in the relational model for this ER diagram?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following ER diagram:</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=2012151280126508130"></p>
+
+<p><br>
+There is One-to-one mapping between customers, loans.</p>
+
+<p>Assume that the Participation of loan in borrower is total.</p>
+
+<p>We convert this ER diagram into the relational model. What will be the correct relational model design for this ER diagram, if we do not want null values in our database?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+customer(*cust_id, name, street_address, city) ;
+loan (*loan_id, amount ) ;
+borrower(*cust_id, loan_id ) ;
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+customer(*cust_id, name, street_address, city) ; 
+loan (*loan_id, cust_id, amount ) ;
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+customer(*cust_id, name, street_address, city) ;
+loan (*loan_id, amount ) ;
+borrower(cust_id, *loan_id ) ;
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+customer(*cust_id, loan_id, name, street_address, city) ; 
+loan (*loan_id, amount ) ;
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>In a relation, R attribute B of R is "fully functional dependent" on an attribute or set of attribute A of R if B is functional dependent on A but not functional dependent on any proper subset of A.<br>
+Consider a relation S in which every non-prime attribute is "fully functional dependent" on all candidate keys. What is necessarily true for S?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S is in 2 NF.</li>
+	<li>S is in 3 NF.</li>
+	<li>S is in BCNF.</li>
+	<li>S is not in BCNF.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Under a relational database system, in the most general case, if table R has a foreign key (FK) constraint referencing table S, then, via the FK,</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>each tuple in R is related to zero or more tuples in S.</li>
+	<li>each tuple in R is related to zero or one tuple in S.</li>
+	<li>each tuple in R is related to exactly one tuple in S.</li>
+	<li>each tuple in R is related to one or more tuples in S.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following two ER diagrams – ER1 and ER2.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=11378072151414116712"></p>
+
+<p><br>
+<br>
+The statement that the number of entities in an entity set P must be greater than or equal to the number of entities in an entity set Q holds for</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>ER1 but not ER2</li>
+	<li>ER2 but not ER1</li>
+	<li>Both ER1 and ER2</li>
+	<li>Neither ER1 nor ER2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following ER diagram for Checking Accounts:</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=18439216934177866247"></p>
+
+<p><br>
+We convert this ER diagram into the relational model. Minimum how many relations are needed in the relational model for this ER diagram?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following five ER diagrams - ER1 to ER5.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=2164391528039325286"></p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=552990327774932032"></p>
+
+<p>For which of these ER diagrams the following is true :<br>
+“The number of entities in an entity set B must be greater than or equal to the number of entities in an entity set A”</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>ER1, ER2 only</li>
+	<li>ER5 only</li>
+	<li>ER3, ER5 only</li>
+	<li>ER4, ER5 Only</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following schema.</p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+create table T ( 
+    c integer primary key, 
+    d integer); 
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+create table S ( 
+    b integer primary key, 
+    c integer references t(c) on delete cascade); 
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+create table R ( 
+    a integer primary key, 
+    b integer references s(b) on delete set null); </pre>
+
+<p><br>
+Suppose the current contents of R, S, and T are as follows.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10850441782029342893"></p>
+
+<p><br>
+After executing the command:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+ delete from T; </pre>
+
+<p>What tuples will R contain? (By the above command, all records in the table T will be deleted!)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>R will not be changed.</li>
+	<li>(1, NULL) and (2,2).</li>
+	<li>(1, NULL) and (2, NULL).</li>
+	<li>(2,2) only.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>NULL values in relational model can be used for all except which one of the following scenarios?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>To allow duplicate tuples in the table by filling the primary key column(s) with NULL.</li>
+	<li>To avoid confusion with actual legitimate data values like 0 for integer columns and ‘   nbsp; ’ (the empty string) for string columns.</li>
+	<li>To leave columns in a tuple marked as “unknown” when the actual value is unknown.</li>
+	<li>To fill a column in tuple when that column does not really “exist” for that particular tuple</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider a relation R with 2d attributes (d. is an integer ≥ 2   nbsp;) that are named A_1, A_2, A_3, …, A_2 d. There is a set F of 2d FDs on R: A_i→A_1+(i+1)  2d,   nbsp;for i=1 … 2d. (Here, mod is the modulo operator).</p>
+
+<p>For example, suppose d=2, the attributes are A_1, A_2, A_3, A_4 and F={A_1 →A_3, A_3 →A_1, A_2 →A_4, A_4 →A_2}</p>
+
+<p>How many keys are present in R?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>d</li>
+	<li>d+2</li>
+	<li>2 d</li>
+	<li>d^2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following ER diagram :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=2945887004546895416"></p>
+
+<p><br>
+Primary keys of the entity set P, Q, S, T are M, N, O, K respectively. While converting the ER diagram into relational DBMS model, the relationship set R is converted into a relation R(M, N, O, K), what is the primary key of R?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>M</li>
+	<li>KNO</li>
+	<li>MKO</li>
+	<li>N</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following ER diagram :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=14943693488112583033"></p>
+
+<p><br>
+“borrower” mapping cardinality is many-to-many. While converting the ER diagram into a relational DBMS model, the relationship set “borrower” is converted into a relation</p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+borrower(cust_id, loan_id, access_date)</pre>
+
+<p>, what is the primary key of “borrower”?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+cust_id </pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+loan_id </pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+(cust_id, loan_id) </pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+(cust_id, loan_id, access_date) </pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>The ER diagram shown below depicts a car rental scheme, where every customer can take more than 1 car for rent, or 1 car may be rented to multiple customers.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=16181577183564252986"></p>
+
+<p><br>
+If the above ER diagram is mapped to a relational model, to correctly depict the above scenario, the total number of required relations is _________</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Which of the following is correct rule in context of functional dependencies over a database?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If α is a set of attributes and β⊆α, then α→β always holds.</li>
+	<li>If α→β holds, and γ is a set of attributes, then γα→γβ holds.</li>
+	<li>If α→β holds, and γβ→δ holds, then αγ→δ holds.</li>
+	<li>If α→β holds, and β→γ holds, then α→γ holds.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the following ER diagram :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=12329088524378904007"></p>
+
+<p><br>
+Manager-to-worker mapping is one-to-many.</p>
+
+<p>We convert this ER diagram into the relational model. Minimum how many relations are needed in the relational model for this ER diagram, if we do not want null values in our database?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '383272', 'text': '<p>Consider the following ER diagram showing a Customer entity:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11136768498704607367"></p>\n\n<p><br>\n“Email” is a multi-valued attribute, So, A customer may have any number of email ids (possibly zero as well).<br>\nWe convert this ER diagram into the relational model. Minimum how many relations are needed in the relational model for this ER diagram?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383255', 'text': '<p>Consider the following $\\text{ER}$ diagram:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2012151280126508130"></p>\n\n<p><br>\nThere is One-to-one mapping between customers, loans.</p>\n\n<p>Assume that the Participation of loan in borrower is total.</p>\n\n<p>We convert this ER diagram into the relational model. What will be the correct relational model design for this ER diagram, if we do not want null values in our database?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ;\nloan (*loan_id, amount ) ;\nborrower(*cust_id, loan_id ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ; \nloan (*loan_id, cust_id, amount ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ;\nloan (*loan_id, amount ) ;\nborrower(cust_id, *loan_id ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, loan_id, name, street_address, city) ; \nloan (*loan_id, amount ) ;\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383268', 'text': '<p>In a relation, $\\mathrm{R}$ attribute $\\mathrm{B}$ of $\\mathrm{R}$ is "fully functional dependent" on an attribute or set of attribute $\\mathrm{A}$ of $\\mathrm{R}$ if $\\mathrm{B}$ is functional dependent on $\\mathrm{A}$ but not functional dependent on any proper subset of $\\mathrm{A}.$<br>\nConsider a relation $\\mathrm{S}$ in which every non-prime attribute is "fully functional dependent" on all candidate keys. What is necessarily true for $\\mathrm{S}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$S$ is in $2 \\mathrm{NF}$.</li>\n\t<li>$\\mathrm{S}$ is in $3 \\mathrm{NF}$.</li>\n\t<li>$\\mathrm{S}$ is in $\\mathrm{BCNF}$.</li>\n\t<li>$\\mathrm{S}$ is not in $\\mathrm{BCNF}$.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,candidate-key,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383257', 'text': '<p>Under a relational database system, in the most general case, if table $\\mathrm{R}$ has a foreign key $\\text{(FK)}$ constraint referencing table $\\text{S},$ then, via the $\\text{FK},$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>each tuple in $\\mathrm{R}$ is related to zero or more tuples in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to zero or one tuple in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to exactly one tuple in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to one or more tuples in $\\mathrm{S}$.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383264', 'text': '<p>Consider the following two $\\text{ER}$ diagrams -- $\\text{ER1}$ and $\\text{ER2}.$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11378072151414116712"></p>\n\n<p><br>\n<br>\nThe statement that the number of entities in an entity set $\\mathrm{P}$ must be greater than or equal to the number of entities in an entity set $\\mathrm{Q}$ holds for</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{ER1}$ but not $\\text{ER2}$</li>\n\t<li>$\\text{ER2}$ but not $\\text{ER1}$</li>\n\t<li>Both $\\text{ER1}$ and $\\text{ER2}$</li>\n\t<li>Neither $\\text{ER1}$ nor $\\text{ER2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383270', 'text': '<p>Consider the following $\\text{ER}$ diagram for Checking Accounts:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=18439216934177866247"></p>\n\n<p><br>\nWe convert this $\\text{ER}$ diagram into the relational model. Minimum how many relations are needed in the relational model for this $\\text{ER}$ diagram?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383258', 'text': '<p>Consider the following five $\\text{ER}$ diagrams - $\\text{ER1}$ to $\\text{ER5}.$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2164391528039325286"></p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=552990327774932032"></p>\n\n<p>For which of these $\\text{ER}$ diagrams the following is true :<br>\n“The number of entities in an entity set $\\text{B}$ must be greater than or equal to the number of entities in an entity set $\\text{A}$”</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{ER1, ER2}$ only</li>\n\t<li>$\\text{ER5}$ only</li>\n\t<li>$\\text{ER3, ER5}$ only</li>\n\t<li>$\\text{ER4, ER5}$ Only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383262', 'text': '<p>Consider the following schema.</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncreate table T ( \n    c integer primary key, \n    d integer); \n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ncreate table S ( \n    b integer primary key, \n    c integer references t(c) on delete cascade); \n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ncreate table R ( \n    a integer primary key, \n    b integer references s(b) on delete set null); </pre>\n\n<p><br>\nSuppose the current contents of $\\text{R, S},$ and $\\text{T}$ are as follows.</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10850441782029342893"></p>\n\n<p><br>\nAfter executing the command:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n delete from T; </pre>\n\n<p>What tuples will $\\text{R}$ contain? (By the above command, all records in the table $\\text{T}$ will be deleted!)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{R}$ will not be changed.</li>\n\t<li>$(1, \\mathrm{NULL})$ and $(2,2)$.</li>\n\t<li>$(1, \\mathrm{NULL})$ and $(2, \\mathrm{NULL})$.</li>\n\t<li>$(2,2)$ only.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383278', 'text': '<p>NULL values in relational model can be used for all except which one of the following scenarios?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>To allow duplicate tuples in the table by filling the primary key column(s) with NULL.</li>\n\t<li>To avoid confusion with actual legitimate data values like 0 for integer columns and $\\text{‘&nbsp; ’}$ (the empty string) for string columns.</li>\n\t<li>To leave columns in a tuple marked as “unknown” when the actual value is unknown.</li>\n\t<li>To fill a column in tuple when that column does not really “exist” for that particular tuple</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383253', 'text': '<p>Consider a relation $\\mathrm{R}$ with $2d$ attributes $\\left(d\\right.$ is an integer $\\geq 2&nbsp;)$ that are named $\\text{A}_1, \\text{A}_2, \\text{A}_3, \\ldots, \\text{A}_{2 d}$. There is a set $\\mathrm{F}$ of $2d\\;\\text{FDs}$ on $\\text{R}: \\text{A}_{i} \\rightarrow \\text{A}_{1+(i+1) \\bmod 2d},$&nbsp;for $i=1 \\ldots 2d$. (Here, mod is the modulo operator).</p>\n\n<p>For example, suppose $d=2$, the attributes are $\\text{A}_1, \\text{A}_2, \\text{A}_3, \\text{A}_4$ and $\\text{F}=\\left\\{\\text{A}_1 \\rightarrow \\text{A}_3, \\text{A}_3 \\rightarrow \\text{A}_1, \\text{A}_2 \\rightarrow \\text{A}_4, \\text{A}_4 \\rightarrow \\text{A}_2\\right\\}$</p>\n\n<p>How many keys are present in $\\mathrm{R}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$d$</li>\n\t<li>$d+2$</li>\n\t<li>$2 d$</li>\n\t<li>$d^2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383260', 'text': '<p>Consider the following $\\text{ER}$ diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2945887004546895416"></p>\n\n<p><br>\nPrimary keys of the entity set $\\mathrm{P}, \\mathrm{Q}, \\mathrm{S}, \\mathrm{T}$ are $\\mathrm{M}, \\mathrm{N}, \\mathrm{O}, \\mathrm{K}$ respectively. While converting the $\\text{ER}$ diagram into relational DBMS model, the relationship set $\\mathrm{R}$ is converted into a relation $\\mathrm{R}(\\mathrm{M}, \\mathrm{N}, \\mathrm{O}, \\mathrm{K})$, what is the primary key of $\\mathrm{R}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{M}$</li>\n\t<li>$\\mathrm{KNO}$</li>\n\t<li>$\\mathrm{MKO}$</li>\n\t<li>$\\mathrm{N}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383274', 'text': '<p>Consider the following ER diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=14943693488112583033"></p>\n\n<p><br>\n“borrower” mapping cardinality is many-to-many. While converting the ER diagram into a relational DBMS model, the relationship set “borrower” is converted into a relation</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nborrower(cust_id, loan_id, access_date)</pre>\n\n<p>, what is the primary key of “borrower”?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncust_id </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nloan_id </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n(cust_id, loan_id) </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n(cust_id, loan_id, access_date) </pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383251', 'text': '<p>The $\\text{ER}$ diagram shown below depicts a car rental scheme, where every customer can take more than $1$ car for rent, or $1$ car may be rented to multiple customers.</p>\n\n<p style="text-align:center"><img alt="" height="171" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=16181577183564252986" width="516"></p>\n\n<p><br>\nIf the above $\\text{ER}$ diagram is mapped to a relational model, to correctly depict the above scenario, the total number of required relations is _________</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383266', 'text': '<p>Which of the following is correct rule in context of functional dependencies over a database?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $\\alpha$ is a set of attributes and $\\beta \\subseteq \\alpha$, then $\\alpha \\rightarrow \\beta$ always holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\gamma$ is a set of attributes, then $\\gamma \\alpha \\rightarrow \\gamma \\beta$ holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\gamma \\beta \\rightarrow \\delta$ holds, then $\\alpha \\gamma \\rightarrow \\delta$ holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\beta \\rightarrow \\gamma$ holds, then $\\alpha \\rightarrow \\gamma$ holds.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383276', 'text': '<p>Consider the following $\\text{ER}$ diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=12329088524378904007"></p>\n\n<p><br>\nManager-to-worker mapping is one-to-many.</p>\n\n<p>We convert this $\\text{ER}$ diagram into the relational model. Minimum how many relations are needed in the relational model for this $\\text{ER}$ diagram, if we do not want null values in our database?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}]
+      let data={'name': 'GO Classes Test Series 2024 | Databases | Test 2', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '383272', 'text': '<p>Consider the following ER diagram showing a Customer entity:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11136768498704607367"></p>\n\n<p><br>\n“Email” is a multi-valued attribute, So, A customer may have any number of email ids (possibly zero as well).<br>\nWe convert this ER diagram into the relational model. Minimum how many relations are needed in the relational model for this ER diagram?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383255', 'text': '<p>Consider the following $\\text{ER}$ diagram:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2012151280126508130"></p>\n\n<p><br>\nThere is One-to-one mapping between customers, loans.</p>\n\n<p>Assume that the Participation of loan in borrower is total.</p>\n\n<p>We convert this ER diagram into the relational model. What will be the correct relational model design for this ER diagram, if we do not want null values in our database?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ;\nloan (*loan_id, amount ) ;\nborrower(*cust_id, loan_id ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ; \nloan (*loan_id, cust_id, amount ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, name, street_address, city) ;\nloan (*loan_id, amount ) ;\nborrower(cust_id, *loan_id ) ;\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncustomer(*cust_id, loan_id, name, street_address, city) ; \nloan (*loan_id, amount ) ;\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383268', 'text': '<p>In a relation, $\\mathrm{R}$ attribute $\\mathrm{B}$ of $\\mathrm{R}$ is "fully functional dependent" on an attribute or set of attribute $\\mathrm{A}$ of $\\mathrm{R}$ if $\\mathrm{B}$ is functional dependent on $\\mathrm{A}$ but not functional dependent on any proper subset of $\\mathrm{A}.$<br>\nConsider a relation $\\mathrm{S}$ in which every non-prime attribute is "fully functional dependent" on all candidate keys. What is necessarily true for $\\mathrm{S}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$S$ is in $2 \\mathrm{NF}$.</li>\n\t<li>$\\mathrm{S}$ is in $3 \\mathrm{NF}$.</li>\n\t<li>$\\mathrm{S}$ is in $\\mathrm{BCNF}$.</li>\n\t<li>$\\mathrm{S}$ is not in $\\mathrm{BCNF}$.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,candidate-key,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383257', 'text': '<p>Under a relational database system, in the most general case, if table $\\mathrm{R}$ has a foreign key $\\text{(FK)}$ constraint referencing table $\\text{S},$ then, via the $\\text{FK},$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>each tuple in $\\mathrm{R}$ is related to zero or more tuples in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to zero or one tuple in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to exactly one tuple in $\\mathrm{S}$.</li>\n\t<li>each tuple in $\\mathrm{R}$ is related to one or more tuples in $\\mathrm{S}$.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383264', 'text': '<p>Consider the following two $\\text{ER}$ diagrams -- $\\text{ER1}$ and $\\text{ER2}.$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11378072151414116712"></p>\n\n<p><br>\n<br>\nThe statement that the number of entities in an entity set $\\mathrm{P}$ must be greater than or equal to the number of entities in an entity set $\\mathrm{Q}$ holds for</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{ER1}$ but not $\\text{ER2}$</li>\n\t<li>$\\text{ER2}$ but not $\\text{ER1}$</li>\n\t<li>Both $\\text{ER1}$ and $\\text{ER2}$</li>\n\t<li>Neither $\\text{ER1}$ nor $\\text{ER2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383270', 'text': '<p>Consider the following $\\text{ER}$ diagram for Checking Accounts:</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=18439216934177866247"></p>\n\n<p><br>\nWe convert this $\\text{ER}$ diagram into the relational model. Minimum how many relations are needed in the relational model for this $\\text{ER}$ diagram?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383258', 'text': '<p>Consider the following five $\\text{ER}$ diagrams - $\\text{ER1}$ to $\\text{ER5}.$</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2164391528039325286"></p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=552990327774932032"></p>\n\n<p>For which of these $\\text{ER}$ diagrams the following is true :<br>\n“The number of entities in an entity set $\\text{B}$ must be greater than or equal to the number of entities in an entity set $\\text{A}$”</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{ER1, ER2}$ only</li>\n\t<li>$\\text{ER5}$ only</li>\n\t<li>$\\text{ER3, ER5}$ only</li>\n\t<li>$\\text{ER4, ER5}$ Only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383262', 'text': '<p>Consider the following schema.</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncreate table T ( \n    c integer primary key, \n    d integer); \n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ncreate table S ( \n    b integer primary key, \n    c integer references t(c) on delete cascade); \n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ncreate table R ( \n    a integer primary key, \n    b integer references s(b) on delete set null); </pre>\n\n<p><br>\nSuppose the current contents of $\\text{R, S},$ and $\\text{T}$ are as follows.</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10850441782029342893"></p>\n\n<p><br>\nAfter executing the command:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n delete from T; </pre>\n\n<p>What tuples will $\\text{R}$ contain? (By the above command, all records in the table $\\text{T}$ will be deleted!)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{R}$ will not be changed.</li>\n\t<li>$(1, \\mathrm{NULL})$ and $(2,2)$.</li>\n\t<li>$(1, \\mathrm{NULL})$ and $(2, \\mathrm{NULL})$.</li>\n\t<li>$(2,2)$ only.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383278', 'text': '<p>NULL values in relational model can be used for all except which one of the following scenarios?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>To allow duplicate tuples in the table by filling the primary key column(s) with NULL.</li>\n\t<li>To avoid confusion with actual legitimate data values like 0 for integer columns and $\\text{‘&nbsp; ’}$ (the empty string) for string columns.</li>\n\t<li>To leave columns in a tuple marked as “unknown” when the actual value is unknown.</li>\n\t<li>To fill a column in tuple when that column does not really “exist” for that particular tuple</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383253', 'text': '<p>Consider a relation $\\mathrm{R}$ with $2d$ attributes $\\left(d\\right.$ is an integer $\\geq 2&nbsp;)$ that are named $\\text{A}_1, \\text{A}_2, \\text{A}_3, \\ldots, \\text{A}_{2 d}$. There is a set $\\mathrm{F}$ of $2d\\;\\text{FDs}$ on $\\text{R}: \\text{A}_{i} \\rightarrow \\text{A}_{1+(i+1) \\bmod 2d},$&nbsp;for $i=1 \\ldots 2d$. (Here, mod is the modulo operator).</p>\n\n<p>For example, suppose $d=2$, the attributes are $\\text{A}_1, \\text{A}_2, \\text{A}_3, \\text{A}_4$ and $\\text{F}=\\left\\{\\text{A}_1 \\rightarrow \\text{A}_3, \\text{A}_3 \\rightarrow \\text{A}_1, \\text{A}_2 \\rightarrow \\text{A}_4, \\text{A}_4 \\rightarrow \\text{A}_2\\right\\}$</p>\n\n<p>How many keys are present in $\\mathrm{R}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$d$</li>\n\t<li>$d+2$</li>\n\t<li>$2 d$</li>\n\t<li>$d^2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383260', 'text': '<p>Consider the following $\\text{ER}$ diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=2945887004546895416"></p>\n\n<p><br>\nPrimary keys of the entity set $\\mathrm{P}, \\mathrm{Q}, \\mathrm{S}, \\mathrm{T}$ are $\\mathrm{M}, \\mathrm{N}, \\mathrm{O}, \\mathrm{K}$ respectively. While converting the $\\text{ER}$ diagram into relational DBMS model, the relationship set $\\mathrm{R}$ is converted into a relation $\\mathrm{R}(\\mathrm{M}, \\mathrm{N}, \\mathrm{O}, \\mathrm{K})$, what is the primary key of $\\mathrm{R}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{M}$</li>\n\t<li>$\\mathrm{KNO}$</li>\n\t<li>$\\mathrm{MKO}$</li>\n\t<li>$\\mathrm{N}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383274', 'text': '<p>Consider the following ER diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=14943693488112583033"></p>\n\n<p><br>\n“borrower” mapping cardinality is many-to-many. While converting the ER diagram into a relational DBMS model, the relationship set “borrower” is converted into a relation</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nborrower(cust_id, loan_id, access_date)</pre>\n\n<p>, what is the primary key of “borrower”?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\ncust_id </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nloan_id </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n(cust_id, loan_id) </pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\n(cust_id, loan_id, access_date) </pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-2,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '383251', 'text': '<p>The $\\text{ER}$ diagram shown below depicts a car rental scheme, where every customer can take more than $1$ car for rent, or $1$ car may be rented to multiple customers.</p>\n\n<p style="text-align:center"><img alt="" height="171" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=16181577183564252986" width="516"></p>\n\n<p><br>\nIf the above $\\text{ER}$ diagram is mapped to a relational model, to correctly depict the above scenario, the total number of required relations is _________</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383266', 'text': '<p>Which of the following is correct rule in context of functional dependencies over a database?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $\\alpha$ is a set of attributes and $\\beta \\subseteq \\alpha$, then $\\alpha \\rightarrow \\beta$ always holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\gamma$ is a set of attributes, then $\\gamma \\alpha \\rightarrow \\gamma \\beta$ holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\gamma \\beta \\rightarrow \\delta$ holds, then $\\alpha \\gamma \\rightarrow \\delta$ holds.</li>\n\t<li>If $\\alpha \\rightarrow \\beta$ holds, and $\\beta \\rightarrow \\gamma$ holds, then $\\alpha \\rightarrow \\gamma$ holds.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,goclasses,databases,database-normalization,functional-dependency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '383276', 'text': '<p>Consider the following $\\text{ER}$ diagram :</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=12329088524378904007"></p>\n\n<p><br>\nManager-to-worker mapping is one-to-many.</p>\n\n<p>We convert this $\\text{ER}$ diagram into the relational model. Minimum how many relations are needed in the relational model for this $\\text{ER}$ diagram, if we do not want null values in our database?</p>', 'type': 'Numerical', 'answer': '2', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-2,numerical-answers,goclasses,databases,relational-model,er-diagram,1-mark', 'category': 'Databases'}]}]}
+      </script>
+      

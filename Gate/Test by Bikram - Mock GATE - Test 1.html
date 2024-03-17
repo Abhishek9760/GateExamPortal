@@ -1,0 +1,720 @@
+<div><span>Q1</span> - <p>There are "m" red balls and "n" green balls in a bucket. p balls are drawn from the urn and if found that all of them are green then what is the probability that another ball drawn from those remaining will also be green? Assume p    lt; n</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>p-n/m+n</li>
+	<li>n-p/m+n-p</li>
+	<li>p-m/m+n</li>
+	<li>m-p/m+n-p</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Find the output of the following program :</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+main ()
+
+int a, b;
+int v=3;
+int *pv;
+a = 2 * (v+5);
+pv =    amp;v;
+b = 2*(*pv + 5);
+printf("a=
+</pre>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>a = 16 , b = 16</li>
+	<li>a = 16 , b = 32</li>
+	<li>a = 16 , b = 8</li>
+	<li>a = 16 , b = 64</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider the Hasse diagram D_1 and D_2 as follows:</p>
+
+<ul>
+	<li>D_1: The Hasse diagram for the partial ordering {⟨ a, b ⟩| a   b=0 }   nbsp;on the set of positive divisors of 24 }</li>
+	<li>D_2: The Hasse diagram for the partial ordering {⟨ a, b⟩   nbsp;| a   b=0 }   nbsp;on the set of positive   nbsp;divisors of 81 }</li>
+</ul>
+
+<p>Then which among D_1 and D_2 is/are a total ordering?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>Only   nbsp;D_1</li>
+	<li>Only   nbsp;D_2</li>
+	<li>Both   nbsp;D_1    amp; D_2</li>
+	<li>None   nbsp;D_1    amp; D_2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Which of the following statements is TRUE about CSMA/CD:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>IEEE 802.11 wireless LAN runs CSMA/CD protocol</li>
+	<li>Ethernet is not based on CSMA/CD protocol</li>
+	<li>CSMA/CD is not suitable for a high propagation</li>
+	<li>There is no contention in a CSMA/CD network</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Which of the following statements is FALSE regarding a bridge:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Bridge is a layer 2 device</li>
+	<li>Bridge reduces collision domain</li>
+	<li>Bridge is used to connect two or more LAN segments</li>
+	<li>Bridge reduces broadcast domain</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What is the output of the following program?<br>
+main( )<br>
+<br>
+int i=4, z=12;<br>
+if( i=5 || z    gt; 50)<br>
+printf(“ Gate2017”);<br>
+else<br>
+printf(“ Gateoverflow”);<br>
+</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>Gate2017</li>
+	<li>Gateoverflow</li>
+	<li>syntax error</li>
+	<li>Gate2017Gateoverflow</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>A shift reduced parser carries out the actions specified within braces Immediately after reducing with the corresponding rule of grammar.</p>
+
+<pre class="prettyprint lang-c_cpp">
+S –   gt;  xxW (print 'a')
+S –   gt; Y        (print'b')
+W –   gt; Sz    (print 'c')</pre>
+
+<p>What is the translation of xxxxyzz using the syntax directed translation scheme described by the above rules.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>bcaca</li>
+	<li>aabcc    nbsp;   nbsp;</li>
+	<li>aabca    nbsp;   nbsp;   nbsp;</li>
+	<li>ccbaa</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the schedule given below. T_1 and T_2 are two transactions operating on two resources x and y.
+    [                         T_1                    amp; T_2;           read_lock ( y  );; nbsp;<br>
+    read_item ( y  );;                                                    amp;          nbsp;read_lock ( x                    nbsp; );;                                                amp;<br>                       nbsp;         nbsp; read_item ( x                    nbsp; );                       nbsp;;             write_lock (x);                        amp;;                                                    amp;        nbsp;write_lock (y);                       nbsp;;                             ]
+</p>
+
+<p>The given schedule is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A serializable schedule</li>
+	<li>A non-serializable schedule    nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>A   nbsp;dead lock situation</li>
+	<li>Both non-serializable and deadlock schedule</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following program fragment :</p>
+
+<pre class="prettyprint lang-c_cpp">
+int foo(int ,int );
+int a;
+int ar[4] =  1,0, 2,3;
+main()
+
+a = 0;
+foo(ar[a], ar[ar[a]]);
+printf("
+
+
+
+foo(int x, int y)
+
+x= x+1;
+y=y+1;
+x=x+1;
+y=y+1;
+ar[1] =50;
+</pre>
+
+<p>What value will be printed by the program if parameter passed by call by name?</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>1, 50, 2, 3</li>
+	<li>3, 50, 2, 3</li>
+	<li>3, 50, 3, 4</li>
+	<li>3, 2, 2, 3</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following floating point format :</p>
+
+<p><br>
+   nbsp;   nbsp;   nbsp;   nbsp;1   nbsp;    nbsp;    nbsp; lt;–8–   gt;    nbsp;   nbsp;   nbsp;   lt;–23–   gt;<br>
+   nbsp;   nbsp;   nbsp;   nbsp;S   nbsp;    nbsp; |   nbsp;    nbsp;    nbsp;E   nbsp;    nbsp; |   nbsp;    nbsp;    nbsp;M   nbsp;    nbsp;    nbsp;|</p>
+
+<ul>
+	<li>S:   nbsp; Sign bit</li>
+	<li>E:   nbsp; Exponent</li>
+	<li>M:   nbsp;Mantissa</li>
+</ul>
+
+<p>The value of floating point number in this system is,</p>
+
+<p>V= -I^sx 2^E-127   nbsp;x 1.F</p>
+
+<p>Then what is the corresponding decimal value if the floating point stored is: 3F800000</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>0</li>
+	<li>1</li>
+	<li>-1</li>
+	<li>2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider following recursive functions:</p>
+
+<pre class="prettyprint lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+function fib(n : integer); integer
+begin
+if (n = 0) or (n = 1) then fib = 1
+else
+fib = fib(n-l) + fib(n-2)
+end</pre>
+
+<p>The above function is run on a computer with a stack of x bytes. Assume that only return address    amp; parameter are passed on the stack and an integer value    amp; return value take 2 bytes each. If we can execute this function for maximum value n = 10 without overflowing the stack. Then the size of the stack is ______ Bytes.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which of the following should be allowed <strong>only </strong>in Kernel mode?</p>
+
+<ol style="list-style-type:lower-roman">
+	<li>   nbsp;Changing mapping from virtual to physical address</li>
+	<li>   nbsp;Mask and unmask interrupts</li>
+	<li>   nbsp;Disabling all interrupts</li>
+	<li>   nbsp;Reading   nbsp;processor status register   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;</li>
+	<li>   nbsp;Receive a packet of data from the network    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;</li>
+	<li>   nbsp;Cause a trap</li>
+</ol>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>(i), (ii) , (iii) and   nbsp; (v)</li>
+	<li>(i), (ii) , (iv) and (vi)</li>
+	<li>(ii),(iv) and (vi)</li>
+	<li>(i), (ii), (iii), (iv), (v) and (vi)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p><strong>Match the following:</strong></p>
+
+<table border="2" cellpadding="1" style="width:400px">
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="1"><strong>List I</strong></td>
+			<td colspan="2" rowspan="1"><strong>List II</strong></td>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td>Backus Naur form   nbsp;    nbsp;</td>
+			<td>1</td>
+			<td>Regular expression</td>
+		</tr>
+		<tr>
+			<td>B</td>
+			<td>Lex</td>
+			<td>2</td>
+			<td>( I  )LALR</td>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td>Yacc</td>
+			<td>3</td>
+			<td>LL( 1  )</td>
+		</tr>
+		<tr>
+			<td>D</td>
+			<td>Recursive descent parsing   nbsp;</td>
+			<td>4</td>
+			<td>CFG's</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>   nbsp;
+    [                                                                   amp; List I                                   amp;                                  nbsp;                            amp;List II;                                      A                  amp; Backus Naur form                                 amp; 1                amp; Regular expression                                  nbsp;;                                      B                                  nbsp;                               amp; Lex                                 amp; 2                                  nbsp;                          amp; (I) LALR;                                      C                                  nbsp;                              amp; Yacc                                 amp; 3                                  nbsp;                             amp; LL(1)                                  nbsp;;                                      D                                  nbsp; amp; Recursive descent parsing   nbsp;                                 amp; 4                                  nbsp;                             amp; CFG’s                                  nbsp;                                  nbsp;;                                        ]
+</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>A-2;   nbsp;  B-1;   nbsp;  C-3;     nbsp;D-4;</li>
+	<li>A-4 ;   B-3   ; C-   nbsp;1   ; D-2;</li>
+	<li>A-4;   B-1   ; C-2;   D-3;</li>
+	<li>A-1;   B-4;  C-2;   D-3;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Match the following List   nbsp;I with List II :</p>
+
+<ol>
+	<li>W(x): x is a worker</li>
+	<li>A(x): x likes Anand</li>
+</ol>
+
+<ul>
+	<li><strong>List -I</strong></li>
+</ul>
+
+<p>a.   nbsp; No worker like Anand    nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;</p>
+
+<p>b. Some worker like Anand    nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;</p>
+
+<p>c.   nbsp; If someone s a worker, he likes Anand    nbsp;   nbsp;   nbsp;</p>
+
+<ul>
+	<li><strong>List II</strong></li>
+</ul>
+
+<p>   nbsp;p.   nbsp; ∼∀ x[ W(x) → ∼A(x) ]   nbsp;    nbsp; here ∼   nbsp;represent NOT</p>
+
+<p>   nbsp;q.   nbsp;    nbsp;∼∃x[ W(X)   nbsp; ∧∼   nbsp;A(x) ]</p>
+
+<p>   nbsp;r.   nbsp;    nbsp; ∼∃x[ W(X)   nbsp; ∧   nbsp;A(x)   nbsp;]</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>a-r, b-q, c-p</li>
+	<li>a-p, b-q, c-r   nbsp;    nbsp;</li>
+	<li>a-r, b-p, c-q</li>
+	<li>a-q, b-p, c-r</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Let R1, R2, R3 be reader processes and let   nbsp; W1 and W2 be writer processes requesting shared data. If R1 is selected for access. Which of the statement is/are correct?</p>
+
+<ol style="list-style-type:lower-roman">
+	<li>   nbsp;Mutual exclusion is necessary for R2 and R3</li>
+	<li>   nbsp;No mutual exclusion is necessary for R2 and R3</li>
+	<li>   nbsp;Mutual exclusion must be there for W1 and W2</li>
+	<li>   nbsp;No mutual exclusion must be there for W1 and W2</li>
+</ol>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>(i) and (iii) only</li>
+	<li>(ii) and (iii) only</li>
+	<li>(iv) and (iii) only</li>
+	<li>(i) and (iv) only</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Hash a list of 3 keys into hash table with 20 locations. What will be the probability of the event A in which hashing the three keys causes a collision?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>0.123</li>
+	<li>0.145</li>
+	<li>0.800</li>
+	<li>0.750</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Suppose there are five processes in the ready queue as shown below:</p>
+
+<p>
+    [             i    amp; T(Pi) amp; Priority         nbsp;;             0      amp; 350        amp; 5;             1      amp; 125        amp; 2;             2      amp; 475        amp; 3;             3      amp; 250        amp; 1;             4       amp; 75        amp; 4         nbsp;;               ]
+</p>
+
+<p>If FCFS, SJF   nbsp;and priority scheduling algorithms are used, for which algorithm is the average waiting time the minimum? Assume lower integer indicates higher priority and all the processes arrive   nbsp;at time zero.</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>FCFS</li>
+	<li>Priority scheduling</li>
+	<li>SJF</li>
+	<li>both   nbsp;FCFS and   nbsp;SJF</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Which of the following is not a Boolean algebra under the operation '?́<br>
+   nbsp;   nbsp;  is a divisor,    nbsp;D_p: divisor of p</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>{ D18;  }</li>
+	<li>{ D21;  }</li>
+	<li>{ D110;  }</li>
+	<li>{ D91;  }</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Consider the following SQL query:</p>
+
+<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+With max_balance(value) as Select max(balance) from account;</pre>
+
+<p>The result of executing the above query is:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A temporary table is created with the name max_balance</li>
+	<li>A temporary view is created with the name max_balance</li>
+	<li>A permanent view is created with the name max_balance</li>
+	<li>A permanent table is created with the name max_balance</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>In a 32 bit machine to execute an instruction the following steps are carried out: Fetch, Decode, Execute and Store, each of which takes one clock period. In a pipelined execution of a four-step task a new instruction is read and it's execution begins with each new clock period. If each clock period is of 20 nanosecond and there are 100 instructions in sequence then what is the speedup ratio of pipeline processing system over an equivalent non-pipeline processing system?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>3.88</li>
+	<li>1.88</li>
+	<li>3.68</li>
+	<li>2.723</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider the languages given below.</p>
+
+<ol style="list-style-type:decimal">
+	<li>L1 = a^n b^m c^m d^n |n    gt;= 1 and m    gt;= 1</li>
+	<li>L2 = a^n b^n |n    gt;= 1</li>
+	<li>L3 =   nbsp;a^n b^n c^n |n   gt;=0 </li>
+</ol>
+
+<p>Find the correct statement from the following:</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>   nbsp;   nbsp;L1, L2 and L3   nbsp; are context Free languages</li>
+	<li>   nbsp;   nbsp;L1, L2 are but not L3, are context free Languages</li>
+	<li>   nbsp;   nbsp;L2, L3 are context free but not L1</li>
+	<li>   nbsp;   nbsp;Only   nbsp;L2   nbsp; is context free</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>For the    nbsp;Boolean equation    nbsp;AB + ∼ AC= 1,    nbsp;AC +B =    nbsp;0,    nbsp;the value of    nbsp;A, B and C will be:</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>0, 0,1</li>
+	<li>1,1,0</li>
+	<li>0,1,0</li>
+	<li>1,0,0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Consider the relational    nbsp;schema S= A,B,C,D and the following functional dependencies on S:</p>
+
+<p>A→ BCD<br>
+B→ C<br>
+CD→ A</p>
+
+<p>Which of the following is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S is in 3NF and also in BCNF</li>
+	<li>S is in 2NF not in 3NF</li>
+	<li>S is in 3NF but not in BCNF</li>
+	<li>S is in BCNF but not in 4NF</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - The internet host is roughly doubling in size every 18 months. Although no one really knows for sure, one estimate put the number of hosts on it at 7 million in January 1996. Using these data the expected number of internet hosts in January 2008 is _____ billion.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Which of the following is true?</p>
+
+<ol style="list-style-type:upper-roman">
+	<li>   nbsp;   nbsp; Blind writes appear in any view serializable schedule that is not conflict serializable.</li>
+	<li>   nbsp;    nbsp;Blind writes appear in some view serializable schedule that is also conflict serializable.</li>
+	<li>   nbsp;    nbsp;Blind writes appear in all view seriallzable schedules that are   nbsp;also conflict serializable.</li>
+	<li>   nbsp;    nbsp;Blind writes appear   nbsp;only in conflict serializable schedule that is not view serializable.</li>
+</ol>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>II and III</li>
+	<li>II and IV</li>
+	<li>I only</li>
+	<li>I and II</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - Suppose we have a block-addressable disk drive. With such block organized disk non data overhead of subblocks and, interblock gaps have to be accounted for.
+
+There are 40,000 bytes per track and the amount of space taken up by subblocks and interblock gaps is equivalent to  250 Bytes per block. A file contains records and record size is 200 Bytes to be stored on the disk. If a total of 32 blocks can be stored per track then the blocking factor is ________
+
+The term "blocking factor" is used to indicate the number of records that are to the stored in each block in a file. A block is organized to hold an integral number of logical records.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>Consider the following algorithm:</p>
+
+<pre class="prettyprint lang-c_cpp">
+
+ORDER (T)
+begin
+if (T!=NULL) then
+begin
+ORDER (LPTR(T))
+PRINT (DATA(T))
+ORDER (RPTR(T))
+end
+return
+end
+
+where LPTR: left pointer
+RPTR: right pointer
+T: given tree
+</pre>
+
+<p><br>
+This above algorithm is used to:</p>
+
+
+
+<ol style="list-style-type: upper-alpha;">
+	<li>   nbsp; Traverse the tree in preorder in a recursive manner</li>
+	<li>   nbsp; Traverse the tree in in-order, in a recursive manner</li>
+	<li>   nbsp; Traverse the tree in post-order in a recursive manner</li>
+	<li>   nbsp;    nbsp;Do not Traverse the tree at all</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>Find True   nbsp;( T  ) or False ( F  )of the following statements :</p>
+
+<ol style="list-style-type:upper-roman">
+	<li>If A is recursive then complement of A is also recursive</li>
+	<li>If A and B are recursive sets then A intersection B is not always is recursive set.</li>
+	<li>Every recursive set is recursive enumerable and vice-versa</li>
+</ol>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;    nbsp;    nbsp;TTT   nbsp;</li>
+	<li>   nbsp;    nbsp;    nbsp;TFT   nbsp;    nbsp;</li>
+	<li>   nbsp;   nbsp;   nbsp;   nbsp; TFF   nbsp;</li>
+	<li>   nbsp;   nbsp;   nbsp;   nbsp; FFT</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>Let R be a binary relation on the set of all positive integers such that R   nbsp;= { (a, b)   nbsp;| a - b   nbsp; is an odd positive integer   nbsp;}</p>
+
+<p>R is :</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>an anti-symmetric relation    nbsp;   nbsp;   nbsp;</li>
+	<li>a reflexive and symmetric relation    nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>an equivalence relation    nbsp;</li>
+	<li>a partial ordering relation</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>A computer has a cache, main memory, and a disk used for virtual memory. If a referenced word is in the cache, 10 ns are required to access it. If it is main memory but not in the cache, total 200 ns are needed to load it into cache, and then the reference is started again.</p>
+
+<p>If the word is not in main memory, total 500 ms are required to fetch the word from the disk, followed by 200 ns to copy it to the cache and then the reference is started again.</p>
+
+<p>The cache hit ratio is 99
+
+<p>Ignore the time it takes to determine whether or not a reference may be found in cache or main memory.The hit ratio is the percent of the time a reference is found in the given level of the memory hierarchy.</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>732000ns</li>
+	<li>485750ns</li>
+	<li>500012ns</li>
+	<li>23009ns</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q31</span> - <p>The value of following Boolean expression:</p>
+
+<p>a ( a+b+c  )( a+b+c )( a+b+c )( a+bc )</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>a(a+b)</li>
+	<li>a</li>
+	<li>( a+b)</li>
+	<li>0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q32</span> - <p>Fill in the blanks in the procedure:</p>
+
+<pre class="prettyprint lang-c_cpp">
+void
+Prod (Element Type X, Priority Queue H)
+
+int i;
+if (IsFull(H))
+
+Error ("Priority queue is full");
+return;
+
+for (i=++H -   gt; size; H -   gt; Elements [i/2]   gt;X; i/=2)
+_________________
+
+</pre>
+
+<p><br>
+Find the statement which has to be placed below the for loop for inserting a key.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>H→ Elements [i]=H → Elements [i/2];   nbsp;    nbsp;    nbsp;    nbsp;H →Elements [i] = X;</li>
+	<li>H→ Elements [i/2]=H→ Elements [i/2];</li>
+	<li>H→ Elements [i^2 ]=X;</li>
+	<li>H→ Elements [i]=X;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q33</span> - <p>Let f ( n  )m    nbsp;g ( n  ) and h ( n  ) be   nbsp;functions whose domain is a subset of positive integers such that f ( n  )= O (n^2), g ( n  )= O(n^3), h ( n  )= O(n^4). Then:</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>f  ( n  ) +g  ( n  )= O (n^3)    nbsp;   nbsp;</li>
+	<li>h  ( n  ) -g  ( n  )=O  ( n  )    nbsp;   nbsp;   nbsp;</li>
+	<li>f  ( n  ).g  ( n  )=O( n^4)    nbsp;   nbsp;</li>
+	<li>h  ( n  ) .g  ( n  ) =O(n^7)</li>
+</ol>
+
+<p>Which of the above is/are incorrect?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>(d) only</li>
+	<li>(c) only</li>
+	<li>(b) and (d) only</li>
+	<li>(b) and (c) only</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q34</span> - <p>Consider the following grammar for Boolean expression:</p>
+
+<p>E →   nbsp;E OR   nbsp;E<br>
+E → E ANDE<br>
+E → NOT E<br>
+E →   nbsp;( E  )<br>
+E → TRUE<br>
+E→   nbsp; FALSE<br>
+E →   nbsp;ID<br>
+<br>
+The above grammar is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Ambiguous</li>
+	<li>Non-ambiguous</li>
+	<li>LL ( 1  )</li>
+	<li>Both( A  )   nbsp;and ( C  )</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q35</span> - <p>What will be the resulting grammar after removal of left-recursion from the following grammar?</p>
+
+<p>E →   nbsp; Ea|Eb|a|b</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>E→ aE'|bE' ;   nbsp;    nbsp;E'→ aE' | bE' |   nbsp;ϵ</li>
+	<li>E→ aE'|bE';   nbsp; E'→aE | bE | ϵ   nbsp;   nbsp;   nbsp;</li>
+	<li>E→ aE'|bE' |ϵ ;   nbsp; E' →   nbsp;aE' | bE' |ϵ</li>
+	<li>E→ aE'|nbsp; bE';   nbsp; E' → a | b | ϵ</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q36</span> - A pipeline system is affected by branch instruction. The penalty for the branch instruction is 3 stall cycle, if 33% of instruction is branch instruction and pipeline is operated with a clock of 10 ns and providing the speed up factor 8, then the number of stage in pipeline is _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q37</span> - <p>A pulse train with a frequency of 1 MHz is counted using a modulo 1024 ripple counter built with J-K flip flops. For proper operation of the counter, the maximum permissible propagation delay per flip flop stage is:</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>10   nsec</li>
+	<li>100   nsec</li>
+	<li>1000   nsec</li>
+	<li>100   microsec</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q38</span> - <p>A radix sort is to be used to sort the file of non-negative integers shown below into ascending order. What would the order of the numbers be after one pass of the algorithm?<br>
+12 37 42 9 5 7 50 40 45 92<br>
+   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp; 12   nbsp; 37   nbsp; 42   nbsp; 40   nbsp; 45   nbsp; 5   nbsp; 50   nbsp;    nbsp; 7   nbsp;    nbsp; 9   nbsp; 92   nbsp;    nbsp;    nbsp;   nbsp;</li>
+	<li>   nbsp; 50   nbsp; 40   nbsp; 12   nbsp; 42   nbsp; 92   nbsp; 5   nbsp; 45   nbsp; 37   nbsp;    nbsp; 7   nbsp;    nbsp; 9   nbsp;    nbsp;    nbsp;</li>
+	<li>   nbsp; 40   nbsp; 50   nbsp; 12   nbsp; 42   nbsp; 92   nbsp; 5   nbsp; 45   nbsp; 37   nbsp;    nbsp; 7   nbsp;    nbsp; 9   nbsp;    nbsp;    nbsp;</li>
+	<li>   nbsp; 40   nbsp; 50   nbsp; 12   nbsp; 42   nbsp; 92   nbsp; 5   nbsp; 45   nbsp;    nbsp; 7   nbsp; 37   nbsp;    nbsp; 9</li>
+</ol>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q39</span> - <p>Consider the following matrix:<br>
+<br>
+[ A  ]= [       1.5     amp;0     amp;1;      -0.5  amp; 0.5 amp; -0.5;      -0.5    amp; 0    amp; 0 ]</p>
+
+<p>The eigen values of the above matrix are:</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>-0.5,    nbsp;0.5, 1.5</li>
+	<li>0.5, 0.5, 1</li>
+	<li>1.75, -1, 0.5</li>
+	<li>-0.5,    nbsp;0.5, -1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q40</span> - The head of a moving head disk with 100 tracks numbered 0 to 99 is serving a request at track x. if the requests of track 25, 76, 43, 10, 67 are served using FIFO algorithm, then total head movements are 194. The track x initially served was at ________.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q41</span> - A file has 2^29 records each of size 8B. One block of main memory is 128B.  Sparse indexing is done with one index record per memory block and one index record is of 1 Byte. The blocks stored by the index records are stored in disk. Blocks occupied by index are searched using binary search technique. Maximum number of blocks need to be read is _____.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q42</span> - <p>Find the missing statement in the if loop of Floyd algorithm.</p>
+
+<pre class="prettyprint lang-c_cpp">
+Procedure Floyd: (var A: array[1...n,1...n] of real; C: array [1...n,1...n] of real);
+Var
+i, j, k: integer;
+begin M
+   nbsp;for i:=l to n do
+   nbsp;for j:=l to n do
+   nbsp;   nbsp;A[i,j]: =C[i,j]
+
+for i:=l to n do
+A[i,j ]:=0 ;
+for k:= l to n do
+for i:=l to n do
+for j:= l to n do
+
+if A[i,j]    gt; A[i,k]+A[k,j] then
+
+____________________
+end ;</pre>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>   nbsp;   nbsp; A[i,j]: = A[i,k] + A[k,j]   nbsp;   nbsp;   nbsp;</li>
+	<li>   nbsp;   nbsp; A[i,j]: = A[i, j] + A[k,j]   nbsp;    nbsp;</li>
+	<li>   nbsp;   nbsp; A[i,j]: = A[j,k]+ A[j,i]   nbsp;</li>
+	<li>   nbsp;   nbsp; A[i,j]: =A[i,k] + A[i,j]</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q43</span> - <p>What is the output of the following code snippet?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include   lt;stdio.h   gt;
+int main ( )
+
+int x = 2, y = 5;
+if (x    lt; y)
+   return (x = x+y);
+else
+   printf (“ GO Mock 1    nbsp;”);
+   printf(“ Welcome to GO Mock test ”);
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>GO Mock 1</li>
+	<li>Welcome to GO Mock Test</li>
+	<li>No output</li>
+	<li>GO Mock 1Welcome to GO Mock Test</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q44</span> - <p>Match the pairs about implementation and addressing modes:</p>
+
+<table border="2" cellpadding="1" style="height:50px; width:400px">
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="1"><strong>Group A    nbsp;   nbsp;</strong></td>
+			<td colspan="2" rowspan="1"><strong>Group B</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>   nbsp;A.</p>
+			</td>
+			<td>Array</td>
+			<td>I</td>
+			<td>
+			<p>   nbsp;Indirect   nbsp;Addressing</p>
+			</td>
+		</tr>
+		<tr>
+			<td>B</td>
+			<td>
+			<p>   nbsp;Relocatable code</p>
+			</td>
+			<td>II</td>
+			<td>
+			<p>   nbsp;Indexed   nbsp;Addressing</p>
+			</td>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td>
+			<p>   nbsp;Array as parameter</p>
+			</td>
+			<td>III</td>
+			<td>
+			<p>Base Register   nbsp;Addressing</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>   nbsp;</p>
+
+<p>   nbsp;
+    [                                                                  amp; Group A                                   amp;                                  nbsp;                                  nbsp;                           amp; Group B                                  nbsp;;                                      A                             amp; Array                                 amp; I        amp; Indirect   nbsp;Addressing;                                      B                                  nbsp;          amp;    nbsp;Relocatable code                                amp; II amp;    nbsp;Indexed   nbsp;Addressing;                                                                       nbsp; C                amp; Array as parameter                               amp; III   amp; Base Register   nbsp;Addressing                                  nbsp;;                                        ]
+</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>   nbsp;   nbsp; (A-II), (B-III), (C-I)</li>
+	<li>   nbsp;   nbsp; (A-III), (B-I), (C-II)</li>
+	<li>   nbsp;   nbsp; (A-III), (B-II), (C-I)</li>
+	<li>   nbsp;   nbsp; (A-I), (B-III), (C-II)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q45</span> - <p>How many times fibon( 3  ) is called during invocation of fibon ( 6  )?<br>
+<br>
+fibon(x) = fibon(x-1) + fibon(x-2)<br>
+fibon(0) = 1<br>
+fibon(1) = 1</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+	<li>6</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q46</span> - <p>Assume there are n transactions   nbsp; T^1., T^2., .... ,T^n.</p>
+
+<p>Every transaction Writes a value    nbsp;of variable X   nbsp; and then it   nbsp;is read by its successive transaction, like, T^1   nbsp;writes a value of X that is read by T^2<sub>   nbsp;</sub></p>
+
+<p>T^2<sub>   nbsp;</sub>   nbsp;writes a value of X that is read by T^3</p>
+
+<p>T_n-1writes a value of X that is read by T^n   nbsp;    nbsp;    nbsp;</p>
+
+<p>Now, if T_1   nbsp;fails then total number of transaction rollbacks are required to recover the schedule is ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>0</li>
+	<li>( n  )</li>
+	<li>1</li>
+	<li>( n-1   nbsp; )</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q47</span> - <p>For the given grammar consider the statements:</p>
+
+<p>S'   nbsp;   nbsp;→ S<br>
+S   nbsp; → aAd |   nbsp;bBd | aBe | bAe<br>
+A   nbsp; → c<br>
+B   nbsp; → c</p>
+
+<p>Which of the following statement is/are true?</p>
+
+<p>S1: The given grammar is LR(l).</p>
+
+<p>S2: On merger the grammar will generate reduce reduce conflict.</p>
+
+<ol start="1" style="list-style-type: upper-alpha;">
+	<li>Only S1</li>
+	<li>Only S2</li>
+	<li>Both   nbsp;S1   nbsp;and   nbsp;S2</li>
+	<li>None   nbsp;of   nbsp;S1   nbsp;and   nbsp;S2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q48</span> - <p>State whether the following statements are true or false?</p>
+
+<ol style="list-style-type:lower-alpha">
+	<li>(P→   nbsp;Q) → (Q→   nbsp;P) always holds, for all propositions P, Q.</li>
+	<li>(  ( P∨ Q  )→ Q  )   nbsp;→ ( Q→   nbsp; ( P∨ Q  )  )   nbsp;always holds, for all propositions P, Q.</li>
+</ol>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;    nbsp;a is true, b is false</li>
+	<li>   nbsp;    nbsp;Both a and b are true</li>
+	<li>   nbsp;    nbsp;a is false, b is true.</li>
+	<li>   nbsp;    nbsp;Both a and b are false.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q49</span> - Consider two machines, machine A and machine B. Machine B runs floating-point instructions n times faster than machine A.
+Consider a program that takes 100 seconds to run on machine A, and spends half  of its time in floating-point instructions. If speedup of performance is 1.714 (speed up is calculated by dividing  the performance of  Machine B  by performance of machine A) then the value of n is _________ (In case of fractional value of n give nearest higher positive integer).<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q50</span> - <p>Consider the regular languages denoted by the following pairs of regular expressions:</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>(0 + 1)*= 0*+ 1*</li>
+	<li>0(120)*12 = 01(201)*2</li>
+	<li>(0*l*)*= (0*1)*</li>
+	<li>(01 +0)*0 = 0(10 +0)*   nbsp;</li>
+</ol>
+
+<p>Determine the truth of   nbsp;equality for each pair.</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>a-False, b-True, c-True, d-False</li>
+	<li>a-True, b-False, c-False, d-True</li>
+	<li>a-True, b-True, c-False, d-True</li>
+	<li>a-False, b-True, c-False, d-True</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q51</span> - The access time of cache memory is 10 ns and main memory is 100 ns. It is estimated that 80 % of memory requests are for read and remaining are for write. The hit ratio for read access only is 0.9. A write through procedure is used. Pages are always available in cache for write operation. Then, the average access time is ______ ns.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q52</span> - Two peer processes A (sender) and B (receiver) use stop-and-wait ARQ to send packets over a single link with capacity C.  All packets have the same length of 100 bits. The round-trip time (which is the time until A receives an acknowledgment for a sent packet) is equal to 2 seconds.
+
+Assume that no packets or ACK's are dropped and that all packets and ACK's arrive error-free. Furthermore, assume that the capacity C is equal to 100,000 bits per second.
+
+The average transmission rate (in bits per seconds) with which process A sends data to process B is ________.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q53</span> - A computer uses a memory unit with 512K words of 64 bits each. A binary instruction code is stored in one word of memory. The instruction has four parts: an indirect bit, an operation code, a register code part (to specify one of 256 registers), and an address part. The number of bits in the operation code are _______.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q54</span> - A pipeline system has 4 stages and each stage takes 10ns.
+
+30% instructions are branch-instructions and branch-instruction introduce a delay of 3 stall cycles. The speed-up factor compared to same non-pipelined environment if there are 100000 instructions to be executed is ___________.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q55</span> - Consider a disk with a sector size of 512 bytes, 50 sectors per track, 2000 tracks per surface and five double-sided platters (i.e. 10 surfaces). The disk platters rotate at 5400 rpm. The average seek time is 10 msec. A block size is chosen as 1024 bytes.
+
+A file containing 100,000 records of 100 bytes each is to be stored on this disk, and no record is allowed to span two blocks. Then, the rotational latency of the disk is ________ seconds.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '106151', 'text': '<p>There are "m" red balls and "n" green balls in a bucket. p balls are drawn from the urn and if found that all of them are green then what is the probability that another ball drawn from those remaining will also be green? Assume p &lt; n</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>p-n/m+n</li>\n\t<li>n-p/m+n-p</li>\n\t<li>p-m/m+n</li>\n\t<li>m-p/m+n-p</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,combinatory,engineering-mathematics,probability,conditional-probability', 'category': 'GATE'}, {'contents': '', 'post_id': '106152', 'text': '<p>Find the output of the following program :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nmain ()\n{\nint a, b;\nint v=3;\nint *pv;\na = 2 * (v+5);\npv = &amp;v;\nb = 2*(*pv + 5);\nprintf("\\n a=%d b=%d " , a,b);\n}</pre>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$a = 16$ , $b = 16$</li>\n\t<li>$a = 16$ , $b = 32$</li>\n\t<li>$a = 16$ , $b = 8$</li>\n\t<li>$a = 16$ , $b = 64$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,programming-in-c,programming,pointers', 'category': 'GATE'}, {'contents': '', 'post_id': '106154', 'text': '<p>Consider the Hasse diagram $D_1$ and $D_2$ as follows:</p>\n\n<ul>\n\t<li>$D_1:$ The Hasse diagram for the partial ordering $\\left \\{ \\langle a, b \\rangle \\mid a \\mod \\: b=0 \\right \\}$&nbsp;on the set of positive divisors of $24 \\}$</li>\n\t<li>$D_2:$ The Hasse diagram for the partial ordering $\\left \\{\\langle a, b\\rangle&nbsp;\\mid a \\mod \\: b=0 \\right \\}$&nbsp;on the set of positive&nbsp;divisors of $81 \\}$</li>\n</ul>\n\n<p>Then which among $D_1$ and $D_2$ is/are a total ordering?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Only&nbsp;$D_1$</li>\n\t<li>Only&nbsp;$D_2$</li>\n\t<li>Both&nbsp;$D_1$ &amp; $D_2$</li>\n\t<li>None&nbsp;$D_1$ &amp; $D_2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,partial-order,set-theory&algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106156', 'text': '<p>Which of the following statements is $TRUE$ about $CSMA/CD$:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$IEEE$ $802.11$ wireless $LAN$ runs $CSMA/CD$ protocol</li>\n\t<li>Ethernet is not based on $CSMA/CD$ protocol</li>\n\t<li>$CSMA/CD$ is not suitable for a high propagation</li>\n\t<li>There is no contention in a $CSMA/CD$ network</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,wifi,computer-networks', 'category': 'GATE'}, {'contents': '', 'post_id': '106157', 'text': '<p>Which of the following statements is $FALSE$ regarding a bridge:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Bridge is a layer $2$ device</li>\n\t<li>Bridge reduces collision domain</li>\n\t<li>Bridge is used to connect two or more $LAN$ segments</li>\n\t<li>Bridge reduces broadcast domain</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,network-layer,computer-networks,routers-bridge-hubs-switches', 'category': 'GATE'}, {'contents': '', 'post_id': '106158', 'text': '<p>What is the output of the following program?<br>\nmain( )<br>\n{<br>\nint i=4, z=12;<br>\nif( i=5 || z &gt; 50)<br>\nprintf(“ Gate2017”);<br>\nelse<br>\nprintf(“ Gateoverflow”);<br>\n}</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Gate2017</li>\n\t<li>Gateoverflow</li>\n\t<li>syntax error</li>\n\t<li>Gate2017Gateoverflow</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,programming,programming-in-c', 'category': 'GATE'}, {'contents': '', 'post_id': '106160', 'text': '<p>A shift reduced parser carries out the actions specified within braces Immediately after reducing with the corresponding rule of grammar.</p>\n\n<pre class="prettyprint lang-c_cpp">\nS --&gt;  xxW (print \'a\')\nS --&gt; Y        (print\'b\')\nW --&gt; Sz    (print \'c\')</pre>\n\n<p>What is the translation of $xxxxyzz$ using the syntax directed translation scheme described by the above rules.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>bcaca</li>\n\t<li>aabcc &nbsp;&nbsp;</li>\n\t<li>aabca &nbsp;&nbsp;&nbsp;</li>\n\t<li>ccbaa</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,compiler-design,parsing,syntax-directed-translation', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '106162', 'text': '<p>Consider the schedule given below. $T_1$ and $T_2$ are two transactions operating on two resources $x$ and $y.$$$\\begin{array}{|c|c|c|} \\hline \\bf{T_1} &amp; \\bf{T_2} \\\\ \\hline \\text{read_lock} \\left ( y \\right ); \\\\&nbsp;<br>\n\\text{read_item} \\left ( y \\right ); \\\\\\hline &amp;&nbsp;\\text{read_lock} \\left ( x&nbsp;\\right ); \\\\ &amp;<br>\n&nbsp; &nbsp; \\text{read_item} \\left ( x&nbsp;\\right );&nbsp; \\\\ \\hline \\text{write_lock}\\left (x\\right); &amp; \\\\ \\hline &amp;&nbsp;\\text{write_lock}\\left (y\\right);&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<p>The given schedule is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A serializable schedule</li>\n\t<li>A non-serializable schedule &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>A&nbsp;dead lock situation</li>\n\t<li>Both non-serializable and deadlock schedule</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,transaction-and-concurrency,databases', 'category': 'Databases'}, {'contents': '', 'post_id': '106164', 'text': '<p>Consider the following program fragment :</p>\n\n<pre class="prettyprint lang-c_cpp">\nint foo(int ,int );\nint a;\nint ar[4] = { 1,0, 2,3};\nmain()\n{\na = 0;\nfoo(ar[a], ar[ar[a]]);\nprintf("%d,%d ,%d,%d ", ar[0] , ar[1] ,ar[2] , ar[3]);\n}\n\n\nfoo(int x, int y)\n{\nx= x+1;\ny=y+1;\nx=x+1;\ny=y+1;\nar[1] =50;\n}</pre>\n\n<p>What value will be printed by the program if parameter passed by call by name?</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$1, 50, 2, 3$</li>\n\t<li>$3, 50, 2, 3$</li>\n\t<li>$3, 50, 3, 4$</li>\n\t<li>$3, 2, 2, 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,parameter-passing,runtime-environment,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106165', 'text': '<p>Consider the following floating point format :</p>\n\n<p><br>\n&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; &nbsp; &nbsp; $&lt;--8--&gt; &nbsp;&nbsp;&nbsp;&lt;--23--&gt;$<br>\n&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp; &nbsp; $| $&nbsp; &nbsp; &nbsp;$E$&nbsp; &nbsp; $|$&nbsp; &nbsp; &nbsp;$M$&nbsp; &nbsp; &nbsp;$|$</p>\n\n<ul>\n\t<li>S:&nbsp; Sign bit</li>\n\t<li>E:&nbsp; Exponent</li>\n\t<li>M:&nbsp;Mantissa</li>\n</ul>\n\n<p>The value of floating point number in this system is,</p>\n\n<p>$V=$ $-I^{s}$x $2^{E-127}$&nbsp;x $1.F$</p>\n\n<p>Then what is the corresponding decimal value if the floating point stored is: $3F800000$</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>0</li>\n\t<li>1</li>\n\t<li>-1</li>\n\t<li>2</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,floating-point-representation,number-representation,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106167', 'text': '<p>Consider following recursive functions:</p>\n\n<pre class="prettyprint lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfunction fib(n : integer); integer\nbegin\nif (n = 0) or (n = 1) then fib = 1\nelse\nfib = fib(n-l) + fib(n-2)\nend</pre>\n\n<p>The above function is run on a computer with a stack of $x$ bytes. Assume that only return address &amp; parameter are passed on the stack and an integer value &amp; return value take $2$ $bytes$ each. If we can execute this function for maximum value $n = 10$ without overflowing the stack. Then the size of the stack is ______ $Bytes$.</p>', 'type': 'Numerical', 'answer': '40', 'award': 1, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,runtime-environment,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106168', 'text': '<p>Which of the following should be allowed <strong>only </strong>in Kernel mode?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>&nbsp;Changing mapping from virtual to physical address</li>\n\t<li>&nbsp;Mask and unmask interrupts</li>\n\t<li>&nbsp;Disabling all interrupts</li>\n\t<li>&nbsp;Reading&nbsp;processor status register&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp;Receive a packet of data from the network &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp;Cause a trap</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$(i)$, $(ii)$ , $(iii)$ and&nbsp; $(v)$</li>\n\t<li>$(i)$, $(ii)$ , $(iv)$ and $(vi)$</li>\n\t<li>$(ii)$,$(iv)$ and $(vi)$</li>\n\t<li>$(i)$, $(ii)$, $(iii)$, $(iv)$, $(v)$ and $(vi)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-and-threads,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106169', 'text': '<p><strong>Match the following:</strong></p>\n\n<table border="2" cellpadding="1" style="width:400px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan="2" rowspan="1"><strong>List I</strong></td>\n\t\t\t<td colspan="2" rowspan="1"><strong>List II</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>A</td>\n\t\t\t<td>Backus Naur form&nbsp; &nbsp;</td>\n\t\t\t<td>1</td>\n\t\t\t<td>Regular expression</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B</td>\n\t\t\t<td>Lex</td>\n\t\t\t<td>2</td>\n\t\t\t<td>$\\left ( I \\right )$$LALR$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C</td>\n\t\t\t<td>Yacc</td>\n\t\t\t<td>3</td>\n\t\t\t<td>$LL$$\\left ( 1 \\right )$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D</td>\n\t\t\t<td>Recursive descent parsing&nbsp;</td>\n\t\t\t<td>4</td>\n\t\t\t<td>$CFG\'s$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;$$\\begin{array}{|c|c|c|} \\hline &amp; \\textbf{List I} &amp;&nbsp; &amp;\\textbf{List II} \\\\ \\hline A &amp; \\text{Backus Naur form} &amp; 1 &amp; \\text{Regular expression}&nbsp;\\\\ \\hline B&nbsp;&amp; \\text{Lex} &amp; 2&nbsp;&amp; (I) LALR \\\\ \\hline C&nbsp;&amp; \\text{Yacc} &amp; 3&nbsp;&amp; LL(1)&nbsp;\\\\ \\hline D&nbsp;&amp; \\text{Recursive descent parsing&nbsp;} &amp; 4&nbsp;&amp; \\text{CFG’s}&nbsp;&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$A-2;&nbsp;\\: B-1;&nbsp;\\: C-3; \\:&nbsp;D-4;$</li>\n\t<li>$A-4 ; \\: B-3 \\: ; C-&nbsp;1 \\: ; D-2;$</li>\n\t<li>$A-4; \\: B-1 \\: ; C-2; \\: D-3;$</li>\n\t<li>$A-1; \\: B-4; \\:C-2; \\: D-3;$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106170', 'text': '<p>Match the following $List&nbsp;I$ with $List II$ :</p>\n\n<ol>\n\t<li>$W(x)$: $x$ is a worker</li>\n\t<li>$A(x)$: $x$ likes Anand</li>\n</ol>\n\n<ul>\n\t<li><strong>List -I</strong></li>\n</ul>\n\n<p>a.&nbsp; No worker like Anand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\n<p>b. Some worker like Anand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\n<p>c.&nbsp; If someone s a worker, he likes Anand &nbsp;&nbsp;&nbsp;</p>\n\n<ul>\n\t<li><strong>List II</strong></li>\n</ul>\n\n<p>&nbsp;p.&nbsp; $\\sim$$\\forall x$[ $W(x)$ $\\rightarrow$ $\\sim$$A(x) ]$&nbsp; &nbsp; here $\\sim$&nbsp;represent NOT</p>\n\n<p>&nbsp;q.&nbsp; &nbsp;$\\sim$∃$x$$[$ $W(X)$&nbsp; $\\wedge \\sim$&nbsp;$A(x) ]$</p>\n\n<p>&nbsp;r.&nbsp; &nbsp; $\\sim$∃$x$$[$ $W(X)$&nbsp; $\\wedge&nbsp;A(x)$&nbsp;$]$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$a-r, b-q, c-p$</li>\n\t<li>$a-p, b-q, c-r$&nbsp; &nbsp;</li>\n\t<li>$a-r, b-p, c-q$</li>\n\t<li>$a-q, b-p, c-r$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,discrete-mathematics,mathematical-logic,first-order-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106171', 'text': '<p>Let $R1, R2, R3$ be reader processes and let&nbsp; $W1$ and $W2$ be writer processes requesting shared data. If $R1$ is selected for access. Which of the statement is/are correct?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>&nbsp;Mutual exclusion is necessary for $R2$ and $R3$</li>\n\t<li>&nbsp;No mutual exclusion is necessary for $R2$ and $R3$</li>\n\t<li>&nbsp;Mutual exclusion must be there for $W1$ and $W2$</li>\n\t<li>&nbsp;No mutual exclusion must be there for $W1$ and $W2$</li>\n</ol>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$(i)$ and $(iii)$ only</li>\n\t<li>$(ii)$ and $(iii)$ only</li>\n\t<li>$(iv)$ and $(iii)$ only</li>\n\t<li>$(i)$ and $(iv)$ only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-synchronization,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106172', 'text': '<p>Hash a list of $3$ keys into hash table with $20$ locations. What will be the probability of the event $A$ in which hashing the three keys causes a collision?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$0.123$</li>\n\t<li>$0.145$</li>\n\t<li>$0.800$</li>\n\t<li>$0.750$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,data-structures,hashing,algorithms', 'category': 'GATE'}, {'contents': '', 'post_id': '106174', 'text': '<p>Suppose there are five processes in the ready queue as shown below:</p>\n\n<p>$$\\begin{array}{|c|c|c|} \\hline i &amp; T(Pi) &amp; \\text{Priority}&nbsp; \\\\ \\hline 0 &amp; 350 &amp; 5 \\\\ \\hline 1 &amp; 125 &amp; 2 \\\\ \\hline 2 &amp; 475 &amp; 3 \\\\ \\hline 3 &amp; 250 &amp; 1 \\\\ \\hline 4 &amp; 75 &amp; 4&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<p>If FCFS, SJF&nbsp;and priority scheduling algorithms are used, for which algorithm is the average waiting time the minimum? Assume lower integer indicates higher priority and all the processes arrive&nbsp;at time zero.</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>FCFS</li>\n\t<li>Priority scheduling</li>\n\t<li>SJF</li>\n\t<li>both&nbsp;FCFS and&nbsp;SJF</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-scheduling,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106176', 'text': '<p>Which of the following is not a Boolean algebra under the operation \'\\\'?<br>\n&nbsp;&nbsp;\\: is a divisor, &nbsp;$D_{p}$: divisor of $p$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\left \\{ D18; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D21; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D110; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D91; \\ \\right \\}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,boolean-algebra,discrete-mathematics,lattice', 'category': 'Set Theory & Algebra'}, {'contents': '', 'post_id': '106177', 'text': '<p>Consider the following $SQ$L query:</p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nWith max_balance(value) as Select max(balance) from account;</pre>\n\n<p>The result of executing the above query is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$A$ temporary table is created with the name $max$_$balance$</li>\n\t<li>$A$ temporary view is created with the name $max$_$balance$</li>\n\t<li>$A$ permanent view is created with the name $max$_$balance$</li>\n\t<li>$A$ permanent table is created with the name $max$_$balance$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,sql,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106179', 'text': '<p>In a $32$ bit machine to execute an instruction the following steps are carried out: Fetch, Decode, Execute and Store, each of which takes one clock period. In a pipelined execution of a four-step task a new instruction is read and it\'s execution begins with each new clock period. If each clock period is of $20$ $nanosecond$ and there are $100$ instructions in sequence then what is the speedup ratio of pipeline processing system over an equivalent non-pipeline processing system?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$3.88$</li>\n\t<li>$1.88$</li>\n\t<li>$3.68$</li>\n\t<li>$2.723$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106181', 'text': '<p>Consider the languages given below.</p>\n\n<ol style="list-style-type:decimal">\n\t<li>$L1 =$ {$a$^$n$ $b$^$m$ $c$^$m$ $d$^$n$ $|n &gt;= 1$ and $m &gt;= 1$}</li>\n\t<li>$L2 =$ {$a$^$n$ $b$^$n$ $|n &gt;= 1$}</li>\n\t<li>$L3 =$&nbsp;{$a$^$n$ $b$^$n$ $c$^$n$ $|n&gt;=0$ }</li>\n</ol>\n\n<p>Find the correct statement from the following:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>&nbsp;&nbsp;$L1, L2$ and $L3$&nbsp; are context Free languages</li>\n\t<li>&nbsp;&nbsp;$L1, L2$ are but not $L3$, are context free Languages</li>\n\t<li>&nbsp;&nbsp;$L2, L3$ are context free but not $L1$</li>\n\t<li>&nbsp;&nbsp;Only&nbsp;$L2$&nbsp; is context free</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,identify-class-language,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106183', 'text': '<p>For the &nbsp;Boolean equation &nbsp;$AB +$ $\\sim AC$$= 1$, &nbsp;$AC +B = &nbsp;0$, &nbsp;the value of &nbsp;$A$, $B$ and $C$ will be:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$0$, $0$,$1$</li>\n\t<li>$1$,$1$,$0$</li>\n\t<li>$0$,$1$,$0$</li>\n\t<li>$1$,$0$,$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,boolean-algebra,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106184', 'text': '<p>Consider the relational &nbsp;schema S= {A,B,C,D} and the following functional dependencies on S:</p>\n\n<p>$A$$\\rightarrow BCD$<br>\n$B$$\\rightarrow C$<br>\n$CD$$\\rightarrow A$</p>\n\n<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$S$ is in $3NF$ and also in $BCNF$</li>\n\t<li>$S$ is in $2NF$ not in $3NF$</li>\n\t<li>$S$ is in $3NF$ but not in $BCNF$</li>\n\t<li>$S$ is in $BCNF$ but not in $4NF$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,database-normalization,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106186', 'text': 'The internet host is roughly doubling in size every $18$ $months$. Although no one really knows for sure, one estimate put the number of hosts on it at $7$ million in January $1996$. Using these data the expected number of internet hosts in January $2008$ is _____ billion.', 'type': 'Numerical', 'answer': '1.79 : 1.792', 'award': 1, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,statistics,quantitative-aptitude,asymptotic-notation', 'category': 'Probability'}, {'contents': '', 'post_id': '106187', 'text': '<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>&nbsp;&nbsp; Blind writes appear in any view serializable schedule that is not conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear in some view serializable schedule that is also conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear in all view seriallzable schedules that are&nbsp;also conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear&nbsp;only in conflict serializable schedule that is not view serializable.</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>II and III</li>\n\t<li>II and IV</li>\n\t<li>I only</li>\n\t<li>I and II</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,conflict-serializable,transaction-and-concurrency,serializability,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106188', 'text': 'Suppose we have a block-addressable disk drive. With such block organized disk non data overhead of subblocks and, interblock gaps have to be accounted for.\n\nThere are $40,000$ bytes per track and the amount of space taken up by subblocks and interblock gaps is equivalent to  $250$ $Bytes$ per block. A file contains records and record size is $200$ $Bytes$ to be stored on the disk. If a total of $32$ blocks can be stored per track then the blocking factor is ________\n\nThe term "blocking factor" is used to indicate the number of records that are to the stored in each block in a file. A block is organized to hold an integral number of logical records.', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106190', 'text': '<p>Consider the following algorithm:</p>\n\n<pre class="prettyprint lang-c_cpp">\n\nORDER (T)\nbegin\nif (T!=NULL) then\nbegin\nORDER (LPTR(T))\nPRINT (DATA(T))\nORDER (RPTR(T))\nend\nreturn\nend\n\nwhere LPTR: left pointer\nRPTR: right pointer\nT: given tree\n</pre>\n\n<p><br>\nThis above algorithm is used to:</p>\n\n\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>&nbsp; Traverse the tree in preorder in a recursive manner</li>\n\t<li>&nbsp; Traverse the tree in in-order, in a recursive manner</li>\n\t<li>&nbsp; Traverse the tree in post-order in a recursive manner</li>\n\t<li>&nbsp; &nbsp;Do not Traverse the tree at all</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,data-structures,tree', 'category': 'GATE'}, {'contents': '', 'post_id': '106191', 'text': '<p>Find True&nbsp;$\\left ( T \\right )$ or False $\\left ( F \\right )$of the following statements :</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>If $A$ is recursive then complement of $A$ is also recursive</li>\n\t<li>If $A$ and $B$ are recursive sets then $A$ intersection $B$ is not always is recursive set.</li>\n\t<li>Every recursive set is recursive enumerable and vice-versa</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; &nbsp; &nbsp;$TTT$&nbsp;</li>\n\t<li>&nbsp; &nbsp; &nbsp;$TFT$&nbsp; &nbsp;</li>\n\t<li>&nbsp;&nbsp;&nbsp;&nbsp; $TFF$&nbsp;</li>\n\t<li>&nbsp;&nbsp;&nbsp;&nbsp; $FFT$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,recursive-and-recursively-enumerable-languages,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106192', 'text': '<p>Let $R$ be a binary relation on the set of all positive integers such that $R&nbsp;= \\{ (a, b)&nbsp;\\mid a - b&nbsp;\\text{ is an odd positive integer}&nbsp;\\}$</p>\n\n<p>$R$ is :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>an anti-symmetric relation &nbsp;&nbsp;&nbsp;</li>\n\t<li>a reflexive and symmetric relation &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>an equivalence relation &nbsp;</li>\n\t<li>a partial ordering relation</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,relations,set-theory&algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106194', 'text': '<p>A computer has a cache, main memory, and a disk used for virtual memory. If a referenced word is in the cache, $10$ $ns$ are required to access it. If it is main memory but not in the cache, total $200$ $ns$ are needed to load it into cache, and then the reference is started again.</p>\n\n<p>If the word is not in main memory, total $500$ $ms$ are required to fetch the word from the disk, followed by $200$ $ns$ to copy it to the cache and then the reference is started again.</p>\n\n<p>The cache hit ratio is $99%$, and the main memory hit ratio is $90%$. What is the average time in ns to access a referenced word on this system?</p>\n\n<p>Ignore the time it takes to determine whether or not a reference may be found in cache or main memory.The hit ratio is the percent of the time a reference is found in the given level of the memory hierarchy.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$732000$ $ns$</li>\n\t<li>$485750$ $ns$</li>\n\t<li>$500012$ $ns$</li>\n\t<li>$23009$ $ns$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,cache-memory,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106195', 'text': '<p>The value of following Boolean expression:</p>\n\n<p>$a\\left ( a+b+c \\right )$$\\left ( \\overline a+b+\\overline c \\right )$$\\left ( a+b+\\overline c \\right )$$\\left ( \\overline a+\\overline bc\\right )$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$a(a+b)$</li>\n\t<li>$\\overline a$</li>\n\t<li>$( \\overline a+b)$</li>\n\t<li>$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,boolean-algebra,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106197', 'text': '<p>Fill in the blanks in the procedure:</p>\n\n<pre class="prettyprint lang-c_cpp">\nvoid\nProd (Element Type X, Priority Queue H)\n{\nint i;\nif (IsFull(H))\n{\nError ("Priority queue is full");\nreturn;\n}\nfor (i=++H -&gt; size; H -&gt; Elements [i/2]&gt;X; i/=2)\n_________________\n}\n</pre>\n\n<p><br>\nFind the statement which has to be placed below the for loop for inserting a key.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$H$$\\rightarrow$ Elements $[i]=H$ $\\rightarrow$ Elements [i/2];&nbsp; &nbsp; &nbsp; &nbsp;$H$ $\\rightarrow$Elements $[i] = X$;</li>\n\t<li>$H$$\\rightarrow$ Elements $[i/2]=H$$\\rightarrow$ Elements $[i/2]$;</li>\n\t<li>$H$$\\rightarrow$ Elements $[i^2 ]=X;$</li>\n\t<li>$H$$\\rightarrow$ Elements $[i]=X;$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,data-structures,priority-queue', 'category': 'GATE'}, {'contents': '', 'post_id': '106198', 'text': '<p>Let $f\\left ( n \\right )$m &nbsp;$g\\left ( n \\right )$ and $h\\left ( n \\right )$ be&nbsp;functions whose domain is a subset of positive integers such that $f\\left ( n \\right )= O\\left (n^{2}\\right), g\\left ( n \\right )= O\\left(n^{3}\\right), h\\left ( n \\right )= O\\left(n^{4}\\right).$ Then:</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$f \\left ( n \\right ) +g \\left ( n \\right )= O \\left(n^{3}\\right)$ &nbsp;&nbsp;</li>\n\t<li>$h \\left ( n \\right ) -g \\left ( n \\right )=O \\left ( n \\right )$ &nbsp;&nbsp;&nbsp;</li>\n\t<li>$f \\left ( n \\right ).g \\left ( n \\right )=O\\left( n^{4}\\right)$ &nbsp;&nbsp;</li>\n\t<li>$h \\left ( n \\right ) .g \\left ( n \\right ) =O\\left(n^{7}\\right)$</li>\n</ol>\n\n<p>Which of the above is/are incorrect?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$(d)$ $only$</li>\n\t<li>$(c)$ $only$</li>\n\t<li>$(b)$ $and$ $(d)$ $only$</li>\n\t<li>$(b)$ $and$ $(c)$ $only$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,asymptotic-notation,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '106200', 'text': '<p>Consider the following grammar for Boolean expression:</p>\n\n<p>$E$ $\\rightarrow$&nbsp;$E$ OR&nbsp;$E$<br>\n$E$ $\\rightarrow$ $E$ AND$E$<br>\n$E$ $\\rightarrow$ NOT $E$<br>\n$E$ $\\rightarrow$&nbsp;$\\left ( E \\right )$<br>\n$E$ $\\rightarrow$ TRUE<br>\n$E$$\\rightarrow$&nbsp; FALSE<br>\n$E$ $\\rightarrow$&nbsp;$ID$<br>\n<br>\nThe above grammar is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Ambiguous</li>\n\t<li>Non-ambiguous</li>\n\t<li>$LL$ $\\left ( 1 \\right )$</li>\n\t<li>Both$\\left ( A \\right )$&nbsp;and $\\left ( C \\right )$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,ambiguous,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106201', 'text': '<p>What will be the resulting grammar after removal of left-recursion from the following grammar?</p>\n\n<p>$E$ $\\rightarrow$&nbsp; $Ea $|$ Eb $|$ a $|$ b$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$E$$\\rightarrow$ $aE\'$|$ bE\'$ ;&nbsp; &nbsp;$E$\'$\\rightarrow$ $aE\'$ $|$ $bE\'$ |&nbsp;$\\epsilon$</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$ bE\'$;&nbsp; $E$\'$\\rightarrow$$aE$ $|$ $bE$ $|$ $\\epsilon$&nbsp;&nbsp;&nbsp;</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$ bE\'$ $|$$\\epsilon$ ;&nbsp; $E\'$ $\\rightarrow$&nbsp;$aE\'$ $|$ $bE\'$ |$\\epsilon$</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$&nbsp; bE\'$;&nbsp; $E\'$ $\\rightarrow$ $a$ | $b$ $|$ $\\epsilon$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106202', 'text': 'A pipeline system is affected by branch instruction. The penalty for the branch instruction is $3$ stall cycle, if $33\\%$ of instruction is branch instruction and pipeline is operated with a clock of $10$ $ns$ and providing the speed up factor $8$, then the number of stage in pipeline is _______', 'type': 'Numerical', 'answer': '15.5 : 16', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106203', 'text': '<p>A pulse train with a frequency of $1$ $MHz$ is counted using a modulo $1024$ ripple counter built with $J-K$ flip flops. For proper operation of the counter, the maximum permissible propagation delay per flip flop stage is:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$10 \\: nsec$</li>\n\t<li>$100 \\: nsec$</li>\n\t<li>$1000 \\: nsec$</li>\n\t<li>$100 \\: microsec$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,ripple-counter-operation,digital-counter,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106204', 'text': '<p>A radix sort is to be used to sort the file of non-negative integers shown below into ascending order. What would the order of the numbers be after one pass of the algorithm?<br>\n$12$ $37$ $42$ $9$ $5$ $7$ $50$ $40$ $45$ $92$<br>\n&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; $12$&nbsp; $37$&nbsp; $42$&nbsp; $40$&nbsp; $45$&nbsp; $5$&nbsp; $50$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; $92$&nbsp; &nbsp; &nbsp;&nbsp;</li>\n\t<li>&nbsp; $50$&nbsp; $40$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; $37$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp; $40$&nbsp; $50$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; $37$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp; $40$&nbsp; $50$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; &nbsp; $7$&nbsp; $37$&nbsp; &nbsp; $9$</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,sorting,radix-sort,algorithms', 'category': 'GATE'}, {'contents': '', 'post_id': '106205', 'text': '<p>Consider the following matrix:<br>\n<br>\n$\\left [ A \\right ]=$ $\\begin{bmatrix} 1.5&amp;0 &amp;1 \\\\ -0.5 &amp; 0.5&amp; -0.5\\\\ -0.5&amp; 0 &amp; 0 \\end{bmatrix}$</p>\n\n<p>The eigen values of the above matrix are:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$-0.5, &nbsp;0.5, 1.5$</li>\n\t<li>$0.5, 0.5, 1$</li>\n\t<li>$1.75, -1, 0.5$</li>\n\t<li>$-0.5, &nbsp;0.5, -1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,matrix,eigen-value,linear-algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106206', 'text': 'The head of a moving head disk with $100$ tracks numbered $0$ to $99$ is serving a request at track $x$. if the requests of track $25, 76, 43, 10, 67$ are served using $FIFO$ algorithm, then total head movements are $194$. The track $x$ initially served was at ________.', 'type': 'Numerical', 'answer': '5 : 45', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk-scheduling,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106207', 'text': 'A file has $2^{29}$ records each of size 8B. One block of main memory is $128B$.  Sparse indexing is done with one index record per memory block and one index record is of $1$ $Byte$. The blocks stored by the index records are stored in disk. Blocks occupied by index are searched using binary search technique. Maximum number of blocks need to be read is _____.', 'type': 'Numerical', 'answer': '19', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,indexing,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106209', 'text': '<p>Find the missing statement in the if loop of $Floyd$ algorithm.</p>\n\n<pre class="prettyprint lang-c_cpp">\nProcedure Floyd: (var A: array[1...n,1...n] of real; C: array [1...n,1...n] of real);\nVar\ni, j, k: integer;\nbegin M\n&nbsp;for i:=l to n do\n&nbsp;for j:=l to n do\n&nbsp;&nbsp;A[i,j]: =C[i,j]\n\nfor i:=l to n do\nA[i,j ]:=0 ;\nfor k:= l to n do\nfor i:=l to n do\nfor j:= l to n do\n\nif A[i,j] &gt; A[i,k]+A[k,j] then\n\n____________________\nend ;</pre>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[i,k] + A[k,j]$&nbsp;&nbsp;&nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[i, j] + A[k,j]$&nbsp; &nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[j,k]+ A[j,i]$&nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: =A[i,k] + A[i,j]$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,algorithms,graph-algorithms,shortest-path', 'category': 'GATE'}, {'contents': '', 'post_id': '106210', 'text': '<p>What is the output of the following code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main ( )\n{\nint x = 2, y = 5;\nif (x &lt; y)\n   return (x = x+y);\nelse\n   printf (“ GO Mock 1 &nbsp;”);\n   printf(“ Welcome to GO Mock test ”);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>GO Mock 1</li>\n\t<li>Welcome to GO Mock Test</li>\n\t<li>No output</li>\n\t<li>GO Mock 1Welcome to GO Mock Test</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,programming,programming-in-c', 'category': 'GATE'}, {'contents': '', 'post_id': '106212', 'text': '<p>Match the pairs about implementation and addressing modes:</p>\n\n<table border="2" cellpadding="1" style="height:50px; width:400px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan="2" rowspan="1"><strong>Group A &nbsp;&nbsp;</strong></td>\n\t\t\t<td colspan="2" rowspan="1"><strong>Group B</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p>&nbsp;A.</p>\n\t\t\t</td>\n\t\t\t<td>Array</td>\n\t\t\t<td>I</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Indirect&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Relocatable code</p>\n\t\t\t</td>\n\t\t\t<td>II</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Indexed&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Array as parameter</p>\n\t\t\t</td>\n\t\t\t<td>III</td>\n\t\t\t<td>\n\t\t\t<p>Base Register&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;$$\\begin{array}{|c|c|c|} \\hline &amp; \\textbf{Group A} &amp;&nbsp; &nbsp;&amp; \\textbf{Group B}&nbsp; \\\\ \\hline A &amp; \\text{Array} &amp; I &amp; \\text{Indirect&nbsp;Addressing} \\\\ \\hline B&nbsp;&amp; \\text{&nbsp;Relocatable code} &amp; II &amp; \\text{&nbsp;Indexed&nbsp;Addressing} \\\\ \\hline&nbsp; C &amp; \\text{Array as parameter} &amp; III &amp; \\text{Base Register&nbsp;Addressing}&nbsp; \\\\ \\hline\\end{array}$$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>&nbsp;&nbsp; $(A-II), (B-III), (C-I)$</li>\n\t<li>&nbsp;&nbsp; $(A-III), (B-I), (C-II)$</li>\n\t<li>&nbsp;&nbsp; $(A-III), (B-II), (C-I)$</li>\n\t<li>&nbsp;&nbsp; $(A-I), (B-III), (C-II)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,addressing-modes,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106213', 'text': '<p>How many times $fibon$$\\left ( 3 \\right )$ is called during invocation of $fibon$ $\\left ( 6 \\right )$?<br>\n<br>\n$fibon(x) = fibon(x-1) + fibon(x-2)$<br>\n$fibon(0) = 1$<br>\n$fibon(1) = 1$</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>3</li>\n\t<li>4</li>\n\t<li>5</li>\n\t<li>6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,algorithms,recursion', 'category': 'GATE'}, {'contents': '', 'post_id': '106215', 'text': '<p>Assume there are n transactions&nbsp; $T^{1}$., $T^{2}$., .... ,$T^{n}$.</p>\n\n<p>Every transaction Writes a value &nbsp;of variable $X$&nbsp; and then it&nbsp;is read by its successive transaction, like, $T^{1}$&nbsp;writes a value of $X$ that is read by $T^{2}$<sub>&nbsp;</sub></p>\n\n<p>$T^{2}$<sub>&nbsp;</sub>&nbsp;writes a value of X that is read by $T^{3}$</p>\n\n<p>$T_{n-1}$writes a value of X that is read by $T^{n}$&nbsp; &nbsp; &nbsp;</p>\n\n<p>Now, if $T_1$&nbsp;fails then total number of transaction rollbacks are required to recover the schedule is ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$\\left ( n \\right )$</li>\n\t<li>$1$</li>\n\t<li>$\\left ( n-1&nbsp;\\right )$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,transaction-and-concurrency,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106216', 'text': '<p>For the given grammar consider the statements:</p>\n\n<p>$S\'&nbsp;&nbsp;\\rightarrow S$<br>\n$S&nbsp; \\rightarrow aAd \\mid&nbsp;bBd \\mid aBe \\mid bAe$<br>\n$A&nbsp; \\rightarrow c$<br>\n$B&nbsp; \\rightarrow c$</p>\n\n<p>Which of the following statement is/are true?</p>\n\n<p>S1: The given grammar is LR(l).</p>\n\n<p>S2: On merger the grammar will generate reduce reduce conflict.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Only S1</li>\n\t<li>Only S2</li>\n\t<li>Both&nbsp;S1&nbsp;and&nbsp;S2</li>\n\t<li>None&nbsp;of&nbsp;S1&nbsp;and&nbsp;S2</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106217', 'text': '<p>State whether the following statements are true or false?</p>\n\n<ol style="list-style-type:lower-alpha">\n\t<li>$(P\\to&nbsp;Q) \\rightarrow (Q\\to&nbsp;P)$ always holds, for all propositions $P, Q$.</li>\n\t<li>$\\left ( \\left ( P\\vee Q \\right )\\rightarrow Q \\right )$&nbsp;$\\rightarrow$ $\\left ( Q\\to&nbsp;\\left ( P\\vee Q \\right ) \\right )$&nbsp;always holds, for all propositions $P, Q$.</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; &nbsp;$a$ is true, $b$ is false</li>\n\t<li>&nbsp; &nbsp;Both $a$ and $b$ are true</li>\n\t<li>&nbsp; &nbsp;$a$ is false, $b$ is true.</li>\n\t<li>&nbsp; &nbsp;Both $a$ and $b$ are false.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,discrete-mathematics,mathematical-logic,propositional-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106218', 'text': 'Consider two machines, machine $A$ and machine $B$. Machine $B$ runs floating-point instructions $n$ times faster than machine $A$.\nConsider a program that takes $100$ $seconds$ to run on machine $A$, and spends half  of its time in floating-point instructions. If speedup of performance is $1.714$ (speed up is calculated by dividing  the performance of  Machine $B$  by performance of machine $A$) then the value of $n$ is _________ (In case of fractional value of $n$ give nearest higher positive integer).', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,speedup,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106219', 'text': '<p>Consider the regular languages denoted by the following pairs of regular expressions:</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$(0 + 1)$*$ = 0$*$ + 1$*$ $</li>\n\t<li>$0(120)$*$12 = 01(201)$*$2$</li>\n\t<li>$(0$*$l $*$)$*$ = (0$*$1)$*$ $</li>\n\t<li>$(01 +0)$*$0 = 0(10 +0)$*$ $&nbsp;</li>\n</ol>\n\n<p>Determine the truth of&nbsp;equality for each pair.</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$a-False, b-True, c-True, d-False$</li>\n\t<li>$a-True, b-False, c-False, d-True$</li>\n\t<li>$a-True, b-True, c-False, d-True$</li>\n\t<li>$a-False, b-True, c-False, d-True$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,regular-expression,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106220', 'text': 'The access time of cache memory is $10$ $ns$ and main memory is $100$ $ns$. It is estimated that $80 \\%$ of memory requests are for read and remaining are for write. The hit ratio for read access only is $0.9$. A write through procedure is used. Pages are always available in cache for write operation. Then, the average access time is ______ $ns$.', 'type': 'Numerical', 'answer': '36', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,cache-memory,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106222', 'text': "Two peer processes $A$ (sender) and $B$ (receiver) use stop-and-wait $ARQ$ to send packets over a single link with capacity $C$.  All packets have the same length of $100$ bits. The round-trip time (which is the time until $A$ receives an acknowledgment for a sent packet) is equal to $2$ seconds.\n\nAssume that no packets or $ACK's$ are dropped and that all packets and $ACK's$ arrive error-free. Furthermore, assume that the capacity $C$ is equal to $100,000$ bits per second.\n\nThe average transmission rate (in bits per seconds) with which process $A$ sends data to process $B$ is ________.", 'type': 'Numerical', 'answer': '49.970 : 50.00', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,stop-and-wait,computer-networks,sliding-window', 'category': 'GATE'}, {'contents': '', 'post_id': '106223', 'text': 'A computer uses a memory unit with $512K$ words of $64$ bits each. A binary instruction code is stored in one word of memory. The instruction has four parts: an indirect bit, an operation code, a register code part (to specify one of $256$ registers), and an address part. The number of bits in the operation code are _______.', 'type': 'Numerical', 'answer': '33 : 36', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,machine-instruction,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106224', 'text': 'A pipeline system has $4$ stages and each stage takes $10ns$.\n\n$30\\%$ instructions are branch-instructions and branch-instruction introduce a delay of $3$ stall cycles. The speed-up factor compared to same non-pipelined environment if there are $100000$ instructions to be executed is ___________.', 'type': 'Numerical', 'answer': '2.10 : 2.1052', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106225', 'text': 'Consider a disk with a sector size of $512$ bytes, $50$ sectors per track, $2000$ tracks per surface and five double-sided platters (i.e. $10$ surfaces). The disk platters rotate at $5400$ rpm. The average seek time is $10$ msec. A block size is chosen as $1024$ bytes.\n\nA file containing $100,000$ records of $100$ bytes each is to be stored on this disk, and no record is allowed to span two blocks. Then, the rotational latency of the disk is ________ seconds.', 'type': 'Numerical', 'answer': '0.0050 : 0.0560', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk,operating-system', 'category': 'GATE'}]
+      let data={'name': 'Test by Bikram | Mock GATE | Test 1', 'duration': '180', 'total_qs': '65', 'total_qs_one': 30, 'total_qs_two': 35, 'apti_num_qs': 10, 'technical_num_qs': 55, 'apti_marks': 15, 'technical_marks': 85, 'total_marks': 100, 'num_options': '4', 'section': [{'name': 'Aptitude', 'num_qs': 10, 'marks': 15, 'question': [{'contents': '', 'post_id': '106226', 'text': '<p>Without stops, a train&nbsp;travels an average of $50$ $km$ an hour. With stops, it travels $40$ $km$ an hour. For how many minutes, on average, does the train stop in an hour?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1/10$</li>\n\t<li>$12$</li>\n\t<li>$1/5$</li>\n\t<li>$20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,speed-time-distance,quantitative-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106227', 'text': '<p>Each statement has three segments. Choose the alternative where the third segment in the statement can be logically deduced from BOTH the preceding segments.&nbsp;</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>&nbsp;Only married couples dance together in this club; Pinto danced with Rita; Rita is Pinto\'s wife.</li>\n\t<li>&nbsp;Perry is a nice girl; Anusha is a nice girl too; Perry likes Anusha.</li>\n\t<li>&nbsp;Keto dresses formally; all who dress formally wear ties; Keto wears ties.</li>\n\t<li>&nbsp;All who possess guns are soldiers; Shyam possesses a gun; Shyam is not a soldier.</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Only b&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>Only c</li>\n\t<li>a and d</li>\n\t<li>a and c</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,logical-reasoning,analytical-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106228', 'text': '<p>While nurturing parents can compensate for adversity, cold or inconsistent parents may ____________ &nbsp;it.</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Exacerbate</li>\n\t<li>Neutralize</li>\n\t<li>Eradicate</li>\n\t<li>Ameliorate</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,most-appropriate-word,verbal-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106229', 'text': '<p>The question consists of <strong>five</strong> statements followed by options consisting of <strong>three </strong>statements put together in a specific order.</p>\n\n<p>Choose the option which indicates a valid argument. That is, where the third statement is a conclusion drawn from the preceding two statements.</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>&nbsp;Grapes are not sour.</li>\n\t<li>&nbsp;Some grapes are sour.</li>\n\t<li>&nbsp;All sour things are tasteless.</li>\n\t<li>&nbsp;Some grapes are not tasteless.</li>\n\t<li>&nbsp;No grape is tasteless.</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$CEA$</li>\n\t<li>$BDC$</li>\n\t<li>$CBD$</li>\n\t<li>$EAC$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,statements-follow,verbal-aptitude,verbal-reasoning', 'category': 'GATE'}, {'contents': '', 'post_id': '106230', 'text': '<p><strong>Read the following passage carefully, and answer the question that follows:</strong><br>\nPeople who oppose the law that makes it mandatory for two wheeler riders to wear helmets argue that in a democracy, people have the right to take risks as long as they don\'t harm others as a result of taking risks. They say that it should be each person\'s decision whether or not to wear a helmet.<br>\n<br>\nWhich of the following, if true, <strong>most weakens the argument </strong>above?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Many new bikes that are available now are skid-resistant.</li>\n\t<li>Insurance rates are higher because of the need to pay for the injuries or death of people&nbsp;not wearing helmets.</li>\n\t<li>The rate of accidents in states with mandatory helmet laws is lower than in states with no&nbsp;laws.</li>\n\t<li>A great number of people die in road accidents even otherwise.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,passage-reading,verbal-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106231', 'text': '<p>The simplest animals are those whose bodies are simplest in structure and which do the things done by all living animals, such as eating, breathing, moving, and feeling, in the most ________ way.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Haphazard</li>\n\t<li>Bizarre</li>\n\t<li>Primitive</li>\n\t<li>Advantageous</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,most-appropriate-word,verbal-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106232', 'text': 'Consider the set of numbers $N= 1,2,3,4,5,6,7,8$. Take every distinct two-element subset of $N$ and write down the number that is smaller. For eg, if you take the subset$\\left ( 2,5 \\right )$, you will write down $2$.\n\nThe sum of all the numbers that you write down is ___________.', 'type': 'Numerical', 'answer': '84', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,quantitative-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106233', 'text': '<p>Identify the pair of words which has&nbsp;a relationship similar to “Wheat : Chaff”</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Wine: Dregs</li>\n\t<li>Crop: Corn</li>\n\t<li>Laughter: Revelry</li>\n\t<li>Cloud: Rain</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,word-pairs,verbal-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106234', 'text': '<p>A contractor receives a certain sum that he uses to pay&nbsp;wages. His capital, together with the weekly subsidy, would eactly enable him to pay $42$ men for $52$ weeks. If he had $60$ men at the same weekly<em><strong>&nbsp;</strong></em>wages, his capital together with the weekly subsidy would exactly suffice for $13$ weeks. The number of men who can be maintained for $26$ weeks is ________.</p>', 'type': 'Numerical', 'answer': '48', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,work-time,quantitative-aptitude', 'category': 'GATE'}, {'contents': '', 'post_id': '106235', 'text': '<p>Each statement has three segments. Choose the alternative where the third segment in the statement can be logically deduced using BOTH the preceding segments.</p>\n\n<ol start="1" style="list-style-type:decimal">\n\t<li>&nbsp;All physicists are biologists; some biologists are botanists; no botanist is a physicist.</li>\n\t<li>&nbsp;Some cats are dogs;&nbsp;all dogs are rats. All cats are rats.</li>\n\t<li>&nbsp;Carrot is red; radish is red; no vegetable is green.</li>\n\t<li>&nbsp;Sanjay has an MBA;&nbsp;no MBAs have doctorates; Sanjay doesn\'t have a doctorate.</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Only $3$</li>\n\t<li>$2$ and $4$</li>\n\t<li>Only $4$</li>\n\t<li>$1$ and $3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,verbal-reasoning,verbal-aptitude', 'category': 'GATE'}]}, {'name': 'Technical', 'num_qs': 55, 'marks': 85, 'question': [{'contents': '', 'post_id': '106151', 'text': '<p>There are "m" red balls and "n" green balls in a bucket. p balls are drawn from the urn and if found that all of them are green then what is the probability that another ball drawn from those remaining will also be green? Assume p &lt; n</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>p-n/m+n</li>\n\t<li>n-p/m+n-p</li>\n\t<li>p-m/m+n</li>\n\t<li>m-p/m+n-p</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,combinatory,engineering-mathematics,probability,conditional-probability', 'category': 'GATE'}, {'contents': '', 'post_id': '106152', 'text': '<p>Find the output of the following program :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nmain ()\n{\nint a, b;\nint v=3;\nint *pv;\na = 2 * (v+5);\npv = &amp;v;\nb = 2*(*pv + 5);\nprintf("\\n a=%d b=%d " , a,b);\n}</pre>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$a = 16$ , $b = 16$</li>\n\t<li>$a = 16$ , $b = 32$</li>\n\t<li>$a = 16$ , $b = 8$</li>\n\t<li>$a = 16$ , $b = 64$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,programming-in-c,programming,pointers', 'category': 'GATE'}, {'contents': '', 'post_id': '106154', 'text': '<p>Consider the Hasse diagram $D_1$ and $D_2$ as follows:</p>\n\n<ul>\n\t<li>$D_1:$ The Hasse diagram for the partial ordering $\\left \\{ \\langle a, b \\rangle \\mid a \\mod \\: b=0 \\right \\}$&nbsp;on the set of positive divisors of $24 \\}$</li>\n\t<li>$D_2:$ The Hasse diagram for the partial ordering $\\left \\{\\langle a, b\\rangle&nbsp;\\mid a \\mod \\: b=0 \\right \\}$&nbsp;on the set of positive&nbsp;divisors of $81 \\}$</li>\n</ul>\n\n<p>Then which among $D_1$ and $D_2$ is/are a total ordering?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>Only&nbsp;$D_1$</li>\n\t<li>Only&nbsp;$D_2$</li>\n\t<li>Both&nbsp;$D_1$ &amp; $D_2$</li>\n\t<li>None&nbsp;$D_1$ &amp; $D_2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,partial-order,set-theory&algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106156', 'text': '<p>Which of the following statements is $TRUE$ about $CSMA/CD$:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$IEEE$ $802.11$ wireless $LAN$ runs $CSMA/CD$ protocol</li>\n\t<li>Ethernet is not based on $CSMA/CD$ protocol</li>\n\t<li>$CSMA/CD$ is not suitable for a high propagation</li>\n\t<li>There is no contention in a $CSMA/CD$ network</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,wifi,computer-networks', 'category': 'GATE'}, {'contents': '', 'post_id': '106157', 'text': '<p>Which of the following statements is $FALSE$ regarding a bridge:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Bridge is a layer $2$ device</li>\n\t<li>Bridge reduces collision domain</li>\n\t<li>Bridge is used to connect two or more $LAN$ segments</li>\n\t<li>Bridge reduces broadcast domain</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,network-layer,computer-networks,routers-bridge-hubs-switches', 'category': 'GATE'}, {'contents': '', 'post_id': '106158', 'text': '<p>What is the output of the following program?<br>\nmain( )<br>\n{<br>\nint i=4, z=12;<br>\nif( i=5 || z &gt; 50)<br>\nprintf(“ Gate2017”);<br>\nelse<br>\nprintf(“ Gateoverflow”);<br>\n}</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Gate2017</li>\n\t<li>Gateoverflow</li>\n\t<li>syntax error</li>\n\t<li>Gate2017Gateoverflow</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,programming,programming-in-c', 'category': 'GATE'}, {'contents': '', 'post_id': '106160', 'text': '<p>A shift reduced parser carries out the actions specified within braces Immediately after reducing with the corresponding rule of grammar.</p>\n\n<pre class="prettyprint lang-c_cpp">\nS --&gt;  xxW (print \'a\')\nS --&gt; Y        (print\'b\')\nW --&gt; Sz    (print \'c\')</pre>\n\n<p>What is the translation of $xxxxyzz$ using the syntax directed translation scheme described by the above rules.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>bcaca</li>\n\t<li>aabcc &nbsp;&nbsp;</li>\n\t<li>aabca &nbsp;&nbsp;&nbsp;</li>\n\t<li>ccbaa</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,compiler-design,parsing,syntax-directed-translation', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '106162', 'text': '<p>Consider the schedule given below. $T_1$ and $T_2$ are two transactions operating on two resources $x$ and $y.$$$\\begin{array}{|c|c|c|} \\hline \\bf{T_1} &amp; \\bf{T_2} \\\\ \\hline \\text{read_lock} \\left ( y \\right ); \\\\&nbsp;<br>\n\\text{read_item} \\left ( y \\right ); \\\\\\hline &amp;&nbsp;\\text{read_lock} \\left ( x&nbsp;\\right ); \\\\ &amp;<br>\n&nbsp; &nbsp; \\text{read_item} \\left ( x&nbsp;\\right );&nbsp; \\\\ \\hline \\text{write_lock}\\left (x\\right); &amp; \\\\ \\hline &amp;&nbsp;\\text{write_lock}\\left (y\\right);&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<p>The given schedule is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A serializable schedule</li>\n\t<li>A non-serializable schedule &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>A&nbsp;dead lock situation</li>\n\t<li>Both non-serializable and deadlock schedule</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,transaction-and-concurrency,databases', 'category': 'Databases'}, {'contents': '', 'post_id': '106164', 'text': '<p>Consider the following program fragment :</p>\n\n<pre class="prettyprint lang-c_cpp">\nint foo(int ,int );\nint a;\nint ar[4] = { 1,0, 2,3};\nmain()\n{\na = 0;\nfoo(ar[a], ar[ar[a]]);\nprintf("%d,%d ,%d,%d ", ar[0] , ar[1] ,ar[2] , ar[3]);\n}\n\n\nfoo(int x, int y)\n{\nx= x+1;\ny=y+1;\nx=x+1;\ny=y+1;\nar[1] =50;\n}</pre>\n\n<p>What value will be printed by the program if parameter passed by call by name?</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$1, 50, 2, 3$</li>\n\t<li>$3, 50, 2, 3$</li>\n\t<li>$3, 50, 3, 4$</li>\n\t<li>$3, 2, 2, 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,parameter-passing,runtime-environment,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106165', 'text': '<p>Consider the following floating point format :</p>\n\n<p><br>\n&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp; &nbsp; &nbsp; $&lt;--8--&gt; &nbsp;&nbsp;&nbsp;&lt;--23--&gt;$<br>\n&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp; &nbsp; $| $&nbsp; &nbsp; &nbsp;$E$&nbsp; &nbsp; $|$&nbsp; &nbsp; &nbsp;$M$&nbsp; &nbsp; &nbsp;$|$</p>\n\n<ul>\n\t<li>S:&nbsp; Sign bit</li>\n\t<li>E:&nbsp; Exponent</li>\n\t<li>M:&nbsp;Mantissa</li>\n</ul>\n\n<p>The value of floating point number in this system is,</p>\n\n<p>$V=$ $-I^{s}$x $2^{E-127}$&nbsp;x $1.F$</p>\n\n<p>Then what is the corresponding decimal value if the floating point stored is: $3F800000$</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>0</li>\n\t<li>1</li>\n\t<li>-1</li>\n\t<li>2</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,floating-point-representation,number-representation,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106167', 'text': '<p>Consider following recursive functions:</p>\n\n<pre class="prettyprint lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfunction fib(n : integer); integer\nbegin\nif (n = 0) or (n = 1) then fib = 1\nelse\nfib = fib(n-l) + fib(n-2)\nend</pre>\n\n<p>The above function is run on a computer with a stack of $x$ bytes. Assume that only return address &amp; parameter are passed on the stack and an integer value &amp; return value take $2$ $bytes$ each. If we can execute this function for maximum value $n = 10$ without overflowing the stack. Then the size of the stack is ______ $Bytes$.</p>', 'type': 'Numerical', 'answer': '40', 'award': 1, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,runtime-environment,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106168', 'text': '<p>Which of the following should be allowed <strong>only </strong>in Kernel mode?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>&nbsp;Changing mapping from virtual to physical address</li>\n\t<li>&nbsp;Mask and unmask interrupts</li>\n\t<li>&nbsp;Disabling all interrupts</li>\n\t<li>&nbsp;Reading&nbsp;processor status register&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp;Receive a packet of data from the network &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp;Cause a trap</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$(i)$, $(ii)$ , $(iii)$ and&nbsp; $(v)$</li>\n\t<li>$(i)$, $(ii)$ , $(iv)$ and $(vi)$</li>\n\t<li>$(ii)$,$(iv)$ and $(vi)$</li>\n\t<li>$(i)$, $(ii)$, $(iii)$, $(iv)$, $(v)$ and $(vi)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-and-threads,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106169', 'text': '<p><strong>Match the following:</strong></p>\n\n<table border="2" cellpadding="1" style="width:400px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan="2" rowspan="1"><strong>List I</strong></td>\n\t\t\t<td colspan="2" rowspan="1"><strong>List II</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>A</td>\n\t\t\t<td>Backus Naur form&nbsp; &nbsp;</td>\n\t\t\t<td>1</td>\n\t\t\t<td>Regular expression</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B</td>\n\t\t\t<td>Lex</td>\n\t\t\t<td>2</td>\n\t\t\t<td>$\\left ( I \\right )$$LALR$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C</td>\n\t\t\t<td>Yacc</td>\n\t\t\t<td>3</td>\n\t\t\t<td>$LL$$\\left ( 1 \\right )$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D</td>\n\t\t\t<td>Recursive descent parsing&nbsp;</td>\n\t\t\t<td>4</td>\n\t\t\t<td>$CFG\'s$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;$$\\begin{array}{|c|c|c|} \\hline &amp; \\textbf{List I} &amp;&nbsp; &amp;\\textbf{List II} \\\\ \\hline A &amp; \\text{Backus Naur form} &amp; 1 &amp; \\text{Regular expression}&nbsp;\\\\ \\hline B&nbsp;&amp; \\text{Lex} &amp; 2&nbsp;&amp; (I) LALR \\\\ \\hline C&nbsp;&amp; \\text{Yacc} &amp; 3&nbsp;&amp; LL(1)&nbsp;\\\\ \\hline D&nbsp;&amp; \\text{Recursive descent parsing&nbsp;} &amp; 4&nbsp;&amp; \\text{CFG’s}&nbsp;&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$A-2;&nbsp;\\: B-1;&nbsp;\\: C-3; \\:&nbsp;D-4;$</li>\n\t<li>$A-4 ; \\: B-3 \\: ; C-&nbsp;1 \\: ; D-2;$</li>\n\t<li>$A-4; \\: B-1 \\: ; C-2; \\: D-3;$</li>\n\t<li>$A-1; \\: B-4; \\:C-2; \\: D-3;$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106170', 'text': '<p>Match the following $List&nbsp;I$ with $List II$ :</p>\n\n<ol>\n\t<li>$W(x)$: $x$ is a worker</li>\n\t<li>$A(x)$: $x$ likes Anand</li>\n</ol>\n\n<ul>\n\t<li><strong>List -I</strong></li>\n</ul>\n\n<p>a.&nbsp; No worker like Anand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\n<p>b. Some worker like Anand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n\n<p>c.&nbsp; If someone s a worker, he likes Anand &nbsp;&nbsp;&nbsp;</p>\n\n<ul>\n\t<li><strong>List II</strong></li>\n</ul>\n\n<p>&nbsp;p.&nbsp; $\\sim$$\\forall x$[ $W(x)$ $\\rightarrow$ $\\sim$$A(x) ]$&nbsp; &nbsp; here $\\sim$&nbsp;represent NOT</p>\n\n<p>&nbsp;q.&nbsp; &nbsp;$\\sim$∃$x$$[$ $W(X)$&nbsp; $\\wedge \\sim$&nbsp;$A(x) ]$</p>\n\n<p>&nbsp;r.&nbsp; &nbsp; $\\sim$∃$x$$[$ $W(X)$&nbsp; $\\wedge&nbsp;A(x)$&nbsp;$]$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$a-r, b-q, c-p$</li>\n\t<li>$a-p, b-q, c-r$&nbsp; &nbsp;</li>\n\t<li>$a-r, b-p, c-q$</li>\n\t<li>$a-q, b-p, c-r$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,discrete-mathematics,mathematical-logic,first-order-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106171', 'text': '<p>Let $R1, R2, R3$ be reader processes and let&nbsp; $W1$ and $W2$ be writer processes requesting shared data. If $R1$ is selected for access. Which of the statement is/are correct?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>&nbsp;Mutual exclusion is necessary for $R2$ and $R3$</li>\n\t<li>&nbsp;No mutual exclusion is necessary for $R2$ and $R3$</li>\n\t<li>&nbsp;Mutual exclusion must be there for $W1$ and $W2$</li>\n\t<li>&nbsp;No mutual exclusion must be there for $W1$ and $W2$</li>\n</ol>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$(i)$ and $(iii)$ only</li>\n\t<li>$(ii)$ and $(iii)$ only</li>\n\t<li>$(iv)$ and $(iii)$ only</li>\n\t<li>$(i)$ and $(iv)$ only</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-synchronization,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106172', 'text': '<p>Hash a list of $3$ keys into hash table with $20$ locations. What will be the probability of the event $A$ in which hashing the three keys causes a collision?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$0.123$</li>\n\t<li>$0.145$</li>\n\t<li>$0.800$</li>\n\t<li>$0.750$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,data-structures,hashing,algorithms', 'category': 'GATE'}, {'contents': '', 'post_id': '106174', 'text': '<p>Suppose there are five processes in the ready queue as shown below:</p>\n\n<p>$$\\begin{array}{|c|c|c|} \\hline i &amp; T(Pi) &amp; \\text{Priority}&nbsp; \\\\ \\hline 0 &amp; 350 &amp; 5 \\\\ \\hline 1 &amp; 125 &amp; 2 \\\\ \\hline 2 &amp; 475 &amp; 3 \\\\ \\hline 3 &amp; 250 &amp; 1 \\\\ \\hline 4 &amp; 75 &amp; 4&nbsp;\\\\ \\hline\\end{array}$$</p>\n\n<p>If FCFS, SJF&nbsp;and priority scheduling algorithms are used, for which algorithm is the average waiting time the minimum? Assume lower integer indicates higher priority and all the processes arrive&nbsp;at time zero.</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>FCFS</li>\n\t<li>Priority scheduling</li>\n\t<li>SJF</li>\n\t<li>both&nbsp;FCFS and&nbsp;SJF</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,process-scheduling,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106176', 'text': '<p>Which of the following is not a Boolean algebra under the operation \'\\\'?<br>\n&nbsp;&nbsp;\\: is a divisor, &nbsp;$D_{p}$: divisor of $p$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\left \\{ D18; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D21; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D110; \\ \\right \\}$</li>\n\t<li>$\\left \\{ D91; \\ \\right \\}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,boolean-algebra,discrete-mathematics,lattice', 'category': 'Set Theory & Algebra'}, {'contents': '', 'post_id': '106177', 'text': '<p>Consider the following $SQ$L query:</p>\n\n<pre class="prettyprint lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nWith max_balance(value) as Select max(balance) from account;</pre>\n\n<p>The result of executing the above query is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$A$ temporary table is created with the name $max$_$balance$</li>\n\t<li>$A$ temporary view is created with the name $max$_$balance$</li>\n\t<li>$A$ permanent view is created with the name $max$_$balance$</li>\n\t<li>$A$ permanent table is created with the name $max$_$balance$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,sql,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106179', 'text': '<p>In a $32$ bit machine to execute an instruction the following steps are carried out: Fetch, Decode, Execute and Store, each of which takes one clock period. In a pipelined execution of a four-step task a new instruction is read and it\'s execution begins with each new clock period. If each clock period is of $20$ $nanosecond$ and there are $100$ instructions in sequence then what is the speedup ratio of pipeline processing system over an equivalent non-pipeline processing system?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$3.88$</li>\n\t<li>$1.88$</li>\n\t<li>$3.68$</li>\n\t<li>$2.723$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106181', 'text': '<p>Consider the languages given below.</p>\n\n<ol style="list-style-type:decimal">\n\t<li>$L1 =$ {$a$^$n$ $b$^$m$ $c$^$m$ $d$^$n$ $|n &gt;= 1$ and $m &gt;= 1$}</li>\n\t<li>$L2 =$ {$a$^$n$ $b$^$n$ $|n &gt;= 1$}</li>\n\t<li>$L3 =$&nbsp;{$a$^$n$ $b$^$n$ $c$^$n$ $|n&gt;=0$ }</li>\n</ol>\n\n<p>Find the correct statement from the following:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>&nbsp;&nbsp;$L1, L2$ and $L3$&nbsp; are context Free languages</li>\n\t<li>&nbsp;&nbsp;$L1, L2$ are but not $L3$, are context free Languages</li>\n\t<li>&nbsp;&nbsp;$L2, L3$ are context free but not $L1$</li>\n\t<li>&nbsp;&nbsp;Only&nbsp;$L2$&nbsp; is context free</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,identify-class-language,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106183', 'text': '<p>For the &nbsp;Boolean equation &nbsp;$AB +$ $\\sim AC$$= 1$, &nbsp;$AC +B = &nbsp;0$, &nbsp;the value of &nbsp;$A$, $B$ and $C$ will be:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$0$, $0$,$1$</li>\n\t<li>$1$,$1$,$0$</li>\n\t<li>$0$,$1$,$0$</li>\n\t<li>$1$,$0$,$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,boolean-algebra,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106184', 'text': '<p>Consider the relational &nbsp;schema S= {A,B,C,D} and the following functional dependencies on S:</p>\n\n<p>$A$$\\rightarrow BCD$<br>\n$B$$\\rightarrow C$<br>\n$CD$$\\rightarrow A$</p>\n\n<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$S$ is in $3NF$ and also in $BCNF$</li>\n\t<li>$S$ is in $2NF$ not in $3NF$</li>\n\t<li>$S$ is in $3NF$ but not in $BCNF$</li>\n\t<li>$S$ is in $BCNF$ but not in $4NF$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,database-normalization,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106186', 'text': 'The internet host is roughly doubling in size every $18$ $months$. Although no one really knows for sure, one estimate put the number of hosts on it at $7$ million in January $1996$. Using these data the expected number of internet hosts in January $2008$ is _____ billion.', 'type': 'Numerical', 'answer': '1.79 : 1.792', 'award': 1, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,statistics,quantitative-aptitude,asymptotic-notation', 'category': 'Probability'}, {'contents': '', 'post_id': '106187', 'text': '<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>&nbsp;&nbsp; Blind writes appear in any view serializable schedule that is not conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear in some view serializable schedule that is also conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear in all view seriallzable schedules that are&nbsp;also conflict serializable.</li>\n\t<li>&nbsp; &nbsp;Blind writes appear&nbsp;only in conflict serializable schedule that is not view serializable.</li>\n</ol>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>II and III</li>\n\t<li>II and IV</li>\n\t<li>I only</li>\n\t<li>I and II</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'tbb-mockgate-1,conflict-serializable,transaction-and-concurrency,serializability,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106188', 'text': 'Suppose we have a block-addressable disk drive. With such block organized disk non data overhead of subblocks and, interblock gaps have to be accounted for.\n\nThere are $40,000$ bytes per track and the amount of space taken up by subblocks and interblock gaps is equivalent to  $250$ $Bytes$ per block. A file contains records and record size is $200$ $Bytes$ to be stored on the disk. If a total of $32$ blocks can be stored per track then the blocking factor is ________\n\nThe term "blocking factor" is used to indicate the number of records that are to the stored in each block in a file. A block is organized to hold an integral number of logical records.', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106190', 'text': '<p>Consider the following algorithm:</p>\n\n<pre class="prettyprint lang-c_cpp">\n\nORDER (T)\nbegin\nif (T!=NULL) then\nbegin\nORDER (LPTR(T))\nPRINT (DATA(T))\nORDER (RPTR(T))\nend\nreturn\nend\n\nwhere LPTR: left pointer\nRPTR: right pointer\nT: given tree\n</pre>\n\n<p><br>\nThis above algorithm is used to:</p>\n\n\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>&nbsp; Traverse the tree in preorder in a recursive manner</li>\n\t<li>&nbsp; Traverse the tree in in-order, in a recursive manner</li>\n\t<li>&nbsp; Traverse the tree in post-order in a recursive manner</li>\n\t<li>&nbsp; &nbsp;Do not Traverse the tree at all</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,data-structures,tree', 'category': 'GATE'}, {'contents': '', 'post_id': '106191', 'text': '<p>Find True&nbsp;$\\left ( T \\right )$ or False $\\left ( F \\right )$of the following statements :</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>If $A$ is recursive then complement of $A$ is also recursive</li>\n\t<li>If $A$ and $B$ are recursive sets then $A$ intersection $B$ is not always is recursive set.</li>\n\t<li>Every recursive set is recursive enumerable and vice-versa</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; &nbsp; &nbsp;$TTT$&nbsp;</li>\n\t<li>&nbsp; &nbsp; &nbsp;$TFT$&nbsp; &nbsp;</li>\n\t<li>&nbsp;&nbsp;&nbsp;&nbsp; $TFF$&nbsp;</li>\n\t<li>&nbsp;&nbsp;&nbsp;&nbsp; $FFT$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,recursive-and-recursively-enumerable-languages,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106192', 'text': '<p>Let $R$ be a binary relation on the set of all positive integers such that $R&nbsp;= \\{ (a, b)&nbsp;\\mid a - b&nbsp;\\text{ is an odd positive integer}&nbsp;\\}$</p>\n\n<p>$R$ is :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>an anti-symmetric relation &nbsp;&nbsp;&nbsp;</li>\n\t<li>a reflexive and symmetric relation &nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>an equivalence relation &nbsp;</li>\n\t<li>a partial ordering relation</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,relations,set-theory&algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106194', 'text': '<p>A computer has a cache, main memory, and a disk used for virtual memory. If a referenced word is in the cache, $10$ $ns$ are required to access it. If it is main memory but not in the cache, total $200$ $ns$ are needed to load it into cache, and then the reference is started again.</p>\n\n<p>If the word is not in main memory, total $500$ $ms$ are required to fetch the word from the disk, followed by $200$ $ns$ to copy it to the cache and then the reference is started again.</p>\n\n<p>The cache hit ratio is $99%$, and the main memory hit ratio is $90%$. What is the average time in ns to access a referenced word on this system?</p>\n\n<p>Ignore the time it takes to determine whether or not a reference may be found in cache or main memory.The hit ratio is the percent of the time a reference is found in the given level of the memory hierarchy.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$732000$ $ns$</li>\n\t<li>$485750$ $ns$</li>\n\t<li>$500012$ $ns$</li>\n\t<li>$23009$ $ns$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,cache-memory,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106195', 'text': '<p>The value of following Boolean expression:</p>\n\n<p>$a\\left ( a+b+c \\right )$$\\left ( \\overline a+b+\\overline c \\right )$$\\left ( a+b+\\overline c \\right )$$\\left ( \\overline a+\\overline bc\\right )$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$a(a+b)$</li>\n\t<li>$\\overline a$</li>\n\t<li>$( \\overline a+b)$</li>\n\t<li>$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,boolean-algebra,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106197', 'text': '<p>Fill in the blanks in the procedure:</p>\n\n<pre class="prettyprint lang-c_cpp">\nvoid\nProd (Element Type X, Priority Queue H)\n{\nint i;\nif (IsFull(H))\n{\nError ("Priority queue is full");\nreturn;\n}\nfor (i=++H -&gt; size; H -&gt; Elements [i/2]&gt;X; i/=2)\n_________________\n}\n</pre>\n\n<p><br>\nFind the statement which has to be placed below the for loop for inserting a key.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$H$$\\rightarrow$ Elements $[i]=H$ $\\rightarrow$ Elements [i/2];&nbsp; &nbsp; &nbsp; &nbsp;$H$ $\\rightarrow$Elements $[i] = X$;</li>\n\t<li>$H$$\\rightarrow$ Elements $[i/2]=H$$\\rightarrow$ Elements $[i/2]$;</li>\n\t<li>$H$$\\rightarrow$ Elements $[i^2 ]=X;$</li>\n\t<li>$H$$\\rightarrow$ Elements $[i]=X;$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,data-structures,priority-queue', 'category': 'GATE'}, {'contents': '', 'post_id': '106198', 'text': '<p>Let $f\\left ( n \\right )$m &nbsp;$g\\left ( n \\right )$ and $h\\left ( n \\right )$ be&nbsp;functions whose domain is a subset of positive integers such that $f\\left ( n \\right )= O\\left (n^{2}\\right), g\\left ( n \\right )= O\\left(n^{3}\\right), h\\left ( n \\right )= O\\left(n^{4}\\right).$ Then:</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$f \\left ( n \\right ) +g \\left ( n \\right )= O \\left(n^{3}\\right)$ &nbsp;&nbsp;</li>\n\t<li>$h \\left ( n \\right ) -g \\left ( n \\right )=O \\left ( n \\right )$ &nbsp;&nbsp;&nbsp;</li>\n\t<li>$f \\left ( n \\right ).g \\left ( n \\right )=O\\left( n^{4}\\right)$ &nbsp;&nbsp;</li>\n\t<li>$h \\left ( n \\right ) .g \\left ( n \\right ) =O\\left(n^{7}\\right)$</li>\n</ol>\n\n<p>Which of the above is/are incorrect?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$(d)$ $only$</li>\n\t<li>$(c)$ $only$</li>\n\t<li>$(b)$ $and$ $(d)$ $only$</li>\n\t<li>$(b)$ $and$ $(c)$ $only$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,asymptotic-notation,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '106200', 'text': '<p>Consider the following grammar for Boolean expression:</p>\n\n<p>$E$ $\\rightarrow$&nbsp;$E$ OR&nbsp;$E$<br>\n$E$ $\\rightarrow$ $E$ AND$E$<br>\n$E$ $\\rightarrow$ NOT $E$<br>\n$E$ $\\rightarrow$&nbsp;$\\left ( E \\right )$<br>\n$E$ $\\rightarrow$ TRUE<br>\n$E$$\\rightarrow$&nbsp; FALSE<br>\n$E$ $\\rightarrow$&nbsp;$ID$<br>\n<br>\nThe above grammar is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Ambiguous</li>\n\t<li>Non-ambiguous</li>\n\t<li>$LL$ $\\left ( 1 \\right )$</li>\n\t<li>Both$\\left ( A \\right )$&nbsp;and $\\left ( C \\right )$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,ambiguous,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106201', 'text': '<p>What will be the resulting grammar after removal of left-recursion from the following grammar?</p>\n\n<p>$E$ $\\rightarrow$&nbsp; $Ea $|$ Eb $|$ a $|$ b$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$E$$\\rightarrow$ $aE\'$|$ bE\'$ ;&nbsp; &nbsp;$E$\'$\\rightarrow$ $aE\'$ $|$ $bE\'$ |&nbsp;$\\epsilon$</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$ bE\'$;&nbsp; $E$\'$\\rightarrow$$aE$ $|$ $bE$ $|$ $\\epsilon$&nbsp;&nbsp;&nbsp;</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$ bE\'$ $|$$\\epsilon$ ;&nbsp; $E\'$ $\\rightarrow$&nbsp;$aE\'$ $|$ $bE\'$ |$\\epsilon$</li>\n\t<li>$E$$\\rightarrow$ $aE\' $|$&nbsp; bE\'$;&nbsp; $E\'$ $\\rightarrow$ $a$ | $b$ $|$ $\\epsilon$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106202', 'text': 'A pipeline system is affected by branch instruction. The penalty for the branch instruction is $3$ stall cycle, if $33\\%$ of instruction is branch instruction and pipeline is operated with a clock of $10$ $ns$ and providing the speed up factor $8$, then the number of stage in pipeline is _______', 'type': 'Numerical', 'answer': '15.5 : 16', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106203', 'text': '<p>A pulse train with a frequency of $1$ $MHz$ is counted using a modulo $1024$ ripple counter built with $J-K$ flip flops. For proper operation of the counter, the maximum permissible propagation delay per flip flop stage is:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$10 \\: nsec$</li>\n\t<li>$100 \\: nsec$</li>\n\t<li>$1000 \\: nsec$</li>\n\t<li>$100 \\: microsec$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,ripple-counter-operation,digital-counter,digital-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106204', 'text': '<p>A radix sort is to be used to sort the file of non-negative integers shown below into ascending order. What would the order of the numbers be after one pass of the algorithm?<br>\n$12$ $37$ $42$ $9$ $5$ $7$ $50$ $40$ $45$ $92$<br>\n&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; $12$&nbsp; $37$&nbsp; $42$&nbsp; $40$&nbsp; $45$&nbsp; $5$&nbsp; $50$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; $92$&nbsp; &nbsp; &nbsp;&nbsp;</li>\n\t<li>&nbsp; $50$&nbsp; $40$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; $37$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp; $40$&nbsp; $50$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; $37$&nbsp; &nbsp; $7$&nbsp; &nbsp; $9$&nbsp; &nbsp; &nbsp;</li>\n\t<li>&nbsp; $40$&nbsp; $50$&nbsp; $12$&nbsp; $42$&nbsp; $92$&nbsp; $5$&nbsp; $45$&nbsp; &nbsp; $7$&nbsp; $37$&nbsp; &nbsp; $9$</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,sorting,radix-sort,algorithms', 'category': 'GATE'}, {'contents': '', 'post_id': '106205', 'text': '<p>Consider the following matrix:<br>\n<br>\n$\\left [ A \\right ]=$ $\\begin{bmatrix} 1.5&amp;0 &amp;1 \\\\ -0.5 &amp; 0.5&amp; -0.5\\\\ -0.5&amp; 0 &amp; 0 \\end{bmatrix}$</p>\n\n<p>The eigen values of the above matrix are:</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>$-0.5, &nbsp;0.5, 1.5$</li>\n\t<li>$0.5, 0.5, 1$</li>\n\t<li>$1.75, -1, 0.5$</li>\n\t<li>$-0.5, &nbsp;0.5, -1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,matrix,eigen-value,linear-algebra', 'category': 'GATE'}, {'contents': '', 'post_id': '106206', 'text': 'The head of a moving head disk with $100$ tracks numbered $0$ to $99$ is serving a request at track $x$. if the requests of track $25, 76, 43, 10, 67$ are served using $FIFO$ algorithm, then total head movements are $194$. The track $x$ initially served was at ________.', 'type': 'Numerical', 'answer': '5 : 45', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk-scheduling,operating-system', 'category': 'GATE'}, {'contents': '', 'post_id': '106207', 'text': 'A file has $2^{29}$ records each of size 8B. One block of main memory is $128B$.  Sparse indexing is done with one index record per memory block and one index record is of $1$ $Byte$. The blocks stored by the index records are stored in disk. Blocks occupied by index are searched using binary search technique. Maximum number of blocks need to be read is _____.', 'type': 'Numerical', 'answer': '19', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,indexing,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106209', 'text': '<p>Find the missing statement in the if loop of $Floyd$ algorithm.</p>\n\n<pre class="prettyprint lang-c_cpp">\nProcedure Floyd: (var A: array[1...n,1...n] of real; C: array [1...n,1...n] of real);\nVar\ni, j, k: integer;\nbegin M\n&nbsp;for i:=l to n do\n&nbsp;for j:=l to n do\n&nbsp;&nbsp;A[i,j]: =C[i,j]\n\nfor i:=l to n do\nA[i,j ]:=0 ;\nfor k:= l to n do\nfor i:=l to n do\nfor j:= l to n do\n\nif A[i,j] &gt; A[i,k]+A[k,j] then\n\n____________________\nend ;</pre>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[i,k] + A[k,j]$&nbsp;&nbsp;&nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[i, j] + A[k,j]$&nbsp; &nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: = A[j,k]+ A[j,i]$&nbsp;</li>\n\t<li>&nbsp;&nbsp; $A[i,j]: =A[i,k] + A[i,j]$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,algorithms,graph-algorithms,shortest-path', 'category': 'GATE'}, {'contents': '', 'post_id': '106210', 'text': '<p>What is the output of the following code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main ( )\n{\nint x = 2, y = 5;\nif (x &lt; y)\n   return (x = x+y);\nelse\n   printf (“ GO Mock 1 &nbsp;”);\n   printf(“ Welcome to GO Mock test ”);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>GO Mock 1</li>\n\t<li>Welcome to GO Mock Test</li>\n\t<li>No output</li>\n\t<li>GO Mock 1Welcome to GO Mock Test</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,programming,programming-in-c', 'category': 'GATE'}, {'contents': '', 'post_id': '106212', 'text': '<p>Match the pairs about implementation and addressing modes:</p>\n\n<table border="2" cellpadding="1" style="height:50px; width:400px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td colspan="2" rowspan="1"><strong>Group A &nbsp;&nbsp;</strong></td>\n\t\t\t<td colspan="2" rowspan="1"><strong>Group B</strong></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<p>&nbsp;A.</p>\n\t\t\t</td>\n\t\t\t<td>Array</td>\n\t\t\t<td>I</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Indirect&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Relocatable code</p>\n\t\t\t</td>\n\t\t\t<td>II</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Indexed&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C</td>\n\t\t\t<td>\n\t\t\t<p>&nbsp;Array as parameter</p>\n\t\t\t</td>\n\t\t\t<td>III</td>\n\t\t\t<td>\n\t\t\t<p>Base Register&nbsp;Addressing</p>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;$$\\begin{array}{|c|c|c|} \\hline &amp; \\textbf{Group A} &amp;&nbsp; &nbsp;&amp; \\textbf{Group B}&nbsp; \\\\ \\hline A &amp; \\text{Array} &amp; I &amp; \\text{Indirect&nbsp;Addressing} \\\\ \\hline B&nbsp;&amp; \\text{&nbsp;Relocatable code} &amp; II &amp; \\text{&nbsp;Indexed&nbsp;Addressing} \\\\ \\hline&nbsp; C &amp; \\text{Array as parameter} &amp; III &amp; \\text{Base Register&nbsp;Addressing}&nbsp; \\\\ \\hline\\end{array}$$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>&nbsp;&nbsp; $(A-II), (B-III), (C-I)$</li>\n\t<li>&nbsp;&nbsp; $(A-III), (B-I), (C-II)$</li>\n\t<li>&nbsp;&nbsp; $(A-III), (B-II), (C-I)$</li>\n\t<li>&nbsp;&nbsp; $(A-I), (B-III), (C-II)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,addressing-modes,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106213', 'text': '<p>How many times $fibon$$\\left ( 3 \\right )$ is called during invocation of $fibon$ $\\left ( 6 \\right )$?<br>\n<br>\n$fibon(x) = fibon(x-1) + fibon(x-2)$<br>\n$fibon(0) = 1$<br>\n$fibon(1) = 1$</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>3</li>\n\t<li>4</li>\n\t<li>5</li>\n\t<li>6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,algorithms,recursion', 'category': 'GATE'}, {'contents': '', 'post_id': '106215', 'text': '<p>Assume there are n transactions&nbsp; $T^{1}$., $T^{2}$., .... ,$T^{n}$.</p>\n\n<p>Every transaction Writes a value &nbsp;of variable $X$&nbsp; and then it&nbsp;is read by its successive transaction, like, $T^{1}$&nbsp;writes a value of $X$ that is read by $T^{2}$<sub>&nbsp;</sub></p>\n\n<p>$T^{2}$<sub>&nbsp;</sub>&nbsp;writes a value of X that is read by $T^{3}$</p>\n\n<p>$T_{n-1}$writes a value of X that is read by $T^{n}$&nbsp; &nbsp; &nbsp;</p>\n\n<p>Now, if $T_1$&nbsp;fails then total number of transaction rollbacks are required to recover the schedule is ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$\\left ( n \\right )$</li>\n\t<li>$1$</li>\n\t<li>$\\left ( n-1&nbsp;\\right )$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,transaction-and-concurrency,databases', 'category': 'GATE'}, {'contents': '', 'post_id': '106216', 'text': '<p>For the given grammar consider the statements:</p>\n\n<p>$S\'&nbsp;&nbsp;\\rightarrow S$<br>\n$S&nbsp; \\rightarrow aAd \\mid&nbsp;bBd \\mid aBe \\mid bAe$<br>\n$A&nbsp; \\rightarrow c$<br>\n$B&nbsp; \\rightarrow c$</p>\n\n<p>Which of the following statement is/are true?</p>\n\n<p>S1: The given grammar is LR(l).</p>\n\n<p>S2: On merger the grammar will generate reduce reduce conflict.</p>\n\n<ol start="1" style="list-style-type: upper-alpha;">\n\t<li>Only S1</li>\n\t<li>Only S2</li>\n\t<li>Both&nbsp;S1&nbsp;and&nbsp;S2</li>\n\t<li>None&nbsp;of&nbsp;S1&nbsp;and&nbsp;S2</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,grammar,compiler-design', 'category': 'GATE'}, {'contents': '', 'post_id': '106217', 'text': '<p>State whether the following statements are true or false?</p>\n\n<ol style="list-style-type:lower-alpha">\n\t<li>$(P\\to&nbsp;Q) \\rightarrow (Q\\to&nbsp;P)$ always holds, for all propositions $P, Q$.</li>\n\t<li>$\\left ( \\left ( P\\vee Q \\right )\\rightarrow Q \\right )$&nbsp;$\\rightarrow$ $\\left ( Q\\to&nbsp;\\left ( P\\vee Q \\right ) \\right )$&nbsp;always holds, for all propositions $P, Q$.</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp; &nbsp;$a$ is true, $b$ is false</li>\n\t<li>&nbsp; &nbsp;Both $a$ and $b$ are true</li>\n\t<li>&nbsp; &nbsp;$a$ is false, $b$ is true.</li>\n\t<li>&nbsp; &nbsp;Both $a$ and $b$ are false.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,discrete-mathematics,mathematical-logic,propositional-logic', 'category': 'GATE'}, {'contents': '', 'post_id': '106218', 'text': 'Consider two machines, machine $A$ and machine $B$. Machine $B$ runs floating-point instructions $n$ times faster than machine $A$.\nConsider a program that takes $100$ $seconds$ to run on machine $A$, and spends half  of its time in floating-point instructions. If speedup of performance is $1.714$ (speed up is calculated by dividing  the performance of  Machine $B$  by performance of machine $A$) then the value of $n$ is _________ (In case of fractional value of $n$ give nearest higher positive integer).', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,speedup,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106219', 'text': '<p>Consider the regular languages denoted by the following pairs of regular expressions:</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$(0 + 1)$*$ = 0$*$ + 1$*$ $</li>\n\t<li>$0(120)$*$12 = 01(201)$*$2$</li>\n\t<li>$(0$*$l $*$)$*$ = (0$*$1)$*$ $</li>\n\t<li>$(01 +0)$*$0 = 0(10 +0)$*$ $&nbsp;</li>\n</ol>\n\n<p>Determine the truth of&nbsp;equality for each pair.</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>$a-False, b-True, c-True, d-False$</li>\n\t<li>$a-True, b-False, c-False, d-True$</li>\n\t<li>$a-True, b-True, c-False, d-True$</li>\n\t<li>$a-False, b-True, c-False, d-True$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-mockgate-1,regular-expression,theory-of-computation', 'category': 'GATE'}, {'contents': '', 'post_id': '106220', 'text': 'The access time of cache memory is $10$ $ns$ and main memory is $100$ $ns$. It is estimated that $80 \\%$ of memory requests are for read and remaining are for write. The hit ratio for read access only is $0.9$. A write through procedure is used. Pages are always available in cache for write operation. Then, the average access time is ______ $ns$.', 'type': 'Numerical', 'answer': '36', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,cache-memory,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106222', 'text': "Two peer processes $A$ (sender) and $B$ (receiver) use stop-and-wait $ARQ$ to send packets over a single link with capacity $C$.  All packets have the same length of $100$ bits. The round-trip time (which is the time until $A$ receives an acknowledgment for a sent packet) is equal to $2$ seconds.\n\nAssume that no packets or $ACK's$ are dropped and that all packets and $ACK's$ arrive error-free. Furthermore, assume that the capacity $C$ is equal to $100,000$ bits per second.\n\nThe average transmission rate (in bits per seconds) with which process $A$ sends data to process $B$ is ________.", 'type': 'Numerical', 'answer': '49.970 : 50.00', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,stop-and-wait,computer-networks,sliding-window', 'category': 'GATE'}, {'contents': '', 'post_id': '106223', 'text': 'A computer uses a memory unit with $512K$ words of $64$ bits each. A binary instruction code is stored in one word of memory. The instruction has four parts: an indirect bit, an operation code, a register code part (to specify one of $256$ registers), and an address part. The number of bits in the operation code are _______.', 'type': 'Numerical', 'answer': '33 : 36', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,machine-instruction,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106224', 'text': 'A pipeline system has $4$ stages and each stage takes $10ns$.\n\n$30\\%$ instructions are branch-instructions and branch-instruction introduce a delay of $3$ stall cycles. The speed-up factor compared to same non-pipelined environment if there are $100000$ instructions to be executed is ___________.', 'type': 'Numerical', 'answer': '2.10 : 2.1052', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,pipelining,co-and-architecture', 'category': 'GATE'}, {'contents': '', 'post_id': '106225', 'text': 'Consider a disk with a sector size of $512$ bytes, $50$ sectors per track, $2000$ tracks per surface and five double-sided platters (i.e. $10$ surfaces). The disk platters rotate at $5400$ rpm. The average seek time is $10$ msec. A block size is chosen as $1024$ bytes.\n\nA file containing $100,000$ records of $100$ bytes each is to be stored on this disk, and no record is allowed to span two blocks. Then, the rotational latency of the disk is ________ seconds.', 'type': 'Numerical', 'answer': '0.0050 : 0.0560', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-mockgate-1,numerical-answers,disk,operating-system', 'category': 'GATE'}]}]}
+      </script>
+      

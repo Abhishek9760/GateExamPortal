@@ -1,0 +1,364 @@
+<div><span>Q1</span> - <p>For the following program fragment, the running time is given by</p>
+
+<pre class="prettyprint linenums lang-c_cpp">
+Procedure A(n) 
+
+    if(n    lt;= 2) 
+        return 1; 
+    else return A(log (n)); 
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(loglog n)</li>
+	<li>Θ(log√(n))</li>
+	<li>Θ(log^* n)</li>
+	<li>Θ(√(n))</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>The best known algorithm for binary to decimal conversion runs in (n is the number of bits in the input number, assume MUL and ADD operations to take constant time)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(n)</li>
+	<li>Θ(log n)</li>
+	<li>Θ(1)</li>
+	<li>Θ(n^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>For the following program fragment, the running time is given by</p>
+
+<pre class="prettyprint linenums lang-c_cpp">
+sum = 0; 
+for(i = 1; i   lt; n ; i++) 
+    for(j = 1; j   lt;i; j++) 
+        if(i    lt; j == 0) 
+            for(k = 0; k   lt;j; k++) 
+                sum++;</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(1)</li>
+	<li>Θ(n)</li>
+	<li>Θ(n^2)</li>
+	<li>Θ(n^3)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following algorithm for searching for a given number x in an unsorted array A[1...n] having n values :   nbsp;</p>
+
+<ol style="list-style-type:decimal">
+	<li>Sequentially choose i from 1 to n   nbsp;</li>
+	<li>if A[i] = x then Stop else Goto 1</li>
+</ol>
+
+<p>Let x be present in A two times, what is the expected no of comparisons made by the algorithm before it terminates for n=5?   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>If k   nbsp;is a non-negative constant, then the solution to the recurrence<br>
+T(n) =    nbsp; 1    amp;      nbsp;n=1 
+   nbsp;3T(n/2) + n    amp;      nbsp;n   gt;1</p>
+
+<p>for n, a power of 2 is   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>T(n) = 3^log_2 n - 2n</li>
+	<li>T(n) = 2 × 3^log_2 n - 2n</li>
+	<li>T(n) = 3 × 3^log_2 n - 2n</li>
+	<li>T(n) = 3 × 3^log_2 n - 3n</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>The time complexity of calculating 2^100    nbsp;is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Polynomial</li>
+	<li>Exponential</li>
+	<li>Constant</li>
+	<li>Linear</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Order the following functions by growth rate :</p>
+
+<ol style="list-style-type:lower-alpha">
+	<li>log n</li>
+	<li>n/log n</li>
+	<li>(3/2)^n</li>
+	<li>nlog^2 n
+	<ol style="list-style-type:upper-alpha">
+		<li>a. log n    nbsp;b. n/log n   nbsp;  d. nlog^2 n   nbsp;  c. (3/2)^n   nbsp;</li>
+		<li>d. nlog^2 n    nbsp;c.   nbsp;(3/2)^n    nbsp;   nbsp;a. log n   nbsp;b. n/log n</li>
+		<li>a. log n    nbsp;d.nlog^2 n    nbsp;b. n/log n   nbsp;  c.   nbsp;(3/2)^n</li>
+		<li>a. log n    nbsp;c.   nbsp;(3/2)^n    nbsp; b. n/log n    nbsp;d. nlog^2 n</li>
+	</ol>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Is the following implementation of hashCode() legal assming a hashtable of size 20?</p>
+
+<pre class="prettyprint lang-c_cpp">
+public int hashCode(x) 
+    return 17;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>yes</li>
+	<li>no because it fills only one slot</li>
+	<li>no because it does not ensure uniform filling</li>
+	<li>no because the hashcode is independent of the key</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Let we have 3 steps of an arbitrary program fragment whose running times are O(n^2),   O(n^3) and O(nlog n), then the running time of whole program is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>O(n^3)</li>
+	<li>Ω(n^3)</li>
+	<li>Ω(n log n)</li>
+	<li>Θ(n^6 log n)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - Consider the following recurrence relation.
+
+
+    T(n) = 1        if   n = 1 
+     T(n-1) + 2^n       otherwise
+
+
+What will be the value of T(10)?<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>What is the running time of the following loop?<br>
+   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+Loop2(n)
+p    lt;– 1 
+for i    lt;– 1 to 2n do 
+    p     lt;– p*i </pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(n^2)</li>
+	<li>Θ(n)</li>
+	<li>Θ(n n)</li>
+	<li>Θ(n^2 n)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Match the following two columns given in a table:</p>
+
+<table border="0" cellpadding="1" style="width:500px; border-spacing: 1px;">
+	<tbody>
+		<tr>
+			<td>1.   nbsp;Randomized quick sort</td>
+			<td>a. Θ(n+k)</td>
+		</tr>
+		<tr>
+			<td>2.   nbsp;Insertion sort</td>
+			<td>b. Θ(n^2)</td>
+		</tr>
+		<tr>
+			<td>3.   nbsp;selection sort</td>
+			<td>c. Θ(n)</td>
+		</tr>
+		<tr>
+			<td>4.   nbsp;Bucket sort</td>
+			<td>d. Θ(nlog n)</td>
+		</tr>
+	</tbody>
+</table>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1- a;   nbsp; 2- c;   nbsp; 3 -b;   nbsp; 4- d;</li>
+	<li>1- c;    nbsp;2- a;    nbsp;3 -d;    nbsp;4- b;</li>
+	<li>1- b;    nbsp;2- d;    nbsp;3 -a;    nbsp;4- c;</li>
+	<li>1- d;   nbsp; 2- c;    nbsp;3 -b;    nbsp;4- a;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>You are    nbsp;given a 1 billion numbers. The time require in seconds to sort them provided sorting thousand numbers takes 100 microseconds will be _______</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10,000</li>
+	<li>512</li>
+	<li>300</li>
+	<li>65536</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>The result of performing an inorder search on the given tree is</p>
+
+<p><img src="https://gateoverflow.in/?qa=blob&qa_blobid=3086509241976175128"></p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>s y x z v u t</li>
+	<li>y s x z v u t</li>
+	<li>s y v u t z x</li>
+	<li>v u t z x y s   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>A delivery boy at an online e-commerce company is charged with the task of rearranging a number of large crates in order of the time they are to be shipped out. Thus, the cost of compares is very low (just look at the labels of the items ) relative to the cost of   nbsp;exchanges (move the crates). The warehouse is nearly full: there is extra space sufficient to hold any one of the crates, but not two. Which sorting method should the boy use?</p>
+
+<ol style="list-style-type: upper-alpha;">
+	<li>heap sort</li>
+	<li>quick sort</li>
+	<li>selection sort</li>
+	<li>randomized quick sort<br>
+	   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>The Matrix Chain-Product dynamic programming Algorithm runs in _______</p>
+
+<ol style="list-style-type: upper-alpha;">
+	<li>linear time</li>
+	<li>exponential time</li>
+	<li>quadratic time</li>
+	<li>cubic time</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - While inserting keys 12,44,13,88,23,94,11,39,20,16 and 5 in a 11 item hash table using the hash function  h(i) =  (2i+5)  11, total number of collisions that occur is _________ (On collision no insertion takes place)<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Time complexity of the optimal algorithm to interchange the m^th and n^th elements of a singly Linked List    nbsp;is   nbsp;</p>
+
+
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(m+n)</li>
+	<li>Θ(m) when m≥ n otherwise Θ(n)</li>
+	<li>Θ(m) if m ≤ n otherwise Θ(n)</li>
+	<li>Θ(m+ min (m,n))</li>
+</ol>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Is an array that is sorted in decreasing order a max-heap?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>always yes</li>
+	<li>always no</li>
+	<li>sometimes only</li>
+	<li>yes but not in presence of duplicates</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>Let T(n) denote   nbsp;the number of times the for loop in below code is executed on any input n. What can be said about T(n)?</p>
+
+<pre class="prettyprint lang-c_cpp">
+int iscompute(int n) 
+
+    for (int i=2;i   lt;=sqrt(n); i++) 
+        if(n
+         
+            printf("not computed"); 
+            return 0; 
+         
+    return 1;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>T(n)= O(√(n)) and T(n)= Ω(√(n))</li>
+	<li>T(n)= O(√(n)) and T(n)= Ω(1)</li>
+	<li>T(n)= O( n) and T(n)= Ω (√(n))</li>
+	<li>None</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>A spell-checker software reads an input file and prints out all words not in some online dictionary. Suppose the dictionary contains 10,000 words and the file has one million entries, so that the algorithm can make only one pass through the input file. A simple strategy is to read the dictionary into a hash table and look for each input word as it is read. Assuming that an average word is seven characters and that it is possible to store words of length L in (L + 1) bytes (so space waste is not much of a consideration), and assuming a closed table, how much space does this require? (Assume a pointer is 8 bytes and that the hash table is an array of pointers to words).</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>80,000 B</li>
+	<li>160,000 B</li>
+	<li>320,000 B</li>
+	<li>150,000 B</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Consider the below statements:</p>
+
+<ol>
+	<li>Adding a constant to every edge weight does not change the solution to the single-source shortest-paths problem.</li>
+	<li>Adding a constant to every edge weight does not change the solution to the minimum spanning tree problem.</li>
+</ol>
+
+
+
+<ol style="list-style-type:upper-alpha">
+	<li>1 is FALSE 2 is TRUE</li>
+	<li>1 is TRUE 2 is FALSE</li>
+	<li>Both 1 and 2 are TRUE</li>
+	<li>Both 1 and 2 are FALSE</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>About how many compares will Quicksort() make when sorting an array of N items that are all equal?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ( N)</li>
+	<li>Θ(N N)</li>
+	<li>Θ( N)</li>
+	<li>Θ(N/ N)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>Let you have an array S[1 … n] and a function reverse(s,i,j) which    nbsp;reverse the order of elements in s between i,j-th positions. What   nbsp;does the following sequence do where 1≤ k≤ n ;<br>
+   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+reverse(s,1,k)
+reverse (s,1,n)
+reverse(s,k+1,n)
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>rotate s by k position to left</li>
+	<li>leaves s unchanged</li>
+	<li>rotate s by k position to right</li>
+	<li>none</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Which of   nbsp;the below options is <strong>TRUE </strong>for this statement :<br>
+Suppose we wish to repeatedly search a linked list of length N elements, each of which contains a very long string key. How might we   nbsp;take advantage of the hash value when searching the list for an element with a given key?</p>
+
+<ol style="list-style-type: upper-alpha;">
+	<li>by calculating hash function for the table</li>
+	<li>precompute the hash value of each string in the list</li>
+	<li>calculate hash value of the single string only</li>
+	<li>none of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>Maximum element in a min-heap represented by an array, can be computed in _____    nbsp;time</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>O(n)</li>
+	<li>O(log n)</li>
+	<li>O(n log n) but not O(n)</li>
+	<li>O(1)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - Consider a hash table of size m = 10 and a corresponding hash function h(k) = k A  m for A = 5 where collisions are resolved by quadratic probing.  The location (starting from 1) to which the key 65 is mapped if the current contents of hashtable is 4  8  _ _ 7  8  6  _  0 _ is _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>Match the following<br>
+   nbsp;</p>
+
+<table border="0" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>i.</td>
+			<td>
+			<p>Dijkstra's Algorithm</p>
+			</td>
+			<td>a.</td>
+			<td>All pairs shortest path</td>
+		</tr>
+		<tr>
+			<td>ii.</td>
+			<td>Bellman Ford Algorithm</td>
+			<td>b.</td>
+			<td>Greedy</td>
+		</tr>
+		<tr>
+			<td>iii.</td>
+			<td>Floyd-Warshall Algorithm</td>
+			<td>c.</td>
+			<td>Reweighting</td>
+		</tr>
+		<tr>
+			<td>iv.</td>
+			<td>Johnson Algorithm</td>
+			<td>d.</td>
+			<td>Single source   nbsp; shortest path</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<ol style="list-style-type:upper-alpha">
+	<li>i - c, ii - d, iii - a, iv - b</li>
+	<li>i - d, ii - a, iii - c, iv - b</li>
+	<li>i - b, ii - d, iii - a, iv - c</li>
+	<li>i - d, ii - b, iii - a, iv - c</li>
+</ol>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - 
+    T(n) =  4        if    n =1 
+     T(n-1) + 4        otherwise
+
+
+Value of T(1000) is ___<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>Match the following:<br>
+   nbsp;</p>
+
+<table border="0" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>i.</td>
+			<td>
+			<p>BFS</p>
+			</td>
+			<td>a.</td>
+			<td>O(| E | + | V |log| V |)</td>
+		</tr>
+		<tr>
+			<td>ii.</td>
+			<td>DFS</td>
+			<td>b.</td>
+			<td>O(E)</td>
+		</tr>
+		<tr>
+			<td>iii.</td>
+			<td>Kruskal's algorithm</td>
+			<td>c.</td>
+			<td>Stack</td>
+		</tr>
+		<tr>
+			<td>iv.</td>
+			<td>Dijikstra's Algorithm</td>
+			<td>d.</td>
+			<td>O(E log V)</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<ol style="list-style-type:upper-alpha">
+	<li>i - b, ii - c, iii - a, iv - d</li>
+	<li>i - c, ii - b, iii - d, iv - a</li>
+	<li>i - b, ii - c, iii - d, iv - a</li>
+	<li>i - c, ii - d, iii - a, iv - b</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '71316', 'text': '<p>For the following program fragment, the running time is given by</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nProcedure A(n) \n{\n    if(n &lt;= 2) \n        return 1; \n    else return A(log (n)); \n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\log \\log n)$</li>\n\t<li>$\\Theta(\\log \\sqrt n)$</li>\n\t<li>$\\Theta(\\log^* n)$</li>\n\t<li>$\\Theta(\\sqrt n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71318', 'text': '<p>The best known algorithm for binary to decimal conversion runs in $(n$ is the number of bits in the input number, assume MUL and ADD operations to take constant time)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(\\log n)$</li>\n\t<li>$\\Theta(1)$</li>\n\t<li>$\\Theta\\left(n^2\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71320', 'text': '<p>For the following program fragment, the running time is given by</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nsum = 0; \nfor(i = 1; i&lt; n ; i++) \n    for(j = 1; j&lt;i; j++) \n        if(i &lt; j == 0) \n            for(k = 0; k&lt;j; k++) \n                sum++;</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(1)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta \\left(n^2\\right)$</li>\n\t<li>$\\Theta\\left(n^3\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity,programming-in-c', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71322', 'text': '<p>Consider the following algorithm for searching for a given number $x$ in an unsorted array $A[1...n]$ having $n$ values :&nbsp;</p>\n\n<ol style="list-style-type:decimal">\n\t<li>Sequentially choose $i$ from 1 to n&nbsp;</li>\n\t<li>if A[i] = x then Stop else Goto 1</li>\n</ol>\n\n<p>Let $x$ be present in A two times, what is the expected no of comparisons made by the algorithm before it terminates for $n=5$?&nbsp;</p>', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,algorithms,expectation,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71325', 'text': '<p>If k&nbsp;is a non-negative constant, then the solution to the recurrence<br>\n$T(n) = \\begin{cases}&nbsp; 1 &amp; \\quad&nbsp;n=1 \\\\&nbsp;3T(n/2) + n &amp; \\quad&nbsp;n&gt;1 \\end{cases} $</p>\n\n<p>for $n$, a power of 2 is&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$T(n) = 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 2 \\times 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 3 \\times 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 3 \\times 3^{\\log_2 n} - 3n$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,recurrence-relation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71469', 'text': '<p>The time complexity of calculating $2^{100}$ &nbsp;is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Polynomial</li>\n\t<li>Exponential</li>\n\t<li>Constant</li>\n\t<li>Linear</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71472', 'text': '<p>Order the following functions by growth rate :</p>\n\n<ol style="list-style-type:lower-alpha">\n\t<li>$\\log n$</li>\n\t<li>$n/\\log n$</li>\n\t<li>$(3/2)^n$</li>\n\t<li>$n\\log^2 n$\n\t<ol style="list-style-type:upper-alpha">\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;b. $n/\\log n$&nbsp; $\\quad$ d. $n\\log^2 n$&nbsp; $\\quad$ c. $(3/2)^n$&nbsp;</li>\n\t\t<li>d. $n\\log^2 n$ $\\quad$&nbsp;c.&nbsp;(3/2)$^n$ &nbsp;$\\quad$&nbsp;a. $\\log n$$\\quad$&nbsp;b. $n/log n$</li>\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;d.$n\\log^2 n$ $\\quad$&nbsp;b. $n/\\log n$&nbsp; $\\quad$ c.&nbsp;(3/2)$^n$</li>\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;c.&nbsp;(3/2)$^n$ &nbsp;$\\quad$ b. $n/\\log n$ $\\quad$&nbsp;d. $n\\log^2 n$</li>\n\t</ol>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71477', 'text': '<p>Is the following implementation of hashCode() legal assming a hashtable of size 20?</p>\n\n<pre class="prettyprint lang-c_cpp">\npublic int hashCode(x) {\n    return 17;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>yes</li>\n\t<li>no because it fills only one slot</li>\n\t<li>no because it does not ensure uniform filling</li>\n\t<li>no because the hashcode is independent of the key</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71489', 'text': '<p>Let we have 3 steps of an arbitrary program fragment whose running times are $O(n^2), \\: O(n^3)$ and $O(n\\log n)$, then the running time of whole program is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(n^3)$</li>\n\t<li>$\\Omega(n^3)$</li>\n\t<li>$\\Omega(n \\log n)$</li>\n\t<li>$\\Theta(n^6 \\log n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71492', 'text': 'Consider the following recurrence relation.\n\n$$T(n) = \\begin{cases}1 & \\quad  if \\: n = 1 \\\\ T(n-1) + 2^n \\quad & otherwise \\end{cases}$$\n\nWhat will be the value of $T(10)$?', 'type': 'Numerical', 'answer': '2045', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers,recurrence-relation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71497', 'text': '<p>What is the running time of the following loop?<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nLoop2(n)\np &lt;-- 1 \nfor i &lt;-- 1 to 2n do \n    p  &lt;-- p*i </pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n^2)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n\\lg n)$</li>\n\t<li>$\\Theta(n^2\\lg n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71501', 'text': '<p>Match the following two columns given in a table:</p>\n\n<table border="0" cellpadding="1" style="width:500px; border-spacing: 1px;">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>1.&nbsp;Randomized quick sort</td>\n\t\t\t<td>a. $\\Theta(n+k)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>2.&nbsp;Insertion sort</td>\n\t\t\t<td>b. $\\Theta\\left(n^2\\right)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>3.&nbsp;selection sort</td>\n\t\t\t<td>c. $\\Theta(n)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>4.&nbsp;Bucket sort</td>\n\t\t\t<td>d. $\\Theta(n\\log n)$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1- a;&nbsp; 2- c;&nbsp; 3 -b;&nbsp; 4- d;</li>\n\t<li>1- c; &nbsp;2- a; &nbsp;3 -d; &nbsp;4- b;</li>\n\t<li>1- b; &nbsp;2- d; &nbsp;3 -a; &nbsp;4- c;</li>\n\t<li>1- d;&nbsp; 2- c; &nbsp;3 -b; &nbsp;4- a;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,time-complexity,match-the-following,easy', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71502', 'text': '<p>You are &nbsp;given a 1 billion numbers. The time require in seconds to sort them provided sorting thousand numbers takes 100 microseconds will be _______</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>10,000</li>\n\t<li>512</li>\n\t<li>300</li>\n\t<li>65536</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,sorting', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71505', 'text': '<p>The result of performing an inorder search on the given tree is</p>\n\n<p><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=3086509241976175128"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>s y x z v u t</li>\n\t<li>y s x z v u t</li>\n\t<li>s y v u t z x</li>\n\t<li>v u t z x y s&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,data-structures,binary-tree,tree-traversal', 'category': 'DS'}, {'contents': '', 'post_id': '71507', 'text': '<p>A delivery boy at an online e-commerce company is charged with the task of rearranging a number of large crates in order of the time they are to be shipped out. Thus, the cost of compares is very low (just look at the labels of the items ) relative to the cost of&nbsp;exchanges (move the crates). The warehouse is nearly full: there is extra space sufficient to hold any one of the crates, but not two. Which sorting method should the boy use?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>heap sort</li>\n\t<li>quick sort</li>\n\t<li>selection sort</li>\n\t<li>randomized quick sort<br>\n\t&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71508', 'text': '<p>The Matrix Chain-Product dynamic programming Algorithm runs in _______</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>linear time</li>\n\t<li>exponential time</li>\n\t<li>quadratic time</li>\n\t<li>cubic time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,dynamic-programming,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71509', 'text': 'While inserting keys 12,44,13,88,23,94,11,39,20,16 and 5 in a 11 item hash table using the hash function  $h(i) =  (2i+5) \\mod 11$, total number of collisions that occur is _________ (On collision no insertion takes place)', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71510', 'text': '<p>Time complexity of the optimal algorithm to interchange the $m^{th}$ and $n^{th}$ elements of a singly Linked List &nbsp;is&nbsp;</p>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(m+n)$</li>\n\t<li>$\\Theta(m)$ when $m\\geq n$ otherwise $\\Theta(n)$</li>\n\t<li>$\\Theta(m)$ if $m \\leq n$ otherwise $\\Theta(n)$</li>\n\t<li>$\\Theta(m+ \\min (m,n))$</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,linked-list', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71511', 'text': '<p>Is an array that is sorted in decreasing order a max-heap?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>always yes</li>\n\t<li>always no</li>\n\t<li>sometimes only</li>\n\t<li>yes but not in presence of duplicates</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,heap-sort', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71513', 'text': '<p>Let $T(n)$ denote&nbsp;the number of times the for loop in below code is executed on any input $n$. What can be said about $T(n)$?</p>\n\n<pre class="prettyprint lang-c_cpp">\nint iscompute(int n) \n{\n    for (int i=2;i&lt;=sqrt(n); i++) \n        if(n%i) == 0) \n        { \n            printf("not computed"); \n            return 0; \n        } \n    return 1;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$T(n)= O(\\sqrt n)$ and $T(n)= \\Omega(\\sqrt n)$</li>\n\t<li>$T(n)= O(\\sqrt n)$ and $T(n)= \\Omega(1)$</li>\n\t<li>$T(n)= O( n)$ and $T(n)= \\Omega (\\sqrt n)$</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71522', 'text': '<p>A spell-checker software reads an input file and prints out all words not in some online dictionary. Suppose the dictionary contains 10,000 words and the file has one million entries, so that the algorithm can make only one pass through the input file. A simple strategy is to read the dictionary into a hash table and look for each input word as it is read. Assuming that an average word is seven characters and that it is possible to store words of length L in (L + 1) bytes (so space waste is not much of a consideration), and assuming a closed table, how much space does this require? (Assume a pointer is 8 bytes and that the hash table is an array of pointers to words).</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>80,000 B</li>\n\t<li>160,000 B</li>\n\t<li>320,000 B</li>\n\t<li>150,000 B</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71523', 'text': '<p>Consider the below statements:</p>\n\n<ol>\n\t<li>Adding a constant to every edge weight does not change the solution to the single-source shortest-paths problem.</li>\n\t<li>Adding a constant to every edge weight does not change the solution to the minimum spanning tree problem.</li>\n</ol>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1 is FALSE 2 is TRUE</li>\n\t<li>1 is TRUE 2 is FALSE</li>\n\t<li>Both 1 and 2 are TRUE</li>\n\t<li>Both 1 and 2 are FALSE</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,minimum-spanning-tree,shortest-path', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71524', 'text': '<p>About how many compares will Quicksort() make when sorting an array of N items that are all equal?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\lg N)$</li>\n\t<li>$\\Theta(N\\lg N)$</li>\n\t<li>$\\Theta(\\lg \\lg N)$</li>\n\t<li>$\\Theta(N/\\lg N)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,quick-sort', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71525', 'text': '<p>Let you have an array $S[1 \\dots n]$ and a function $reverse(s,i,j)$ which &nbsp;reverse the order of elements in $s$ between $i,j$-th positions. What&nbsp;does the following sequence do where $1\\leq k\\leq n$ ;<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nreverse(s,1,k)\nreverse (s,1,n)\nreverse(s,k+1,n)\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>rotate s by k position to left</li>\n\t<li>leaves s unchanged</li>\n\t<li>rotate s by k position to right</li>\n\t<li>none</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71527', 'text': '<p>Which of&nbsp;the below options is <strong>TRUE </strong>for this statement :<br>\nSuppose we wish to repeatedly search a linked list of length N elements, each of which contains a very long string key. How might we&nbsp;take advantage of the hash value when searching the list for an element with a given key?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>by calculating hash function for the table</li>\n\t<li>precompute the hash value of each string in the list</li>\n\t<li>calculate hash value of the single string only</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71528', 'text': '<p>Maximum element in a min-heap represented by an array, can be computed in _____ &nbsp;time</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(n)$</li>\n\t<li>$O(\\log n)$</li>\n\t<li>$O(n \\log n)$ but not $O(n)$</li>\n\t<li>$O(1)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,binary-heap,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71529', 'text': 'Consider a hash table of size $m = 10$ and a corresponding hash function $h(k) = k A \\mod m$ for $A = 5$ where collisions are resolved by quadratic probing.  The location (starting from 1) to which the key 65 is mapped if the current contents of hashtable is $4 \\;8 \\;\\_  \\;\\_ \\;7 \\;8 \\;6 \\;\\_\\; 0\\; \\_$ is _______', 'type': 'Numerical', 'answer': '10', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71530', 'text': '<p>Match the following<br>\n&nbsp;</p>\n\n<table border="0" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>i.</td>\n\t\t\t<td>\n\t\t\t<p>Dijkstra\'s Algorithm</p>\n\t\t\t</td>\n\t\t\t<td>a.</td>\n\t\t\t<td>All pairs shortest path</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>ii.</td>\n\t\t\t<td>Bellman Ford Algorithm</td>\n\t\t\t<td>b.</td>\n\t\t\t<td>Greedy</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iii.</td>\n\t\t\t<td>Floyd-Warshall Algorithm</td>\n\t\t\t<td>c.</td>\n\t\t\t<td>Reweighting</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iv.</td>\n\t\t\t<td>Johnson Algorithm</td>\n\t\t\t<td>d.</td>\n\t\t\t<td>Single source&nbsp; shortest path</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>i - c, ii - d, iii - a, iv - b</li>\n\t<li>i - d, ii - a, iii - c, iv - b</li>\n\t<li>i - b, ii - d, iii - a, iv - c</li>\n\t<li>i - d, ii - b, iii - a, iv - c</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,graph-algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71531', 'text': '$$T(n) = \\begin{cases} 4 & \\quad  if \\: \\: n =1 \\\\ T(n-1) + 4  & \\quad otherwise \\end{cases}$$\n\nValue of $T(1000)$ is ___', 'type': 'Numerical', 'answer': '4000', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,recurrence-relation,algorithms,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71532', 'text': '<p>Match the following:<br>\n&nbsp;</p>\n\n<table border="0" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>i.</td>\n\t\t\t<td>\n\t\t\t<p>BFS</p>\n\t\t\t</td>\n\t\t\t<td>a.</td>\n\t\t\t<td>$O(\\mid E \\mid + \\mid V \\mid \\log \\mid V \\mid)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>ii.</td>\n\t\t\t<td>DFS</td>\n\t\t\t<td>b.</td>\n\t\t\t<td>$O(E)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iii.</td>\n\t\t\t<td>Kruskal\'s algorithm</td>\n\t\t\t<td>c.</td>\n\t\t\t<td>Stack</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iv.</td>\n\t\t\t<td>Dijikstra\'s Algorithm</td>\n\t\t\t<td>d.</td>\n\t\t\t<td>$O(E \\log V)$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>i - b, ii - c, iii - a, iv - d</li>\n\t<li>i - c, ii - b, iii - d, iv - a</li>\n\t<li>i - b, ii - c, iii - d, iv - a</li>\n\t<li>i - c, ii - d, iii - a, iv - b</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,graph-algorithms', 'category': 'Algorithms'}]
+      let data={'name': 'GATE Overflow | Algorithms | Test 1', 'duration': '75', 'total_qs': '30', 'total_qs_one': 0, 'total_qs_two': 30, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 60, 'total_marks': 60, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 60, 'question': [{'contents': '', 'post_id': '71316', 'text': '<p>For the following program fragment, the running time is given by</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nProcedure A(n) \n{\n    if(n &lt;= 2) \n        return 1; \n    else return A(log (n)); \n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\log \\log n)$</li>\n\t<li>$\\Theta(\\log \\sqrt n)$</li>\n\t<li>$\\Theta(\\log^* n)$</li>\n\t<li>$\\Theta(\\sqrt n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71318', 'text': '<p>The best known algorithm for binary to decimal conversion runs in $(n$ is the number of bits in the input number, assume MUL and ADD operations to take constant time)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(\\log n)$</li>\n\t<li>$\\Theta(1)$</li>\n\t<li>$\\Theta\\left(n^2\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71320', 'text': '<p>For the following program fragment, the running time is given by</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nsum = 0; \nfor(i = 1; i&lt; n ; i++) \n    for(j = 1; j&lt;i; j++) \n        if(i &lt; j == 0) \n            for(k = 0; k&lt;j; k++) \n                sum++;</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(1)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta \\left(n^2\\right)$</li>\n\t<li>$\\Theta\\left(n^3\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity,programming-in-c', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71322', 'text': '<p>Consider the following algorithm for searching for a given number $x$ in an unsorted array $A[1...n]$ having $n$ values :&nbsp;</p>\n\n<ol style="list-style-type:decimal">\n\t<li>Sequentially choose $i$ from 1 to n&nbsp;</li>\n\t<li>if A[i] = x then Stop else Goto 1</li>\n</ol>\n\n<p>Let $x$ be present in A two times, what is the expected no of comparisons made by the algorithm before it terminates for $n=5$?&nbsp;</p>', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,algorithms,expectation,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71325', 'text': '<p>If k&nbsp;is a non-negative constant, then the solution to the recurrence<br>\n$T(n) = \\begin{cases}&nbsp; 1 &amp; \\quad&nbsp;n=1 \\\\&nbsp;3T(n/2) + n &amp; \\quad&nbsp;n&gt;1 \\end{cases} $</p>\n\n<p>for $n$, a power of 2 is&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$T(n) = 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 2 \\times 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 3 \\times 3^{\\log_2 n} - 2n$</li>\n\t<li>$T(n) = 3 \\times 3^{\\log_2 n} - 3n$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,recurrence-relation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71469', 'text': '<p>The time complexity of calculating $2^{100}$ &nbsp;is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Polynomial</li>\n\t<li>Exponential</li>\n\t<li>Constant</li>\n\t<li>Linear</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71472', 'text': '<p>Order the following functions by growth rate :</p>\n\n<ol style="list-style-type:lower-alpha">\n\t<li>$\\log n$</li>\n\t<li>$n/\\log n$</li>\n\t<li>$(3/2)^n$</li>\n\t<li>$n\\log^2 n$\n\t<ol style="list-style-type:upper-alpha">\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;b. $n/\\log n$&nbsp; $\\quad$ d. $n\\log^2 n$&nbsp; $\\quad$ c. $(3/2)^n$&nbsp;</li>\n\t\t<li>d. $n\\log^2 n$ $\\quad$&nbsp;c.&nbsp;(3/2)$^n$ &nbsp;$\\quad$&nbsp;a. $\\log n$$\\quad$&nbsp;b. $n/log n$</li>\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;d.$n\\log^2 n$ $\\quad$&nbsp;b. $n/\\log n$&nbsp; $\\quad$ c.&nbsp;(3/2)$^n$</li>\n\t\t<li>a. $\\log n$ $\\quad$&nbsp;c.&nbsp;(3/2)$^n$ &nbsp;$\\quad$ b. $n/\\log n$ $\\quad$&nbsp;d. $n\\log^2 n$</li>\n\t</ol>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71477', 'text': '<p>Is the following implementation of hashCode() legal assming a hashtable of size 20?</p>\n\n<pre class="prettyprint lang-c_cpp">\npublic int hashCode(x) {\n    return 17;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>yes</li>\n\t<li>no because it fills only one slot</li>\n\t<li>no because it does not ensure uniform filling</li>\n\t<li>no because the hashcode is independent of the key</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71489', 'text': '<p>Let we have 3 steps of an arbitrary program fragment whose running times are $O(n^2), \\: O(n^3)$ and $O(n\\log n)$, then the running time of whole program is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(n^3)$</li>\n\t<li>$\\Omega(n^3)$</li>\n\t<li>$\\Omega(n \\log n)$</li>\n\t<li>$\\Theta(n^6 \\log n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71492', 'text': 'Consider the following recurrence relation.\n\n$$T(n) = \\begin{cases}1 & \\quad  if \\: n = 1 \\\\ T(n-1) + 2^n \\quad & otherwise \\end{cases}$$\n\nWhat will be the value of $T(10)$?', 'type': 'Numerical', 'answer': '2045', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers,recurrence-relation', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71497', 'text': '<p>What is the running time of the following loop?<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nLoop2(n)\np &lt;-- 1 \nfor i &lt;-- 1 to 2n do \n    p  &lt;-- p*i </pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n^2)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n\\lg n)$</li>\n\t<li>$\\Theta(n^2\\lg n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71501', 'text': '<p>Match the following two columns given in a table:</p>\n\n<table border="0" cellpadding="1" style="width:500px; border-spacing: 1px;">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>1.&nbsp;Randomized quick sort</td>\n\t\t\t<td>a. $\\Theta(n+k)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>2.&nbsp;Insertion sort</td>\n\t\t\t<td>b. $\\Theta\\left(n^2\\right)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>3.&nbsp;selection sort</td>\n\t\t\t<td>c. $\\Theta(n)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>4.&nbsp;Bucket sort</td>\n\t\t\t<td>d. $\\Theta(n\\log n)$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1- a;&nbsp; 2- c;&nbsp; 3 -b;&nbsp; 4- d;</li>\n\t<li>1- c; &nbsp;2- a; &nbsp;3 -d; &nbsp;4- b;</li>\n\t<li>1- b; &nbsp;2- d; &nbsp;3 -a; &nbsp;4- c;</li>\n\t<li>1- d;&nbsp; 2- c; &nbsp;3 -b; &nbsp;4- a;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,time-complexity,match-the-following,easy', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71502', 'text': '<p>You are &nbsp;given a 1 billion numbers. The time require in seconds to sort them provided sorting thousand numbers takes 100 microseconds will be _______</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>10,000</li>\n\t<li>512</li>\n\t<li>300</li>\n\t<li>65536</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,sorting', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71505', 'text': '<p>The result of performing an inorder search on the given tree is</p>\n\n<p><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=3086509241976175128"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>s y x z v u t</li>\n\t<li>y s x z v u t</li>\n\t<li>s y v u t z x</li>\n\t<li>v u t z x y s&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,data-structures,binary-tree,tree-traversal', 'category': 'DS'}, {'contents': '', 'post_id': '71507', 'text': '<p>A delivery boy at an online e-commerce company is charged with the task of rearranging a number of large crates in order of the time they are to be shipped out. Thus, the cost of compares is very low (just look at the labels of the items ) relative to the cost of&nbsp;exchanges (move the crates). The warehouse is nearly full: there is extra space sufficient to hold any one of the crates, but not two. Which sorting method should the boy use?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>heap sort</li>\n\t<li>quick sort</li>\n\t<li>selection sort</li>\n\t<li>randomized quick sort<br>\n\t&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71508', 'text': '<p>The Matrix Chain-Product dynamic programming Algorithm runs in _______</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>linear time</li>\n\t<li>exponential time</li>\n\t<li>quadratic time</li>\n\t<li>cubic time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,dynamic-programming,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71509', 'text': 'While inserting keys 12,44,13,88,23,94,11,39,20,16 and 5 in a 11 item hash table using the hash function  $h(i) =  (2i+5) \\mod 11$, total number of collisions that occur is _________ (On collision no insertion takes place)', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71510', 'text': '<p>Time complexity of the optimal algorithm to interchange the $m^{th}$ and $n^{th}$ elements of a singly Linked List &nbsp;is&nbsp;</p>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(m+n)$</li>\n\t<li>$\\Theta(m)$ when $m\\geq n$ otherwise $\\Theta(n)$</li>\n\t<li>$\\Theta(m)$ if $m \\leq n$ otherwise $\\Theta(n)$</li>\n\t<li>$\\Theta(m+ \\min (m,n))$</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,linked-list', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71511', 'text': '<p>Is an array that is sorted in decreasing order a max-heap?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>always yes</li>\n\t<li>always no</li>\n\t<li>sometimes only</li>\n\t<li>yes but not in presence of duplicates</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,heap-sort', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71513', 'text': '<p>Let $T(n)$ denote&nbsp;the number of times the for loop in below code is executed on any input $n$. What can be said about $T(n)$?</p>\n\n<pre class="prettyprint lang-c_cpp">\nint iscompute(int n) \n{\n    for (int i=2;i&lt;=sqrt(n); i++) \n        if(n%i) == 0) \n        { \n            printf("not computed"); \n            return 0; \n        } \n    return 1;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$T(n)= O(\\sqrt n)$ and $T(n)= \\Omega(\\sqrt n)$</li>\n\t<li>$T(n)= O(\\sqrt n)$ and $T(n)= \\Omega(1)$</li>\n\t<li>$T(n)= O( n)$ and $T(n)= \\Omega (\\sqrt n)$</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,asymptotic-notation,time-complexity', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71522', 'text': '<p>A spell-checker software reads an input file and prints out all words not in some online dictionary. Suppose the dictionary contains 10,000 words and the file has one million entries, so that the algorithm can make only one pass through the input file. A simple strategy is to read the dictionary into a hash table and look for each input word as it is read. Assuming that an average word is seven characters and that it is possible to store words of length L in (L + 1) bytes (so space waste is not much of a consideration), and assuming a closed table, how much space does this require? (Assume a pointer is 8 bytes and that the hash table is an array of pointers to words).</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>80,000 B</li>\n\t<li>160,000 B</li>\n\t<li>320,000 B</li>\n\t<li>150,000 B</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71523', 'text': '<p>Consider the below statements:</p>\n\n<ol>\n\t<li>Adding a constant to every edge weight does not change the solution to the single-source shortest-paths problem.</li>\n\t<li>Adding a constant to every edge weight does not change the solution to the minimum spanning tree problem.</li>\n</ol>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1 is FALSE 2 is TRUE</li>\n\t<li>1 is TRUE 2 is FALSE</li>\n\t<li>Both 1 and 2 are TRUE</li>\n\t<li>Both 1 and 2 are FALSE</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,minimum-spanning-tree,shortest-path', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71524', 'text': '<p>About how many compares will Quicksort() make when sorting an array of N items that are all equal?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\lg N)$</li>\n\t<li>$\\Theta(N\\lg N)$</li>\n\t<li>$\\Theta(\\lg \\lg N)$</li>\n\t<li>$\\Theta(N/\\lg N)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,sorting,quick-sort', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71525', 'text': '<p>Let you have an array $S[1 \\dots n]$ and a function $reverse(s,i,j)$ which &nbsp;reverse the order of elements in $s$ between $i,j$-th positions. What&nbsp;does the following sequence do where $1\\leq k\\leq n$ ;<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nreverse(s,1,k)\nreverse (s,1,n)\nreverse(s,k+1,n)\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>rotate s by k position to left</li>\n\t<li>leaves s unchanged</li>\n\t<li>rotate s by k position to right</li>\n\t<li>none</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71527', 'text': '<p>Which of&nbsp;the below options is <strong>TRUE </strong>for this statement :<br>\nSuppose we wish to repeatedly search a linked list of length N elements, each of which contains a very long string key. How might we&nbsp;take advantage of the hash value when searching the list for an element with a given key?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>by calculating hash function for the table</li>\n\t<li>precompute the hash value of each string in the list</li>\n\t<li>calculate hash value of the single string only</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71528', 'text': '<p>Maximum element in a min-heap represented by an array, can be computed in _____ &nbsp;time</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(n)$</li>\n\t<li>$O(\\log n)$</li>\n\t<li>$O(n \\log n)$ but not $O(n)$</li>\n\t<li>$O(1)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,binary-heap,algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71529', 'text': 'Consider a hash table of size $m = 10$ and a corresponding hash function $h(k) = k A \\mod m$ for $A = 5$ where collisions are resolved by quadratic probing.  The location (starting from 1) to which the key 65 is mapped if the current contents of hashtable is $4 \\;8 \\;\\_  \\;\\_ \\;7 \\;8 \\;6 \\;\\_\\; 0\\; \\_$ is _______', 'type': 'Numerical', 'answer': '10', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,numerical-answers,algorithms,hashing', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71530', 'text': '<p>Match the following<br>\n&nbsp;</p>\n\n<table border="0" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>i.</td>\n\t\t\t<td>\n\t\t\t<p>Dijkstra\'s Algorithm</p>\n\t\t\t</td>\n\t\t\t<td>a.</td>\n\t\t\t<td>All pairs shortest path</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>ii.</td>\n\t\t\t<td>Bellman Ford Algorithm</td>\n\t\t\t<td>b.</td>\n\t\t\t<td>Greedy</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iii.</td>\n\t\t\t<td>Floyd-Warshall Algorithm</td>\n\t\t\t<td>c.</td>\n\t\t\t<td>Reweighting</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iv.</td>\n\t\t\t<td>Johnson Algorithm</td>\n\t\t\t<td>d.</td>\n\t\t\t<td>Single source&nbsp; shortest path</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>i - c, ii - d, iii - a, iv - b</li>\n\t<li>i - d, ii - a, iii - c, iv - b</li>\n\t<li>i - b, ii - d, iii - a, iv - c</li>\n\t<li>i - d, ii - b, iii - a, iv - c</li>\n</ol>\n\n', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,graph-algorithms', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71531', 'text': '$$T(n) = \\begin{cases} 4 & \\quad  if \\: \\: n =1 \\\\ T(n-1) + 4  & \\quad otherwise \\end{cases}$$\n\nValue of $T(1000)$ is ___', 'type': 'Numerical', 'answer': '4000', 'award': 2, 'penalty': '0.0000', 'tags': 'go-alogrithms-1,recurrence-relation,algorithms,numerical-answers', 'category': 'Algorithms'}, {'contents': '', 'post_id': '71532', 'text': '<p>Match the following:<br>\n&nbsp;</p>\n\n<table border="0" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>i.</td>\n\t\t\t<td>\n\t\t\t<p>BFS</p>\n\t\t\t</td>\n\t\t\t<td>a.</td>\n\t\t\t<td>$O(\\mid E \\mid + \\mid V \\mid \\log \\mid V \\mid)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>ii.</td>\n\t\t\t<td>DFS</td>\n\t\t\t<td>b.</td>\n\t\t\t<td>$O(E)$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iii.</td>\n\t\t\t<td>Kruskal\'s algorithm</td>\n\t\t\t<td>c.</td>\n\t\t\t<td>Stack</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>iv.</td>\n\t\t\t<td>Dijikstra\'s Algorithm</td>\n\t\t\t<td>d.</td>\n\t\t\t<td>$O(E \\log V)$</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<ol style="list-style-type:upper-alpha">\n\t<li>i - b, ii - c, iii - a, iv - d</li>\n\t<li>i - c, ii - b, iii - d, iv - a</li>\n\t<li>i - b, ii - c, iii - d, iv - a</li>\n\t<li>i - c, ii - d, iii - a, iv - b</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-alogrithms-1,algorithms,graph-algorithms', 'category': 'Algorithms'}]}]}
+      </script>
+      

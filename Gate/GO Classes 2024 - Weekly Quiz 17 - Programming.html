@@ -1,0 +1,426 @@
+<div><span>Q1</span> - <p>The default storage class for functions in C language is –</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Static</li>
+	<li>Auto</li>
+	<li>Extern</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char *strcollection[3]= "GOClasses", "GATEOverflow", "IISc";</pre>
+
+<p>For the above declaration, consider base addresses of strcollection, "GOClasses", "GATEOverflow" and "IISc” are 1000, 2000, 3000   nbsp; and 4000 respectively.</p>
+
+<p>What will be value of strcollection+1?</p>
+
+<p>Assume character is of one bytes, integer is of two bytes and address is of four bytes.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+main()
+
+    char s[]= "jjtdabc", *p;
+
+    for (p = s; *p; p++) 
+    
+      –(*p);
+    
+
+    printf("
+</pre>
+
+<p>What will be the output of a given program?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>iitb abc</li>
+	<li>iisc abc</li>
+	<li>iisc</li>
+	<li>iitb</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What will be output of following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void xyz(int i)
+
+    if(–i)
+    
+        xyz(i++);
+        printf("
+    
+
+main()
+
+    xyz(5);
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It is an infinite recursion since no base case</li>
+	<li>2345</li>
+	<li>54321</li>
+	<li>1234</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Based on the struct alignment discussed in class,</p>
+
+<p>What are the sizes of  and  respectively?</p>
+
+<p>Sizes of primitive data types are given below.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+sizeof(int) = 4 bytes
+sizeof(short) = 2 bytes
+sizeof(char) = 1 byte
+</pre>
+
+<p>   nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct foo1 
+    int d1;
+    char c1;
+    int d2;
+;
+
+struct foo2 
+    int d1;
+    char c1;
+    int d2;
+    char c2;
+    short s;
+;
+
+struct foo3 
+    int d1;
+    int d2;
+    char c1;
+    char c2;
+    short s;
+;
+
+struct foo4 
+    char c1;
+    int d1;
+    short s;
+    int d2;
+    char c2;
+;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>9,  12,  12,  12</li>
+	<li>9,  12, 16,  20</li>
+	<li>12,  16,  12,  20</li>
+	<li>12,  20,  20,  20</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Which of the following(s) are true for following function</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int mystery(int a) 
+if(a == 256) return 3;
+    return 1 + 2 * mystery(a*4); //line 3
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>mystery(255) is an example of infinite recursion</li>
+	<li>if we replace line 3   nbsp;by following line   nbsp;return 1 + mystery(a*4)+ mystery(a*4); then also output is same</li>
+	<li>Only possible outputs are 3, 7, 15, 31</li>
+	<li>mystery(i) gives output if and only if i is 1 or multiple of 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct s
+    int i;
+    struct s *p;
+;
+struct s arr[4] =  7, arr+3,
+    8, arr+2,
+    9, arr,
+    8, arr+1,
+;
+struct s *ap[] = arr+3, arr+2, arr+1, arr;
+struct s **pp =ap;
+int main()
+
+    printf("
+    printf("
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>9  10  9</li>
+	<li>7  8  10</li>
+	<li>7  8  9</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Which of the following function declaration can be passed to the following array?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char myArray[3][4];</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char a[][], int size);</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char a[][4], int size);</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char [3][], int size);
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char [][]a, int size);</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char my_text[]= "2023 GATE";
+void fun(int position)
+
+    if (my_text[position] !=' ')
+    
+        fun(position+1);
+        printf("
+    
+
+int main() 
+    fun(0);
+</pre>
+
+<p>What will be the output of a given program ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>2023</li>
+	<li>3202</li>
+	<li>ETAG 3202</li>
+	<li>ETAG</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following declaration of pointer variable p.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int (*p)[5];</pre>
+
+<p>If the initial value of p is 1000, then what will be the value of p+1?</p>
+
+<p>It is given that the system has 8 bytes of address size and 4 bytes of integer size.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1001</li>
+	<li>1004</li>
+	<li>1020</li>
+	<li>1008</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>The default storage class for global variables in the C language is –</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Static</li>
+	<li>Auto</li>
+	<li>Extern</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following declarations of variables in a system having 4 bytes for integers.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[5][4];
+int (*p1)[2];
+int (*p2)[2];
+int (*t1)[4];
+int (*t2)[4];</pre>
+
+<p>Suppose array a has base address of 1000 and initial values of p1, p2, t1 and t2 are 1000, 1048, 1016 and 1064 respectively. What will be the value of p2-p1 and t2-t1 respectively?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>6  3</li>
+	<li>48  24</li>
+	<li>12  6</li>
+	<li>24  12</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>
+
+<p>Assume that malloc is successful in all cases.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 1:
+int *p = malloc(sizeof(int));
+*p = 0;
+free(p);
+*p = 0;
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program2:
+int *p = malloc(sizeof(int));
+*p = 0;
+free(p);
+p = 0;
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 3:
+int *p = malloc(3*sizeof(int));
+*p = 0;
+p++;
+free(p);
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 4:
+int *p = malloc(sizeof(char));
+*p = 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Program 1</li>
+	<li>Program 2</li>
+	<li>Program 3</li>
+	<li>Program 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the following declaration of struct.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct myst
+    char a[20];
+    char *b;
+    struct myst *p;
+x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
+</pre>
+
+<p>What will be the output of the following print statement?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Overflow</li>
+	<li>Classes</li>
+	<li>verflow</li>
+	<li>lasses</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Which of the following is/are TRUE about storage classes in C programming</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>static local variables are NOT available to the linker.</li>
+	<li>static global variables are available to the linker.</li>
+	<li>extern local variables are available to the linker.</li>
+	<li>extern global variables are NOT available to the linker.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Which of the following is NOT   nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 1
+auto int a; 
+main ()
+
+  auto int b; 
+  for (b = 0; b    lt; 10; b++)
+  
+    auto int a = b; 
+  
+
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 2
+static int a; 
+main ()
+
+  static int b; 
+  for (b = 0; b    lt; 10; b++)
+  
+    static int a = 1; 
+  
+
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 3
+int a; 
+main ()
+
+  static int b; 
+  for (b = 0; b    lt; 10; b++)
+  
+    static int a = 1; 
+  
+
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 4
+extern int a; 
+main ()
+
+  static int b; 
+  for (b = 0; b    lt; 10; b++)
+  
+    static int a = 1; 
+  
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Program 1</li>
+	<li>Program 2</li>
+	<li>Program 3</li>
+	<li>Program 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Which of the following is/are valid assignment(s) of the pointer for the given declaration? An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[5]= 1,2;
+int (*p)[5];
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+ p = a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+ p =    amp;a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+ p = *a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+ p = **a;
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int mystry (char* str) 
+    if (*str == 0) 
+        return 0;
+    
+    return mystry (str+1) +1;
+</pre>
+
+<p>What will be the output of mystry("hello")?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>What will be the output printed by mystery1(0,6)?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void mystery1(int a, int b) 
+    if (a    lt;= b) 
+        int m = (a + b) / 2;
+        printf("
+        mystery1(a, m-1);
+        mystery1(m+1, b);
+    
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output of the given C code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+#include   lt;stdlib.h   gt;
+int main()
+    int x, t[4] = 1,3,4,5;
+    int *p, **pp;
+    p = t;
+    pp =    amp;p;
+    printf("
+    printf("
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1  3  4</li>
+	<li>1  3  3</li>
+	<li>1  2  3</li>
+	<li>1  2  2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '374463', 'text': '<p>The default storage class for functions in C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373493', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *strcollection[3]= {"GOClasses", "GATEOverflow", "IISc"};</pre>\n\n<p>For the above declaration, consider base addresses of strcollection, "GOClasses", "GATEOverflow" and "IISc” are $1000, 2000, 3000$&nbsp; and $4000$ respectively.</p>\n\n<p>What will be value of strcollection$+1?$</p>\n\n<p>Assume character is of one bytes, integer is of two bytes and address is of four bytes.</p>', 'type': 'Numerical', 'answer': '1004', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,array-of-pointers,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373485', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain()\n{\n    char s[]= "jjtd\\0abc", *p;\n\n    for (p = s; *p; p++) \n    {\n      --(*p);\n    }\n\n    printf("%s", s);\n}</pre>\n\n<p>What will be the output of a given program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>iitb abc</li>\n\t<li>iisc abc</li>\n\t<li>iisc</li>\n\t<li>iitb</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373086', 'text': '<p>What will be output of following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid xyz(int i)\n{\n    if(--i)\n    {\n        xyz(i++);\n        printf("%d",i);\n    }\n}\nmain()\n{\n    xyz(5);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is an infinite recursion since no base case</li>\n\t<li>$2345$</li>\n\t<li>$54321$</li>\n\t<li>$1234$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374310', 'text': '<p>Based on the struct alignment discussed in class,</p>\n\n<p>What are the sizes of $\\textsf{foo1, foo2, foo3}$ and $\\textsf{foo4}$ respectively?</p>\n\n<p>Sizes of primitive data types are given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes\nsizeof(short) = 2 bytes\nsizeof(char) = 1 byte\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct foo1 {\n    int d1;\n    char c1;\n    int d2;\n};\n\nstruct foo2 {\n    int d1;\n    char c1;\n    int d2;\n    char c2;\n    short s;\n};\n\nstruct foo3 {\n    int d1;\n    int d2;\n    char c1;\n    char c2;\n    short s;\n};\n\nstruct foo4 {\n    char c1;\n    int d1;\n    short s;\n    int d2;\n    char c2;\n};\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9,\\; 12,\\; 12,\\; 12$</li>\n\t<li>$9,\\; 12,\\;16,\\; 20$</li>\n\t<li>$12,\\; 16,\\; 12,\\; 20$</li>\n\t<li>$12,\\; 20,\\; 20,\\; 20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373088', 'text': '<p>Which of the following(s) are true for following function</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\nif(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$&nbsp;by following line&nbsp;return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374317', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    8, arr+1,\n};\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d ", ap[++pp[2]-&gt;i-6]-&gt;i++);\n    printf("%d ", pp[1]++-&gt;p++-&gt;i);\n    printf("%d", ++arr[2].p-&gt;i);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9\\; 10\\; 9$</li>\n\t<li>$7 \\;8\\; 10$</li>\n\t<li>$7\\; 8\\; 9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373499', 'text': '<p>Which of the following function declaration can be passed to the following array?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar myArray[3][4];</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][], int size);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][4], int size);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char [3][], int size);\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char [][]a, int size);</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373487', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar my_text[]= "2023 GATE";\nvoid fun(int position)\n{\n    if (my_text[position] !=\' \')\n    {\n        fun(position+1);\n        printf("%c", my_text[position]);\n    }\n}\nint main() {\n    fun(0);\n}</pre>\n\n<p>What will be the output of a given program ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2023$</li>\n\t<li>$3202$</li>\n\t<li>$\\text{ETAG} 3202$</li>\n\t<li>$\\text{ETAG}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374736', 'text': '<p>Consider the following declaration of pointer variable $p.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[5];</pre>\n\n<p>If the initial value of $p$ is $1000,$ then what will be the value of $p+1?$</p>\n\n<p>It is given that the system has $8$ bytes of address size and $4$ bytes of integer size.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1001$</li>\n\t<li>$1004$</li>\n\t<li>$1020$</li>\n\t<li>$1008$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374462', 'text': '<p>The default storage class for global variables in the C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373495', 'text': '<p>Consider the following declarations of variables in a system having $4$ bytes for integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[5][4];\nint (*p1)[2];\nint (*p2)[2];\nint (*t1)[4];\nint (*t2)[4];</pre>\n\n<p>Suppose array a has base address of $1000$ and initial values of $p1, p2, t1$ and $t2$ are $1000, 1048, 1016$ and $1064$ respectively. What will be the value of $p2-p1$ and $t2-t1$ respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$6 \\;3$</li>\n\t<li>$48\\; 24 $</li>\n\t<li>$12\\; 6$</li>\n\t<li>$24\\; 12$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374308', 'text': '<p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>\n\n<p>Assume that malloc is successful in all cases.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\n*p = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram2:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\np = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3:\nint *p = malloc(3*sizeof(int));\n*p = 0;\np++;\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4:\nint *p = malloc(sizeof(char));\n*p = 0;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374313', 'text': '<p>Consider the following declaration of struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct myst{\n    char a[20];\n    char *b;\n    struct myst *p;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\n</pre>\n\n<p>What will be the output of the following print statement?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%s", p++-&gt;p-&gt;b++);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Overflow</li>\n\t<li>Classes</li>\n\t<li>verflow</li>\n\t<li>lasses</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374465', 'text': '<p>Which of the following is/are TRUE about storage classes in C programming</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>static local variables are NOT available to the linker.</li>\n\t<li>static global variables are available to the linker.</li>\n\t<li>extern local variables are available to the linker.</li>\n\t<li>extern global variables are NOT available to the linker.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374466', 'text': '<p>Which of the following is NOT&nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nauto int a; \nmain ()\n{\n  auto int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    auto int a = b; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstatic int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nextern int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374739', 'text': '<p>Which of the following is/are valid assignment(s) of the pointer for the given declaration? An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[5]= {1,2};\nint (*p)[5];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = &amp;a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = *a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = **a;\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,pointers,array-of-pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373483', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystry (char* str) {\n    if (*str == 0) {\n        return 0;\n    }\n    return mystry (str+1) +1;\n}</pre>\n\n<p>What will be the output of mystry("hello")?</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373085', 'text': '<p>What will be the output printed by $\\text{mystery}1(0,6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery1(int a, int b) {\n    if (a &lt;= b) {\n        int m = (a + b) / 2;\n        printf("%d", m);\n        mystery1(a, m-1);\n        mystery1(m+1, b);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '3102546', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374741', 'text': '<p>What will be the output of the given C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;stdlib.h&gt;\nint main(){\n    int x, t[4] = {1,3,4,5};\n    int *p, **pp;\n    p = t;\n    pp = &amp;p;\n    printf("%d ", *p);\n    printf("%d ", **pp+1);\n    printf("%d", *(*pp+1));\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 3\\; 4$</li>\n\t<li>$1\\; 3\\; 3$</li>\n\t<li>$1 \\;2 \\;3$</li>\n\t<li>$1 \\;2 \\;2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}]
+      let data={'name': 'GO Classes 2024 | Weekly Quiz 17 | Programming', 'duration': '60', 'total_qs': '20', 'total_qs_one': 15, 'total_qs_two': 5, 'apti_num_qs': 0, 'technical_num_qs': 20, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 20, 'marks': 25, 'question': [{'contents': '', 'post_id': '374463', 'text': '<p>The default storage class for functions in C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373493', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar *strcollection[3]= {"GOClasses", "GATEOverflow", "IISc"};</pre>\n\n<p>For the above declaration, consider base addresses of strcollection, "GOClasses", "GATEOverflow" and "IISc” are $1000, 2000, 3000$&nbsp; and $4000$ respectively.</p>\n\n<p>What will be value of strcollection$+1?$</p>\n\n<p>Assume character is of one bytes, integer is of two bytes and address is of four bytes.</p>', 'type': 'Numerical', 'answer': '1004', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,array-of-pointers,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373485', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain()\n{\n    char s[]= "jjtd\\0abc", *p;\n\n    for (p = s; *p; p++) \n    {\n      --(*p);\n    }\n\n    printf("%s", s);\n}</pre>\n\n<p>What will be the output of a given program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>iitb abc</li>\n\t<li>iisc abc</li>\n\t<li>iisc</li>\n\t<li>iitb</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373086', 'text': '<p>What will be output of following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid xyz(int i)\n{\n    if(--i)\n    {\n        xyz(i++);\n        printf("%d",i);\n    }\n}\nmain()\n{\n    xyz(5);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is an infinite recursion since no base case</li>\n\t<li>$2345$</li>\n\t<li>$54321$</li>\n\t<li>$1234$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374310', 'text': '<p>Based on the struct alignment discussed in class,</p>\n\n<p>What are the sizes of $\\textsf{foo1, foo2, foo3}$ and $\\textsf{foo4}$ respectively?</p>\n\n<p>Sizes of primitive data types are given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes\nsizeof(short) = 2 bytes\nsizeof(char) = 1 byte\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct foo1 {\n    int d1;\n    char c1;\n    int d2;\n};\n\nstruct foo2 {\n    int d1;\n    char c1;\n    int d2;\n    char c2;\n    short s;\n};\n\nstruct foo3 {\n    int d1;\n    int d2;\n    char c1;\n    char c2;\n    short s;\n};\n\nstruct foo4 {\n    char c1;\n    int d1;\n    short s;\n    int d2;\n    char c2;\n};\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9,\\; 12,\\; 12,\\; 12$</li>\n\t<li>$9,\\; 12,\\;16,\\; 20$</li>\n\t<li>$12,\\; 16,\\; 12,\\; 20$</li>\n\t<li>$12,\\; 20,\\; 20,\\; 20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373088', 'text': '<p>Which of the following(s) are true for following function</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\nif(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$&nbsp;by following line&nbsp;return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374317', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    8, arr+1,\n};\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d ", ap[++pp[2]-&gt;i-6]-&gt;i++);\n    printf("%d ", pp[1]++-&gt;p++-&gt;i);\n    printf("%d", ++arr[2].p-&gt;i);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9\\; 10\\; 9$</li>\n\t<li>$7 \\;8\\; 10$</li>\n\t<li>$7\\; 8\\; 9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373499', 'text': '<p>Which of the following function declaration can be passed to the following array?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar myArray[3][4];</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][], int size);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][4], int size);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char [3][], int size);\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char [][]a, int size);</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373487', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar my_text[]= "2023 GATE";\nvoid fun(int position)\n{\n    if (my_text[position] !=\' \')\n    {\n        fun(position+1);\n        printf("%c", my_text[position]);\n    }\n}\nint main() {\n    fun(0);\n}</pre>\n\n<p>What will be the output of a given program ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2023$</li>\n\t<li>$3202$</li>\n\t<li>$\\text{ETAG} 3202$</li>\n\t<li>$\\text{ETAG}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374736', 'text': '<p>Consider the following declaration of pointer variable $p.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[5];</pre>\n\n<p>If the initial value of $p$ is $1000,$ then what will be the value of $p+1?$</p>\n\n<p>It is given that the system has $8$ bytes of address size and $4$ bytes of integer size.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1001$</li>\n\t<li>$1004$</li>\n\t<li>$1020$</li>\n\t<li>$1008$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374462', 'text': '<p>The default storage class for global variables in the C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373495', 'text': '<p>Consider the following declarations of variables in a system having $4$ bytes for integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[5][4];\nint (*p1)[2];\nint (*p2)[2];\nint (*t1)[4];\nint (*t2)[4];</pre>\n\n<p>Suppose array a has base address of $1000$ and initial values of $p1, p2, t1$ and $t2$ are $1000, 1048, 1016$ and $1064$ respectively. What will be the value of $p2-p1$ and $t2-t1$ respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$6 \\;3$</li>\n\t<li>$48\\; 24 $</li>\n\t<li>$12\\; 6$</li>\n\t<li>$24\\; 12$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374308', 'text': '<p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>\n\n<p>Assume that malloc is successful in all cases.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\n*p = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram2:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\np = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3:\nint *p = malloc(3*sizeof(int));\n*p = 0;\np++;\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4:\nint *p = malloc(sizeof(char));\n*p = 0;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374313', 'text': '<p>Consider the following declaration of struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct myst{\n    char a[20];\n    char *b;\n    struct myst *p;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\n</pre>\n\n<p>What will be the output of the following print statement?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%s", p++-&gt;p-&gt;b++);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Overflow</li>\n\t<li>Classes</li>\n\t<li>verflow</li>\n\t<li>lasses</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374465', 'text': '<p>Which of the following is/are TRUE about storage classes in C programming</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>static local variables are NOT available to the linker.</li>\n\t<li>static global variables are available to the linker.</li>\n\t<li>extern local variables are available to the linker.</li>\n\t<li>extern global variables are NOT available to the linker.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374466', 'text': '<p>Which of the following is NOT&nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nauto int a; \nmain ()\n{\n  auto int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    auto int a = b; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstatic int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nextern int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374739', 'text': '<p>Which of the following is/are valid assignment(s) of the pointer for the given declaration? An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[5]= {1,2};\nint (*p)[5];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = &amp;a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = *a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n p = **a;\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,pointers,array-of-pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373483', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystry (char* str) {\n    if (*str == 0) {\n        return 0;\n    }\n    return mystry (str+1) +1;\n}</pre>\n\n<p>What will be the output of mystry("hello")?</p>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373085', 'text': '<p>What will be the output printed by $\\text{mystery}1(0,6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery1(int a, int b) {\n    if (a &lt;= b) {\n        int m = (a + b) / 2;\n        printf("%d", m);\n        mystery1(a, m-1);\n        mystery1(m+1, b);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '3102546', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374741', 'text': '<p>What will be the output of the given C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;stdlib.h&gt;\nint main(){\n    int x, t[4] = {1,3,4,5};\n    int *p, **pp;\n    p = t;\n    pp = &amp;p;\n    printf("%d ", *p);\n    printf("%d ", **pp+1);\n    printf("%d", *(*pp+1));\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 3\\; 4$</li>\n\t<li>$1\\; 3\\; 3$</li>\n\t<li>$1 \\;2 \\;3$</li>\n\t<li>$1 \\;2 \\;2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}]}]}
+      </script>
+      

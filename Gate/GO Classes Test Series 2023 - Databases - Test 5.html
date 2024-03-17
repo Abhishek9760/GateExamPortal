@@ -1,0 +1,420 @@
+<div><span>Q1</span> - <p>Assume by "Serializability", we mean "Conflict Serializability".<br>
+For the given schedule, which of the following is TRUE?</p>
+
+<table border="1" cellpadding="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>T_1</td>
+			<td>T_2</td>
+			<td>T_3</td>
+			<td>T_4</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+			<td>Read(A)</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>Read(A)</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+			<td>Read(A)</td>
+			<td>   nbsp;</td>
+		</tr>
+		<tr>
+			<td>Write(B)</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>Write(A)</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+			<td>Read(B)</td>
+			<td>   nbsp;</td>
+		</tr>
+		<tr>
+			<td>   nbsp;</td>
+			<td>Write(B)</td>
+			<td>   nbsp;</td>
+			<td>   nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<ol style="list-style-type:upper-alpha">
+	<li>The above schedule is not serializable</li>
+	<li>The above schedule is equivalent to serial schedule T_3, T_4, T_1, T_2</li>
+	<li>The above schedule is equivalent to serial schedule T_1, T_4, T_3, T_2</li>
+	<li>The above schedule is equivalent to serial schedule T_2, T_3, T_1, T_4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following concurrent execution of three transactions T_1, T_2, T_3 :<br>
+
+    [            nbsp;T_1  amp; T_2  amp; T_3;      w(x)      amp;      amp;;     nbsp; amp; r(y)      amp;;     nbsp;      amp; amp; w(z);      w(y)      amp;      amp;;           amp; r(z)      amp;;     nbsp;      amp; amp; w(z);               nbsp; ]
+</p>
+
+<ul>
+	<li>w(P) means Write operation on “P"</li>
+	<li>r(P) means Read operation on “P"</li>
+</ul>
+
+<p>Which of the following is/are False about the given schedule?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It is conflict serializable.</li>
+	<li>It is view serializable.</li>
+	<li>It can be produced by a Two Phase Lock (2PL) scheduler.</li>
+	<li>It can be produced by a strict 2 PL scheduler.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Let transactions T1, T2 and T3 be defined to perform the following operations :</p>
+
+<ul>
+	<li>T1 : Add one to A</li>
+	<li>T2 : Double A</li>
+	<li>T3 : Display A on the screen and then set it to 1 ie. A = 1.</li>
+</ul>
+
+<p>(where A is some item in the database)<br>
+Suppose transactions T1, T2 and T3 are allowed to execute concurrently. If A has initial value zero, report the possible values of final value of A and the displayed value of A.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1,2</li>
+	<li>2,1</li>
+	<li>3,0</li>
+	<li>4,0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>To check for conflict serializability of any schedule, we draw its Precedence graph. In the precedence graph we have a node for each transaction T_i and An edge from T_i to T_j whenever an action in T_i conflicts with, and comes before an action in T_j.</p>
+
+<p>For a conflict serializable schedule S, which of the following is guaranteed to give a serial schedule that is conflict equivalent to S, in the precedence Graph?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Depth-first order</li>
+	<li>Topological order</li>
+	<li>Breadth-first order</li>
+	<li>None</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following schedule S :<br>
+
+    start1; start2; r1(A); r2(B); w2(A); w1(B);
+<br>
+“start #" means beginning of transaction #, then which of the following is/are Incorrect?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S is possible under basic Timestamp Ordering (T/O) protocol.</li>
+	<li>S is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>
+	<li>S is conflict serializable.</li>
+	<li>S is view serializable.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Which of the following statements is/are true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Serializability is the property that a (possibly interleaved) execution of a group of transactions has the same effect on the database and produces the same output as some serial execution of those transactions.</li>
+	<li>The following schedule is serializable:<br>
+	r 1[X] →w 1[X] →r 2[Y] →w 2[Y] →r 2[X] →w 2[X] →r 1[Z] →w 1[Z] →c 1 →c 2<br>
+	Here in T#[A], T represents operation(read/write), # represents transaction number, A represents the item on which operation is being performed.</li>
+	<li>Strict two-phase locking (2PL) ensures that transactions never deadlock.</li>
+	<li>Strict two-phase locking (2PL) ensures conflict serializability.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following schedule S :<br>
+
+    <br>
+    [   <br>
+    T_1:        amp;        amp; amp; r_1(A)        amp; amp; w_1(B)        amp;        amp;;   <br>
+    T_2: amp; r_2(B) amp; w_2(A)        amp;        amp;        amp; amp; w_2(B)        amp;;   <br>
+    T_3:        amp;        amp;        amp; amp; r_3(A)        amp;        amp; amp; w_3(B);        <br> ]<br>
+<br>
+Which of the following is/are true for this schedule?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It is conflict serializable but not view serializable.</li>
+	<li>It is view serializable but not conflict serializable.</li>
+	<li>It is neither conflict nor view serializable.</li>
+	<li>It is both conflict and view serializable.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following schedule S :</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=9369549588550516858"></p>
+
+<p><br>
+The time-stamps of T1, T2 are 1,2 respectively then which of the following is/are Incorrect?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S is possible under basic Timestamp Ordering (T/O) protocol.</li>
+	<li>S is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>
+	<li>S is conflict serializable.</li>
+	<li>S is view serializable.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following schedule :<br>
+
+    [       <br>
+    T_1      amp;  T_2      amp;  T_3      amp;  T_4;      <br>
+    W(a)           amp;           amp;           amp;;           <br>      amp; R(a)           amp;           amp;;           <br>           amp;      amp; W(a)           amp;; nbsp;<br>
+    W(a)           amp;           amp;           amp;;           <br>           amp;           amp;      amp; W(a);           <br> ]
+<br>
+Which of the following is/are true for this schedule?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It is conflict serializable but not view serializable.</li>
+	<li>It is view serializable but not conflict serializable.</li>
+	<li>It is neither conflict nor view serializable.</li>
+	<li>It is both conflict and view serializable.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>In the following, when a transaction T performs an operation x=x+a, then T reads x into some register, adds a to the register content then stores register content into x.</p>
+
+<p>A transaction schedule is serializable if its effect is equivalent to that of some serial schedule. Consider a bookkeeping operation consisting of two transactions -T_1 and T_2- that are required to keep the sum A+B+C unchanged. Which of the following pairs of transactions will always result in a serializable schedule?</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=11724537551324705459"></p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>I only</li>
+	<li>II only</li>
+	<li>III only</li>
+	<li>I and II</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Suppose that transaction T 1 aborts after the following sequence of read write operations in the given schedule below :   nbsp;
+    Write1(X);   nbsp; Write2(X);   nbsp; Write1(Y); Read3(Y) ; Read4(X) ; Read4(Z)
+<br>
+Which of the other transactions would need to be rolled back?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>T2</li>
+	<li>T3</li>
+	<li>T4</li>
+	<li>None</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following schedules:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>
+			<table border="1" cellpadding="1" style="width:115px">
+				<tbody>
+					<tr>
+						<td colspan="2" style="width:105px">   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp; <strong>S1</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px"><strong>   nbsp;    nbsp;T1</strong></td>
+						<td style="width:51px"><strong>   nbsp; T2</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(A)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">W(A)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="height:1px; width:48px">   nbsp;</td>
+						<td style="height:1px; width:51px">R(B)</td>
+					</tr>
+					<tr>
+						<td style="height:1px; width:48px">R(B)</td>
+						<td style="height:1px; width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">W(B)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">W(A)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">R(C)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(C)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>
+			<table border="1" cellpadding="1" style="width:115px">
+				<tbody>
+					<tr>
+						<td colspan="2" style="width:105px">   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp; <strong>S2</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px"><strong>   nbsp;    nbsp;T1</strong></td>
+						<td style="width:51px"><strong>   nbsp; T2</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">R(B)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">W(A)</td>
+					</tr>
+					<tr>
+						<td style="height:1px; width:48px">R(A)</td>
+						<td style="height:1px; width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="height:1px; width:48px">W(A)</td>
+						<td style="height:1px; width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(B)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">W(B)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">R(C)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(C)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>
+			<table border="1" cellpadding="1" style="width:115px">
+				<tbody>
+					<tr>
+						<td colspan="2" style="width:105px">   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp; <strong>S3</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px"><strong>   nbsp;    nbsp;T1</strong></td>
+						<td style="width:51px"><strong>   nbsp;    nbsp;T2</strong></td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(A)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">W(A)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">R(B)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">W(A)</td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(B)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">W(B)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">R(C)</td>
+						<td style="width:51px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:48px">   nbsp;</td>
+						<td style="width:51px">R(C)</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td>
+			<table border="1" cellpadding="1" style="width:118px">
+				<tbody>
+					<tr>
+						<td colspan="2" style="height:24px; width:108px">   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;<strong>S4</strong></td>
+					</tr>
+					<tr>
+						<td style="width:49px"><strong>   nbsp;    nbsp; T1</strong></td>
+						<td style="width:56px"><strong>   nbsp;    nbsp;T2</strong></td>
+					</tr>
+					<tr>
+						<td style="width:49px">   nbsp;</td>
+						<td style="width:56px">R(B)</td>
+					</tr>
+					<tr>
+						<td style="width:49px">R(A)</td>
+						<td style="width:56px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:49px">   nbsp;</td>
+						<td style="width:56px">W(A)</td>
+					</tr>
+					<tr>
+						<td style="width:49px">W(A)</td>
+						<td style="width:56px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:49px">R(B)</td>
+						<td style="width:56px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:49px">W(B)</td>
+						<td style="width:56px">   nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width:49px">   nbsp;</td>
+						<td style="width:56px">R(C)</td>
+					</tr>
+					<tr>
+						<td style="width:49px">R(C)</td>
+						<td style="width:56px">   nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear:both">Which of the above schedule(s) is/are conflict serializable?</div>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S1 and S2 only</li>
+	<li>S2 only</li>
+	<li>S1 only</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider a database schedule of two transactions T1, T2. T1 first reads A and B and then writes A and B. T2 reads and writes A then reads and writes B. Consider the following statements. Which of the following statements are correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Every concurrent/interleaved execution of these transactions will lead to a conflict serializable schedule.</li>
+	<li>Every concurrent/interleaved execution of these transactions will lead to a view serializable schedule.</li>
+	<li>If a concurrent/interleaved execution of these transactions lead to a non-conflict serializable schedule then that schedule is also non-view serializable.</li>
+	<li>If a concurrent/interleaved execution of these transactions lead to a non-view serializable schedule then that schedule is also non-conflict serializable.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>A simple way to detect a state of deadlock is to construct a wait-for graph. One node is created in the graph for each transaction that is currently executing in the schedule. Whenever a transaction T_i is waiting to lock an item X that is currently locked by a transaction T_j, it creates a directed edge (T_i #T_j). When T_j releases the lock(s) on the items that T_i was waiting for, the directed edge is dropped from the waiting-for graph.</p>
+
+<p>Given the graph below, which is/are deadlock free?</p>
+
+<ol style="list-style-type:upper-alpha" type="A">
+	<li><img src="https://gateoverflow.in/?qa=blob&qa_blobid=13631842932808604895"></li>
+	<li><img src="https://gateoverflow.in/?qa=blob&qa_blobid=282752440950274523"></li>
+	<li><img src="https://gateoverflow.in/?qa=blob&qa_blobid=13692842760456249382"></li>
+	<li><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10912162148821836843"><br>
+	   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the following schedule:<br>
+
+    <br>
+    <br>
+    S = (2, W, x),(1, W, z),(1, W, x), C1,(2, W, y),(2, R, y)<br>
+    (3, W, z),(3, W, m), C3,(2, R, m), C2.<br>
+    <br>
+<br>
+Where Ci means commit of i^th transaction. Triple (i, W / R, x) means Transaction i writes/reads item x.<br>
+Which of the following statements is/are true for S?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S is conflict serializable.</li>
+	<li>S is view serializable but not conflict serializable.</li>
+	<li>S is not view serializable.</li>
+	<li>None</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '385433', 'text': '<p>Assume by "Serializability", we mean "Conflict Serializability".<br>\nFor the given schedule, which of the following is TRUE?</p>\n\n<table border="1" cellpadding="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>$\\text{T}_1$</td>\n\t\t\t<td>$\\text{T}_2$</td>\n\t\t\t<td>$\\text{T}_3$</td>\n\t\t\t<td>$\\text{T}_4$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Write(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Write(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Write(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The above schedule is not serializable</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_3, \\text{T}_4, \\text{T}_1, \\text{T}_2$</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_1, \\text{T}_4, \\text{T}_3, \\text{T}_2$</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_2, \\text{T}_3, \\text{T}_1, \\text{T}_4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385425', 'text': '<p>Consider the following concurrent execution of three transactions $\\text{T}_1, \\text{T}_2, \\text{T}_3 :$<br>\n$$\\begin{array}{|c|c|c|} \\hline&nbsp;\\text{T}_{1} &amp; \\text{T}_{2} &amp; \\text{T}_{3} \\\\\\hline w(x) &amp; &amp; \\\\&nbsp; &amp; r(y) &amp; \\\\&nbsp; &amp; &amp; w(z) \\\\ w(y) &amp; &amp; \\\\ &amp; r(z) &amp; \\\\&nbsp; &amp; &amp; w(z) \\\\\\hline&nbsp; \\end{array}$$</p>\n\n<ul>\n\t<li>$w\\text{(P)}$ means Write operation on $\\text{“P"}$</li>\n\t<li>$r\\text{(P)}$ means Read operation on $\\text{“P"}$</li>\n</ul>\n\n<p>Which of the following is/are False about the given schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable.</li>\n\t<li>It is view serializable.</li>\n\t<li>It can be produced by a Two Phase Lock $\\text{(2PL)}$ scheduler.</li>\n\t<li>It can be produced by a strict $2 \\mathrm{PL}$ scheduler.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385411', 'text': '<p>Let transactions $\\text{T1, T2}$ and $\\text{T3}$ be defined to perform the following operations :</p>\n\n<ul>\n\t<li>$\\text{T1} :$ Add one to $\\text{A}$</li>\n\t<li>$\\text{T2} :$ Double $\\text{A}$</li>\n\t<li>$\\text{T3} :$ Display $\\text{A}$ on the screen and then set it to $1$ ie. $\\text{A} = 1.$</li>\n</ul>\n\n<p>(where $\\text{A}$ is some item in the database)<br>\nSuppose transactions $\\text{T1, T2}$ and $\\text{T3}$ are allowed to execute concurrently. If $\\text{A}$ has initial value zero, report the possible values of final value of $\\text{A}$ and the displayed value of $\\text{A}.$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1,2$</li>\n\t<li>$2,1$</li>\n\t<li>$3,0$</li>\n\t<li>$4,0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385431', 'text': '<p>To check for conflict serializability of any schedule, we draw its Precedence graph. In the precedence graph we have a node for each transaction $\\text{T}_i$ and An edge from $\\text{T}_i$ to $\\text{T}_j$ whenever an action in $\\text{T}_i$ conflicts with, and comes before an action in $\\text{T}_j.$</p>\n\n<p>For a conflict serializable schedule $\\text{S},$ which of the following is guaranteed to give a serial schedule that is conflict equivalent to $\\text{S},$ in the precedence Graph?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Depth-first order</li>\n\t<li>Topological order</li>\n\t<li>Breadth-first order</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385419', 'text': '<p>Consider the following schedule $\\text{S :}$<br>\n$$\\text{start1; start2; r1(A); r2(B); w2(A); w1(B);}$$<br>\n$\\text{“start #"}$ means beginning of transaction $\\#,$ then which of the following is/are Incorrect?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{S}$ is possible under basic Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\mathrm{S}$ is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\mathrm{S}$ is conflict serializable.</li>\n\t<li>$\\mathrm{S}$ is view serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385435', 'text': '<p>Which of the following statements is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Serializability is the property that a (possibly interleaved) execution of a group of transactions has the same effect on the database and produces the same output as some serial execution of those transactions.</li>\n\t<li>The following schedule is serializable:<br>\n\t$\\mathrm{r} 1[\\mathrm{X}] \\rightarrow \\mathrm{w} 1[\\mathrm{X}] \\rightarrow \\mathrm{r} 2[\\mathrm{Y}] \\rightarrow \\mathrm{w} 2[\\mathrm{Y}] \\rightarrow \\mathrm{r} 2[\\mathrm{X}] \\rightarrow \\mathrm{w} 2[\\mathrm{X}] \\rightarrow \\mathrm{r} 1[\\mathrm{Z}] \\rightarrow \\mathrm{w} 1[\\mathrm{Z}] \\rightarrow \\mathrm{c} 1 \\rightarrow \\mathrm{c} 2$<br>\n\tHere in $\\mathrm{T} \\#[\\mathrm{A}],\\; \\text{T}$ represents operation(read/write)$, \\#$ represents transaction number$,\\; \\text{A}$ represents the item on which operation is being performed.</li>\n\t<li>Strict two-phase locking $\\text{(2PL)}$ ensures that transactions never deadlock.</li>\n\t<li>Strict two-phase locking $\\text{(2PL)}$ ensures conflict serializability.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,serializability,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385413', 'text': '<p>Consider the following schedule $\\mathrm{S}$ :<br>\n$$<br>\n\\begin{array}{llllllll}<br>\nT_1: &amp; &amp; &amp; r_1(A) &amp; &amp; w_1(B) &amp; &amp; \\\\<br>\nT_2: &amp; r_2(B) &amp; w_2(A) &amp; &amp; &amp; &amp; w_2(B) &amp; \\\\<br>\nT_3: &amp; &amp; &amp; &amp; r_3(A) &amp; &amp; &amp; w_3(B) \\\\<br>\n\\end{array}<br>\n$$<br>\nWhich of the following is/are true for this schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable but not view serializable.</li>\n\t<li>It is view serializable but not conflict serializable.</li>\n\t<li>It is neither conflict nor view serializable.</li>\n\t<li>It is both conflict and view serializable.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385421', 'text': '<p>Consider the following schedule $\\text{S :}$</p>\n\n<p style="text-align:center"><img alt="" height="362" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=9369549588550516858" width="322"></p>\n\n<p><br>\nThe time-stamps of $\\text{T1, T2}$ are $1,2$ respectively then which of the following is/are Incorrect?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S}$ is possible under basic Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\text{S}$ is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\text{S}$ is conflict serializable.</li>\n\t<li>$\\text{S}$ is view serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385415', 'text': '<p>Consider the following schedule :<br>\n$$\\begin{array}{|c|c|c|c|}<br>\n\\hline \\mathrm{T}_1 &amp; \\mathrm{~T}_2 &amp; \\mathrm{~T}_3 &amp; \\mathrm{~T}_4 \\\\<br>\n\\hline \\mathrm{W}(\\mathrm{a}) &amp; &amp; &amp; \\\\<br>\n\\hline &amp; \\mathrm{R}(\\mathrm{a}) &amp; &amp; \\\\<br>\n\\hline &amp; &amp; \\mathrm{W}(\\mathrm{a}) &amp; \\\\&nbsp;<br>\n\\hline \\mathrm{W}(\\mathrm{a}) &amp; &amp; &amp; \\\\<br>\n\\hline &amp; &amp; &amp; \\mathrm{W}(\\mathrm{a}) \\\\<br>\n\\hline \\end{array}$$<br>\nWhich of the following is/are true for this schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable but not view serializable.</li>\n\t<li>It is view serializable but not conflict serializable.</li>\n\t<li>It is neither conflict nor view serializable.</li>\n\t<li>It is both conflict and view serializable.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385409', 'text': '<p>In the following, when a transaction $\\mathrm{T}$ performs an operation $x=x+a$, then $\\mathrm{T}$ reads $x$ into some register, adds a to the register content then stores register content into $x$.</p>\n\n<p>A transaction schedule is serializable if its effect is equivalent to that of some serial schedule. Consider a bookkeeping operation consisting of two transactions $-\\text{T}_1$ and $\\text{T}_2-$ that are required to keep the sum $\\text{A+B+C}$ unchanged. Which of the following pairs of transactions will always result in a serializable schedule?</p>\n\n<p style="text-align:center"><img alt="" height="427" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11724537551324705459" width="381"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I only</li>\n\t<li>II only</li>\n\t<li>III only</li>\n\t<li>I and II</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,serializability,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385427', 'text': '<p>Suppose that transaction $\\mathrm{T} 1$ aborts after the following sequence of read write operations in the given schedule below :&nbsp;$$\\text{Write1(X);&nbsp; Write2(X);&nbsp; Write1(Y)};\\; \\operatorname{Read3}(\\mathrm{Y}) ;\\; \\operatorname{Read}4(\\mathrm{X}) ;\\; \\operatorname{Read}4(\\mathrm{Z})$$<br>\nWhich of the other transactions would need to be rolled back?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{T2}$</li>\n\t<li>$\\text{T3}$</li>\n\t<li>$\\text{T4}$</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385429', 'text': '<p>Consider the following schedules:</p>\n\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S1</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S3</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; &nbsp;T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:118px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="height:24px; width:108px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>S4</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px"><strong>&nbsp; &nbsp; T1</strong></td>\n\t\t\t\t\t\t<td style="width:56px"><strong>&nbsp; &nbsp;T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(A)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">W(A)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(B)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">W(B)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(C)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<div style="clear:both">Which of the above schedule(s) is/are conflict serializable?</div>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ and $\\text{S2}$ only</li>\n\t<li>$\\text{S2}$ only</li>\n\t<li>$\\text{S1}$ only</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385423', 'text': '<p>Consider a database schedule of two transactions $\\text{T1, T2}.\\;\\text{T1}$ first reads $\\text{A}$ and $\\text{B}$ and then writes $\\text{A}$ and $\\text{B}.\\; \\text{T2}$ reads and writes $\\text{A}$ then reads and writes $\\text{B}.$ Consider the following statements. Which of the following statements are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Every concurrent/interleaved execution of these transactions will lead to a conflict serializable schedule.</li>\n\t<li>Every concurrent/interleaved execution of these transactions will lead to a view serializable schedule.</li>\n\t<li>If a concurrent/interleaved execution of these transactions lead to a non-conflict serializable schedule then that schedule is also non-view serializable.</li>\n\t<li>If a concurrent/interleaved execution of these transactions lead to a non-view serializable schedule then that schedule is also non-conflict serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385437', 'text': '<p>A simple way to detect a state of deadlock is to construct a wait-for graph. One node is created in the graph for each transaction that is currently executing in the schedule. Whenever a transaction $\\text{T}_i$ is waiting to lock an item $\\text{X}$ that is currently locked by a transaction $\\text{T}_j,$ it creates a directed edge $(\\text{T}_i \\# \\text{T}_j).$ When $\\text{T}_j$ releases the lock(s) on the items that $\\text{T}_i$ was waiting for, the directed edge is dropped from the waiting-for graph.</p>\n\n<p>Given the graph below, which is/are deadlock free?</p>\n\n<ol style="list-style-type:upper-alpha" type="A">\n\t<li><img alt="" height="114" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=13631842932808604895" width="179"></li>\n\t<li><img alt="" height="117" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=282752440950274523" width="169"></li>\n\t<li><img alt="" height="97" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=13692842760456249382" width="223"></li>\n\t<li><img alt="" height="98" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10912162148821836843" width="229"><br>\n\t&nbsp;</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385417', 'text': '<p>Consider the following schedule:<br>\n$$<br>\n\\begin{gathered}<br>\n\\text{S = (2, W, x),(1, W, z),(1, W, x), C1,(2, W, y),(2, R, y)}<br>\n\\text{(3, W, z),(3, W, m), C3,(2, R, m), C2}.<br>\n\\end{gathered}<br>\n$$<br>\nWhere $\\text{Ci}$ means commit of $\\text{i}^{\\text{th}}$ transaction. Triple $\\text{(i, W / R, x)}$ means Transaction $\\text{i}$ writes/reads item $\\text{x}.$<br>\nWhich of the following statements is/are true for $\\text{S}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S}$ is conflict serializable.</li>\n\t<li>$\\text{S}$ is view serializable but not conflict serializable.</li>\n\t<li>$\\text{S}$ is not view serializable.</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}]
+      let data={'name': 'GO Classes Test Series 2023 | Databases | Test 5', 'duration': '50', 'total_qs': '15', 'total_qs_one': 6, 'total_qs_two': 9, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 24, 'total_marks': 24, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 24, 'question': [{'contents': '', 'post_id': '385433', 'text': '<p>Assume by "Serializability", we mean "Conflict Serializability".<br>\nFor the given schedule, which of the following is TRUE?</p>\n\n<table border="1" cellpadding="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>$\\text{T}_1$</td>\n\t\t\t<td>$\\text{T}_2$</td>\n\t\t\t<td>$\\text{T}_3$</td>\n\t\t\t<td>$\\text{T}_4$</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Write(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Write(A)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Read(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Write(B)</td>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The above schedule is not serializable</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_3, \\text{T}_4, \\text{T}_1, \\text{T}_2$</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_1, \\text{T}_4, \\text{T}_3, \\text{T}_2$</li>\n\t<li>The above schedule is equivalent to serial schedule $\\text{T}_2, \\text{T}_3, \\text{T}_1, \\text{T}_4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385425', 'text': '<p>Consider the following concurrent execution of three transactions $\\text{T}_1, \\text{T}_2, \\text{T}_3 :$<br>\n$$\\begin{array}{|c|c|c|} \\hline&nbsp;\\text{T}_{1} &amp; \\text{T}_{2} &amp; \\text{T}_{3} \\\\\\hline w(x) &amp; &amp; \\\\&nbsp; &amp; r(y) &amp; \\\\&nbsp; &amp; &amp; w(z) \\\\ w(y) &amp; &amp; \\\\ &amp; r(z) &amp; \\\\&nbsp; &amp; &amp; w(z) \\\\\\hline&nbsp; \\end{array}$$</p>\n\n<ul>\n\t<li>$w\\text{(P)}$ means Write operation on $\\text{“P"}$</li>\n\t<li>$r\\text{(P)}$ means Read operation on $\\text{“P"}$</li>\n</ul>\n\n<p>Which of the following is/are False about the given schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable.</li>\n\t<li>It is view serializable.</li>\n\t<li>It can be produced by a Two Phase Lock $\\text{(2PL)}$ scheduler.</li>\n\t<li>It can be produced by a strict $2 \\mathrm{PL}$ scheduler.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385411', 'text': '<p>Let transactions $\\text{T1, T2}$ and $\\text{T3}$ be defined to perform the following operations :</p>\n\n<ul>\n\t<li>$\\text{T1} :$ Add one to $\\text{A}$</li>\n\t<li>$\\text{T2} :$ Double $\\text{A}$</li>\n\t<li>$\\text{T3} :$ Display $\\text{A}$ on the screen and then set it to $1$ ie. $\\text{A} = 1.$</li>\n</ul>\n\n<p>(where $\\text{A}$ is some item in the database)<br>\nSuppose transactions $\\text{T1, T2}$ and $\\text{T3}$ are allowed to execute concurrently. If $\\text{A}$ has initial value zero, report the possible values of final value of $\\text{A}$ and the displayed value of $\\text{A}.$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1,2$</li>\n\t<li>$2,1$</li>\n\t<li>$3,0$</li>\n\t<li>$4,0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385431', 'text': '<p>To check for conflict serializability of any schedule, we draw its Precedence graph. In the precedence graph we have a node for each transaction $\\text{T}_i$ and An edge from $\\text{T}_i$ to $\\text{T}_j$ whenever an action in $\\text{T}_i$ conflicts with, and comes before an action in $\\text{T}_j.$</p>\n\n<p>For a conflict serializable schedule $\\text{S},$ which of the following is guaranteed to give a serial schedule that is conflict equivalent to $\\text{S},$ in the precedence Graph?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Depth-first order</li>\n\t<li>Topological order</li>\n\t<li>Breadth-first order</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385419', 'text': '<p>Consider the following schedule $\\text{S :}$<br>\n$$\\text{start1; start2; r1(A); r2(B); w2(A); w1(B);}$$<br>\n$\\text{“start #"}$ means beginning of transaction $\\#,$ then which of the following is/are Incorrect?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{S}$ is possible under basic Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\mathrm{S}$ is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\mathrm{S}$ is conflict serializable.</li>\n\t<li>$\\mathrm{S}$ is view serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385435', 'text': '<p>Which of the following statements is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Serializability is the property that a (possibly interleaved) execution of a group of transactions has the same effect on the database and produces the same output as some serial execution of those transactions.</li>\n\t<li>The following schedule is serializable:<br>\n\t$\\mathrm{r} 1[\\mathrm{X}] \\rightarrow \\mathrm{w} 1[\\mathrm{X}] \\rightarrow \\mathrm{r} 2[\\mathrm{Y}] \\rightarrow \\mathrm{w} 2[\\mathrm{Y}] \\rightarrow \\mathrm{r} 2[\\mathrm{X}] \\rightarrow \\mathrm{w} 2[\\mathrm{X}] \\rightarrow \\mathrm{r} 1[\\mathrm{Z}] \\rightarrow \\mathrm{w} 1[\\mathrm{Z}] \\rightarrow \\mathrm{c} 1 \\rightarrow \\mathrm{c} 2$<br>\n\tHere in $\\mathrm{T} \\#[\\mathrm{A}],\\; \\text{T}$ represents operation(read/write)$, \\#$ represents transaction number$,\\; \\text{A}$ represents the item on which operation is being performed.</li>\n\t<li>Strict two-phase locking $\\text{(2PL)}$ ensures that transactions never deadlock.</li>\n\t<li>Strict two-phase locking $\\text{(2PL)}$ ensures conflict serializability.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,serializability,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385413', 'text': '<p>Consider the following schedule $\\mathrm{S}$ :<br>\n$$<br>\n\\begin{array}{llllllll}<br>\nT_1: &amp; &amp; &amp; r_1(A) &amp; &amp; w_1(B) &amp; &amp; \\\\<br>\nT_2: &amp; r_2(B) &amp; w_2(A) &amp; &amp; &amp; &amp; w_2(B) &amp; \\\\<br>\nT_3: &amp; &amp; &amp; &amp; r_3(A) &amp; &amp; &amp; w_3(B) \\\\<br>\n\\end{array}<br>\n$$<br>\nWhich of the following is/are true for this schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable but not view serializable.</li>\n\t<li>It is view serializable but not conflict serializable.</li>\n\t<li>It is neither conflict nor view serializable.</li>\n\t<li>It is both conflict and view serializable.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385421', 'text': '<p>Consider the following schedule $\\text{S :}$</p>\n\n<p style="text-align:center"><img alt="" height="362" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=9369549588550516858" width="322"></p>\n\n<p><br>\nThe time-stamps of $\\text{T1, T2}$ are $1,2$ respectively then which of the following is/are Incorrect?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S}$ is possible under basic Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\text{S}$ is possible under THOMAS WRITE RULE Timestamp Ordering (T/O) protocol.</li>\n\t<li>$\\text{S}$ is conflict serializable.</li>\n\t<li>$\\text{S}$ is view serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385415', 'text': '<p>Consider the following schedule :<br>\n$$\\begin{array}{|c|c|c|c|}<br>\n\\hline \\mathrm{T}_1 &amp; \\mathrm{~T}_2 &amp; \\mathrm{~T}_3 &amp; \\mathrm{~T}_4 \\\\<br>\n\\hline \\mathrm{W}(\\mathrm{a}) &amp; &amp; &amp; \\\\<br>\n\\hline &amp; \\mathrm{R}(\\mathrm{a}) &amp; &amp; \\\\<br>\n\\hline &amp; &amp; \\mathrm{W}(\\mathrm{a}) &amp; \\\\&nbsp;<br>\n\\hline \\mathrm{W}(\\mathrm{a}) &amp; &amp; &amp; \\\\<br>\n\\hline &amp; &amp; &amp; \\mathrm{W}(\\mathrm{a}) \\\\<br>\n\\hline \\end{array}$$<br>\nWhich of the following is/are true for this schedule?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is conflict serializable but not view serializable.</li>\n\t<li>It is view serializable but not conflict serializable.</li>\n\t<li>It is neither conflict nor view serializable.</li>\n\t<li>It is both conflict and view serializable.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385409', 'text': '<p>In the following, when a transaction $\\mathrm{T}$ performs an operation $x=x+a$, then $\\mathrm{T}$ reads $x$ into some register, adds a to the register content then stores register content into $x$.</p>\n\n<p>A transaction schedule is serializable if its effect is equivalent to that of some serial schedule. Consider a bookkeeping operation consisting of two transactions $-\\text{T}_1$ and $\\text{T}_2-$ that are required to keep the sum $\\text{A+B+C}$ unchanged. Which of the following pairs of transactions will always result in a serializable schedule?</p>\n\n<p style="text-align:center"><img alt="" height="427" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=11724537551324705459" width="381"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I only</li>\n\t<li>II only</li>\n\t<li>III only</li>\n\t<li>I and II</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,serializability,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385427', 'text': '<p>Suppose that transaction $\\mathrm{T} 1$ aborts after the following sequence of read write operations in the given schedule below :&nbsp;$$\\text{Write1(X);&nbsp; Write2(X);&nbsp; Write1(Y)};\\; \\operatorname{Read3}(\\mathrm{Y}) ;\\; \\operatorname{Read}4(\\mathrm{X}) ;\\; \\operatorname{Read}4(\\mathrm{Z})$$<br>\nWhich of the other transactions would need to be rolled back?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{T2}$</li>\n\t<li>$\\text{T3}$</li>\n\t<li>$\\text{T4}$</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385429', 'text': '<p>Consider the following schedules:</p>\n\n<table>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S1</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="height:1px; width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="height:1px; width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:115px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="width:105px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>S3</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px"><strong>&nbsp; &nbsp;T1</strong></td>\n\t\t\t\t\t\t<td style="width:51px"><strong>&nbsp; &nbsp;T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(A)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">W(B)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">R(C)</td>\n\t\t\t\t\t\t<td style="width:51px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:48px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:51px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<table border="1" cellpadding="1" style="width:118px">\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan="2" style="height:24px; width:108px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>S4</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px"><strong>&nbsp; &nbsp; T1</strong></td>\n\t\t\t\t\t\t<td style="width:56px"><strong>&nbsp; &nbsp;T2</strong></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">R(B)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(A)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">W(A)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">W(A)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(B)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">W(B)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">&nbsp;</td>\n\t\t\t\t\t\t<td style="width:56px">R(C)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td style="width:49px">R(C)</td>\n\t\t\t\t\t\t<td style="width:56px">&nbsp;</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<div style="clear:both">Which of the above schedule(s) is/are conflict serializable?</div>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ and $\\text{S2}$ only</li>\n\t<li>$\\text{S2}$ only</li>\n\t<li>$\\text{S1}$ only</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385423', 'text': '<p>Consider a database schedule of two transactions $\\text{T1, T2}.\\;\\text{T1}$ first reads $\\text{A}$ and $\\text{B}$ and then writes $\\text{A}$ and $\\text{B}.\\; \\text{T2}$ reads and writes $\\text{A}$ then reads and writes $\\text{B}.$ Consider the following statements. Which of the following statements are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Every concurrent/interleaved execution of these transactions will lead to a conflict serializable schedule.</li>\n\t<li>Every concurrent/interleaved execution of these transactions will lead to a view serializable schedule.</li>\n\t<li>If a concurrent/interleaved execution of these transactions lead to a non-conflict serializable schedule then that schedule is also non-view serializable.</li>\n\t<li>If a concurrent/interleaved execution of these transactions lead to a non-view serializable schedule then that schedule is also non-conflict serializable.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '385437', 'text': '<p>A simple way to detect a state of deadlock is to construct a wait-for graph. One node is created in the graph for each transaction that is currently executing in the schedule. Whenever a transaction $\\text{T}_i$ is waiting to lock an item $\\text{X}$ that is currently locked by a transaction $\\text{T}_j,$ it creates a directed edge $(\\text{T}_i \\# \\text{T}_j).$ When $\\text{T}_j$ releases the lock(s) on the items that $\\text{T}_i$ was waiting for, the directed edge is dropped from the waiting-for graph.</p>\n\n<p>Given the graph below, which is/are deadlock free?</p>\n\n<ol style="list-style-type:upper-alpha" type="A">\n\t<li><img alt="" height="114" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=13631842932808604895" width="179"></li>\n\t<li><img alt="" height="117" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=282752440950274523" width="169"></li>\n\t<li><img alt="" height="97" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=13692842760456249382" width="223"></li>\n\t<li><img alt="" height="98" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10912162148821836843" width="229"><br>\n\t&nbsp;</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '385417', 'text': '<p>Consider the following schedule:<br>\n$$<br>\n\\begin{gathered}<br>\n\\text{S = (2, W, x),(1, W, z),(1, W, x), C1,(2, W, y),(2, R, y)}<br>\n\\text{(3, W, z),(3, W, m), C3,(2, R, m), C2}.<br>\n\\end{gathered}<br>\n$$<br>\nWhere $\\text{Ci}$ means commit of $\\text{i}^{\\text{th}}$ transaction. Triple $\\text{(i, W / R, x)}$ means Transaction $\\text{i}$ writes/reads item $\\text{x}.$<br>\nWhich of the following statements is/are true for $\\text{S}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S}$ is conflict serializable.</li>\n\t<li>$\\text{S}$ is view serializable but not conflict serializable.</li>\n\t<li>$\\text{S}$ is not view serializable.</li>\n\t<li>None</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-5,goclasses,databases,transaction-and-concurrency,conflict-serializable,2-marks', 'category': 'Databases'}]}]}
+      </script>
+      

@@ -1,0 +1,314 @@
+<div><span>Q1</span> - <p>Overlay is    nbsp;   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>a part of an operating system   nbsp;</li>
+	<li>a specific memory location   nbsp;</li>
+	<li>a single contiguous memory that was used in the olden days for running large programs by swapping</li>
+	<li>overloading the system with many user files   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider Peterson's algorithm for Mutual Exclusion between two concurrent processes w and f. The program executed by the processeses are shown below:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Process w</th>
+			<th scope="col">Process f</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			<pre class="prettyprint linenums lang-c_cpp">
+repeat 
+    flag[w]=true; 
+    turn=f; 
+    while(P) do 
+        no-operation; 
+    Enter critical section,  
+    perform actions, 
+    exit critical section 
+    flag[w]=false; 
+    perform non critical section actions 
+until false;</pre>
+
+			
+			</td>
+			<td>
+			<pre class="prettyprint linenums lang-c_cpp">
+repeat 
+    flag[f]=true; 
+    turn=w; 
+    while(Q) do 
+        no-operation; 
+    Enter critical section,  
+    perform actions, 
+    exit critical section 
+    flag[f]=false; 
+    perform non critical section actions 
+until false;</pre>
+
+			
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<p>For the program to guarantee Mutual Exclusion the predicate P in the while loop should be   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>flag[f]=true and turn = w   nbsp;</li>
+	<li>flag[f]=true and turn=f   nbsp;</li>
+	<li>flag[w]=true and turn=f    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;</li>
+	<li>flag[w]=true and turn=w   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Which of the following is true?   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A re-entrant procedure can only be called a fixed number of times    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;    nbsp;</li>
+	<li>A re-entrant procedure can be called even before the procedure has not returned from it's previous call</li>
+	<li>Re-entrant procedures can not be called recursively</li>
+	<li>none of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>The size of the virtual memory in a computer system depends on the size of the    nbsp;   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>data bus</li>
+	<li>main memory</li>
+	<li>address bus</li>
+	<li>RAM</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Two concurrent processes P1 and P2 want to use 2 resources J1 and J2 in a Mutually Exclusive way. Assume that initially J1 and J2 are both free. The programs executed by these two processes are as below :</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>Program for P1:</td>
+			<td>Program for P2:</td>
+		</tr>
+		<tr>
+			<td>
+			<pre class="prettyprint linenums lang-c_cpp">
+S1:while J1 is busy do no-operation;
+S2:set J1   lt;- busy;
+S3:while J2 is busy do no-operation;
+S4:set J2    lt;- busy;
+S5:use J1 and J2 ;
+S6:set J1    lt;- free;
+S7:set J2    lt;- free;</pre>
+
+			
+			</td>
+			<td>
+			<pre class="prettyprint linenums lang-c_cpp">
+Q1 while J1 is busy do no-operation;
+Q2 set J1   lt;- busy;
+Q3 while J2 is busy do no-operation;
+Q4 set J2   lt;- busy;
+Q5 use J1 and J2;
+Q6 set J2   lt;- free;
+Q7 set J1   lt;- free;</pre>
+
+			
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>What can be said about the processes P1 and P2?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Mutual Exclusion is guaranteed, deadlock would not occur</li>
+	<li>Mutual Exclusion is not guaranteed, deadlock would not occur</li>
+	<li>Mutual Exclusion is guaranteed, deadlock might occur</li>
+	<li>Mutual Exclusion is not guaranteed, deadlock might occur</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - Consider a system having 'm' resources of the same type. These resources are shared by 3 processes A, B and C, which have peak time demands of 3, 4 and 6. The minimum value of 'm' that ensures that deadlock will never occur given that the combined maximum resource requirement of processes B and C at any time is 8 will be ______.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Which of the following page replacement schemes is the toughest to implement from a hardware point of view?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>LRU</li>
+	<li>FIFO</li>
+	<li>MRU</li>
+	<li>All have equal complexity</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - Consider a computer with 8 MB of main memory and a 128 KB cache. The cache block size is 4KB and it uses a direct mapping scheme for cache management. Total number of different main memory blocks can map onto a given physical cache block is _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Each process P_i, where i= 1 to 9 is coded as follows    nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp">
+repeat 
+ P (mutex)
+   critical section 
+ V (mutex)
+ forever </pre>
+
+<p><br>
+The code for P_10 is identical except that it uses V (mutex) instead of P (mutex) and vice-verse. What is the largest number of processes   nbsp;that can be inside the critical section at any moment if initial value of the semaphore is 1?   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>none</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>A computer system has 4 K word cache organized in a block-set associative manner, with 4 blocks per set, 64 words per block. The number of bits in the SET and WORD fields of the main memory address format is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>15, 4</li>
+	<li>6, 4</li>
+	<li>7, 2</li>
+	<li>4, 6</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Aging is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>keeping track of the cache contents</li>
+	<li>keeping track of what pages are currently residing in the memory</li>
+	<li>keeping track of how many times a given page is referenced</li>
+	<li>increasing the priority of jobs to ensure termination in a finite time</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>In a multi-user operating system, 20 requests are made to use a particular resource per hour, on average. The probability that no requests are made in 45 minutes is -</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>e^-15</li>
+	<li>e^-5</li>
+	<li>1 - e^-5</li>
+	<li>1-e^-10</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>In a paged memory, the page hit ratio is 0.35. The time required to access a page in secondary memory is 100 ns. The time required to access a page in primary memory is 10 ns. The average time required to access a page is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>100 ns</li>
+	<li>68.0 ns</li>
+	<li>68.5 ns</li>
+	<li>78.5 ns</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Dirty bit is used to show the</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>page with corrupted data</li>
+	<li>wrong page in the memory</li>
+	<li>page that is modified after being loaded into cache memory</li>
+	<li>page that is less frequently accessed</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - At a particular time of computation, the value of a counting semaphore is 7 , then 20 P operations and 'x' V operations were completed on this semaphore. If the final value of the semaphore is 5, the value of x should be ____<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - Determine the number of page faults when references to pages occur in the sequence -1,2,4,5,2,1,2,4. Assume that the main memory can accommodate 3 pages and  already has pages 1, 2 with page 1 having been brought earlier than page 2 and LRU being the replacement strategy used.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Thrashing</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>reduces page I/O</li>
+	<li>decreases the degree of multiprogramming</li>
+	<li>implies excessive page I/O</li>
+	<li>improves system performance</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>System calls are usually invoked by using</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>a software interrupt</li>
+	<li>polling</li>
+	<li>an indirect jump</li>
+	<li>a privileged instruction</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>The E_CS() and L_CS() functions to implement critical section of a process are realized using Test-and-Set instruction as stated below:</p>
+
+<pre class="prettyprint linenums lang-c_cpp">
+void E_CS(X) 
+
+    while(Test-and-Set(X); 
+ 
+void L_CS(X) 
+ 
+    X=0;
+</pre>
+
+<p>In above code snippet, X is a memory location associated with CS and is initialized to 0. Which among these statements are True regarding the given solution?</p>
+
+<ol style="list-style-type:lower-roman">
+	<li>it is deadlock free solution</li>
+	<li>it is starvation free solution</li>
+	<li>the process enter into CS in FIFO order</li>
+	<li>more than 1 process can enter into CS at same time   nbsp;
+	<ol style="list-style-type:upper-alpha">
+		<li>i only</li>
+		<li>i and ii</li>
+		<li>ii and iii</li>
+		<li>iv only</li>
+	</ol>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - An operating system contains 3 user processes each requiring 2 units of resource R. The minimum number of units of R such that no deadlocks will ever arise is ____ (assume no other resource requirement)<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider m processes sharing the CPU in a round-robin manner. Assume that each process switch takes p seconds. For which value of quantum size w, the overhead resulting from process switch is minimized but at the same time each process is guaranteed to get it's turn of the CPU at least every n seconds?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>w ≤n- mp/m-1</li>
+	<li>w ≥n- mp/m-1</li>
+	<li>w ≤n- mp/m+1</li>
+	<li>w ≤n- mp/m+1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>On a virtual memory system with FIFO page replacement policy, for an arbitrary page access pattern, increasing the number of page frames in main memory will</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>always decrease the number of page faults</li>
+	<li>always increase the number of page faults</li>
+	<li>sometimes increase the number of page faults</li>
+	<li>do not affect the number of page faults</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Consider an operating system capable of loading and executing a single sequential user process at a time. The disk main scheduling algorithm used is FCFS. If FCFS is replaced by SSTF claimed by the service provider to give 50
+
+<ol style="list-style-type:upper-alpha">
+	<li>50
+	<li>40
+	<li>25
+	<li>no improvement   nbsp;</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>A system with a 2-level paging scheme in which a regular memory access takes 150 nanoseconds(ns) and page faults takes 4 miliseconds(ms). An average instruction takes 100 ns of cpu time and two memory accesses. The TLB hit ratio is 99
+
+<ol style="list-style-type: upper-alpha;">
+	<li>446 ns</li>
+	<li>1230 ns</li>
+	<li>830 ns</li>
+	<li>1050 ns</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>There is a 4 way set associative cache memory with 8 cache blocks. The main memory consists of 256 blocks and the request for memory blocks is in that order:<br>
+
+    0,255,1,4,3,8,133,159,216,129,63,8,48,32,73,92,155
+<br>
+Which one of the following memory block will not be in cache if LRU replacement policy is used?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>159</li>
+	<li>8</li>
+	<li>129</li>
+	<li>48</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>Swap space in the disk is used to _____</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>save temporary html pages</li>
+	<li>save process data</li>
+	<li>store the super-block</li>
+	<li>store device drivers</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>Dijkstra's Banker's algorithm in Operating System solves the problem of</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>deadlock avoidance</li>
+	<li>recovery from deadlock</li>
+	<li>mutual exclusion</li>
+	<li>context switching</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - Consider a computer with 64 MB physical memory and 32 bit virtual address space. If the page size is 4KB , then the size of page table in MB is _____________    (Assume 2 bits per page table entry for extra information other than that for addressing)<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>Semaphores are used to solve the problem of</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>resource allocation</li>
+	<li>process synchronization</li>
+	<li>deadlock</li>
+	<li>process communication</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>Match these OS abstractions with Hardware components:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<tbody>
+		<tr>
+			<td>A. Thread</td>
+			<td>1. interrupt</td>
+		</tr>
+		<tr>
+			<td>B. Virtual address space</td>
+			<td>2. memory</td>
+		</tr>
+		<tr>
+			<td>C. File system</td>
+			<td>3. CPU</td>
+		</tr>
+		<tr>
+			<td>D. Signal</td>
+			<td>4. Disk</td>
+		</tr>
+	</tbody>
+</table>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A-2 B-4 C-3 D-1</li>
+	<li>A-1 B-2 C-3 D-4</li>
+	<li>A-3 B-2 C-4 D-1</li>
+	<li>A-4 B-1 C-2 D-3</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '66212', 'text': '<p>Overlay is &nbsp;&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>a part of an operating system&nbsp;</li>\n\t<li>a specific memory location&nbsp;</li>\n\t<li>a single contiguous memory that was used in the olden days for running large programs by swapping</li>\n\t<li>overloading the system with many user files&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,memory-management,overlay', 'category': 'Operating System'}, {'contents': '', 'post_id': '66213', 'text': '<p>Consider Peterson\'s algorithm for Mutual Exclusion between two concurrent processes $w$ and $f$. The program executed by the processeses are shown below:</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope="col">Process w</th>\n\t\t\t<th scope="col">Process f</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n    flag[w]=true; \n    turn=f; \n    while(P) do \n        no-operation; \n    Enter critical section,  \n    perform actions, \n    exit critical section \n    flag[w]=false; \n    perform non critical section actions \nuntil false;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n    flag[f]=true; \n    turn=w; \n    while(Q) do \n        no-operation; \n    Enter critical section,  \n    perform actions, \n    exit critical section \n    flag[f]=false; \n    perform non critical section actions \nuntil false;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<p>For the program to guarantee Mutual Exclusion the predicate $P$ in the while loop should be&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>flag[f]=true and turn = w&nbsp;</li>\n\t<li>flag[f]=true and turn=f&nbsp;</li>\n\t<li>flag[w]=true and turn=f &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>flag[w]=true and turn=w&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization,peterson-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '66215', 'text': '<p>Which of the following is true?&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A re-entrant procedure can only be called a fixed number of times &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>A re-entrant procedure can be called even before the procedure has not returned from it\'s previous call</li>\n\t<li>Re-entrant procedures can not be called recursively</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66214', 'text': '<p>The size of the virtual memory in a computer system depends on the size of the &nbsp;&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>data bus</li>\n\t<li>main memory</li>\n\t<li>address bus</li>\n\t<li>RAM</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66217', 'text': '<p>Two concurrent processes P1 and P2 want to use 2 resources J1 and J2 in a Mutually Exclusive way. Assume that initially J1 and J2 are both free. The programs executed by these two processes are as below :</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Program for P1:</td>\n\t\t\t<td>Program for P2:</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nS1:while J1 is busy do no-operation;\nS2:set J1&lt;- busy;\nS3:while J2 is busy do no-operation;\nS4:set J2 &lt;- busy;\nS5:use J1 and J2 ;\nS6:set J1 &lt;- free;\nS7:set J2 &lt;- free;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nQ1 while J1 is busy do no-operation;\nQ2 set J1&lt;- busy;\nQ3 while J2 is busy do no-operation;\nQ4 set J2&lt;- busy;\nQ5 use J1 and J2;\nQ6 set J2&lt;- free;\nQ7 set J1&lt;- free;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>What can be said about the processes P1 and P2?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Mutual Exclusion is guaranteed, deadlock would not occur</li>\n\t<li>Mutual Exclusion is not guaranteed, deadlock would not occur</li>\n\t<li>Mutual Exclusion is guaranteed, deadlock might occur</li>\n\t<li>Mutual Exclusion is not guaranteed, deadlock might occur</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '66218', 'text': "Consider a system having 'm' resources of the same type. These resources are shared by 3 processes A, B and C, which have peak time demands of 3, 4 and 6. The minimum value of 'm' that ensures that deadlock will never occur given that the combined maximum resource requirement of processes B and C at any time is 8 will be ______.", 'type': 'Numerical', 'answer': '9', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,resource-allocation,deadlock-prevention-avoidance-detection,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66219', 'text': '<p>Which of the following page replacement schemes is the toughest to implement from a hardware point of view?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>LRU</li>\n\t<li>FIFO</li>\n\t<li>MRU</li>\n\t<li>All have equal complexity</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,virtual-memory,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66220', 'text': 'Consider a computer with 8 MB of main memory and a 128 KB cache. The cache block size is 4KB and it uses a direct mapping scheme for cache management. Total number of different main memory blocks can map onto a given physical cache block is _______', 'type': 'Numerical', 'answer': '64', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,co-and-architecture,cache-memory,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66221', 'text': '<p>Each process $P_i$, where $i= 1$ to $9$ is coded as follows &nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n P (mutex)\n   {critical section }\n V (mutex)\n forever </pre>\n\n<p><br>\nThe code for $P_{10}$ is identical except that it uses $V$ (mutex) instead of $P$ (mutex) and vice-verse. What is the largest number of processes&nbsp;that can be inside the critical section at any moment if initial value of the semaphore is 1?&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1</li>\n\t<li>2</li>\n\t<li>3</li>\n\t<li>none</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization,mutex', 'category': 'Operating System'}, {'contents': '', 'post_id': '66222', 'text': '<p>A computer system has 4 K word cache organized in a block-set associative manner, with 4 blocks per set, 64 words per block. The number of bits in the SET and WORD fields of the main memory address format is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>15, 4</li>\n\t<li>6, 4</li>\n\t<li>7, 2</li>\n\t<li>4, 6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,cache-memory,co-and-architecture', 'category': 'Operating System'}, {'contents': '', 'post_id': '66223', 'text': '<p>Aging is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>keeping track of the cache contents</li>\n\t<li>keeping track of what pages are currently residing in the memory</li>\n\t<li>keeping track of how many times a given page is referenced</li>\n\t<li>increasing the priority of jobs to ensure termination in a finite time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66224', 'text': '<p>In a multi-user operating system, 20 requests are made to use a particular resource per hour, on average. The probability that no requests are made in 45 minutes is -</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$e^-{15}$</li>\n\t<li>$e^{-5}$</li>\n\t<li>$1 - e^{-5}$</li>\n\t<li>$1-e^{-10}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,resource-allocation', 'category': 'Operating System'}, {'contents': '', 'post_id': '66225', 'text': '<p>In a paged memory, the page hit ratio is 0.35. The time required to access a page in secondary memory is 100 ns. The time required to access a page in primary memory is 10 ns. The average time required to access a page is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>100 ns</li>\n\t<li>68.0 ns</li>\n\t<li>68.5 ns</li>\n\t<li>78.5 ns</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,virtual-memory,paging', 'category': 'Operating System'}, {'contents': '', 'post_id': '66227', 'text': '<p>Dirty bit is used to show the</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>page with corrupted data</li>\n\t<li>wrong page in the memory</li>\n\t<li>page that is modified after being loaded into cache memory</li>\n\t<li>page that is less frequently accessed</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66228', 'text': "At a particular time of computation, the value of a counting semaphore is $7$ , then $20$ $P$ operations and 'x' $V$ operations were completed on this semaphore. If the final value of the semaphore is $5$, the value of $x$ should be ____", 'type': 'Numerical', 'answer': '18', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,process-synchronization,semaphore,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66229', 'text': 'Determine the number of page faults when references to pages occur in the sequence -$1,2,4,5,2,1,2,4$. Assume that the main memory can accommodate 3 pages and  already has pages 1, 2 with page 1 having been brought earlier than page 2 and LRU being the replacement strategy used.', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,numerical-answers,page-replacement,least-recently-used', 'category': 'Operating System'}, {'contents': '', 'post_id': '66230', 'text': '<p>Thrashing</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>reduces page I/O</li>\n\t<li>decreases the degree of multiprogramming</li>\n\t<li>implies excessive page I/O</li>\n\t<li>improves system performance</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,thrashing', 'category': 'Operating System'}, {'contents': '', 'post_id': '66231', 'text': '<p>System calls are usually invoked by using</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>a software interrupt</li>\n\t<li>polling</li>\n\t<li>an indirect jump</li>\n\t<li>a privileged instruction</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66232', 'text': '<p>The E_CS() and L_CS() functions to implement critical section of a process are realized using Test-and-Set instruction as stated below:</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nvoid E_CS(X) \n{\n    while(Test-and-Set(X); \n} \nvoid L_CS(X) \n{ \n    X=0;\n}</pre>\n\n<p>In above code snippet, X is a memory location associated with CS and is initialized to 0. Which among these statements are True regarding the given solution?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>it is deadlock free solution</li>\n\t<li>it is starvation free solution</li>\n\t<li>the process enter into CS in FIFO order</li>\n\t<li>more than 1 process can enter into CS at same time&nbsp;\n\t<ol style="list-style-type:upper-alpha">\n\t\t<li>i only</li>\n\t\t<li>i and ii</li>\n\t\t<li>ii and iii</li>\n\t\t<li>iv only</li>\n\t</ol>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '66233', 'text': 'An operating system contains 3 user processes each requiring 2 units of resource R. The minimum number of units of R such that no deadlocks will ever arise is ____ (assume no other resource requirement)', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,resource-allocation,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66234', 'text': '<p>Consider $m$ processes sharing the CPU in a round-robin manner. Assume that each process switch takes $p$ seconds. For which value of quantum size $w$, the overhead resulting from process switch is minimized but at the same time each process is guaranteed to get it\'s turn of the CPU at least every $n$ seconds?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$w \\leq \\frac{n- mp}{m-1}$</li>\n\t<li>$w \\geq \\frac{n- mp}{m-1}$</li>\n\t<li>$w \\leq \\frac{n- mp}{m+1}$</li>\n\t<li>$w \\leq \\frac{n- mp}{m+1}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-scheduling', 'category': 'Operating System'}, {'contents': '', 'post_id': '66235', 'text': '<p>On a virtual memory system with FIFO page replacement policy, for an arbitrary page access pattern, increasing the number of page frames in main memory will</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>always decrease the number of page faults</li>\n\t<li>always increase the number of page faults</li>\n\t<li>sometimes increase the number of page faults</li>\n\t<li>do not affect the number of page faults</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66236', 'text': '<p>Consider an operating system capable of loading and executing a single sequential user process at a time. The disk main scheduling algorithm used is FCFS. If FCFS is replaced by SSTF claimed by the service provider to give 50% better benchmark results, what is the expected improvement in the I/O performance of user programs?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>50%</li>\n\t<li>40%</li>\n\t<li>25%</li>\n\t<li>no improvement&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,disk-scheduling', 'category': 'Operating System'}, {'contents': '', 'post_id': '66237', 'text': '<p>A system with a 2-level paging scheme in which a regular memory access takes 150 nanoseconds(ns) and page faults takes 4 miliseconds(ms). An average instruction takes 100 ns of cpu time and two memory accesses. The TLB hit ratio is 99% and the page fault rate is 1 in every 100,000 instructions. What is the effective average instruction execution time?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>446 ns</li>\n\t<li>1230 ns</li>\n\t<li>830 ns</li>\n\t<li>1050 ns</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66241', 'text': '<p>There is a 4 way set associative cache memory with 8 cache blocks. The main memory consists of 256 blocks and the request for memory blocks is in that order:<br>\n$$0,255,1,4,3,8,133,159,216,129,63,8,48,32,73,92,155 $$<br>\nWhich one of the following memory block will not be in cache if LRU replacement policy is used?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>159</li>\n\t<li>8</li>\n\t<li>129</li>\n\t<li>48</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,co-and-architecture,cache-memory,least-recently-used', 'category': 'Operating System'}, {'contents': '', 'post_id': '66242', 'text': '<p>Swap space in the disk is used to _____</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>save temporary html pages</li>\n\t<li>save process data</li>\n\t<li>store the super-block</li>\n\t<li>store device drivers</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66243', 'text': '<p>Dijkstra\'s Banker\'s algorithm in Operating System solves the problem of</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>deadlock avoidance</li>\n\t<li>recovery from deadlock</li>\n\t<li>mutual exclusion</li>\n\t<li>context switching</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,resource-allocation,deadlock-prevention-avoidance-detection,bankers-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '66244', 'text': 'Consider a computer with 64 MB physical memory and 32 bit virtual address space. If the page size is 4KB , then the size of page table in MB is _____________    (Assume 2 bits per page table entry for extra information other than that for addressing)', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,virtual-memory,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66245', 'text': '<p>Semaphores are used to solve the problem of</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>resource allocation</li>\n\t<li>process synchronization</li>\n\t<li>deadlock</li>\n\t<li>process communication</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '66246', 'text': '<p>Match these OS abstractions with Hardware components:</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>A. Thread</td>\n\t\t\t<td>1. interrupt</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B. Virtual address space</td>\n\t\t\t<td>2. memory</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C. File system</td>\n\t\t\t<td>3. CPU</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D. Signal</td>\n\t\t\t<td>4. Disk</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A-2 B-4 C-3 D-1</li>\n\t<li>A-1 B-2 C-3 D-4</li>\n\t<li>A-3 B-2 C-4 D-1</li>\n\t<li>A-4 B-1 C-2 D-3</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}]
+      let data={'name': 'GATE Overflow | Operating Systems | Test 1', 'duration': '100', 'total_qs': '30', 'total_qs_one': 0, 'total_qs_two': 30, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 60, 'total_marks': 60, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 60, 'question': [{'contents': '', 'post_id': '66212', 'text': '<p>Overlay is &nbsp;&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>a part of an operating system&nbsp;</li>\n\t<li>a specific memory location&nbsp;</li>\n\t<li>a single contiguous memory that was used in the olden days for running large programs by swapping</li>\n\t<li>overloading the system with many user files&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,memory-management,overlay', 'category': 'Operating System'}, {'contents': '', 'post_id': '66213', 'text': '<p>Consider Peterson\'s algorithm for Mutual Exclusion between two concurrent processes $w$ and $f$. The program executed by the processeses are shown below:</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<thead>\n\t\t<tr>\n\t\t\t<th scope="col">Process w</th>\n\t\t\t<th scope="col">Process f</th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n    flag[w]=true; \n    turn=f; \n    while(P) do \n        no-operation; \n    Enter critical section,  \n    perform actions, \n    exit critical section \n    flag[w]=false; \n    perform non critical section actions \nuntil false;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n    flag[f]=true; \n    turn=w; \n    while(Q) do \n        no-operation; \n    Enter critical section,  \n    perform actions, \n    exit critical section \n    flag[f]=false; \n    perform non critical section actions \nuntil false;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n\n\n<p>For the program to guarantee Mutual Exclusion the predicate $P$ in the while loop should be&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>flag[f]=true and turn = w&nbsp;</li>\n\t<li>flag[f]=true and turn=f&nbsp;</li>\n\t<li>flag[w]=true and turn=f &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>flag[w]=true and turn=w&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization,peterson-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '66215', 'text': '<p>Which of the following is true?&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A re-entrant procedure can only be called a fixed number of times &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>\n\t<li>A re-entrant procedure can be called even before the procedure has not returned from it\'s previous call</li>\n\t<li>Re-entrant procedures can not be called recursively</li>\n\t<li>none of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66214', 'text': '<p>The size of the virtual memory in a computer system depends on the size of the &nbsp;&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>data bus</li>\n\t<li>main memory</li>\n\t<li>address bus</li>\n\t<li>RAM</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66217', 'text': '<p>Two concurrent processes P1 and P2 want to use 2 resources J1 and J2 in a Mutually Exclusive way. Assume that initially J1 and J2 are both free. The programs executed by these two processes are as below :</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Program for P1:</td>\n\t\t\t<td>Program for P2:</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nS1:while J1 is busy do no-operation;\nS2:set J1&lt;- busy;\nS3:while J2 is busy do no-operation;\nS4:set J2 &lt;- busy;\nS5:use J1 and J2 ;\nS6:set J1 &lt;- free;\nS7:set J2 &lt;- free;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t<pre class="prettyprint linenums lang-c_cpp">\nQ1 while J1 is busy do no-operation;\nQ2 set J1&lt;- busy;\nQ3 while J2 is busy do no-operation;\nQ4 set J2&lt;- busy;\nQ5 use J1 and J2;\nQ6 set J2&lt;- free;\nQ7 set J1&lt;- free;</pre>\n\n\t\t\t\n\t\t\t</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>What can be said about the processes P1 and P2?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Mutual Exclusion is guaranteed, deadlock would not occur</li>\n\t<li>Mutual Exclusion is not guaranteed, deadlock would not occur</li>\n\t<li>Mutual Exclusion is guaranteed, deadlock might occur</li>\n\t<li>Mutual Exclusion is not guaranteed, deadlock might occur</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '66218', 'text': "Consider a system having 'm' resources of the same type. These resources are shared by 3 processes A, B and C, which have peak time demands of 3, 4 and 6. The minimum value of 'm' that ensures that deadlock will never occur given that the combined maximum resource requirement of processes B and C at any time is 8 will be ______.", 'type': 'Numerical', 'answer': '9', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,resource-allocation,deadlock-prevention-avoidance-detection,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66219', 'text': '<p>Which of the following page replacement schemes is the toughest to implement from a hardware point of view?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>LRU</li>\n\t<li>FIFO</li>\n\t<li>MRU</li>\n\t<li>All have equal complexity</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,virtual-memory,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66220', 'text': 'Consider a computer with 8 MB of main memory and a 128 KB cache. The cache block size is 4KB and it uses a direct mapping scheme for cache management. Total number of different main memory blocks can map onto a given physical cache block is _______', 'type': 'Numerical', 'answer': '64', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,co-and-architecture,cache-memory,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66221', 'text': '<p>Each process $P_i$, where $i= 1$ to $9$ is coded as follows &nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nrepeat \n P (mutex)\n   {critical section }\n V (mutex)\n forever </pre>\n\n<p><br>\nThe code for $P_{10}$ is identical except that it uses $V$ (mutex) instead of $P$ (mutex) and vice-verse. What is the largest number of processes&nbsp;that can be inside the critical section at any moment if initial value of the semaphore is 1?&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>1</li>\n\t<li>2</li>\n\t<li>3</li>\n\t<li>none</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization,mutex', 'category': 'Operating System'}, {'contents': '', 'post_id': '66222', 'text': '<p>A computer system has 4 K word cache organized in a block-set associative manner, with 4 blocks per set, 64 words per block. The number of bits in the SET and WORD fields of the main memory address format is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>15, 4</li>\n\t<li>6, 4</li>\n\t<li>7, 2</li>\n\t<li>4, 6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,cache-memory,co-and-architecture', 'category': 'Operating System'}, {'contents': '', 'post_id': '66223', 'text': '<p>Aging is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>keeping track of the cache contents</li>\n\t<li>keeping track of what pages are currently residing in the memory</li>\n\t<li>keeping track of how many times a given page is referenced</li>\n\t<li>increasing the priority of jobs to ensure termination in a finite time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66224', 'text': '<p>In a multi-user operating system, 20 requests are made to use a particular resource per hour, on average. The probability that no requests are made in 45 minutes is -</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$e^-{15}$</li>\n\t<li>$e^{-5}$</li>\n\t<li>$1 - e^{-5}$</li>\n\t<li>$1-e^{-10}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,resource-allocation', 'category': 'Operating System'}, {'contents': '', 'post_id': '66225', 'text': '<p>In a paged memory, the page hit ratio is 0.35. The time required to access a page in secondary memory is 100 ns. The time required to access a page in primary memory is 10 ns. The average time required to access a page is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>100 ns</li>\n\t<li>68.0 ns</li>\n\t<li>68.5 ns</li>\n\t<li>78.5 ns</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,virtual-memory,paging', 'category': 'Operating System'}, {'contents': '', 'post_id': '66227', 'text': '<p>Dirty bit is used to show the</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>page with corrupted data</li>\n\t<li>wrong page in the memory</li>\n\t<li>page that is modified after being loaded into cache memory</li>\n\t<li>page that is less frequently accessed</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66228', 'text': "At a particular time of computation, the value of a counting semaphore is $7$ , then $20$ $P$ operations and 'x' $V$ operations were completed on this semaphore. If the final value of the semaphore is $5$, the value of $x$ should be ____", 'type': 'Numerical', 'answer': '18', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,process-synchronization,semaphore,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66229', 'text': 'Determine the number of page faults when references to pages occur in the sequence -$1,2,4,5,2,1,2,4$. Assume that the main memory can accommodate 3 pages and  already has pages 1, 2 with page 1 having been brought earlier than page 2 and LRU being the replacement strategy used.', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,numerical-answers,page-replacement,least-recently-used', 'category': 'Operating System'}, {'contents': '', 'post_id': '66230', 'text': '<p>Thrashing</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>reduces page I/O</li>\n\t<li>decreases the degree of multiprogramming</li>\n\t<li>implies excessive page I/O</li>\n\t<li>improves system performance</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,thrashing', 'category': 'Operating System'}, {'contents': '', 'post_id': '66231', 'text': '<p>System calls are usually invoked by using</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>a software interrupt</li>\n\t<li>polling</li>\n\t<li>an indirect jump</li>\n\t<li>a privileged instruction</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}, {'contents': '', 'post_id': '66232', 'text': '<p>The E_CS() and L_CS() functions to implement critical section of a process are realized using Test-and-Set instruction as stated below:</p>\n\n<pre class="prettyprint linenums lang-c_cpp">\nvoid E_CS(X) \n{\n    while(Test-and-Set(X); \n} \nvoid L_CS(X) \n{ \n    X=0;\n}</pre>\n\n<p>In above code snippet, X is a memory location associated with CS and is initialized to 0. Which among these statements are True regarding the given solution?</p>\n\n<ol style="list-style-type:lower-roman">\n\t<li>it is deadlock free solution</li>\n\t<li>it is starvation free solution</li>\n\t<li>the process enter into CS in FIFO order</li>\n\t<li>more than 1 process can enter into CS at same time&nbsp;\n\t<ol style="list-style-type:upper-alpha">\n\t\t<li>i only</li>\n\t\t<li>i and ii</li>\n\t\t<li>ii and iii</li>\n\t\t<li>iv only</li>\n\t</ol>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '66233', 'text': 'An operating system contains 3 user processes each requiring 2 units of resource R. The minimum number of units of R such that no deadlocks will ever arise is ____ (assume no other resource requirement)', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,resource-allocation,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66234', 'text': '<p>Consider $m$ processes sharing the CPU in a round-robin manner. Assume that each process switch takes $p$ seconds. For which value of quantum size $w$, the overhead resulting from process switch is minimized but at the same time each process is guaranteed to get it\'s turn of the CPU at least every $n$ seconds?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$w \\leq \\frac{n- mp}{m-1}$</li>\n\t<li>$w \\geq \\frac{n- mp}{m-1}$</li>\n\t<li>$w \\leq \\frac{n- mp}{m+1}$</li>\n\t<li>$w \\leq \\frac{n- mp}{m+1}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,process-scheduling', 'category': 'Operating System'}, {'contents': '', 'post_id': '66235', 'text': '<p>On a virtual memory system with FIFO page replacement policy, for an arbitrary page access pattern, increasing the number of page frames in main memory will</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>always decrease the number of page faults</li>\n\t<li>always increase the number of page faults</li>\n\t<li>sometimes increase the number of page faults</li>\n\t<li>do not affect the number of page faults</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,page-replacement', 'category': 'Operating System'}, {'contents': '', 'post_id': '66236', 'text': '<p>Consider an operating system capable of loading and executing a single sequential user process at a time. The disk main scheduling algorithm used is FCFS. If FCFS is replaced by SSTF claimed by the service provider to give 50% better benchmark results, what is the expected improvement in the I/O performance of user programs?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>50%</li>\n\t<li>40%</li>\n\t<li>25%</li>\n\t<li>no improvement&nbsp;</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,disk-scheduling', 'category': 'Operating System'}, {'contents': '', 'post_id': '66237', 'text': '<p>A system with a 2-level paging scheme in which a regular memory access takes 150 nanoseconds(ns) and page faults takes 4 miliseconds(ms). An average instruction takes 100 ns of cpu time and two memory accesses. The TLB hit ratio is 99% and the page fault rate is 1 in every 100,000 instructions. What is the effective average instruction execution time?</p>\n\n<ol style="list-style-type: upper-alpha;">\n\t<li>446 ns</li>\n\t<li>1230 ns</li>\n\t<li>830 ns</li>\n\t<li>1050 ns</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66241', 'text': '<p>There is a 4 way set associative cache memory with 8 cache blocks. The main memory consists of 256 blocks and the request for memory blocks is in that order:<br>\n$$0,255,1,4,3,8,133,159,216,129,63,8,48,32,73,92,155 $$<br>\nWhich one of the following memory block will not be in cache if LRU replacement policy is used?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>159</li>\n\t<li>8</li>\n\t<li>129</li>\n\t<li>48</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,co-and-architecture,cache-memory,least-recently-used', 'category': 'Operating System'}, {'contents': '', 'post_id': '66242', 'text': '<p>Swap space in the disk is used to _____</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>save temporary html pages</li>\n\t<li>save process data</li>\n\t<li>store the super-block</li>\n\t<li>store device drivers</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,virtual-memory', 'category': 'Operating System'}, {'contents': '', 'post_id': '66243', 'text': '<p>Dijkstra\'s Banker\'s algorithm in Operating System solves the problem of</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>deadlock avoidance</li>\n\t<li>recovery from deadlock</li>\n\t<li>mutual exclusion</li>\n\t<li>context switching</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,resource-allocation,deadlock-prevention-avoidance-detection,bankers-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '66244', 'text': 'Consider a computer with 64 MB physical memory and 32 bit virtual address space. If the page size is 4KB , then the size of page table in MB is _____________    (Assume 2 bits per page table entry for extra information other than that for addressing)', 'type': 'Numerical', 'answer': '2', 'award': 2, 'penalty': '0.0000', 'tags': 'go-os-1,operating-system,virtual-memory,numerical-answers', 'category': 'Operating System'}, {'contents': '', 'post_id': '66245', 'text': '<p>Semaphores are used to solve the problem of</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>resource allocation</li>\n\t<li>process synchronization</li>\n\t<li>deadlock</li>\n\t<li>process communication</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '66246', 'text': '<p>Match these OS abstractions with Hardware components:</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>A. Thread</td>\n\t\t\t<td>1. interrupt</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>B. Virtual address space</td>\n\t\t\t<td>2. memory</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>C. File system</td>\n\t\t\t<td>3. CPU</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>D. Signal</td>\n\t\t\t<td>4. Disk</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>A-2 B-4 C-3 D-1</li>\n\t<li>A-1 B-2 C-3 D-4</li>\n\t<li>A-3 B-2 C-4 D-1</li>\n\t<li>A-4 B-1 C-2 D-3</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go-os-1,operating-system', 'category': 'Operating System'}]}]}
+      </script>
+      

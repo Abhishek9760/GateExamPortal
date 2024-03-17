@@ -1,0 +1,243 @@
+<div><span>Q1</span> - <p>Consider functions f(), g(), and  h() which are positive increasing functions.</p>
+
+<p>Also, consider two statements below -</p>
+
+<p>
+    S1:   nbsp;If f(n)=o(g(n))   nbsp; then h(f(n))=o(h(g(n)), here o is small-oh
+</p>
+
+<p>
+    S2:   nbsp;If f(n)=O(g(n))   nbsp; then h(f(n))=O(h(g(n)), here O is big-oh
+</p>
+
+<ol>
+</ol>
+
+<p>Which of the following is correct ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S 1 is true but S 2 is false</li>
+	<li>S 1 is false but S 2 is true</li>
+	<li>Both statements are true</li>
+	<li>Both Statements are false</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider Iterated logarithm of n, written log^∗ n (usually read "log star n"), is the number of times the logarithm (base 2) function must be iteratively applied before the result is less than or equal to 1.<br>
+Mathematically,<br>
+
+    ^* N=min{k |⋯_k N ≤ 1}
+<br>
+For example-<br>
+^* 2    amp;=1,
+<br>
+ ^* 4    amp;=2,
+<br>
+ ^* 16    amp;=3,
+<br>
+ ^* 65536    amp;=4,
+<br>
+ ^*(2^65536)    amp;=5</p>
+
+<p>Which of the following is/are correct about the implementation of log∗ n?</p>
+
+<p>In all options, log() is a function which calculates log base 2 of a given number.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int iteratedLog(double n)
+
+    if (n    gt; 1.0) 
+        return 1 + iteratedLog( log(n));
+    
+    else return 0;
+
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int iteratedLog(double n)
+
+    int count=0;
+    while (n    gt; 1.0) 
+        n = log(n);
+        count++;
+    
+    return count;
+
+
+</pre>
+	</li>
+	<li>log∗ n={[                   0            amp;  if          amp; n ≤ 1; <br>
+	1+log∗(log n)            amp;  if              amp; n                gt;1 ].<br>
+	<br>
+	   nbsp;</li>
+	<li>log ^* 2^m={[ 1+log ^* m      nbsp;   amp;  if     amp; m    nbsp; 1;    <br>
+	1   amp;  if   amp; m≤1 ].</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+fun(int N) 
+    for (int i = N; i    gt; 0; i = i / 2) 
+        for (int j = 0; j    lt; i * 2; j += 1) 
+            printf("Hello World");
+        
+    
+ 
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(N log N)</li>
+	<li>Θ(N)</li>
+	<li>Θ(log N)</li>
+	<li>Θ((log N)^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following C function:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int  fun1 (int  n)
+ 
+    int  i, j, k, p, q =  0;
+    for (i = 1; i   lt;n; ++i)
+     
+        p =  0;
+        for (j=n; j   gt;1; j=j/2) ++p;
+        for (k=1; k   lt;p; k=k*2) ++q;
+    
+
+    return q;
+</pre>
+
+<p>Which one of the following most closely approximates the return value of the function fun1?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>n^3</li>
+	<li>n(log n)^2</li>
+	<li>nlog n</li>
+	<li>n log (log n)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the time complexity of following code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+mystery(int N) 
+    int i = 1, s = 1;
+    while (s    lt;= N) 
+        i += 1
+        s = s + i;
+    
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(√(N))</li>
+	<li>Θ(N)</li>
+	<li>Θ(log N)</li>
+	<li>Θ((log N)^ 2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider a set of functions in 2^(O(n)) which includes all functions of form 2^(s(n)) where s(n) = O(n).</p>
+
+<p>For example :-   nbsp;   nbsp;2^n = 2^(O(n)), 4^n = 2^(O(n)) and so on.</p>
+
+<p>Which of the following(s) is/are FALSE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>f(n)=(n/2)^n then f(n)=2^Θ(n log n)</li>
+	<li>3^n=O(2^n)</li>
+	<li>3^n=2^O(n)</li>
+	<li>ln n/√(n) is O(√(n))</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - Which of the following(s) is/are true about positive functions<br /><ol style="list-style-type:upper-alpha"><li> f(n)=Ω(g(n)) ⟹ g(n)=O(f(n))</li><li> f(n)=ω(g(n)) ⟹ f(n)=Ω(g(n))</li> <li>f(n)=O(g(n)) ∧ f(n)=Ω(h(n)) ⟹ g(n)=Θ(h(n))</li>  <li>o(g(n)) ∩ω(g(n))=∅</li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Which of the following(s) is/are TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>nbsp;∑_i=0^n 5^-i=Θ(n)<br>
+	   nbsp;</li>
+	<li>2^log _4 n=Θ(√(n))<br>
+	   nbsp;</li>
+	<li>∑_i=1^log m c 2^2 i=O(4^log m)<br>
+	   nbsp;</li>
+	<li>∑_i=1^n^2ilogn=Ω(n^3)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the function f(N)=∑_i=0^N∑_j=0^i j</p>
+
+<p>Which of the following is true about f(N)?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>f(N)=Θ(N^2)</li>
+	<li>f(N)=Θ(N^3)</li>
+	<li>f(N)=Θ(N)</li>
+	<li>f(N)=Θ(N   nbsp;log   nbsp;N)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What is the time complexity of following code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int fun(int n)
+
+    int count=0;
+    for(int i=n; i   gt;0; i/=2)
+        for(int j=0;j   lt;i; j++)
+            count += 1;
+    return count ;
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(N log N)</li>
+	<li>Θ(N)</li>
+	<li>Θ(log N)</li>
+	<li>Θ(N^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Suppose we perform a sequence of n operations on a data structure in which the i th operation costs i if i is an exact power of 2, and 1 otherwise.<br>
+Let C_i be cost of i th operation then -<br>
+
+    C_i= i    amp;  if i is an exact power of  2
+    <br>
+    1    amp;  otherwise
+<br>
+What will be the total cost of n operations?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(n)</li>
+	<li>Θ(n log n)</li>
+	<li>Θ(2^n)</li>
+	<li>Θ(n 2^n)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Arrange the following functions in their increasing order of growth. In options log ^2 n means (log n)^2</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>log (n !),   nbsp; log ^2 n, ( n) !,   nbsp; e^n</li>
+	<li>log (n !),   nbsp; log ^2 n,   nbsp; e^n, ( n) !</li>
+	<li>log ^2 n,   nbsp; log (n !), ( n) !,   nbsp; e^n</li>
+	<li>log ^2 n, ( n) !,   nbsp; log (n !),   nbsp; e^n</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider the case: f(n)=O(g(n)). Then, following two statements are claimed to be inferred from the above case.</p>
+
+<ul>
+	<li>S1: 2^f(n)=O(2^g(n))</li>
+	<li>S2: 2^g(n)=O(2^f(n))</li>
+</ul>
+
+<p>Choose the correct option from the given.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Both correct.</li>
+	<li>Both incorrect</li>
+	<li>S1 correct, S2 false</li>
+	<li>S2 false, S1 correct</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What is the time complexity of code given?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int fun(int n)
+
+    int count = 0;
+    for (int i = n; i    gt; 0; i /= 2)
+    for (int j = 0; j    lt; i; j++)
+        count += 1;
+    return count;
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(log n)</li>
+	<li>Θ(n)</li>
+	<li>Θ(n log n)</li>
+	<li>Θ(n^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Let b   gt;1. Then log _b((n^2) !) is _________</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Θ(log _b(n !))</li>
+	<li>Θ(log _b(2 n !))</li>
+	<li>Θ(n log _b(n))</li>
+	<li>Θ(n^2log _b(n))</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '375444', 'text': '<p>Consider functions $f(), g(), \\text{and } h()$ which are positive increasing functions.</p>\n\n<p>Also, consider two statements below -</p>\n\n<p>$$\\text{S1:&nbsp;If }f(n)=o(g(n))&nbsp;\\text{ then }h(f(n))=o(h(g(n))\\text{, here }o\\text{ is small-oh} $$</p>\n\n<p>$$\\text{S2:&nbsp;If }f(n)=O(g(n))&nbsp;\\text{ then }h(f(n))=O(h(g(n))\\text{, here }O\\text{ is big-oh}$$</p>\n\n<ol>\n</ol>\n\n<p>Which of the following is correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{S} 1$ is true but $\\mathrm{S} 2$ is false</li>\n\t<li>$\\mathrm{S} 1$ is false but $\\mathrm{S} 2$ is true</li>\n\t<li>Both statements are true</li>\n\t<li>Both Statements are false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375453', 'text': '<p>Consider $\\text{Iterated logarithm}$ of $n,$ written $\\log^\\ast n$ (usually read "$\\log$ star $n$"), is the number of times the logarithm (base $2$) function must be iteratively applied before the result is less than or equal to $1.$<br>\nMathematically,<br>\n$$\\lg ^{*} N=\\min \\{k \\mid \\underbrace{\\lg \\lg \\cdots \\lg }_{k} N \\leq 1\\}$$<br>\nFor example-<br>\n$\\begin{aligned} \\lg ^{*} 2 &amp;=1,\\\\<br>\n\\lg ^{*} 4 &amp;=2,\\\\<br>\n\\lg ^{*} 16 &amp;=3,\\\\<br>\n\\lg ^{*} 65536 &amp;=4,\\\\<br>\n\\lg ^{*}\\left(2^{65536}\\right) &amp;=5 \\end{aligned}$</p>\n\n<p>Which of the following is/are correct about the implementation of $\\log \\ast n?$</p>\n\n<p>In all options, $\\log()$ is a function which calculates $\\log$ base $2$ of a given number.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint iteratedLog(double n)\n{\n    if (n &gt; 1.0) {\n        return 1 + iteratedLog( log(n));\n    }\n    else return 0;\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint iteratedLog(double n)\n{\n    int count=0;\n    while (n &gt; 1.0) {\n        n = log(n);\n        count++;\n    }\n    return count;\n}\n\n</pre>\n\t</li>\n\t<li>$\\log \\ast n=\\left\\{\\begin{array}{clc}0 &amp; \\text { if } &amp; n \\leq 1\\\\<br>\n\t1+\\log \\ast(\\log n) &amp; \\text { if } &amp; n&gt;1\\end{array}\\right.$<br>\n\t<br>\n\t&nbsp;</li>\n\t<li>$\\log ^{*} 2^{m}=\\left\\{\\begin{array}{clc}1+\\log ^{*} m&nbsp;&amp; \\text { if } &amp; m&nbsp;\\gt 1\\\\<br>\n\t1&amp; \\text { if } &amp; m\\leq1\\end{array}\\right.$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375440', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfun(int N) {\n    for (int i = N; i &gt; 0; i = i / 2) {\n        for (int j = 0; j &lt; i * 2; j += 1) {\n            printf("Hello World");\n        }\n    }\n} \n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(N \\log N)$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left((\\log N)^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375442', 'text': '<p>Consider the following $\\text{C}$ function:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint  fun1 (int  n)\n{ \n    int  i, j, k, p, q =  0;\n    for (i = 1; i&lt;n; ++i)\n    { \n        p =  0;\n        for (j=n; j&gt;1; j=j/2) ++p;\n        for (k=1; k&lt;p; k=k*2) ++q;\n    }\n\n    return q;\n}</pre>\n\n<p>Which one of the following most closely approximates the return value of the function $\\text{fun1}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$n^3$</li>\n\t<li>$n(\\log n)^{2}$</li>\n\t<li>$n\\log n$</li>\n\t<li>$n \\log (\\log n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375441', 'text': '<p>What will be the time complexity of following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmystery(int N) {\n    int i = 1, s = 1;\n    while (s &lt;= N) {\n        i += 1\n        s = s + i;\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\sqrt{N})$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left((\\log N)^{ 2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375445', 'text': '<p>Consider a set of functions in $2^{(O(n))}$ which includes all functions of form $2^{(s(n))}$ where $s(n) = O(n)$.</p>\n\n<p>For example :-&nbsp;&nbsp;$2^{n} = 2^{(O(n))}, 4^{n} = 2^{(O(n))}$ and so on.</p>\n\n<p>Which of the following(s) is/are FALSE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(n)=\\left(\\frac{n}{2}\\right)^{n}$ then $f(n)=2^{\\Theta(n \\log n)}$</li>\n\t<li>$3^{n}=O\\left(2^{n}\\right)$</li>\n\t<li>$3^{n}=2^{O(n)}$</li>\n\t<li>$\\frac{\\ln n}{\\sqrt{n}}$ is $O(\\sqrt{n})$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375462', 'text': 'Which of the following(s) is/are true about positive functions<br /><ol style="list-style-type:upper-alpha"><li> $f(n)=\\Omega(g(n)) \\Longrightarrow g(n)=O(f(n))$</li><li> $f(n)=\\omega(g(n)) \\Longrightarrow f(n)=\\Omega(g(n))$</li> <li>$f(n)=O(g(n)) \\wedge f(n)=\\Omega(h(n)) \\Longrightarrow g(n)=\\Theta(h(n))$</li>  <li>$o(g(n)) \\cap \\omega(g(n))=\\emptyset$</li></ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375447', 'text': '<p>Which of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$&nbsp;\\displaystyle{}\\sum_{i=0}^{n} 5^{-i}=\\Theta(n)$<br>\n\t&nbsp;</li>\n\t<li>$2^{\\log _{4} n}=\\Theta(\\sqrt{n})$<br>\n\t&nbsp;</li>\n\t<li>$\\displaystyle{}\\sum_{i=1}^{\\log m} c 2^{2 i}=O\\left(4^{\\log m}\\right)$<br>\n\t&nbsp;</li>\n\t<li>$\\displaystyle{}\\sum_{\\mathrm{i}=1}^{n^{2}}{\\mathrm{i} \\log \\mathrm{n}}=\\Omega\\left(\\mathrm{n}^{3}\\right)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375460', 'text': '<p>Consider the function $f(N)=\\displaystyle{}\\sum_{i=0}^{N} \\sum_{j=0}^{i} j$</p>\n\n<p>Which of the following is true about $f(N)?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(N)=\\Theta\\left(N^{2}\\right)$</li>\n\t<li>$f(N)=\\Theta\\left(N^{3}\\right)$</li>\n\t<li>$f(N)=\\Theta(N)$</li>\n\t<li>$f(N)=\\Theta(N&nbsp;\\log&nbsp;N)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375439', 'text': '<p>What is the time complexity of following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint fun(int n)\n{\n    int count=0;\n    for(int i=n; i&gt;0; i/=2)\n        for(int j=0;j&lt;i; j++)\n            count += 1;\n    return count ;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(N \\log N)$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left(N^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375446', 'text': '<p>Suppose we perform a sequence of $n$ operations on a data structure in which the $i$ th operation costs $i$ if $i$ is an exact power of $2,$ and $1$ otherwise.<br>\nLet $C_{i}$ be cost of $i$ th operation then -<br>\n$$ C_{i}= \\begin{cases}i &amp; \\text { if } \\mathrm{i} \\text { is an exact power of } 2\\\\<br>\n1 &amp; \\text { otherwise }\\end{cases}$$<br>\nWhat will be the total cost of $n$ operations?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n \\log n)$</li>\n\t<li>$\\Theta\\left(2^{n}\\right)$</li>\n\t<li>$\\Theta\\left(n 2^{n}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375461', 'text': '<p>Arrange the following functions in their increasing order of growth. In options $\\log ^{2} n$ means $(\\log n)^{2}$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\log (n !),&nbsp; \\log ^{2} n, (\\lg n) !,&nbsp; e^{n}$</li>\n\t<li>$\\log (n !),&nbsp; \\log ^{2} n,&nbsp; e^{n}, (\\lg n) !$</li>\n\t<li>$\\log ^{2} n,&nbsp; \\log (n !), (\\lg n) !,&nbsp; e^{n}$</li>\n\t<li>$\\log ^{2} n, (\\lg n) !,&nbsp; \\log (n !),&nbsp; e^{n}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375448', 'text': '<p>Consider the case: $f(n)=O(g(n))$. Then, following two statements are claimed to be inferred from the above case.</p>\n\n<ul>\n\t<li>$\\text{S1}: 2^{f(n)}=O\\left(2^{g(n)}\\right)$</li>\n\t<li>$\\text{S2}: 2^{g(n)}=O\\left(2^{f(n)}\\right)$</li>\n</ul>\n\n<p>Choose the correct option from the given.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Both correct.</li>\n\t<li>Both incorrect</li>\n\t<li>$\\text{S1}$ correct, $\\text{S2}$ false</li>\n\t<li>$\\text{S2}$ false, $\\text{S1}$ correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375454', 'text': '<p>What is the time complexity of code given?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint fun(int n)\n{\n    int count = 0;\n    for (int i = n; i &gt; 0; i /= 2)\n    for (int j = 0; j &lt; i; j++)\n        count += 1;\n    return count;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\log n)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n \\log n)$</li>\n\t<li>$\\Theta\\left(n^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375463', 'text': '<p>Let $b&gt;1$. Then $\\log _{b}\\left(\\left(n^{2}\\right) !\\right)$ is _________</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta\\left(\\log _{b}(n !)\\right)$</li>\n\t<li>$\\Theta\\left(\\log _{b}(2 n !)\\right)$</li>\n\t<li>$\\Theta\\left(n \\log _{b}(n)\\right)$</li>\n\t<li>$\\Theta\\left(n^{2} \\log _{b}(n)\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}]
+      let data={'name': 'GO Classes Test Series 2024 | Data Structures | Test 2', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '375444', 'text': '<p>Consider functions $f(), g(), \\text{and } h()$ which are positive increasing functions.</p>\n\n<p>Also, consider two statements below -</p>\n\n<p>$$\\text{S1:&nbsp;If }f(n)=o(g(n))&nbsp;\\text{ then }h(f(n))=o(h(g(n))\\text{, here }o\\text{ is small-oh} $$</p>\n\n<p>$$\\text{S2:&nbsp;If }f(n)=O(g(n))&nbsp;\\text{ then }h(f(n))=O(h(g(n))\\text{, here }O\\text{ is big-oh}$$</p>\n\n<ol>\n</ol>\n\n<p>Which of the following is correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{S} 1$ is true but $\\mathrm{S} 2$ is false</li>\n\t<li>$\\mathrm{S} 1$ is false but $\\mathrm{S} 2$ is true</li>\n\t<li>Both statements are true</li>\n\t<li>Both Statements are false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375453', 'text': '<p>Consider $\\text{Iterated logarithm}$ of $n,$ written $\\log^\\ast n$ (usually read "$\\log$ star $n$"), is the number of times the logarithm (base $2$) function must be iteratively applied before the result is less than or equal to $1.$<br>\nMathematically,<br>\n$$\\lg ^{*} N=\\min \\{k \\mid \\underbrace{\\lg \\lg \\cdots \\lg }_{k} N \\leq 1\\}$$<br>\nFor example-<br>\n$\\begin{aligned} \\lg ^{*} 2 &amp;=1,\\\\<br>\n\\lg ^{*} 4 &amp;=2,\\\\<br>\n\\lg ^{*} 16 &amp;=3,\\\\<br>\n\\lg ^{*} 65536 &amp;=4,\\\\<br>\n\\lg ^{*}\\left(2^{65536}\\right) &amp;=5 \\end{aligned}$</p>\n\n<p>Which of the following is/are correct about the implementation of $\\log \\ast n?$</p>\n\n<p>In all options, $\\log()$ is a function which calculates $\\log$ base $2$ of a given number.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint iteratedLog(double n)\n{\n    if (n &gt; 1.0) {\n        return 1 + iteratedLog( log(n));\n    }\n    else return 0;\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint iteratedLog(double n)\n{\n    int count=0;\n    while (n &gt; 1.0) {\n        n = log(n);\n        count++;\n    }\n    return count;\n}\n\n</pre>\n\t</li>\n\t<li>$\\log \\ast n=\\left\\{\\begin{array}{clc}0 &amp; \\text { if } &amp; n \\leq 1\\\\<br>\n\t1+\\log \\ast(\\log n) &amp; \\text { if } &amp; n&gt;1\\end{array}\\right.$<br>\n\t<br>\n\t&nbsp;</li>\n\t<li>$\\log ^{*} 2^{m}=\\left\\{\\begin{array}{clc}1+\\log ^{*} m&nbsp;&amp; \\text { if } &amp; m&nbsp;\\gt 1\\\\<br>\n\t1&amp; \\text { if } &amp; m\\leq1\\end{array}\\right.$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375440', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfun(int N) {\n    for (int i = N; i &gt; 0; i = i / 2) {\n        for (int j = 0; j &lt; i * 2; j += 1) {\n            printf("Hello World");\n        }\n    }\n} \n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(N \\log N)$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left((\\log N)^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375442', 'text': '<p>Consider the following $\\text{C}$ function:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint  fun1 (int  n)\n{ \n    int  i, j, k, p, q =  0;\n    for (i = 1; i&lt;n; ++i)\n    { \n        p =  0;\n        for (j=n; j&gt;1; j=j/2) ++p;\n        for (k=1; k&lt;p; k=k*2) ++q;\n    }\n\n    return q;\n}</pre>\n\n<p>Which one of the following most closely approximates the return value of the function $\\text{fun1}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$n^3$</li>\n\t<li>$n(\\log n)^{2}$</li>\n\t<li>$n\\log n$</li>\n\t<li>$n \\log (\\log n)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375441', 'text': '<p>What will be the time complexity of following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmystery(int N) {\n    int i = 1, s = 1;\n    while (s &lt;= N) {\n        i += 1\n        s = s + i;\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\sqrt{N})$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left((\\log N)^{ 2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375445', 'text': '<p>Consider a set of functions in $2^{(O(n))}$ which includes all functions of form $2^{(s(n))}$ where $s(n) = O(n)$.</p>\n\n<p>For example :-&nbsp;&nbsp;$2^{n} = 2^{(O(n))}, 4^{n} = 2^{(O(n))}$ and so on.</p>\n\n<p>Which of the following(s) is/are FALSE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(n)=\\left(\\frac{n}{2}\\right)^{n}$ then $f(n)=2^{\\Theta(n \\log n)}$</li>\n\t<li>$3^{n}=O\\left(2^{n}\\right)$</li>\n\t<li>$3^{n}=2^{O(n)}$</li>\n\t<li>$\\frac{\\ln n}{\\sqrt{n}}$ is $O(\\sqrt{n})$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375462', 'text': 'Which of the following(s) is/are true about positive functions<br /><ol style="list-style-type:upper-alpha"><li> $f(n)=\\Omega(g(n)) \\Longrightarrow g(n)=O(f(n))$</li><li> $f(n)=\\omega(g(n)) \\Longrightarrow f(n)=\\Omega(g(n))$</li> <li>$f(n)=O(g(n)) \\wedge f(n)=\\Omega(h(n)) \\Longrightarrow g(n)=\\Theta(h(n))$</li>  <li>$o(g(n)) \\cap \\omega(g(n))=\\emptyset$</li></ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375447', 'text': '<p>Which of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$&nbsp;\\displaystyle{}\\sum_{i=0}^{n} 5^{-i}=\\Theta(n)$<br>\n\t&nbsp;</li>\n\t<li>$2^{\\log _{4} n}=\\Theta(\\sqrt{n})$<br>\n\t&nbsp;</li>\n\t<li>$\\displaystyle{}\\sum_{i=1}^{\\log m} c 2^{2 i}=O\\left(4^{\\log m}\\right)$<br>\n\t&nbsp;</li>\n\t<li>$\\displaystyle{}\\sum_{\\mathrm{i}=1}^{n^{2}}{\\mathrm{i} \\log \\mathrm{n}}=\\Omega\\left(\\mathrm{n}^{3}\\right)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,multiple-selects,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375460', 'text': '<p>Consider the function $f(N)=\\displaystyle{}\\sum_{i=0}^{N} \\sum_{j=0}^{i} j$</p>\n\n<p>Which of the following is true about $f(N)?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(N)=\\Theta\\left(N^{2}\\right)$</li>\n\t<li>$f(N)=\\Theta\\left(N^{3}\\right)$</li>\n\t<li>$f(N)=\\Theta(N)$</li>\n\t<li>$f(N)=\\Theta(N&nbsp;\\log&nbsp;N)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375439', 'text': '<p>What is the time complexity of following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint fun(int n)\n{\n    int count=0;\n    for(int i=n; i&gt;0; i/=2)\n        for(int j=0;j&lt;i; j++)\n            count += 1;\n    return count ;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(N \\log N)$</li>\n\t<li>$\\Theta(N)$</li>\n\t<li>$\\Theta(\\log N)$</li>\n\t<li>$\\Theta\\left(N^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375446', 'text': '<p>Suppose we perform a sequence of $n$ operations on a data structure in which the $i$ th operation costs $i$ if $i$ is an exact power of $2,$ and $1$ otherwise.<br>\nLet $C_{i}$ be cost of $i$ th operation then -<br>\n$$ C_{i}= \\begin{cases}i &amp; \\text { if } \\mathrm{i} \\text { is an exact power of } 2\\\\<br>\n1 &amp; \\text { otherwise }\\end{cases}$$<br>\nWhat will be the total cost of $n$ operations?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n \\log n)$</li>\n\t<li>$\\Theta\\left(2^{n}\\right)$</li>\n\t<li>$\\Theta\\left(n 2^{n}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375461', 'text': '<p>Arrange the following functions in their increasing order of growth. In options $\\log ^{2} n$ means $(\\log n)^{2}$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\log (n !),&nbsp; \\log ^{2} n, (\\lg n) !,&nbsp; e^{n}$</li>\n\t<li>$\\log (n !),&nbsp; \\log ^{2} n,&nbsp; e^{n}, (\\lg n) !$</li>\n\t<li>$\\log ^{2} n,&nbsp; \\log (n !), (\\lg n) !,&nbsp; e^{n}$</li>\n\t<li>$\\log ^{2} n, (\\lg n) !,&nbsp; \\log (n !),&nbsp; e^{n}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375448', 'text': '<p>Consider the case: $f(n)=O(g(n))$. Then, following two statements are claimed to be inferred from the above case.</p>\n\n<ul>\n\t<li>$\\text{S1}: 2^{f(n)}=O\\left(2^{g(n)}\\right)$</li>\n\t<li>$\\text{S2}: 2^{g(n)}=O\\left(2^{f(n)}\\right)$</li>\n</ul>\n\n<p>Choose the correct option from the given.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Both correct.</li>\n\t<li>Both incorrect</li>\n\t<li>$\\text{S1}$ correct, $\\text{S2}$ false</li>\n\t<li>$\\text{S2}$ false, $\\text{S1}$ correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,2-marks', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375454', 'text': '<p>What is the time complexity of code given?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint fun(int n)\n{\n    int count = 0;\n    for (int i = n; i &gt; 0; i /= 2)\n    for (int j = 0; j &lt; i; j++)\n        count += 1;\n    return count;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta(\\log n)$</li>\n\t<li>$\\Theta(n)$</li>\n\t<li>$\\Theta(n \\log n)$</li>\n\t<li>$\\Theta\\left(n^{2}\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}, {'contents': '', 'post_id': '375463', 'text': '<p>Let $b&gt;1$. Then $\\log _{b}\\left(\\left(n^{2}\\right) !\\right)$ is _________</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\Theta\\left(\\log _{b}(n !)\\right)$</li>\n\t<li>$\\Theta\\left(\\log _{b}(2 n !)\\right)$</li>\n\t<li>$\\Theta\\left(n \\log _{b}(n)\\right)$</li>\n\t<li>$\\Theta\\left(n^{2} \\log _{b}(n)\\right)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-2,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'Algorithms'}]}]}
+      </script>
+      

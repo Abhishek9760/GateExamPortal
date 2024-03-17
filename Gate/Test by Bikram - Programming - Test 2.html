@@ -1,0 +1,543 @@
+<div><span>Q1</span> - <p>Consider the following C program using function :    nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include   lt;stdio.h   gt;
+main()
+
+int f1(int,int);
+int x = 9, n=3, S;
+S = f1(x,n);
+printf(S);
+
+int f1(int x, int n)
+
+int y=1, i=1;
+for(i=1;i   lt;=n;i++)
+y=y*x;
+return(y);
+</pre>
+
+<p>Output will be ______</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Which of the following statements is/are true ?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+int x=10, y=200
+for( i=1;i++   lt;=10;);
+if(x==y);
+printf("x=
+return 0;
+ </pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>printf() is called infinite times</li>
+	<li>program will produce output x=10,y=20;</li>
+	<li>The program will not produce any output</li>
+	<li>The program will produce some error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What is the output of this program?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+#include    lt;string.h   gt;
+int main()
+
+    char string[] = "Hello";
+    printf("
+    return 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>5  6</li>
+	<li>5  5</li>
+	<li>6  5</li>
+	<li>6 &nbsp;6</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>State the output in below code snippet :</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main(void)
+
+    char x[5] =  1, 2, 3, 4, 5 ;
+    char *ptr = (char*)(   amp;x + 1);
+    printf("
+    return 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Compile Error</li>
+	<li>2  1</li>
+	<li>2  5</li>
+	<li>3  4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+void fun()
+
+    int p;
+    static int x=1;
+    p = ++x;
+    printf("
+    if(p    lt;= 2)
+        fun();
+    printf(“
+
+int main()
+
+    fun();
+    fun();
+</pre>
+
+<p>In the above code fragment, the total number of times <strong>printf</strong> statement will be executed is _________.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Which among following statements is/are TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li><strong>   amp;</strong> is bit-wise and <strong>   amp;   amp;</strong> is a logical operator</li>
+	<li><strong>   amp;</strong>   nbsp;returns an integer value   nbsp;whereas   nbsp;<strong>   amp;   amp;</strong>   nbsp;returns a boolean value</li>
+	<li>Both the above options are correct</li>
+	<li>Both (A) and (B) are incorrect</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>The value of <strong>p</strong> after   nbsp;execution of the following program will be:</p>
+
+<pre class="prettyprint lang-c_cpp">
+int new(int t)
+
+static int cal=0;
+cal=cal+t;
+return(cal);
+
+main()
+
+int t,p;
+for(t=0;t   lt;=4;t++)
+p= new(t);
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10</li>
+	<li>4   nbsp;    nbsp;    nbsp;</li>
+	<li>6   nbsp;    nbsp;   nbsp;</li>
+	<li>7</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What is the output of this program?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+char *ptr;
+char string[] = "How are you?";
+ptr = string;
+ptr += 4;
+printf("
+return 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>How are you?</li>
+	<li>are you?    nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>are    nbsp;   nbsp;   nbsp;   nbsp;   nbsp;</li>
+	<li>error in program</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the below function:</p>
+
+<pre class="prettyprint lang-c_cpp">
+int s (int n)
+
+if (n   lt;=1) return 1 ;
+n = (n-1) * (n-1) -2 - n * n + 3*n ;
+s(n);
+printf(“
+
+</pre>
+
+<p>What is the output if initial call is   nbsp;s(6) ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>55555</li>
+	<li>11111</li>
+	<li>54321</li>
+	<li>12345</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Suppose the following declarations are in effect :</p>
+
+<ol>
+	<li>int a[   ] = {5,15,34,54,14,2,52,72 };</li>
+	<li>int *p = &amp;a[1] , *q = &amp;a[5];</li>
+</ol>
+
+<p>The value of   nbsp; q - p is   nbsp;________.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Which of the following will print the value 2 for this code snippet?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include   lt;stdio.h   gt;
+int main()
+
+int arr[10][20][30] = 0;
+arr[5][2][1] = 2;
+__________    // missing line here
+return 0;
+</pre>
+
+<p>The   nbsp;missing line above   nbsp;is:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>What is the output of the following program?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+void f(char**);
+int main()
+
+char *argv[] =  "ab", "cd", "ef", "gh", "ij", "kl" ;
+f(argv);
+return 0;
+
+void f(char **p)
+
+char *t;
+t = (p += sizeof(int))[-1];
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>ab</li>
+	<li>cd</li>
+	<li>ef</li>
+	<li>gh</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>What is the output of the code?    nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h    gt;
+int main()
+
+int a;
+printf("
+return 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10</li>
+	<li>9</li>
+	<li>-1</li>
+	<li>An undefined behavior</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Read the following code fragment:</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+main()
+
+int i=1,j;
+int k= 1__ (j ___ i) ;
+printf("
+</pre>
+
+<p>What operators are   nbsp;needed in the blanks to print 1  1  2?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>* and =</li>
+	<li>* and +</li>
+	<li>+ and *</li>
+	<li>+ and =</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Choose the correct operators to fill in the blanks:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int i,j,k;
+i=1;j=2;k=3;
+printf("
+
+<p>Output is: 2</p>
+
+<p>   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>+    nbsp;
+	<li>*    nbsp;/    nbsp;–   nbsp;   nbsp;+</li>
+	<li>+    nbsp;
+	<li>* 
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>What will be the output of this program ?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#define square(x) x*x
+main()
+
+int z;
+z = 25/square(5);
+printf("
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>What will be   nbsp;the output of the below   nbsp;program ?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+struct node
+
+int x;
+int y;
+int z;
+;
+struct node s =  3, 5, 6 ;
+struct node *pt =    amp;s;
+printf("
+return 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>5</li>
+	<li>3</li>
+	<li>7</li>
+	<li>6</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Point out the error :<br>
+   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+void f(int*);
+int main()
+
+    int i=35,*z;
+    z=f(   amp;i);
+    printf("
+    return 0;
+
+void f(int*m)
+
+    return(m+2);
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>error in function call</li>
+	<li>error in return statement</li>
+	<li>error in argument of f()    nbsp;</li>
+	<li>error in pointer initialization</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>The output of this code snippet is :</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+#define x 4+1
+int main()
+
+int i;
+i = x*x*x;
+printf("
+return 0;
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>How many TOKENS are there in the   nbsp;statement   nbsp;<strong>answer =(5*q-p*p)/3</strong>; ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>13</li>
+	<li>12</li>
+	<li>15</li>
+	<li>14</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>What is the output of the following code snippet?   nbsp;   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+char c=125;
+c=c+10;
+printf("
+return 0;
+</pre>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Read this code snippet :</p>
+
+<pre class="prettyprint lang-c_cpp">
+void main()
+
+int i;
+char a[]="";
+if(printf("
+printf(" GATE 2018");
+else
+printf("Forget GATE");
+
+</pre>
+
+<p>The output is :</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Compiler Error</li>
+	<li>Forget GATE</li>
+	<li>GATE 2018</li>
+	<li>Runtime error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>What is the output of the following program?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+int a = 0;
+switch(a)
+
+default:
+a = 4;
+case 6:
+a–;
+case 5:
+a = a+1;
+
+case 1:
+ a = a-1;
+
+printf("
+return 0;
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int counter(int i)
+
+    static int count = 0;
+    count = count + i;
+    return count;
+
+int main()
+
+    int i, j;
+    for (i = 0; i    lt;= 5; i++)
+        j = counter(i);
+    printf ("
+    return 0;
+</pre>
+
+<p>What is the output of the above program?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Read the following program fragment:   nbsp;    nbsp;    nbsp;    nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include   lt;stdio.h   gt;
+int main()
+
+int p = 2, q = 5;
+p = p^q;
+q = q^p;
+printf("
+return 0;
+</pre>
+
+<p>The output is:</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>5  2</li>
+	<li>2  5</li>
+	<li>7  7</li>
+	<li>7  2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>What is the output of the below mentioned code snippet?</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include    lt;stdio.h   gt;
+int main()
+
+int i=10;
+static int x=i;
+if(x==i)
+printf("Equal");
+else if(x   gt;i)
+printf("Greater");
+else
+printf("Lesser");
+return 0;
+ </pre>
+
+<p>   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;   nbsp;Equal</li>
+	<li>   nbsp; Greater   nbsp;</li>
+	<li>   nbsp; Lesser</li>
+	<li>   nbsp; Compilation Error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>What is the output of the following program?   nbsp;    nbsp;    nbsp;    nbsp;    nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+int fun (int z)
+
+if( z==0 || z==1 )
+return 1;
+else
+return fun(z-1) ;
+
+int main()
+
+int y;
+y=fun(8);
+printf(“
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>36</li>
+	<li>8</li>
+	<li>40</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>   nbsp;</p>
+
+<pre class="prettyprint lang-c_cpp">
+#include   lt;stdio.h   gt;
+int K = 10;
+int main()
+
+foo();
+foo();
+return 0;
+
+
+int foo()
+
+static int k= 1;
+printf("
+k++;
+return 0;
+
+</pre>
+
+<p>What is the output of the above code snippet?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>2,3</li>
+	<li>1,2</li>
+	<li>1,3</li>
+	<li>2,4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>Spot   nbsp;the error(s) in this code snippet :</p>
+
+<pre class="prettyprint lang-c_cpp">
+int n=2;   // Line 1
+switch(n)
+
+case 1.5:
+printf( "gate");
+break;
+case 2:
+printf( "overflow");
+break;
+case 'A':
+printf("gateoverflow");
+         // Line 12</pre>
+
+<p>The error(s) is in line number _____.</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>Assume that a[4] is a one-dimensional array of 4 elements, p is a pointer variable and p = a is   nbsp;performed. Now, which   nbsp;among these expressions is illegal?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>p == a[0]</li>
+	<li>p == &amp;a[0]</li>
+	<li>^*p == a[0]</li>
+	<li>p[0] == a[0]</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '129759', 'text': '<p>Consider the following C program using function : &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nmain()\n{\nint f1(int,int);\nint x = 9, n=3, S;\nS = f1(x,n);\nprintf(S);\n}\nint f1(int x, int n)\n{\nint y=1, i=1;\nfor(i=1;i&lt;=n;i++)\ny=y*x;\nreturn(y);\n}</pre>\n\n<p>Output will be ______</p>', 'type': 'Numerical', 'answer': '729', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129761', 'text': '<p>Which of the following statements is/are true ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint x=10, y=200%90, i;\nfor( i=1;i++&lt;=10;);\nif(x==y);\nprintf("x=%dy=%d\\n",x,y );\nreturn 0;\n} </pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>printf() is called infinite times</li>\n\t<li>program will produce output x=10,y=20;</li>\n\t<li>The program will not produce any output</li>\n\t<li>The program will produce some error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,programming-in-c', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129762', 'text': '<p>What is the output of this program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\n#include &lt;string.h&gt;\nint main()\n{\n    char string[] = "Hello";\n    printf("%lu %lu", sizeof(string), strlen(string));\n    return 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5 \\ 6$</li>\n\t<li>$5 \\ 5$</li>\n\t<li>$6 \\ 5$</li>\n\t<li>$6 \\&nbsp;6$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129763', 'text': '<p>State the output in below code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main(void)\n{\n    char x[5] = { 1, 2, 3, 4, 5 };\n    char *ptr = (char*)(&amp;x + 1);\n    printf("%d %d\\n", *(x + 1), *(ptr - 1));\n    return 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Compile Error</li>\n\t<li>$2 \\ 1$</li>\n\t<li>$2 \\ 5$</li>\n\t<li>$3 \\ 4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129764', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid fun()\n{\n    int p;\n    static int x=1;\n    p = ++x;\n    printf("%d %d", p, x);\n    if(p &lt;= 2)\n        fun();\n    printf(“%d %d”, p, x);\n}\nint main()\n{\n    fun();\n    fun();\n}</pre>\n\n<p>In the above code fragment, the total number of times <strong>printf</strong> statement will be executed is _________.</p>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129765', 'text': '<p>Which among following statements is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><strong>&amp;</strong> is bit-wise and <strong>&amp;&amp;</strong> is a logical operator</li>\n\t<li><strong>&amp;</strong>&nbsp;returns an integer value&nbsp;whereas&nbsp;<strong>&amp;&amp;</strong>&nbsp;returns a boolean value</li>\n\t<li>Both the above options are correct</li>\n\t<li>Both (A) and (B) are incorrect</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,binary-operation,programming-in-c', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129766', 'text': '<p>The value of <strong>p</strong> after&nbsp;execution of the following program will be:</p>\n\n<pre class="prettyprint lang-c_cpp">\nint new(int t)\n{\nstatic int cal=0;\ncal=cal+t;\nreturn(cal);\n}\nmain()\n{\nint t,p;\nfor(t=0;t&lt;=4;t++)\np= new(t);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$4$&nbsp; &nbsp; &nbsp;</li>\n\t<li>$6$&nbsp; &nbsp;&nbsp;</li>\n\t<li>$7$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129767', 'text': '<p>What is the output of this program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nchar *ptr;\nchar string[] = "How are you?";\nptr = string;\nptr += 4;\nprintf("%s",ptr);\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>How are you?</li>\n\t<li>are you? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>are &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>error in program</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129768', 'text': '<p>Consider the below function:</p>\n\n<pre class="prettyprint lang-c_cpp">\nint s (int n)\n{\nif (n&lt;=1) return 1 ;\nn = (n-1) * (n-1) -2 - n * n + 3*n ;\ns(n);\nprintf(“%d”, n );\n}\n</pre>\n\n<p>What is the output if initial call is&nbsp;$s(6)$ ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$55555$</li>\n\t<li>$11111$</li>\n\t<li>$54321$</li>\n\t<li>$12345$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,identify-function', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129769', 'text': '<p>Suppose the following declarations are in effect :</p>\n\n<ol>\n\t<li>$\\text{int }a[ \\: ] = \\{5,15,34,54,14,2,52,72 \\}$;</li>\n\t<li>$\\text{int }*p = \\&amp;a[1] , *q = \\&amp;a[5]$;</li>\n</ol>\n\n<p>The value of&nbsp; $q - p$ is&nbsp;________.</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129770', 'text': '<p>Which of the following will print the value $2$ for this code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main()\n{\nint arr[10][20][30] = {0};\narr[5][2][1] = 2;\n__________    // missing line here\nreturn 0;\n}</pre>\n\n<p>The&nbsp;missing line above&nbsp;is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",*(((arr+5)+2)+1));</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",***((arr+5)+2)+1);\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",*(*(*(arr+5)+2)+1));</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d", *(*((arr+5)+2)+1);\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129771', 'text': '<p>What is the output of the following program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid f(char**);\nint main()\n{\nchar *argv[] = { "ab", "cd", "ef", "gh", "ij", "kl" };\nf(argv);\nreturn 0;\n}\nvoid f(char **p)\n{\nchar *t;\nt = (p += sizeof(int))[-1];\nprintf("%s\\n", t);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ab</li>\n\t<li>cd</li>\n\t<li>ef</li>\n\t<li>gh</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129772', 'text': '<p>What is the output of the code? &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h &gt;\nint main()\n{\nint a;\nprintf("%d",scanf("%d",&amp;a));\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$-1$</li>\n\t<li>An undefined behavior</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129773', 'text': '<p>Read the following code fragment:</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nmain()\n{\nint i=1,j;\nint k= 1__ (j ___ i) ;\nprintf("%d%d%d\\n", i,j,k);\n}</pre>\n\n<p>What operators are&nbsp;needed in the blanks to print $1 \\ 1 \\ 2$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$*$ and $=$</li>\n\t<li>$*$ and $+$</li>\n\t<li>$+$ and $*$</li>\n\t<li>$+$ and $=$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129774', 'text': '<p>Choose the correct operators to fill in the blanks:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i,j,k;\ni=1;j=2;k=3;\nprintf("%d",i___5___j___2____k);</pre>\n\n<p>Output is: $2$</p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>+ &nbsp;% –&nbsp;&nbsp;+</li>\n\t<li>* &nbsp;/ &nbsp;–&nbsp;&nbsp;+</li>\n\t<li>+ &nbsp;% &nbsp;+ &nbsp;/</li>\n\t<li>* % –&nbsp; /</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129775', 'text': '<p>What will be the output of this program ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#define square(x) x*x\nmain()\n{\nint z;\nz = 25/square(5);\nprintf("%d",z);\n}\n</pre>', 'type': 'Numerical', 'answer': '25', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129777', 'text': '<p>What will be&nbsp;the output of the below&nbsp;program ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nstruct node\n{\nint x;\nint y;\nint z;\n};\nstruct node s = { 3, 5, 6 };\nstruct node *pt = &amp;s;\nprintf("%d\\n", *((int*)pt+1));\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>5</li>\n\t<li>3</li>\n\t<li>7</li>\n\t<li>6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129778', 'text': '<p>Point out the error :<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid f(int*);\nint main()\n{\n    int i=35,*z;\n    z=f(&amp;i);\n    printf("%d",z);\n    return 0;\n}\nvoid f(int*m)\n{\n    return(m+2);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>error in function call</li>\n\t<li>error in return statement</li>\n\t<li>error in argument of f() &nbsp;</li>\n\t<li>error in pointer initialization</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129779', 'text': '<p>The output of this code snippet is :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\n#define x 4+1\nint main()\n{\nint i;\ni = x*x*x;\nprintf("%d",i);\nreturn 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '13', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129780', 'text': '<p>How many TOKENS are there in the&nbsp;statement&nbsp;<strong>answer $=(5*q-p*p)/3$</strong>; ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$13$</li>\n\t<li>$12$</li>\n\t<li>$15$</li>\n\t<li>$14$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129781', 'text': '<p>What is the output of the following code snippet?&nbsp;&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nchar c=125;\nc=c+10;\nprintf("%d",c);\nreturn 0;\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '-121', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129782', 'text': '<p>Read this code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\nvoid main()\n{\nint i;\nchar a[]="\\0";\nif(printf("%s\\n",a))\nprintf(" GATE 2018\\n");\nelse\nprintf("Forget GATE\\n");\n}\n</pre>\n\n<p>The output is :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Compiler Error</li>\n\t<li>Forget GATE</li>\n\t<li>GATE $2018$</li>\n\t<li>Runtime error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129784', 'text': '<p>What is the output of the following program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint a = 0;\nswitch(a)\n{\ndefault:\na = 4;\ncase 6:\na--;\ncase 5:\na = a+1;\n\ncase 1:\n a = a-1;\n}\nprintf("%d \\n",a);\nreturn 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129785', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint counter(int i)\n{\n    static int count = 0;\n    count = count + i;\n    return count;\n}\nint main()\n{\n    int i, j;\n    for (i = 0; i &lt;= 5; i++)\n        j = counter(i);\n    printf ("%d\\n", j);\n    return 0;\n}</pre>\n\n<p>What is the output of the above program?</p>', 'type': 'Numerical', 'answer': '15', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129786', 'text': '<p>Read the following program fragment:&nbsp; &nbsp; &nbsp; &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main()\n{\nint p = 2, q = 5;\np = p^q;\nq = q^p;\nprintf("%d%d",p,q);\nreturn 0;\n}</pre>\n\n<p>The output is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5 \\ 2$</li>\n\t<li>$2 \\ 5$</li>\n\t<li>$7 \\ 7$</li>\n\t<li>$7 \\ 2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129787', 'text': '<p>What is the output of the below mentioned code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint i=10;\nstatic int x=i;\nif(x==i)\nprintf("Equal");\nelse if(x&gt;i)\nprintf("Greater");\nelse\nprintf("Lesser");\nreturn 0;\n} </pre>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;&nbsp;Equal</li>\n\t<li>&nbsp; Greater&nbsp;</li>\n\t<li>&nbsp; Lesser</li>\n\t<li>&nbsp; Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129788', 'text': '<p>What is the output of the following program?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nint fun (int z)\n{\nif( z==0 || z==1 )\nreturn 1;\nelse\nreturn fun(z-1) ;\n}\nint main()\n{\nint y;\ny=fun(8);\nprintf(“%d”, y) ;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$36$</li>\n\t<li>$8$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129789', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint K = 10;\nint main()\n{\nfoo();\nfoo();\nreturn 0;\n}\n\nint foo()\n{\nstatic int k= 1;\nprintf("%d ",k);\nk++;\nreturn 0;\n}\n</pre>\n\n<p>What is the output of the above code snippet?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2,3$</li>\n\t<li>$1,2$</li>\n\t<li>$1,3$</li>\n\t<li>$2,4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129790', 'text': '<p>Spot&nbsp;the error(s) in this code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\nint n=2;   // Line 1\nswitch(n)\n{\ncase 1.5:\nprintf( "gate");\nbreak;\ncase 2:\nprintf( "overflow");\nbreak;\ncase \'A\':\nprintf("gateoverflow");\n}         // Line 12</pre>\n\n<p>The error(s) is in line number _____.</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129792', 'text': '<p>Assume that $a[4]$ is a one-dimensional array of $4$ elements, $p$ is a pointer variable and $p = a$ is&nbsp;performed. Now, which&nbsp;among these expressions is illegal?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$p == a[0]$</li>\n\t<li>$p == \\&amp;a[0]$</li>\n\t<li>$^*p == a[0]$</li>\n\t<li>$p[0] == a[0]$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}]
+      let data={'name': 'Test by Bikram | Programming | Test 2', 'duration': '75', 'total_qs': '30', 'total_qs_one': 0, 'total_qs_two': 30, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 60, 'total_marks': 60, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 60, 'question': [{'contents': '', 'post_id': '129759', 'text': '<p>Consider the following C program using function : &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nmain()\n{\nint f1(int,int);\nint x = 9, n=3, S;\nS = f1(x,n);\nprintf(S);\n}\nint f1(int x, int n)\n{\nint y=1, i=1;\nfor(i=1;i&lt;=n;i++)\ny=y*x;\nreturn(y);\n}</pre>\n\n<p>Output will be ______</p>', 'type': 'Numerical', 'answer': '729', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129761', 'text': '<p>Which of the following statements is/are true ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint x=10, y=200%90, i;\nfor( i=1;i++&lt;=10;);\nif(x==y);\nprintf("x=%dy=%d\\n",x,y );\nreturn 0;\n} </pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>printf() is called infinite times</li>\n\t<li>program will produce output x=10,y=20;</li>\n\t<li>The program will not produce any output</li>\n\t<li>The program will produce some error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,programming-in-c', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129762', 'text': '<p>What is the output of this program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\n#include &lt;string.h&gt;\nint main()\n{\n    char string[] = "Hello";\n    printf("%lu %lu", sizeof(string), strlen(string));\n    return 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5 \\ 6$</li>\n\t<li>$5 \\ 5$</li>\n\t<li>$6 \\ 5$</li>\n\t<li>$6 \\&nbsp;6$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129763', 'text': '<p>State the output in below code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main(void)\n{\n    char x[5] = { 1, 2, 3, 4, 5 };\n    char *ptr = (char*)(&amp;x + 1);\n    printf("%d %d\\n", *(x + 1), *(ptr - 1));\n    return 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Compile Error</li>\n\t<li>$2 \\ 1$</li>\n\t<li>$2 \\ 5$</li>\n\t<li>$3 \\ 4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129764', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid fun()\n{\n    int p;\n    static int x=1;\n    p = ++x;\n    printf("%d %d", p, x);\n    if(p &lt;= 2)\n        fun();\n    printf(“%d %d”, p, x);\n}\nint main()\n{\n    fun();\n    fun();\n}</pre>\n\n<p>In the above code fragment, the total number of times <strong>printf</strong> statement will be executed is _________.</p>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129765', 'text': '<p>Which among following statements is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><strong>&amp;</strong> is bit-wise and <strong>&amp;&amp;</strong> is a logical operator</li>\n\t<li><strong>&amp;</strong>&nbsp;returns an integer value&nbsp;whereas&nbsp;<strong>&amp;&amp;</strong>&nbsp;returns a boolean value</li>\n\t<li>Both the above options are correct</li>\n\t<li>Both (A) and (B) are incorrect</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,binary-operation,programming-in-c', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129766', 'text': '<p>The value of <strong>p</strong> after&nbsp;execution of the following program will be:</p>\n\n<pre class="prettyprint lang-c_cpp">\nint new(int t)\n{\nstatic int cal=0;\ncal=cal+t;\nreturn(cal);\n}\nmain()\n{\nint t,p;\nfor(t=0;t&lt;=4;t++)\np= new(t);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$4$&nbsp; &nbsp; &nbsp;</li>\n\t<li>$6$&nbsp; &nbsp;&nbsp;</li>\n\t<li>$7$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129767', 'text': '<p>What is the output of this program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nchar *ptr;\nchar string[] = "How are you?";\nptr = string;\nptr += 4;\nprintf("%s",ptr);\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>How are you?</li>\n\t<li>are you? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>are &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n\t<li>error in program</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129768', 'text': '<p>Consider the below function:</p>\n\n<pre class="prettyprint lang-c_cpp">\nint s (int n)\n{\nif (n&lt;=1) return 1 ;\nn = (n-1) * (n-1) -2 - n * n + 3*n ;\ns(n);\nprintf(“%d”, n );\n}\n</pre>\n\n<p>What is the output if initial call is&nbsp;$s(6)$ ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$55555$</li>\n\t<li>$11111$</li>\n\t<li>$54321$</li>\n\t<li>$12345$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2,identify-function', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129769', 'text': '<p>Suppose the following declarations are in effect :</p>\n\n<ol>\n\t<li>$\\text{int }a[ \\: ] = \\{5,15,34,54,14,2,52,72 \\}$;</li>\n\t<li>$\\text{int }*p = \\&amp;a[1] , *q = \\&amp;a[5]$;</li>\n</ol>\n\n<p>The value of&nbsp; $q - p$ is&nbsp;________.</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129770', 'text': '<p>Which of the following will print the value $2$ for this code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main()\n{\nint arr[10][20][30] = {0};\narr[5][2][1] = 2;\n__________    // missing line here\nreturn 0;\n}</pre>\n\n<p>The&nbsp;missing line above&nbsp;is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",*(((arr+5)+2)+1));</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",***((arr+5)+2)+1);\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d",*(*(*(arr+5)+2)+1));</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d", *(*((arr+5)+2)+1);\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129771', 'text': '<p>What is the output of the following program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid f(char**);\nint main()\n{\nchar *argv[] = { "ab", "cd", "ef", "gh", "ij", "kl" };\nf(argv);\nreturn 0;\n}\nvoid f(char **p)\n{\nchar *t;\nt = (p += sizeof(int))[-1];\nprintf("%s\\n", t);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ab</li>\n\t<li>cd</li>\n\t<li>ef</li>\n\t<li>gh</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129772', 'text': '<p>What is the output of the code? &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h &gt;\nint main()\n{\nint a;\nprintf("%d",scanf("%d",&amp;a));\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$-1$</li>\n\t<li>An undefined behavior</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129773', 'text': '<p>Read the following code fragment:</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nmain()\n{\nint i=1,j;\nint k= 1__ (j ___ i) ;\nprintf("%d%d%d\\n", i,j,k);\n}</pre>\n\n<p>What operators are&nbsp;needed in the blanks to print $1 \\ 1 \\ 2$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$*$ and $=$</li>\n\t<li>$*$ and $+$</li>\n\t<li>$+$ and $*$</li>\n\t<li>$+$ and $=$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129774', 'text': '<p>Choose the correct operators to fill in the blanks:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i,j,k;\ni=1;j=2;k=3;\nprintf("%d",i___5___j___2____k);</pre>\n\n<p>Output is: $2$</p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>+ &nbsp;% –&nbsp;&nbsp;+</li>\n\t<li>* &nbsp;/ &nbsp;–&nbsp;&nbsp;+</li>\n\t<li>+ &nbsp;% &nbsp;+ &nbsp;/</li>\n\t<li>* % –&nbsp; /</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129775', 'text': '<p>What will be the output of this program ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#define square(x) x*x\nmain()\n{\nint z;\nz = 25/square(5);\nprintf("%d",z);\n}\n</pre>', 'type': 'Numerical', 'answer': '25', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129777', 'text': '<p>What will be&nbsp;the output of the below&nbsp;program ?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nstruct node\n{\nint x;\nint y;\nint z;\n};\nstruct node s = { 3, 5, 6 };\nstruct node *pt = &amp;s;\nprintf("%d\\n", *((int*)pt+1));\nreturn 0;\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>5</li>\n\t<li>3</li>\n\t<li>7</li>\n\t<li>6</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129778', 'text': '<p>Point out the error :<br>\n&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nvoid f(int*);\nint main()\n{\n    int i=35,*z;\n    z=f(&amp;i);\n    printf("%d",z);\n    return 0;\n}\nvoid f(int*m)\n{\n    return(m+2);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>error in function call</li>\n\t<li>error in return statement</li>\n\t<li>error in argument of f() &nbsp;</li>\n\t<li>error in pointer initialization</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129779', 'text': '<p>The output of this code snippet is :</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\n#define x 4+1\nint main()\n{\nint i;\ni = x*x*x;\nprintf("%d",i);\nreturn 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '13', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129780', 'text': '<p>How many TOKENS are there in the&nbsp;statement&nbsp;<strong>answer $=(5*q-p*p)/3$</strong>; ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$13$</li>\n\t<li>$12$</li>\n\t<li>$15$</li>\n\t<li>$14$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129781', 'text': '<p>What is the output of the following code snippet?&nbsp;&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nchar c=125;\nc=c+10;\nprintf("%d",c);\nreturn 0;\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '-121', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129782', 'text': '<p>Read this code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\nvoid main()\n{\nint i;\nchar a[]="\\0";\nif(printf("%s\\n",a))\nprintf(" GATE 2018\\n");\nelse\nprintf("Forget GATE\\n");\n}\n</pre>\n\n<p>The output is :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Compiler Error</li>\n\t<li>Forget GATE</li>\n\t<li>GATE $2018$</li>\n\t<li>Runtime error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129784', 'text': '<p>What is the output of the following program?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint a = 0;\nswitch(a)\n{\ndefault:\na = 4;\ncase 6:\na--;\ncase 5:\na = a+1;\n\ncase 1:\n a = a-1;\n}\nprintf("%d \\n",a);\nreturn 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129785', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint counter(int i)\n{\n    static int count = 0;\n    count = count + i;\n    return count;\n}\nint main()\n{\n    int i, j;\n    for (i = 0; i &lt;= 5; i++)\n        j = counter(i);\n    printf ("%d\\n", j);\n    return 0;\n}</pre>\n\n<p>What is the output of the above program?</p>', 'type': 'Numerical', 'answer': '15', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129786', 'text': '<p>Read the following program fragment:&nbsp; &nbsp; &nbsp; &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint main()\n{\nint p = 2, q = 5;\np = p^q;\nq = q^p;\nprintf("%d%d",p,q);\nreturn 0;\n}</pre>\n\n<p>The output is:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5 \\ 2$</li>\n\t<li>$2 \\ 5$</li>\n\t<li>$7 \\ 7$</li>\n\t<li>$7 \\ 2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129787', 'text': '<p>What is the output of the below mentioned code snippet?</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include &lt;stdio.h&gt;\nint main()\n{\nint i=10;\nstatic int x=i;\nif(x==i)\nprintf("Equal");\nelse if(x&gt;i)\nprintf("Greater");\nelse\nprintf("Lesser");\nreturn 0;\n} </pre>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;&nbsp;Equal</li>\n\t<li>&nbsp; Greater&nbsp;</li>\n\t<li>&nbsp; Lesser</li>\n\t<li>&nbsp; Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129788', 'text': '<p>What is the output of the following program?&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\nint fun (int z)\n{\nif( z==0 || z==1 )\nreturn 1;\nelse\nreturn fun(z-1) ;\n}\nint main()\n{\nint y;\ny=fun(8);\nprintf(“%d”, y) ;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$36$</li>\n\t<li>$8$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129789', 'text': '<p>&nbsp;</p>\n\n<pre class="prettyprint lang-c_cpp">\n#include&lt;stdio.h&gt;\nint K = 10;\nint main()\n{\nfoo();\nfoo();\nreturn 0;\n}\n\nint foo()\n{\nstatic int k= 1;\nprintf("%d ",k);\nk++;\nreturn 0;\n}\n</pre>\n\n<p>What is the output of the above code snippet?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2,3$</li>\n\t<li>$1,2$</li>\n\t<li>$1,3$</li>\n\t<li>$2,4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129790', 'text': '<p>Spot&nbsp;the error(s) in this code snippet :</p>\n\n<pre class="prettyprint lang-c_cpp">\nint n=2;   // Line 1\nswitch(n)\n{\ncase 1.5:\nprintf( "gate");\nbreak;\ncase 2:\nprintf( "overflow");\nbreak;\ncase \'A\':\nprintf("gateoverflow");\n}         // Line 12</pre>\n\n<p>The error(s) is in line number _____.</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'tbb-programming-2,numerical-answers', 'category': 'Programming in C'}, {'contents': '', 'post_id': '129792', 'text': '<p>Assume that $a[4]$ is a one-dimensional array of $4$ elements, $p$ is a pointer variable and $p = a$ is&nbsp;performed. Now, which&nbsp;among these expressions is illegal?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$p == a[0]$</li>\n\t<li>$p == \\&amp;a[0]$</li>\n\t<li>$^*p == a[0]$</li>\n\t<li>$p[0] == a[0]$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'tbb-programming-2', 'category': 'Programming in C'}]}]}
+      </script>
+      

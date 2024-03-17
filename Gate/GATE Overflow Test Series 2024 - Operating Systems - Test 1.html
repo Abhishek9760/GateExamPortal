@@ -1,0 +1,401 @@
+<div><span>Q1</span> - A counting semaphore is initialized to X. Then 13  P (wait) operations and 25 V  (signal) operations are completed on this semaphore. If the final value of semaphore is 8, then the value X will be _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>The following program consists of 3 concurrent processes and 3 binary semaphores. The semaphores are initialized as S_0=0, S_1=1 and S_2=1.<br>
+
+    [             Process P_0        amp; Process P_1    amp; Process P_2<br>;          while (true) {        amp; wait (S_1);    amp; wait (S_2);<br>;      nbsp;  wait (S_0);     amp; release (S_0); amp; release (S_0);<br>;       nbsp;  print ‘1';                    amp;                amp;<br>;   nbsp;  release (S_1);                    amp;                amp;<br>;   nbsp;  release (S_2);                    amp;                amp;<br>;                  nbsp;}                    amp;                amp;<br>;                         ]
+<br>
+How many times will process P_0 print '1'?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>At least twice</li>
+	<li>Exactly once</li>
+	<li>Exactly twice</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> If each resource type has exactly one instance, then a cycle in resource allocation graph is a necessary condition for the existence of deadlock</li><li>  If each resource type has exactly one instance, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li> If each resource type has several instances, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li>If each resource type has several instances, then a cycle in the resource allocation graph is a necessary condition for the existence of deadlock</li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following synchronization construct used by two the processes</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+turn1 = true;
+turn2 = true;
+Process 1
+...
+while(true)
+
+    turn1 = true;
+    while(turn2);
+    /* Critical Section */
+    turn1 = false;
+
+...
+Process 2
+...
+while(true)
+
+    turn2 = true;
+    while(turn1);
+    /* Critical Section */
+    turn2 = false;
+
+...</pre>
+
+<p><br>
+Which one of the following statements is/are TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>The proposed solution prevents deadlock but fails to guarantee mutual exclusion.</li>
+	<li>The proposed solution guarantees mutual exclusion but fails to prevent deadlock.</li>
+	<li>The proposed solution guarantees mutual exclusion and prevents deadlock.</li>
+	<li>The proposed solution fails to prevent deadlock and fails to guarantee mutual exclusion.</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following process synchronization program involving N processes.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+semaphore S = 21;
+Process 1
+S.signal();
+while (1) 
+  // do something
+  S.wait();
+  //critical section
+  S.signal(); 
+  // do something
+
+Process 2..N
+while (1) 
+  // do something
+  S.wait();
+  //critical section
+  S.signal(); 
+  // do something
+</pre>
+
+<p><br>
+The maximum number of processes that can be in the critical section at any moment of time is _______</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>21</li>
+	<li>22</li>
+	<li>23</li>
+	<li>More than 23</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - Which of the following CPU scheduling algorithms suffer from convoy effect? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> First Come First Served</li><li>  Non-preemptive Shortest Remaining Time First</li><li> Round Robin Scheduling</li><li>Preemptive Shortest Remaining Time First</li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - Consider the following code segment:<br /><pre class="prettyprint linenums lang-c_cpp " data-pbcklang="c_cpp" data-pbcktabsize="4">pid_t pid;<br />pid = fork();<br />if (pid == 0) <br />thread create(...);<br />fork();<br /><br />fork();</pre><br />If a is the total number of processes created, and b is the total number of threads created when the above code is executed, the value of a + b = ________<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following two-process synchronization solution.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+P0:
+while(TRUE) 
+  while(turn!=0);
+  critical_section();
+  turn = 1;
+  noncritical_section();
+
+P1:
+while(TRUE) 
+  while(turn!=1);
+  critical_section();
+  turn = 0;
+  noncritical_section();
+</pre>
+
+<p><br>
+The shared variable turn is initialized to zero. Which one of the following is TRUE?</p>
+
+<p>   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>This is a correct two-process synchronization solution satisfying mutual-exclusion, progress and bounded waiting.</li>
+	<li>This solution violates mutual exclusion requirement.</li>
+	<li>This solution violates progress requirement.</li>
+	<li>This solution violates bounded wait requirement.</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>5 processes P_0 through P_4; 3 resource types A (10 instances), B (5 instances), and C (7 instances)<br>
+Snapshot at time T_0:<br>
+
+    [               <br>    amp; Allocation           amp; Max amp; Available<br>;                        amp; A   B   C     amp; A   B   C amp; A   B   C<br>;                P_0     amp; 0   1   0   amp; 7    5    3 amp; 3   3   2<br>;           nbsp;P_1     amp; 2   0   0     amp; 3   2   2        amp;   <br>;           nbsp;P_2     amp; 3   0   2     amp; 9   0   2        amp;   <br>;           nbsp;P_3     amp; 2   1   1     amp; 2   2   2        amp;   <br>;           nbsp;P_4     amp; 0   0   2     amp; 4   3   3        amp;   <br>;                    ]
+<br>
+The system is currently in a safe state. Consider the following independent requests for additional resources in the current state:<br>
+REQ1: P_0 requests 0 units of A, 2 units of B and 0 units of C<br>
+REQ2: P_1 requests 1 units of A, 0 units of B and 2 units of C<br>
+REQ3:  P_4 requests 3 units of A, 3 units of B and 0 units of C<br>
+Which one of the following is TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Only REQ1   nbsp;and REQ2 can be permitted.</li>
+	<li>Only REQ2 and REQ3 can be permitted.</li>
+	<li>All of REQ1, REQ2 and REQ3 can be permitted.</li>
+	<li>None of REQ1, REQ2 or REQ3 can be permitted.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider a system having k resources of the same type. These resources are shared by 5 processes A,B,C,D, and E which have peak demands of 5,7,9,3 and 8 respectively. Further it is restricted that at any point of time processes A and B together cannot hold more than 8 resources whereas no such restrictions are there for processes C,D and E. For which of the following values of k, deadlock may occur? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>24</li>
+	<li>25</li>
+	<li>27</li>
+	<li>26</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> Kernel-level threads are handled by the operating system directly</li><li>  Kernel level threads are faster to create and manage than user level threads</li><li> Multiple threads of the same process can be scheduled on different processors in kernel-level threads.</li><li>If a kernel-level thread is blocked, all threads of the same process also gets blocked</li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following synchronization solution.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void swap (bool *a, bool *b)
+
+    bool temp = *a;
+    *a = *b;
+    *b = temp:
+
+do 
+    key = TRUE;
+    while ( key == TRUE) swap (   amp;lock,    amp;key);
+       lt;Critical Section   gt;
+    lock = FALSE;
+ while (TRUE);</pre>
+
+<p><br>
+If the boolean shared variable lock is initialized to FALSE and all the assignment statements happen atomically in hardware, which of the following statements is/are correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Race condition may be possible.</li>
+	<li>Mutual exclusion is guaranteed.</li>
+	<li>Progress is guaranteed.</li>
+	<li>Starvation freedom is guaranteed.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Which of the following statements about CPU scheduling algorithms is/are TRUE? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Shortest Job First (SJF) algorithm is optimal with respect to the average turn around time.</li>
+	<li>SJF algorithm is optimal with respect to the average waiting time.</li>
+	<li>SJF algorithm may lead to starvation.</li>
+	<li>SJF algorithm guarantees a better or same   nbsp;average turn around time, as   nbsp;First Come First Served algorithm</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - Consider the following set of processes, with the arrival times and the CPU-burst times gives in milliseconds.
+
+    [      Process Arrival Time   Burst Time;          P_1            0            8;          P_2            1            4;          P_3            3            3;          P_4            4            2;              ]
+
+The average turnaround time for these processes with the preemptive shortest remaining time first (SRTF) algorithm is _______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Processes in an operating system can be in any of the following states. Choose the proper matching for the given table.</p>
+
+<p><br>
+[                                                           <br>                                             amp; Process State                                                           amp;                                           amp; Description<br>;                                                             a.                                                     amp; Ready                                                        amp; i.        amp; The process is waiting for some event to occur<br>;                                                           amp;                                                           amp;   amp; (such as an I/O completion or reception of signal).<br>;                                                             b.                                                   amp; Waiting                                                       amp; ii. amp; The process is waiting to be assigned to a processor.<br>;                                                             c.                                                amp; Terminated                                                      amp; iii.                      amp; Instructions are being executed.<br>;                                                                                                                       nbsp;d.                                                   amp; Running                                                       amp; iv.                                                          nbsp;                   amp; The process has finished execution.<br>;                                                           <br>                                                           amp;                                                        amp; v.                                                          nbsp;                         amp; The process is being created.<br>;                                                                ]</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>a-ii, b - i, c - iv, d - iii</li>
+	<li>a-v, b - i, c - iv, d - iii</li>
+	<li>a-ii, b - i, c - iv, d - v</li>
+	<li>a-iii, b - i, c - iv, d - ii</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - The banker's algorithm is being run in a system with m resource classes and n processes. In the limit of large m and n, the number of operations that must be performed to check a state for safety is proportional to n^a( n)^b m^c ( m)^d. The value of 2a +3 b+5c+7d =_______<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Consider the following two process synchronization solution. Assume all assignments are atomic.   nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+flag[0] = flag[1] = FALSE;
+P0:
+do 
+    flag[0] = TRUE;
+    turn = 1;
+    while (flag[1]    amp;   amp; (turn == 1));
+    critical section
+    flag[0] = FALSE;
+    remainder section
+ while (TRUE);
+
+P1:
+do 
+    flag[1] = TRUE;
+    turn = 0;
+    while (flag[0]    amp;   amp; (turn == 0));
+    critical section
+    flag[1] = FALSE;
+    remainder section
+ while (TRUE);
+</pre>
+
+<p><br>
+Which of the following is/are correct? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Race condition may be possible.</li>
+	<li>Mutual exclusion is guaranteed.</li>
+	<li>Progress is guaranteed.</li>
+	<li>Bounded waiting is guaranteed.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Consider the following solution to the classical Dining Philosophers Problem using Semaphores, where 5 philosophers in a dining table are trying to eat using 5 chopsticks each one placed to the right and left of each philosopher.<br>
+semaphores chopstick [0… 4] all initialized to 1.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+repeat
+wait(chopstick[i+(i
+wait(chopstick[(i+1-(i
+. . .
+eat
+. . .
+signal(chopstick[i]);
+signal(chopstick[(i+1) mod 5]);
+. . .
+think
+. . .
+until false;</pre>
+
+<p><br>
+Which of the following properties are satisfied by the above solution? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Starvation freedom</li>
+	<li>Deadlock freedom</li>
+	<li>Mutual Exclusion</li>
+	<li>Progress</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>A process executes the following segment of code :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int foo(int n)
+
+    int i;
+    for(i=0; i    lt;n; i++)
+    
+        for(j = 0; j    lt; n; j++)
+        
+            if(j    lt; i)
+            
+                fork();
+            
+        
+    ​
+    return 0;
+</pre>
+
+<p><br>
+The total number of child processes created if foo is called with parameter n = 5 is _______</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>Consider the following code using semaphores.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+semaphore S1 = 1, S2 = 1;
+int cnt1 = cnt2 = 2;
+Process 1
+while (cnt1–) 
+  // do something
+  S1.wait();
+  print"GATE";
+  S2.signal(); 
+  // do something
+
+
+Process 2
+while (cnt2–) 
+  // do something
+  S2.wait();
+  print"Overflow";
+  S1.signal(); 
+  // do something
+</pre>
+
+<p><br>
+The output of the above program will be _______ (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>GATE Overflow GATE Overflow</li>
+	<li>Overflow GATE Overflow GATE</li>
+	<li>GATE GATE Overflow Overflow</li>
+	<li>Overflow GATE GATE Overflow</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider the following Producer-Consumer implementation using a buffer of size N. Assume that initially the buffer is empty.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Semaphore mutex = __; 
+Semaphore empty = __; 
+Semaphore full = __;</pre>
+
+<p>   nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+producer 
+  while (1) 
+    Produce new resource;
+    wait(empty);
+    wait(mutex); 
+    Add resource to an empty buffer;
+    signal(mutex); 
+    signal(full); 
+  
+
+consumer 
+  while (1) 
+    wait(full);
+    wait(mutex); 
+    Remove resource from a full buffer;
+    signal(mutex); 
+    signal(empty);
+    Consume resource;
+  
+</pre>
+
+<p><br>
+For the correct working of the above code the initialization of the semaphores mutex, empty and full must be as</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>mutex = 0, empty = N, full = 1</li>
+	<li>mutex = 1, empty = 1, full = N</li>
+	<li>mutex = 1, empty = N, full = 0</li>
+	<li>mutex = 0, empty = N, full = N</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> The Data section is reserved for local variables when they are declared.</li><li>  The Heap is made up of the global and static variables, allocated and initialized prior to executing the main.</li><li> The space on the Stack is used for the dynamic memory allocation, and is managed via calls to new, delete, malloc, free, etc.</li><li>The Text section is made up of the compiled program code, read in from non-volatile storage when the program is launched.</li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>A process executes the following segment of code :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+#include    lt;unistd.h   gt;
+int main()
+
+    fork();
+    fork()    amp;   amp; (fork() || fork());
+    printf("GO 2020");
+</pre>
+
+<p>The number of times “GO 2020” will be printed is _______</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> Switching the CPU to another process requires performing a state save of the current process and a state restore of a different process. </li><li>  Whenever an interrupt arrives, the CPU kills the currently executing process.</li><li> A typical Operating System allows a process to create threads but not another process.</li><li>Only the processes in Ready state are stored in the job queue. </li></ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Which of the following is/are correct about deadlocks in an Operating System? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If a system is in a safe state, it will never enter a deadlock after a sequence of resource allocations.   nbsp;</li>
+	<li>If a system is in an unsafe state, it will eventually enter a deadlock.</li>
+	<li>Deadlock prevention is stricter that deadlock avoidance.</li>
+	<li>Deadlock prevention ensures better resource utilization than deadlock avoidance.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>A process executes the following segment of code :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if(fork()    amp;   amp; fork() || fork())
+    printf("GATE2021");
+</pre>
+
+<p>The number of times “GATE2021” will be printed is _______</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>Consider the following multi-process synchronization solution.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+do 
+while (test_set(   amp;lock));
+
+lock = FALSE;
+
+ while (TRUE);</pre>
+
+<p><br>
+Assume that the shared boolean variable lock is initialized to FALSE and the test_set function is an atomic function which returns the current value of the argument and sets it to TRUE. Which of the following is/are correct? (Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Race condition may be possible.</li>
+	<li>Mutual exclusion is guaranteed.</li>
+	<li>Progress is guaranteed.</li>
+	<li>Bounded waiting is guaranteed.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>The degree of multi-programming in an operating system is affected by<br>
+(Mark all the appropriate choices)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>long-term scheduler</li>
+	<li>short-term scheduler</li>
+	<li>medium-term scheduler</li>
+	<li>job scheduler</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q29</span> - <p>A system has four processes and five allocatable resources. The current allocation and maximum needs are as follows:<br>
+
+    [                           <br>                amp; Allocation                   amp; Maximum             amp; Available<br>;                                    amp; A    B    C    D    E     amp; A    B    C    D    E amp; A    B    C    D    E<br>;                            P_0      amp; 1   0    2    1    1     amp; 1    1    2    1    3 amp; 0    0    x    1    0<br>;                            P_1      amp; 2    0    1    1   0       amp; 2    2   2    1   1                    amp;   <br>;                            P_2      amp; 1    1    0    1   0     amp; 2    1    3    1    0                    amp;   <br>;                            P_3      amp; 1    1    1    1   0     amp; 1    1    2    2    1                    amp;   <br>;                                ]
+<br>
+The smallest value of x for which the given state is a safe state, is ________</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q30</span> - <p>Consider the following snapshot of a system running n processes.</p>
+
+<p>Process i is holding x_i instances of a resource R,1≤ i≤ n. Currently, all instances of R are occupied. Further, for all i, process i has placed a request for an additional y_i instances while holding the x_i instances it already has. There are exactly two processes p and q and such that y_p=y_q=0. Which one of the following can serve as a sufficient condition to guarantee that the system would not be going to a deadlock?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>x_p+x_q   gt; max_k≠ p,qy_k</li>
+	<li>max(x_p,x_q)   gt;1</li>
+	<li>x_p+x_q≥min_k≠ p,qy_k</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '349304', 'text': 'A counting semaphore is initialized to $X$. Then $13\\; P\\; \\text{(wait)}$ operations and $25\\;V \\; \\text{(signal)}$ operations are completed on this semaphore. If the final value of semaphore is $8$, then the value $X$ will be _______', 'type': 'Numerical', 'answer': '-4', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349276', 'text': '<p>The following program consists of $3$ concurrent processes and $3$ binary semaphores. The semaphores are initialized as $S_0=0, S_1=1$ and $S_2=1.$<br>\n$$\\begin{array}{|l|l|l|}\\hline \\text{Process $P_0$} &amp; \\text{Process $P_1$} &amp; \\text{Process $P_2$}<br>\n\\\\\\hline \\text{while (true) \\{} &amp; \\text{wait ($S_1$);} &amp; \\text{wait ($S_2$);}<br>\n\\\\&nbsp;\\quad\\text{wait ($S_0$);} &amp; \\text{release ($S_0$);} &amp; \\text{release ($S_0$);}<br>\n\\\\&nbsp;\\quad\\text{print ‘1\';} &amp; &amp;<br>\n\\\\&nbsp;\\quad\\text{release ($S_1$);} &amp; &amp;<br>\n\\\\&nbsp;\\quad\\text{release ($S_2$);} &amp; &amp;<br>\n\\\\&nbsp;\\} &amp; &amp;<br>\n\\\\\\hline \\end{array}$$<br>\nHow many times will process $P_0$ print \'$1$\'?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>At least twice</li>\n\t<li>Exactly once</li>\n\t<li>Exactly twice</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '349302', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> If each resource type has exactly one instance, then a cycle in resource allocation graph is a necessary condition for the existence of deadlock</li><li>  If each resource type has exactly one instance, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li> If each resource type has several instances, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li>If each resource type has several instances, then a cycle in the resource allocation graph is a necessary condition for the existence of deadlock</li></ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349286', 'text': '<p>Consider the following synchronization construct used by two the processes</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nturn1 = true;\nturn2 = true;\nProcess 1\n...\nwhile(true)\n{\n    turn1 = true;\n    while(turn2);\n    /* Critical Section */\n    turn1 = false;\n}\n...\nProcess 2\n...\nwhile(true)\n{\n    turn2 = true;\n    while(turn1);\n    /* Critical Section */\n    turn2 = false;\n}\n...</pre>\n\n<p><br>\nWhich one of the following statements is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The proposed solution prevents deadlock but fails to guarantee mutual exclusion.</li>\n\t<li>The proposed solution guarantees mutual exclusion but fails to prevent deadlock.</li>\n\t<li>The proposed solution guarantees mutual exclusion and prevents deadlock.</li>\n\t<li>The proposed solution fails to prevent deadlock and fails to guarantee mutual exclusion.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349274', 'text': '<p>Consider the following process synchronization program involving $N$ processes.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsemaphore S = 21;\nProcess 1\nS.signal();\nwhile (1) {\n  // do something\n  S.wait();\n  //critical section\n  S.signal(); \n  // do something\n}\nProcess 2..N\nwhile (1) {\n  // do something\n  S.wait();\n  //critical section\n  S.signal(); \n  // do something\n}</pre>\n\n<p><br>\nThe maximum number of processes that can be in the critical section at any moment of time is _______</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$21$</li>\n\t<li>$22$</li>\n\t<li>$23$</li>\n\t<li>More than $23$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '349316', 'text': 'Which of the following CPU scheduling algorithms suffer from convoy effect? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> First Come First Served</li><li>  Non-preemptive Shortest Remaining Time First</li><li> Round Robin Scheduling</li><li>Preemptive Shortest Remaining Time First</li></ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-scheduling,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349290', 'text': 'Consider the following code segment:<br /><pre class="prettyprint linenums lang-c_cpp " data-pbcklang="c_cpp" data-pbcktabsize="4">pid_t pid;<br />pid = fork();<br />if (pid == 0) {<br />thread create(...);<br />fork();<br />}<br />fork();</pre><br />If $a $ is the total number of processes created, and $b $ is the total number of threads created when the above code is executed, the value of $a + b =$ ________', 'type': 'Numerical', 'answer': '13', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,threads,fork-system-call', 'category': 'Operating System'}, {'contents': '', 'post_id': '349284', 'text': '<p>Consider the following two-process synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nP0:\nwhile(TRUE) {\n  while(turn!=0);\n  critical_section();\n  turn = 1;\n  noncritical_section();\n}\nP1:\nwhile(TRUE) {\n  while(turn!=1);\n  critical_section();\n  turn = 0;\n  noncritical_section();\n}</pre>\n\n<p><br>\nThe shared variable turn is initialized to zero. Which one of the following is TRUE?</p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>This is a correct two-process synchronization solution satisfying mutual-exclusion, progress and bounded waiting.</li>\n\t<li>This solution violates mutual exclusion requirement.</li>\n\t<li>This solution violates progress requirement.</li>\n\t<li>This solution violates bounded wait requirement.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349264', 'text': '<p>$5$ processes $P_{0}$ through $P_{4}; 3$ resource types $\\text{A (10 instances), B (5 instances), and C (7 instances)}$<br>\nSnapshot at time $T_{0}:$<br>\n$$\\begin{array}{|c|c|c|c|}\\hline<br>\n\\quad &amp; \\textbf{Allocation} &amp; \\textbf{Max} &amp; \\textbf{Available}<br>\n\\\\\\hline \\quad &amp; A\\quad B\\quad C &amp; A\\quad B\\quad C &amp; A\\quad B\\quad C<br>\n\\\\\\hline P_{0} &amp; 0\\quad 1\\quad 0 &amp; 7 \\quad 5 \\quad 3 &amp; 3\\quad 3\\quad 2<br>\n\\\\&nbsp;P_{1} &amp; 2\\quad 0\\quad 0 &amp; 3\\quad 2\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{2} &amp; 3\\quad 0\\;\\; 2 &amp; 9\\quad 0\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{3} &amp; 2\\quad 1\\quad 1 &amp; 2\\quad 2\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{4} &amp; 0\\quad 0\\quad 2 &amp; 4\\quad 3\\quad 3 &amp; \\quad<br>\n\\\\\\hline \\end{array}$$<br>\nThe system is currently in a safe state. Consider the following independent requests for additional resources in the current state:<br>\n$\\textbf{REQ1:}\\;P_{0}$ requests $0$ units of $A, 2$ units of $B$ and $0$ units of $C$<br>\n$\\textbf{REQ2:}\\;P_{1}$ requests $1$ units of $A, 0$ units of $B$ and $2$ units of $C$<br>\n$\\textbf{REQ3:}\\; P_{4}$ requests $3$ units of $A, 3$ units of $B$ and $0$ units of $C$<br>\nWhich one of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{REQ1&nbsp;and REQ2}$ can be permitted.</li>\n\t<li>Only $\\text{REQ2 and REQ3}$ can be permitted.</li>\n\t<li>All of $\\text{REQ1, REQ2 and REQ3}$ can be permitted.</li>\n\t<li>None of $\\text{REQ1, REQ2 or REQ3}$ can be permitted.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}, {'contents': '', 'post_id': '349266', 'text': '<p>Consider a system having $k$ resources of the same type. These resources are shared by $5$ processes $A,B,C,D$, and $E$ which have peak demands of $5,7,9,3$ and $8$ respectively. Further it is restricted that at any point of time processes $A$ and $B$ together cannot hold more than $8$ resources whereas no such restrictions are there for processes $C,D$ and $E.$ For which of the following values of $k,$ deadlock may occur? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$24$</li>\n\t<li>$25$</li>\n\t<li>$27$</li>\n\t<li>$26$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349312', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> Kernel-level threads are handled by the operating system directly</li><li>  Kernel level threads are faster to create and manage than user level threads</li><li> Multiple threads of the same process can be scheduled on different processors in kernel-level threads.</li><li>If a kernel-level thread is blocked, all threads of the same process also gets blocked</li></ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349282', 'text': '<p>Consider the following synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid swap (bool *a, bool *b)\n{\n    bool temp = *a;\n    *a = *b;\n    *b = temp:\n}\ndo {\n    key = TRUE;\n    while ( key == TRUE) swap (&amp;lock, &amp;key);\n    &lt;Critical Section&gt;\n    lock = FALSE;\n} while (TRUE);</pre>\n\n<p><br>\nIf the boolean shared variable lock is initialized to FALSE and all the assignment statements happen atomically in hardware, which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Starvation freedom is guaranteed.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349310', 'text': '<p>Which of the following statements about CPU scheduling algorithms is/are TRUE? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Shortest Job First (SJF) algorithm is optimal with respect to the average turn around time.</li>\n\t<li>SJF algorithm is optimal with respect to the average waiting time.</li>\n\t<li>SJF algorithm may lead to starvation.</li>\n\t<li>SJF algorithm guarantees a better or same&nbsp;average turn around time, as&nbsp;First Come First Served algorithm</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-scheduling,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349260', 'text': 'Consider the following set of processes, with the arrival times and the CPU-burst times gives in milliseconds.\n$$\\begin{array}{|c|c|c|} \\hline \\textbf{Process} & \\textbf{Arrival Time} & \\textbf{Burst Time}\n\\\\\\hline P_{1} & 0 & 8\n\\\\\\hline P_{2} & 1 & 4\n\\\\\\hline P_{3} & 3 & 3\n\\\\\\hline P_{4} & 4 & 2\n\\\\\\hline \\end{array}$$\nThe average turnaround time for these processes with the preemptive shortest remaining time first (SRTF) algorithm is _______', 'type': 'Numerical', 'answer': '7.75', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,process-scheduling,shortest-remaining-time-first', 'category': 'Operating System'}, {'contents': '', 'post_id': '349300', 'text': '<p>Processes in an operating system can be in any of the following states. Choose the proper matching for the given table.</p>\n\n<p><br>\n$\\begin{array}{|l|l|l|}\\hline<br>\n&amp; \\textbf{Process State} &amp; &amp; \\textbf{Description}<br>\n\\\\\\hline a. &amp; \\text{Ready} &amp; i.&amp; \\text{The process is waiting for some event to occur}<br>\n\\\\&amp; &amp; &amp; \\text{(such as an I/O completion or reception of signal).}<br>\n\\\\\\hline b. &amp; \\text{Waiting} &amp; ii. &amp; \\text{The process is waiting to be assigned to a processor.}<br>\n\\\\\\hline c. &amp; \\text{Terminated} &amp; iii. &amp; \\text{Instructions are being executed.}<br>\n\\\\\\hline&nbsp;d. &amp; \\text{Running} &amp; iv.&nbsp;&amp; \\text{The process has finished execution.}<br>\n\\\\\\hline<br>\n&amp; &amp; v.&nbsp;&amp; \\text{The process is being created.}<br>\n\\\\\\hline \\end{array}$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$a-ii, b - i, c - iv, d - iii$</li>\n\t<li>$a-v, b - i, c - iv, d - iii$</li>\n\t<li>$a-ii, b - i, c - iv, d - v$</li>\n\t<li>$a-iii, b - i, c - iv, d - ii$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-os-1,processes,threads', 'category': 'Operating System'}, {'contents': '', 'post_id': '349306', 'text': "The banker's algorithm is being run in a system with $m$ resource classes and $n$ processes. In the limit of large $m$ and $n,$ the number of operations that must be performed to check a state for safety is proportional to $n^{a}(\\lg n)^b m^{c} (\\lg m)^d$. The value of $2a +3 b+5c+7d = $_______", 'type': 'Numerical', 'answer': '9', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,deadlock-prevention-avoidance-detection,bankers-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '349280', 'text': '<p>Consider the following two process synchronization solution. Assume all assignments are atomic.&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nflag[0] = flag[1] = FALSE;\nP0:\ndo {\n    flag[0] = TRUE;\n    turn = 1;\n    while (flag[1] &amp;&amp; (turn == 1));\n    critical section\n    flag[0] = FALSE;\n    remainder section\n} while (TRUE);\n\nP1:\ndo {\n    flag[1] = TRUE;\n    turn = 0;\n    while (flag[0] &amp;&amp; (turn == 0));\n    critical section\n    flag[1] = FALSE;\n    remainder section\n} while (TRUE);\n</pre>\n\n<p><br>\nWhich of the following is/are correct? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Bounded waiting is guaranteed.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349268', 'text': '<p>Consider the following solution to the classical Dining Philosophers Problem using Semaphores, where $5$ philosophers in a dining table are trying to eat using $5$ chopsticks each one placed to the right and left of each philosopher.<br>\nsemaphores chopstick $[0\\dots 4]$ all initialized to $1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nrepeat\nwait(chopstick[i+(i%2)]);\nwait(chopstick[(i+1-(i%2)) mod 5]);\n. . .\neat\n. . .\nsignal(chopstick[i]);\nsignal(chopstick[(i+1) mod 5]);\n. . .\nthink\n. . .\nuntil false;</pre>\n\n<p><br>\nWhich of the following properties are satisfied by the above solution? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Starvation freedom</li>\n\t<li>Deadlock freedom</li>\n\t<li>Mutual Exclusion</li>\n\t<li>Progress</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349288', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint foo(int n)\n{\n    int i;\n    for(i=0; i &lt;n; i++)\n    {\n        for(j = 0; j &lt; n; j++)\n        {\n            if(j &lt; i)\n            {\n                fork();\n            }\n        }\n    \u200b}\n    return 0;\n}</pre>\n\n<p><br>\nThe total number of child processes created if foo is called with parameter $n = 5$ is _______</p>', 'type': 'Numerical', 'answer': '1023', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,threads', 'category': 'Operating System'}, {'contents': '', 'post_id': '349272', 'text': '<p>Consider the following code using semaphores.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsemaphore S1 = 1, S2 = 1;\nint cnt1 = cnt2 = 2;\nProcess 1\nwhile (cnt1--) {\n  // do something\n  S1.wait();\n  print{"GATE"};\n  S2.signal(); \n  // do something\n}\n\nProcess 2\nwhile (cnt2--) {\n  // do something\n  S2.wait();\n  print{"Overflow"};\n  S1.signal(); \n  // do something\n}</pre>\n\n<p><br>\nThe output of the above program will be _______ (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{GATE Overflow GATE Overflow }$</li>\n\t<li>$\\text{Overflow GATE Overflow GATE}$</li>\n\t<li>$\\text{GATE GATE Overflow Overflow} $</li>\n\t<li>$\\text{Overflow GATE GATE Overflow}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349270', 'text': '<p>Consider the following Producer-Consumer implementation using a buffer of size $N.$ Assume that initially the buffer is empty.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nSemaphore mutex = __; \nSemaphore empty = __; \nSemaphore full = __;</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nproducer {\n  while (1) {\n    Produce new resource;\n    wait(empty);\n    wait(mutex); \n    Add resource to an empty buffer;\n    signal(mutex); \n    signal(full); \n  }\n}\nconsumer {\n  while (1) {\n    wait(full);\n    wait(mutex); \n    Remove resource from a full buffer;\n    signal(mutex); \n    signal(empty);\n    Consume resource;\n  }\n}</pre>\n\n<p><br>\nFor the correct working of the above code the initialization of the semaphores mutex, empty and full must be as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{mutex = 0, empty = N, full = 1}$</li>\n\t<li>$\\text{mutex = 1, empty = 1, full = N}$</li>\n\t<li>$\\text{mutex = 1, empty = N, full = 0}$</li>\n\t<li>$\\text{mutex = 0, empty = N, full = N}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349296', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> The Data section is reserved for local variables when they are declared.</li><li>  The Heap is made up of the global and static variables, allocated and initialized prior to executing the main.</li><li> The space on the Stack is used for the dynamic memory allocation, and is managed via calls to new, delete, malloc, free, etc.</li><li>The Text section is made up of the compiled program code, read in from non-volatile storage when the program is launched.</li></ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,processes,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349294', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\n#include &lt;unistd.h&gt;\nint main()\n{\n    fork();\n    fork() &amp;&amp; (fork() || fork());\n    printf("GO 2020");\n}</pre>\n\n<p>The number of times “$\\text{GO 2020}$” will be printed is _______</p>', 'type': 'Numerical', 'answer': '8', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,fork-system-call,short-circuit-rule,programming-in-c', 'category': 'Operating System'}, {'contents': '', 'post_id': '349298', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> Switching the CPU to another process requires performing a state save of the current process and a state restore of a different process. </li><li>  Whenever an interrupt arrives, the CPU kills the currently executing process.</li><li> A typical Operating System allows a process to create threads but not another process.</li><li>Only the processes in Ready state are stored in the job queue. </li></ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,processes,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349308', 'text': '<p>Which of the following is/are correct about deadlocks in an Operating System? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If a system is in a safe state, it will never enter a deadlock after a sequence of resource allocations.&nbsp;</li>\n\t<li>If a system is in an unsafe state, it will eventually enter a deadlock.</li>\n\t<li>Deadlock prevention is stricter that deadlock avoidance.</li>\n\t<li>Deadlock prevention ensures better resource utilization than deadlock avoidance.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349292', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(fork() &amp;&amp; fork() || fork()){\n    printf("GATE2021");\n}</pre>\n\n<p>The number of times “$\\text{GATE2021}$” will be printed is _______</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,fork-system-call', 'category': 'Operating System'}, {'contents': '', 'post_id': '349278', 'text': '<p>Consider the following multi-process synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo {\nwhile (test_set(&amp;lock));\n\nlock = FALSE;\n\n} while (TRUE);</pre>\n\n<p><br>\nAssume that the shared boolean variable lock is initialized to FALSE and the test_set function is an atomic function which returns the current value of the argument and sets it to TRUE. Which of the following is/are correct? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Bounded waiting is guaranteed.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349314', 'text': '<p>The degree of multi-programming in an operating system is affected by<br>\n(Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>long-term scheduler</li>\n\t<li>short-term scheduler</li>\n\t<li>medium-term scheduler</li>\n\t<li>job scheduler</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349262', 'text': '<p>A system has four processes and five allocatable resources. The current allocation and maximum needs are as follows:<br>\n$$\\begin{array}{|c|c|c|c|c|}\\hline<br>\n\\quad &amp; \\textbf{Allocation} &amp; \\textbf{Maximum} &amp; \\textbf{Available}<br>\n\\\\\\hline \\quad &amp; A \\quad B \\quad C \\quad D \\quad E &amp; A \\quad B \\quad C \\quad D \\quad E &amp; A \\quad B \\quad C \\quad D \\quad E<br>\n\\\\\\hline P_{0} &amp; 1\\quad 0 \\quad 2 \\quad 1 \\quad 1 &amp; 1 \\quad 1 \\quad 2 \\quad 1 \\quad 3 &amp; 0 \\quad 0 \\quad x \\quad 1 \\quad 0<br>\n\\\\\\hline P_{1} &amp; 2 \\quad 0 \\quad 1 \\quad 1\\quad 0 &amp; 2 \\quad 2\\quad 2 \\quad 1\\quad 1 &amp; \\quad<br>\n\\\\\\hline P_{2} &amp; 1 \\quad 1 \\quad 0 \\quad 1\\quad 0 &amp; 2 \\quad 1 \\quad 3 \\quad 1 \\quad 0 &amp; \\quad<br>\n\\\\\\hline P_{3} &amp; 1 \\quad 1 \\quad 1 \\quad 1\\quad 0 &amp; 1 \\quad 1 \\quad 2 \\quad 2 \\quad 1 &amp; \\quad<br>\n\\\\\\hline \\end{array}$$<br>\nThe smallest value of $x$ for which the given state is a safe state, is ________</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}, {'contents': '', 'post_id': '349265', 'text': '<p>Consider the following snapshot of a system running $n$ processes.</p>\n\n<p>Process $i$ is holding $x_i$ instances of a resource $R$,$ 1\\leq i\\leq n$. Currently, all instances of $R$ are occupied. Further, for all $i$, process $i$ has placed a request for an additional $y_i$ instances while holding the $x_i$ instances it already has. There are exactly two processes $p$ and $q$ and such that $y_p=y_q=0$. Which one of the following can serve as a sufficient condition to guarantee that the system would not be going to a deadlock?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x_{p}+x_{q}&gt; \\max_{k\\neq p,q}y_{k}$</li>\n\t<li>$\\max(x_{p},x_{q})&gt;1$</li>\n\t<li>$x_{p}+x_{q}\\geq \\min_{k\\neq p,q}y_{k}$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}]
+      let data={'name': 'GATE Overflow Test Series 2024 | Operating Systems | Test 1', 'duration': '90', 'total_qs': '30', 'total_qs_one': 10, 'total_qs_two': 20, 'apti_num_qs': 0, 'technical_num_qs': 30, 'apti_marks': 0, 'technical_marks': 50, 'total_marks': 50, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 30, 'marks': 50, 'question': [{'contents': '', 'post_id': '349304', 'text': 'A counting semaphore is initialized to $X$. Then $13\\; P\\; \\text{(wait)}$ operations and $25\\;V \\; \\text{(signal)}$ operations are completed on this semaphore. If the final value of semaphore is $8$, then the value $X$ will be _______', 'type': 'Numerical', 'answer': '-4', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349276', 'text': '<p>The following program consists of $3$ concurrent processes and $3$ binary semaphores. The semaphores are initialized as $S_0=0, S_1=1$ and $S_2=1.$<br>\n$$\\begin{array}{|l|l|l|}\\hline \\text{Process $P_0$} &amp; \\text{Process $P_1$} &amp; \\text{Process $P_2$}<br>\n\\\\\\hline \\text{while (true) \\{} &amp; \\text{wait ($S_1$);} &amp; \\text{wait ($S_2$);}<br>\n\\\\&nbsp;\\quad\\text{wait ($S_0$);} &amp; \\text{release ($S_0$);} &amp; \\text{release ($S_0$);}<br>\n\\\\&nbsp;\\quad\\text{print ‘1\';} &amp; &amp;<br>\n\\\\&nbsp;\\quad\\text{release ($S_1$);} &amp; &amp;<br>\n\\\\&nbsp;\\quad\\text{release ($S_2$);} &amp; &amp;<br>\n\\\\&nbsp;\\} &amp; &amp;<br>\n\\\\\\hline \\end{array}$$<br>\nHow many times will process $P_0$ print \'$1$\'?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>At least twice</li>\n\t<li>Exactly once</li>\n\t<li>Exactly twice</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '349302', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> If each resource type has exactly one instance, then a cycle in resource allocation graph is a necessary condition for the existence of deadlock</li><li>  If each resource type has exactly one instance, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li> If each resource type has several instances, then a cycle in the resource allocation graph is a sufficient condition for the existence of deadlock</li><li>If each resource type has several instances, then a cycle in the resource allocation graph is a necessary condition for the existence of deadlock</li></ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349286', 'text': '<p>Consider the following synchronization construct used by two the processes</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nturn1 = true;\nturn2 = true;\nProcess 1\n...\nwhile(true)\n{\n    turn1 = true;\n    while(turn2);\n    /* Critical Section */\n    turn1 = false;\n}\n...\nProcess 2\n...\nwhile(true)\n{\n    turn2 = true;\n    while(turn1);\n    /* Critical Section */\n    turn2 = false;\n}\n...</pre>\n\n<p><br>\nWhich one of the following statements is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The proposed solution prevents deadlock but fails to guarantee mutual exclusion.</li>\n\t<li>The proposed solution guarantees mutual exclusion but fails to prevent deadlock.</li>\n\t<li>The proposed solution guarantees mutual exclusion and prevents deadlock.</li>\n\t<li>The proposed solution fails to prevent deadlock and fails to guarantee mutual exclusion.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349274', 'text': '<p>Consider the following process synchronization program involving $N$ processes.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsemaphore S = 21;\nProcess 1\nS.signal();\nwhile (1) {\n  // do something\n  S.wait();\n  //critical section\n  S.signal(); \n  // do something\n}\nProcess 2..N\nwhile (1) {\n  // do something\n  S.wait();\n  //critical section\n  S.signal(); \n  // do something\n}</pre>\n\n<p><br>\nThe maximum number of processes that can be in the critical section at any moment of time is _______</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$21$</li>\n\t<li>$22$</li>\n\t<li>$23$</li>\n\t<li>More than $23$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization,semaphore', 'category': 'Operating System'}, {'contents': '', 'post_id': '349316', 'text': 'Which of the following CPU scheduling algorithms suffer from convoy effect? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> First Come First Served</li><li>  Non-preemptive Shortest Remaining Time First</li><li> Round Robin Scheduling</li><li>Preemptive Shortest Remaining Time First</li></ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-scheduling,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349290', 'text': 'Consider the following code segment:<br /><pre class="prettyprint linenums lang-c_cpp " data-pbcklang="c_cpp" data-pbcktabsize="4">pid_t pid;<br />pid = fork();<br />if (pid == 0) {<br />thread create(...);<br />fork();<br />}<br />fork();</pre><br />If $a $ is the total number of processes created, and $b $ is the total number of threads created when the above code is executed, the value of $a + b =$ ________', 'type': 'Numerical', 'answer': '13', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,threads,fork-system-call', 'category': 'Operating System'}, {'contents': '', 'post_id': '349284', 'text': '<p>Consider the following two-process synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nP0:\nwhile(TRUE) {\n  while(turn!=0);\n  critical_section();\n  turn = 1;\n  noncritical_section();\n}\nP1:\nwhile(TRUE) {\n  while(turn!=1);\n  critical_section();\n  turn = 0;\n  noncritical_section();\n}</pre>\n\n<p><br>\nThe shared variable turn is initialized to zero. Which one of the following is TRUE?</p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>This is a correct two-process synchronization solution satisfying mutual-exclusion, progress and bounded waiting.</li>\n\t<li>This solution violates mutual exclusion requirement.</li>\n\t<li>This solution violates progress requirement.</li>\n\t<li>This solution violates bounded wait requirement.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349264', 'text': '<p>$5$ processes $P_{0}$ through $P_{4}; 3$ resource types $\\text{A (10 instances), B (5 instances), and C (7 instances)}$<br>\nSnapshot at time $T_{0}:$<br>\n$$\\begin{array}{|c|c|c|c|}\\hline<br>\n\\quad &amp; \\textbf{Allocation} &amp; \\textbf{Max} &amp; \\textbf{Available}<br>\n\\\\\\hline \\quad &amp; A\\quad B\\quad C &amp; A\\quad B\\quad C &amp; A\\quad B\\quad C<br>\n\\\\\\hline P_{0} &amp; 0\\quad 1\\quad 0 &amp; 7 \\quad 5 \\quad 3 &amp; 3\\quad 3\\quad 2<br>\n\\\\&nbsp;P_{1} &amp; 2\\quad 0\\quad 0 &amp; 3\\quad 2\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{2} &amp; 3\\quad 0\\;\\; 2 &amp; 9\\quad 0\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{3} &amp; 2\\quad 1\\quad 1 &amp; 2\\quad 2\\quad 2 &amp; \\quad<br>\n\\\\&nbsp;P_{4} &amp; 0\\quad 0\\quad 2 &amp; 4\\quad 3\\quad 3 &amp; \\quad<br>\n\\\\\\hline \\end{array}$$<br>\nThe system is currently in a safe state. Consider the following independent requests for additional resources in the current state:<br>\n$\\textbf{REQ1:}\\;P_{0}$ requests $0$ units of $A, 2$ units of $B$ and $0$ units of $C$<br>\n$\\textbf{REQ2:}\\;P_{1}$ requests $1$ units of $A, 0$ units of $B$ and $2$ units of $C$<br>\n$\\textbf{REQ3:}\\; P_{4}$ requests $3$ units of $A, 3$ units of $B$ and $0$ units of $C$<br>\nWhich one of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{REQ1&nbsp;and REQ2}$ can be permitted.</li>\n\t<li>Only $\\text{REQ2 and REQ3}$ can be permitted.</li>\n\t<li>All of $\\text{REQ1, REQ2 and REQ3}$ can be permitted.</li>\n\t<li>None of $\\text{REQ1, REQ2 or REQ3}$ can be permitted.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}, {'contents': '', 'post_id': '349266', 'text': '<p>Consider a system having $k$ resources of the same type. These resources are shared by $5$ processes $A,B,C,D$, and $E$ which have peak demands of $5,7,9,3$ and $8$ respectively. Further it is restricted that at any point of time processes $A$ and $B$ together cannot hold more than $8$ resources whereas no such restrictions are there for processes $C,D$ and $E.$ For which of the following values of $k,$ deadlock may occur? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$24$</li>\n\t<li>$25$</li>\n\t<li>$27$</li>\n\t<li>$26$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349312', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><ol style="list-style-type:upper-alpha"><li> Kernel-level threads are handled by the operating system directly</li><li>  Kernel level threads are faster to create and manage than user level threads</li><li> Multiple threads of the same process can be scheduled on different processors in kernel-level threads.</li><li>If a kernel-level thread is blocked, all threads of the same process also gets blocked</li></ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349282', 'text': '<p>Consider the following synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid swap (bool *a, bool *b)\n{\n    bool temp = *a;\n    *a = *b;\n    *b = temp:\n}\ndo {\n    key = TRUE;\n    while ( key == TRUE) swap (&amp;lock, &amp;key);\n    &lt;Critical Section&gt;\n    lock = FALSE;\n} while (TRUE);</pre>\n\n<p><br>\nIf the boolean shared variable lock is initialized to FALSE and all the assignment statements happen atomically in hardware, which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Starvation freedom is guaranteed.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349310', 'text': '<p>Which of the following statements about CPU scheduling algorithms is/are TRUE? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Shortest Job First (SJF) algorithm is optimal with respect to the average turn around time.</li>\n\t<li>SJF algorithm is optimal with respect to the average waiting time.</li>\n\t<li>SJF algorithm may lead to starvation.</li>\n\t<li>SJF algorithm guarantees a better or same&nbsp;average turn around time, as&nbsp;First Come First Served algorithm</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-scheduling,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349260', 'text': 'Consider the following set of processes, with the arrival times and the CPU-burst times gives in milliseconds.\n$$\\begin{array}{|c|c|c|} \\hline \\textbf{Process} & \\textbf{Arrival Time} & \\textbf{Burst Time}\n\\\\\\hline P_{1} & 0 & 8\n\\\\\\hline P_{2} & 1 & 4\n\\\\\\hline P_{3} & 3 & 3\n\\\\\\hline P_{4} & 4 & 2\n\\\\\\hline \\end{array}$$\nThe average turnaround time for these processes with the preemptive shortest remaining time first (SRTF) algorithm is _______', 'type': 'Numerical', 'answer': '7.75', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,process-scheduling,shortest-remaining-time-first', 'category': 'Operating System'}, {'contents': '', 'post_id': '349300', 'text': '<p>Processes in an operating system can be in any of the following states. Choose the proper matching for the given table.</p>\n\n<p><br>\n$\\begin{array}{|l|l|l|}\\hline<br>\n&amp; \\textbf{Process State} &amp; &amp; \\textbf{Description}<br>\n\\\\\\hline a. &amp; \\text{Ready} &amp; i.&amp; \\text{The process is waiting for some event to occur}<br>\n\\\\&amp; &amp; &amp; \\text{(such as an I/O completion or reception of signal).}<br>\n\\\\\\hline b. &amp; \\text{Waiting} &amp; ii. &amp; \\text{The process is waiting to be assigned to a processor.}<br>\n\\\\\\hline c. &amp; \\text{Terminated} &amp; iii. &amp; \\text{Instructions are being executed.}<br>\n\\\\\\hline&nbsp;d. &amp; \\text{Running} &amp; iv.&nbsp;&amp; \\text{The process has finished execution.}<br>\n\\\\\\hline<br>\n&amp; &amp; v.&nbsp;&amp; \\text{The process is being created.}<br>\n\\\\\\hline \\end{array}$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$a-ii, b - i, c - iv, d - iii$</li>\n\t<li>$a-v, b - i, c - iv, d - iii$</li>\n\t<li>$a-ii, b - i, c - iv, d - v$</li>\n\t<li>$a-iii, b - i, c - iv, d - ii$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'go2024-os-1,processes,threads', 'category': 'Operating System'}, {'contents': '', 'post_id': '349306', 'text': "The banker's algorithm is being run in a system with $m$ resource classes and $n$ processes. In the limit of large $m$ and $n,$ the number of operations that must be performed to check a state for safety is proportional to $n^{a}(\\lg n)^b m^{c} (\\lg m)^d$. The value of $2a +3 b+5c+7d = $_______", 'type': 'Numerical', 'answer': '9', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,deadlock-prevention-avoidance-detection,bankers-algorithm', 'category': 'Operating System'}, {'contents': '', 'post_id': '349280', 'text': '<p>Consider the following two process synchronization solution. Assume all assignments are atomic.&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nflag[0] = flag[1] = FALSE;\nP0:\ndo {\n    flag[0] = TRUE;\n    turn = 1;\n    while (flag[1] &amp;&amp; (turn == 1));\n    critical section\n    flag[0] = FALSE;\n    remainder section\n} while (TRUE);\n\nP1:\ndo {\n    flag[1] = TRUE;\n    turn = 0;\n    while (flag[0] &amp;&amp; (turn == 0));\n    critical section\n    flag[1] = FALSE;\n    remainder section\n} while (TRUE);\n</pre>\n\n<p><br>\nWhich of the following is/are correct? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Bounded waiting is guaranteed.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349268', 'text': '<p>Consider the following solution to the classical Dining Philosophers Problem using Semaphores, where $5$ philosophers in a dining table are trying to eat using $5$ chopsticks each one placed to the right and left of each philosopher.<br>\nsemaphores chopstick $[0\\dots 4]$ all initialized to $1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nrepeat\nwait(chopstick[i+(i%2)]);\nwait(chopstick[(i+1-(i%2)) mod 5]);\n. . .\neat\n. . .\nsignal(chopstick[i]);\nsignal(chopstick[(i+1) mod 5]);\n. . .\nthink\n. . .\nuntil false;</pre>\n\n<p><br>\nWhich of the following properties are satisfied by the above solution? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Starvation freedom</li>\n\t<li>Deadlock freedom</li>\n\t<li>Mutual Exclusion</li>\n\t<li>Progress</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349288', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint foo(int n)\n{\n    int i;\n    for(i=0; i &lt;n; i++)\n    {\n        for(j = 0; j &lt; n; j++)\n        {\n            if(j &lt; i)\n            {\n                fork();\n            }\n        }\n    \u200b}\n    return 0;\n}</pre>\n\n<p><br>\nThe total number of child processes created if foo is called with parameter $n = 5$ is _______</p>', 'type': 'Numerical', 'answer': '1023', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,threads', 'category': 'Operating System'}, {'contents': '', 'post_id': '349272', 'text': '<p>Consider the following code using semaphores.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsemaphore S1 = 1, S2 = 1;\nint cnt1 = cnt2 = 2;\nProcess 1\nwhile (cnt1--) {\n  // do something\n  S1.wait();\n  print{"GATE"};\n  S2.signal(); \n  // do something\n}\n\nProcess 2\nwhile (cnt2--) {\n  // do something\n  S2.wait();\n  print{"Overflow"};\n  S1.signal(); \n  // do something\n}</pre>\n\n<p><br>\nThe output of the above program will be _______ (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{GATE Overflow GATE Overflow }$</li>\n\t<li>$\\text{Overflow GATE Overflow GATE}$</li>\n\t<li>$\\text{GATE GATE Overflow Overflow} $</li>\n\t<li>$\\text{Overflow GATE GATE Overflow}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349270', 'text': '<p>Consider the following Producer-Consumer implementation using a buffer of size $N.$ Assume that initially the buffer is empty.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nSemaphore mutex = __; \nSemaphore empty = __; \nSemaphore full = __;</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nproducer {\n  while (1) {\n    Produce new resource;\n    wait(empty);\n    wait(mutex); \n    Add resource to an empty buffer;\n    signal(mutex); \n    signal(full); \n  }\n}\nconsumer {\n  while (1) {\n    wait(full);\n    wait(mutex); \n    Remove resource from a full buffer;\n    signal(mutex); \n    signal(empty);\n    Consume resource;\n  }\n}</pre>\n\n<p><br>\nFor the correct working of the above code the initialization of the semaphores mutex, empty and full must be as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{mutex = 0, empty = N, full = 1}$</li>\n\t<li>$\\text{mutex = 1, empty = 1, full = N}$</li>\n\t<li>$\\text{mutex = 1, empty = N, full = 0}$</li>\n\t<li>$\\text{mutex = 0, empty = N, full = N}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,process-synchronization', 'category': 'Operating System'}, {'contents': '', 'post_id': '349296', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> The Data section is reserved for local variables when they are declared.</li><li>  The Heap is made up of the global and static variables, allocated and initialized prior to executing the main.</li><li> The space on the Stack is used for the dynamic memory allocation, and is managed via calls to new, delete, malloc, free, etc.</li><li>The Text section is made up of the compiled program code, read in from non-volatile storage when the program is launched.</li></ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,processes,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349294', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\n#include &lt;unistd.h&gt;\nint main()\n{\n    fork();\n    fork() &amp;&amp; (fork() || fork());\n    printf("GO 2020");\n}</pre>\n\n<p>The number of times “$\\text{GO 2020}$” will be printed is _______</p>', 'type': 'Numerical', 'answer': '8', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,fork-system-call,short-circuit-rule,programming-in-c', 'category': 'Operating System'}, {'contents': '', 'post_id': '349298', 'text': 'Which of the following is/are correct? (Mark all the appropriate choices)<br /><br /><ol style="list-style-type:upper-alpha"><li> Switching the CPU to another process requires performing a state save of the current process and a state restore of a different process. </li><li>  Whenever an interrupt arrives, the CPU kills the currently executing process.</li><li> A typical Operating System allows a process to create threads but not another process.</li><li>Only the processes in Ready state are stored in the job queue. </li></ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,processes,threads,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349308', 'text': '<p>Which of the following is/are correct about deadlocks in an Operating System? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If a system is in a safe state, it will never enter a deadlock after a sequence of resource allocations.&nbsp;</li>\n\t<li>If a system is in an unsafe state, it will eventually enter a deadlock.</li>\n\t<li>Deadlock prevention is stricter that deadlock avoidance.</li>\n\t<li>Deadlock prevention ensures better resource utilization than deadlock avoidance.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349292', 'text': '<p>A process executes the following segment of code :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(fork() &amp;&amp; fork() || fork()){\n    printf("GATE2021");\n}</pre>\n\n<p>The number of times “$\\text{GATE2021}$” will be printed is _______</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,numerical-answers,processes,fork-system-call', 'category': 'Operating System'}, {'contents': '', 'post_id': '349278', 'text': '<p>Consider the following multi-process synchronization solution.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo {\nwhile (test_set(&amp;lock));\n\nlock = FALSE;\n\n} while (TRUE);</pre>\n\n<p><br>\nAssume that the shared boolean variable lock is initialized to FALSE and the test_set function is an atomic function which returns the current value of the argument and sets it to TRUE. Which of the following is/are correct? (Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Race condition may be possible.</li>\n\t<li>Mutual exclusion is guaranteed.</li>\n\t<li>Progress is guaranteed.</li>\n\t<li>Bounded waiting is guaranteed.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'go2024-os-1,process-synchronization,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349314', 'text': '<p>The degree of multi-programming in an operating system is affected by<br>\n(Mark all the appropriate choices)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>long-term scheduler</li>\n\t<li>short-term scheduler</li>\n\t<li>medium-term scheduler</li>\n\t<li>job scheduler</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'go2024-os-1,multiple-selects', 'category': 'Operating System'}, {'contents': '', 'post_id': '349262', 'text': '<p>A system has four processes and five allocatable resources. The current allocation and maximum needs are as follows:<br>\n$$\\begin{array}{|c|c|c|c|c|}\\hline<br>\n\\quad &amp; \\textbf{Allocation} &amp; \\textbf{Maximum} &amp; \\textbf{Available}<br>\n\\\\\\hline \\quad &amp; A \\quad B \\quad C \\quad D \\quad E &amp; A \\quad B \\quad C \\quad D \\quad E &amp; A \\quad B \\quad C \\quad D \\quad E<br>\n\\\\\\hline P_{0} &amp; 1\\quad 0 \\quad 2 \\quad 1 \\quad 1 &amp; 1 \\quad 1 \\quad 2 \\quad 1 \\quad 3 &amp; 0 \\quad 0 \\quad x \\quad 1 \\quad 0<br>\n\\\\\\hline P_{1} &amp; 2 \\quad 0 \\quad 1 \\quad 1\\quad 0 &amp; 2 \\quad 2\\quad 2 \\quad 1\\quad 1 &amp; \\quad<br>\n\\\\\\hline P_{2} &amp; 1 \\quad 1 \\quad 0 \\quad 1\\quad 0 &amp; 2 \\quad 1 \\quad 3 \\quad 1 \\quad 0 &amp; \\quad<br>\n\\\\\\hline P_{3} &amp; 1 \\quad 1 \\quad 1 \\quad 1\\quad 0 &amp; 1 \\quad 1 \\quad 2 \\quad 2 \\quad 1 &amp; \\quad<br>\n\\\\\\hline \\end{array}$$<br>\nThe smallest value of $x$ for which the given state is a safe state, is ________</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}, {'contents': '', 'post_id': '349265', 'text': '<p>Consider the following snapshot of a system running $n$ processes.</p>\n\n<p>Process $i$ is holding $x_i$ instances of a resource $R$,$ 1\\leq i\\leq n$. Currently, all instances of $R$ are occupied. Further, for all $i$, process $i$ has placed a request for an additional $y_i$ instances while holding the $x_i$ instances it already has. There are exactly two processes $p$ and $q$ and such that $y_p=y_q=0$. Which one of the following can serve as a sufficient condition to guarantee that the system would not be going to a deadlock?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x_{p}+x_{q}&gt; \\max_{k\\neq p,q}y_{k}$</li>\n\t<li>$\\max(x_{p},x_{q})&gt;1$</li>\n\t<li>$x_{p}+x_{q}\\geq \\min_{k\\neq p,q}y_{k}$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'go2024-os-1,deadlock-prevention-avoidance-detection', 'category': 'Operating System'}]}]}
+      </script>
+      

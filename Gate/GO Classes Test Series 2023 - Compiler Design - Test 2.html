@@ -1,0 +1,214 @@
+<div><span>Q1</span> - <p>Consider the following statements with respect to storage allocation:</p>
+
+<ul>
+	<li>S1 : Names local to a procedure are allocated space on a heap automatically.</li>
+	<li>S2 : Stack allocation is used for data that may live even after a procedure call returns.</li>
+	<li>S3 : Heap allocation is used for symbol tables.</li>
+</ul>
+
+<p>Which one of the following is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S1, S2 are false but S 3 is true</li>
+	<li>S1, S2 and S3 are false</li>
+	<li>S1, S2 are true but S 3 is false</li>
+	<li>S1, S3 are true but S 2 is false</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following statements given below</p>
+
+<ul>
+	<li>S 1: A→XYZ{Y.S = A.S, Y.S = X.S, Y.S = Z.S} is not an L-attributed grammar since Y.S = A.S and Y.S = X.S are allowed but Y.S = Z.S violates the L-attributed SDT definition as attributed is inheriting the value from its right sibling.</li>
+	<li>S2 : S-attributed SDTs are evaluated in bottom-up parsing, as the values of the parent nodes depend upon the values of the child nodes.</li>
+</ul>
+
+<p>Which of the above statement(s) is/are CORRECT?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Only S1</li>
+	<li>Only S2</li>
+	<li>Both S1 and S2</li>
+	<li>Neither S1 nor S2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>The syntax of a propositional calculus can be described by the context-free grammar G=⟨V_n, V_t, P, S⟩<br>
+where V_n={S}, V_t={ not, if, then, and, or, p, q, r},<br>
+
+    <br>
+    <br>
+    P=   amp;{S→ p, S→ q, S→ r
+    <br>
+       amp; S→ not S,
+    <br>
+       amp; S→if S then S
+    <br>
+       amp; S→S or S,
+    <br>
+       amp;S→S and S}<br>
+    <br>
+<br>
+Choose the False statements about the above grammar and language :</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>The given grammar is ambiguous.</li>
+	<li>"and" has higher precedence than "or"</li>
+	<li>"or" has higher precedence than "and"</li>
+	<li>"or", "and" are left associative, But not right associative</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Which of the following statements are True/False, map them appropriately, with respect to syntax directed definitions?</p>
+
+<ol style="list-style-type:upper-roman">
+	<li>The terminals in a SDD can have both synthesized as well as inherited attributes.</li>
+	<li>Value of attributes of terminals is generally supplied by lexical analyzer</li>
+	<li>The start symbol doesn't have an inherited attribute</li>
+	<li>Attribute grammar is a SDD in which function in the semantic rules should produce side effects.</li>
+</ol>
+
+<ol style="list-style-type:upper-alpha">
+	<li>T T T T</li>
+	<li>T F T F</li>
+	<li>T T T F</li>
+	<li>F T T F</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following grammar G :<br>
+
+    A→A   nbsp; and A|A   nbsp; or A|   nbsp;⟨   nbsp;A⟩   nbsp;|   nbsp;true|   nbsp;false
+<br>
+Which of the following is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>G can be parsed by a LL(1) parser</li>
+	<li>G can be parsed by a LALR(1) parser</li>
+	<li>L(G) is ambiguous.</li>
+	<li>G is ambiguous.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Inherited attributes are attributes at a node whose dependency is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Restricted to siblings</li>
+	<li>Restricted to parent</li>
+	<li>Both A and B</li>
+	<li>Neither A nor B</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Let P be a procedure that for some inputs calls itself (i.e., is recursive). If P is guaranteed to terminate. Which of the following statements must be true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>P has a local variable.</li>
+	<li>P has an execution path where it does not call itself.</li>
+	<li>P either refers to a global variable or has at least one parameter.</li>
+	<li>P cannot have more than one parameter.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the syntax directed translation scheme given below:<br>
+
+    <br>
+    [                          <br>
+    S→L                amp; S.val = L.val;                      <br>
+    L→L_1 B amp; L.val = L_1 . val∗ 2+B . val;                          <br>
+    L→B                amp; L.val = B.val;                         <br>
+    B→ 0                     amp; B.val =0;                         <br>
+    B→ 1                     amp; B.val =1;                         <br>
+    <br> ]<br>
+<br>
+If the input string is 1101 , then the value of attribute of starting symbol is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>5</li>
+	<li>13</li>
+	<li>110</li>
+	<li>20</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Which of the following is/are true about the following grammar : S→Sa | b</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Given grammar is SLR(1)</li>
+	<li>Given grammar is LR(0)</li>
+	<li>A recursive descent parser can not parse given grammar</li>
+	<li>Set of all viable prefixes   nbsp;for given grammar is {a, S, b}</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>In a language in which operations are associated right-to-left instead of left-to-right (i.e.,  a+b+c=a+(b+c)   nbsp;), the value of the expression<br>
+
+    <br>
+    7-(16 /(3+1) * 2)-4<br>
+<br>
+is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>-1</li>
+	<li>1</li>
+	<li>3</li>
+	<li>9</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Which of the following is/are true about handles and viable prefixes in shift-reduce parsing?</p>
+
+<ol>
+	<li>Handles always appear at the top of the stack</li>
+	<li>Handles are never to the left of the rightmost nonterminal</li>
+	<li>A viable prefix does not extend past the right end of the handle</li>
+	<li>For any grammar, the set of viable prefixes is a regular language</li>
+	<li>Viable prefix is a prefix of the handle</li>
+	<li>As long as a parser has viable prefixes on the stack no parsing error has been detected</li>
+	<li>Bottom-up parsing algorithms are based on recognizing handles</li>
+</ol>
+
+<p>   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1, 2 and 3 are true</li>
+	<li>4,6 and 7 are true</li>
+	<li>5 is wrong</li>
+	<li>All are true except 7</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following CFG, where the set of terminals is {a, b, #, %, !}:   nbsp;<br>
+
+    <br>
+    <br>
+       amp;S→% a T|U !
+    <br>
+       amp;T→ a S|   nbsp;b a T|   nbsp;ϵ
+    <br>
+       amp;U→# a TU|ϵ
+    <br>
+    <br>
+<br>
+Which of the following is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>The FIRST sets for each of the nonterminals S, T, U is as follows :<br>
+	S:{%, #, !}<br>
+	T:{a, b, ϵ}<br>
+	U:{#, ϵ}</li>
+	<li>The FOLLOW sets for each of the nonterminals S, T, U is as follows :<br>
+	S:{#, !, $}<br>
+	T:{#, !, $}<br>
+	U:{!}</li>
+	<li>The grammar is LL(1)</li>
+	<li>The grammar is LR(1)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Expressions in a certain language can be described in Backus-Naur form (BNF) as follows:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+   lt; expression    gt; ::=    lt; term    gt; |    lt; expression    gt; op1    lt; term    gt; 
+   lt; term    gt; ::=    lt; item    gt; |    lt; term    gt; op2    lt; item    gt; 
+   lt; item    gt; ::=    lt; variable    gt; |    lt; number    gt;</pre>
+
+<p>The syntax is most appropriate when the order of evaluation is</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>from left to right always</li>
+	<li>from left to right, but  takes precedence over </li>
+	<li>from left to right, but  takes precedence over </li>
+	<li>In any order, but  takes precedence over </li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the Syntax-Directed Translation scheme given below.<br>
+
+    [                                     Grammar                       amp;   Semantic Rules;                                  E_1 →E_2+T amp; E_1 .string =E_1 .string T.string  ‘+';                                      E_1 →T                  amp; E_1 ·string =T.string;                               T_1 →T_2 *  F amp; T_1 .string =T_2 .string F.string  ‘*'                                       nbsp;;                                         T→F                     amp; T.string =F.string;                                       F→(E)                     amp; F.string =E.string;                                       F→num                  amp; F.string = num.string;                                             ]
+</p>
+
+<p>What does this SDT does?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It translate arithmetic expression from infix into postfix notation</li>
+	<li>It translate arithmetic expression from postfix into infix notation</li>
+	<li>It translate arithmetic expression from prefix into postfix notation</li>
+	<li>It translate arithmetic expression from infix into prefix notation</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10270326885388561254"></p>
+
+<p><br>
+Which of the following arithmetic expressions corresponds directly to the parse tree given by the diagram in the figure above?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>2(a-c)</li>
+	<li>2a - 2c</li>
+	<li>2(a + b - c + b)</li>
+	<li>2((a + b)-(c + b))</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '387357', 'text': '<p>Consider the following statements with respect to storage allocation:</p>\n\n<ul>\n\t<li>$\\text{S1} :$ Names local to a procedure are allocated space on a heap automatically.</li>\n\t<li>$\\text{S2} :$ Stack allocation is used for data that may live even after a procedure call returns.</li>\n\t<li>$\\text{S3} :$ Heap allocation is used for symbol tables.</li>\n</ul>\n\n<p>Which one of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1, S2}$ are false but $\\mathrm{S} 3$ is true</li>\n\t<li>$\\text{S1, S2}$ and $\\text{S3}$ are false</li>\n\t<li>$\\text{S1, S2}$ are true but $\\mathrm{S} 3$ is false</li>\n\t<li>$\\text{S1, S3}$ are true but $\\mathrm{S} 2$ is false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,symbol-table,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387348', 'text': '<p>Consider the following statements given below</p>\n\n<ul>\n\t<li>$\\mathrm{S} 1: \\text{A} \\rightarrow \\text{XYZ}\\{\\text{Y.S = A.S, Y.S = X.S, Y.S = Z.S}\\}$ is not an $\\text{L}$-attributed grammar since $\\text{Y.S = A.S}$ and $\\text{Y.S = X.S}$ are allowed but $\\text{Y.S = Z.S}$ violates the $\\text{L}$-attributed $\\text{SDT}$ definition as attributed is inheriting the value from its right sibling.</li>\n\t<li>$\\text{S2} : \\text{S}$-attributed $\\text{SDTs}$ are evaluated in bottom-up parsing, as the values of the parent nodes depend upon the values of the child nodes.</li>\n</ul>\n\n<p>Which of the above statement(s) is/are CORRECT?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{S1}$</li>\n\t<li>Only $\\text{S2}$</li>\n\t<li>Both $\\text{S1}$ and $\\text{S2}$</li>\n\t<li>Neither $\\text{S1}$ nor $\\text{S2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387346', 'text': '<p>The syntax of a propositional calculus can be described by the context-free grammar $\\text{G}=\\langle \\text{V}_n, \\text{V}_t, \\text{P, S}\\rangle$<br>\nwhere $V_n=\\{\\text{S}\\}, \\text{V}_t=\\{$ not, if, then, and, or, $p, q, r\\}$,<br>\n$$<br>\n\\begin{aligned}<br>\n\\text{P}=&amp;\\{\\text{S} \\rightarrow p, \\text{S} \\rightarrow q, \\text{S} \\rightarrow r\\\\<br>\n&amp; \\text{S} \\rightarrow \\text { not } \\text{S},\\\\<br>\n&amp; \\text{S} \\rightarrow \\text{if S then S}\\\\<br>\n&amp; \\text{S} \\rightarrow \\text{S or S},\\\\<br>\n&amp;\\text{S} \\rightarrow \\text{S and S}\\}<br>\n\\end{aligned}<br>\n$$<br>\nChoose the False statements about the above grammar and language :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The given grammar is ambiguous.</li>\n\t<li>"and" has higher precedence than "or"</li>\n\t<li>"or" has higher precedence than "and"</li>\n\t<li>"or", "and" are left associative, But not right associative</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,context-free-grammar,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387341', 'text': '<p>Which of the following statements are True/False, map them appropriately, with respect to syntax directed definitions?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>The terminals in a $\\text{SDD}$ can have both synthesized as well as inherited attributes.</li>\n\t<li>Value of attributes of terminals is generally supplied by lexical analyzer</li>\n\t<li>The start symbol doesn\'t have an inherited attribute</li>\n\t<li>Attribute grammar is a $\\text{SDD}$ in which function in the semantic rules should produce side effects.</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{T T T T}$</li>\n\t<li>$\\text{T F T F}$</li>\n\t<li>$\\text{T T T F}$</li>\n\t<li>$\\text{F T T F}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387339', 'text': '<p>Consider the following grammar $\\text{G :}$<br>\n$$\\mathrm{A} \\rightarrow \\mathrm{A}&nbsp;\\;\\text{and}\\; \\mathrm{A} \\mid \\mathrm{A}&nbsp;\\;\\text{or}\\; \\mathrm{A} \\mid&nbsp;\\langle&nbsp;\\mathrm{A} \\rangle&nbsp;\\mid&nbsp;\\text{true} \\mid&nbsp;\\text{false}$$<br>\nWhich of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{G}$ can be parsed by a $\\text{LL(1)}$ parser</li>\n\t<li>$\\text{G}$ can be parsed by a $\\text{LALR(1)}$ parser</li>\n\t<li>$\\text{L}(\\mathrm{G})$ is ambiguous.</li>\n\t<li>$\\mathrm{G}$ is ambiguous.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,lr-parser,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387359', 'text': '<p>Inherited attributes are attributes at a node whose dependency is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Restricted to siblings</li>\n\t<li>Restricted to parent</li>\n\t<li>Both A and B</li>\n\t<li>Neither A nor B</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387344', 'text': '<p>Let $\\text{P}$ be a procedure that for some inputs calls itself (i.e., is recursive). If $\\text{P}$ is guaranteed to terminate. Which of the following statements must be true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{P}$ has a local variable.</li>\n\t<li>$\\text{P}$ has an execution path where it does not call itself.</li>\n\t<li>$\\text{P}$ either refers to a global variable or has at least one parameter.</li>\n\t<li>$\\text{P}$ cannot have more than one parameter.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,viable-prefix,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387355', 'text': '<p>Consider the syntax directed translation scheme given below:<br>\n$$<br>\n\\begin{array}{|l|l|}<br>\n\\hline \\text{S} \\rightarrow \\text{L} &amp; \\text{S.val} = \\text{L.val}\\\\<br>\n\\hline \\text{L} \\rightarrow \\text{L}_1 \\text{B} &amp; \\text{L.val} = \\text{L}_1 . \\mathrm{val} \\ast 2+\\text{B} . \\mathrm{val}\\\\<br>\n\\hline \\text{L} \\rightarrow \\text{B} &amp; \\text{L.val} = \\text{B.val}\\\\<br>\n\\hline \\text{B} \\rightarrow 0 &amp; \\text{B.val} =0\\\\<br>\n\\hline \\text{B} \\rightarrow 1 &amp; \\text{B.val} =1\\\\<br>\n\\hline<br>\n\\end{array}<br>\n$$<br>\nIf the input string is $1101 ,$ then the value of attribute of starting symbol is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>$13$</li>\n\t<li>$110$</li>\n\t<li>$20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387353', 'text': '<p>Which of the following is/are true about the following grammar $: \\mathrm{S} \\rightarrow \\mathrm{S}a \\mid b$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Given grammar is $\\operatorname{SLR}(1)$</li>\n\t<li>Given grammar is $\\operatorname{LR}(0)$</li>\n\t<li>A recursive descent parser can not parse given grammar</li>\n\t<li>Set of all viable prefixes&nbsp;for given grammar is $\\{a, \\text{S}, b\\}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,lr-parser,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387351', 'text': '<p>In a language in which operations are associated right-to-left instead of left-to-right $(\\text{i.e}.,\\; a+b+c=a+(b+c)&nbsp;),$ the value of the expression<br>\n$$<br>\n7-(16 /(3+1) * 2)-4<br>\n$$<br>\nis</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$-1$</li>\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$9$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,expression-evaluation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387337', 'text': '<p>Which of the following is/are true about handles and viable prefixes in shift-reduce parsing?</p>\n\n<ol>\n\t<li>Handles always appear at the top of the stack</li>\n\t<li>Handles are never to the left of the rightmost nonterminal</li>\n\t<li>A viable prefix does not extend past the right end of the handle</li>\n\t<li>For any grammar, the set of viable prefixes is a regular language</li>\n\t<li>Viable prefix is a prefix of the handle</li>\n\t<li>As long as a parser has viable prefixes on the stack no parsing error has been detected</li>\n\t<li>Bottom-up parsing algorithms are based on recognizing handles</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1, 2$ and $3$ are true</li>\n\t<li>$4,6$ and $7$ are true</li>\n\t<li>$5$ is wrong</li>\n\t<li>All are true except $7$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,viable-prefix,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387362', 'text': '<p>Consider the following $\\text{CFG},$ where the set of terminals is $\\{a, b, \\#, \\%, !\\}:$&nbsp;<br>\n$$<br>\n\\begin{aligned}<br>\n&amp;\\text{S} \\rightarrow \\% a \\text{T} \\mid \\text{U} !\\\\<br>\n&amp;\\text{T} \\rightarrow a \\text{S} \\mid&nbsp;b a \\text{T} \\mid&nbsp;\\epsilon\\\\<br>\n&amp;\\text{U} \\rightarrow \\# a \\text{TU} \\mid \\epsilon\\\\<br>\n\\end{aligned}<br>\n$$<br>\nWhich of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The $\\text{FIRST}$ sets for each of the nonterminals $\\mathrm{S}, \\mathrm{T}, \\mathrm{U}$ is as follows :<br>\n\t$\\text{S}:\\{\\%, \\#, !\\}$<br>\n\t$\\text{T}:\\{a, b, \\epsilon\\}$<br>\n\t$\\text{U}:\\{\\#, \\epsilon\\}$</li>\n\t<li>The $\\text{FOLLOW}$ sets for each of the nonterminals $\\mathrm{S}, \\mathrm{T}, \\mathrm{U}$ is as follows :<br>\n\t$\\text{S}:\\{\\#, !, \\$\\}$<br>\n\t$\\text{T}:\\{\\#, !, \\$\\}$<br>\n\t$\\text{U}:\\{!\\}$</li>\n\t<li>The grammar is $\\operatorname{LL}(1)$</li>\n\t<li>The grammar is $\\operatorname{LR}(1)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,first-and-follow,multiple-selects,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387343', 'text': '<p>Expressions in a certain language can be described in Backus-Naur form (BNF) as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n&lt; expression &gt; ::= &lt; term &gt; | &lt; expression &gt; op1 &lt; term &gt; \n&lt; term &gt; ::= &lt; item &gt; | &lt; term &gt; op2 &lt; item &gt; \n&lt; item &gt; ::= &lt; variable &gt; | &lt; number &gt;</pre>\n\n<p>The syntax is most appropriate when the order of evaluation is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>from left to right always</li>\n\t<li>from left to right, but $\\textsf{op1}$ takes precedence over $\\textsf{op2}$</li>\n\t<li>from left to right, but $\\textsf{op2}$ takes precedence over $\\textsf{op1}$</li>\n\t<li>In any order, but $\\textsf{op1}$ takes precedence over $\\textsf{op2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,expression-evaluation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387349', 'text': '<p>Consider the Syntax-Directed Translation scheme given below.<br>\n$$\\begin{array}{|l|l|}\\hline\\; \\textbf {Grammar} &amp; \\quad \\textbf {Semantic Rules} \\\\\\hline \\mathrm{E}_1 \\rightarrow \\mathrm{E}_2+\\mathrm{T} &amp; \\mathrm{E}_1 \\text {.string }=\\mathrm{E}_1 \\text {.string } \\| \\text {T.string } \\| \\text { ‘+\' } \\\\ \\mathrm{E}_1 \\rightarrow \\mathrm{T} &amp; \\mathrm{E}_1 \\cdot \\text {string }=\\mathrm{T} \\text {.string } \\\\\\mathrm{T}_1 \\rightarrow \\mathrm{T}_2 * \\mathrm{~F} &amp; \\mathrm{T}_1 \\text {.string }=\\mathrm{T}_2 \\text {.string } \\| \\text {F.string } \\| \\text { ‘*\' }&nbsp;\\\\ \\mathrm{T} \\rightarrow \\mathrm{F} &amp; \\text {T.string }=\\text {F.string } \\\\ \\mathrm{F} \\rightarrow(\\mathrm{E}) &amp; \\text {F.string }=\\text {E.string } \\\\ \\mathrm{F} \\rightarrow \\text {num} &amp; \\text {F.string }=\\text { num.string }\\\\\\hline\\end{array}$$</p>\n\n<p>What does this SDT does?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It translate arithmetic expression from infix into postfix notation</li>\n\t<li>It translate arithmetic expression from postfix into infix notation</li>\n\t<li>It translate arithmetic expression from prefix into postfix notation</li>\n\t<li>It translate arithmetic expression from infix into prefix notation</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387361', 'text': '<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10270326885388561254"></p>\n\n<p><br>\nWhich of the following arithmetic expressions corresponds directly to the parse tree given by the diagram in the figure above?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2(a-c)$</li>\n\t<li>$2a - 2c$</li>\n\t<li>$2(a + b - c + b)$</li>\n\t<li>$2((a + b)-(c + b))$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,1-mark', 'category': 'Compiler Design'}]
+      let data={'name': 'GO Classes Test Series 2023 | Compiler Design | Test 2', 'duration': '50', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '387357', 'text': '<p>Consider the following statements with respect to storage allocation:</p>\n\n<ul>\n\t<li>$\\text{S1} :$ Names local to a procedure are allocated space on a heap automatically.</li>\n\t<li>$\\text{S2} :$ Stack allocation is used for data that may live even after a procedure call returns.</li>\n\t<li>$\\text{S3} :$ Heap allocation is used for symbol tables.</li>\n</ul>\n\n<p>Which one of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1, S2}$ are false but $\\mathrm{S} 3$ is true</li>\n\t<li>$\\text{S1, S2}$ and $\\text{S3}$ are false</li>\n\t<li>$\\text{S1, S2}$ are true but $\\mathrm{S} 3$ is false</li>\n\t<li>$\\text{S1, S3}$ are true but $\\mathrm{S} 2$ is false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,symbol-table,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387348', 'text': '<p>Consider the following statements given below</p>\n\n<ul>\n\t<li>$\\mathrm{S} 1: \\text{A} \\rightarrow \\text{XYZ}\\{\\text{Y.S = A.S, Y.S = X.S, Y.S = Z.S}\\}$ is not an $\\text{L}$-attributed grammar since $\\text{Y.S = A.S}$ and $\\text{Y.S = X.S}$ are allowed but $\\text{Y.S = Z.S}$ violates the $\\text{L}$-attributed $\\text{SDT}$ definition as attributed is inheriting the value from its right sibling.</li>\n\t<li>$\\text{S2} : \\text{S}$-attributed $\\text{SDTs}$ are evaluated in bottom-up parsing, as the values of the parent nodes depend upon the values of the child nodes.</li>\n</ul>\n\n<p>Which of the above statement(s) is/are CORRECT?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{S1}$</li>\n\t<li>Only $\\text{S2}$</li>\n\t<li>Both $\\text{S1}$ and $\\text{S2}$</li>\n\t<li>Neither $\\text{S1}$ nor $\\text{S2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387346', 'text': '<p>The syntax of a propositional calculus can be described by the context-free grammar $\\text{G}=\\langle \\text{V}_n, \\text{V}_t, \\text{P, S}\\rangle$<br>\nwhere $V_n=\\{\\text{S}\\}, \\text{V}_t=\\{$ not, if, then, and, or, $p, q, r\\}$,<br>\n$$<br>\n\\begin{aligned}<br>\n\\text{P}=&amp;\\{\\text{S} \\rightarrow p, \\text{S} \\rightarrow q, \\text{S} \\rightarrow r\\\\<br>\n&amp; \\text{S} \\rightarrow \\text { not } \\text{S},\\\\<br>\n&amp; \\text{S} \\rightarrow \\text{if S then S}\\\\<br>\n&amp; \\text{S} \\rightarrow \\text{S or S},\\\\<br>\n&amp;\\text{S} \\rightarrow \\text{S and S}\\}<br>\n\\end{aligned}<br>\n$$<br>\nChoose the False statements about the above grammar and language :</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The given grammar is ambiguous.</li>\n\t<li>"and" has higher precedence than "or"</li>\n\t<li>"or" has higher precedence than "and"</li>\n\t<li>"or", "and" are left associative, But not right associative</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,context-free-grammar,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387341', 'text': '<p>Which of the following statements are True/False, map them appropriately, with respect to syntax directed definitions?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>The terminals in a $\\text{SDD}$ can have both synthesized as well as inherited attributes.</li>\n\t<li>Value of attributes of terminals is generally supplied by lexical analyzer</li>\n\t<li>The start symbol doesn\'t have an inherited attribute</li>\n\t<li>Attribute grammar is a $\\text{SDD}$ in which function in the semantic rules should produce side effects.</li>\n</ol>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{T T T T}$</li>\n\t<li>$\\text{T F T F}$</li>\n\t<li>$\\text{T T T F}$</li>\n\t<li>$\\text{F T T F}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387339', 'text': '<p>Consider the following grammar $\\text{G :}$<br>\n$$\\mathrm{A} \\rightarrow \\mathrm{A}&nbsp;\\;\\text{and}\\; \\mathrm{A} \\mid \\mathrm{A}&nbsp;\\;\\text{or}\\; \\mathrm{A} \\mid&nbsp;\\langle&nbsp;\\mathrm{A} \\rangle&nbsp;\\mid&nbsp;\\text{true} \\mid&nbsp;\\text{false}$$<br>\nWhich of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{G}$ can be parsed by a $\\text{LL(1)}$ parser</li>\n\t<li>$\\text{G}$ can be parsed by a $\\text{LALR(1)}$ parser</li>\n\t<li>$\\text{L}(\\mathrm{G})$ is ambiguous.</li>\n\t<li>$\\mathrm{G}$ is ambiguous.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,lr-parser,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387359', 'text': '<p>Inherited attributes are attributes at a node whose dependency is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Restricted to siblings</li>\n\t<li>Restricted to parent</li>\n\t<li>Both A and B</li>\n\t<li>Neither A nor B</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387344', 'text': '<p>Let $\\text{P}$ be a procedure that for some inputs calls itself (i.e., is recursive). If $\\text{P}$ is guaranteed to terminate. Which of the following statements must be true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{P}$ has a local variable.</li>\n\t<li>$\\text{P}$ has an execution path where it does not call itself.</li>\n\t<li>$\\text{P}$ either refers to a global variable or has at least one parameter.</li>\n\t<li>$\\text{P}$ cannot have more than one parameter.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,viable-prefix,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387355', 'text': '<p>Consider the syntax directed translation scheme given below:<br>\n$$<br>\n\\begin{array}{|l|l|}<br>\n\\hline \\text{S} \\rightarrow \\text{L} &amp; \\text{S.val} = \\text{L.val}\\\\<br>\n\\hline \\text{L} \\rightarrow \\text{L}_1 \\text{B} &amp; \\text{L.val} = \\text{L}_1 . \\mathrm{val} \\ast 2+\\text{B} . \\mathrm{val}\\\\<br>\n\\hline \\text{L} \\rightarrow \\text{B} &amp; \\text{L.val} = \\text{B.val}\\\\<br>\n\\hline \\text{B} \\rightarrow 0 &amp; \\text{B.val} =0\\\\<br>\n\\hline \\text{B} \\rightarrow 1 &amp; \\text{B.val} =1\\\\<br>\n\\hline<br>\n\\end{array}<br>\n$$<br>\nIf the input string is $1101 ,$ then the value of attribute of starting symbol is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>$13$</li>\n\t<li>$110$</li>\n\t<li>$20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387353', 'text': '<p>Which of the following is/are true about the following grammar $: \\mathrm{S} \\rightarrow \\mathrm{S}a \\mid b$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Given grammar is $\\operatorname{SLR}(1)$</li>\n\t<li>Given grammar is $\\operatorname{LR}(0)$</li>\n\t<li>A recursive descent parser can not parse given grammar</li>\n\t<li>Set of all viable prefixes&nbsp;for given grammar is $\\{a, \\text{S}, b\\}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,lr-parser,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387351', 'text': '<p>In a language in which operations are associated right-to-left instead of left-to-right $(\\text{i.e}.,\\; a+b+c=a+(b+c)&nbsp;),$ the value of the expression<br>\n$$<br>\n7-(16 /(3+1) * 2)-4<br>\n$$<br>\nis</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$-1$</li>\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$9$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,expression-evaluation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387337', 'text': '<p>Which of the following is/are true about handles and viable prefixes in shift-reduce parsing?</p>\n\n<ol>\n\t<li>Handles always appear at the top of the stack</li>\n\t<li>Handles are never to the left of the rightmost nonterminal</li>\n\t<li>A viable prefix does not extend past the right end of the handle</li>\n\t<li>For any grammar, the set of viable prefixes is a regular language</li>\n\t<li>Viable prefix is a prefix of the handle</li>\n\t<li>As long as a parser has viable prefixes on the stack no parsing error has been detected</li>\n\t<li>Bottom-up parsing algorithms are based on recognizing handles</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1, 2$ and $3$ are true</li>\n\t<li>$4,6$ and $7$ are true</li>\n\t<li>$5$ is wrong</li>\n\t<li>All are true except $7$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,viable-prefix,multiple-selects,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387362', 'text': '<p>Consider the following $\\text{CFG},$ where the set of terminals is $\\{a, b, \\#, \\%, !\\}:$&nbsp;<br>\n$$<br>\n\\begin{aligned}<br>\n&amp;\\text{S} \\rightarrow \\% a \\text{T} \\mid \\text{U} !\\\\<br>\n&amp;\\text{T} \\rightarrow a \\text{S} \\mid&nbsp;b a \\text{T} \\mid&nbsp;\\epsilon\\\\<br>\n&amp;\\text{U} \\rightarrow \\# a \\text{TU} \\mid \\epsilon\\\\<br>\n\\end{aligned}<br>\n$$<br>\nWhich of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The $\\text{FIRST}$ sets for each of the nonterminals $\\mathrm{S}, \\mathrm{T}, \\mathrm{U}$ is as follows :<br>\n\t$\\text{S}:\\{\\%, \\#, !\\}$<br>\n\t$\\text{T}:\\{a, b, \\epsilon\\}$<br>\n\t$\\text{U}:\\{\\#, \\epsilon\\}$</li>\n\t<li>The $\\text{FOLLOW}$ sets for each of the nonterminals $\\mathrm{S}, \\mathrm{T}, \\mathrm{U}$ is as follows :<br>\n\t$\\text{S}:\\{\\#, !, \\$\\}$<br>\n\t$\\text{T}:\\{\\#, !, \\$\\}$<br>\n\t$\\text{U}:\\{!\\}$</li>\n\t<li>The grammar is $\\operatorname{LL}(1)$</li>\n\t<li>The grammar is $\\operatorname{LR}(1)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,first-and-follow,multiple-selects,1-mark', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387343', 'text': '<p>Expressions in a certain language can be described in Backus-Naur form (BNF) as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n&lt; expression &gt; ::= &lt; term &gt; | &lt; expression &gt; op1 &lt; term &gt; \n&lt; term &gt; ::= &lt; item &gt; | &lt; term &gt; op2 &lt; item &gt; \n&lt; item &gt; ::= &lt; variable &gt; | &lt; number &gt;</pre>\n\n<p>The syntax is most appropriate when the order of evaluation is</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>from left to right always</li>\n\t<li>from left to right, but $\\textsf{op1}$ takes precedence over $\\textsf{op2}$</li>\n\t<li>from left to right, but $\\textsf{op2}$ takes precedence over $\\textsf{op1}$</li>\n\t<li>In any order, but $\\textsf{op1}$ takes precedence over $\\textsf{op2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,expression-evaluation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387349', 'text': '<p>Consider the Syntax-Directed Translation scheme given below.<br>\n$$\\begin{array}{|l|l|}\\hline\\; \\textbf {Grammar} &amp; \\quad \\textbf {Semantic Rules} \\\\\\hline \\mathrm{E}_1 \\rightarrow \\mathrm{E}_2+\\mathrm{T} &amp; \\mathrm{E}_1 \\text {.string }=\\mathrm{E}_1 \\text {.string } \\| \\text {T.string } \\| \\text { ‘+\' } \\\\ \\mathrm{E}_1 \\rightarrow \\mathrm{T} &amp; \\mathrm{E}_1 \\cdot \\text {string }=\\mathrm{T} \\text {.string } \\\\\\mathrm{T}_1 \\rightarrow \\mathrm{T}_2 * \\mathrm{~F} &amp; \\mathrm{T}_1 \\text {.string }=\\mathrm{T}_2 \\text {.string } \\| \\text {F.string } \\| \\text { ‘*\' }&nbsp;\\\\ \\mathrm{T} \\rightarrow \\mathrm{F} &amp; \\text {T.string }=\\text {F.string } \\\\ \\mathrm{F} \\rightarrow(\\mathrm{E}) &amp; \\text {F.string }=\\text {E.string } \\\\ \\mathrm{F} \\rightarrow \\text {num} &amp; \\text {F.string }=\\text { num.string }\\\\\\hline\\end{array}$$</p>\n\n<p>What does this SDT does?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It translate arithmetic expression from infix into postfix notation</li>\n\t<li>It translate arithmetic expression from postfix into infix notation</li>\n\t<li>It translate arithmetic expression from prefix into postfix notation</li>\n\t<li>It translate arithmetic expression from infix into prefix notation</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,syntax-directed-translation,2-marks', 'category': 'Compiler Design'}, {'contents': '', 'post_id': '387361', 'text': '<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10270326885388561254"></p>\n\n<p><br>\nWhich of the following arithmetic expressions corresponds directly to the parse tree given by the diagram in the figure above?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$2(a-c)$</li>\n\t<li>$2a - 2c$</li>\n\t<li>$2(a + b - c + b)$</li>\n\t<li>$2((a + b)-(c + b))$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-cd-2,goclasses,compiler-design,parsing,1-mark', 'category': 'Compiler Design'}]}]}
+      </script>
+      

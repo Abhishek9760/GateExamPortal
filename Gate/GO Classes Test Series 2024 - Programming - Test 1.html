@@ -1,0 +1,369 @@
+<div><span>Q1</span> - <p>What will be output on the execution of the following code segment?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+main()
+
+    unsigned num1 = 1;
+    signed num2 = -1;
+    if (num1    lt; num2)
+        printf("less");
+    else if (num1    gt; num2)
+        printf("greater");
+    else if (num1 == num2)
+        printf("equal");
+
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>greater</li>
+	<li>less</li>
+	<li>equal</li>
+	<li>Error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+main()
+
+    char grade='A';
+    int result=0;
+    switch(grade)
+    
+        case 'A':
+            result+=4;
+        case 'B':
+            result+=3;
+        case 'C':
+            result+=2;
+        default:
+            result+=1;
+    
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10</li>
+	<li>4</li>
+	<li>9</li>
+	<li>0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Which of the following condition(s) is/are evaluated to true for a given declaration of integer i.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int i = -7;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>-10    lt; i    lt;-1</li>
+	<li>i  &amp;  0  |  0 &amp;  1</li>
+	<li>0 &amp;  0 &amp;  0  |  i</li>
+	<li>!(1    gt; 0    gt; i  &amp;  !i)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Assume that x is a two’s complement binary integer whose absolute value is not large (so no overflow problems). At right are four C expressions that use the lt;   lt; (shift left) and ∼ (bitwise complement: flip each 0 to 1 and each 1 to 0 in the binary representation) operators. For example, 7    lt;   lt; 1 is 14 and ∼ 0 is -1.</p>
+
+<p>Match each expression to one of the mathematical functions at left.</p>
+
+<p>
+    [                       nbsp;a.        amp; 4x        amp; I. amp; (∼ x) + 1;             b.        amp; -x       amp; II.           amp;       nbsp; (x            lt;      lt;1) + x          nbsp;;             c.        amp; 3x      amp; III.       amp; ∼ x          nbsp;;             d.      amp; -x-1       amp; IV.         amp; x            lt;           lt;2;                ]
+</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li><br>
+	a - IV<br>
+	b - I<br>
+	c - II<br>
+	d - III</li>
+	<li><br>
+	a - IV<br>
+	b - III<br>
+	c - II<br>
+	d - I</li>
+	<li><br>
+	a - II<br>
+	b - I<br>
+	c - IV<br>
+	d - III</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Imagine that our system uses a 5-bit integer representation and does addition and subtraction using the rules for 5-bit, two’s complement arithmetic.</p>
+
+<p>Which of the following is/are TRUE?</p>
+
+<p>When converting to decimal, you should treat the value as either signed or unsigned according to the rules of C, where T_min and T_max are signed, as are plain constants, but a constant ending in U is unsigned.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>-T_max - 1U is 16 in decimal</li>
+	<li>-T_max - T_min is 00001 in binary</li>
+	<li>T_max + T_max is -2 in decimal</li>
+	<li>T_min - 1U is 15 in decimal</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What is the logical condition under which the following while loop will terminate?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int Beta = 5;
+while (Beta    gt; 0    amp;   amp; Beta    lt; 10)
+
+    printf("
+    scanf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Beta lt;0  &amp;&amp; Beta gt;= 10</li>
+	<li>Beta lt;0  || Beta gt; 10</li>
+	<li>Beta lt;= 0  || Beta gt;= 10</li>
+	<li>Beta lt;0  || Beta gt;= 10</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following program fragment. Which of the following if condition(s) prints GO Classes?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int b = 1, c = 1, d = 0;
+if (0    amp;   amp; 0 == 0) //first if
+    printf("GO Classes");
+if (b || –b == 0) //Second if
+    printf("GO Classes");
+if (c || c– == 0) //Third if
+    printf("GO Classes");
+if (d || ++d == 0) //Fourth if
+    printf("GO Classes");
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>First if condition</li>
+	<li>Second if condition</li>
+	<li>Third if condition</li>
+	<li>Fourth if condition</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main()
+int x=3;
+int y;
+switch(x++)
+    x++;
+    case 3:
+        printf("Three 
+        break;
+    case 4:
+        printf("Four 
+        break;
+    case 5:
+        printf("Five 
+        break;
+    default: printf("Default 
+    
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Three 3</li>
+	<li>Four 4</li>
+	<li>Three 4</li>
+	<li>Four 5</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the given program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void main()
+
+    int sum =1;
+    for ( unsigned int i=3; i   gt;=0; –i)
+    
+        if(i==0) sum = sum+1;
+        else sum = sum *i;
+    
+    printf("
+
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>7</li>
+	<li>0</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Let A and B be two unknown 8-bit 2’s complement numbers. We know the results of A ^∧    nbsp;   nbsp;B and A &amp; B as shown below:</p>
+
+<p>
+    [                     nbsp;A ^∧          nbsp;         nbsp;B  amp; 00110100          nbsp;;                nbsp;A &amp; B  amp; 11001001;                         nbsp; ]
+</p>
+
+<p>What is the sum A + B expressed in the 8-bit two’s complement notation?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>11000110</li>
+	<li>11000010</li>
+	<li>01000010</li>
+	<li>11010110</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>The statement</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+    counter 
+
+<p><br>
+can NOT be rewritten as</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+    if ( counter 
+        printf("A");
+    else
+        printf("B");</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt;= 1 )
+    if (counter 
+        printf("A");
+    else
+        printf("B");
+    –counter;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt; 1 )
+
+    –counter;
+    if ( counter 
+        printf("A");
+    else
+        printf("B");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+do
+
+    –counter;
+    printf( counter 
+ while ( counter    gt;= 2 );</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which of the following if statement(s) below is/are equivalent to the given switch statement (that is, produces the same output under the same conditions)? Assume the <strong>answer</strong> is a previously declared int.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+switch (answer)
+
+    case 0: printf("0 entered"); break;
+    case 1: printf("1 entered"); break;
+    case 3: printf("3 entered"); break;
+    case 5: printf("5 entered"); break;
+    default: printf("Other value entered");
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if (answer == 0 || 1 || 3 || 5)
+    printf("
+else
+    printf("Other value entered");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if ((answer    gt;= 1    amp;   amp; answer    lt;= 5    amp;   amp; 
+        answer 
+    printf("
+else
+    printf("Other value entered");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if (answer == 0)
+    printf("0 entered");
+if (answer == 1)
+    printf("1 entered");
+if (answer == 3)
+    printf("3 entered");
+if (answer == 5)
+    printf("5 entered");
+if (answer != 0    amp;   amp; answer != 1 
+           amp;   amp; answer != 3    amp;   amp; answer != 5)
+    printf("Other value entered");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if (answer == 0)
+    printf("0 entered");
+else if (answer == 1)
+    printf("1 entered");
+else if (answer == 3)
+    printf("3 entered");
+else if (answer == 5)
+    printf("5 entered");
+else if (answer != 0    amp; 1    amp; 3    amp; 5)
+    printf("Other value entered");
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider two given C programs. Which of the following is/are true? It is also known that in C programming, &amp;&amp; has higher precedence than ||.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 1
+#include   lt;stdio.h   gt;
+void main()
+
+    int i = 0;
+    if (++i    amp;   amp; (i==0))
+        printf(“GO Classes”);
+    else
+        printf(“GATEOverflow”);
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 2
+#include   lt;stdio.h   gt;
+void main()
+
+    int x, y, z;
+    x = 1;
+    y = z = 0;
+    ++x || ++y    amp;   amp; ++z;
+    if (y || z)
+        printf(“GO Classes”);
+    else
+        printf(“GATEOverflow”);
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Program 1 prints GO Classes</li>
+	<li>Program 1 prints GATEOverflow</li>
+	<li>Program 2 prints GO Classes</li>
+	<li>Program 2 prints GATEOverflow</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the k bit binary pattern. T_max and T_min are maximum and minimum signed numbers we can represent using k bits. U_max and U_min are maximum and minimum unsigned numbers we can represent using k bits. Numbers are represented using 2's complement system.</p>
+
+<p>Which of the following(s) is/are true for k =16?</p>
+
+<p>Here |.| represents absolute value of a number i.e.   nbsp;|r| = -r if r   lt;0 otherwise |r| = r.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>|T_min| = T_max + 1</li>
+	<li>U_max = 2∗T_max +1</li>
+	<li>U_max = |T_min| + T_max + 1</li>
+	<li>U_min = |T_min|</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider Figure A and Figure B, which represent 4 bit signed and unsigned numbers, respectively, in the 2’s complement system.<br>
+<strong><img src="https://lh4.googleusercontent.com/RHhX-hrQ0-YXyvMJ2iCgyntNqR17EC6hKa8pKtNWBL89ZJKCPIlkY3qTmiH-owqryUk4REp1AJ3Yb0g3Ydz619-iE8Xgahv2PSAnfl2R8mSW1XqaU7d7z1xCjqUmpVOa2rwNpvUl"></strong><br>
+Assume that a few variables are defined below and initialized in such a way that places them in the spot shown in Figure C.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int s1, s2, s3, s4;
+unsigned int u1, u2, u3, u4;
+</pre>
+
+<p>Which of the following(s) is/are FALSE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>s2    gt; s4</li>
+	<li>s1    gt; s2</li>
+	<li>s1    gt; u3</li>
+	<li>s3    gt; u3</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '374146', 'text': '<p>What will be output on the execution of the following code segment?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nmain()\n{\n    unsigned num1 = 1;\n    signed num2 = -1;\n    if (num1 &lt; num2)\n        printf("less");\n    else if (num1 &gt; num2)\n        printf("greater");\n    else if (num1 == num2)\n        printf("equal");\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>greater</li>\n\t<li>less</li>\n\t<li>equal</li>\n\t<li>Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374134', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nmain()\n{\n    char grade=\'A\';\n    int result=0;\n    switch(grade)\n    {\n        case \'A\':\n            result+=4;\n        case \'B\':\n            result+=3;\n        case \'C\':\n            result+=2;\n        default:\n            result+=1;\n    }\n    printf("%d", result);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$4$</li>\n\t<li>$9$</li>\n\t<li>$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374132', 'text': '<p>Which of the following condition(s) is/are evaluated to true for a given declaration of integer $i.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = -7;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$-10 &lt; i &lt;-1$</li>\n\t<li>$i \\;\\&amp;\\; 0 \\;|\\; 0\\; \\&amp; \\;1$</li>\n\t<li>$0\\; \\&amp;\\; 0\\; \\&amp;\\; 0\\; |\\; i$</li>\n\t<li>$!(1 &gt; 0 &gt; i \\;\\&amp;\\; !i)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374141', 'text': '<p>Assume that $x$ is a two’s complement binary integer whose absolute value is not large (so no overflow problems). At right are four C expressions that use the $&lt;&lt;$ (shift left) and $\\sim$ (bitwise complement: flip each $0$ to $1$ and each $1$ to $0$ in the binary representation) operators. For example, $7 &lt;&lt; 1$ is $14$ and $\\sim 0$ is $-1.$</p>\n\n<p>Match each expression to one of the mathematical functions at left.</p>\n\n<p>$$\\begin{array}{|l|c|l|c|} \\hline&nbsp;a. &amp; 4x &amp; \\text{I.} &amp; (\\sim x) + 1 \\\\\\hline b. &amp; -x &amp; \\text{II.} &amp;&nbsp; (x&lt;&lt;1) + x&nbsp;\\\\\\hline c. &amp; 3x &amp; \\text{III.} &amp; \\sim x&nbsp; \\\\\\hline d. &amp; -x-1 &amp; \\text{IV.} &amp; x&lt;&lt;2 \\\\\\hline \\end{array}$$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\ta - IV<br>\n\tb - I<br>\n\tc - II<br>\n\td - III</li>\n\t<li><br>\n\ta - IV<br>\n\tb - III<br>\n\tc - II<br>\n\td - I</li>\n\t<li><br>\n\ta - II<br>\n\tb - I<br>\n\tc - IV<br>\n\td - III</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374139', 'text': '<p>Imagine that our system uses a $5$-bit integer representation and does addition and subtraction using the rules for $5$-bit, two’s complement arithmetic.</p>\n\n<p>Which of the following is/are TRUE?</p>\n\n<p>When converting to decimal, you should treat the value as either signed or unsigned according to the rules of C, where $\\text{T}_{\\min}$ and $\\text{T}_{\\max}$ are signed, as are plain constants, but a constant ending in $\\text{U}$ is unsigned.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{-T}_{\\max} - 1\\text{U}$ is $16$ in decimal</li>\n\t<li>$\\text{-T}_{\\max} - \\text{T}_{\\min}$ is $00001$ in binary</li>\n\t<li>$\\text{T}_{\\max} + \\text{T}_{\\max}$ is $-2$ in decimal</li>\n\t<li>$\\text{T}_{\\min} - 1\\text{U}$ is $15$ in decimal</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,number-representation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374133', 'text': '<p>What is the logical condition under which the following while loop will terminate?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint Beta = 5;\nwhile (Beta &gt; 0 &amp;&amp; Beta &lt; 10)\n{\n    printf("%d", Beta);\n    scanf("%d", &amp;Beta);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Beta $&lt;0 \\;\\&amp;\\&amp;\\;$ Beta $&gt;= 10$</li>\n\t<li>Beta $&lt;0 \\;||$ Beta $&gt; 10$</li>\n\t<li>Beta $&lt;= 0 \\;||$ Beta $&gt;= 10$</li>\n\t<li>Beta $&lt;0\\; ||$ Beta $&gt;= 10$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374130', 'text': '<p>Consider the following program fragment. Which of the following if condition(s) prints GO Classes?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b = 1, c = 1, d = 0;\nif (0 &amp;&amp; 0 == 0) //first if\n    printf("GO Classes");\nif (b || --b == 0) //Second if\n    printf("GO Classes");\nif (c || c-- == 0) //Third if\n    printf("GO Classes");\nif (d || ++d == 0) //Fourth if\n    printf("GO Classes");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>First if condition</li>\n\t<li>Second if condition</li>\n\t<li>Third if condition</li>\n\t<li>Fourth if condition</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374126', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main(){\nint x=3;\nint y;\nswitch(x++){\n    x++;\n    case 3:\n        printf("Three %d",x);\n        break;\n    case 4:\n        printf("Four %d",x);\n        break;\n    case 5:\n        printf("Five %d",x);\n        break;\n    default: printf("Default %d",x);\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Three $3$</li>\n\t<li>Four $4$</li>\n\t<li>Three $4$</li>\n\t<li>Four $5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374136', 'text': '<p>What will be the output of the given program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int sum =1;\n    for ( unsigned int i=3; i&gt;=0; --i)\n    {\n        if(i==0) sum = sum+1;\n        else sum = sum *i;\n    }\n    printf("%d", sum);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$7$</li>\n\t<li>$0$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374129', 'text': '<p>Let $\\text{A}$ and $\\text{B}$ be two unknown $8$-bit $2’s$ complement numbers. We know the results of $\\text{A} \\;^{\\wedge}\\;&nbsp;&nbsp;\\text{B}$ and $\\text{A} \\;\\&amp;\\; \\text{B}$ as shown below:</p>\n\n<p>$$\\begin{array}{|c|c|} \\hline&nbsp;\\text{A} \\;^{\\wedge}\\;&nbsp;&nbsp;\\text{B} &amp; 00110100 &nbsp;\\\\\\hline&nbsp;\\text{A} \\;\\&amp;\\; \\text{B} &amp; 11001001 \\\\\\hline&nbsp; \\end{array}$$</p>\n\n<p>What is the sum $\\text{A} + \\text{B}$ expressed in the $8$-bit two’s complement notation?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$11000110$</li>\n\t<li>$11000010$</li>\n\t<li>$01000010$</li>\n\t<li>$11010110$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374131', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    counter % 2 ? printf("A") : printf("B");</pre>\n\n<p><br>\ncan $\\text{NOT}$ be rewritten as</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n    --counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374128', 'text': '<p>Which of the following if statement(s) below is/are equivalent to the given switch statement (that is, produces the same output under the same conditions)? Assume the <strong>answer</strong> is a previously declared int.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nswitch (answer)\n{\n    case 0: printf("0 entered"); break;\n    case 1: printf("1 entered"); break;\n    case 3: printf("3 entered"); break;\n    case 5: printf("5 entered"); break;\n    default: printf("Other value entered");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0 || 1 || 3 || 5)\n    printf("%d entered", answer);\nelse\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif ((answer &gt;= 1 &amp;&amp; answer &lt;= 5 &amp;&amp; \n        answer % 2 == 1) || (answer == 0))\n    printf("%d entered", answer);\nelse\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0)\n    printf("0 entered");\nif (answer == 1)\n    printf("1 entered");\nif (answer == 3)\n    printf("3 entered");\nif (answer == 5)\n    printf("5 entered");\nif (answer != 0 &amp;&amp; answer != 1 \n        &amp;&amp; answer != 3 &amp;&amp; answer != 5)\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0)\n    printf("0 entered");\nelse if (answer == 1)\n    printf("1 entered");\nelse if (answer == 3)\n    printf("3 entered");\nelse if (answer == 5)\n    printf("5 entered");\nelse if (answer != 0 &amp; 1 &amp; 3 &amp; 5)\n    printf("Other value entered");\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374127', 'text': '<p>Consider two given C programs. Which of the following is/are true? It is also known that in C programming, $\\&amp;\\&amp;$ has higher precedence than $||.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int i = 0;\n    if (++i &amp;&amp; (i==0))\n        printf(“GO Classes\\n”);\n    else\n        printf(“GATEOverflow\\n”);\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int x, y, z;\n    x = 1;\n    y = z = 0;\n    ++x || ++y &amp;&amp; ++z;\n    if (y || z)\n        printf(“GO Classes\\n”);\n    else\n        printf(“GATEOverflow\\n”);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$ prints GO Classes</li>\n\t<li>Program $1$ prints GATEOverflow</li>\n\t<li>Program $2$ prints GO Classes</li>\n\t<li>Program $2$ prints GATEOverflow</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374144', 'text': '<p>Consider the $k$ bit binary pattern. $\\text{T}_{\\max}$ and $\\text{T}_{\\min}$ are maximum and minimum signed numbers we can represent using $k$ bits. $\\text{U}_{\\max}$ and $\\text{U}_{\\min}$ are maximum and minimum unsigned numbers we can represent using $k$ bits. Numbers are represented using 2\'s complement system.</p>\n\n<p>Which of the following(s) is/are true for $k =16?$</p>\n\n<p>Here $|.|$ represents absolute value of a number i.e.&nbsp;$|r| = -r$ if $r&lt;0$ otherwise $|r| = r.$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$|\\text{T}_{\\min}| = \\text{T}_{\\max} + 1$</li>\n\t<li>$\\text{U}_{\\max} = 2\\ast \\text{T}_{\\max} +1$</li>\n\t<li>$\\text{U}_{\\max} = |\\text{T}_{\\min}| + \\text{T}_{\\max} + 1$</li>\n\t<li>$\\text{U}_{\\min} = |\\text{T}_{\\min}|$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374142', 'text': '<p>Consider Figure A and Figure B, which represent $4$ bit signed and unsigned numbers, respectively, in the $2’s$ complement system.<br>\n<strong><img alt="" height="311" src="https://lh4.googleusercontent.com/RHhX-hrQ0-YXyvMJ2iCgyntNqR17EC6hKa8pKtNWBL89ZJKCPIlkY3qTmiH-owqryUk4REp1AJ3Yb0g3Ydz619-iE8Xgahv2PSAnfl2R8mSW1XqaU7d7z1xCjqUmpVOa2rwNpvUl" width="809"></strong><br>\nAssume that a few variables are defined below and initialized in such a way that places them in the spot shown in Figure C.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint s1, s2, s3, s4;\nunsigned int u1, u2, u3, u4;\n</pre>\n\n<p>Which of the following(s) is/are FALSE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$s2 &gt; s4$</li>\n\t<li>$s1 &gt; s2$</li>\n\t<li>$s1 &gt; u3$</li>\n\t<li>$s3 &gt; u3$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,number-representation,multiple-selects,1-mark', 'category': 'Programming in C'}]
+      let data={'name': 'GO Classes Test Series 2024 | Programming | Test 1', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '374146', 'text': '<p>What will be output on the execution of the following code segment?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nmain()\n{\n    unsigned num1 = 1;\n    signed num2 = -1;\n    if (num1 &lt; num2)\n        printf("less");\n    else if (num1 &gt; num2)\n        printf("greater");\n    else if (num1 == num2)\n        printf("equal");\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>greater</li>\n\t<li>less</li>\n\t<li>equal</li>\n\t<li>Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374134', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nmain()\n{\n    char grade=\'A\';\n    int result=0;\n    switch(grade)\n    {\n        case \'A\':\n            result+=4;\n        case \'B\':\n            result+=3;\n        case \'C\':\n            result+=2;\n        default:\n            result+=1;\n    }\n    printf("%d", result);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$4$</li>\n\t<li>$9$</li>\n\t<li>$0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374132', 'text': '<p>Which of the following condition(s) is/are evaluated to true for a given declaration of integer $i.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = -7;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$-10 &lt; i &lt;-1$</li>\n\t<li>$i \\;\\&amp;\\; 0 \\;|\\; 0\\; \\&amp; \\;1$</li>\n\t<li>$0\\; \\&amp;\\; 0\\; \\&amp;\\; 0\\; |\\; i$</li>\n\t<li>$!(1 &gt; 0 &gt; i \\;\\&amp;\\; !i)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374141', 'text': '<p>Assume that $x$ is a two’s complement binary integer whose absolute value is not large (so no overflow problems). At right are four C expressions that use the $&lt;&lt;$ (shift left) and $\\sim$ (bitwise complement: flip each $0$ to $1$ and each $1$ to $0$ in the binary representation) operators. For example, $7 &lt;&lt; 1$ is $14$ and $\\sim 0$ is $-1.$</p>\n\n<p>Match each expression to one of the mathematical functions at left.</p>\n\n<p>$$\\begin{array}{|l|c|l|c|} \\hline&nbsp;a. &amp; 4x &amp; \\text{I.} &amp; (\\sim x) + 1 \\\\\\hline b. &amp; -x &amp; \\text{II.} &amp;&nbsp; (x&lt;&lt;1) + x&nbsp;\\\\\\hline c. &amp; 3x &amp; \\text{III.} &amp; \\sim x&nbsp; \\\\\\hline d. &amp; -x-1 &amp; \\text{IV.} &amp; x&lt;&lt;2 \\\\\\hline \\end{array}$$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\ta - IV<br>\n\tb - I<br>\n\tc - II<br>\n\td - III</li>\n\t<li><br>\n\ta - IV<br>\n\tb - III<br>\n\tc - II<br>\n\td - I</li>\n\t<li><br>\n\ta - II<br>\n\tb - I<br>\n\tc - IV<br>\n\td - III</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374139', 'text': '<p>Imagine that our system uses a $5$-bit integer representation and does addition and subtraction using the rules for $5$-bit, two’s complement arithmetic.</p>\n\n<p>Which of the following is/are TRUE?</p>\n\n<p>When converting to decimal, you should treat the value as either signed or unsigned according to the rules of C, where $\\text{T}_{\\min}$ and $\\text{T}_{\\max}$ are signed, as are plain constants, but a constant ending in $\\text{U}$ is unsigned.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{-T}_{\\max} - 1\\text{U}$ is $16$ in decimal</li>\n\t<li>$\\text{-T}_{\\max} - \\text{T}_{\\min}$ is $00001$ in binary</li>\n\t<li>$\\text{T}_{\\max} + \\text{T}_{\\max}$ is $-2$ in decimal</li>\n\t<li>$\\text{T}_{\\min} - 1\\text{U}$ is $15$ in decimal</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,number-representation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374133', 'text': '<p>What is the logical condition under which the following while loop will terminate?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint Beta = 5;\nwhile (Beta &gt; 0 &amp;&amp; Beta &lt; 10)\n{\n    printf("%d", Beta);\n    scanf("%d", &amp;Beta);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Beta $&lt;0 \\;\\&amp;\\&amp;\\;$ Beta $&gt;= 10$</li>\n\t<li>Beta $&lt;0 \\;||$ Beta $&gt; 10$</li>\n\t<li>Beta $&lt;= 0 \\;||$ Beta $&gt;= 10$</li>\n\t<li>Beta $&lt;0\\; ||$ Beta $&gt;= 10$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374130', 'text': '<p>Consider the following program fragment. Which of the following if condition(s) prints GO Classes?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b = 1, c = 1, d = 0;\nif (0 &amp;&amp; 0 == 0) //first if\n    printf("GO Classes");\nif (b || --b == 0) //Second if\n    printf("GO Classes");\nif (c || c-- == 0) //Third if\n    printf("GO Classes");\nif (d || ++d == 0) //Fourth if\n    printf("GO Classes");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>First if condition</li>\n\t<li>Second if condition</li>\n\t<li>Third if condition</li>\n\t<li>Fourth if condition</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374126', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main(){\nint x=3;\nint y;\nswitch(x++){\n    x++;\n    case 3:\n        printf("Three %d",x);\n        break;\n    case 4:\n        printf("Four %d",x);\n        break;\n    case 5:\n        printf("Five %d",x);\n        break;\n    default: printf("Default %d",x);\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Three $3$</li>\n\t<li>Four $4$</li>\n\t<li>Three $4$</li>\n\t<li>Four $5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374136', 'text': '<p>What will be the output of the given program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int sum =1;\n    for ( unsigned int i=3; i&gt;=0; --i)\n    {\n        if(i==0) sum = sum+1;\n        else sum = sum *i;\n    }\n    printf("%d", sum);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$7$</li>\n\t<li>$0$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374129', 'text': '<p>Let $\\text{A}$ and $\\text{B}$ be two unknown $8$-bit $2’s$ complement numbers. We know the results of $\\text{A} \\;^{\\wedge}\\;&nbsp;&nbsp;\\text{B}$ and $\\text{A} \\;\\&amp;\\; \\text{B}$ as shown below:</p>\n\n<p>$$\\begin{array}{|c|c|} \\hline&nbsp;\\text{A} \\;^{\\wedge}\\;&nbsp;&nbsp;\\text{B} &amp; 00110100 &nbsp;\\\\\\hline&nbsp;\\text{A} \\;\\&amp;\\; \\text{B} &amp; 11001001 \\\\\\hline&nbsp; \\end{array}$$</p>\n\n<p>What is the sum $\\text{A} + \\text{B}$ expressed in the $8$-bit two’s complement notation?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$11000110$</li>\n\t<li>$11000010$</li>\n\t<li>$01000010$</li>\n\t<li>$11010110$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374131', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    counter % 2 ? printf("A") : printf("B");</pre>\n\n<p><br>\ncan $\\text{NOT}$ be rewritten as</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n    --counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374128', 'text': '<p>Which of the following if statement(s) below is/are equivalent to the given switch statement (that is, produces the same output under the same conditions)? Assume the <strong>answer</strong> is a previously declared int.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nswitch (answer)\n{\n    case 0: printf("0 entered"); break;\n    case 1: printf("1 entered"); break;\n    case 3: printf("3 entered"); break;\n    case 5: printf("5 entered"); break;\n    default: printf("Other value entered");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0 || 1 || 3 || 5)\n    printf("%d entered", answer);\nelse\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif ((answer &gt;= 1 &amp;&amp; answer &lt;= 5 &amp;&amp; \n        answer % 2 == 1) || (answer == 0))\n    printf("%d entered", answer);\nelse\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0)\n    printf("0 entered");\nif (answer == 1)\n    printf("1 entered");\nif (answer == 3)\n    printf("3 entered");\nif (answer == 5)\n    printf("5 entered");\nif (answer != 0 &amp;&amp; answer != 1 \n        &amp;&amp; answer != 3 &amp;&amp; answer != 5)\n    printf("Other value entered");\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif (answer == 0)\n    printf("0 entered");\nelse if (answer == 1)\n    printf("1 entered");\nelse if (answer == 3)\n    printf("3 entered");\nelse if (answer == 5)\n    printf("5 entered");\nelse if (answer != 0 &amp; 1 &amp; 3 &amp; 5)\n    printf("Other value entered");\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374127', 'text': '<p>Consider two given C programs. Which of the following is/are true? It is also known that in C programming, $\\&amp;\\&amp;$ has higher precedence than $||.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int i = 0;\n    if (++i &amp;&amp; (i==0))\n        printf(“GO Classes\\n”);\n    else\n        printf(“GATEOverflow\\n”);\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int x, y, z;\n    x = 1;\n    y = z = 0;\n    ++x || ++y &amp;&amp; ++z;\n    if (y || z)\n        printf(“GO Classes\\n”);\n    else\n        printf(“GATEOverflow\\n”);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$ prints GO Classes</li>\n\t<li>Program $1$ prints GATEOverflow</li>\n\t<li>Program $2$ prints GO Classes</li>\n\t<li>Program $2$ prints GATEOverflow</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,output,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374144', 'text': '<p>Consider the $k$ bit binary pattern. $\\text{T}_{\\max}$ and $\\text{T}_{\\min}$ are maximum and minimum signed numbers we can represent using $k$ bits. $\\text{U}_{\\max}$ and $\\text{U}_{\\min}$ are maximum and minimum unsigned numbers we can represent using $k$ bits. Numbers are represented using 2\'s complement system.</p>\n\n<p>Which of the following(s) is/are true for $k =16?$</p>\n\n<p>Here $|.|$ represents absolute value of a number i.e.&nbsp;$|r| = -r$ if $r&lt;0$ otherwise $|r| = r.$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$|\\text{T}_{\\min}| = \\text{T}_{\\max} + 1$</li>\n\t<li>$\\text{U}_{\\max} = 2\\ast \\text{T}_{\\max} +1$</li>\n\t<li>$\\text{U}_{\\max} = |\\text{T}_{\\min}| + \\text{T}_{\\max} + 1$</li>\n\t<li>$\\text{U}_{\\min} = |\\text{T}_{\\min}|$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,number-representation,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374142', 'text': '<p>Consider Figure A and Figure B, which represent $4$ bit signed and unsigned numbers, respectively, in the $2’s$ complement system.<br>\n<strong><img alt="" height="311" src="https://lh4.googleusercontent.com/RHhX-hrQ0-YXyvMJ2iCgyntNqR17EC6hKa8pKtNWBL89ZJKCPIlkY3qTmiH-owqryUk4REp1AJ3Yb0g3Ydz619-iE8Xgahv2PSAnfl2R8mSW1XqaU7d7z1xCjqUmpVOa2rwNpvUl" width="809"></strong><br>\nAssume that a few variables are defined below and initialized in such a way that places them in the spot shown in Figure C.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint s1, s2, s3, s4;\nunsigned int u1, u2, u3, u4;\n</pre>\n\n<p>Which of the following(s) is/are FALSE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$s2 &gt; s4$</li>\n\t<li>$s1 &gt; s2$</li>\n\t<li>$s1 &gt; u3$</li>\n\t<li>$s3 &gt; u3$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-1,goclasses,programming,programming-in-c,number-representation,multiple-selects,1-mark', 'category': 'Programming in C'}]}]}
+      </script>
+      

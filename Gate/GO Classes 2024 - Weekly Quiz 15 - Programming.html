@@ -1,0 +1,334 @@
+<div><span>Q1</span> - <p>Consider the below program written into 2 files.</p>
+
+<p><strong><img src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9"></strong></p>
+
+<p>Note that compilation of   nbsp;f1.c and f2.c happens independently of each other.</p>
+
+<p>Which of the following is TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>f1.c and f2.c can be compiled independently.</li>
+	<li>f1.c will produce a compilation error since variable x does not get any memory, and we are using it in printf.</li>
+	<li>f1.c and f2.c can be compiled and linked. The output of the program will be 00.</li>
+	<li>f2.c will produce a compilation error since function fun() is not defined in   nbsp;f2.c.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Professor Greg wants to give assignments to his students to write a C program for the XOR5 function. XOR5 is a function that returns true if and only if EXACTLY one of the integers A and B is 5.<br>
+Using which of the following condition(s), XOR5 can be implemented?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>(A==5) != (B==5)</li>
+	<li>!(A==5) != ! (B==5)</li>
+	<li>(A==5) ? ! (B==5) : (B==5)</li>
+	<li>((A==5) || (B==5) ) &amp;&amp;  !((A==5) &amp;&amp;  (B==5) )</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Which of the following(s) will evaluate to true</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>0 &amp;&amp;  0 == 0</li>
+	<li>0 &amp;&amp;  1 == 0</li>
+	<li>1  ||  0 == 0</li>
+	<li>1  ||  1 == 0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What is the value printed by the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int a = 0, b = 1, c = 0, d =-1;
+    d = (++a)    amp;   amp; (–b)    amp;   amp; (++c) ||(–a);
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>0</li>
+	<li>1</li>
+	<li>-1</li>
+	<li>2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p><br>
+If x, y, z, and w are declared as integer variables, which of the following expressions are NOT valid in C?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>x + 5 = y + z</li>
+	<li>x = y = z + w</li>
+	<li>x = ( z - y ) == w</li>
+	<li>w = x != y &amp;&amp;  z</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following two .c files which both include the same .h file:</p>
+
+<p><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10746269507857044941"></p>
+
+<p><br>
+When compiled, linked, and executed, the following output results:<br>
+x = 1   y = 2  z = 3  w = 4  v = 5<br>
+Assuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines (1) through (10).<br>
+<br>
+Leave them blank if neither modifier would be appropriate.<br>
+<br>
+For example, if we say line (2) is static then we consider line (2) as “static int x”. Or if we say line (9) is empty then we treat line 9 as “int w = 4”.</p>
+
+<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">
+	<li><br>
+	Line(1) – empty<br>
+	Line(2) - static<br>
+	Line(3) - empty<br>
+	Line(4) - extern<br>
+	Line(5) – empty<br>
+	Line(6) - empty<br>
+	Line(7) - empty<br>
+	Line(8) - static<br>
+	Line(9) - empty<br>
+	Line(10) - static</li>
+	<li><br>
+	Line(1) – static<br>
+	Line(2) - static<br>
+	Line(3) - extern<br>
+	Line(4) - empty<br>
+	Line(5) – extern<br>
+	Line(6) - empty<br>
+	Line(7) - extern<br>
+	Line(8) - static<br>
+	Line(9) - empty<br>
+	Line(10) - static</li>
+	<li><br>
+	Line(1) – static<br>
+	Line(2) - static<br>
+	Line(3) - empty<br>
+	Line(4) - empty<br>
+	Line(5) – empty<br>
+	Line(6) - empty<br>
+	Line(7) - empty<br>
+	Line(8) - static<br>
+	Line(9) - empty<br>
+	Line(10) - static</li>
+	<li><br>
+	Line(1) – empty<br>
+	Line(2) - static<br>
+	Line(3) - empty<br>
+	Line(4) - empty<br>
+	Line(5) – extern<br>
+	Line(6) - empty<br>
+	Line(7) - empty<br>
+	Line(8) - static<br>
+	Line(9) - empty<br>
+	Line(10) - static</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following variable and function definitions:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int g=10;
+int q3() 
+    static int g=5;
+    return ++g;
+
+int q4() 
+    extern int g;
+    return ++g;
+
+int q5() 
+    int g=1;
+    return ++g;
+</pre>
+
+<p>What is the value of the expression q3() + q3() + q4() + q4() + q5() + q5()?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>32</li>
+	<li>34</li>
+	<li>38</li>
+	<li>40</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output of the following C program?.<br>
+Here ?: is a ternary operator which is right to left-associative.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main() 
+    int i =2, j =1;
+    if (–j ? ++j? i : i++ : i–)
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1  0</li>
+	<li>2  1</li>
+	<li>1  1</li>
+	<li>2  0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>As shown below, the file f.c defines a function f whose code refers to the variable x that is not a local variable or a parameter. The file g.c defines a function g whose code refers to the variable x that is not a local variable or a parameter.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+// file f.c
+// declaration for x
+
+void f(int a)
+    ...
+    x = ...
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+// file g.c
+// declaration for x
+
+void g(char* p)
+    ...
+    x = ...
+</pre>
+
+<p>The following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>
+
+    [                               nbsp;    Column A                   nbsp;       amp;     Column B           amp; Column C; nbsp;declaration in f.c                    amp; nbsp;declaration in g.c  amp; SAME or DIFFERENT;                                    nbsp; int x;      amp; extern int x;               amp; SAME;                                           nbsp;        nbsp; int x = 0;      amp; static int x;                    amp;;           static int x;      amp; static int x;                    amp;;           static int x;  amp; extern int x = 0;                    amp;;                                           nbsp; ]
+</p>
+
+<p>The first row of column C has been filled for hints. What will be in the 2nd, 3rd, and 4th row of Column C, respectively?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>SAME, DIFFERENT, DIFFERENT</li>
+	<li>SAME, SAME, SAME</li>
+	<li>DIFFERENT, DIFFERENT, DIFFERENT</li>
+	<li>DIFFERENT, SAME, DIFFERENT</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Let the variables x,y, and z, be of type int and assigned some values. The variable b1 is initialized as follows:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int b1 = (x    gt; z)    amp;   amp; (y    gt;= z);</pre>
+
+<p>Variables b2, b3, b4, and b5 are initialized below.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int b2 = (x    lt;= z) || (y    lt; z) 
+int b3 = !((x    lt; z) || (y    lt;= z)) 
+int b4 = !((x    lt; z)    amp;   amp; (y    gt;= z)) 
+int b5 = ((x    gt; z)    amp;   amp; (y    gt; z)) || ((x    gt; z)    amp;   amp; (y == z))
+
+</pre>
+
+<p>Variables b2, b3, b4, and b5 ALWAYS, SOMETIMES, or NEVER takes the same value as b1.<br>
+Which of the variable(s) SOMETIMES takes the same value as b1?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>b2</li>
+	<li>b3</li>
+	<li>b4</li>
+	<li>b5</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>What will be the output?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a = 4, b =15, c =29;
+if(c   gt;b   gt;a)
+    printf("TRUE");
+else
+    printf("FALSE");
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>Syntax Error</li>
+	<li>Compilation Error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider a function is_greater() given below. Mark all option(s) which return 1.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int is_greater(unsigned int x, unsigned int y)
+
+    if(x-y    gt; 0)
+        return 1;
+    else 
+        return 0;
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>is_greater(1, 2)</li>
+	<li>is_greater(-1, -2)</li>
+	<li>is_greater(-2, -1)</li>
+	<li>is_greater(-1, 0)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>The statement</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+counter 
+
+<p>can NOT be rewritten as</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+    if ( counter 
+        printf("A");
+    else
+        printf("B");</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt;= 1 )
+    if (counter 
+        printf("A");
+    else
+        printf("B");
+–counter;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt; 1 )
+
+    –counter;
+    if ( counter 
+        printf("A");
+    else
+        printf("B");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+do
+
+    –counter;
+    printf( counter 
+ while ( counter    gt;= 2 );</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output printed by the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main()
+
+    int i = 1;
+    for(i = 0; i   lt;10; i+3)
+    switch(i)
+    
+        case 3:
+            printf("Hi. This is case 3");
+            break;
+        case 6:
+            printf("Hi. This is case 6");
+            break;
+            break;
+        default:
+            printf("Hi. This is default");
+            break;
+    
+    return 0;
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Hi. This is case 3</li>
+	<li>Hi. This is case 6</li>
+	<li>Infinite Execution</li>
+	<li>Hi. This is default</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>What will be the value printed by the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int i = 10;
+i = !i    gt; 14;
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10</li>
+	<li>14</li>
+	<li>0</li>
+	<li>1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+      <script>
+      let q = [{'contents': '', 'post_id': '374455', 'text': '<p>Consider the below program written into $2$ files.</p>\n\n<p><strong><img alt="" height="349" src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9" width="624"></strong></p>\n\n<p>Note that compilation of&nbsp;f$1$.c and f$2$.c happens independently of each other.</p>\n\n<p>Which of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>f$1$.c and f$2$.c can be compiled independently.</li>\n\t<li>f$1$.c will produce a compilation error since variable $x$ does not get any memory, and we are using it in printf.</li>\n\t<li>f$1$.c and f$2$.c can be compiled and linked. The output of the program will be $00.$</li>\n\t<li>f$2$.c will produce a compilation error since function fun() is not defined in&nbsp;f$2$.c.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373095', 'text': '<p>Professor Greg wants to give assignments to his students to write a $C$ program for the $\\text{XOR5}$ function. $\\text{XOR5}$ is a function that returns true if and only if $\\text{EXACTLY}$ one of the integers $A$ and $B$ is $5$.<br>\nUsing which of the following condition(s), $\\text{XOR5}$ can be implemented?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$(A==5) != (B==5)$</li>\n\t<li>$!(A==5) != ! (B==5)$</li>\n\t<li>$(A==5) ? ! (B==5) : (B==5)$</li>\n\t<li>$((A==5) || (B==5) )\\; \\&amp;\\&amp;\\; !((A==5)\\; \\&amp;\\&amp;\\; (B==5) )$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373101', 'text': '<p>Which of the following(s) will evaluate to true</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0\\; \\&amp;\\&amp;\\; 0 == 0$</li>\n\t<li>$0\\; \\&amp;\\&amp;\\; 1 == 0$</li>\n\t<li>$1\\; ||\\; 0 == 0$</li>\n\t<li>$1\\; ||\\; 1 == 0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373091', 'text': '<p>What is the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int a = 0, b = 1, c = 0, d =-1;\n    d = (++a) &amp;&amp; (--b) &amp;&amp; (++c) ||(--a);\n    printf("%d", d);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$1$</li>\n\t<li>$-1$</li>\n\t<li>$2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373097', 'text': '<p><br>\nIf $x, y, z,$ and $w$ are declared as integer variables, which of the following expressions are $\\text{NOT}$ valid in $C$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x + 5 = y + z$</li>\n\t<li>$x = y = z + w$</li>\n\t<li>$x = ( z - y ) == w$</li>\n\t<li>$w = x != y\\; \\&amp;\\&amp;\\; z$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373090', 'text': '<p>Consider the following two .$c$ files which both include the same $.h$ file:</p>\n\n<p><img alt="" height="410" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="554"></p>\n\n<p><br>\nWhen compiled, linked, and executed, the following output results:<br>\n$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$<br>\nAssuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.<br>\n<br>\nLeave them blank if neither modifier would be appropriate.<br>\n<br>\nFor example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373089', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}</pre>\n\n<p>What is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$32$</li>\n\t<li>$34$</li>\n\t<li>$38$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373093', 'text': '<p>What will be the output of the following C program?.<br>\nHere $?:$ is a ternary operator which is right to left-associative.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main() {\n    int i =2, j =1;\n    if (--j ? ++j? i : i++ : i--)\n    printf("%d%d\\n", i, j);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 0$</li>\n\t<li>$2\\; 1$</li>\n\t<li>$1\\; 1$</li>\n\t<li>$2\\; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '404469', 'text': '<p>As shown below, the file $f.c$ defines a function f whose code refers to the variable $x$ that is not a local variable or a parameter. The file $g.c$ defines a function $g$ whose code refers to the variable $x$ that is not a local variable or a parameter.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file f.c\n// declaration for x\n\nvoid f(int a){\n    ...\n    x = ...\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file g.c\n// declaration for x\n\nvoid g(char* p){\n    ...\n    x = ...\n}</pre>\n\n<p>The following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>\n$$\\begin{array} {|l|l|c|} \\hline&nbsp;\\qquad \\textbf{Column A}&nbsp;&amp; \\qquad \\textbf{Column B} &amp; \\textbf{Column C} \\\\&nbsp;\\textbf{declaration in f.c} &amp;&nbsp;\\textbf{declaration in g.c} &amp; \\textbf{SAME or DIFFERENT} \\\\\\hline&nbsp; \\text{int x;} &amp; \\text{extern int x;} &amp; {\\color{Red} {\\textbf{SAME}}} \\\\\\hline&nbsp;&nbsp; \\text{int x = 0;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{extern int x = 0;} &amp; \\\\\\hline &nbsp;\\end{array}$$</p>\n\n<p>The first row of column C has been filled for hints. What will be in the $2$nd, $3$rd, and $4$th row of Column C, respectively?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>SAME, DIFFERENT, DIFFERENT</li>\n\t<li>SAME, SAME, SAME</li>\n\t<li>DIFFERENT, DIFFERENT, DIFFERENT</li>\n\t<li>DIFFERENT, SAME, DIFFERENT</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373092', 'text': '<p>Let the variables $x,y,$ and $z$, be of type int and assigned some values. The variable $b1$ is initialized as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b1 = (x &gt; z) &amp;&amp; (y &gt;= z);</pre>\n\n<p>Variables b2, b3, b4, and b5 are initialized below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b2 = (x &lt;= z) || (y &lt; z) \nint b3 = !((x &lt; z) || (y &lt;= z)) \nint b4 = !((x &lt; z) &amp;&amp; (y &gt;= z)) \nint b5 = ((x &gt; z) &amp;&amp; (y &gt; z)) || ((x &gt; z) &amp;&amp; (y == z))\n\n</pre>\n\n<p>Variables $b2, b3, b4$, and $b5$ ALWAYS, SOMETIMES, or NEVER takes the same value as $b1$.<br>\nWhich of the variable(s) SOMETIMES takes the same value as $b1$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$b2$</li>\n\t<li>$b3$</li>\n\t<li>$b4$</li>\n\t<li>$b5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373098', 'text': '<p>What will be the output?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a = 4, b =15, c =29;\nif(c&gt;b&gt;a)\n    printf("TRUE");\nelse\n    printf("FALSE");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{TRUE}$</li>\n\t<li>$\\text{FALSE}$</li>\n\t<li>Syntax Error</li>\n\t<li>Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373103', 'text': '<p>Consider a function is_greater() given below. Mark all option(s) which return $1$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint is_greater(unsigned int x, unsigned int y)\n{\n    if(x-y &gt; 0)\n        return 1;\n    else \n        return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>is_greater$(1, 2)$</li>\n\t<li>is_greater$(-1, -2)$</li>\n\t<li>is_greater$(-2, -1)$</li>\n\t<li>is_greater$(-1, 0)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373096', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\ncounter % 2 ? printf("A") : printf("B");</pre>\n\n<p>can $\\text{NOT}$ be rewritten as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n--counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373100', 'text': '<p>What will be the output printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i = 1;\n    for(i = 0; i&lt;10; i+3)\n    switch(i)\n    {\n        case 3:\n            printf("Hi. This is case 3");\n            break;\n        case 6:\n            printf("Hi. This is case 6");\n            break;\n            break;\n        default:\n            printf("Hi. This is default");\n            break;\n    }\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Hi. This is case $3$</li>\n\t<li>Hi. This is case $6$</li>\n\t<li>Infinite Execution</li>\n\t<li>Hi. This is default</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373099', 'text': '<p>What will be the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 10;\ni = !i &gt; 14;\nprintf("%d", i);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$14$</li>\n\t<li>$0$</li>\n\t<li>$1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}]
+      let data={'name': 'GO Classes 2024 | Weekly Quiz 15 | Programming', 'duration': '45', 'total_qs': '15', 'total_qs_one': 10, 'total_qs_two': 5, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 20, 'total_marks': 20, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 20, 'question': [{'contents': '', 'post_id': '374455', 'text': '<p>Consider the below program written into $2$ files.</p>\n\n<p><strong><img alt="" height="349" src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9" width="624"></strong></p>\n\n<p>Note that compilation of&nbsp;f$1$.c and f$2$.c happens independently of each other.</p>\n\n<p>Which of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>f$1$.c and f$2$.c can be compiled independently.</li>\n\t<li>f$1$.c will produce a compilation error since variable $x$ does not get any memory, and we are using it in printf.</li>\n\t<li>f$1$.c and f$2$.c can be compiled and linked. The output of the program will be $00.$</li>\n\t<li>f$2$.c will produce a compilation error since function fun() is not defined in&nbsp;f$2$.c.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373095', 'text': '<p>Professor Greg wants to give assignments to his students to write a $C$ program for the $\\text{XOR5}$ function. $\\text{XOR5}$ is a function that returns true if and only if $\\text{EXACTLY}$ one of the integers $A$ and $B$ is $5$.<br>\nUsing which of the following condition(s), $\\text{XOR5}$ can be implemented?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$(A==5) != (B==5)$</li>\n\t<li>$!(A==5) != ! (B==5)$</li>\n\t<li>$(A==5) ? ! (B==5) : (B==5)$</li>\n\t<li>$((A==5) || (B==5) )\\; \\&amp;\\&amp;\\; !((A==5)\\; \\&amp;\\&amp;\\; (B==5) )$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373101', 'text': '<p>Which of the following(s) will evaluate to true</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0\\; \\&amp;\\&amp;\\; 0 == 0$</li>\n\t<li>$0\\; \\&amp;\\&amp;\\; 1 == 0$</li>\n\t<li>$1\\; ||\\; 0 == 0$</li>\n\t<li>$1\\; ||\\; 1 == 0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373091', 'text': '<p>What is the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int a = 0, b = 1, c = 0, d =-1;\n    d = (++a) &amp;&amp; (--b) &amp;&amp; (++c) ||(--a);\n    printf("%d", d);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$1$</li>\n\t<li>$-1$</li>\n\t<li>$2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373097', 'text': '<p><br>\nIf $x, y, z,$ and $w$ are declared as integer variables, which of the following expressions are $\\text{NOT}$ valid in $C$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x + 5 = y + z$</li>\n\t<li>$x = y = z + w$</li>\n\t<li>$x = ( z - y ) == w$</li>\n\t<li>$w = x != y\\; \\&amp;\\&amp;\\; z$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373090', 'text': '<p>Consider the following two .$c$ files which both include the same $.h$ file:</p>\n\n<p><img alt="" height="410" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="554"></p>\n\n<p><br>\nWhen compiled, linked, and executed, the following output results:<br>\n$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$<br>\nAssuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.<br>\n<br>\nLeave them blank if neither modifier would be appropriate.<br>\n<br>\nFor example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373089', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}</pre>\n\n<p>What is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$32$</li>\n\t<li>$34$</li>\n\t<li>$38$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373093', 'text': '<p>What will be the output of the following C program?.<br>\nHere $?:$ is a ternary operator which is right to left-associative.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main() {\n    int i =2, j =1;\n    if (--j ? ++j? i : i++ : i--)\n    printf("%d%d\\n", i, j);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 0$</li>\n\t<li>$2\\; 1$</li>\n\t<li>$1\\; 1$</li>\n\t<li>$2\\; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '404469', 'text': '<p>As shown below, the file $f.c$ defines a function f whose code refers to the variable $x$ that is not a local variable or a parameter. The file $g.c$ defines a function $g$ whose code refers to the variable $x$ that is not a local variable or a parameter.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file f.c\n// declaration for x\n\nvoid f(int a){\n    ...\n    x = ...\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file g.c\n// declaration for x\n\nvoid g(char* p){\n    ...\n    x = ...\n}</pre>\n\n<p>The following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>\n$$\\begin{array} {|l|l|c|} \\hline&nbsp;\\qquad \\textbf{Column A}&nbsp;&amp; \\qquad \\textbf{Column B} &amp; \\textbf{Column C} \\\\&nbsp;\\textbf{declaration in f.c} &amp;&nbsp;\\textbf{declaration in g.c} &amp; \\textbf{SAME or DIFFERENT} \\\\\\hline&nbsp; \\text{int x;} &amp; \\text{extern int x;} &amp; {\\color{Red} {\\textbf{SAME}}} \\\\\\hline&nbsp;&nbsp; \\text{int x = 0;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{extern int x = 0;} &amp; \\\\\\hline &nbsp;\\end{array}$$</p>\n\n<p>The first row of column C has been filled for hints. What will be in the $2$nd, $3$rd, and $4$th row of Column C, respectively?</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>SAME, DIFFERENT, DIFFERENT</li>\n\t<li>SAME, SAME, SAME</li>\n\t<li>DIFFERENT, DIFFERENT, DIFFERENT</li>\n\t<li>DIFFERENT, SAME, DIFFERENT</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373092', 'text': '<p>Let the variables $x,y,$ and $z$, be of type int and assigned some values. The variable $b1$ is initialized as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b1 = (x &gt; z) &amp;&amp; (y &gt;= z);</pre>\n\n<p>Variables b2, b3, b4, and b5 are initialized below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b2 = (x &lt;= z) || (y &lt; z) \nint b3 = !((x &lt; z) || (y &lt;= z)) \nint b4 = !((x &lt; z) &amp;&amp; (y &gt;= z)) \nint b5 = ((x &gt; z) &amp;&amp; (y &gt; z)) || ((x &gt; z) &amp;&amp; (y == z))\n\n</pre>\n\n<p>Variables $b2, b3, b4$, and $b5$ ALWAYS, SOMETIMES, or NEVER takes the same value as $b1$.<br>\nWhich of the variable(s) SOMETIMES takes the same value as $b1$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$b2$</li>\n\t<li>$b3$</li>\n\t<li>$b4$</li>\n\t<li>$b5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373098', 'text': '<p>What will be the output?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a = 4, b =15, c =29;\nif(c&gt;b&gt;a)\n    printf("TRUE");\nelse\n    printf("FALSE");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{TRUE}$</li>\n\t<li>$\\text{FALSE}$</li>\n\t<li>Syntax Error</li>\n\t<li>Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373103', 'text': '<p>Consider a function is_greater() given below. Mark all option(s) which return $1$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint is_greater(unsigned int x, unsigned int y)\n{\n    if(x-y &gt; 0)\n        return 1;\n    else \n        return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>is_greater$(1, 2)$</li>\n\t<li>is_greater$(-1, -2)$</li>\n\t<li>is_greater$(-2, -1)$</li>\n\t<li>is_greater$(-1, 0)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373096', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\ncounter % 2 ? printf("A") : printf("B");</pre>\n\n<p>can $\\text{NOT}$ be rewritten as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n--counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373100', 'text': '<p>What will be the output printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i = 1;\n    for(i = 0; i&lt;10; i+3)\n    switch(i)\n    {\n        case 3:\n            printf("Hi. This is case 3");\n            break;\n        case 6:\n            printf("Hi. This is case 6");\n            break;\n            break;\n        default:\n            printf("Hi. This is default");\n            break;\n    }\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Hi. This is case $3$</li>\n\t<li>Hi. This is case $6$</li>\n\t<li>Infinite Execution</li>\n\t<li>Hi. This is default</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373099', 'text': '<p>What will be the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 10;\ni = !i &gt; 14;\nprintf("%d", i);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$14$</li>\n\t<li>$0$</li>\n\t<li>$1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}]}]}
+      </script>
+      
