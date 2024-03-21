@@ -4,16 +4,17 @@ import {
   CurrentQuestionNumberContext,
   CurrentQuestionContext,
 } from "../context";
-import { data } from "../data";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
+import { QuestionDataContext } from "../context/QuestionDataContext";
 
 export const RightMenu = () => {
+  const { data } = useContext(QuestionDataContext);
   const { currentSection } = useContext(CurrentSectionContext);
   const { setCurrentQuestionNumber } = useContext(CurrentQuestionNumberContext);
   // const { currentQuestion } = useContext(CurrentQuestionContext);
   const { questionStatus } = useContext(QuestionStatusContext);
 
-  const [timeLeft, setTimeLeft] = useState(3 * 60 * 60); // Initial time in seconds (3 hours)
+  const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
   const intervalRef = useRef(null);
 
   const startTimer = () => {

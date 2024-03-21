@@ -1,163 +1,4 @@
-<div><span>Q1</span> - <p>What will be the output if you compile and execute the following C   nbsp;code?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int extern x;
-void main()
-
-    printf("
-    x=2;
-
-int x=23;
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>0</li>
-	<li>2</li>
-	<li>23</li>
-	<li>Compiler error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>After executing following lines of C   nbsp;code,  is same as:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int (*a)[3];
-int arr[2][3];
-a = arr+1;
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-   amp;a[0][2]
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-(*a+2)
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-(int   nbsp;*)(   amp;arr+1)-1
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-*(a+2)
-</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Which of the following(s) function declarations can be used to pass the following array?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-char myArray[3][4];
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(char a[3][]);</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(char a[][4]);</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(char (*a)[4]);</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(char **a);</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-main()
-
-    int a[2][2] =  1,2,3,4 ;
-    int(*p)[2][2];
-    p =    amp;a;
-    printf("
-
-</pre>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>1</li>
-	<li>3</li>
-	<li>4</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the output of the following C program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-void main()
-
-    int b=20, c=30;
-    printf("
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-struct _myst
-    char b[20];
-    char *a;
-    struct _myst *c;
-x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
-typedef struct _myst myst;
-
-myst* mystry(myst *p, int n)
-    if (n   lt;=0) return p++;
-    if(n
-    else return mystry(p-   gt;c, n-1);
-
-int main()
-
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>GATE</li>
-	<li>Overflow</li>
-	<li>Run time error</li>
-	<li>Compile-time error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-struct s
-    int i;
-    struct s *p;
-;
-
-struct s arr[4] =  7, arr+3,
-    8, arr+2,
-    9, arr,
-    10, arr+1,
-;
-
-struct s *ap[] = arr+3, arr+2, arr+1, arr;
-struct s **pp =ap;
-int main()
-
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>7</li>
-	<li>10</li>
-	<li>9</li>
-	<li>8</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int main()
-
-    int arr[3][3] = 1,2,3, 4,5,6, 7,8,9;
-    int *p;
-    p = (int *)(arr+2);
-    printf("
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be printed by the following program?</p>
+<div><span>Q1</span> - <p>What will be printed by the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt; 
@@ -188,173 +29,7 @@ void pass(Card c)
 	<li>1  5  1</li>
 	<li>1  5  5</li>
 	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What is the output of the following code?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-int main() 
-    unsigned int x = 1;
-    int y = -2;
-    (x + y    gt; 0) ? printf("WRONG ANSWER"); 
-        : printf("CORRECT ANSWER");
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>WRONG ANSWER</li>
-	<li>CORRECT ANSWER</li>
-	<li>Prints nothing</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following declaration of pointer variable p.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int (*p)[10];</pre>
-
-<p>If the initial value of p is 1100, then what will be the value of ?</p>
-
-<p>It is given that, system has 8 bytes of address size and 4 bytes of integer size.</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>1140</li>
-	<li>1180</li>
-	<li>1104</li>
-	<li>1108</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider below two files p1.c and p2.c<br>
-<strong><img src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt"></strong></p>
-
-<p>We compile both files independently and link them in case the compilation is successful.<br>
-<br>
-Which of the following(s) is/are TRUE?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>p1.c can not be compiled as there is no main function in the file.</li>
-	<li>Line 3 in p1.c will produce a compilation error because of the redefinition of variable a.</li>
-	<li>Line 6 in p2.c will produce a compilation error since the extern does not allocate   nbsp;memory to variables.</li>
-	<li>Line 7 in p2.c will produce a compilation error.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void mystery(int n) 
-   nbsp; if (n    lt;= 1) 
-   nbsp;    nbsp; printf("
-   nbsp; 
-   nbsp; else 
-   nbsp;    nbsp; printf("
-
-   nbsp;    nbsp; mystery(n/2);
-   nbsp;    nbsp; printf(", 
-   nbsp; 
-
-</pre>
-
-<p>What will be the output printed by mystery(12)?</p>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>12, 6, 3, 1, 3, 6, 12</li>
-	<li>12, 6, 3, 1, 3, 6,</li>
-	<li>12, 6, 3, 1, 3, 6, 12,</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output of the following C program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-void main()
-
-    int i=6;
-    for(–i; –i; i–)
-    
-      printf("
-    
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>42</li>
-	<li>31</li>
-	<li>Infinite loop</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Assume that an int variable takes 4 bytes and a char variable takes 1 byte. What is the output of the code below?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int main()
-
-    int arr[]=10,20,30,40,50,60;
-    int *ptr1=arr;
-    int *ptr2=arr+5;
-    printf("Number of elements between two pointer are: 
-    (ptr2 - ptr1));
-    printf("Number of bytes between two pointer are: 
-    (char*)ptr2 - (char*)ptr1);
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 20</li>
-	<li>Number of elements between two pointer are: 20. Number of bytes between two pointers are: 20</li>
-	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 5</li>
-	<li>Compile time error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>What will be the output if we compile and execute the following C   nbsp;code?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-void main()
-int i=10;
-static int x=i;
-if(x==i)
-    printf("Equal");
-else if(x   gt;i)
-    printf("Greater than");
-else
-    printf("Less than");
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Equal</li>
-	<li>Greater than</li>
-	<li>Less than</li>
-	<li>Compiler error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Consider the following declaration of a.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int a[100][200][30];
-</pre>
-
-<p>What will be the integer value of a[50][300] - a[10][500]?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>What will be the output of the following C code?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-void fun (char *p)
-    p++[1]= 'E';
-    ++*p++;
-    printf("
-
-int main()
-    char c[]= "IISc";
-    fun(c);
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>I</li>
-	<li>S</li>
-	<li>E</li>
-	<li>c</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Assume starting addresses of array arrop and twoD are 1000 and 2000 respectively. Also, assume that addresses are of 8 bytes and integers are of 4 bytes.</p>
-
-<p>What will be the value of  after the last line  of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int main()
-
-    int **pp;
-    int *arrop[3];
-    int twoD[3][3] = 1,2,3, 7,8,9, 4,5,6;
-    pp = arrop;
-    arrop[0] = (int *)(twoD+2);
-    arrop[1] = (int *)(twoD+1);
-    arrop[2] = (int *)(twoD);
-    pp++;
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output of the following program ?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output of the following program ?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
@@ -375,9 +50,333 @@ int main()
 	<li>10  5</li>
 	<li>10  40</li>
 	<li>Error since c is a two-dimensional array, and we can not update the value of c using c=c+1.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int arr[3][3] = 1,2,3, 4,5,6, 7,8,9;
+    int *p;
+    p = (int *)(arr+2);
+    printf("
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What is the output of the following code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main() 
+    unsigned int x = 1;
+    int y = -2;
+    (x + y    gt; 0) ? printf("WRONG ANSWER"); 
+        : printf("CORRECT ANSWER");
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>WRONG ANSWER</li>
+	<li>CORRECT ANSWER</li>
+	<li>Prints nothing</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the output if we compile and execute the following C   nbsp;code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void main()
+int i=10;
+static int x=i;
+if(x==i)
+    printf("Equal");
+else if(x   gt;i)
+    printf("Greater than");
+else
+    printf("Less than");
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Equal</li>
+	<li>Greater than</li>
+	<li>Less than</li>
+	<li>Compiler error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Assume starting addresses of array arrop and twoD are 1000 and 2000 respectively. Also, assume that addresses are of 8 bytes and integers are of 4 bytes.</p>
+
+<p>What will be the value of  after the last line  of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int **pp;
+    int *arrop[3];
+    int twoD[3][3] = 1,2,3, 7,8,9, 4,5,6;
+    pp = arrop;
+    arrop[0] = (int *)(twoD+2);
+    arrop[1] = (int *)(twoD+1);
+    arrop[2] = (int *)(twoD);
+    pp++;
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>After executing following lines of C   nbsp;code,  is same as:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int (*a)[3];
+int arr[2][3];
+a = arr+1;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+   amp;a[0][2]
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+(*a+2)
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+(int   nbsp;*)(   amp;arr+1)-1
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+*(a+2)
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output if you compile and execute the following C   nbsp;code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int extern x;
+void main()
+
+    printf("
+    x=2;
+
+int x=23;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>0</li>
+	<li>2</li>
+	<li>23</li>
+	<li>Compiler error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the following C code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void fun (char *p)
+    p++[1]= 'E';
+    ++*p++;
+    printf("
+
+int main()
+    char c[]= "IISc";
+    fun(c);
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>I</li>
+	<li>S</li>
+	<li>E</li>
+	<li>c</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void main()
+
+    int b=20, c=30;
+    printf("
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Which of the following(s) function declarations can be used to pass the following array?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char myArray[3][4];
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char a[3][]);</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char a[][4]);</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char (*a)[4]);</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(char **a);</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void mystery(int n) 
+   nbsp; if (n    lt;= 1) 
+   nbsp;    nbsp; printf("
+   nbsp; 
+   nbsp; else 
+   nbsp;    nbsp; printf("
+
+   nbsp;    nbsp; mystery(n/2);
+   nbsp;    nbsp; printf(", 
+   nbsp; 
+
+</pre>
+
+<p>What will be the output printed by mystery(12)?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>12, 6, 3, 1, 3, 6, 12</li>
+	<li>12, 6, 3, 1, 3, 6,</li>
+	<li>12, 6, 3, 1, 3, 6, 12,</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>What will be the output of the following C program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void main()
+
+    int i=6;
+    for(–i; –i; i–)
+    
+      printf("
+    
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>42</li>
+	<li>31</li>
+	<li>Infinite loop</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+struct _myst
+    char b[20];
+    char *a;
+    struct _myst *c;
+x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
+typedef struct _myst myst;
+
+myst* mystry(myst *p, int n)
+    if (n   lt;=0) return p++;
+    if(n
+    else return mystry(p-   gt;c, n-1);
+
+int main()
+
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>GATE</li>
+	<li>Overflow</li>
+	<li>Run time error</li>
+	<li>Compile-time error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Assume that an int variable takes 4 bytes and a char variable takes 1 byte. What is the output of the code below?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int arr[]=10,20,30,40,50,60;
+    int *ptr1=arr;
+    int *ptr2=arr+5;
+    printf("Number of elements between two pointer are: 
+    (ptr2 - ptr1));
+    printf("Number of bytes between two pointer are: 
+    (char*)ptr2 - (char*)ptr1);
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 20</li>
+	<li>Number of elements between two pointer are: 20. Number of bytes between two pointers are: 20</li>
+	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 5</li>
+	<li>Compile time error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Consider the following declaration of a.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[100][200][30];
+</pre>
+
+<p>What will be the integer value of a[50][300] - a[10][500]?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct s
+    int i;
+    struct s *p;
+;
+
+struct s arr[4] =  7, arr+3,
+    8, arr+2,
+    9, arr,
+    10, arr+1,
+;
+
+struct s *ap[] = arr+3, arr+2, arr+1, arr;
+struct s **pp =ap;
+int main()
+
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>7</li>
+	<li>10</li>
+	<li>9</li>
+	<li>8</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Consider the following declaration of pointer variable p.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int (*p)[10];</pre>
+
+<p>If the initial value of p is 1100, then what will be the value of ?</p>
+
+<p>It is given that, system has 8 bytes of address size and 4 bytes of integer size.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1140</li>
+	<li>1180</li>
+	<li>1104</li>
+	<li>1108</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Consider below two files p1.c and p2.c<br>
+<strong><img src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt"></strong></p>
+
+<p>We compile both files independently and link them in case the compilation is successful.<br>
+<br>
+Which of the following(s) is/are TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>p1.c can not be compiled as there is no main function in the file.</li>
+	<li>Line 3 in p1.c will produce a compilation error because of the redefinition of variable a.</li>
+	<li>Line 6 in p2.c will produce a compilation error since the extern does not allocate   nbsp;memory to variables.</li>
+	<li>Line 7 in p2.c will produce a compilation error.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+main()
+
+    int a[2][2] =  1,2,3,4 ;
+    int(*p)[2][2];
+    p =    amp;a;
+    printf("
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>3</li>
+	<li>4</li>
+	<li>None of these</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373507', 'text': '<p>After executing following lines of C&nbsp;code, $\\textsf{&amp;arr[1][2]}$ is same as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*a)[3];\nint arr[2][3];\na = arr+1;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n&amp;a[0][2]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*a+2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(int&nbsp;*)(&amp;arr+1)-1\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*(a+2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,array-of-pointers,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374738', 'text': '<p>Which of the following(s) function declarations can be used to pass the following array?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar myArray[3][4];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[3][]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char (*a)[4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char **a);</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373509', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain()\n{\n    int a[2][2] = { {1,2},{3,4} };\n    int(*p)[2][2];\n    p = &amp;a;\n    printf("%d", (*p)[0][0]);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374123', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int b=20, c=30;\n    printf("%d%d\\n", b&lt;&lt;2&gt;&gt;4, c&lt;&lt;2&gt;&gt;4);\n}\n</pre>', 'type': 'Numerical', 'answer': '57', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,numerical-answers,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373505', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    int *p;\n    p = (int *)(arr+2);\n    printf("%d", *(p-2));\n}\n</pre>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374737', 'text': '<p>What will be printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nstruct card\n{\n    int face ;\n};\ntypedef struct card Card ;\nCard c ;\nvoid pass(Card c);\nint main()\n{\n    c.face = 1;\n    printf("%d ", c.face);\n    pass(c);\n    printf("%d",c.face);\n}\n\nvoid pass(Card c)\n{\n    c.face = 5;\n    printf("%d ",c.face);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 1\\; 1$</li>\n\t<li>$1\\; 5\\; 1$</li>\n\t<li>$1\\; 5\\; 5$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,structure,parameter-passing,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374137', 'text': '<p>What is the output of the following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    unsigned int x = 1;\n    int y = -2;\n    (x + y &gt; 0) ? printf("WRONG ANSWER"); \n        : printf("CORRECT ANSWER");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>WRONG ANSWER</li>\n\t<li>CORRECT ANSWER</li>\n\t<li>Prints nothing</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373513', 'text': '<p>Consider the following declaration of pointer variable p.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[10];</pre>\n\n<p>If the initial value of $p$ is $1100,$ then what will be the value of $\\textsf{p+1}?$</p>\n\n<p>It is given that, system has $8$ bytes of address size and $4$ bytes of integer size.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1140$</li>\n\t<li>$1180$</li>\n\t<li>$1104$</li>\n\t<li>$1108$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373518', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(int n) {\n&nbsp; if (n &lt;= 1) {\n&nbsp; &nbsp; printf("%d", n);\n&nbsp; }\n&nbsp; else {\n&nbsp; &nbsp; printf("%d, ", n);\n\n&nbsp; &nbsp; mystery(n/2);\n&nbsp; &nbsp; printf(", %d", n);\n&nbsp; }\n}\n</pre>\n\n<p>What will be the output printed by $\\text{mystery(12)}?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$12, 6, 3, 1, 3, 6, 12$</li>\n\t<li>$12, 6, 3, 1, 3, 6,$</li>\n\t<li>$12, 6, 3, 1, 3, 6, 12,$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374125', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int i=6;\n    for(--i; --i; i--)\n    {\n      printf("%d",i);\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$42$</li>\n\t<li>$31$</li>\n\t<li>Infinite loop</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374729', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (char *p){\n    p++[1]= \'E\';\n    ++*p++;\n    printf("%c",*p);\n}\nint main(){\n    char c[]= "IISc";\n    fun(c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>S</li>\n\t<li>E</li>\n\t<li>c</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373503', 'text': '<p>Assume starting addresses of array arrop and twoD are $1000$ and $2000$ respectively. Also, assume that addresses are of $8$ bytes and integers are of $4$ bytes.</p>\n\n<p>What will be the value of $\\textsf{*pp[1]}$ after the last line $\\textsf{(pp++)}$ of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int **pp;\n    int *arrop[3];\n    int twoD[3][3] = {{1,2,3}, {7,8,9}, {4,5,6}};\n    pp = arrop;\n    arrop[0] = (int *)(twoD+2);\n    arrop[1] = (int *)(twoD+1);\n    arrop[2] = (int *)(twoD);\n    pp++;\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array-of-pointers,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373501', 'text': '<p>What will be the output of the following program ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun(int c[2][2]){\n    c = c+1;\n    *c[1] = 5;\n    (*c)[1] = 6;\n}\nint main()\n{\n    int a[3][2] = {{1,2}, {10,20}, {40, 50}};\n    fun(a);\n    printf("%d %d", a[2][0], a[1][0]);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$5\\; 10$</li>\n\t<li>$10\\; 5$</li>\n\t<li>$10\\; 40$</li>\n\t<li>Error since $c$ is a two-dimensional array, and we can not update the value of $c$ using $c=c+1.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,2-marks', 'category': 'Programming in C'}]
-      let data={'name': 'GO Classes 2024 | Weekly Quiz 18 | Programming', 'duration': '60', 'total_qs': '20', 'total_qs_one': 10, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 20, 'apti_marks': 0, 'technical_marks': 30, 'total_marks': 30, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 20, 'marks': 30, 'question': [{'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373507', 'text': '<p>After executing following lines of C&nbsp;code, $\\textsf{&amp;arr[1][2]}$ is same as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*a)[3];\nint arr[2][3];\na = arr+1;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n&amp;a[0][2]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*a+2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(int&nbsp;*)(&amp;arr+1)-1\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*(a+2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,array-of-pointers,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374738', 'text': '<p>Which of the following(s) function declarations can be used to pass the following array?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar myArray[3][4];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[3][]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char (*a)[4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char **a);</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373509', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain()\n{\n    int a[2][2] = { {1,2},{3,4} };\n    int(*p)[2][2];\n    p = &amp;a;\n    printf("%d", (*p)[0][0]);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374123', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int b=20, c=30;\n    printf("%d%d\\n", b&lt;&lt;2&gt;&gt;4, c&lt;&lt;2&gt;&gt;4);\n}\n</pre>', 'type': 'Numerical', 'answer': '57', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,numerical-answers,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373505', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    int *p;\n    p = (int *)(arr+2);\n    printf("%d", *(p-2));\n}\n</pre>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374737', 'text': '<p>What will be printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nstruct card\n{\n    int face ;\n};\ntypedef struct card Card ;\nCard c ;\nvoid pass(Card c);\nint main()\n{\n    c.face = 1;\n    printf("%d ", c.face);\n    pass(c);\n    printf("%d",c.face);\n}\n\nvoid pass(Card c)\n{\n    c.face = 5;\n    printf("%d ",c.face);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 1\\; 1$</li>\n\t<li>$1\\; 5\\; 1$</li>\n\t<li>$1\\; 5\\; 5$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,structure,parameter-passing,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374137', 'text': '<p>What is the output of the following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    unsigned int x = 1;\n    int y = -2;\n    (x + y &gt; 0) ? printf("WRONG ANSWER"); \n        : printf("CORRECT ANSWER");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>WRONG ANSWER</li>\n\t<li>CORRECT ANSWER</li>\n\t<li>Prints nothing</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373513', 'text': '<p>Consider the following declaration of pointer variable p.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[10];</pre>\n\n<p>If the initial value of $p$ is $1100,$ then what will be the value of $\\textsf{p+1}?$</p>\n\n<p>It is given that, system has $8$ bytes of address size and $4$ bytes of integer size.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1140$</li>\n\t<li>$1180$</li>\n\t<li>$1104$</li>\n\t<li>$1108$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373518', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(int n) {\n&nbsp; if (n &lt;= 1) {\n&nbsp; &nbsp; printf("%d", n);\n&nbsp; }\n&nbsp; else {\n&nbsp; &nbsp; printf("%d, ", n);\n\n&nbsp; &nbsp; mystery(n/2);\n&nbsp; &nbsp; printf(", %d", n);\n&nbsp; }\n}\n</pre>\n\n<p>What will be the output printed by $\\text{mystery(12)}?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$12, 6, 3, 1, 3, 6, 12$</li>\n\t<li>$12, 6, 3, 1, 3, 6,$</li>\n\t<li>$12, 6, 3, 1, 3, 6, 12,$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374125', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int i=6;\n    for(--i; --i; i--)\n    {\n      printf("%d",i);\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$42$</li>\n\t<li>$31$</li>\n\t<li>Infinite loop</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374729', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (char *p){\n    p++[1]= \'E\';\n    ++*p++;\n    printf("%c",*p);\n}\nint main(){\n    char c[]= "IISc";\n    fun(c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>S</li>\n\t<li>E</li>\n\t<li>c</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373503', 'text': '<p>Assume starting addresses of array arrop and twoD are $1000$ and $2000$ respectively. Also, assume that addresses are of $8$ bytes and integers are of $4$ bytes.</p>\n\n<p>What will be the value of $\\textsf{*pp[1]}$ after the last line $\\textsf{(pp++)}$ of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int **pp;\n    int *arrop[3];\n    int twoD[3][3] = {{1,2,3}, {7,8,9}, {4,5,6}};\n    pp = arrop;\n    arrop[0] = (int *)(twoD+2);\n    arrop[1] = (int *)(twoD+1);\n    arrop[2] = (int *)(twoD);\n    pp++;\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array-of-pointers,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373501', 'text': '<p>What will be the output of the following program ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun(int c[2][2]){\n    c = c+1;\n    *c[1] = 5;\n    (*c)[1] = 6;\n}\nint main()\n{\n    int a[3][2] = {{1,2}, {10,20}, {40, 50}};\n    fun(a);\n    printf("%d %d", a[2][0], a[1][0]);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$5\\; 10$</li>\n\t<li>$10\\; 5$</li>\n\t<li>$10\\; 40$</li>\n\t<li>Error since $c$ is a two-dimensional array, and we can not update the value of $c$ using $c=c+1.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,2-marks', 'category': 'Programming in C'}]}]}
+      let data={'name': 'GO Classes 2024 | Weekly Quiz 18 | Programming', 'duration': '60', 'total_qs': '20', 'total_qs_one': 10, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 20, 'apti_marks': 0, 'technical_marks': 30, 'total_marks': 30, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 20, 'marks': 30, 'question': [{'contents': '', 'post_id': '374737', 'text': '<p>What will be printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nstruct card\n{\n    int face ;\n};\ntypedef struct card Card ;\nCard c ;\nvoid pass(Card c);\nint main()\n{\n    c.face = 1;\n    printf("%d ", c.face);\n    pass(c);\n    printf("%d",c.face);\n}\n\nvoid pass(Card c)\n{\n    c.face = 5;\n    printf("%d ",c.face);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 1\\; 1$</li>\n\t<li>$1\\; 5\\; 1$</li>\n\t<li>$1\\; 5\\; 5$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,structure,parameter-passing,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373501', 'text': '<p>What will be the output of the following program ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun(int c[2][2]){\n    c = c+1;\n    *c[1] = 5;\n    (*c)[1] = 6;\n}\nint main()\n{\n    int a[3][2] = {{1,2}, {10,20}, {40, 50}};\n    fun(a);\n    printf("%d %d", a[2][0], a[1][0]);\n}</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$5\\; 10$</li>\n\t<li>$10\\; 5$</li>\n\t<li>$10\\; 40$</li>\n\t<li>Error since $c$ is a two-dimensional array, and we can not update the value of $c$ using $c=c+1.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373505', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    int *p;\n    p = (int *)(arr+2);\n    printf("%d", *(p-2));\n}\n</pre>', 'type': 'Numerical', 'answer': '5', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374137', 'text': '<p>What is the output of the following code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    unsigned int x = 1;\n    int y = -2;\n    (x + y &gt; 0) ? printf("WRONG ANSWER"); \n        : printf("CORRECT ANSWER");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>WRONG ANSWER</li>\n\t<li>CORRECT ANSWER</li>\n\t<li>Prints nothing</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373503', 'text': '<p>Assume starting addresses of array arrop and twoD are $1000$ and $2000$ respectively. Also, assume that addresses are of $8$ bytes and integers are of $4$ bytes.</p>\n\n<p>What will be the value of $\\textsf{*pp[1]}$ after the last line $\\textsf{(pp++)}$ of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int **pp;\n    int *arrop[3];\n    int twoD[3][3] = {{1,2,3}, {7,8,9}, {4,5,6}};\n    pp = arrop;\n    arrop[0] = (int *)(twoD+2);\n    arrop[1] = (int *)(twoD+1);\n    arrop[2] = (int *)(twoD);\n    pp++;\n}\n</pre>', 'type': 'Numerical', 'answer': '1', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array-of-pointers,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373507', 'text': '<p>After executing following lines of C&nbsp;code, $\\textsf{&amp;arr[1][2]}$ is same as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*a)[3];\nint arr[2][3];\na = arr+1;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n&amp;a[0][2]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*a+2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(int&nbsp;*)(&amp;arr+1)-1\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*(a+2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,array-of-pointers,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374729', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (char *p){\n    p++[1]= \'E\';\n    ++*p++;\n    printf("%c",*p);\n}\nint main(){\n    char c[]= "IISc";\n    fun(c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>S</li>\n\t<li>E</li>\n\t<li>c</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,functions,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374123', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int b=20, c=30;\n    printf("%d%d\\n", b&lt;&lt;2&gt;&gt;4, c&lt;&lt;2&gt;&gt;4);\n}\n</pre>', 'type': 'Numerical', 'answer': '57', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,numerical-answers,goclasses,programming,programming-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374738', 'text': '<p>Which of the following(s) function declarations can be used to pass the following array?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar myArray[3][4];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[3][]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char a[][4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char (*a)[4]);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(char **a);</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373518', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(int n) {\n&nbsp; if (n &lt;= 1) {\n&nbsp; &nbsp; printf("%d", n);\n&nbsp; }\n&nbsp; else {\n&nbsp; &nbsp; printf("%d, ", n);\n\n&nbsp; &nbsp; mystery(n/2);\n&nbsp; &nbsp; printf(", %d", n);\n&nbsp; }\n}\n</pre>\n\n<p>What will be the output printed by $\\text{mystery(12)}?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$12, 6, 3, 1, 3, 6, 12$</li>\n\t<li>$12, 6, 3, 1, 3, 6,$</li>\n\t<li>$12, 6, 3, 1, 3, 6, 12,$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374125', 'text': '<p>What will be the output of the following C program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main()\n{\n    int i=6;\n    for(--i; --i; i--)\n    {\n      printf("%d",i);\n    }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$42$</li>\n\t<li>$31$</li>\n\t<li>Infinite loop</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373513', 'text': '<p>Consider the following declaration of pointer variable p.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[10];</pre>\n\n<p>If the initial value of $p$ is $1100,$ then what will be the value of $\\textsf{p+1}?$</p>\n\n<p>It is given that, system has $8$ bytes of address size and $4$ bytes of integer size.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1140$</li>\n\t<li>$1180$</li>\n\t<li>$1104$</li>\n\t<li>$1108$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373509', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain()\n{\n    int a[2][2] = { {1,2},{3,4} };\n    int(*p)[2][2];\n    p = &amp;a;\n    printf("%d", (*p)[0][0]);\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,output,1-mark', 'category': 'Programming in C'}]}]}
       </script>
       

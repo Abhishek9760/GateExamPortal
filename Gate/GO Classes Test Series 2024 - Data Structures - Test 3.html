@@ -1,47 +1,16 @@
-<div><span>Q1</span> - <p>Consider the following pseudo-code that uses a stack. What will be the output of n = 50.</p>
+<div><span>Q1</span> - <p>Consider an array A storing m   gt;1 different integer values sorted in increasing order. At least one value in A is negative and at least one of them is positive. We want to change the positions of the positive values stored in A so the positive values appear in decreasing order. So, for example, if the array A is as in the figure on the left, the modified array is as in the figure on the right.</p>
 
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while (n    gt; 0) 
-    stack.push (n 
-    n /= 2;
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10383186326115297648"></p>
 
-while (!stack.isEmpty())
-    print(stack.pop());
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - Consider a queue which supports print() function in addition to enqueue() and dequeue().
-print() is a function that prints an element of the head of the queue without removing the element.
-
-Suppose the initial content of the queue is 1,2,3,4,5 where 1 is on the head.
-How Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as 5,4,3,2,1) such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>The following operations are performed on an initially empty queue of ints. What is the contents of the queue afterwards? The queue is displayed with the front to the left.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-q.enqueue (1)
-q.enqueue (2)
-i=q.getfront ()
-q.enqueue (3)
-q.enqueue (4)
-q.enqueue (5)
-i=q.dequeue ()
-q.enqueue (6)</pre>
-
-<p><br>
-Notes: getfront operates analogously to the stack method "top()".</p>
-
-<p>enqueue and dequeue operate as one would expect standard queue operations with those names.</p>
+<p>If we use stack or queue but not both to accomplish this task. Which of the following is/are true?<br>
+Let n be the number of positive values.</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>1 2 3 4 5 6</li>
-	<li>6 5 4 3 1</li>
-	<li>2 3 4 5 6</li>
-	<li>1 2 3 4 6</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>
-Which of the following is/are correct ?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Minimum number of extra stack(s) is 1</li>
-	<li>Time Complexity is O(n)</li>
-	<li>Space Complexity is O(1)</li>
-	<li>Space Complexity is O(n)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Suppose we have a queue = [3, 14, 1, 20] (here 3 is on the front ) and an empty stack. We are allowed to make only two actions:</p>
+	<li>For a queue, we need a minimum of n enqueues and n dequeues operations.</li>
+	<li>For a stack, we need a minimum of n push and   nbsp;n pop operations.</li>
+	<li>For a queue, we need a minimum of n+1 enqueues and n+1 dequeues operations.</li>
+	<li>For a stack, we need a minimum of n+1 push and n+1 pop operations.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Suppose we have a queue = [3, 14, 1, 20] (here 3 is on the front ) and an empty stack. We are allowed to make only two actions:</p>
 
 <ol>
 	<li>Action ”x”: Dequeue an element from the queue and push it to the stack.</li>
@@ -55,100 +24,16 @@ Which of the following is/are correct ?</p>
 	<li>xxoxoxooxo</li>
 	<li>xoxxooxoxo</li>
 	<li>xxoxooxxoo</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>A double stack is a variation of a stack that allows access to the top and to the bottom of the stack. A double stack ADT provides operations (T  x) that adds x to the top of the stack, (T  x) that adds x to the bottom of the stack,  that removes the element at the top of the stack, and  that removes the element at the bottom of the stack.</p>
-
-<p>Consider a double-stack ds implemented using an array as shown in the following figure.</p>
-
-<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=8964072913138431231"></p>
-
-<p>When (T  x) is executed the value of  is increased (decreased); similarly when (T  x ) is executed the value of  is decreased (increased). Consider the following code fragment.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider the following pseudo-code that uses a stack. What will be the output of n = 50.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-for (int i=0 ; i   lt;3 ;++i) ds.pushTop(ds.popBottom());
-for (int i=0 ; i   lt;2 ;++i) x= ds. popTop();
-ds.pushBottom(x)
-</pre>
+while (n    gt; 0) 
+    stack.push (n 
+    n /= 2;
 
-<p><br>
-After this code fragment is executed on the double stack  represented by the above figure which are the final values for top and ?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>top =8, bottom =4</li>
-	<li>top =9, bottom =5</li>
-	<li>top =7, bottom =3</li>
-	<li>top =10, bottom =3</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following pseudocode:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Declare a stack of characters
-while ( there are more characters in the word to read )
-
-    read a character
-    push the character on the stack
-
-while ( the stack is not empty )
-
-    pop a character off the stack
-    write the character to the screen
-
-</pre>
-
-<p><br>
-What is written to the screen for the input "carpets"?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>serc</li>
-	<li>carpets</li>
-	<li>steprac</li>
-	<li>ccaarrppeettss</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void mystery(orig_stack)
-
-    Stack helper_stack;
-    while (!IsEmpty(orig_stack))
-    
-        int element = pop(orig_stack);
-        while (!IsEmpty(helper_stack) and Top(helper_stack)    lt; element)
-        
-            Push(orig_stack, Pop(helper_stack));
-        
-        Push(helper_stack, element);
-    
-    while (!IsEmpty(helper_stack))
-    
-        Push(orig_stack, Pop(helper_stack));
-    
-
-</pre>
-
-<p><br>
-Suppose the content of orig_stack initially is -1, 7, 0, 3, -2, where -1 is on the top.</p>
-
-<p>What will be the content of orig_stack() after the function call mystery()?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>7, 3, 0, -1, -2 where 7 is on the top.</li>
-	<li>7, -1, 0, 3, -2, where 7 is on the top.</li>
-	<li>7, -1, 0, -2, 3, where 7 is on the top.</li>
-	<li>-2, -1, 0, 3, 7, where -2 is on the top.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider a data structure StackWithMax that supports all operations of a stack, and in addition supports getMax.</p>
-
-<ul>
-	<li>getMax() is a function that returns the maximum without deleting it.</li>
-	<li>StackWithMax is implemented using a singly linked list, and each node of the linked list has 3 fields to store.</li>
-</ul>
-
-<p>Two fields are the usual element and next pointer, one extra field is there to facilitate getMax operation in efficient time.<br>
-We can efficiently implement getMax of such data structure in -</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>θ(1) time</li>
-	<li>θ(n) time</li>
-	<li>θ(n log n) time</li>
-	<li>θ(log n) time</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>A queue of int is implemented using a circular array as the following data type:</p>
+while (!stack.isEmpty())
+    print(stack.pop());
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>A queue of int is implemented using a circular array as the following data type:</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #define SIZE 20
@@ -187,7 +72,7 @@ Line X is return q-   gt;rear == -1;</pre>
 	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 Line Y is return q-   gt;front == (q-   gt;rear+1) 
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Let s be a sorted array of n integers. Let t(n) denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than 1000 in s.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Let s be a sorted array of n integers. Let t(n) denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than 1000 in s.</p>
 
 <p>Which of the following statements is true?</p>
 
@@ -196,7 +81,7 @@ Line Y is return q-   gt;front == (q-   gt;rear+1)
 	<li>n    lt; t(n)    lt; n log_2 n</li>
 	<li>n log_2 n    lt; t(n)    lt;  ^nC_2</li>
 	<li>t(n) =  ^nC_2</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>
 
 <p>Which of the following pair(s) of implementations for push() and pop() work?</p>
 
@@ -249,19 +134,109 @@ pop()
 
 </pre>
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider an array A storing m   gt;1 different integer values sorted in increasing order. At least one value in A is negative and at least one of them is positive. We want to change the positions of the positive values stored in A so the positive values appear in decreasing order. So, for example, if the array A is as in the figure on the left, the modified array is as in the figure on the right.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following pseudocode:</p>
 
-<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10383186326115297648"></p>
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Declare a stack of characters
+while ( there are more characters in the word to read )
 
-<p>If we use stack or queue but not both to accomplish this task. Which of the following is/are true?<br>
-Let n be the number of positive values.</p>
+    read a character
+    push the character on the stack
+
+while ( the stack is not empty )
+
+    pop a character off the stack
+    write the character to the screen
+
+</pre>
+
+<p><br>
+What is written to the screen for the input "carpets"?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>For a queue, we need a minimum of n enqueues and n dequeues operations.</li>
-	<li>For a stack, we need a minimum of n push and   nbsp;n pop operations.</li>
-	<li>For a queue, we need a minimum of n+1 enqueues and n+1 dequeues operations.</li>
-	<li>For a stack, we need a minimum of n+1 push and n+1 pop operations.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>A function f defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>
+	<li>serc</li>
+	<li>carpets</li>
+	<li>steprac</li>
+	<li>ccaarrppeettss</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>A queue can be simulated using two stacks. If n enqueue and 1 dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>
+
+<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Minimum pop = 1, Maximum pop = n</li>
+	<li>Minimum pop = 1, Maximum pop = n+1</li>
+	<li>Minimum pop = n, Maximum pop = 2n</li>
+	<li>Minimum pop = n, Maximum pop = 2n-1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>The following operations are performed on an initially empty queue of ints. What is the contents of the queue afterwards? The queue is displayed with the front to the left.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+q.enqueue (1)
+q.enqueue (2)
+i=q.getfront ()
+q.enqueue (3)
+q.enqueue (4)
+q.enqueue (5)
+i=q.dequeue ()
+q.enqueue (6)</pre>
+
+<p><br>
+Notes: getfront operates analogously to the stack method "top()".</p>
+
+<p>enqueue and dequeue operate as one would expect standard queue operations with those names.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1 2 3 4 5 6</li>
+	<li>6 5 4 3 1</li>
+	<li>2 3 4 5 6</li>
+	<li>1 2 3 4 6</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void mystery(orig_stack)
+
+    Stack helper_stack;
+    while (!IsEmpty(orig_stack))
+    
+        int element = pop(orig_stack);
+        while (!IsEmpty(helper_stack) and Top(helper_stack)    lt; element)
+        
+            Push(orig_stack, Pop(helper_stack));
+        
+        Push(helper_stack, element);
+    
+    while (!IsEmpty(helper_stack))
+    
+        Push(orig_stack, Pop(helper_stack));
+    
+
+</pre>
+
+<p><br>
+Suppose the content of orig_stack initially is -1, 7, 0, 3, -2, where -1 is on the top.</p>
+
+<p>What will be the content of orig_stack() after the function call mystery()?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>7, 3, 0, -1, -2 where 7 is on the top.</li>
+	<li>7, -1, 0, 3, -2, where 7 is on the top.</li>
+	<li>7, -1, 0, -2, 3, where 7 is on the top.</li>
+	<li>-2, -1, 0, 3, 7, where -2 is on the top.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider a data structure StackWithMax that supports all operations of a stack, and in addition supports getMax.</p>
+
+<ul>
+	<li>getMax() is a function that returns the maximum without deleting it.</li>
+	<li>StackWithMax is implemented using a singly linked list, and each node of the linked list has 3 fields to store.</li>
+</ul>
+
+<p>Two fields are the usual element and next pointer, one extra field is there to facilitate getMax operation in efficient time.<br>
+We can efficiently implement getMax of such data structure in -</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>θ(1) time</li>
+	<li>θ(n) time</li>
+	<li>θ(n log n) time</li>
+	<li>θ(log n) time</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>A function f defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>
 
 <p>f(ϕ)=0 and<br>
 
@@ -282,18 +257,42 @@ Let n be the number of positive values.</p>
 	<li>9</li>
 	<li>128</li>
 	<li>130</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>A queue can be simulated using two stacks. If n enqueue and 1 dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>A double stack is a variation of a stack that allows access to the top and to the bottom of the stack. A double stack ADT provides operations (T  x) that adds x to the top of the stack, (T  x) that adds x to the bottom of the stack,  that removes the element at the top of the stack, and  that removes the element at the bottom of the stack.</p>
 
-<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>
+<p>Consider a double-stack ds implemented using an array as shown in the following figure.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=8964072913138431231"></p>
+
+<p>When (T  x) is executed the value of  is increased (decreased); similarly when (T  x ) is executed the value of  is decreased (increased). Consider the following code fragment.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+for (int i=0 ; i   lt;3 ;++i) ds.pushTop(ds.popBottom());
+for (int i=0 ; i   lt;2 ;++i) x= ds. popTop();
+ds.pushBottom(x)
+</pre>
+
+<p><br>
+After this code fragment is executed on the double stack  represented by the above figure which are the final values for top and ?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>Minimum pop = 1, Maximum pop = n</li>
-	<li>Minimum pop = 1, Maximum pop = n+1</li>
-	<li>Minimum pop = n, Maximum pop = 2n</li>
-	<li>Minimum pop = n, Maximum pop = 2n-1</li>
+	<li>top =8, bottom =4</li>
+	<li>top =9, bottom =5</li>
+	<li>top =7, bottom =3</li>
+	<li>top =10, bottom =3</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - Consider a queue which supports print() function in addition to enqueue() and dequeue().
+print() is a function that prints an element of the head of the queue without removing the element.
+
+Suppose the initial content of the queue is 1,2,3,4,5 where 1 is on the head.
+How Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as 5,4,3,2,1) such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>
+Which of the following is/are correct ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Minimum number of extra stack(s) is 1</li>
+	<li>Time Complexity is O(n)</li>
+	<li>Space Complexity is O(1)</li>
+	<li>Space Complexity is O(n)</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '377435', 'text': '<p>Consider the following pseudo-code that uses a stack. What will be the output of $n = 50.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (n &gt; 0) {\n    stack.push (n % 2);\n    n /= 2;\n}\nwhile (!stack.isEmpty())\n    print(stack.pop());\n</pre>', 'type': 'Numerical', 'answer': '110010', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377451', 'text': '<p>The following operations are performed on an initially empty queue of ints. What is the contents of the queue afterwards? The queue is displayed with the front to the left.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nq.enqueue (1)\nq.enqueue (2)\ni=q.getfront ()\nq.enqueue (3)\nq.enqueue (4)\nq.enqueue (5)\ni=q.dequeue ()\nq.enqueue (6)</pre>\n\n<p><br>\nNotes: getfront operates analogously to the stack method "top()".</p>\n\n<p>enqueue and dequeue operate as one would expect standard queue operations with those names.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\;2\\;3\\;4\\;5\\;6$</li>\n\t<li>$6\\;5\\;4\\;3\\;1$</li>\n\t<li>$2\\;3\\;4\\;5\\;6$</li>\n\t<li>$1\\;2\\;3\\;4\\;6$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '377445', 'text': '<p>A $\\textit{double}$ stack is a variation of a stack that allows access to the top and to the bottom of the stack. A double stack ADT provides operations $\\textsf{pushTop} (\\text{T}\\; x)$ that adds $x$ to the top of the stack, $\\textsf{pushBottom} (\\mathrm{T}\\; x)$ that adds $x$ to the bottom of the stack, $\\textsf{popTop()}$ that removes the element at the top of the stack, and $\\textsf{popBottom()}$ that removes the element at the bottom of the stack.</p>\n\n<p>Consider a double-stack ds implemented using an array as shown in the following figure.</p>\n\n<p style="text-align:center"><img alt="" height="106" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=8964072913138431231" width="360"></p>\n\n<p>When $\\textsf{pushTop} (\\text{T}\\; x)\\; \\textsf{(popTop ())}$ is executed the value of $\\textsf{top}$ is increased (decreased); similarly when $\\textsf{pushBottom} (\\text{T}\\; x )\\; \\textsf{(popBottom ( ))}$ is executed the value of $\\textsf{bottom}$ is decreased (increased). Consider the following code fragment.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfor (int i=0 ; i&lt;3 ;++i) ds.pushTop(ds.popBottom());\nfor (int i=0 ; i&lt;2 ;++i) x= ds. popTop();\nds.pushBottom(x)\n</pre>\n\n<p><br>\nAfter this code fragment is executed on the double stack $\\textsf{ds}$ represented by the above figure which are the final values for $\\text{top}$ and $\\textsf{bottom}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>top $=8,$ bottom $=4$</li>\n\t<li>top $=9,$ bottom $=5$</li>\n\t<li>top $=7,$ bottom $=3$</li>\n\t<li>top $=10,$ bottom $=3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377439', 'text': '<p>Consider a data structure StackWithMax that supports all operations of a stack, and in addition supports getMax.</p>\n\n<ul>\n\t<li>getMax() is a function that returns the maximum without deleting it.</li>\n\t<li>StackWithMax is implemented using a singly linked list, and each node of the linked list has $3$ fields to store.</li>\n</ul>\n\n<p>Two fields are the usual element and next pointer, one extra field is there to facilitate getMax operation in efficient time.<br>\nWe can efficiently implement getMax of such data structure in -</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\theta(1)$ time</li>\n\t<li>$\\theta(n)$ time</li>\n\t<li>$\\theta(n \\log n)$ time</li>\n\t<li>$\\theta(\\log n)$ time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,linked-list,time-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377443', 'text': '<p>Consider an array $\\mathrm{A}$ storing $m&gt;1$ different integer values sorted in increasing order. At least one value in $\\mathrm{A}$ is negative and at least one of them is positive. We want to change the positions of the positive values stored in $\\mathrm{A}$ so the positive values appear in decreasing order. So, for example, if the array $\\mathrm{A}$ is as in the figure on the left, the modified array is as in the figure on the right.</p>\n\n<p style="text-align:center"><img alt="" height="100" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10383186326115297648" width="703"></p>\n\n<p>If we use stack or queue but not both to accomplish this task. Which of the following is/are true?<br>\nLet $n$ be the number of positive values.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>For a queue, we need a minimum of $n$ enqueues and $n$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n$ push and&nbsp;$n$ pop operations.</li>\n\t<li>For a queue, we need a minimum of $n+1$ enqueues and $n+1$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n+1$ push and $n+1$ pop operations.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}]
-      let data={'name': 'GO Classes Test Series 2024 | Data Structures | Test 3', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '377435', 'text': '<p>Consider the following pseudo-code that uses a stack. What will be the output of $n = 50.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (n &gt; 0) {\n    stack.push (n % 2);\n    n /= 2;\n}\nwhile (!stack.isEmpty())\n    print(stack.pop());\n</pre>', 'type': 'Numerical', 'answer': '110010', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377451', 'text': '<p>The following operations are performed on an initially empty queue of ints. What is the contents of the queue afterwards? The queue is displayed with the front to the left.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nq.enqueue (1)\nq.enqueue (2)\ni=q.getfront ()\nq.enqueue (3)\nq.enqueue (4)\nq.enqueue (5)\ni=q.dequeue ()\nq.enqueue (6)</pre>\n\n<p><br>\nNotes: getfront operates analogously to the stack method "top()".</p>\n\n<p>enqueue and dequeue operate as one would expect standard queue operations with those names.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\;2\\;3\\;4\\;5\\;6$</li>\n\t<li>$6\\;5\\;4\\;3\\;1$</li>\n\t<li>$2\\;3\\;4\\;5\\;6$</li>\n\t<li>$1\\;2\\;3\\;4\\;6$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '377445', 'text': '<p>A $\\textit{double}$ stack is a variation of a stack that allows access to the top and to the bottom of the stack. A double stack ADT provides operations $\\textsf{pushTop} (\\text{T}\\; x)$ that adds $x$ to the top of the stack, $\\textsf{pushBottom} (\\mathrm{T}\\; x)$ that adds $x$ to the bottom of the stack, $\\textsf{popTop()}$ that removes the element at the top of the stack, and $\\textsf{popBottom()}$ that removes the element at the bottom of the stack.</p>\n\n<p>Consider a double-stack ds implemented using an array as shown in the following figure.</p>\n\n<p style="text-align:center"><img alt="" height="106" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=8964072913138431231" width="360"></p>\n\n<p>When $\\textsf{pushTop} (\\text{T}\\; x)\\; \\textsf{(popTop ())}$ is executed the value of $\\textsf{top}$ is increased (decreased); similarly when $\\textsf{pushBottom} (\\text{T}\\; x )\\; \\textsf{(popBottom ( ))}$ is executed the value of $\\textsf{bottom}$ is decreased (increased). Consider the following code fragment.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfor (int i=0 ; i&lt;3 ;++i) ds.pushTop(ds.popBottom());\nfor (int i=0 ; i&lt;2 ;++i) x= ds. popTop();\nds.pushBottom(x)\n</pre>\n\n<p><br>\nAfter this code fragment is executed on the double stack $\\textsf{ds}$ represented by the above figure which are the final values for $\\text{top}$ and $\\textsf{bottom}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>top $=8,$ bottom $=4$</li>\n\t<li>top $=9,$ bottom $=5$</li>\n\t<li>top $=7,$ bottom $=3$</li>\n\t<li>top $=10,$ bottom $=3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377439', 'text': '<p>Consider a data structure StackWithMax that supports all operations of a stack, and in addition supports getMax.</p>\n\n<ul>\n\t<li>getMax() is a function that returns the maximum without deleting it.</li>\n\t<li>StackWithMax is implemented using a singly linked list, and each node of the linked list has $3$ fields to store.</li>\n</ul>\n\n<p>Two fields are the usual element and next pointer, one extra field is there to facilitate getMax operation in efficient time.<br>\nWe can efficiently implement getMax of such data structure in -</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\theta(1)$ time</li>\n\t<li>$\\theta(n)$ time</li>\n\t<li>$\\theta(n \\log n)$ time</li>\n\t<li>$\\theta(\\log n)$ time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,linked-list,time-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377443', 'text': '<p>Consider an array $\\mathrm{A}$ storing $m&gt;1$ different integer values sorted in increasing order. At least one value in $\\mathrm{A}$ is negative and at least one of them is positive. We want to change the positions of the positive values stored in $\\mathrm{A}$ so the positive values appear in decreasing order. So, for example, if the array $\\mathrm{A}$ is as in the figure on the left, the modified array is as in the figure on the right.</p>\n\n<p style="text-align:center"><img alt="" height="100" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10383186326115297648" width="703"></p>\n\n<p>If we use stack or queue but not both to accomplish this task. Which of the following is/are true?<br>\nLet $n$ be the number of positive values.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>For a queue, we need a minimum of $n$ enqueues and $n$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n$ push and&nbsp;$n$ pop operations.</li>\n\t<li>For a queue, we need a minimum of $n+1$ enqueues and $n+1$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n+1$ push and $n+1$ pop operations.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}]}]}
+      let data={'name': 'GO Classes Test Series 2024 | Data Structures | Test 3', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '377443', 'text': '<p>Consider an array $\\mathrm{A}$ storing $m&gt;1$ different integer values sorted in increasing order. At least one value in $\\mathrm{A}$ is negative and at least one of them is positive. We want to change the positions of the positive values stored in $\\mathrm{A}$ so the positive values appear in decreasing order. So, for example, if the array $\\mathrm{A}$ is as in the figure on the left, the modified array is as in the figure on the right.</p>\n\n<p style="text-align:center"><img alt="" height="100" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10383186326115297648" width="703"></p>\n\n<p>If we use stack or queue but not both to accomplish this task. Which of the following is/are true?<br>\nLet $n$ be the number of positive values.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>For a queue, we need a minimum of $n$ enqueues and $n$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n$ push and&nbsp;$n$ pop operations.</li>\n\t<li>For a queue, we need a minimum of $n+1$ enqueues and $n+1$ dequeues operations.</li>\n\t<li>For a stack, we need a minimum of $n+1$ push and $n+1$ pop operations.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '377435', 'text': '<p>Consider the following pseudo-code that uses a stack. What will be the output of $n = 50.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (n &gt; 0) {\n    stack.push (n % 2);\n    n /= 2;\n}\nwhile (!stack.isEmpty())\n    print(stack.pop());\n</pre>', 'type': 'Numerical', 'answer': '110010', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377451', 'text': '<p>The following operations are performed on an initially empty queue of ints. What is the contents of the queue afterwards? The queue is displayed with the front to the left.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nq.enqueue (1)\nq.enqueue (2)\ni=q.getfront ()\nq.enqueue (3)\nq.enqueue (4)\nq.enqueue (5)\ni=q.dequeue ()\nq.enqueue (6)</pre>\n\n<p><br>\nNotes: getfront operates analogously to the stack method "top()".</p>\n\n<p>enqueue and dequeue operate as one would expect standard queue operations with those names.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\;2\\;3\\;4\\;5\\;6$</li>\n\t<li>$6\\;5\\;4\\;3\\;1$</li>\n\t<li>$2\\;3\\;4\\;5\\;6$</li>\n\t<li>$1\\;2\\;3\\;4\\;6$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377439', 'text': '<p>Consider a data structure StackWithMax that supports all operations of a stack, and in addition supports getMax.</p>\n\n<ul>\n\t<li>getMax() is a function that returns the maximum without deleting it.</li>\n\t<li>StackWithMax is implemented using a singly linked list, and each node of the linked list has $3$ fields to store.</li>\n</ul>\n\n<p>Two fields are the usual element and next pointer, one extra field is there to facilitate getMax operation in efficient time.<br>\nWe can efficiently implement getMax of such data structure in -</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\theta(1)$ time</li>\n\t<li>$\\theta(n)$ time</li>\n\t<li>$\\theta(n \\log n)$ time</li>\n\t<li>$\\theta(\\log n)$ time</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,linked-list,time-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '377445', 'text': '<p>A $\\textit{double}$ stack is a variation of a stack that allows access to the top and to the bottom of the stack. A double stack ADT provides operations $\\textsf{pushTop} (\\text{T}\\; x)$ that adds $x$ to the top of the stack, $\\textsf{pushBottom} (\\mathrm{T}\\; x)$ that adds $x$ to the bottom of the stack, $\\textsf{popTop()}$ that removes the element at the top of the stack, and $\\textsf{popBottom()}$ that removes the element at the bottom of the stack.</p>\n\n<p>Consider a double-stack ds implemented using an array as shown in the following figure.</p>\n\n<p style="text-align:center"><img alt="" height="106" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=8964072913138431231" width="360"></p>\n\n<p>When $\\textsf{pushTop} (\\text{T}\\; x)\\; \\textsf{(popTop ())}$ is executed the value of $\\textsf{top}$ is increased (decreased); similarly when $\\textsf{pushBottom} (\\text{T}\\; x )\\; \\textsf{(popBottom ( ))}$ is executed the value of $\\textsf{bottom}$ is decreased (increased). Consider the following code fragment.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nfor (int i=0 ; i&lt;3 ;++i) ds.pushTop(ds.popBottom());\nfor (int i=0 ; i&lt;2 ;++i) x= ds. popTop();\nds.pushBottom(x)\n</pre>\n\n<p><br>\nAfter this code fragment is executed on the double stack $\\textsf{ds}$ represented by the above figure which are the final values for $\\text{top}$ and $\\textsf{bottom}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>top $=8,$ bottom $=4$</li>\n\t<li>top $=9,$ bottom $=5$</li>\n\t<li>top $=7,$ bottom $=3$</li>\n\t<li>top $=10,$ bottom $=3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}]}]}
       </script>
       

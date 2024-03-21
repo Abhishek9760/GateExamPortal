@@ -1,77 +1,4 @@
-<div><span>Q1</span> - <p>Let the variables x,y, and z, be of type int and assigned some values. The variable b1 is initialized as follows:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int b1 = (x    gt; z)    amp;   amp; (y    gt;= z);</pre>
-
-<p>Variables b2, b3, b4, and b5 are initialized below.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int b2 = (x    lt;= z) || (y    lt; z) 
-int b3 = !((x    lt; z) || (y    lt;= z)) 
-int b4 = !((x    lt; z)    amp;   amp; (y    gt;= z)) 
-int b5 = ((x    gt; z)    amp;   amp; (y    gt; z)) || ((x    gt; z)    amp;   amp; (y == z))
-
-</pre>
-
-<p>Variables b2, b3, b4, and b5 ALWAYS, SOMETIMES, or NEVER takes the same value as b1.<br>
-Which of the variable(s) SOMETIMES takes the same value as b1?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>b2</li>
-	<li>b3</li>
-	<li>b4</li>
-	<li>b5</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output printed by mystery1(0,6)?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void mystery1(int a, int b) 
-    if (a    lt;= b) 
-        int m = (a + b) / 2;
-        printf("
-        mystery1(a, m-1);
-        mystery1(m+1, b);
-    
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider a function is_greater() given below. Mark all option(s) which return 1.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int is_greater(unsigned int x, unsigned int y)
-
-    if(x-y    gt; 0)
-        return 1;
-    else 
-        return 0;
-
-</pre>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>is_greater(1, 2)</li>
-	<li>is_greater(-1, -2)</li>
-	<li>is_greater(-2, -1)</li>
-	<li>is_greater(-1, 0)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What will be the output?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int a = 4, b =15, c =29;
-if(c   gt;b   gt;a)
-    printf("TRUE");
-else
-    printf("FALSE");
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>TRUE</li>
-	<li>FALSE</li>
-	<li>Syntax Error</li>
-	<li>Compilation Error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the following recursive function. What is f(0)?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int f(int x) 
-    if (x    gt; 1000) return x - 4;
-    else return f(f(x+5));
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What will be the output printed by mystery3(6)?</p>
+<div><span>Q1</span> - <p>What will be the output printed by mystery3(6)?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 void mystery3(int n) 
@@ -81,179 +8,14 @@ void mystery3(int n)
     mystery3(n-1);
 </pre>
 
-<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>The statement</p>
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following recursive function. What is f(0)?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while ( –counter    gt;= 1 )
-counter 
+int f(int x) 
+    if (x    gt; 1000) return x - 4;
+    else return f(f(x+5));
 
-<p>can NOT be rewritten as</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while ( –counter    gt;= 1 )
-    if ( counter 
-        printf("A");
-    else
-        printf("B");</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while ( counter    gt;= 1 )
-    if (counter 
-        printf("A");
-    else
-        printf("B");
-–counter;</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while ( counter    gt; 1 )
-
-    –counter;
-    if ( counter 
-        printf("A");
-    else
-        printf("B");
-</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-do
-
-    –counter;
-    printf( counter 
- while ( counter    gt;= 2 );</pre>
-	</li>
-</ol>
-
-<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following pair of mutually recursive functions. What does g(g(2)) evaluate to?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int f(int n)
-    if (n==0) return 0;
-    return f(n-1)+g(n-1);
-
-int g(int n)
-    if (n==0) return 1;
-    return g(n-1) + f(n);
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Which of the following(s) are true for following function</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int mystery(int a) 
-if(a == 256) return 3;
-    return 1 + 2 * mystery(a*4); //line 3
-
-</pre>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>mystery(255) is an example of infinite recursion</li>
-	<li>if we replace line 3   nbsp;by following line   nbsp;return 1 + mystery(a*4)+ mystery(a*4); then also output is same</li>
-	<li>Only possible outputs are 3, 7, 15, 31</li>
-	<li>mystery(i) gives output if and only if i is 1 or multiple of 4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>How many times is foo activated (called), including the first "foo(3,12)"</p>
-
-<p>max() and min() are functions that return maximum and minimum respectively.<br>
-   nbsp;</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int foo(int a, int b) 
-    if (a==b) 
-        return b;
-    
-    int mn =min(a,b), mx =max(a,b);
-        return foo(mn,mn) + foo( mx - mn , mn);
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>What will be the output of the following C program?.<br>
-Here ?: is a ternary operator which is right to left-associative.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include    lt;stdio.h   gt;
-int main() 
-    int i =2, j =1;
-    if (–j ? ++j? i : i++ : i–)
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>1  0</li>
-	<li>2  1</li>
-	<li>1  1</li>
-	<li>2  0</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>What will be output printed by mystery2(6)?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void mystery2(int n) 
-    if (n    gt; 0) 
-        printf("
-        mystery2(n-2);
-        mystery2(n-3);
-        printf("
-    
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>What will be output of following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void xyz(int i)
-
-    if(–i)
-    
-        xyz(i++);
-        printf("
-    
-
-main()
-
-    xyz(5);
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>It is an infinite recursion since no base case</li>
-	<li>2345</li>
-	<li>54321</li>
-	<li>1234</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p><br>
-If x, y, z, and w are declared as integer variables, which of the following expressions are NOT valid in C?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>x + 5 = y + z</li>
-	<li>x = y = z + w</li>
-	<li>x = ( z - y ) == w</li>
-	<li>w = x != y &amp;&amp;  z</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>What will be the value printed by the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int i = 10;
-i = !i    gt; 14;
-printf("
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>10</li>
-	<li>14</li>
-	<li>0</li>
-	<li>1</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int find(int n) 
-
-    int i, j, k, a = 1;
-
-    for (i = 1; i    lt;= n; i++)
-
-        for (j = 1; j    lt;= i; j++)
-
-            for (k = 1; k    lt;= j; k++)
-
-                a = a + 1;
-
-    return a;
-</pre>
-
-<p>What will be the value of find(10)?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>What is the value printed by the following program?</p>
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What is the value printed by the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 int main()
@@ -269,87 +31,7 @@ int main()
 	<li>1</li>
 	<li>-1</li>
 	<li>2</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Professor Greg wants to give assignments to his students to write a C program for the XOR5 function. XOR5 is a function that returns true if and only if EXACTLY one of the integers A and B is 5.<br>
-Using which of the following condition(s), XOR5 can be implemented?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>(A==5) != (B==5)</li>
-	<li>!(A==5) != ! (B==5)</li>
-	<li>(A==5) ? ! (B==5) : (B==5)</li>
-	<li>((A==5) || (B==5) ) &amp;&amp;  !((A==5) &amp;&amp;  (B==5) )</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Which of the following expressions will evaluate to true?<br>
-INT_MIN is the minimum signed integer in the system which is using 2's complement representation for signed integers and variables are defined as follows:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int x = 5, i = -7;</pre>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>((x    gt;   gt; 2)    lt;   lt; 2)    lt;= x</li>
-	<li>  1   amp;   amp; 1</li>
-	<li>INT_MIN == -INT_MIN</li>
-	<li>-10    lt; i    lt;-1</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output printed by the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include    lt;stdio.h   gt;
-int main()
-
-    int i = 1;
-    for(i = 0; i   lt;10; i+3)
-    switch(i)
-    
-        case 3:
-            printf("Hi. This is case 3");
-            break;
-        case 6:
-            printf("Hi. This is case 6");
-            break;
-            break;
-        default:
-            printf("Hi. This is default");
-            break;
-    
-    return 0;
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Hi. This is case 3</li>
-	<li>Hi. This is case 6</li>
-	<li>Infinite Execution</li>
-	<li>Hi. This is default</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Which of the following(s) will evaluate to true</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>0 &amp;&amp;  0 == 0</li>
-	<li>0 &amp;&amp;  1 == 0</li>
-	<li>1  ||  0 == 0</li>
-	<li>1  ||  1 == 0</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Consider the following variable and function definitions:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int g=10;
-int q3() 
-    static int g=5;
-    return ++g;
-
-int q4() 
-    extern int g;
-    return ++g;
-
-int q5() 
-    int g=1;
-    return ++g;
-</pre>
-
-<p>What is the value of the expression q3() + q3() + q4() + q4() + q5() + q5()?</p>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>32</li>
-	<li>34</li>
-	<li>38</li>
-	<li>40</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Consider the following two .c files which both include the same .h file:</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following two .c files which both include the same .h file:</p>
 
 <p><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10746269507857044941"></p>
 
@@ -407,9 +89,326 @@ For example, if we say line (2) is static then we consider line (2) as “static
 	Line(8) - static<br>
 	Line(9) - empty<br>
 	Line(10) - static</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p><br>
+If x, y, z, and w are declared as integer variables, which of the following expressions are NOT valid in C?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>x + 5 = y + z</li>
+	<li>x = y = z + w</li>
+	<li>x = ( z - y ) == w</li>
+	<li>w = x != y &amp;&amp;  z</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following variable and function definitions:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int g=10;
+int q3() 
+    static int g=5;
+    return ++g;
+
+int q4() 
+    extern int g;
+    return ++g;
+
+int q5() 
+    int g=1;
+    return ++g;
+</pre>
+
+<p>What is the value of the expression q3() + q3() + q4() + q4() + q5() + q5()?</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>32</li>
+	<li>34</li>
+	<li>38</li>
+	<li>40</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Let the variables x,y, and z, be of type int and assigned some values. The variable b1 is initialized as follows:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int b1 = (x    gt; z)    amp;   amp; (y    gt;= z);</pre>
+
+<p>Variables b2, b3, b4, and b5 are initialized below.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int b2 = (x    lt;= z) || (y    lt; z) 
+int b3 = !((x    lt; z) || (y    lt;= z)) 
+int b4 = !((x    lt; z)    amp;   amp; (y    gt;= z)) 
+int b5 = ((x    gt; z)    amp;   amp; (y    gt; z)) || ((x    gt; z)    amp;   amp; (y == z))
+
+</pre>
+
+<p>Variables b2, b3, b4, and b5 ALWAYS, SOMETIMES, or NEVER takes the same value as b1.<br>
+Which of the variable(s) SOMETIMES takes the same value as b1?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>b2</li>
+	<li>b3</li>
+	<li>b4</li>
+	<li>b5</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following pair of mutually recursive functions. What does g(g(2)) evaluate to?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int f(int n)
+    if (n==0) return 0;
+    return f(n-1)+g(n-1);
+
+int g(int n)
+    if (n==0) return 1;
+    return g(n-1) + f(n);
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the following C program?.<br>
+Here ?: is a ternary operator which is right to left-associative.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main() 
+    int i =2, j =1;
+    if (–j ? ++j? i : i++ : i–)
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1  0</li>
+	<li>2  1</li>
+	<li>1  1</li>
+	<li>2  0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>How many times is foo activated (called), including the first "foo(3,12)"</p>
+
+<p>max() and min() are functions that return maximum and minimum respectively.<br>
+   nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int foo(int a, int b) 
+    if (a==b) 
+        return b;
+    
+    int mn =min(a,b), mx =max(a,b);
+        return foo(mn,mn) + foo( mx - mn , mn);
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>What will be the value printed by the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int i = 10;
+i = !i    gt; 14;
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>10</li>
+	<li>14</li>
+	<li>0</li>
+	<li>1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider a function is_greater() given below. Mark all option(s) which return 1.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int is_greater(unsigned int x, unsigned int y)
+
+    if(x-y    gt; 0)
+        return 1;
+    else 
+        return 0;
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>is_greater(1, 2)</li>
+	<li>is_greater(-1, -2)</li>
+	<li>is_greater(-2, -1)</li>
+	<li>is_greater(-1, 0)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Professor Greg wants to give assignments to his students to write a C program for the XOR5 function. XOR5 is a function that returns true if and only if EXACTLY one of the integers A and B is 5.<br>
+Using which of the following condition(s), XOR5 can be implemented?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>(A==5) != (B==5)</li>
+	<li>!(A==5) != ! (B==5)</li>
+	<li>(A==5) ? ! (B==5) : (B==5)</li>
+	<li>((A==5) || (B==5) ) &amp;&amp;  !((A==5) &amp;&amp;  (B==5) )</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output printed by mystery1(0,6)?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void mystery1(int a, int b) 
+    if (a    lt;= b) 
+        int m = (a + b) / 2;
+        printf("
+        mystery1(a, m-1);
+        mystery1(m+1, b);
+    
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>What will be output of following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void xyz(int i)
+
+    if(–i)
+    
+        xyz(i++);
+        printf("
+    
+
+main()
+
+    xyz(5);
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>It is an infinite recursion since no base case</li>
+	<li>2345</li>
+	<li>54321</li>
+	<li>1234</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Which of the following(s) are true for following function</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int mystery(int a) 
+if(a == 256) return 3;
+    return 1 + 2 * mystery(a*4); //line 3
+
+</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>mystery(255) is an example of infinite recursion</li>
+	<li>if we replace line 3   nbsp;by following line   nbsp;return 1 + mystery(a*4)+ mystery(a*4); then also output is same</li>
+	<li>Only possible outputs are 3, 7, 15, 31</li>
+	<li>mystery(i) gives output if and only if i is 1 or multiple of 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>The statement</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+counter 
+
+<p>can NOT be rewritten as</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( –counter    gt;= 1 )
+    if ( counter 
+        printf("A");
+    else
+        printf("B");</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt;= 1 )
+    if (counter 
+        printf("A");
+    else
+        printf("B");
+–counter;</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while ( counter    gt; 1 )
+
+    –counter;
+    if ( counter 
+        printf("A");
+    else
+        printf("B");
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+do
+
+    –counter;
+    printf( counter 
+ while ( counter    gt;= 2 );</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Which of the following(s) will evaluate to true</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>0 &amp;&amp;  0 == 0</li>
+	<li>0 &amp;&amp;  1 == 0</li>
+	<li>1  ||  0 == 0</li>
+	<li>1  ||  1 == 0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int find(int n) 
+
+    int i, j, k, a = 1;
+
+    for (i = 1; i    lt;= n; i++)
+
+        for (j = 1; j    lt;= i; j++)
+
+            for (k = 1; k    lt;= j; k++)
+
+                a = a + 1;
+
+    return a;
+</pre>
+
+<p>What will be the value of find(10)?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What will be the output printed by the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main()
+
+    int i = 1;
+    for(i = 0; i   lt;10; i+3)
+    switch(i)
+    
+        case 3:
+            printf("Hi. This is case 3");
+            break;
+        case 6:
+            printf("Hi. This is case 6");
+            break;
+            break;
+        default:
+            printf("Hi. This is default");
+            break;
+    
+    return 0;
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Hi. This is case 3</li>
+	<li>Hi. This is case 6</li>
+	<li>Infinite Execution</li>
+	<li>Hi. This is default</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>What will be output printed by mystery2(6)?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void mystery2(int n) 
+    if (n    gt; 0) 
+        printf("
+        mystery2(n-2);
+        mystery2(n-3);
+        printf("
+    
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Which of the following expressions will evaluate to true?<br>
+INT_MIN is the minimum signed integer in the system which is using 2's complement representation for signed integers and variables are defined as follows:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int x = 5, i = -7;</pre>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>((x    gt;   gt; 2)    lt;   lt; 2)    lt;= x</li>
+	<li>  1   amp;   amp; 1</li>
+	<li>INT_MIN == -INT_MIN</li>
+	<li>-10    lt; i    lt;-1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>What will be the output?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a = 4, b =15, c =29;
+if(c   gt;b   gt;a)
+    printf("TRUE");
+else
+    printf("FALSE");
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>TRUE</li>
+	<li>FALSE</li>
+	<li>Syntax Error</li>
+	<li>Compilation Error</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '373092', 'text': '<p>Let the variables $x,y,$ and $z$, be of type int and assigned some values. The variable $b1$ is initialized as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b1 = (x &gt; z) &amp;&amp; (y &gt;= z);</pre>\n\n<p>Variables b2, b3, b4, and b5 are initialized below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b2 = (x &lt;= z) || (y &lt; z) \nint b3 = !((x &lt; z) || (y &lt;= z)) \nint b4 = !((x &lt; z) &amp;&amp; (y &gt;= z)) \nint b5 = ((x &gt; z) &amp;&amp; (y &gt; z)) || ((x &gt; z) &amp;&amp; (y == z))\n\n</pre>\n\n<p>Variables $b2, b3, b4$, and $b5$ ALWAYS, SOMETIMES, or NEVER takes the same value as $b1$.<br>\nWhich of the variable(s) SOMETIMES takes the same value as $b1$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$b2$</li>\n\t<li>$b3$</li>\n\t<li>$b4$</li>\n\t<li>$b5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373085', 'text': '<p>What will be the output printed by $\\text{mystery}1(0,6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery1(int a, int b) {\n    if (a &lt;= b) {\n        int m = (a + b) / 2;\n        printf("%d", m);\n        mystery1(a, m-1);\n        mystery1(m+1, b);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '3102546', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373103', 'text': '<p>Consider a function is_greater() given below. Mark all option(s) which return $1$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint is_greater(unsigned int x, unsigned int y)\n{\n    if(x-y &gt; 0)\n        return 1;\n    else \n        return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>is_greater$(1, 2)$</li>\n\t<li>is_greater$(-1, -2)$</li>\n\t<li>is_greater$(-2, -1)$</li>\n\t<li>is_greater$(-1, 0)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373098', 'text': '<p>What will be the output?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a = 4, b =15, c =29;\nif(c&gt;b&gt;a)\n    printf("TRUE");\nelse\n    printf("FALSE");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{TRUE}$</li>\n\t<li>$\\text{FALSE}$</li>\n\t<li>Syntax Error</li>\n\t<li>Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373081', 'text': '<p>Consider the following recursive function. What is $f(0)?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int x) {\n    if (x &gt; 1000) return x - 4;\n    else return f(f(x+5));\n}\n</pre>', 'type': 'Numerical', 'answer': '997', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373083', 'text': '<p>What will be the output printed by $\\text{mystery}3(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery3(int n) {\n    if (n == 0 || n == 1) return;\n    mystery3(n-2);\n    printf("%d", n);\n    mystery3(n-1);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '243263252432', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373096', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\ncounter % 2 ? printf("A") : printf("B");</pre>\n\n<p>can $\\text{NOT}$ be rewritten as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n--counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373082', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373088', 'text': '<p>Which of the following(s) are true for following function</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\nif(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$&nbsp;by following line&nbsp;return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373087', 'text': '<p>How many times is foo activated (called), including the first "$\\text{foo}(3,12)$"</p>\n\n<p>$\\text{max()}$ and $\\text{min()}$ are functions that return maximum and minimum respectively.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint foo(int a, int b) {\n    if (a==b) {\n        return b;\n    }\n    int mn =min(a,b), mx =max(a,b);\n        return foo(mn,mn) + foo( mx - mn , mn);\n}\n</pre>', 'type': 'Numerical', 'answer': '7', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373093', 'text': '<p>What will be the output of the following C program?.<br>\nHere $?:$ is a ternary operator which is right to left-associative.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main() {\n    int i =2, j =1;\n    if (--j ? ++j? i : i++ : i--)\n    printf("%d%d\\n", i, j);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 0$</li>\n\t<li>$2\\; 1$</li>\n\t<li>$1\\; 1$</li>\n\t<li>$2\\; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373084', 'text': '<p>What will be output printed by $\\text{mystery}2(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery2(int n) {\n    if (n &gt; 0) {\n        printf("%d", n);\n        mystery2(n-2);\n        mystery2(n-3);\n        printf("%d", n);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '642211431136', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373086', 'text': '<p>What will be output of following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid xyz(int i)\n{\n    if(--i)\n    {\n        xyz(i++);\n        printf("%d",i);\n    }\n}\nmain()\n{\n    xyz(5);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is an infinite recursion since no base case</li>\n\t<li>$2345$</li>\n\t<li>$54321$</li>\n\t<li>$1234$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373097', 'text': '<p><br>\nIf $x, y, z,$ and $w$ are declared as integer variables, which of the following expressions are $\\text{NOT}$ valid in $C$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x + 5 = y + z$</li>\n\t<li>$x = y = z + w$</li>\n\t<li>$x = ( z - y ) == w$</li>\n\t<li>$w = x != y\\; \\&amp;\\&amp;\\; z$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373099', 'text': '<p>What will be the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 10;\ni = !i &gt; 14;\nprintf("%d", i);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$14$</li>\n\t<li>$0$</li>\n\t<li>$1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373094', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint find(int n) {\n\n    int i, j, k, a = 1;\n\n    for (i = 1; i &lt;= n; i++)\n\n        for (j = 1; j &lt;= i; j++)\n\n            for (k = 1; k &lt;= j; k++)\n\n                a = a + 1;\n\n    return a;\n}</pre>\n\n<p>What will be the value of find$(10)$?</p>', 'type': 'Numerical', 'answer': '221', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,programming,programming-in-c,loop,goclasses,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373091', 'text': '<p>What is the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int a = 0, b = 1, c = 0, d =-1;\n    d = (++a) &amp;&amp; (--b) &amp;&amp; (++c) ||(--a);\n    printf("%d", d);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$1$</li>\n\t<li>$-1$</li>\n\t<li>$2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373095', 'text': '<p>Professor Greg wants to give assignments to his students to write a $C$ program for the $\\text{XOR5}$ function. $\\text{XOR5}$ is a function that returns true if and only if $\\text{EXACTLY}$ one of the integers $A$ and $B$ is $5$.<br>\nUsing which of the following condition(s), $\\text{XOR5}$ can be implemented?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$(A==5) != (B==5)$</li>\n\t<li>$!(A==5) != ! (B==5)$</li>\n\t<li>$(A==5) ? ! (B==5) : (B==5)$</li>\n\t<li>$((A==5) || (B==5) )\\; \\&amp;\\&amp;\\; !((A==5)\\; \\&amp;\\&amp;\\; (B==5) )$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373102', 'text': '<p>Which of the following expressions will evaluate to true?<br>\nINT_MIN is the minimum signed integer in the system which is using 2\'s complement representation for signed integers and variables are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint x = 5, i = -7;</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>((x &gt;&gt; 2) &lt;&lt; 2) &lt;= x</li>\n\t<li>~ 1&amp;&amp; 1</li>\n\t<li>INT_MIN == -INT_MIN</li>\n\t<li>-10 &lt; i &lt;-1</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,number-representation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373100', 'text': '<p>What will be the output printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i = 1;\n    for(i = 0; i&lt;10; i+3)\n    switch(i)\n    {\n        case 3:\n            printf("Hi. This is case 3");\n            break;\n        case 6:\n            printf("Hi. This is case 6");\n            break;\n            break;\n        default:\n            printf("Hi. This is default");\n            break;\n    }\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Hi. This is case $3$</li>\n\t<li>Hi. This is case $6$</li>\n\t<li>Infinite Execution</li>\n\t<li>Hi. This is default</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373101', 'text': '<p>Which of the following(s) will evaluate to true</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0\\; \\&amp;\\&amp;\\; 0 == 0$</li>\n\t<li>$0\\; \\&amp;\\&amp;\\; 1 == 0$</li>\n\t<li>$1\\; ||\\; 0 == 0$</li>\n\t<li>$1\\; ||\\; 1 == 0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373089', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}</pre>\n\n<p>What is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$32$</li>\n\t<li>$34$</li>\n\t<li>$38$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373090', 'text': '<p>Consider the following two .$c$ files which both include the same $.h$ file:</p>\n\n<p><img alt="" height="410" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="554"></p>\n\n<p><br>\nWhen compiled, linked, and executed, the following output results:<br>\n$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$<br>\nAssuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.<br>\n<br>\nLeave them blank if neither modifier would be appropriate.<br>\n<br>\nFor example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}]
-      let data={'name': 'GO Classes Weekly Quiz 4 | Programming | Recursion', 'duration': '50', 'total_qs': '23', 'total_qs_one': 12, 'total_qs_two': 11, 'apti_num_qs': 0, 'technical_num_qs': 23, 'apti_marks': 0, 'technical_marks': 34, 'total_marks': 34, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 23, 'marks': 34, 'question': [{'contents': '', 'post_id': '373092', 'text': '<p>Let the variables $x,y,$ and $z$, be of type int and assigned some values. The variable $b1$ is initialized as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b1 = (x &gt; z) &amp;&amp; (y &gt;= z);</pre>\n\n<p>Variables b2, b3, b4, and b5 are initialized below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b2 = (x &lt;= z) || (y &lt; z) \nint b3 = !((x &lt; z) || (y &lt;= z)) \nint b4 = !((x &lt; z) &amp;&amp; (y &gt;= z)) \nint b5 = ((x &gt; z) &amp;&amp; (y &gt; z)) || ((x &gt; z) &amp;&amp; (y == z))\n\n</pre>\n\n<p>Variables $b2, b3, b4$, and $b5$ ALWAYS, SOMETIMES, or NEVER takes the same value as $b1$.<br>\nWhich of the variable(s) SOMETIMES takes the same value as $b1$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$b2$</li>\n\t<li>$b3$</li>\n\t<li>$b4$</li>\n\t<li>$b5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373085', 'text': '<p>What will be the output printed by $\\text{mystery}1(0,6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery1(int a, int b) {\n    if (a &lt;= b) {\n        int m = (a + b) / 2;\n        printf("%d", m);\n        mystery1(a, m-1);\n        mystery1(m+1, b);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '3102546', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373103', 'text': '<p>Consider a function is_greater() given below. Mark all option(s) which return $1$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint is_greater(unsigned int x, unsigned int y)\n{\n    if(x-y &gt; 0)\n        return 1;\n    else \n        return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>is_greater$(1, 2)$</li>\n\t<li>is_greater$(-1, -2)$</li>\n\t<li>is_greater$(-2, -1)$</li>\n\t<li>is_greater$(-1, 0)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373098', 'text': '<p>What will be the output?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a = 4, b =15, c =29;\nif(c&gt;b&gt;a)\n    printf("TRUE");\nelse\n    printf("FALSE");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{TRUE}$</li>\n\t<li>$\\text{FALSE}$</li>\n\t<li>Syntax Error</li>\n\t<li>Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373081', 'text': '<p>Consider the following recursive function. What is $f(0)?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int x) {\n    if (x &gt; 1000) return x - 4;\n    else return f(f(x+5));\n}\n</pre>', 'type': 'Numerical', 'answer': '997', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373083', 'text': '<p>What will be the output printed by $\\text{mystery}3(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery3(int n) {\n    if (n == 0 || n == 1) return;\n    mystery3(n-2);\n    printf("%d", n);\n    mystery3(n-1);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '243263252432', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373096', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\ncounter % 2 ? printf("A") : printf("B");</pre>\n\n<p>can $\\text{NOT}$ be rewritten as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n--counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373082', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373088', 'text': '<p>Which of the following(s) are true for following function</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\nif(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$&nbsp;by following line&nbsp;return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373087', 'text': '<p>How many times is foo activated (called), including the first "$\\text{foo}(3,12)$"</p>\n\n<p>$\\text{max()}$ and $\\text{min()}$ are functions that return maximum and minimum respectively.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint foo(int a, int b) {\n    if (a==b) {\n        return b;\n    }\n    int mn =min(a,b), mx =max(a,b);\n        return foo(mn,mn) + foo( mx - mn , mn);\n}\n</pre>', 'type': 'Numerical', 'answer': '7', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373093', 'text': '<p>What will be the output of the following C program?.<br>\nHere $?:$ is a ternary operator which is right to left-associative.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main() {\n    int i =2, j =1;\n    if (--j ? ++j? i : i++ : i--)\n    printf("%d%d\\n", i, j);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 0$</li>\n\t<li>$2\\; 1$</li>\n\t<li>$1\\; 1$</li>\n\t<li>$2\\; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373084', 'text': '<p>What will be output printed by $\\text{mystery}2(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery2(int n) {\n    if (n &gt; 0) {\n        printf("%d", n);\n        mystery2(n-2);\n        mystery2(n-3);\n        printf("%d", n);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '642211431136', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373086', 'text': '<p>What will be output of following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid xyz(int i)\n{\n    if(--i)\n    {\n        xyz(i++);\n        printf("%d",i);\n    }\n}\nmain()\n{\n    xyz(5);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is an infinite recursion since no base case</li>\n\t<li>$2345$</li>\n\t<li>$54321$</li>\n\t<li>$1234$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373097', 'text': '<p><br>\nIf $x, y, z,$ and $w$ are declared as integer variables, which of the following expressions are $\\text{NOT}$ valid in $C$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x + 5 = y + z$</li>\n\t<li>$x = y = z + w$</li>\n\t<li>$x = ( z - y ) == w$</li>\n\t<li>$w = x != y\\; \\&amp;\\&amp;\\; z$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373099', 'text': '<p>What will be the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 10;\ni = !i &gt; 14;\nprintf("%d", i);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$14$</li>\n\t<li>$0$</li>\n\t<li>$1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373094', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint find(int n) {\n\n    int i, j, k, a = 1;\n\n    for (i = 1; i &lt;= n; i++)\n\n        for (j = 1; j &lt;= i; j++)\n\n            for (k = 1; k &lt;= j; k++)\n\n                a = a + 1;\n\n    return a;\n}</pre>\n\n<p>What will be the value of find$(10)$?</p>', 'type': 'Numerical', 'answer': '221', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,programming,programming-in-c,loop,goclasses,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373091', 'text': '<p>What is the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int a = 0, b = 1, c = 0, d =-1;\n    d = (++a) &amp;&amp; (--b) &amp;&amp; (++c) ||(--a);\n    printf("%d", d);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$1$</li>\n\t<li>$-1$</li>\n\t<li>$2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373095', 'text': '<p>Professor Greg wants to give assignments to his students to write a $C$ program for the $\\text{XOR5}$ function. $\\text{XOR5}$ is a function that returns true if and only if $\\text{EXACTLY}$ one of the integers $A$ and $B$ is $5$.<br>\nUsing which of the following condition(s), $\\text{XOR5}$ can be implemented?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$(A==5) != (B==5)$</li>\n\t<li>$!(A==5) != ! (B==5)$</li>\n\t<li>$(A==5) ? ! (B==5) : (B==5)$</li>\n\t<li>$((A==5) || (B==5) )\\; \\&amp;\\&amp;\\; !((A==5)\\; \\&amp;\\&amp;\\; (B==5) )$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373102', 'text': '<p>Which of the following expressions will evaluate to true?<br>\nINT_MIN is the minimum signed integer in the system which is using 2\'s complement representation for signed integers and variables are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint x = 5, i = -7;</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>((x &gt;&gt; 2) &lt;&lt; 2) &lt;= x</li>\n\t<li>~ 1&amp;&amp; 1</li>\n\t<li>INT_MIN == -INT_MIN</li>\n\t<li>-10 &lt; i &lt;-1</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,number-representation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373100', 'text': '<p>What will be the output printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i = 1;\n    for(i = 0; i&lt;10; i+3)\n    switch(i)\n    {\n        case 3:\n            printf("Hi. This is case 3");\n            break;\n        case 6:\n            printf("Hi. This is case 6");\n            break;\n            break;\n        default:\n            printf("Hi. This is default");\n            break;\n    }\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Hi. This is case $3$</li>\n\t<li>Hi. This is case $6$</li>\n\t<li>Infinite Execution</li>\n\t<li>Hi. This is default</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373101', 'text': '<p>Which of the following(s) will evaluate to true</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0\\; \\&amp;\\&amp;\\; 0 == 0$</li>\n\t<li>$0\\; \\&amp;\\&amp;\\; 1 == 0$</li>\n\t<li>$1\\; ||\\; 0 == 0$</li>\n\t<li>$1\\; ||\\; 1 == 0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373089', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}</pre>\n\n<p>What is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$32$</li>\n\t<li>$34$</li>\n\t<li>$38$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373090', 'text': '<p>Consider the following two .$c$ files which both include the same $.h$ file:</p>\n\n<p><img alt="" height="410" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="554"></p>\n\n<p><br>\nWhen compiled, linked, and executed, the following output results:<br>\n$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$<br>\nAssuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.<br>\n<br>\nLeave them blank if neither modifier would be appropriate.<br>\n<br>\nFor example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}]}]}
+      let data={'name': 'GO Classes Weekly Quiz 4 | Programming | Recursion', 'duration': '50', 'total_qs': '23', 'total_qs_one': 12, 'total_qs_two': 11, 'apti_num_qs': 0, 'technical_num_qs': 23, 'apti_marks': 0, 'technical_marks': 34, 'total_marks': 34, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 23, 'marks': 34, 'question': [{'contents': '', 'post_id': '373083', 'text': '<p>What will be the output printed by $\\text{mystery}3(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery3(int n) {\n    if (n == 0 || n == 1) return;\n    mystery3(n-2);\n    printf("%d", n);\n    mystery3(n-1);\n}</pre>\n\n<p>&nbsp;</p>', 'type': 'Numerical', 'answer': '243263252432', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373081', 'text': '<p>Consider the following recursive function. What is $f(0)?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int x) {\n    if (x &gt; 1000) return x - 4;\n    else return f(f(x+5));\n}\n</pre>', 'type': 'Numerical', 'answer': '997', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373091', 'text': '<p>What is the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int a = 0, b = 1, c = 0, d =-1;\n    d = (++a) &amp;&amp; (--b) &amp;&amp; (++c) ||(--a);\n    printf("%d", d);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$1$</li>\n\t<li>$-1$</li>\n\t<li>$2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373090', 'text': '<p>Consider the following two .$c$ files which both include the same $.h$ file:</p>\n\n<p><img alt="" height="410" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="554"></p>\n\n<p><br>\nWhen compiled, linked, and executed, the following output results:<br>\n$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$<br>\nAssuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.<br>\n<br>\nLeave them blank if neither modifier would be appropriate.<br>\n<br>\nFor example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol class="shrink-inline-options2" style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373097', 'text': '<p><br>\nIf $x, y, z,$ and $w$ are declared as integer variables, which of the following expressions are $\\text{NOT}$ valid in $C$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$x + 5 = y + z$</li>\n\t<li>$x = y = z + w$</li>\n\t<li>$x = ( z - y ) == w$</li>\n\t<li>$w = x != y\\; \\&amp;\\&amp;\\; z$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373089', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}</pre>\n\n<p>What is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$32$</li>\n\t<li>$34$</li>\n\t<li>$38$</li>\n\t<li>$40$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'D', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373092', 'text': '<p>Let the variables $x,y,$ and $z$, be of type int and assigned some values. The variable $b1$ is initialized as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b1 = (x &gt; z) &amp;&amp; (y &gt;= z);</pre>\n\n<p>Variables b2, b3, b4, and b5 are initialized below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint b2 = (x &lt;= z) || (y &lt; z) \nint b3 = !((x &lt; z) || (y &lt;= z)) \nint b4 = !((x &lt; z) &amp;&amp; (y &gt;= z)) \nint b5 = ((x &gt; z) &amp;&amp; (y &gt; z)) || ((x &gt; z) &amp;&amp; (y == z))\n\n</pre>\n\n<p>Variables $b2, b3, b4$, and $b5$ ALWAYS, SOMETIMES, or NEVER takes the same value as $b1$.<br>\nWhich of the variable(s) SOMETIMES takes the same value as $b1$?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$b2$</li>\n\t<li>$b3$</li>\n\t<li>$b4$</li>\n\t<li>$b5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373082', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373093', 'text': '<p>What will be the output of the following C program?.<br>\nHere $?:$ is a ternary operator which is right to left-associative.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main() {\n    int i =2, j =1;\n    if (--j ? ++j? i : i++ : i--)\n    printf("%d%d\\n", i, j);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1\\; 0$</li>\n\t<li>$2\\; 1$</li>\n\t<li>$1\\; 1$</li>\n\t<li>$2\\; 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373087', 'text': '<p>How many times is foo activated (called), including the first "$\\text{foo}(3,12)$"</p>\n\n<p>$\\text{max()}$ and $\\text{min()}$ are functions that return maximum and minimum respectively.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint foo(int a, int b) {\n    if (a==b) {\n        return b;\n    }\n    int mn =min(a,b), mx =max(a,b);\n        return foo(mn,mn) + foo( mx - mn , mn);\n}\n</pre>', 'type': 'Numerical', 'answer': '7', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373099', 'text': '<p>What will be the value printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 10;\ni = !i &gt; 14;\nprintf("%d", i);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$10$</li>\n\t<li>$14$</li>\n\t<li>$0$</li>\n\t<li>$1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373103', 'text': '<p>Consider a function is_greater() given below. Mark all option(s) which return $1$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint is_greater(unsigned int x, unsigned int y)\n{\n    if(x-y &gt; 0)\n        return 1;\n    else \n        return 0;\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>is_greater$(1, 2)$</li>\n\t<li>is_greater$(-1, -2)$</li>\n\t<li>is_greater$(-2, -1)$</li>\n\t<li>is_greater$(-1, 0)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373095', 'text': '<p>Professor Greg wants to give assignments to his students to write a $C$ program for the $\\text{XOR5}$ function. $\\text{XOR5}$ is a function that returns true if and only if $\\text{EXACTLY}$ one of the integers $A$ and $B$ is $5$.<br>\nUsing which of the following condition(s), $\\text{XOR5}$ can be implemented?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$(A==5) != (B==5)$</li>\n\t<li>$!(A==5) != ! (B==5)$</li>\n\t<li>$(A==5) ? ! (B==5) : (B==5)$</li>\n\t<li>$((A==5) || (B==5) )\\; \\&amp;\\&amp;\\; !((A==5)\\; \\&amp;\\&amp;\\; (B==5) )$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373085', 'text': '<p>What will be the output printed by $\\text{mystery}1(0,6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery1(int a, int b) {\n    if (a &lt;= b) {\n        int m = (a + b) / 2;\n        printf("%d", m);\n        mystery1(a, m-1);\n        mystery1(m+1, b);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '3102546', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373086', 'text': '<p>What will be output of following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid xyz(int i)\n{\n    if(--i)\n    {\n        xyz(i++);\n        printf("%d",i);\n    }\n}\nmain()\n{\n    xyz(5);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>It is an infinite recursion since no base case</li>\n\t<li>$2345$</li>\n\t<li>$54321$</li>\n\t<li>$1234$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373088', 'text': '<p>Which of the following(s) are true for following function</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\nif(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$&nbsp;by following line&nbsp;return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,recursion,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373096', 'text': '<p>The statement</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\ncounter % 2 ? printf("A") : printf("B");</pre>\n\n<p>can $\\text{NOT}$ be rewritten as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( --counter &gt;= 1 )\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt;= 1 )\n    if (counter % 2)\n        printf("A");\n    else\n        printf("B");\n--counter;</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile ( counter &gt; 1 )\n{\n    --counter;\n    if ( counter % 2 )\n        printf("A");\n    else\n        printf("B");\n}</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ndo\n{\n    --counter;\n    printf( counter % 2 ? "A" : "B" );\n} while ( counter &gt;= 2 );</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'B;D', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373101', 'text': '<p>Which of the following(s) will evaluate to true</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0\\; \\&amp;\\&amp;\\; 0 == 0$</li>\n\t<li>$0\\; \\&amp;\\&amp;\\; 1 == 0$</li>\n\t<li>$1\\; ||\\; 0 == 0$</li>\n\t<li>$1\\; ||\\; 1 == 0$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373094', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint find(int n) {\n\n    int i, j, k, a = 1;\n\n    for (i = 1; i &lt;= n; i++)\n\n        for (j = 1; j &lt;= i; j++)\n\n            for (k = 1; k &lt;= j; k++)\n\n                a = a + 1;\n\n    return a;\n}</pre>\n\n<p>What will be the value of find$(10)$?</p>', 'type': 'Numerical', 'answer': '221', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,numerical-answers,programming,programming-in-c,loop,goclasses,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373100', 'text': '<p>What will be the output printed by the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i = 1;\n    for(i = 0; i&lt;10; i+3)\n    switch(i)\n    {\n        case 3:\n            printf("Hi. This is case 3");\n            break;\n        case 6:\n            printf("Hi. This is case 6");\n            break;\n            break;\n        default:\n            printf("Hi. This is default");\n            break;\n    }\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Hi. This is case $3$</li>\n\t<li>Hi. This is case $6$</li>\n\t<li>Infinite Execution</li>\n\t<li>Hi. This is default</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'C', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373084', 'text': '<p>What will be output printed by $\\text{mystery}2(6)$?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery2(int n) {\n    if (n &gt; 0) {\n        printf("%d", n);\n        mystery2(n-2);\n        mystery2(n-3);\n        printf("%d", n);\n    }\n}\n</pre>', 'type': 'Numerical', 'answer': '642211431136', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,recursion,numerical-answers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373102', 'text': '<p>Which of the following expressions will evaluate to true?<br>\nINT_MIN is the minimum signed integer in the system which is using 2\'s complement representation for signed integers and variables are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint x = 5, i = -7;</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>((x &gt;&gt; 2) &lt;&lt; 2) &lt;= x</li>\n\t<li>~ 1&amp;&amp; 1</li>\n\t<li>INT_MIN == -INT_MIN</li>\n\t<li>-10 &lt; i &lt;-1</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;B;C', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq4,goclasses,programming,programming-in-c,number-representation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '373098', 'text': '<p>What will be the output?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a = 4, b =15, c =29;\nif(c&gt;b&gt;a)\n    printf("TRUE");\nelse\n    printf("FALSE");\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{TRUE}$</li>\n\t<li>$\\text{FALSE}$</li>\n\t<li>Syntax Error</li>\n\t<li>Compilation Error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,1-mark', 'category': 'Programming in C'}]}]}
       </script>
       

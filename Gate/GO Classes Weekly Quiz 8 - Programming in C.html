@@ -1,4 +1,72 @@
-<div><span>Q1</span> - <p>Consider below four program fragments. Which of the program(s) is/are likely to produce run time error or memory leak. Assume malloc is always successful, and sizes are as follows -</p>
+<div><span>Q1</span> - <p>Consider the following declaration of struct.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct myst
+    char a[20];
+    char *b;
+    struct myst *p;
+x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
+</pre>
+
+<p>What will be the output of the following print statement?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Overflow</li>
+	<li>Classes</li>
+	<li>verflow</li>
+	<li>lasses</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+struct s
+    int i;
+    struct s *p;
+;
+
+struct s arr[4] =  7, arr+3,
+    8, arr+2,
+    9, arr,
+    10, arr+1,
+;
+
+struct s *ap[] = arr+3, arr+2, arr+1, arr;
+struct s **pp =ap;
+int main()
+
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>7</li>
+	<li>10</li>
+	<li>9</li>
+	<li>8</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Assume that an int variable takes 4 bytes and a char variable takes 1 byte. What is the output of the code below?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int main()
+
+    int arr[]=10,20,30,40,50,60;
+    int *ptr1=arr;
+    int *ptr2=arr+5;
+    printf("Number of elements between two pointer are: 
+    (ptr2 - ptr1));
+    printf("Number of bytes between two pointer are: 
+    (char*)ptr2 - (char*)ptr1);
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 20</li>
+	<li>Number of elements between two pointer are: 20. Number of bytes between two pointers are: 20</li>
+	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 5</li>
+	<li>Compile time error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider below four program fragments. Which of the program(s) is/are likely to produce run time error or memory leak. Assume malloc is always successful, and sizes are as follows -</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 sizeof(int *) = 8 bytes
@@ -55,61 +123,7 @@ int main()
 	<li>Program 2</li>
 	<li>Program 3</li>
 	<li>Program 4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-struct s
-    int i;
-    struct s *p;
-;
-
-struct s arr[4] =  7, arr+3,
-    8, arr+2,
-    9, arr,
-    10, arr+1,
-;
-
-struct s *ap[] = arr+3, arr+2, arr+1, arr;
-struct s **pp =ap;
-int main()
-
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>7</li>
-	<li>10</li>
-	<li>9</li>
-	<li>8</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-struct _myst
-    char b[20];
-    char *a;
-    struct _myst *c;
-x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
-typedef struct _myst myst;
-
-myst* mystry(myst *p, int n)
-    if (n   lt;=0) return p++;
-    if(n
-    else return mystry(p-   gt;c, n-1);
-
-int main()
-
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>GATE</li>
-	<li>Overflow</li>
-	<li>Run time error</li>
-	<li>Compile-time error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What will be the output of the following program?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the output of the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 struct s
@@ -136,7 +150,99 @@ int main()
 	<li>7  8  10</li>
 	<li>7  8  9</li>
 	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Based on the struct alignment discussed in class,</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>
+
+<p>Assume that malloc is successful in all cases.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 1:
+int *p = malloc(sizeof(int));
+*p = 0;
+free(p);
+*p = 0;
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program2:
+int *p = malloc(sizeof(int));
+*p = 0;
+free(p);
+p = 0;
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 3:
+int *p = malloc(3*sizeof(int));
+*p = 0;
+p++;
+free(p);
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Program 4:
+int *p = malloc(sizeof(char));
+*p = 0;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Program 1</li>
+	<li>Program 2</li>
+	<li>Program 3</li>
+	<li>Program 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following declaration of a.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[100][200][30];
+</pre>
+
+<p>What will be the integer value of a[50][300] - a[10][500]?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include    lt;stdio.h   gt;
+int main()
+
+    int i= 255;
+    short int *s= (short int *)   amp;i;
+    printf("
+
+</pre>
+
+<p><br>
+What will be the output of the above program in little-endian   nbsp;and big-endian,   nbsp;respectively?</p>
+
+<p>(65280 is  255×2^8)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>255,  0</li>
+	<li>65280,  0</li>
+	<li>0, 0</li>
+	<li>0,  65280</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+struct _myst
+    char b[20];
+    char *a;
+    struct _myst *c;
+x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
+typedef struct _myst myst;
+
+myst* mystry(myst *p, int n)
+    if (n   lt;=0) return p++;
+    if(n
+    else return mystry(p-   gt;c, n-1);
+
+int main()
+
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>GATE</li>
+	<li>Overflow</li>
+	<li>Run time error</li>
+	<li>Compile-time error</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Based on the struct alignment discussed in class,</p>
 
 <p>What are the sizes of  and  respectively?</p>
 
@@ -187,115 +293,8 @@ struct foo4
 	<li>9,  12, 16,  20</li>
 	<li>12,  16,  12,  20</li>
 	<li>12,  20,  20,  20</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following declaration of struct.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-struct myst
-    char a[20];
-    char *b;
-    struct myst *p;
-x[2] = "GATE", "Overflow", x+1, "GO", "Classes", x, *p = x;
-</pre>
-
-<p>What will be the output of the following print statement?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-printf("
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Overflow</li>
-	<li>Classes</li>
-	<li>verflow</li>
-	<li>lasses</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following declaration of a.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int a[100][200][30];
-</pre>
-
-<p>What will be the integer value of a[50][300] - a[10][500]?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>
-
-<p>Assume that malloc is successful in all cases.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Program 1:
-int *p = malloc(sizeof(int));
-*p = 0;
-free(p);
-*p = 0;
-</pre>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Program2:
-int *p = malloc(sizeof(int));
-*p = 0;
-free(p);
-p = 0;
-</pre>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Program 3:
-int *p = malloc(3*sizeof(int));
-*p = 0;
-p++;
-free(p);
-</pre>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Program 4:
-int *p = malloc(sizeof(char));
-*p = 0;
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Program 1</li>
-	<li>Program 2</li>
-	<li>Program 3</li>
-	<li>Program 4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Assume that an int variable takes 4 bytes and a char variable takes 1 byte. What is the output of the code below?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int main()
-
-    int arr[]=10,20,30,40,50,60;
-    int *ptr1=arr;
-    int *ptr2=arr+5;
-    printf("Number of elements between two pointer are: 
-    (ptr2 - ptr1));
-    printf("Number of bytes between two pointer are: 
-    (char*)ptr2 - (char*)ptr1);
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 20</li>
-	<li>Number of elements between two pointer are: 20. Number of bytes between two pointers are: 20</li>
-	<li>Number of elements between two pointer are: 5. Number of bytes between two pointers are: 5</li>
-	<li>Compile time error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include    lt;stdio.h   gt;
-int main()
-
-    int i= 255;
-    short int *s= (short int *)   amp;i;
-    printf("
-
-</pre>
-
-<p><br>
-What will be the output of the above program in little-endian   nbsp;and big-endian,   nbsp;respectively?</p>
-
-<p>(65280 is  255×2^8)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>255,  0</li>
-	<li>65280,  0</li>
-	<li>0, 0</li>
-	<li>0,  65280</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '374316', 'text': '<p>Consider below four program fragments. Which of the program(s) is/are likely to produce run time error or memory leak. Assume malloc is always successful, and sizes are as follows -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int *) = 8 bytes\nsizeof(double) = 8 bytes\nsizeof(char) = 1 byte\nsizeof(int) = 4 byte\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nint *array = malloc(n);\nfor (int i=0; i&lt;n; i+=1) array[i]=i*i;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstruct p { double x; double y; };\nstruct p *array = malloc(n * sizeof(struct p *));\nfor (int i=0; i&lt;n; i+=1) array[i].x=2.3\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint *p = malloc(sizeof(int));\n*p = 42;\np = malloc(sizeof(int));\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nvoid populate(int *a)\n{\n    int *parray = malloc(2 * sizeof(int));\n    parray[0] = 37;\n    parray[1] = 73;\n    a = parray;\n    \n}\n\nint main()\n{\n&nbsp; &nbsp; int *a = NULL;\n&nbsp; &nbsp; populate(a);\n&nbsp; &nbsp; printf("a[0] = %d and a[1] = %d\\n", a[0], a[1]);\n&nbsp; &nbsp; return 0;\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374317', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    8, arr+1,\n};\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d ", ap[++pp[2]-&gt;i-6]-&gt;i++);\n    printf("%d ", pp[1]++-&gt;p++-&gt;i);\n    printf("%d", ++arr[2].p-&gt;i);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9\\; 10\\; 9$</li>\n\t<li>$7 \\;8\\; 10$</li>\n\t<li>$7\\; 8\\; 9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374310', 'text': '<p>Based on the struct alignment discussed in class,</p>\n\n<p>What are the sizes of $\\textsf{foo1, foo2, foo3}$ and $\\textsf{foo4}$ respectively?</p>\n\n<p>Sizes of primitive data types are given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes\nsizeof(short) = 2 bytes\nsizeof(char) = 1 byte\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct foo1 {\n    int d1;\n    char c1;\n    int d2;\n};\n\nstruct foo2 {\n    int d1;\n    char c1;\n    int d2;\n    char c2;\n    short s;\n};\n\nstruct foo3 {\n    int d1;\n    int d2;\n    char c1;\n    char c2;\n    short s;\n};\n\nstruct foo4 {\n    char c1;\n    int d1;\n    short s;\n    int d2;\n    char c2;\n};\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9,\\; 12,\\; 12,\\; 12$</li>\n\t<li>$9,\\; 12,\\;16,\\; 20$</li>\n\t<li>$12,\\; 16,\\; 12,\\; 20$</li>\n\t<li>$12,\\; 20,\\; 20,\\; 20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374313', 'text': '<p>Consider the following declaration of struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct myst{\n    char a[20];\n    char *b;\n    struct myst *p;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\n</pre>\n\n<p>What will be the output of the following print statement?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%s", p++-&gt;p-&gt;b++);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Overflow</li>\n\t<li>Classes</li>\n\t<li>verflow</li>\n\t<li>lasses</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374308', 'text': '<p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>\n\n<p>Assume that malloc is successful in all cases.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\n*p = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram2:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\np = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3:\nint *p = malloc(3*sizeof(int));\n*p = 0;\np++;\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4:\nint *p = malloc(sizeof(char));\n*p = 0;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374315', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i= 255;\n    short int *s= (short int *)&amp;i;\n    printf("%d\\n", *s);\n}\n</pre>\n\n<p><br>\nWhat will be the output of the above program in little-endian&nbsp;and big-endian,&nbsp;respectively?</p>\n\n<p>$(65280\\text{ is } 255\\times2^8)$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$255,\\; 0$</li>\n\t<li>$65280,\\; 0$</li>\n\t<li>$0,\\;0$</li>\n\t<li>$0,\\; 65280$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,output,2-marks,little-endian-big-endian', 'category': 'Programming in C'}]
-      let data={'name': 'GO Classes Weekly Quiz 8 | Programming in C', 'duration': '40', 'total_qs': '10', 'total_qs_one': 2, 'total_qs_two': 8, 'apti_num_qs': 0, 'technical_num_qs': 10, 'apti_marks': 0, 'technical_marks': 18, 'total_marks': 18, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 10, 'marks': 18, 'question': [{'contents': '', 'post_id': '374316', 'text': '<p>Consider below four program fragments. Which of the program(s) is/are likely to produce run time error or memory leak. Assume malloc is always successful, and sizes are as follows -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int *) = 8 bytes\nsizeof(double) = 8 bytes\nsizeof(char) = 1 byte\nsizeof(int) = 4 byte\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nint *array = malloc(n);\nfor (int i=0; i&lt;n; i+=1) array[i]=i*i;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstruct p { double x; double y; };\nstruct p *array = malloc(n * sizeof(struct p *));\nfor (int i=0; i&lt;n; i+=1) array[i].x=2.3\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint *p = malloc(sizeof(int));\n*p = 42;\np = malloc(sizeof(int));\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nvoid populate(int *a)\n{\n    int *parray = malloc(2 * sizeof(int));\n    parray[0] = 37;\n    parray[1] = 73;\n    a = parray;\n    \n}\n\nint main()\n{\n&nbsp; &nbsp; int *a = NULL;\n&nbsp; &nbsp; populate(a);\n&nbsp; &nbsp; printf("a[0] = %d and a[1] = %d\\n", a[0], a[1]);\n&nbsp; &nbsp; return 0;\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374317', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    8, arr+1,\n};\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d ", ap[++pp[2]-&gt;i-6]-&gt;i++);\n    printf("%d ", pp[1]++-&gt;p++-&gt;i);\n    printf("%d", ++arr[2].p-&gt;i);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9\\; 10\\; 9$</li>\n\t<li>$7 \\;8\\; 10$</li>\n\t<li>$7\\; 8\\; 9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374310', 'text': '<p>Based on the struct alignment discussed in class,</p>\n\n<p>What are the sizes of $\\textsf{foo1, foo2, foo3}$ and $\\textsf{foo4}$ respectively?</p>\n\n<p>Sizes of primitive data types are given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes\nsizeof(short) = 2 bytes\nsizeof(char) = 1 byte\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct foo1 {\n    int d1;\n    char c1;\n    int d2;\n};\n\nstruct foo2 {\n    int d1;\n    char c1;\n    int d2;\n    char c2;\n    short s;\n};\n\nstruct foo3 {\n    int d1;\n    int d2;\n    char c1;\n    char c2;\n    short s;\n};\n\nstruct foo4 {\n    char c1;\n    int d1;\n    short s;\n    int d2;\n    char c2;\n};\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9,\\; 12,\\; 12,\\; 12$</li>\n\t<li>$9,\\; 12,\\;16,\\; 20$</li>\n\t<li>$12,\\; 16,\\; 12,\\; 20$</li>\n\t<li>$12,\\; 20,\\; 20,\\; 20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374313', 'text': '<p>Consider the following declaration of struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct myst{\n    char a[20];\n    char *b;\n    struct myst *p;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\n</pre>\n\n<p>What will be the output of the following print statement?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%s", p++-&gt;p-&gt;b++);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Overflow</li>\n\t<li>Classes</li>\n\t<li>verflow</li>\n\t<li>lasses</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374308', 'text': '<p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>\n\n<p>Assume that malloc is successful in all cases.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\n*p = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram2:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\np = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3:\nint *p = malloc(3*sizeof(int));\n*p = 0;\np++;\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4:\nint *p = malloc(sizeof(char));\n*p = 0;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374315', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i= 255;\n    short int *s= (short int *)&amp;i;\n    printf("%d\\n", *s);\n}\n</pre>\n\n<p><br>\nWhat will be the output of the above program in little-endian&nbsp;and big-endian,&nbsp;respectively?</p>\n\n<p>$(65280\\text{ is } 255\\times2^8)$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$255,\\; 0$</li>\n\t<li>$65280,\\; 0$</li>\n\t<li>$0,\\;0$</li>\n\t<li>$0,\\; 65280$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,output,2-marks,little-endian-big-endian', 'category': 'Programming in C'}]}]}
+      let data={'name': 'GO Classes Weekly Quiz 8 | Programming in C', 'duration': '40', 'total_qs': '10', 'total_qs_one': 2, 'total_qs_two': 8, 'apti_num_qs': 0, 'technical_num_qs': 10, 'apti_marks': 0, 'technical_marks': 18, 'total_marks': 18, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 10, 'marks': 18, 'question': [{'contents': '', 'post_id': '374313', 'text': '<p>Consider the following declaration of struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct myst{\n    char a[20];\n    char *b;\n    struct myst *p;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\n</pre>\n\n<p>What will be the output of the following print statement?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%s", p++-&gt;p-&gt;b++);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Overflow</li>\n\t<li>Classes</li>\n\t<li>verflow</li>\n\t<li>lasses</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374311', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\n\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    10, arr+1,\n};\n\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d", ap[pp[0]-&gt;p-&gt;i%2]-&gt;i++);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$10$</li>\n\t<li>$9$</li>\n\t<li>$8$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374309', 'text': '<p>Assume that an int variable takes $4$ bytes and a char variable takes $1$ byte. What is the output of the code below?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint main()\n{\n    int arr[]={10,20,30,40,50,60};\n    int *ptr1=arr;\n    int *ptr2=arr+5;\n    printf("Number of elements between two pointer are: %d.", \n    (ptr2 - ptr1));\n    printf("Number of bytes between two pointer are: %d.", \n    (char*)ptr2 - (char*)ptr1);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Number of elements between two pointer are: $5$. Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $20.$ Number of bytes between two pointers are: $20$</li>\n\t<li>Number of elements between two pointer are: $5.$ Number of bytes between two pointers are: $5$</li>\n\t<li>Compile time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,pointers,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374316', 'text': '<p>Consider below four program fragments. Which of the program(s) is/are likely to produce run time error or memory leak. Assume malloc is always successful, and sizes are as follows -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int *) = 8 bytes\nsizeof(double) = 8 bytes\nsizeof(char) = 1 byte\nsizeof(int) = 4 byte\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nint *array = malloc(n);\nfor (int i=0; i&lt;n; i+=1) array[i]=i*i;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstruct p { double x; double y; };\nstruct p *array = malloc(n * sizeof(struct p *));\nfor (int i=0; i&lt;n; i+=1) array[i].x=2.3\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint *p = malloc(sizeof(int));\n*p = 42;\np = malloc(sizeof(int));\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nvoid populate(int *a)\n{\n    int *parray = malloc(2 * sizeof(int));\n    parray[0] = 37;\n    parray[1] = 73;\n    a = parray;\n    \n}\n\nint main()\n{\n&nbsp; &nbsp; int *a = NULL;\n&nbsp; &nbsp; populate(a);\n&nbsp; &nbsp; printf("a[0] = %d and a[1] = %d\\n", a[0], a[1]);\n&nbsp; &nbsp; return 0;\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374317', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct s{\n    int i;\n    struct s *p;\n};\nstruct s arr[4] = { 7, arr+3,\n    8, arr+2,\n    9, arr,\n    8, arr+1,\n};\nstruct s *ap[] = {arr+3, arr+2, arr+1, arr};\nstruct s **pp =ap;\nint main()\n{\n    printf("%d ", ap[++pp[2]-&gt;i-6]-&gt;i++);\n    printf("%d ", pp[1]++-&gt;p++-&gt;i);\n    printf("%d", ++arr[2].p-&gt;i);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9\\; 10\\; 9$</li>\n\t<li>$7 \\;8\\; 10$</li>\n\t<li>$7\\; 8\\; 9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374308', 'text': '<p>Mark all options which are likely to create problems with memory, i.e., run time error or has a memory leak.</p>\n\n<p>Assume that malloc is successful in all cases.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\n*p = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram2:\nint *p = malloc(sizeof(int));\n*p = 0;\nfree(p);\np = 0;\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3:\nint *p = malloc(3*sizeof(int));\n*p = 0;\np++;\nfree(p);\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4:\nint *p = malloc(sizeof(char));\n*p = 0;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374314', 'text': '<p>Consider the following declaration of $a$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[100][200][30];\n</pre>\n\n<p>What will be the integer value of $a[50][300] - a[10][500]?$</p>', 'type': 'Numerical', 'answer': '234000', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,array,numerical-answers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374315', 'text': '<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include &lt;stdio.h&gt;\nint main()\n{\n    int i= 255;\n    short int *s= (short int *)&amp;i;\n    printf("%d\\n", *s);\n}\n</pre>\n\n<p><br>\nWhat will be the output of the above program in little-endian&nbsp;and big-endian,&nbsp;respectively?</p>\n\n<p>$(65280\\text{ is } 255\\times2^8)$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$255,\\; 0$</li>\n\t<li>$65280,\\; 0$</li>\n\t<li>$0,\\;0$</li>\n\t<li>$0,\\; 65280$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq8,goclasses,programming,programming-in-c,output,2-marks,little-endian-big-endian', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374312', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nstruct _myst{\n    char b[20];\n    char *a;\n    struct _myst *c;\n}x[2] = {"GATE", "Overflow", x+1, "GO", "Classes", x}, *p = x;\ntypedef struct _myst myst;\n\nmyst* mystry(myst *p, int n){\n    if (n&lt;=0) return p++;\n    if(n%2) return mystry(p-&gt;c, n-2);\n    else return mystry(p-&gt;c, n-1);\n}\nint main()\n{\n    printf("%s",mystry(p,2023)-&gt;a);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GATE</li>\n\t<li>Overflow</li>\n\t<li>Run time error</li>\n\t<li>Compile-time error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374310', 'text': '<p>Based on the struct alignment discussed in class,</p>\n\n<p>What are the sizes of $\\textsf{foo1, foo2, foo3}$ and $\\textsf{foo4}$ respectively?</p>\n\n<p>Sizes of primitive data types are given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes\nsizeof(short) = 2 bytes\nsizeof(char) = 1 byte\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct foo1 {\n    int d1;\n    char c1;\n    int d2;\n};\n\nstruct foo2 {\n    int d1;\n    char c1;\n    int d2;\n    char c2;\n    short s;\n};\n\nstruct foo3 {\n    int d1;\n    int d2;\n    char c1;\n    char c2;\n    short s;\n};\n\nstruct foo4 {\n    char c1;\n    int d1;\n    short s;\n    int d2;\n    char c2;\n};\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$9,\\; 12,\\; 12,\\; 12$</li>\n\t<li>$9,\\; 12,\\;16,\\; 20$</li>\n\t<li>$12,\\; 16,\\; 12,\\; 20$</li>\n\t<li>$12,\\; 20,\\; 20,\\; 20$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}]}]}
       </script>
       

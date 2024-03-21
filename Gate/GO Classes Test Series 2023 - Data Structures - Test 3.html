@@ -1,57 +1,41 @@
-<div><span>Q1</span> - <p>Consider 2 problems:</p>
-
-<ol>
-	<li>Problem 1: Given a queue Q containing n elements, transfer these items on to a stack S (initially empty) so that the front element of Q appears at the top of the stack and the order of all other items is preserved. Using enqueue and dequeue operations for the queue, and push and pop operations for the stack.</li>
-	<li>Problem 2: Generate the permutations possible when using only a single stack and push and pop are the only operations allowed.</li>
-</ol>
+<div><span>Q1</span> - <p>Consider a circular array-based implementation of the queue where the front and rear has   nbsp;been initialized to -1. Array size is N.<br>
+Which of the following statements is true for the number of elements or size of the queue?</p>
 
 <ul>
-	<li>S1: An efficient algorithm to solve problem 1 will take O(n) time and a constant amount of additional storage.</li>
-	<li>S2: The no of stack permutations on a stack with n elements is equal to the number of balanced parentheses with 2n total parentheses.</li>
+	<li>S1: if front gt; rear then size = N- front + rear +1</li>
+	<li>S2: If front ≤ rear then size = rear - front +1</li>
 </ul>
 
-<p>Which of the following is correct?</p>
+<ol style="list-style-type:upper-alpha">
+	<li>S1 is true but S2 is false</li>
+	<li>S1 is false but S2 is true</li>
+	<li>Both statements are true</li>
+	<li>Both statements are false</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following pseudocode:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Declare a stack of characters
+while ( there are more characters in the word to read )
+
+    read a character
+    push the character on the stack
+
+while ( the stack is not empty )
+
+    pop a character off the stack
+    write the character to the screen
+
+</pre>
+
+<p><br>
+What is written to the screen for the input "carpets"?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>Only S1 is correct</li>
-	<li>Only S2 is correct</li>
-	<li>Both S1 and S2 are correct</li>
-	<li>None of them is correct</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>
-Which of the following is/are correct ?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Minimum number of extra stack(s) is 1</li>
-	<li>Time Complexity is O(n)</li>
-	<li>Space Complexity is O(1)</li>
-	<li>Space Complexity is O(n)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Suppose, you have proposed an optimal algorithm which uses extra stack(s) to design a stack such that  should be O(1) for n number of elements.</p>
-
-<p>Consider the following statements:</p>
-
-<ul>
-	<li>S1 : Minimum number of extra stack(s) : 1</li>
-	<li>S2 : Time Complexity : O(1)</li>
-	<li>S3 : Space Complexity : O(n)</li>
-</ul>
-
-<p>Which of the following is/are correct?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Both S1 and S2 are correct but not S3</li>
-	<li>Both S1 and S3 are correct but not S2</li>
-	<li>Both S2 and S3 are correct but not S1</li>
-	<li>S1, S2 and S3 are correct</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider a program P that does not use recursion. P is a program which tries to reverse a queue using other auxiliary queues.</p>
-
-<p>Which of the following is true about P?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>P reverses a given queue using a minimum of one auxiliary queue.</li>
-	<li>P reverses a given queue using a minimum of two auxiliary queues.</li>
-	<li>P reverses a given queue using a minimum of three auxiliary queues.</li>
-	<li>P reverses a given queue using a minimum of four auxiliary queues.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>A stack of int is implemented using an array as the following data type:</p>
+	<li>serc</li>
+	<li>carpets</li>
+	<li>steprac</li>
+	<li>ccaarrppeettss</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>A stack of int is implemented using an array as the following data type:</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #define SIZE 20
@@ -94,157 +78,41 @@ line Z should be return s-   gt;data[s-   gt;top]
 </pre>
 	</li>
 	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>An SQueue is a queue implemented using two stacks. SQueue supports two operations enqueue() and dequeue().<br>
-Consider a below pseudo code that implements enqueue() and dequeue() for SQueue using two stacks inbox and outbox.<br>
-   nbsp;</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider a problem: Given an array, check whether the array is in sorted order or not. Suppose both iterative and recursive approaches are used to solve this problem.</p>
 
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Stack inbox, outbox; 
-void enqueue(int item) 
-    inbox.push(item);
-
-void dequeue() 
-    if (outbox.isEmpty())
-    while (!inbox.isEmpty())
-    outbox.push(in.pop());
-    return outbox.pop();
-
-</pre>
-
-<p><br>
-Consider the state of SQueue which is initialized with 100 items i.e. 100 enqueue operations have been performed in SQueue.</p>
-
-<p>Which of the following(s) is/are true if we want to dequeue all elements from SQueue?</p>
+<p>Which of the following statements is/are correct?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>First dequeue() will result in a total of 200 calls to push and pop operations.</li>
-	<li>Apart from the first dequeue(), each of the remaining calls to dequeue will take a total of 100 calls to push and pop operations.</li>
-	<li>Total calls to push and pop were required to dequeue all 100 elements is 300.</li>
-	<li>Total calls to push and pop were required to dequeue all 100 elements is 301.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Here is an <strong>INCORRECT</strong> pseudocode for the algorithm which is supposed to determine whether a sequence of parentheses is balanced:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Declare a character stack
-while ( more input is available)
-
-    read a character
-    if ( the character is a '(' )
-        push it on the stack
-    else if ( the character is a ')' and the stack is not empty )
-        pop a character off the stack
-    else
-        print "unbalanced" and exit
-
-print "balanced"
-</pre>
-
-<p>Which of these unbalanced sequences does the above code think is balanced?</p>
+	<li>Recursive approach gives space complexity as O(n) for recursive stack space.</li>
+	<li>Iterative approach gives Auxiliary space as Θ(n).</li>
+	<li>Time Complexity for recursive approach is O(n).</li>
+	<li>Time Complexity for iterative approach is Θ(n log n).</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Suppose that you implement a queue using a null-terminated singly-linked list, maintaining a reference to the item least recently added (the front of the list) but not maintaining a reference to the item most recently added (the end of the list).<br>
+What are the worst case running times for enqueue and dequeue respectively?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>((())</li>
-	<li>())(()</li>
-	<li>(()()))</li>
-	<li>(()))()</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Which of the following is/are correct about implementation of stack and queue.</p>
+	<li>O(1) for both operations</li>
+	<li>O(1) for enqueue and O(n) for dequeue</li>
+	<li>O(n) for enqueue and O(1) for dequeue</li>
+	<li>O(n) for both operations</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Suppose, you have proposed an optimal algorithm which uses extra stack(s) to design a stack such that  should be O(1) for n number of elements.</p>
 
-<ol style="list-style-type:upper-alpha">
-	<li>If stack is implemented as an array, all the push and pop operations can be performed in constant time.</li>
-	<li>If stack is implemented as a linked list, all the push and pop operations can be performed in constant time.</li>
-	<li>If queue is implemented as an array, all the enqueue and dequeue operations can be performed in constant time.</li>
-	<li>If queue is implemented as a linked list, all the enqueue and dequeue operations can be performed in constant time.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Suppose you implement a queue using a singly linked list with head and tail pointers so that the front of the queue is at the tail of the list, and the rear of the queue is at the head of the list.<br>
-What is the best possible worst-case running time for enqueue and dequeue in this situation? (As a reminder, enqueue occurs at the rear of the queue.)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>O(1) for both functions.</li>
-	<li>O(1) for enqueue and O(n) for dequeue.</li>
-	<li>O(n) for enqueue and O(1) for dequeue.</li>
-	<li>O(n) for both functions.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following pseudocode:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-Declare a stack of characters
-while ( there are more characters in the word to read )
-
-    read a character
-    push the character on the stack
-
-while ( the stack is not empty )
-
-    pop a character off the stack
-    write the character to the screen
-
-</pre>
-
-<p><br>
-What is written to the screen for the input "carpets"?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>serc</li>
-	<li>carpets</li>
-	<li>steprac</li>
-	<li>ccaarrppeettss</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>We have an implementation that supports the following operations on a stack (in the instructions below, s is the name of the stack).</p>
+<p>Consider the following statements:</p>
 
 <ul>
-	<li>isempty(s) : returns True if s is empty, and False otherwise.</li>
-	<li>top(s) : returns the top element of the stack, but does not pop the stack; returns null if the stack is empty.</li>
-	<li>push(s, x) : places x on top of the stack.</li>
-	<li>pop(s) : pops the stack; does nothing if s is empty.</li>
+	<li>S1 : Minimum number of extra stack(s) : 1</li>
+	<li>S2 : Time Complexity : O(1)</li>
+	<li>S3 : Space Complexity : O(n)</li>
 </ul>
 
-<p>Consider the following code:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-push_pop (x) :
-    s=empty
-    for i=1 to length ( x ) :
-        if ( x [i] == ’(’ ) :
-            push ( s , x [ i ] )
-        else :
-            while ( top (s)== ’ ( ’ ) :
-                pop ( s )
-            end while
-            push ( s , ’ ) ’ )
-            push ( s , ’ ( ’ )
-        end if
-    end for
-    while not isempty ( s ) :
-        print top(s)
-        pop (s)
-    end while
-</pre>
-
-<p><br>
-What is the output of this program when push pop(”(((()((())((((”) is executed?</p>
+<p>Which of the following is/are correct?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>)())((((</li>
-	<li>((((())(</li>
-	<li>((((()))</li>
-	<li>)())(())</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>A function f defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>
-
-<p>f(ϕ)=0 and<br>
-
-    <br>
-    f(push(S, i))={[ <br>
-    2^max (f(S), 0)+i,      amp;  if , i= even; <br>
-    2^max (f(S), 0)-i,  amp;  if , i= odd <br> ]}<br>
-</p>
-
-<p>for all stacks S and integers i.</p>
-
-<p>Here, ϕ stands for an empty set and push(S, i) also denotes the stack of integers which is a set with a order and it can be obtained when we push an element i on the stack S and after pushing element i, stack S has a top element i. With respect to set, say, if S = {2, 5, 4} denotes the stack of integers with bottom element as 2 and top element as 4 at a particular instance then set push(S, 7) = {2, 5, 4, 7} denotes the stack of integers with bottom element as 2 and top element as 7. and now, S becomes {2, 5, 4, 7}.</p>
-
-<p>If a stack S contains the integers 2,1,2 in order from bottom to top, what is f(S)?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>7</li>
-	<li>9</li>
-	<li>128</li>
-	<li>130</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>
+	<li>Both S1 and S2 are correct but not S3</li>
+	<li>Both S1 and S3 are correct but not S2</li>
+	<li>Both S2 and S3 are correct but not S1</li>
+	<li>S1, S2 and S3 are correct</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>
 
 <p>Which of the following pair(s) of implementations for push() and pop() work?</p>
 
@@ -297,101 +165,26 @@ pop()
 
 </pre>
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider a circular array-based implementation of the queue where the front and rear has   nbsp;been initialized to -1. Array size is N.<br>
-Which of the following statements is true for the number of elements or size of the queue?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider 2 problems:</p>
 
-<ul>
-	<li>S1: if front gt; rear then size = N- front + rear +1</li>
-	<li>S2: If front ≤ rear then size = rear - front +1</li>
-</ul>
-
-<ol style="list-style-type:upper-alpha">
-	<li>S1 is true but S2 is false</li>
-	<li>S1 is false but S2 is true</li>
-	<li>Both statements are true</li>
-	<li>Both statements are false</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Imagine four railroad cars positioned on the input side of the track in the figure below, numbered 1, 2, 3, and 4, from left to right. Suppose we perform the following sequence of operations (which is compatible with the direction of the arrows in the diagram and does not require cars to ”jump over” other cars):</p>
-
-<ol start="1" style="list-style-type:lower-alpha">
-	<li>move car 1 into the stack;</li>
-	<li>move car 2 into the stack;</li>
-	<li>move car 2 into the output;</li>
-	<li>move car 3 into the stack;</li>
-	<li>move car 4 into the stack;</li>
-	<li>move car 4 into the output;</li>
-	<li>move car 3 into the output;</li>
-	<li>move car 1 into the output.</li>
+<ol>
+	<li>Problem 1: Given a queue Q containing n elements, transfer these items on to a stack S (initially empty) so that the front element of Q appears at the top of the stack and the order of all other items is preserved. Using enqueue and dequeue operations for the queue, and push and pop operations for the stack.</li>
+	<li>Problem 2: Generate the permutations possible when using only a single stack and push and pop are the only operations allowed.</li>
 </ol>
 
-<p><strong><img src="https://lh4.googleusercontent.com/61OcLgA3dnrOmzX3SyRszs-0a0gZTZODxOFq5VLZHZ8z7iawl_qF3N7CrpJGdi272BYeod9wBgabEh9DpJAxnME7XFvZcyd1GHjCcV8kkWh9eoynvVHsKIvgqh7fgtKxEJwYoRw4sYZn0T1iDQ"></strong><br>
-As a result of these operations the original order of the cars, 1234, has been changed into 2431.<br>
-If there are six railroad cars numbered 123456, Which of the following statements is/are correct?</p>
+<ul>
+	<li>S1: An efficient algorithm to solve problem 1 will take O(n) time and a constant amount of additional storage.</li>
+	<li>S2: The no of stack permutations on a stack with n elements is equal to the number of balanced parentheses with 2n total parentheses.</li>
+</ul>
+
+<p>Which of the following is correct?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>They can’t be permuted into the order 154623</li>
-	<li>They can be permuted into the order 254613</li>
-	<li>They can’t be permuted into the order 654123</li>
-	<li>They can be permuted into the order 325641</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - Consider a queue which supports print() function in addition to enqueue() and dequeue().
-print() is a function that prints an element of the head of the queue without removing the element.
-
-Suppose the initial content of the queue is 1,2,3,4,5 where 1 is on the head.
-How Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as 5,4,3,2,1) such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>A queue can be simulated using two stacks. If n enqueue and 1 dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>
-
-<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Minimum pop = 1, Maximum pop = n</li>
-	<li>Minimum pop = 1, Maximum pop = n+1</li>
-	<li>Minimum pop = n, Maximum pop = 2n</li>
-	<li>Minimum pop = n, Maximum pop = 2n-1</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Let s be a sorted array of n integers. Let t(n) denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than 1000 in s.</p>
-
-<p>Which of the following statements is true?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>t(n) is O(1)</li>
-	<li>n    lt; t(n)    lt; n log_2 n</li>
-	<li>n log_2 n    lt; t(n)    lt;  ^nC_2</li>
-	<li>t(n) =  ^nC_2</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Suppose that you implement a queue using a null-terminated singly-linked list, maintaining a reference to the item least recently added (the front of the list) but not maintaining a reference to the item most recently added (the end of the list).<br>
-What are the worst case running times for enqueue and dequeue respectively?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>O(1) for both operations</li>
-	<li>O(1) for enqueue and O(n) for dequeue</li>
-	<li>O(n) for enqueue and O(1) for dequeue</li>
-	<li>O(n) for both operations</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>Consider a problem: Given an array, check whether the array is in sorted order or not. Suppose both iterative and recursive approaches are used to solve this problem.</p>
-
-<p>Which of the following statements is/are correct?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Recursive approach gives space complexity as O(n) for recursive stack space.</li>
-	<li>Iterative approach gives Auxiliary space as Θ(n).</li>
-	<li>Time Complexity for recursive approach is O(n).</li>
-	<li>Time Complexity for iterative approach is Θ(n log n).</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>A deque (”double-ended queue”) is a linear list for which all the insertions and deletions (and usually all accesses) are made at the ends of the list.</p>
-
-<p>The difference between Queue and Deque is that it does not follow the FIFO (First In, First Out) approach. The second feature of Deque is that we can insert and remove elements from either front or rear ends.</p>
-
-<p>An output-restricted deque is a linear list in which deletions are allowed to take place at only one end but insertion is allowed at both ends.</p>
-
-<p>An input-restricted deque is a linear list in which items may be inserted at one end but removed from either end; clearly, an input-restricted deque can operate either as a stack or as a queue if we consistently remove all items from one of the two ends.</p>
-
-<p>The figure shows types of queues pictorially.</p>
-
-<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10999579607343615324"></p>
-
-<p><br>
-An output-restricted deque can be operated as</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Only Stack</li>
-	<li>Only Queue</li>
-	<li>Either as a stack or as a queue</li>
-	<li>Neither as a stack nor as a queue</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>A queue of int is implemented using a circular array as the following data type:</p>
+	<li>Only S1 is correct</li>
+	<li>Only S2 is correct</li>
+	<li>Both S1 and S2 are correct</li>
+	<li>None of them is correct</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>A queue of int is implemented using a circular array as the following data type:</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #define SIZE 20
@@ -430,7 +223,88 @@ Line X is return q-   gt;rear == -1;</pre>
 	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 Line Y is return q-   gt;front == (q-   gt;rear+1) 
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Suppose we have a queue = [3, 14, 1, 20] (here 3 is on the front ) and an empty stack. We are allowed to make only two actions:</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>A function f defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>
+
+<p>f(ϕ)=0 and<br>
+
+    <br>
+    f(push(S, i))={[ <br>
+    2^max (f(S), 0)+i,      amp;  if , i= even; <br>
+    2^max (f(S), 0)-i,  amp;  if , i= odd <br> ]}<br>
+</p>
+
+<p>for all stacks S and integers i.</p>
+
+<p>Here, ϕ stands for an empty set and push(S, i) also denotes the stack of integers which is a set with a order and it can be obtained when we push an element i on the stack S and after pushing element i, stack S has a top element i. With respect to set, say, if S = {2, 5, 4} denotes the stack of integers with bottom element as 2 and top element as 4 at a particular instance then set push(S, 7) = {2, 5, 4, 7} denotes the stack of integers with bottom element as 2 and top element as 7. and now, S becomes {2, 5, 4, 7}.</p>
+
+<p>If a stack S contains the integers 2,1,2 in order from bottom to top, what is f(S)?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>7</li>
+	<li>9</li>
+	<li>128</li>
+	<li>130</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>A deque (”double-ended queue”) is a linear list for which all the insertions and deletions (and usually all accesses) are made at the ends of the list.</p>
+
+<p>The difference between Queue and Deque is that it does not follow the FIFO (First In, First Out) approach. The second feature of Deque is that we can insert and remove elements from either front or rear ends.</p>
+
+<p>An output-restricted deque is a linear list in which deletions are allowed to take place at only one end but insertion is allowed at both ends.</p>
+
+<p>An input-restricted deque is a linear list in which items may be inserted at one end but removed from either end; clearly, an input-restricted deque can operate either as a stack or as a queue if we consistently remove all items from one of the two ends.</p>
+
+<p>The figure shows types of queues pictorially.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10999579607343615324"></p>
+
+<p><br>
+An output-restricted deque can be operated as</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Only Stack</li>
+	<li>Only Queue</li>
+	<li>Either as a stack or as a queue</li>
+	<li>Neither as a stack nor as a queue</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Here is an <strong>INCORRECT</strong> pseudocode for the algorithm which is supposed to determine whether a sequence of parentheses is balanced:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Declare a character stack
+while ( more input is available)
+
+    read a character
+    if ( the character is a '(' )
+        push it on the stack
+    else if ( the character is a ')' and the stack is not empty )
+        pop a character off the stack
+    else
+        print "unbalanced" and exit
+
+print "balanced"
+</pre>
+
+<p>Which of these unbalanced sequences does the above code think is balanced?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>((())</li>
+	<li>())(()</li>
+	<li>(()()))</li>
+	<li>(()))()</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>A queue can be simulated using two stacks. If n enqueue and 1 dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>
+
+<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Minimum pop = 1, Maximum pop = n</li>
+	<li>Minimum pop = 1, Maximum pop = n+1</li>
+	<li>Minimum pop = n, Maximum pop = 2n</li>
+	<li>Minimum pop = n, Maximum pop = 2n-1</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Which of the following is/are correct about implementation of stack and queue.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If stack is implemented as an array, all the push and pop operations can be performed in constant time.</li>
+	<li>If stack is implemented as a linked list, all the push and pop operations can be performed in constant time.</li>
+	<li>If queue is implemented as an array, all the enqueue and dequeue operations can be performed in constant time.</li>
+	<li>If queue is implemented as a linked list, all the enqueue and dequeue operations can be performed in constant time.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Suppose we have a queue = [3, 14, 1, 20] (here 3 is on the front ) and an empty stack. We are allowed to make only two actions:</p>
 
 <ol>
 	<li>Action ”x”: Dequeue an element from the queue and push it to the stack.</li>
@@ -444,7 +318,93 @@ Line Y is return q-   gt;front == (q-   gt;rear+1)
 	<li>xxoxoxooxo</li>
 	<li>xoxxooxoxo</li>
 	<li>xxoxooxxoo</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - Consider a queue which supports print() function in addition to enqueue() and dequeue().
+print() is a function that prints an element of the head of the queue without removing the element.
+
+Suppose the initial content of the queue is 1,2,3,4,5 where 1 is on the head.
+How Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as 5,4,3,2,1) such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>We have an implementation that supports the following operations on a stack (in the instructions below, s is the name of the stack).</p>
+
+<ul>
+	<li>isempty(s) : returns True if s is empty, and False otherwise.</li>
+	<li>top(s) : returns the top element of the stack, but does not pop the stack; returns null if the stack is empty.</li>
+	<li>push(s, x) : places x on top of the stack.</li>
+	<li>pop(s) : pops the stack; does nothing if s is empty.</li>
+</ul>
+
+<p>Consider the following code:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+push_pop (x) :
+    s=empty
+    for i=1 to length ( x ) :
+        if ( x [i] == ’(’ ) :
+            push ( s , x [ i ] )
+        else :
+            while ( top (s)== ’ ( ’ ) :
+                pop ( s )
+            end while
+            push ( s , ’ ) ’ )
+            push ( s , ’ ( ’ )
+        end if
+    end for
+    while not isempty ( s ) :
+        print top(s)
+        pop (s)
+    end while
+</pre>
+
+<p><br>
+What is the output of this program when push pop(”(((()((())((((”) is executed?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>)())((((</li>
+	<li>((((())(</li>
+	<li>((((()))</li>
+	<li>)())(())</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>
+Which of the following is/are correct ?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Minimum number of extra stack(s) is 1</li>
+	<li>Time Complexity is O(n)</li>
+	<li>Space Complexity is O(1)</li>
+	<li>Space Complexity is O(n)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>An SQueue is a queue implemented using two stacks. SQueue supports two operations enqueue() and dequeue().<br>
+Consider a below pseudo code that implements enqueue() and dequeue() for SQueue using two stacks inbox and outbox.<br>
+   nbsp;</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+Stack inbox, outbox; 
+void enqueue(int item) 
+    inbox.push(item);
+
+void dequeue() 
+    if (outbox.isEmpty())
+    while (!inbox.isEmpty())
+    outbox.push(in.pop());
+    return outbox.pop();
+
+</pre>
+
+<p><br>
+Consider the state of SQueue which is initialized with 100 items i.e. 100 enqueue operations have been performed in SQueue.</p>
+
+<p>Which of the following(s) is/are true if we want to dequeue all elements from SQueue?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>First dequeue() will result in a total of 200 calls to push and pop operations.</li>
+	<li>Apart from the first dequeue(), each of the remaining calls to dequeue will take a total of 100 calls to push and pop operations.</li>
+	<li>Total calls to push and pop were required to dequeue all 100 elements is 300.</li>
+	<li>Total calls to push and pop were required to dequeue all 100 elements is 301.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>Suppose you implement a queue using a singly linked list with head and tail pointers so that the front of the queue is at the tail of the list, and the rear of the queue is at the head of the list.<br>
+What is the best possible worst-case running time for enqueue and dequeue in this situation? (As a reminder, enqueue occurs at the rear of the queue.)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>O(1) for both functions.</li>
+	<li>O(1) for enqueue and O(n) for dequeue.</li>
+	<li>O(n) for enqueue and O(1) for dequeue.</li>
+	<li>O(n) for both functions.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 void mystery(orig_stack)
@@ -476,7 +436,7 @@ Suppose the content of orig_stack initially is -1, 7, 0, 3, -2, where -1 is on t
 	<li>7, -1, 0, 3, -2, where 7 is on the top.</li>
 	<li>7, -1, 0, -2, 3, where 7 is on the top.</li>
 	<li>-2, -1, 0, 3, 7, where -2 is on the top.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Consider the following queue of characters, where QUEUE is a circular array which is allocated 6 memory cells with indexing starting from 1.<br>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Consider the following queue of characters, where QUEUE is a circular array which is allocated 6 memory cells with indexing starting from 1.<br>
 Consider the below status of Queue where Front and Rear stores 2 and 4 respectively.<br>
 <strong><img src="https://lh3.googleusercontent.com/vDjvmV30g5G-H9YRkjzaiWN58NjQVYsy9SvFfRBxQOGn_L89cc2AM7Z3NE8KWNr2fzZrB2THRA3A3Te42sCXntyR9Sf7wRDN9Ef6cvHNN4eOl972jSh3rAb205koz01Gbo5y7Lm2dV_vY98geA"></strong><br>
 Five sequences of operations have been performed on the current status of queue as described below.</p>
@@ -496,9 +456,48 @@ Five sequences of operations have been performed on the current status of queue 
 	<li>Front = 4, Rear = 5</li>
 	<li>Front = 6, Rear = 2</li>
 	<li>Front = 6, Rear = 3</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>Imagine four railroad cars positioned on the input side of the track in the figure below, numbered 1, 2, 3, and 4, from left to right. Suppose we perform the following sequence of operations (which is compatible with the direction of the arrows in the diagram and does not require cars to ”jump over” other cars):</p>
+
+<ol start="1" style="list-style-type:lower-alpha">
+	<li>move car 1 into the stack;</li>
+	<li>move car 2 into the stack;</li>
+	<li>move car 2 into the output;</li>
+	<li>move car 3 into the stack;</li>
+	<li>move car 4 into the stack;</li>
+	<li>move car 4 into the output;</li>
+	<li>move car 3 into the output;</li>
+	<li>move car 1 into the output.</li>
+</ol>
+
+<p><strong><img src="https://lh4.googleusercontent.com/61OcLgA3dnrOmzX3SyRszs-0a0gZTZODxOFq5VLZHZ8z7iawl_qF3N7CrpJGdi272BYeod9wBgabEh9DpJAxnME7XFvZcyd1GHjCcV8kkWh9eoynvVHsKIvgqh7fgtKxEJwYoRw4sYZn0T1iDQ"></strong><br>
+As a result of these operations the original order of the cars, 1234, has been changed into 2431.<br>
+If there are six railroad cars numbered 123456, Which of the following statements is/are correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>They can’t be permuted into the order 154623</li>
+	<li>They can be permuted into the order 254613</li>
+	<li>They can’t be permuted into the order 654123</li>
+	<li>They can be permuted into the order 325641</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>Let s be a sorted array of n integers. Let t(n) denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than 1000 in s.</p>
+
+<p>Which of the following statements is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>t(n) is O(1)</li>
+	<li>n    lt; t(n)    lt; n log_2 n</li>
+	<li>n log_2 n    lt; t(n)    lt;  ^nC_2</li>
+	<li>t(n) =  ^nC_2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>Consider a program P that does not use recursion. P is a program which tries to reverse a queue using other auxiliary queues.</p>
+
+<p>Which of the following is true about P?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>P reverses a given queue using a minimum of one auxiliary queue.</li>
+	<li>P reverses a given queue using a minimum of two auxiliary queues.</li>
+	<li>P reverses a given queue using a minimum of three auxiliary queues.</li>
+	<li>P reverses a given queue using a minimum of four auxiliary queues.</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '375819', 'text': '<p>Consider $2$ problems:</p>\n\n<ol>\n\t<li>Problem $1:$ Given a queue $\\text{Q}$ containing $n$ elements, transfer these items on to a stack $\\text{S}$ (initially empty) so that the front element of $\\text{Q}$ appears at the top of the stack and the order of all other items is preserved. Using enqueue and dequeue operations for the queue, and push and pop operations for the stack.</li>\n\t<li>Problem $2:$ Generate the permutations possible when using only a single stack and push and pop are the only operations allowed.</li>\n</ol>\n\n<ul>\n\t<li>$\\text{S1}:$ An efficient algorithm to solve problem $1$ will take $O(n)$ time and a constant amount of additional storage.</li>\n\t<li>$\\text{S2}:$ The no of stack permutations on a stack with $n$ elements is equal to the number of balanced parentheses with $2n$ total parentheses.</li>\n</ul>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{S1}$ is correct</li>\n\t<li>Only $\\text{S2}$ is correct</li>\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct</li>\n\t<li>None of them is correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375823', 'text': '<p>Suppose, you have proposed an optimal algorithm which uses extra stack(s) to design a stack such that $\\textsf{GetMinimum()}$ should be $O(1)$ for n number of elements.</p>\n\n<p>Consider the following statements:</p>\n\n<ul>\n\t<li>$\\text{S1} :$ Minimum number of extra stack(s) $: 1$</li>\n\t<li>$\\text{S2} :$ Time Complexity $: O(1)$</li>\n\t<li>$\\text{S3} :$ Space Complexity $: O(n)$</li>\n</ul>\n\n<p>Which of the following is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct but not $\\text{S3}$</li>\n\t<li>Both $\\text{S1}$ and $\\text{S3}$ are correct but not $\\text{S2}$</li>\n\t<li>Both $\\text{S2}$ and $\\text{S3}$ are correct but not $\\text{S1}$</li>\n\t<li>$\\text{S1, S2}$ and $\\text{S3}$ are correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,stack,time-complexity,space-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375835', 'text': '<p>Consider a program $\\text{P}$ that does not use recursion. $\\text{P}$ is a program which tries to reverse a queue using other auxiliary queues.</p>\n\n<p>Which of the following is true about $\\text{P}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>P reverses a given queue using a minimum of one auxiliary queue.</li>\n\t<li>P reverses a given queue using a minimum of two auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of three auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of four auxiliary queues.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375813', 'text': '<p>A stack of int is implemented using an array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int top;\n} Stack;\n</pre>\n\n<p>Fill up the missing codes in the $\\textsf{PUSH, POP},$ and $\\textsf{TOP}$ operations of the Stack.</p>\n\n<p>Ignore underflow or overflow of stack in case of pop and push respectively. You can assume that&nbsp;underflow or overflow are handled before calling pop or push.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid Push(Stack *s, int d) {\n    // line X\n}\nvoid Pop(Stack *s) {\n    // line Y\n}\nint Top(Stack *s) {\n    // line Z\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline X should be s-&gt;data[++s-&gt;top] = d;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Y should be --s-&gt;top;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Z should be return s-&gt;data[s-&gt;top]\n</pre>\n\t</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375809', 'text': '<p>An $\\text{SQueue}$ is a queue implemented using two stacks. $\\text{SQueue}$ supports two operations enqueue() and dequeue().<br>\nConsider a below pseudo code that implements enqueue() and dequeue() for $\\text{SQueue}$ using two stacks inbox and outbox.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nStack inbox, outbox; \nvoid enqueue(int item) {\n    inbox.push(item);\n}\nvoid dequeue() {\n    if (outbox.isEmpty())\n    while (!inbox.isEmpty())\n    outbox.push(in.pop());\n    return outbox.pop();\n}\n</pre>\n\n<p><br>\nConsider the state of $\\text{SQueue}$ which is initialized with $100$ items i.e. $100$ enqueue operations have been performed in $\\text{SQueue}$.</p>\n\n<p>Which of the following(s) is/are true if we want to dequeue all elements from $\\text{SQueue}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>First dequeue() will result in a total of $200$ calls to push and pop operations.</li>\n\t<li>Apart from the first dequeue(), each of the remaining calls to dequeue will take a total of $100$ calls to push and pop operations.</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $300.$</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $301.$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375837', 'text': '<p>Here is an <strong>INCORRECT</strong> pseudocode for the algorithm which is supposed to determine whether a sequence of parentheses is balanced:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a character stack\nwhile ( more input is available)\n{\n    read a character\n    if ( the character is a \'(\' )\n        push it on the stack\n    else if ( the character is a \')\' and the stack is not empty )\n        pop a character off the stack\n    else\n        print "unbalanced" and exit\n}\nprint "balanced"\n</pre>\n\n<p>Which of these unbalanced sequences does the above code think is balanced?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$((())$</li>\n\t<li>$())(()$</li>\n\t<li>$(()()))$</li>\n\t<li>$(()))()$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375831', 'text': '<p>Which of the following is/are correct about implementation of stack and queue.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If stack is implemented as an array, all the push and pop operations can be performed in constant time.</li>\n\t<li>If stack is implemented as a linked list, all the push and pop operations can be performed in constant time.</li>\n\t<li>If queue is implemented as an array, all the enqueue and dequeue operations can be performed in constant time.</li>\n\t<li>If queue is implemented as a linked list, all the enqueue and dequeue operations can be performed in constant time.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,stack,queue,multiple-selects,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375834', 'text': '<p>Suppose you implement a queue using a singly linked list with head and tail pointers so that the front of the queue is at the tail of the list, and the rear of the queue is at the head of the list.<br>\nWhat is the best possible worst-case running time for enqueue and dequeue in this situation? (As a reminder, enqueue occurs at the rear of the queue.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both functions.</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue.</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue.</li>\n\t<li>$O(n)$ for both functions.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375815', 'text': '<p>We have an implementation that supports the following operations on a stack (in the instructions below, $s$ is the name of the stack).</p>\n\n<ul>\n\t<li>$\\text{isempty(s) :}$ returns True if $s$ is empty, and False otherwise.</li>\n\t<li>$\\text{top(s) :}$ returns the top element of the stack, but does not pop the stack; returns null if the stack is empty.</li>\n\t<li>$\\text{push(s, x) :}$ places $x$ on top of the stack.</li>\n\t<li>$\\text{pop(s) :}$ pops the stack; does nothing if $s$ is empty.</li>\n</ul>\n\n<p>Consider the following code:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npush_pop (x) :\n    s=empty\n    for i=1 to length ( x ) :\n        if ( x [i] == ’(’ ) :\n            push ( s , x [ i ] )\n        else :\n            while ( top (s)== ’ ( ’ ) :\n                pop ( s )\n            end while\n            push ( s , ’ ) ’ )\n            push ( s , ’ ( ’ )\n        end if\n    end for\n    while not isempty ( s ) :\n        print top(s)\n        pop (s)\n    end while\n</pre>\n\n<p><br>\nWhat is the output of this program when $\\text{push pop(”(((()((())((((”)}$ is executed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$)())(((($</li>\n\t<li>$((((())($</li>\n\t<li>$((((()))$</li>\n\t<li>$)())(())$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375832', 'text': '<p>Consider a circular array-based implementation of the queue where the front and rear has&nbsp;been initialized to $-1.$ Array size is $N.$<br>\nWhich of the following statements is true for the number of elements or size of the queue?</p>\n\n<ul>\n\t<li>$\\text{S1:}$ if front $&gt;$ rear then size $= N-$ front $+$ rear $+1$</li>\n\t<li>$\\text{S2:}$ If front $\\leq$ rear then size $=$ rear $-$ front $+1$</li>\n</ul>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>S1 is true but S2 is false</li>\n\t<li>S1 is false but S2 is true</li>\n\t<li>Both statements are true</li>\n\t<li>Both statements are false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,circular-queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375827', 'text': '<p>Imagine four railroad cars positioned on the input side of the track in the figure below, numbered $1, 2, 3,$ and $4,$ from left to right. Suppose we perform the following sequence of operations (which is compatible with the direction of the arrows in the diagram and does not require cars to ”jump over” other cars):</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>move car $1$ into the stack;</li>\n\t<li>move car $2$ into the stack;</li>\n\t<li>move car $2$ into the output;</li>\n\t<li>move car $3$ into the stack;</li>\n\t<li>move car $4$ into the stack;</li>\n\t<li>move car $4$ into the output;</li>\n\t<li>move car $3$ into the output;</li>\n\t<li>move car $1$ into the output.</li>\n</ol>\n\n<p><strong><img alt="" height="387" src="https://lh4.googleusercontent.com/61OcLgA3dnrOmzX3SyRszs-0a0gZTZODxOFq5VLZHZ8z7iawl_qF3N7CrpJGdi272BYeod9wBgabEh9DpJAxnME7XFvZcyd1GHjCcV8kkWh9eoynvVHsKIvgqh7fgtKxEJwYoRw4sYZn0T1iDQ" width="624"></strong><br>\nAs a result of these operations the original order of the cars, $1234,$ has been changed into $2431.$<br>\nIf there are six railroad cars numbered $123456,$ Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>They can’t be permuted into the order $154623$</li>\n\t<li>They can be permuted into the order $254613$</li>\n\t<li>They can’t be permuted into the order $654123$</li>\n\t<li>They can be permuted into the order $325641$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,moderate,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375830', 'text': '<p>Suppose that you implement a queue using a null-terminated singly-linked list, maintaining a reference to the item least recently added (the front of the list) but not maintaining a reference to the item most recently added (the end of the list).<br>\nWhat are the worst case running times for enqueue and dequeue respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both operations</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue</li>\n\t<li>$O(n)$ for both operations</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375824', 'text': '<p>Consider a problem: Given an array, check whether the array is in sorted order or not. Suppose both iterative and recursive approaches are used to solve this problem.</p>\n\n<p>Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Recursive approach gives space complexity as $O(n)$ for recursive stack space.</li>\n\t<li>Iterative approach gives Auxiliary space as $\\Theta(n).$</li>\n\t<li>Time Complexity for recursive approach is $O(n).$</li>\n\t<li>Time Complexity for iterative approach is $\\Theta(n \\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq23,goclasses,algorithms,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375825', 'text': '<p>A deque (”double-ended queue”) is a linear list for which all the insertions and deletions (and usually all accesses) are made at the ends of the list.</p>\n\n<p>The difference between Queue and Deque is that it does not follow the FIFO (First In, First Out) approach. The second feature of Deque is that we can insert and remove elements from either front or rear ends.</p>\n\n<p>An output-restricted deque is a linear list in which deletions are allowed to take place at only one end but insertion is allowed at both ends.</p>\n\n<p>An input-restricted deque is a linear list in which items may be inserted at one end but removed from either end; clearly, an input-restricted deque can operate either as a stack or as a queue if we consistently remove all items from one of the two ends.</p>\n\n<p>The figure shows types of queues pictorially.</p>\n\n<p style="text-align:center"><img alt="" height="455" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10999579607343615324" width="515"></p>\n\n<p><br>\nAn output-restricted deque can be operated as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only Stack</li>\n\t<li>Only Queue</li>\n\t<li>Either as a stack or as a queue</li>\n\t<li>Neither as a stack nor as a queue</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,easy,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375814', 'text': '<p>Consider the following queue of characters, where QUEUE is a circular array which is allocated $6$ memory cells with indexing starting from $1.$<br>\nConsider the below status of Queue where Front and Rear stores $2$ and $4$ respectively.<br>\n<strong><img alt="" height="124" src="https://lh3.googleusercontent.com/vDjvmV30g5G-H9YRkjzaiWN58NjQVYsy9SvFfRBxQOGn_L89cc2AM7Z3NE8KWNr2fzZrB2THRA3A3Te42sCXntyR9Sf7wRDN9Ef6cvHNN4eOl972jSh3rAb205koz01Gbo5y7Lm2dV_vY98geA" width="534"></strong><br>\nFive sequences of operations have been performed on the current status of queue as described below.</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>$\\text{‘F’}$ is added to the queue</li>\n\t<li>Two items are removed</li>\n\t<li>$\\text{‘K’, ‘L’}$ and $\\text{‘M’}$ are added</li>\n\t<li>Two items are deleted</li>\n\t<li>$\\text{‘R’}$ is added to the queue</li>\n</ol>\n\n<p>What will be the final value of Front and Rear respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Front $= 2,$ Rear $= 5$</li>\n\t<li>Front $= 4,$ Rear $= 5$</li>\n\t<li>Front $= 6,$ Rear $= 2$</li>\n\t<li>Front $= 6,$ Rear $= 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,2-marks', 'category': 'DS'}]
-      let data={'name': 'GO Classes Test Series 2023 | Data Structures | Test 3', 'duration': '75', 'total_qs': '25', 'total_qs_one': 10, 'total_qs_two': 15, 'apti_num_qs': 0, 'technical_num_qs': 25, 'apti_marks': 0, 'technical_marks': 40, 'total_marks': 40, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 25, 'marks': 40, 'question': [{'contents': '', 'post_id': '375819', 'text': '<p>Consider $2$ problems:</p>\n\n<ol>\n\t<li>Problem $1:$ Given a queue $\\text{Q}$ containing $n$ elements, transfer these items on to a stack $\\text{S}$ (initially empty) so that the front element of $\\text{Q}$ appears at the top of the stack and the order of all other items is preserved. Using enqueue and dequeue operations for the queue, and push and pop operations for the stack.</li>\n\t<li>Problem $2:$ Generate the permutations possible when using only a single stack and push and pop are the only operations allowed.</li>\n</ol>\n\n<ul>\n\t<li>$\\text{S1}:$ An efficient algorithm to solve problem $1$ will take $O(n)$ time and a constant amount of additional storage.</li>\n\t<li>$\\text{S2}:$ The no of stack permutations on a stack with $n$ elements is equal to the number of balanced parentheses with $2n$ total parentheses.</li>\n</ul>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{S1}$ is correct</li>\n\t<li>Only $\\text{S2}$ is correct</li>\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct</li>\n\t<li>None of them is correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375823', 'text': '<p>Suppose, you have proposed an optimal algorithm which uses extra stack(s) to design a stack such that $\\textsf{GetMinimum()}$ should be $O(1)$ for n number of elements.</p>\n\n<p>Consider the following statements:</p>\n\n<ul>\n\t<li>$\\text{S1} :$ Minimum number of extra stack(s) $: 1$</li>\n\t<li>$\\text{S2} :$ Time Complexity $: O(1)$</li>\n\t<li>$\\text{S3} :$ Space Complexity $: O(n)$</li>\n</ul>\n\n<p>Which of the following is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct but not $\\text{S3}$</li>\n\t<li>Both $\\text{S1}$ and $\\text{S3}$ are correct but not $\\text{S2}$</li>\n\t<li>Both $\\text{S2}$ and $\\text{S3}$ are correct but not $\\text{S1}$</li>\n\t<li>$\\text{S1, S2}$ and $\\text{S3}$ are correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,stack,time-complexity,space-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375835', 'text': '<p>Consider a program $\\text{P}$ that does not use recursion. $\\text{P}$ is a program which tries to reverse a queue using other auxiliary queues.</p>\n\n<p>Which of the following is true about $\\text{P}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>P reverses a given queue using a minimum of one auxiliary queue.</li>\n\t<li>P reverses a given queue using a minimum of two auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of three auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of four auxiliary queues.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375813', 'text': '<p>A stack of int is implemented using an array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int top;\n} Stack;\n</pre>\n\n<p>Fill up the missing codes in the $\\textsf{PUSH, POP},$ and $\\textsf{TOP}$ operations of the Stack.</p>\n\n<p>Ignore underflow or overflow of stack in case of pop and push respectively. You can assume that&nbsp;underflow or overflow are handled before calling pop or push.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid Push(Stack *s, int d) {\n    // line X\n}\nvoid Pop(Stack *s) {\n    // line Y\n}\nint Top(Stack *s) {\n    // line Z\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline X should be s-&gt;data[++s-&gt;top] = d;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Y should be --s-&gt;top;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Z should be return s-&gt;data[s-&gt;top]\n</pre>\n\t</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375809', 'text': '<p>An $\\text{SQueue}$ is a queue implemented using two stacks. $\\text{SQueue}$ supports two operations enqueue() and dequeue().<br>\nConsider a below pseudo code that implements enqueue() and dequeue() for $\\text{SQueue}$ using two stacks inbox and outbox.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nStack inbox, outbox; \nvoid enqueue(int item) {\n    inbox.push(item);\n}\nvoid dequeue() {\n    if (outbox.isEmpty())\n    while (!inbox.isEmpty())\n    outbox.push(in.pop());\n    return outbox.pop();\n}\n</pre>\n\n<p><br>\nConsider the state of $\\text{SQueue}$ which is initialized with $100$ items i.e. $100$ enqueue operations have been performed in $\\text{SQueue}$.</p>\n\n<p>Which of the following(s) is/are true if we want to dequeue all elements from $\\text{SQueue}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>First dequeue() will result in a total of $200$ calls to push and pop operations.</li>\n\t<li>Apart from the first dequeue(), each of the remaining calls to dequeue will take a total of $100$ calls to push and pop operations.</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $300.$</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $301.$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375837', 'text': '<p>Here is an <strong>INCORRECT</strong> pseudocode for the algorithm which is supposed to determine whether a sequence of parentheses is balanced:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a character stack\nwhile ( more input is available)\n{\n    read a character\n    if ( the character is a \'(\' )\n        push it on the stack\n    else if ( the character is a \')\' and the stack is not empty )\n        pop a character off the stack\n    else\n        print "unbalanced" and exit\n}\nprint "balanced"\n</pre>\n\n<p>Which of these unbalanced sequences does the above code think is balanced?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$((())$</li>\n\t<li>$())(()$</li>\n\t<li>$(()()))$</li>\n\t<li>$(()))()$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375831', 'text': '<p>Which of the following is/are correct about implementation of stack and queue.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If stack is implemented as an array, all the push and pop operations can be performed in constant time.</li>\n\t<li>If stack is implemented as a linked list, all the push and pop operations can be performed in constant time.</li>\n\t<li>If queue is implemented as an array, all the enqueue and dequeue operations can be performed in constant time.</li>\n\t<li>If queue is implemented as a linked list, all the enqueue and dequeue operations can be performed in constant time.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,stack,queue,multiple-selects,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375834', 'text': '<p>Suppose you implement a queue using a singly linked list with head and tail pointers so that the front of the queue is at the tail of the list, and the rear of the queue is at the head of the list.<br>\nWhat is the best possible worst-case running time for enqueue and dequeue in this situation? (As a reminder, enqueue occurs at the rear of the queue.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both functions.</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue.</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue.</li>\n\t<li>$O(n)$ for both functions.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375815', 'text': '<p>We have an implementation that supports the following operations on a stack (in the instructions below, $s$ is the name of the stack).</p>\n\n<ul>\n\t<li>$\\text{isempty(s) :}$ returns True if $s$ is empty, and False otherwise.</li>\n\t<li>$\\text{top(s) :}$ returns the top element of the stack, but does not pop the stack; returns null if the stack is empty.</li>\n\t<li>$\\text{push(s, x) :}$ places $x$ on top of the stack.</li>\n\t<li>$\\text{pop(s) :}$ pops the stack; does nothing if $s$ is empty.</li>\n</ul>\n\n<p>Consider the following code:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npush_pop (x) :\n    s=empty\n    for i=1 to length ( x ) :\n        if ( x [i] == ’(’ ) :\n            push ( s , x [ i ] )\n        else :\n            while ( top (s)== ’ ( ’ ) :\n                pop ( s )\n            end while\n            push ( s , ’ ) ’ )\n            push ( s , ’ ( ’ )\n        end if\n    end for\n    while not isempty ( s ) :\n        print top(s)\n        pop (s)\n    end while\n</pre>\n\n<p><br>\nWhat is the output of this program when $\\text{push pop(”(((()((())((((”)}$ is executed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$)())(((($</li>\n\t<li>$((((())($</li>\n\t<li>$((((()))$</li>\n\t<li>$)())(())$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375832', 'text': '<p>Consider a circular array-based implementation of the queue where the front and rear has&nbsp;been initialized to $-1.$ Array size is $N.$<br>\nWhich of the following statements is true for the number of elements or size of the queue?</p>\n\n<ul>\n\t<li>$\\text{S1:}$ if front $&gt;$ rear then size $= N-$ front $+$ rear $+1$</li>\n\t<li>$\\text{S2:}$ If front $\\leq$ rear then size $=$ rear $-$ front $+1$</li>\n</ul>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>S1 is true but S2 is false</li>\n\t<li>S1 is false but S2 is true</li>\n\t<li>Both statements are true</li>\n\t<li>Both statements are false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,circular-queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375827', 'text': '<p>Imagine four railroad cars positioned on the input side of the track in the figure below, numbered $1, 2, 3,$ and $4,$ from left to right. Suppose we perform the following sequence of operations (which is compatible with the direction of the arrows in the diagram and does not require cars to ”jump over” other cars):</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>move car $1$ into the stack;</li>\n\t<li>move car $2$ into the stack;</li>\n\t<li>move car $2$ into the output;</li>\n\t<li>move car $3$ into the stack;</li>\n\t<li>move car $4$ into the stack;</li>\n\t<li>move car $4$ into the output;</li>\n\t<li>move car $3$ into the output;</li>\n\t<li>move car $1$ into the output.</li>\n</ol>\n\n<p><strong><img alt="" height="387" src="https://lh4.googleusercontent.com/61OcLgA3dnrOmzX3SyRszs-0a0gZTZODxOFq5VLZHZ8z7iawl_qF3N7CrpJGdi272BYeod9wBgabEh9DpJAxnME7XFvZcyd1GHjCcV8kkWh9eoynvVHsKIvgqh7fgtKxEJwYoRw4sYZn0T1iDQ" width="624"></strong><br>\nAs a result of these operations the original order of the cars, $1234,$ has been changed into $2431.$<br>\nIf there are six railroad cars numbered $123456,$ Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>They can’t be permuted into the order $154623$</li>\n\t<li>They can be permuted into the order $254613$</li>\n\t<li>They can’t be permuted into the order $654123$</li>\n\t<li>They can be permuted into the order $325641$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,moderate,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375830', 'text': '<p>Suppose that you implement a queue using a null-terminated singly-linked list, maintaining a reference to the item least recently added (the front of the list) but not maintaining a reference to the item most recently added (the end of the list).<br>\nWhat are the worst case running times for enqueue and dequeue respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both operations</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue</li>\n\t<li>$O(n)$ for both operations</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375824', 'text': '<p>Consider a problem: Given an array, check whether the array is in sorted order or not. Suppose both iterative and recursive approaches are used to solve this problem.</p>\n\n<p>Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Recursive approach gives space complexity as $O(n)$ for recursive stack space.</li>\n\t<li>Iterative approach gives Auxiliary space as $\\Theta(n).$</li>\n\t<li>Time Complexity for recursive approach is $O(n).$</li>\n\t<li>Time Complexity for iterative approach is $\\Theta(n \\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq23,goclasses,algorithms,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375825', 'text': '<p>A deque (”double-ended queue”) is a linear list for which all the insertions and deletions (and usually all accesses) are made at the ends of the list.</p>\n\n<p>The difference between Queue and Deque is that it does not follow the FIFO (First In, First Out) approach. The second feature of Deque is that we can insert and remove elements from either front or rear ends.</p>\n\n<p>An output-restricted deque is a linear list in which deletions are allowed to take place at only one end but insertion is allowed at both ends.</p>\n\n<p>An input-restricted deque is a linear list in which items may be inserted at one end but removed from either end; clearly, an input-restricted deque can operate either as a stack or as a queue if we consistently remove all items from one of the two ends.</p>\n\n<p>The figure shows types of queues pictorially.</p>\n\n<p style="text-align:center"><img alt="" height="455" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10999579607343615324" width="515"></p>\n\n<p><br>\nAn output-restricted deque can be operated as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only Stack</li>\n\t<li>Only Queue</li>\n\t<li>Either as a stack or as a queue</li>\n\t<li>Neither as a stack nor as a queue</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,easy,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375814', 'text': '<p>Consider the following queue of characters, where QUEUE is a circular array which is allocated $6$ memory cells with indexing starting from $1.$<br>\nConsider the below status of Queue where Front and Rear stores $2$ and $4$ respectively.<br>\n<strong><img alt="" height="124" src="https://lh3.googleusercontent.com/vDjvmV30g5G-H9YRkjzaiWN58NjQVYsy9SvFfRBxQOGn_L89cc2AM7Z3NE8KWNr2fzZrB2THRA3A3Te42sCXntyR9Sf7wRDN9Ef6cvHNN4eOl972jSh3rAb205koz01Gbo5y7Lm2dV_vY98geA" width="534"></strong><br>\nFive sequences of operations have been performed on the current status of queue as described below.</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>$\\text{‘F’}$ is added to the queue</li>\n\t<li>Two items are removed</li>\n\t<li>$\\text{‘K’, ‘L’}$ and $\\text{‘M’}$ are added</li>\n\t<li>Two items are deleted</li>\n\t<li>$\\text{‘R’}$ is added to the queue</li>\n</ol>\n\n<p>What will be the final value of Front and Rear respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Front $= 2,$ Rear $= 5$</li>\n\t<li>Front $= 4,$ Rear $= 5$</li>\n\t<li>Front $= 6,$ Rear $= 2$</li>\n\t<li>Front $= 6,$ Rear $= 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,2-marks', 'category': 'DS'}]}]}
+      let data={'name': 'GO Classes Test Series 2023 | Data Structures | Test 3', 'duration': '75', 'total_qs': '25', 'total_qs_one': 10, 'total_qs_two': 15, 'apti_num_qs': 0, 'technical_num_qs': 25, 'apti_marks': 0, 'technical_marks': 40, 'total_marks': 40, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 25, 'marks': 40, 'question': [{'contents': '', 'post_id': '375832', 'text': '<p>Consider a circular array-based implementation of the queue where the front and rear has&nbsp;been initialized to $-1.$ Array size is $N.$<br>\nWhich of the following statements is true for the number of elements or size of the queue?</p>\n\n<ul>\n\t<li>$\\text{S1:}$ if front $&gt;$ rear then size $= N-$ front $+$ rear $+1$</li>\n\t<li>$\\text{S2:}$ If front $\\leq$ rear then size $=$ rear $-$ front $+1$</li>\n</ul>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>S1 is true but S2 is false</li>\n\t<li>S1 is false but S2 is true</li>\n\t<li>Both statements are true</li>\n\t<li>Both statements are false</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,circular-queue,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375838', 'text': '<p>Consider the following pseudocode:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a stack of characters\nwhile ( there are more characters in the word to read )\n{\n    read a character\n    push the character on the stack\n}\nwhile ( the stack is not empty )\n{\n    pop a character off the stack\n    write the character to the screen\n}\n</pre>\n\n<p><br>\nWhat is written to the screen for the input "carpets"?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>serc</li>\n\t<li>carpets</li>\n\t<li>steprac</li>\n\t<li>ccaarrppeettss</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375813', 'text': '<p>A stack of int is implemented using an array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int top;\n} Stack;\n</pre>\n\n<p>Fill up the missing codes in the $\\textsf{PUSH, POP},$ and $\\textsf{TOP}$ operations of the Stack.</p>\n\n<p>Ignore underflow or overflow of stack in case of pop and push respectively. You can assume that&nbsp;underflow or overflow are handled before calling pop or push.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid Push(Stack *s, int d) {\n    // line X\n}\nvoid Pop(Stack *s) {\n    // line Y\n}\nint Top(Stack *s) {\n    // line Z\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline X should be s-&gt;data[++s-&gt;top] = d;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Y should be --s-&gt;top;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nline Z should be return s-&gt;data[s-&gt;top]\n</pre>\n\t</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375824', 'text': '<p>Consider a problem: Given an array, check whether the array is in sorted order or not. Suppose both iterative and recursive approaches are used to solve this problem.</p>\n\n<p>Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Recursive approach gives space complexity as $O(n)$ for recursive stack space.</li>\n\t<li>Iterative approach gives Auxiliary space as $\\Theta(n).$</li>\n\t<li>Time Complexity for recursive approach is $O(n).$</li>\n\t<li>Time Complexity for iterative approach is $\\Theta(n \\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq23,goclasses,algorithms,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375830', 'text': '<p>Suppose that you implement a queue using a null-terminated singly-linked list, maintaining a reference to the item least recently added (the front of the list) but not maintaining a reference to the item most recently added (the end of the list).<br>\nWhat are the worst case running times for enqueue and dequeue respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both operations</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue</li>\n\t<li>$O(n)$ for both operations</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375823', 'text': '<p>Suppose, you have proposed an optimal algorithm which uses extra stack(s) to design a stack such that $\\textsf{GetMinimum()}$ should be $O(1)$ for n number of elements.</p>\n\n<p>Consider the following statements:</p>\n\n<ul>\n\t<li>$\\text{S1} :$ Minimum number of extra stack(s) $: 1$</li>\n\t<li>$\\text{S2} :$ Time Complexity $: O(1)$</li>\n\t<li>$\\text{S3} :$ Space Complexity $: O(n)$</li>\n</ul>\n\n<p>Which of the following is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct but not $\\text{S3}$</li>\n\t<li>Both $\\text{S1}$ and $\\text{S3}$ are correct but not $\\text{S2}$</li>\n\t<li>Both $\\text{S2}$ and $\\text{S3}$ are correct but not $\\text{S1}$</li>\n\t<li>$\\text{S1, S2}$ and $\\text{S3}$ are correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,stack,time-complexity,space-complexity,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375812', 'text': '<p>Suppose we want to implement a stack data structure using just one queue. push() and pop() are two functions on stack that may use enqueue() and dequeue() functions of queue Q.</p>\n\n<p>Which of the following pair(s) of implementations for push() and pop() work?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n}\npop() {\n    for (k = 1; k &lt; Q.size(); k++)\n        Q.enqueue(Q.dequeue());\n        return Q.dequeue();\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid push(x) {\n    Q.enqueue(x);\n}\npop() {\n    return Q.dequeue();\n}\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375819', 'text': '<p>Consider $2$ problems:</p>\n\n<ol>\n\t<li>Problem $1:$ Given a queue $\\text{Q}$ containing $n$ elements, transfer these items on to a stack $\\text{S}$ (initially empty) so that the front element of $\\text{Q}$ appears at the top of the stack and the order of all other items is preserved. Using enqueue and dequeue operations for the queue, and push and pop operations for the stack.</li>\n\t<li>Problem $2:$ Generate the permutations possible when using only a single stack and push and pop are the only operations allowed.</li>\n</ol>\n\n<ul>\n\t<li>$\\text{S1}:$ An efficient algorithm to solve problem $1$ will take $O(n)$ time and a constant amount of additional storage.</li>\n\t<li>$\\text{S2}:$ The no of stack permutations on a stack with $n$ elements is equal to the number of balanced parentheses with $2n$ total parentheses.</li>\n</ul>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only $\\text{S1}$ is correct</li>\n\t<li>Only $\\text{S2}$ is correct</li>\n\t<li>Both $\\text{S1}$ and $\\text{S2}$ are correct</li>\n\t<li>None of them is correct</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375805', 'text': '<p>A queue of int is implemented using a circular array as the following data type:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#define SIZE 20\ntypedef struct {\n    int data[SIZE];\n    int front, rear;\n} Queue;</pre>\n\n<p><br>\nFill up the missing codes in the IsEmpty and IsFull operations of the Queue. q-&gt;front and q-&gt;rear both have been initialized to $-1.$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint IsEmpty(Queue *q) {\n    //Line X\n}\nint IsFull(Queue *q) {\n    //Line Y\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == q-&gt;rear;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;front == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine X is return q-&gt;rear == -1;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nLine Y is return q-&gt;front == (q-&gt;rear+1) % SIZE;</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375817', 'text': '<p>A function $f$ defined on stacks of integers which is considered as a set with an order and it satisfies the following properties:</p>\n\n<p>$f(\\phi)=0$ and<br>\n$$<br>\nf(\\operatorname{push}(S, i))=\\left\\{\\begin{array}{ll}<br>\n2^{\\max (f(S), 0)}+i, &amp; \\text { if }, i=\\text { even } \\\\<br>\n2^{\\max (f(S), 0)}-i, &amp; \\text { if }, i=\\text { odd }<br>\n\\end{array}\\right\\}<br>\n$$</p>\n\n<p>for all stacks $\\text{S}$ and integers $i.$</p>\n\n<p>Here, $\\phi$ stands for an empty set and $\\text{push(S, i)}$ also denotes the stack of integers which is a set with a order and it can be obtained when we push an element $i$ on the stack $\\text{S}$ and after pushing element $i,$ stack $\\text{S}$ has a top element $i.$ With respect to set, say, if $\\text{S} = \\{2, 5, 4\\}$ denotes the stack of integers with bottom element as $2$ and top element as $4$ at a particular instance then set $\\text{push(S, 7)} = \\{2, 5, 4, 7\\}$ denotes the stack of integers with bottom element as $2$ and top element as $7.$ and now, $\\text{S}$ becomes $\\{2, 5, 4, 7\\}.$</p>\n\n<p>If a stack $\\text{S}$ contains the integers $2,1,2$ in order from bottom to top, what is $f\\text{(S)}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7$</li>\n\t<li>$9$</li>\n\t<li>$128$</li>\n\t<li>$130$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375825', 'text': '<p>A deque (”double-ended queue”) is a linear list for which all the insertions and deletions (and usually all accesses) are made at the ends of the list.</p>\n\n<p>The difference between Queue and Deque is that it does not follow the FIFO (First In, First Out) approach. The second feature of Deque is that we can insert and remove elements from either front or rear ends.</p>\n\n<p>An output-restricted deque is a linear list in which deletions are allowed to take place at only one end but insertion is allowed at both ends.</p>\n\n<p>An input-restricted deque is a linear list in which items may be inserted at one end but removed from either end; clearly, an input-restricted deque can operate either as a stack or as a queue if we consistently remove all items from one of the two ends.</p>\n\n<p>The figure shows types of queues pictorially.</p>\n\n<p style="text-align:center"><img alt="" height="455" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10999579607343615324" width="515"></p>\n\n<p><br>\nAn output-restricted deque can be operated as</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Only Stack</li>\n\t<li>Only Queue</li>\n\t<li>Either as a stack or as a queue</li>\n\t<li>Neither as a stack nor as a queue</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,easy,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375837', 'text': '<p>Here is an <strong>INCORRECT</strong> pseudocode for the algorithm which is supposed to determine whether a sequence of parentheses is balanced:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nDeclare a character stack\nwhile ( more input is available)\n{\n    read a character\n    if ( the character is a \'(\' )\n        push it on the stack\n    else if ( the character is a \')\' and the stack is not empty )\n        pop a character off the stack\n    else\n        print "unbalanced" and exit\n}\nprint "balanced"\n</pre>\n\n<p>Which of these unbalanced sequences does the above code think is balanced?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$((())$</li>\n\t<li>$())(()$</li>\n\t<li>$(()()))$</li>\n\t<li>$(()))()$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375829', 'text': '<p>A queue can be simulated using two stacks. If $n$ enqueue and $1$ dequeue has been performed in some sequence then the minimum and maximum number of pop operations needed:</p>\n\n<p>(Maximum pop means there exists a sequence of enqueue and dequeue operations for which number of pops can not be lesser than maximum pop number)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum pop $= 1,$ Maximum pop $= n$</li>\n\t<li>Minimum pop $= 1,$ Maximum pop $= n+1$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n$</li>\n\t<li>Minimum pop $= n,$ Maximum pop $= 2n-1$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,queue,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375831', 'text': '<p>Which of the following is/are correct about implementation of stack and queue.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If stack is implemented as an array, all the push and pop operations can be performed in constant time.</li>\n\t<li>If stack is implemented as a linked list, all the push and pop operations can be performed in constant time.</li>\n\t<li>If queue is implemented as an array, all the enqueue and dequeue operations can be performed in constant time.</li>\n\t<li>If queue is implemented as a linked list, all the enqueue and dequeue operations can be performed in constant time.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,stack,queue,multiple-selects,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375842', 'text': '<p>Suppose we have a queue $= [3, 14, 1, 20]$ (here $3$ is on the front ) and an empty stack. We are allowed to make only two actions:</p>\n\n<ol>\n\t<li>Action ”$x$”: Dequeue an element from the queue and push it to the stack.</li>\n\t<li>Action ”$o$”: Pop an element from the stack and enqueue it in the queue.</li>\n</ol>\n\n<p>Which of the following sequences sort the queue in ascending order:</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$xxoxooxoxo$</li>\n\t<li>$xxoxoxooxo$</li>\n\t<li>$xoxxooxoxo$</li>\n\t<li>$xxoxooxxoo$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,queue,easy,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375810', 'text': 'Consider a queue which supports print() function in addition to enqueue() and dequeue().\nprint() is a function that prints an element of the head of the queue without removing the element.\n\nSuppose the initial content of the queue is $1,2,3,4,5$ where $1$ is on the head.\nHow Many number of calls to enqueue(), dequeue() or print() is required to print queue content in reverse order (output should be printed as $5,4,3,2,1)$ such that the final content of the queue should be the same as the initial content. We are not allowed to use anything else other than enqueue(), dequeue() or print() function calls.', 'type': 'Numerical', 'answer': '45', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,numerical-answers,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375815', 'text': '<p>We have an implementation that supports the following operations on a stack (in the instructions below, $s$ is the name of the stack).</p>\n\n<ul>\n\t<li>$\\text{isempty(s) :}$ returns True if $s$ is empty, and False otherwise.</li>\n\t<li>$\\text{top(s) :}$ returns the top element of the stack, but does not pop the stack; returns null if the stack is empty.</li>\n\t<li>$\\text{push(s, x) :}$ places $x$ on top of the stack.</li>\n\t<li>$\\text{pop(s) :}$ pops the stack; does nothing if $s$ is empty.</li>\n</ul>\n\n<p>Consider the following code:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npush_pop (x) :\n    s=empty\n    for i=1 to length ( x ) :\n        if ( x [i] == ’(’ ) :\n            push ( s , x [ i ] )\n        else :\n            while ( top (s)== ’ ( ’ ) :\n                pop ( s )\n            end while\n            push ( s , ’ ) ’ )\n            push ( s , ’ ( ’ )\n        end if\n    end for\n    while not isempty ( s ) :\n        print top(s)\n        pop (s)\n    end while\n</pre>\n\n<p><br>\nWhat is the output of this program when $\\text{push pop(”(((()((())((((”)}$ is executed?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$)())(((($</li>\n\t<li>$((((())($</li>\n\t<li>$((((()))$</li>\n\t<li>$)())(())$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375821', 'text': '<p>Consider a problem: Given an array of elements, replace every element with the nearest greater element on the right of that element. You have to solve this problem with the use of stack.<br>\nWhich of the following is/are correct ?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Minimum number of extra stack(s) is $1$</li>\n\t<li>Time Complexity is $O(n)$</li>\n\t<li>Space Complexity is $O(1)$</li>\n\t<li>Space Complexity is $O(n)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,time-complexity,space-complexity,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375809', 'text': '<p>An $\\text{SQueue}$ is a queue implemented using two stacks. $\\text{SQueue}$ supports two operations enqueue() and dequeue().<br>\nConsider a below pseudo code that implements enqueue() and dequeue() for $\\text{SQueue}$ using two stacks inbox and outbox.<br>\n&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nStack inbox, outbox; \nvoid enqueue(int item) {\n    inbox.push(item);\n}\nvoid dequeue() {\n    if (outbox.isEmpty())\n    while (!inbox.isEmpty())\n    outbox.push(in.pop());\n    return outbox.pop();\n}\n</pre>\n\n<p><br>\nConsider the state of $\\text{SQueue}$ which is initialized with $100$ items i.e. $100$ enqueue operations have been performed in $\\text{SQueue}$.</p>\n\n<p>Which of the following(s) is/are true if we want to dequeue all elements from $\\text{SQueue}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>First dequeue() will result in a total of $200$ calls to push and pop operations.</li>\n\t<li>Apart from the first dequeue(), each of the remaining calls to dequeue will take a total of $100$ calls to push and pop operations.</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $300.$</li>\n\t<li>Total calls to push and pop were required to dequeue all $100$ elements is $301.$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375834', 'text': '<p>Suppose you implement a queue using a singly linked list with head and tail pointers so that the front of the queue is at the tail of the list, and the rear of the queue is at the head of the list.<br>\nWhat is the best possible worst-case running time for enqueue and dequeue in this situation? (As a reminder, enqueue occurs at the rear of the queue.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$ for both functions.</li>\n\t<li>$O(1)$ for enqueue and $O(n)$ for dequeue.</li>\n\t<li>$O(n)$ for enqueue and $O(1)$ for dequeue.</li>\n\t<li>$O(n)$ for both functions.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3-weekly-quiz,goclasses,data-structures,queue,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375807', 'text': '<p>Consider the following pseudocode of function mystery() which takes one stack orig_stack as input and modify its content using another stack calles helper_stack</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid mystery(orig_stack)\n{\n    Stack helper_stack;\n    while (!IsEmpty(orig_stack))\n    {\n        int element = pop(orig_stack);\n        while (!IsEmpty(helper_stack) and Top(helper_stack) &lt; element)\n        {\n            Push(orig_stack, Pop(helper_stack));\n        }\n        Push(helper_stack, element);\n    }\n    while (!IsEmpty(helper_stack))\n    {\n        Push(orig_stack, Pop(helper_stack));\n    }\n}\n</pre>\n\n<p><br>\nSuppose the content of orig_stack initially is $-1, 7, 0, 3, -2,$ where $-1$ is on the top.</p>\n\n<p>What will be the content of orig_stack() after the function call mystery()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$7, 3, 0, -1, -2$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, 3, -2,$ where $7$ is on the top.</li>\n\t<li>$7, -1, 0, -2, 3,$ where $7$ is on the top.</li>\n\t<li>$-2, -1, 0, 3, 7,$ where $-2$ is on the top.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-3,goclasses,data-structures,stack,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375814', 'text': '<p>Consider the following queue of characters, where QUEUE is a circular array which is allocated $6$ memory cells with indexing starting from $1.$<br>\nConsider the below status of Queue where Front and Rear stores $2$ and $4$ respectively.<br>\n<strong><img alt="" height="124" src="https://lh3.googleusercontent.com/vDjvmV30g5G-H9YRkjzaiWN58NjQVYsy9SvFfRBxQOGn_L89cc2AM7Z3NE8KWNr2fzZrB2THRA3A3Te42sCXntyR9Sf7wRDN9Ef6cvHNN4eOl972jSh3rAb205koz01Gbo5y7Lm2dV_vY98geA" width="534"></strong><br>\nFive sequences of operations have been performed on the current status of queue as described below.</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>$\\text{‘F’}$ is added to the queue</li>\n\t<li>Two items are removed</li>\n\t<li>$\\text{‘K’, ‘L’}$ and $\\text{‘M’}$ are added</li>\n\t<li>Two items are deleted</li>\n\t<li>$\\text{‘R’}$ is added to the queue</li>\n</ol>\n\n<p>What will be the final value of Front and Rear respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Front $= 2,$ Rear $= 5$</li>\n\t<li>Front $= 4,$ Rear $= 5$</li>\n\t<li>Front $= 6,$ Rear $= 2$</li>\n\t<li>Front $= 6,$ Rear $= 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024_wq22,goclasses,data-structures,queue,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375827', 'text': '<p>Imagine four railroad cars positioned on the input side of the track in the figure below, numbered $1, 2, 3,$ and $4,$ from left to right. Suppose we perform the following sequence of operations (which is compatible with the direction of the arrows in the diagram and does not require cars to ”jump over” other cars):</p>\n\n<ol start="1" style="list-style-type:lower-alpha">\n\t<li>move car $1$ into the stack;</li>\n\t<li>move car $2$ into the stack;</li>\n\t<li>move car $2$ into the output;</li>\n\t<li>move car $3$ into the stack;</li>\n\t<li>move car $4$ into the stack;</li>\n\t<li>move car $4$ into the output;</li>\n\t<li>move car $3$ into the output;</li>\n\t<li>move car $1$ into the output.</li>\n</ol>\n\n<p><strong><img alt="" height="387" src="https://lh4.googleusercontent.com/61OcLgA3dnrOmzX3SyRszs-0a0gZTZODxOFq5VLZHZ8z7iawl_qF3N7CrpJGdi272BYeod9wBgabEh9DpJAxnME7XFvZcyd1GHjCcV8kkWh9eoynvVHsKIvgqh7fgtKxEJwYoRw4sYZn0T1iDQ" width="624"></strong><br>\nAs a result of these operations the original order of the cars, $1234,$ has been changed into $2431.$<br>\nIf there are six railroad cars numbered $123456,$ Which of the following statements is/are correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>They can’t be permuted into the order $154623$</li>\n\t<li>They can be permuted into the order $254613$</li>\n\t<li>They can’t be permuted into the order $654123$</li>\n\t<li>They can be permuted into the order $325641$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024_wq22,goclasses,data-structures,stack,moderate,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '375840', 'text': '<p>Let $s$ be a sorted array of $n$ integers. Let $t(n)$ denote the time taken for the most efficient algorithm to determine if there are two elements with sum less than $1000$ in $s.$</p>\n\n<p>Which of the following statements is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t(n)$ is $O(1)$</li>\n\t<li>$n &lt; t(n) &lt; n \\log_{2} n$</li>\n\t<li>$n \\log_{2} n &lt; t(n) &lt; \\;^{n}\\text{C}_{2}$</li>\n\t<li>$t(n) = \\;^{n}\\text{C}_{2}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-3,goclasses,algorithms,asymptotic-notation,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '375835', 'text': '<p>Consider a program $\\text{P}$ that does not use recursion. $\\text{P}$ is a program which tries to reverse a queue using other auxiliary queues.</p>\n\n<p>Which of the following is true about $\\text{P}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>P reverses a given queue using a minimum of one auxiliary queue.</li>\n\t<li>P reverses a given queue using a minimum of two auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of three auxiliary queues.</li>\n\t<li>P reverses a given queue using a minimum of four auxiliary queues.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'A', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq23,goclasses,data-structures,queue,1-mark', 'category': 'DS'}]}]}
       </script>
       

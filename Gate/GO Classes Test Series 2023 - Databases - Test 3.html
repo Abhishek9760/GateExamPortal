@@ -1,28 +1,179 @@
-<div><span>Q1</span> - <p>Consider the following Student database and the relations in it :</p>
+<div><span>Q1</span> - <p>Assume we have two relations R(A, B) and S(B, C). All three attributes (A, B, C) are integer attributes. Assume that Relation R contains the following tuples: (1,2),(2,3), and (3,4). Assume that relation S contains the following tuples (2,2),(2,3), and (5,1). Note that " × " is Natural join, in the following expressions.</p>
 
-<p>
-    [      ; nbsp; ]
+<p>Which of the following relational algebra expressions are equivalent, with respect to the above information?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>π_A(σ_B=1(R)) and σ_B=1(π_A(R))</li>
+	<li>π_A(σ_A=1(R)) and σ_A=1(π_A(R))</li>
+	<li>π_A, B(R×S) and (π _A, B(R))×S</li>
+	<li>σ_B=1(R×S) and (σ_B=1(R)) ×S</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Let R(a, b, c, d) be a RDBMS relation having the following set of functional dependencies(FD set) :<br>
+FD Set F={b → c ; c → d ; ab → d ; bc → cd} We apply some queries on a relational instance r of R. Which of the following queries are guaranteed to return the same number of tuples as in relation instance r?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>∏_a(r)</li>
+	<li>∏_a, c(r)</li>
+	<li>∏_a, b(r)</li>
+	<li>∏_a, b, d(r)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Suppose that two relations A(X, Y) and B(X, Y) have exactly the same schema. Also, there are no null values in the relations.<br>
+Which of the following equalities hold in relational algebra? (Where " × " is Cartesian-Product Operation)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>A∩B = A - (A - B)</li>
+	<li>A∩B = B - (B - A)</li>
+	<li>A∩B = A NATURAL-JOIN B</li>
+	<li>A∩B = A   nbsp;×B</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Given relations r and s. Let Function C denote the number of results in the output. Which of the following statements "can be" correct? (Hint: Discard the statements which are NEVER possible)</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=6254314144349621118"></p>
+
+<p>   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>I and II</li>
+	<li>II and III</li>
+	<li>Only III</li>
+	<li>III and IV</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the relations r, s and query :<br>
+
+    <br>
+    <br>
+    t 1 ←σ_θ((r × s) ÷ r)
+    <br>
+    t 2 ←σ_θ(s)
+    <br>
+    t 3 ←σ_θ(r)
+    <br>
+    <br>
+</p>
+
+<p>Relation   nbsp;r is not empty.</p>
+
+<p>Which of the following is correct?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>t 1=t 3</li>
+	<li>t2 =t 3</li>
+	<li>t 1=t 2</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following relations and query.<br>
+
+    <br>
+    <br>
+    
+    <br>
+    
+    <br>
+    σ_([(∪s) - (r - s)] - (s - r))<br>
+    <br>
 <br>
-Student relation has the following set of tuples :<br>
+Which of the following is equivalent to the above query?</p>
 
-    { ( 101, a, 50 ), (102, b, 52), (103, c, 60), (104, d, 70) }
+<ol style="list-style-type:upper-alpha">
+	<li>σ_(⋈)</li>
+	<li>σ_(∪)</li>
+	<li>σ_() ∩   nbsp;σ_   nbsp;()</li>
+	<li>σ_(r∩)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following database schema with a relation <br>
+
+    
+</p>
+
+<p>Table Likes tells which candy a kid likes.</p>
+
+<p>Consider the following relational algebra query :<br>
+
+    <br>
+       amp;←Π_(σ_())
+    <br>
+       amp;←Π_(σ_())
+    <br>
+       amp;←
+    <br>
+       amp;Π_()<br>
 <br>
-Course relation has the following set of tuples :<br>
+Which of the following is true about the result of the above query?</p>
 
-    { (c1, 20, 90), (c2, 15, 95), (c3, 10, 100) }
+<ol style="list-style-type:upper-alpha">
+	<li>The query is to find the kids who like "Hersheys" and "Mars" candy.</li>
+	<li>The query is to find the kids who like "Hersheys" candy but not "Mars" candy.</li>
+	<li>The query is to find the kids who like "Hersheys" or "Mars" candy.</li>
+	<li>The query is to find the kids who like neither "Hersheys" nor "Mars" candy.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following schema:<br>
+
+    [ Sailors( sid: ,    nbsp;sname: ,  rating: ,  age: real);                                             nbsp;Boats(                    nbsp;bid: ,    nbsp;bname: ,  color:;                       Reserves( sid: ,  bid: ,  day:  ) ]
 <br>
-Consider the following query :</p>
+The primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation and every relation has at least one tuple.  of Reserves is foreign key to .<br>
+Assume that there exists a sailor who has reserved a boat with  in the reserves table.</p>
 
-<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+<p>Consider the following query :</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 SELECT S.sid
-FROM Student S
-WHERE EXISTS ( SELECT COUNT(*)
-            FROM Course C
-            WHERE S.marks    gt; C.min AND S.marks    gt; C.max)
+FROM Sailors S, Reserves R
+WHERE S.rating =10 OR R.bid =104
 </pre>
 
-<p><br>
-How many tuples will be in the output of the above SQL Query?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following database relations :</p>
+<p>What is the output of the above query?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>All sids of sailors who have a rating of 10 AND have reserved boat 104.</li>
+	<li>All sids of sailors who have a rating of 10 OR have reserved boat 104.</li>
+	<li>All sids of sailor table</li>
+	<li>Empty set.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Let R=(A, B, C), S=(C, D, E) and let q and r be a relation on schema R and s be a relation on schema S.</p>
+
+<p>Consider the following queries :</p>
+
+<ol>
+	<li>{   lt;a   gt;|∃ b(   lt;a, b   gt;∈ r ∧ b=10)}</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT DISTINCT A FROM r WHERE B=10</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT DISTINCT * FROM r EXCEPT SELECT DISTINCT * FROM s
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT DISTINCT * FROM q WHERE (A, B, C) NOT IN (SELECT DISTINCT * FROM r
+</pre>
+	</li>
+</ol>
+
+<p>Which of the following is/are true? (Two queries are said to be equivalent when they produce the same output, i.e., the same set of records)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Query 1 and 2 are equivalent.</li>
+	<li>Query 1 and 3 are equivalent</li>
+	<li>Query 2 and 4 are equivalent</li>
+	<li>Query 3 and 4 are equivalent</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following schema:</p>
+
+<p>
+    [ Sailors( sid: ,    nbsp;sname: ,  rating: ,  age: real);                                             nbsp;Boats(                    nbsp;bid: ,    nbsp;bname: ,  color:;                       Reserves( sid: ,  bid: ,  day:  ) ]
+<br>
+The primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation.</p>
+
+<p>Consider the following query :</p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
+SELECT S.sname
+FROM Sailors S, Reserves R, Boats B
+WHERE S.sid = R.sid AND R.bid = B.bid
+    AND (B.color = ‘blue’ AND B.color = ‘white’)
+</pre>
+
+<p>What is the output of the above query?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>The names of sailors who have reserved a blue or a white boat.</li>
+	<li>The names of sailors who have reserved a blue AND a white boat.</li>
+	<li>The names of sailors who have reserved neither a blue nor a white boat.</li>
+	<li>Empty set.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following database relations :</p>
 
 <ul>
 	<li> It contains the courses that each student has enrolled into, and</li>
@@ -59,29 +210,31 @@ FROM Enrolled
 WHERE Course IN (SELECT Course FROM ToDo);
 </pre>
 
-<p>How many tuples will be there in the output of this SQL Query?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider the following schema:<br>
+<p>How many tuples will be there in the output of this SQL Query?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following Student database and the relations in it :</p>
 
-    [ Sailors( sid: ,    nbsp;sname: ,  rating: ,  age: real);                                             nbsp;Boats(                    nbsp;bid: ,    nbsp;bname: ,  color:;                       Reserves( sid: ,  bid: ,  day:  ) ]
+<p>
+    [      ; nbsp; ]
 <br>
-The primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation and every relation has at least one tuple.  of Reserves is foreign key to .<br>
-Assume that there exists a sailor who has reserved a boat with  in the reserves table.</p>
+Student relation has the following set of tuples :<br>
 
-<p>Consider the following query :</p>
+    { ( 101, a, 50 ), (102, b, 52), (103, c, 60), (104, d, 70) }
+<br>
+Course relation has the following set of tuples :<br>
 
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+    { (c1, 20, 90), (c2, 15, 95), (c3, 10, 100) }
+<br>
+Consider the following query :</p>
+
+<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
 SELECT S.sid
-FROM Sailors S, Reserves R
-WHERE S.rating =10 OR R.bid =104
+FROM Student S
+WHERE EXISTS ( SELECT COUNT(*)
+            FROM Course C
+            WHERE S.marks    gt; C.min AND S.marks    gt; C.max)
 </pre>
 
-<p>What is the output of the above query?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>All sids of sailors who have a rating of 10 AND have reserved boat 104.</li>
-	<li>All sids of sailors who have a rating of 10 OR have reserved boat 104.</li>
-	<li>All sids of sailor table</li>
-	<li>Empty set.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following three relational schemas in a database :</p>
+<p><br>
+How many tuples will be in the output of the above SQL Query?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider the following three relational schemas in a database :</p>
 
 <pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
 CREATE TABLE R(A INT PRIMARY KEY, B INT);
@@ -120,37 +273,11 @@ Which of the following is correct?</p>
 	<li>After executing the command “DELETE FROM S;”, R will remain unchanged.</li>
 	<li>After executing the command “DELETE FROM S;”, T will contain 2 tuples.</li>
 	<li>After executing the command “DELETE FROM R;”, T will contain 2 tuples.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Let R(a, b, c, d) be a RDBMS relation having the following set of functional dependencies(FD set) :<br>
-FD Set F={b → c ; c → d ; ab → d ; bc → cd} We apply some queries on a relational instance r of R. Which of the following queries are guaranteed to return the same number of tuples as in relation instance r?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>∏_a(r)</li>
-	<li>∏_a, c(r)</li>
-	<li>∏_a, b(r)</li>
-	<li>∏_a, b, d(r)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider the following relations and query.<br>
-
-    <br>
-    <br>
-    
-    <br>
-    
-    <br>
-    σ_([(∪s) - (r - s)] - (s - r))<br>
-    <br>
-<br>
-Which of the following is equivalent to the above query?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>σ_(⋈)</li>
-	<li>σ_(∪)</li>
-	<li>σ_() ∩   nbsp;σ_   nbsp;()</li>
-	<li>σ_(r∩)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - For a simple undirected finite graph G, graph degrees (degrees of vertices of graph ) are stored in a database table Deg(G). This table has two attributes V, D where V represents the vertices and D represents corresponding degree of those vertices i.e. If v_i is some vertex of degree d_i in graph G then there will be a row v_i, d_i in Deg(G).
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - For a simple undirected finite graph G, graph degrees (degrees of vertices of graph ) are stored in a database table Deg(G). This table has two attributes V, D where V represents the vertices and D represents corresponding degree of those vertices i.e. If v_i is some vertex of degree d_i in graph G then there will be a row v_i, d_i in Deg(G).
 
 V is the primary key in this table.
 
-For a 100 vertices simple graph G, the summation of minimum and maximum possible value of |π_D(Deg(G))| will be _________<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>For a RDBMS relation T(P, Q, R, S, U), the following set F of functional dependencies holds:<br>
+For a 100 vertices simple graph G, the summation of minimum and maximum possible value of |π_D(Deg(G))| will be _________<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>For a RDBMS relation T(P, Q, R, S, U), the following set F of functional dependencies holds:<br>
 
     <br>
     F={P→QR ; RS→U ; Q→S ; U→P}<br>
@@ -168,18 +295,7 @@ For a 100 vertices simple graph G, the summation of minimum and maximum possible
 	<li>X⋈Y≠ t</li>
 	<li>A⋈B = t</li>
 	<li>A⋈B≠ t</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Given relations r and s. Let Function C denote the number of results in the output. Which of the following statements "can be" correct? (Hint: Discard the statements which are NEVER possible)</p>
-
-<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=6254314144349621118"></p>
-
-<p>   nbsp;</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>I and II</li>
-	<li>II and III</li>
-	<li>Only III</li>
-	<li>III and IV</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - Consider the following relation schemas:  and their instances :
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - Consider the following relation schemas:  and their instances :
 
     ={⟨ a, b⟩,⟨ a, c⟩,⟨ c, d⟩,⟨ b, e⟩}
        ={⟨ b, e⟩,⟨ d, h⟩,⟨ b, f⟩,⟨ a, d⟩,⟨ a, e⟩}
@@ -187,125 +303,8 @@ For a 100 vertices simple graph G, the summation of minimum and maximum possible
 How many rows are present in the result of the following relational algebra expression using left-outer-natural-join :
 
     π_(⋈_ )
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider the following database schema with a relation <br>
-
-    
-</p>
-
-<p>Table Likes tells which candy a kid likes.</p>
-
-<p>Consider the following relational algebra query :<br>
-
-    <br>
-       amp;←Π_(σ_())
-    <br>
-       amp;←Π_(σ_())
-    <br>
-       amp;←
-    <br>
-       amp;Π_()<br>
-<br>
-Which of the following is true about the result of the above query?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>The query is to find the kids who like "Hersheys" and "Mars" candy.</li>
-	<li>The query is to find the kids who like "Hersheys" candy but not "Mars" candy.</li>
-	<li>The query is to find the kids who like "Hersheys" or "Mars" candy.</li>
-	<li>The query is to find the kids who like neither "Hersheys" nor "Mars" candy.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Assume we have two relations R(A, B) and S(B, C). All three attributes (A, B, C) are integer attributes. Assume that Relation R contains the following tuples: (1,2),(2,3), and (3,4). Assume that relation S contains the following tuples (2,2),(2,3), and (5,1). Note that " × " is Natural join, in the following expressions.</p>
-
-<p>Which of the following relational algebra expressions are equivalent, with respect to the above information?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>π_A(σ_B=1(R)) and σ_B=1(π_A(R))</li>
-	<li>π_A(σ_A=1(R)) and σ_A=1(π_A(R))</li>
-	<li>π_A, B(R×S) and (π _A, B(R))×S</li>
-	<li>σ_B=1(R×S) and (σ_B=1(R)) ×S</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Let R=(A, B, C), S=(C, D, E) and let q and r be a relation on schema R and s be a relation on schema S.</p>
-
-<p>Consider the following queries :</p>
-
-<ol>
-	<li>{   lt;a   gt;|∃ b(   lt;a, b   gt;∈ r ∧ b=10)}</li>
-	<li>
-	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
-SELECT DISTINCT A FROM r WHERE B=10</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
-SELECT DISTINCT * FROM r EXCEPT SELECT DISTINCT * FROM s
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
-SELECT DISTINCT * FROM q WHERE (A, B, C) NOT IN (SELECT DISTINCT * FROM r
-</pre>
-	</li>
-</ol>
-
-<p>Which of the following is/are true? (Two queries are said to be equivalent when they produce the same output, i.e., the same set of records)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Query 1 and 2 are equivalent.</li>
-	<li>Query 1 and 3 are equivalent</li>
-	<li>Query 2 and 4 are equivalent</li>
-	<li>Query 3 and 4 are equivalent</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the relations r, s and query :<br>
-
-    <br>
-    <br>
-    t 1 ←σ_θ((r × s) ÷ r)
-    <br>
-    t 2 ←σ_θ(s)
-    <br>
-    t 3 ←σ_θ(r)
-    <br>
-    <br>
-</p>
-
-<p>Relation   nbsp;r is not empty.</p>
-
-<p>Which of the following is correct?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>t 1=t 3</li>
-	<li>t2 =t 3</li>
-	<li>t 1=t 2</li>
-	<li>None of the above</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the following schema:</p>
-
-<p>
-    [ Sailors( sid: ,    nbsp;sname: ,  rating: ,  age: real);                                             nbsp;Boats(                    nbsp;bid: ,    nbsp;bname: ,  color:;                       Reserves( sid: ,  bid: ,  day:  ) ]
-<br>
-The primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation.</p>
-
-<p>Consider the following query :</p>
-
-<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">
-SELECT S.sname
-FROM Sailors S, Reserves R, Boats B
-WHERE S.sid = R.sid AND R.bid = B.bid
-    AND (B.color = ‘blue’ AND B.color = ‘white’)
-</pre>
-
-<p>What is the output of the above query?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>The names of sailors who have reserved a blue or a white boat.</li>
-	<li>The names of sailors who have reserved a blue AND a white boat.</li>
-	<li>The names of sailors who have reserved neither a blue nor a white boat.</li>
-	<li>Empty set.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Suppose that two relations A(X, Y) and B(X, Y) have exactly the same schema. Also, there are no null values in the relations.<br>
-Which of the following equalities hold in relational algebra? (Where " × " is Cartesian-Product Operation)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>A∩B = A - (A - B)</li>
-	<li>A∩B = B - (B - A)</li>
-	<li>A∩B = A NATURAL-JOIN B</li>
-	<li>A∩B = A   nbsp;×B</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '384740', 'text': '<p>Consider the following Student database and the relations in it :</p>\n\n<p>$$\\begin{array}{l} \\textsf{Student (sid, name, marks)} \\\\&nbsp; \\textsf{Course (cid, min, max)} \\end{array}$$<br>\nStudent relation has the following set of tuples :<br>\n$$\\{ ( 101, a, 50 ), (102, b, 52), (103, c, 60), (104, d, 70) \\}$$<br>\nCourse relation has the following set of tuples :<br>\n$$\\{ (c1, 20, 90), (c2, 15, 95), (c3, 10, 100) \\}$$<br>\nConsider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sid\nFROM Student S\nWHERE EXISTS ( SELECT COUNT(*)\n            FROM Course C\n            WHERE S.marks &gt; C.min AND S.marks &gt; C.max)\n</pre>\n\n<p><br>\nHow many tuples will be in the output of the above SQL Query?</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384735', 'text': '<p>Consider the following database relations :</p>\n\n<ul>\n\t<li>$\\textsf{Enrolled(Student, Course) :}$ It contains the courses that each student has enrolled into, and</li>\n\t<li>$\\textsf{ToDo(Course) :}$ It contains the courses that are required to graduate.</li>\n</ul>\n\n<p>The instance for $\\textsf{Enrolled}$ relation is shown below:<br>\n$$\\begin{array}{|c|c|}<br>\n\\hline \\textbf{Student} &amp; &nbsp;\\textbf{Course} \\\\<br>\n\\hline \\text{Robert} &amp; \\text{Databases} \\\\<br>\n\\text{Robert} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Susie} &amp; \\text{Databases} \\\\<br>\n\\text{Susie} &amp; \\text{Operating Systems} \\\\<br>\n\\text{Julie} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Julie} &amp; \\text{Machine Learning} \\\\<br>\n\\text{Emilie} &amp; \\text{Operating Systems} \\\\<br>\n\\hline<br>\n\\end{array}$$<br>\nThe instance for $\\textsf{ToDo}$ relation is shown below:<br>\n$$<br>\n\\begin{array}{|c|}<br>\n\\hline \\textbf{Course} \\\\<br>\n\\hline \\text{Databases} \\\\<br>\n\\text{Programming Languages} \\\\<br>\n\\hline<br>\n\\end{array}<br>\n$$<br>\nWe run the following SQL Query of this database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT Student\nFROM Enrolled\nWHERE Course IN (SELECT Course FROM ToDo);\n</pre>\n\n<p>How many tuples will be there in the output of this SQL Query?</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384733', 'text': '<p>Consider the following schema:<br>\n$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation and every relation has at least one tuple. $\\textsf{“Sid"}$ of Reserves is foreign key to $\\textsf{Sailor.sid}.$<br>\nAssume that there exists a sailor who has reserved a boat with $\\textsf{bid 104}$ in the reserves table.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nSELECT S.sid\nFROM Sailors S, Reserves R\nWHERE S.rating =10 OR R.bid =104\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All sids of sailors who have a rating of $10$ AND have reserved boat $104.$</li>\n\t<li>All sids of sailors who have a rating of $10$ OR have reserved boat $104.$</li>\n\t<li>All sids of sailor table</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384725', 'text': '<p>Consider the following three relational schemas in a database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE R(A INT PRIMARY KEY, B INT);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE S(C INT PRIMARY KEY, A INT REFERENCES R(A) ON DELETE CASCADE);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE T(D INT PRIMARY KEY, C INT REFERENCES S(C) ON DELETE SET NULL);\n</pre>\n\n<p>Consider the following instances of relations $\\textsf{R, S, T :}$<br>\n$$\\textsf{R}$$$$\\begin{array}{c|c} \\text{A} &amp; {B} \\\\ \\hline a &amp; a \\\\ b &amp; b \\end{array}$$</p>\n\n<p>$$\\textsf{S}$$$$\\begin{array}{c|c} \\text{C} &amp; {A} \\\\ \\hline b&nbsp;&amp; a \\\\ c&nbsp;&amp; a&nbsp;\\end{array}$$</p>\n\n<p>$$\\textsf{T}$$$$\\begin{array}{c|c} \\text{D} &amp; {C} \\\\ \\hline a &amp; b&nbsp;\\\\ c&nbsp;&amp; c&nbsp;\\end{array}$$<br>\nWhich of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>After executing the command “DELETE FROM T;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, T will contain $2$ tuples.</li>\n\t<li>After executing the command “DELETE FROM R;”, T will contain $2$ tuples.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384723', 'text': '<p>Let $\\mathrm{R}(a, b, c, d)$ be a RDBMS relation having the following set of functional dependencies(FD set) :<br>\nFD Set $\\mathrm{F}=\\{b \\rightarrow c ; c \\rightarrow d ; ab \\rightarrow d ; bc \\rightarrow cd\\}$ We apply some queries on a relational instance $r$ of $\\text{R}$. Which of the following queries are guaranteed to return the same number of tuples as in relation instance $r?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\prod_a(r)$</li>\n\t<li>$\\prod_{a, c}(r)$</li>\n\t<li>$\\prod_{a, b}(r)$</li>\n\t<li>$\\prod_{a, b, d}(r)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384746', 'text': '<p>Consider the following relations and query.<br>\n$$<br>\n\\begin{gathered}<br>\n\\textsf{r(A, B, C)}\\\\<br>\n\\textsf{s(A, B, C)}\\\\<br>\n\\sigma_{\\textsf{A&gt;C}}([(\\textsf{r} \\cup \\text{s) - (r - s)] - (s - r))}<br>\n\\end{gathered}<br>\n$$<br>\nWhich of the following is equivalent to the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\bowtie \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\cup \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r}) \\cap&nbsp;\\sigma_{\\textsf{A&gt;C}}&nbsp;(\\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\text{r} \\cap \\textsf{s})$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384727', 'text': 'For a simple undirected finite graph $\\text{G},$ graph degrees (degrees of vertices of graph ) are stored in a database table $\\text{Deg(G)}.$ This table has two attributes $\\text{V, D}$ where $\\mathrm{V}$ represents the vertices and $\\text{D}$ represents corresponding degree of those vertices i.e. If $v_i$ is some vertex of degree $d_i$ in graph $\\text{G}$ then there will be a row $v_i, d_i$ in $\\text{Deg(G)}.$\n\n$\\mathrm{V}$ is the primary key in this table.\n\nFor a $100$ vertices simple graph $\\text{G},$ the summation of minimum and maximum possible value of $\\left|\\pi_{\\mathrm{D}}(\\operatorname{Deg}(\\mathrm{G}))\\right|$ will be _________', 'type': 'Numerical', 'answer': '100', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384721', 'text': '<p>For a RDBMS relation $\\mathrm{T}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}, \\mathrm{S}, \\mathrm{U})$, the following set $\\mathrm{F}$ of functional dependencies holds:<br>\n$$<br>\n\\mathrm{F}=\\{\\mathrm{P} \\rightarrow \\mathrm{QR} ; \\mathrm{RS} \\rightarrow \\mathrm{U} ; \\mathrm{Q} \\rightarrow \\mathrm{S} ; \\mathrm{U} \\rightarrow \\mathrm{P}\\}<br>\n$$</p>\n\n<ul>\n\t<li>Ram decomposes $\\mathrm{T}$ into two relations $\\mathrm{X}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{Y}(\\mathrm{R}, \\mathrm{S}, \\mathrm{U})$.</li>\n\t<li>Shyam decomposes $\\mathrm{T}$ into two relations $\\mathrm{A}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{B}(\\mathrm{P}, \\mathrm{S}, \\mathrm{U})$.</li>\n</ul>\n\n<p>Which of the following is/are necessarily true on any(every) instance $t$ of relation $\\mathrm{T}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} = t$</li>\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} \\neq t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} = t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} \\neq t$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384729', 'text': '<p>Given relations $r$ and $s$. Let Function $\\text{C}$ denote the number of results in the output. Which of the following statements "can be" correct? (Hint: Discard the statements which are NEVER possible)</p>\n\n<p style="text-align:center"><img alt="" height="151" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6254314144349621118" width="295"></p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I and II</li>\n\t<li>II and III</li>\n\t<li>Only III</li>\n\t<li>III and IV</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384748', 'text': 'Consider the following relation schemas: $\\textsf{r(A, B), t(B, C)}$ and their instances :\n$$\n\\begin{aligned}\n&\\textsf{r(A, B)}=\\{\\langle a, b\\rangle,\\langle a, c\\rangle,\\langle c, d\\rangle,\\langle b, e\\rangle\\}\\\\\n&\\textsf{t(B, C)}=\\{\\langle b, e\\rangle,\\langle d, h\\rangle,\\langle b, f\\rangle,\\langle a, d\\rangle,\\langle a, e\\rangle\\}\n\\end{aligned}\n$$\nHow many rows are present in the result of the following relational algebra expression using left-outer-natural-join :\n$$\n\\pi_{\\textsf{A, C}}\\left(\\textsf{r} \\bowtie_{\\;\\textsf{LEFT}} \\textsf{t}\\right)\n$$', 'type': 'Numerical', 'answer': '5', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384750', 'text': '<p>Consider the following database schema with a relation $\\textsf{"Likes" :}$<br>\n$$\\textsf{Likes(kid, candy)}$$</p>\n\n<p>Table Likes tells which candy a kid likes.</p>\n\n<p>Consider the following relational algebra query :<br>\n$$\\begin{aligned}<br>\n&amp;\\textsf{H} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "HERSHEYS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{M} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "MARS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{BOTH} \\leftarrow \\textsf{H UNION M}\\\\<br>\n&amp;\\Pi_{\\textsf{KID}}(\\textsf{BOTH})<br>\n\\end{aligned}$$<br>\nWhich of the following is true about the result of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The query is to find the kids who like "Hersheys" and "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" candy but not "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" or "Mars" candy.</li>\n\t<li>The query is to find the kids who like neither "Hersheys" nor "Mars" candy.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3-weekly-quiz,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384731', 'text': '<p>Assume we have two relations $\\text{R(A, B)}$ and $\\text{S(B, C)}$. All three attributes $\\text{(A, B, C)}$ are integer attributes. Assume that Relation $\\text{R}$ contains the following tuples: $(1,2),(2,3)$, and $(3,4)$. Assume that relation $\\text{S}$ contains the following tuples $(2,2),(2,3)$, and $(5,1)$. Note that " $\\times$ " is Natural join, in the following expressions.</p>\n\n<p>Which of the following relational algebra expressions are equivalent, with respect to the above information?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{B=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{A=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{A=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_{\\text{A, B}}\\text{(R} \\times \\text{S)}$ and $(\\pi _{\\text{A, B}}\\text{(R))} \\times \\text{S}$</li>\n\t<li>$\\sigma_{\\text{B=1}}(\\text{R} \\times \\text{S})$ and $\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right) \\times \\text{S}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384738', 'text': '<p>Let $\\mathrm{R}=(\\mathrm{A}, \\mathrm{B}, \\mathrm{C}), \\mathrm{S}=(\\mathrm{C}, \\mathrm{D}, \\mathrm{E})$ and let $q$ and $r$ be a relation on schema $\\mathrm{R}$ and $s$ be a relation on schema $\\mathrm{S}.$</p>\n\n<p>Consider the following queries :</p>\n\n<ol>\n\t<li>$\\{&lt;a&gt;\\mid \\exists b(&lt;a, b&gt;\\in r \\wedge b=10)\\}$</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT A FROM r WHERE B=10</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM r EXCEPT SELECT DISTINCT * FROM s\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM q WHERE (A, B, C) NOT IN (SELECT DISTINCT * FROM r\n</pre>\n\t</li>\n</ol>\n\n<p>Which of the following is/are true? (Two queries are said to be equivalent when they produce the same output, i.e., the same set of records)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Query $1$ and $2$ are equivalent.</li>\n\t<li>Query $1$ and $3$ are equivalent</li>\n\t<li>Query $2$ and $4$ are equivalent</li>\n\t<li>Query $3$ and $4$ are equivalent</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384744', 'text': '<p>Consider the relations $r, s$ and query :<br>\n$$<br>\n\\begin{gathered}<br>\nt 1 \\leftarrow \\sigma_\\theta((r \\times s) \\div r)\\\\<br>\nt 2 \\leftarrow \\sigma_\\theta(s)\\\\<br>\nt 3 \\leftarrow \\sigma_\\theta(r)\\\\<br>\n\\end{gathered}<br>\n$$</p>\n\n<p>Relation&nbsp;$r$ is not empty.</p>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t 1=t 3$</li>\n\t<li>t2 $=t 3$</li>\n\t<li>$t 1=t 2$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384742', 'text': '<p>Consider the following schema:</p>\n\n<p>$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname\nFROM Sailors S, Reserves R, Boats B\nWHERE S.sid = R.sid AND R.bid = B.bid\n    AND (B.color = ‘blue’ AND B.color = ‘white’)\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The names of sailors who have reserved a blue or a white boat.</li>\n\t<li>The names of sailors who have reserved a blue AND a white boat.</li>\n\t<li>The names of sailors who have reserved neither a blue nor a white boat.</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384752', 'text': '<p>Suppose that two relations $\\text{A(X, Y)}$ and $\\text{B(X, Y)}$ have exactly the same schema. Also, there are no null values in the relations.<br>\nWhich of the following equalities hold in relational algebra? (Where " $\\times$ " is Cartesian-Product Operation)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{A} \\cap \\text{B = A - (A - B)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = B - (B - A)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A NATURAL-JOIN B}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A}&nbsp;\\times \\text{B}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}]
-      let data={'name': 'GO Classes Test Series 2023 | Databases | Test 3', 'duration': '50', 'total_qs': '16', 'total_qs_one': 6, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 16, 'apti_marks': 0, 'technical_marks': 26, 'total_marks': 26, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 16, 'marks': 26, 'question': [{'contents': '', 'post_id': '384740', 'text': '<p>Consider the following Student database and the relations in it :</p>\n\n<p>$$\\begin{array}{l} \\textsf{Student (sid, name, marks)} \\\\&nbsp; \\textsf{Course (cid, min, max)} \\end{array}$$<br>\nStudent relation has the following set of tuples :<br>\n$$\\{ ( 101, a, 50 ), (102, b, 52), (103, c, 60), (104, d, 70) \\}$$<br>\nCourse relation has the following set of tuples :<br>\n$$\\{ (c1, 20, 90), (c2, 15, 95), (c3, 10, 100) \\}$$<br>\nConsider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sid\nFROM Student S\nWHERE EXISTS ( SELECT COUNT(*)\n            FROM Course C\n            WHERE S.marks &gt; C.min AND S.marks &gt; C.max)\n</pre>\n\n<p><br>\nHow many tuples will be in the output of the above SQL Query?</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384735', 'text': '<p>Consider the following database relations :</p>\n\n<ul>\n\t<li>$\\textsf{Enrolled(Student, Course) :}$ It contains the courses that each student has enrolled into, and</li>\n\t<li>$\\textsf{ToDo(Course) :}$ It contains the courses that are required to graduate.</li>\n</ul>\n\n<p>The instance for $\\textsf{Enrolled}$ relation is shown below:<br>\n$$\\begin{array}{|c|c|}<br>\n\\hline \\textbf{Student} &amp; &nbsp;\\textbf{Course} \\\\<br>\n\\hline \\text{Robert} &amp; \\text{Databases} \\\\<br>\n\\text{Robert} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Susie} &amp; \\text{Databases} \\\\<br>\n\\text{Susie} &amp; \\text{Operating Systems} \\\\<br>\n\\text{Julie} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Julie} &amp; \\text{Machine Learning} \\\\<br>\n\\text{Emilie} &amp; \\text{Operating Systems} \\\\<br>\n\\hline<br>\n\\end{array}$$<br>\nThe instance for $\\textsf{ToDo}$ relation is shown below:<br>\n$$<br>\n\\begin{array}{|c|}<br>\n\\hline \\textbf{Course} \\\\<br>\n\\hline \\text{Databases} \\\\<br>\n\\text{Programming Languages} \\\\<br>\n\\hline<br>\n\\end{array}<br>\n$$<br>\nWe run the following SQL Query of this database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT Student\nFROM Enrolled\nWHERE Course IN (SELECT Course FROM ToDo);\n</pre>\n\n<p>How many tuples will be there in the output of this SQL Query?</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384733', 'text': '<p>Consider the following schema:<br>\n$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation and every relation has at least one tuple. $\\textsf{“Sid"}$ of Reserves is foreign key to $\\textsf{Sailor.sid}.$<br>\nAssume that there exists a sailor who has reserved a boat with $\\textsf{bid 104}$ in the reserves table.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nSELECT S.sid\nFROM Sailors S, Reserves R\nWHERE S.rating =10 OR R.bid =104\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All sids of sailors who have a rating of $10$ AND have reserved boat $104.$</li>\n\t<li>All sids of sailors who have a rating of $10$ OR have reserved boat $104.$</li>\n\t<li>All sids of sailor table</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384725', 'text': '<p>Consider the following three relational schemas in a database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE R(A INT PRIMARY KEY, B INT);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE S(C INT PRIMARY KEY, A INT REFERENCES R(A) ON DELETE CASCADE);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE T(D INT PRIMARY KEY, C INT REFERENCES S(C) ON DELETE SET NULL);\n</pre>\n\n<p>Consider the following instances of relations $\\textsf{R, S, T :}$<br>\n$$\\textsf{R}$$$$\\begin{array}{c|c} \\text{A} &amp; {B} \\\\ \\hline a &amp; a \\\\ b &amp; b \\end{array}$$</p>\n\n<p>$$\\textsf{S}$$$$\\begin{array}{c|c} \\text{C} &amp; {A} \\\\ \\hline b&nbsp;&amp; a \\\\ c&nbsp;&amp; a&nbsp;\\end{array}$$</p>\n\n<p>$$\\textsf{T}$$$$\\begin{array}{c|c} \\text{D} &amp; {C} \\\\ \\hline a &amp; b&nbsp;\\\\ c&nbsp;&amp; c&nbsp;\\end{array}$$<br>\nWhich of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>After executing the command “DELETE FROM T;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, T will contain $2$ tuples.</li>\n\t<li>After executing the command “DELETE FROM R;”, T will contain $2$ tuples.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384723', 'text': '<p>Let $\\mathrm{R}(a, b, c, d)$ be a RDBMS relation having the following set of functional dependencies(FD set) :<br>\nFD Set $\\mathrm{F}=\\{b \\rightarrow c ; c \\rightarrow d ; ab \\rightarrow d ; bc \\rightarrow cd\\}$ We apply some queries on a relational instance $r$ of $\\text{R}$. Which of the following queries are guaranteed to return the same number of tuples as in relation instance $r?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\prod_a(r)$</li>\n\t<li>$\\prod_{a, c}(r)$</li>\n\t<li>$\\prod_{a, b}(r)$</li>\n\t<li>$\\prod_{a, b, d}(r)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384746', 'text': '<p>Consider the following relations and query.<br>\n$$<br>\n\\begin{gathered}<br>\n\\textsf{r(A, B, C)}\\\\<br>\n\\textsf{s(A, B, C)}\\\\<br>\n\\sigma_{\\textsf{A&gt;C}}([(\\textsf{r} \\cup \\text{s) - (r - s)] - (s - r))}<br>\n\\end{gathered}<br>\n$$<br>\nWhich of the following is equivalent to the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\bowtie \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\cup \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r}) \\cap&nbsp;\\sigma_{\\textsf{A&gt;C}}&nbsp;(\\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\text{r} \\cap \\textsf{s})$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384727', 'text': 'For a simple undirected finite graph $\\text{G},$ graph degrees (degrees of vertices of graph ) are stored in a database table $\\text{Deg(G)}.$ This table has two attributes $\\text{V, D}$ where $\\mathrm{V}$ represents the vertices and $\\text{D}$ represents corresponding degree of those vertices i.e. If $v_i$ is some vertex of degree $d_i$ in graph $\\text{G}$ then there will be a row $v_i, d_i$ in $\\text{Deg(G)}.$\n\n$\\mathrm{V}$ is the primary key in this table.\n\nFor a $100$ vertices simple graph $\\text{G},$ the summation of minimum and maximum possible value of $\\left|\\pi_{\\mathrm{D}}(\\operatorname{Deg}(\\mathrm{G}))\\right|$ will be _________', 'type': 'Numerical', 'answer': '100', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384721', 'text': '<p>For a RDBMS relation $\\mathrm{T}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}, \\mathrm{S}, \\mathrm{U})$, the following set $\\mathrm{F}$ of functional dependencies holds:<br>\n$$<br>\n\\mathrm{F}=\\{\\mathrm{P} \\rightarrow \\mathrm{QR} ; \\mathrm{RS} \\rightarrow \\mathrm{U} ; \\mathrm{Q} \\rightarrow \\mathrm{S} ; \\mathrm{U} \\rightarrow \\mathrm{P}\\}<br>\n$$</p>\n\n<ul>\n\t<li>Ram decomposes $\\mathrm{T}$ into two relations $\\mathrm{X}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{Y}(\\mathrm{R}, \\mathrm{S}, \\mathrm{U})$.</li>\n\t<li>Shyam decomposes $\\mathrm{T}$ into two relations $\\mathrm{A}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{B}(\\mathrm{P}, \\mathrm{S}, \\mathrm{U})$.</li>\n</ul>\n\n<p>Which of the following is/are necessarily true on any(every) instance $t$ of relation $\\mathrm{T}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} = t$</li>\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} \\neq t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} = t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} \\neq t$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384729', 'text': '<p>Given relations $r$ and $s$. Let Function $\\text{C}$ denote the number of results in the output. Which of the following statements "can be" correct? (Hint: Discard the statements which are NEVER possible)</p>\n\n<p style="text-align:center"><img alt="" height="151" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6254314144349621118" width="295"></p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I and II</li>\n\t<li>II and III</li>\n\t<li>Only III</li>\n\t<li>III and IV</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384748', 'text': 'Consider the following relation schemas: $\\textsf{r(A, B), t(B, C)}$ and their instances :\n$$\n\\begin{aligned}\n&\\textsf{r(A, B)}=\\{\\langle a, b\\rangle,\\langle a, c\\rangle,\\langle c, d\\rangle,\\langle b, e\\rangle\\}\\\\\n&\\textsf{t(B, C)}=\\{\\langle b, e\\rangle,\\langle d, h\\rangle,\\langle b, f\\rangle,\\langle a, d\\rangle,\\langle a, e\\rangle\\}\n\\end{aligned}\n$$\nHow many rows are present in the result of the following relational algebra expression using left-outer-natural-join :\n$$\n\\pi_{\\textsf{A, C}}\\left(\\textsf{r} \\bowtie_{\\;\\textsf{LEFT}} \\textsf{t}\\right)\n$$', 'type': 'Numerical', 'answer': '5', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384750', 'text': '<p>Consider the following database schema with a relation $\\textsf{"Likes" :}$<br>\n$$\\textsf{Likes(kid, candy)}$$</p>\n\n<p>Table Likes tells which candy a kid likes.</p>\n\n<p>Consider the following relational algebra query :<br>\n$$\\begin{aligned}<br>\n&amp;\\textsf{H} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "HERSHEYS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{M} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "MARS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{BOTH} \\leftarrow \\textsf{H UNION M}\\\\<br>\n&amp;\\Pi_{\\textsf{KID}}(\\textsf{BOTH})<br>\n\\end{aligned}$$<br>\nWhich of the following is true about the result of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The query is to find the kids who like "Hersheys" and "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" candy but not "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" or "Mars" candy.</li>\n\t<li>The query is to find the kids who like neither "Hersheys" nor "Mars" candy.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3-weekly-quiz,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384731', 'text': '<p>Assume we have two relations $\\text{R(A, B)}$ and $\\text{S(B, C)}$. All three attributes $\\text{(A, B, C)}$ are integer attributes. Assume that Relation $\\text{R}$ contains the following tuples: $(1,2),(2,3)$, and $(3,4)$. Assume that relation $\\text{S}$ contains the following tuples $(2,2),(2,3)$, and $(5,1)$. Note that " $\\times$ " is Natural join, in the following expressions.</p>\n\n<p>Which of the following relational algebra expressions are equivalent, with respect to the above information?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{B=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{A=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{A=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_{\\text{A, B}}\\text{(R} \\times \\text{S)}$ and $(\\pi _{\\text{A, B}}\\text{(R))} \\times \\text{S}$</li>\n\t<li>$\\sigma_{\\text{B=1}}(\\text{R} \\times \\text{S})$ and $\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right) \\times \\text{S}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384738', 'text': '<p>Let $\\mathrm{R}=(\\mathrm{A}, \\mathrm{B}, \\mathrm{C}), \\mathrm{S}=(\\mathrm{C}, \\mathrm{D}, \\mathrm{E})$ and let $q$ and $r$ be a relation on schema $\\mathrm{R}$ and $s$ be a relation on schema $\\mathrm{S}.$</p>\n\n<p>Consider the following queries :</p>\n\n<ol>\n\t<li>$\\{&lt;a&gt;\\mid \\exists b(&lt;a, b&gt;\\in r \\wedge b=10)\\}$</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT A FROM r WHERE B=10</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM r EXCEPT SELECT DISTINCT * FROM s\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM q WHERE (A, B, C) NOT IN (SELECT DISTINCT * FROM r\n</pre>\n\t</li>\n</ol>\n\n<p>Which of the following is/are true? (Two queries are said to be equivalent when they produce the same output, i.e., the same set of records)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Query $1$ and $2$ are equivalent.</li>\n\t<li>Query $1$ and $3$ are equivalent</li>\n\t<li>Query $2$ and $4$ are equivalent</li>\n\t<li>Query $3$ and $4$ are equivalent</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384744', 'text': '<p>Consider the relations $r, s$ and query :<br>\n$$<br>\n\\begin{gathered}<br>\nt 1 \\leftarrow \\sigma_\\theta((r \\times s) \\div r)\\\\<br>\nt 2 \\leftarrow \\sigma_\\theta(s)\\\\<br>\nt 3 \\leftarrow \\sigma_\\theta(r)\\\\<br>\n\\end{gathered}<br>\n$$</p>\n\n<p>Relation&nbsp;$r$ is not empty.</p>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t 1=t 3$</li>\n\t<li>t2 $=t 3$</li>\n\t<li>$t 1=t 2$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384742', 'text': '<p>Consider the following schema:</p>\n\n<p>$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname\nFROM Sailors S, Reserves R, Boats B\nWHERE S.sid = R.sid AND R.bid = B.bid\n    AND (B.color = ‘blue’ AND B.color = ‘white’)\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The names of sailors who have reserved a blue or a white boat.</li>\n\t<li>The names of sailors who have reserved a blue AND a white boat.</li>\n\t<li>The names of sailors who have reserved neither a blue nor a white boat.</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384752', 'text': '<p>Suppose that two relations $\\text{A(X, Y)}$ and $\\text{B(X, Y)}$ have exactly the same schema. Also, there are no null values in the relations.<br>\nWhich of the following equalities hold in relational algebra? (Where " $\\times$ " is Cartesian-Product Operation)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{A} \\cap \\text{B = A - (A - B)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = B - (B - A)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A NATURAL-JOIN B}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A}&nbsp;\\times \\text{B}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}]}]}
+      let data={'name': 'GO Classes Test Series 2023 | Databases | Test 3', 'duration': '50', 'total_qs': '16', 'total_qs_one': 6, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 16, 'apti_marks': 0, 'technical_marks': 26, 'total_marks': 26, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 16, 'marks': 26, 'question': [{'contents': '', 'post_id': '384731', 'text': '<p>Assume we have two relations $\\text{R(A, B)}$ and $\\text{S(B, C)}$. All three attributes $\\text{(A, B, C)}$ are integer attributes. Assume that Relation $\\text{R}$ contains the following tuples: $(1,2),(2,3)$, and $(3,4)$. Assume that relation $\\text{S}$ contains the following tuples $(2,2),(2,3)$, and $(5,1)$. Note that " $\\times$ " is Natural join, in the following expressions.</p>\n\n<p>Which of the following relational algebra expressions are equivalent, with respect to the above information?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{B=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_\\text{A}\\left(\\sigma_{\\text{A=1}}(\\text{R})\\right)$ and $\\sigma_{\\text{A=1}}\\left(\\pi_\\text{A}(\\text{R})\\right)$</li>\n\t<li>$\\pi_{\\text{A, B}}\\text{(R} \\times \\text{S)}$ and $(\\pi _{\\text{A, B}}\\text{(R))} \\times \\text{S}$</li>\n\t<li>$\\sigma_{\\text{B=1}}(\\text{R} \\times \\text{S})$ and $\\left(\\sigma_{\\text{B=1}}(\\text{R})\\right) \\times \\text{S}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384723', 'text': '<p>Let $\\mathrm{R}(a, b, c, d)$ be a RDBMS relation having the following set of functional dependencies(FD set) :<br>\nFD Set $\\mathrm{F}=\\{b \\rightarrow c ; c \\rightarrow d ; ab \\rightarrow d ; bc \\rightarrow cd\\}$ We apply some queries on a relational instance $r$ of $\\text{R}$. Which of the following queries are guaranteed to return the same number of tuples as in relation instance $r?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\prod_a(r)$</li>\n\t<li>$\\prod_{a, c}(r)$</li>\n\t<li>$\\prod_{a, b}(r)$</li>\n\t<li>$\\prod_{a, b, d}(r)$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384752', 'text': '<p>Suppose that two relations $\\text{A(X, Y)}$ and $\\text{B(X, Y)}$ have exactly the same schema. Also, there are no null values in the relations.<br>\nWhich of the following equalities hold in relational algebra? (Where " $\\times$ " is Cartesian-Product Operation)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{A} \\cap \\text{B = A - (A - B)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = B - (B - A)}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A NATURAL-JOIN B}$</li>\n\t<li>$\\text{A} \\cap \\text{B = A}&nbsp;\\times \\text{B}$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384729', 'text': '<p>Given relations $r$ and $s$. Let Function $\\text{C}$ denote the number of results in the output. Which of the following statements "can be" correct? (Hint: Discard the statements which are NEVER possible)</p>\n\n<p style="text-align:center"><img alt="" height="151" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6254314144349621118" width="295"></p>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I and II</li>\n\t<li>II and III</li>\n\t<li>Only III</li>\n\t<li>III and IV</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384744', 'text': '<p>Consider the relations $r, s$ and query :<br>\n$$<br>\n\\begin{gathered}<br>\nt 1 \\leftarrow \\sigma_\\theta((r \\times s) \\div r)\\\\<br>\nt 2 \\leftarrow \\sigma_\\theta(s)\\\\<br>\nt 3 \\leftarrow \\sigma_\\theta(r)\\\\<br>\n\\end{gathered}<br>\n$$</p>\n\n<p>Relation&nbsp;$r$ is not empty.</p>\n\n<p>Which of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$t 1=t 3$</li>\n\t<li>t2 $=t 3$</li>\n\t<li>$t 1=t 2$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384746', 'text': '<p>Consider the following relations and query.<br>\n$$<br>\n\\begin{gathered}<br>\n\\textsf{r(A, B, C)}\\\\<br>\n\\textsf{s(A, B, C)}\\\\<br>\n\\sigma_{\\textsf{A&gt;C}}([(\\textsf{r} \\cup \\text{s) - (r - s)] - (s - r))}<br>\n\\end{gathered}<br>\n$$<br>\nWhich of the following is equivalent to the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\bowtie \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r} \\cup \\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\textsf{r}) \\cap&nbsp;\\sigma_{\\textsf{A&gt;C}}&nbsp;(\\textsf{s})$</li>\n\t<li>$\\sigma_{\\textsf{A&gt;C}}(\\text{r} \\cap \\textsf{s})$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A;C;D', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,multiple-selects,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384750', 'text': '<p>Consider the following database schema with a relation $\\textsf{"Likes" :}$<br>\n$$\\textsf{Likes(kid, candy)}$$</p>\n\n<p>Table Likes tells which candy a kid likes.</p>\n\n<p>Consider the following relational algebra query :<br>\n$$\\begin{aligned}<br>\n&amp;\\textsf{H} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "HERSHEYS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{M} \\leftarrow \\Pi_{\\textsf{KID}}\\left(\\sigma_{\\textsf{CANDY = "MARS" }}(\\textsf{LIKES})\\right)\\\\<br>\n&amp;\\textsf{BOTH} \\leftarrow \\textsf{H UNION M}\\\\<br>\n&amp;\\Pi_{\\textsf{KID}}(\\textsf{BOTH})<br>\n\\end{aligned}$$<br>\nWhich of the following is true about the result of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The query is to find the kids who like "Hersheys" and "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" candy but not "Mars" candy.</li>\n\t<li>The query is to find the kids who like "Hersheys" or "Mars" candy.</li>\n\t<li>The query is to find the kids who like neither "Hersheys" nor "Mars" candy.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3-weekly-quiz,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384733', 'text': '<p>Consider the following schema:<br>\n$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation and every relation has at least one tuple. $\\textsf{“Sid"}$ of Reserves is foreign key to $\\textsf{Sailor.sid}.$<br>\nAssume that there exists a sailor who has reserved a boat with $\\textsf{bid 104}$ in the reserves table.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nSELECT S.sid\nFROM Sailors S, Reserves R\nWHERE S.rating =10 OR R.bid =104\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>All sids of sailors who have a rating of $10$ AND have reserved boat $104.$</li>\n\t<li>All sids of sailors who have a rating of $10$ OR have reserved boat $104.$</li>\n\t<li>All sids of sailor table</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384738', 'text': '<p>Let $\\mathrm{R}=(\\mathrm{A}, \\mathrm{B}, \\mathrm{C}), \\mathrm{S}=(\\mathrm{C}, \\mathrm{D}, \\mathrm{E})$ and let $q$ and $r$ be a relation on schema $\\mathrm{R}$ and $s$ be a relation on schema $\\mathrm{S}.$</p>\n\n<p>Consider the following queries :</p>\n\n<ol>\n\t<li>$\\{&lt;a&gt;\\mid \\exists b(&lt;a, b&gt;\\in r \\wedge b=10)\\}$</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT A FROM r WHERE B=10</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM r EXCEPT SELECT DISTINCT * FROM s\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT * FROM q WHERE (A, B, C) NOT IN (SELECT DISTINCT * FROM r\n</pre>\n\t</li>\n</ol>\n\n<p>Which of the following is/are true? (Two queries are said to be equivalent when they produce the same output, i.e., the same set of records)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Query $1$ and $2$ are equivalent.</li>\n\t<li>Query $1$ and $3$ are equivalent</li>\n\t<li>Query $2$ and $4$ are equivalent</li>\n\t<li>Query $3$ and $4$ are equivalent</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'A', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384742', 'text': '<p>Consider the following schema:</p>\n\n<p>$$\\begin{array} {l} \\text{Sailors}(\\; \\underline{\\textit{sid: } \\textsf{integer}}, \\textit{&nbsp;sname: } \\textsf{string}, \\textit{ rating: } \\textsf{integer}, \\textit{ age: } \\text{real}) \\\\&nbsp;\\text{Boats}(\\;&nbsp;\\underline{\\textit{bid: } \\textsf{integer}}, \\textit{&nbsp;bname: } \\textsf{string}, \\textit{ color: } \\textsf{string)} \\\\ \\text{Reserves}(\\;\\underline{\\textit{sid: } \\textsf{integer}, \\textit{ bid: } \\textsf{integer}, \\textit{ day: } \\textsf{date}}\\;)\\end{array} $$<br>\nThe primary key fields are underlined, and the domain of each field is listed after the field name. Assume there are no NULL values in any column of any relation.</p>\n\n<p>Consider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sname\nFROM Sailors S, Reserves R, Boats B\nWHERE S.sid = R.sid AND R.bid = B.bid\n    AND (B.color = ‘blue’ AND B.color = ‘white’)\n</pre>\n\n<p>What is the output of the above query?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The names of sailors who have reserved a blue or a white boat.</li>\n\t<li>The names of sailors who have reserved a blue AND a white boat.</li>\n\t<li>The names of sailors who have reserved neither a blue nor a white boat.</li>\n\t<li>Empty set.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,1-mark', 'category': 'Databases'}, {'contents': '', 'post_id': '384735', 'text': '<p>Consider the following database relations :</p>\n\n<ul>\n\t<li>$\\textsf{Enrolled(Student, Course) :}$ It contains the courses that each student has enrolled into, and</li>\n\t<li>$\\textsf{ToDo(Course) :}$ It contains the courses that are required to graduate.</li>\n</ul>\n\n<p>The instance for $\\textsf{Enrolled}$ relation is shown below:<br>\n$$\\begin{array}{|c|c|}<br>\n\\hline \\textbf{Student} &amp; &nbsp;\\textbf{Course} \\\\<br>\n\\hline \\text{Robert} &amp; \\text{Databases} \\\\<br>\n\\text{Robert} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Susie} &amp; \\text{Databases} \\\\<br>\n\\text{Susie} &amp; \\text{Operating Systems} \\\\<br>\n\\text{Julie} &amp; \\text{Programming Languages} \\\\<br>\n\\text{Julie} &amp; \\text{Machine Learning} \\\\<br>\n\\text{Emilie} &amp; \\text{Operating Systems} \\\\<br>\n\\hline<br>\n\\end{array}$$<br>\nThe instance for $\\textsf{ToDo}$ relation is shown below:<br>\n$$<br>\n\\begin{array}{|c|}<br>\n\\hline \\textbf{Course} \\\\<br>\n\\hline \\text{Databases} \\\\<br>\n\\text{Programming Languages} \\\\<br>\n\\hline<br>\n\\end{array}<br>\n$$<br>\nWe run the following SQL Query of this database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT DISTINCT Student\nFROM Enrolled\nWHERE Course IN (SELECT Course FROM ToDo);\n</pre>\n\n<p>How many tuples will be there in the output of this SQL Query?</p>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384740', 'text': '<p>Consider the following Student database and the relations in it :</p>\n\n<p>$$\\begin{array}{l} \\textsf{Student (sid, name, marks)} \\\\&nbsp; \\textsf{Course (cid, min, max)} \\end{array}$$<br>\nStudent relation has the following set of tuples :<br>\n$$\\{ ( 101, a, 50 ), (102, b, 52), (103, c, 60), (104, d, 70) \\}$$<br>\nCourse relation has the following set of tuples :<br>\n$$\\{ (c1, 20, 90), (c2, 15, 95), (c3, 10, 100) \\}$$<br>\nConsider the following query :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nSELECT S.sid\nFROM Student S\nWHERE EXISTS ( SELECT COUNT(*)\n            FROM Course C\n            WHERE S.marks &gt; C.min AND S.marks &gt; C.max)\n</pre>\n\n<p><br>\nHow many tuples will be in the output of the above SQL Query?</p>', 'type': 'Numerical', 'answer': '4', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,sql,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384725', 'text': '<p>Consider the following three relational schemas in a database :</p>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE R(A INT PRIMARY KEY, B INT);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE S(C INT PRIMARY KEY, A INT REFERENCES R(A) ON DELETE CASCADE);\n</pre>\n\n<pre class="prettyprint linenums lang-sql" data-pbcklang="sql" data-pbcktabsize="4">\nCREATE TABLE T(D INT PRIMARY KEY, C INT REFERENCES S(C) ON DELETE SET NULL);\n</pre>\n\n<p>Consider the following instances of relations $\\textsf{R, S, T :}$<br>\n$$\\textsf{R}$$$$\\begin{array}{c|c} \\text{A} &amp; {B} \\\\ \\hline a &amp; a \\\\ b &amp; b \\end{array}$$</p>\n\n<p>$$\\textsf{S}$$$$\\begin{array}{c|c} \\text{C} &amp; {A} \\\\ \\hline b&nbsp;&amp; a \\\\ c&nbsp;&amp; a&nbsp;\\end{array}$$</p>\n\n<p>$$\\textsf{T}$$$$\\begin{array}{c|c} \\text{D} &amp; {C} \\\\ \\hline a &amp; b&nbsp;\\\\ c&nbsp;&amp; c&nbsp;\\end{array}$$<br>\nWhich of the following is correct?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>After executing the command “DELETE FROM T;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, R will remain unchanged.</li>\n\t<li>After executing the command “DELETE FROM S;”, T will contain $2$ tuples.</li>\n\t<li>After executing the command “DELETE FROM R;”, T will contain $2$ tuples.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,goclasses,databases,sql,multiple-selects,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384727', 'text': 'For a simple undirected finite graph $\\text{G},$ graph degrees (degrees of vertices of graph ) are stored in a database table $\\text{Deg(G)}.$ This table has two attributes $\\text{V, D}$ where $\\mathrm{V}$ represents the vertices and $\\text{D}$ represents corresponding degree of those vertices i.e. If $v_i$ is some vertex of degree $d_i$ in graph $\\text{G}$ then there will be a row $v_i, d_i$ in $\\text{Deg(G)}.$\n\n$\\mathrm{V}$ is the primary key in this table.\n\nFor a $100$ vertices simple graph $\\text{G},$ the summation of minimum and maximum possible value of $\\left|\\pi_{\\mathrm{D}}(\\operatorname{Deg}(\\mathrm{G}))\\right|$ will be _________', 'type': 'Numerical', 'answer': '100', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384721', 'text': '<p>For a RDBMS relation $\\mathrm{T}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}, \\mathrm{S}, \\mathrm{U})$, the following set $\\mathrm{F}$ of functional dependencies holds:<br>\n$$<br>\n\\mathrm{F}=\\{\\mathrm{P} \\rightarrow \\mathrm{QR} ; \\mathrm{RS} \\rightarrow \\mathrm{U} ; \\mathrm{Q} \\rightarrow \\mathrm{S} ; \\mathrm{U} \\rightarrow \\mathrm{P}\\}<br>\n$$</p>\n\n<ul>\n\t<li>Ram decomposes $\\mathrm{T}$ into two relations $\\mathrm{X}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{Y}(\\mathrm{R}, \\mathrm{S}, \\mathrm{U})$.</li>\n\t<li>Shyam decomposes $\\mathrm{T}$ into two relations $\\mathrm{A}(\\mathrm{P}, \\mathrm{Q}, \\mathrm{R}), \\mathrm{B}(\\mathrm{P}, \\mathrm{S}, \\mathrm{U})$.</li>\n</ul>\n\n<p>Which of the following is/are necessarily true on any(every) instance $t$ of relation $\\mathrm{T}?$</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} = t$</li>\n\t<li>$\\mathrm{X} \\bowtie \\mathrm{Y} \\neq t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} = t$</li>\n\t<li>$\\text{A} \\bowtie \\text{B} \\neq t$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-dbms-3,goclasses,databases,relational-algebra,2-marks', 'category': 'Databases'}, {'contents': '', 'post_id': '384748', 'text': 'Consider the following relation schemas: $\\textsf{r(A, B), t(B, C)}$ and their instances :\n$$\n\\begin{aligned}\n&\\textsf{r(A, B)}=\\{\\langle a, b\\rangle,\\langle a, c\\rangle,\\langle c, d\\rangle,\\langle b, e\\rangle\\}\\\\\n&\\textsf{t(B, C)}=\\{\\langle b, e\\rangle,\\langle d, h\\rangle,\\langle b, f\\rangle,\\langle a, d\\rangle,\\langle a, e\\rangle\\}\n\\end{aligned}\n$$\nHow many rows are present in the result of the following relational algebra expression using left-outer-natural-join :\n$$\n\\pi_{\\textsf{A, C}}\\left(\\textsf{r} \\bowtie_{\\;\\textsf{LEFT}} \\textsf{t}\\right)\n$$', 'type': 'Numerical', 'answer': '5', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-dbms-3,numerical-answers,goclasses,databases,relational-algebra,1-mark', 'category': 'Databases'}]}]}
       </script>
       

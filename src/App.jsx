@@ -1,8 +1,6 @@
 import "./App.css";
 import LeftMenu from "./components/LeftMenu";
 import { RightMenu } from "./components/RightMenu";
-import { data } from "./data";
-import { useState } from "react";
 import {
   CurrentQuestionContextProvider,
   CurrentQuestionNumberContextProvider,
@@ -12,6 +10,11 @@ import { AnswerContextProvider } from "./context/AnswerContext";
 import { QuestionStatusContextProvider } from "./context/QuestionStatusContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import {
+  QuestionDataContext,
+  QuestionDataContextProvider,
+} from "./context/QuestionDataContext";
+import { useContext } from "react";
 
 // import { MathJaxContext } from "better-react-mathjax";
 
@@ -47,31 +50,36 @@ const Content = () => {
   );
 };
 
-const Main = () => (
-  <>
-    <Header title={data["name"]} />
-    <Content />
-  </>
-);
+const Main = () => {
+  const { data } = useContext(QuestionDataContext);
+  return (
+    <>
+      <Header title={data ? data["name"] : ""} />
+      <Content />
+    </>
+  );
+};
 
 function App() {
   return (
-    <QuestionStatusContextProvider>
-      <AnswerContextProvider>
-        <CurrentQuestionContextProvider>
-          <CurrentQuestionNumberContextProvider>
-            <CurrentSectionContextProvider>
-              <Router>
-                <Routes>
-                  <Route path="/home" element={<Main />}></Route>
-                  <Route path="/" element={<Home />}></Route>
-                </Routes>
-              </Router>
-            </CurrentSectionContextProvider>
-          </CurrentQuestionNumberContextProvider>
-        </CurrentQuestionContextProvider>
-      </AnswerContextProvider>
-    </QuestionStatusContextProvider>
+    <QuestionDataContextProvider>
+      <QuestionStatusContextProvider>
+        <AnswerContextProvider>
+          <CurrentQuestionContextProvider>
+            <CurrentQuestionNumberContextProvider>
+              <CurrentSectionContextProvider>
+                <Router>
+                  <Routes>
+                    <Route path="/home" element={<Main />}></Route>
+                    <Route path="/" element={<Home />}></Route>
+                  </Routes>
+                </Router>
+              </CurrentSectionContextProvider>
+            </CurrentQuestionNumberContextProvider>
+          </CurrentQuestionContextProvider>
+        </AnswerContextProvider>
+      </QuestionStatusContextProvider>
+    </QuestionDataContextProvider>
   );
 }
 

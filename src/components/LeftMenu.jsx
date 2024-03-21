@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { data } from "../data";
 import { useEffect } from "react";
 import { Question } from "./Question";
 import {
@@ -9,8 +8,10 @@ import {
 } from "../context";
 import { AnswerContext } from "../context/AnswerContext";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
+import { QuestionDataContext } from "../context/QuestionDataContext";
 
 const LeftMenu = () => {
+  const { data } = useContext(QuestionDataContext);
   const { currentQuestionNumber, setCurrentQuestionNumber } = useContext(
     CurrentQuestionNumberContext
   );
@@ -146,11 +147,13 @@ const LeftMenu = () => {
         </fieldset>
       </div>
       <div id="questionCont">
-        <Question
-          ques={currentQuestion}
-          ques_num={currentQuestionNumber.num + 1}
-          // updateQuestion={updateQuestion}
-        />
+        {currentQuestion && (
+          <Question
+            ques={currentQuestion}
+            ques_num={currentQuestionNumber.num + 1}
+            // updateQuestion={updateQuestion}
+          />
+        )}
         <div id="actionButton">
           <div style={{ float: "left" }}>
             <input

@@ -1,176 +1,29 @@
-<div><span>Q1</span> - <p>Consider struct alignment rules as described below –</p>
-
-<ol>
-	<li>Each primitive data (int, char, float etc) type requiring K bytes must be stored at the address must be multiple of K.</li>
-	<li>Address of structure and structure length must be multiples of K_max. Where K_max is the largest size of any primitive element of the struct.</li>
-</ol>
-
-<p>Also, we define internal and external fragmentation of struct as follows–</p>
-
-<ul>
-	<li>Internal fragmentation is padding used between any two primitive data types of the struct.</li>
-	<li>External fragmentation is padding used at the end of the last element of struct to fulfill 2^nd rule requirement of alignment above.</li>
-</ul>
-
-<p>For a given struct below, what will be internal and external fragmentation, respectively? Consider that the system has 8 bytes of address lines, 4 bytes of integers, 2 bytes of short, and 1 byte of the character.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-typedef struct 
-    int num_donors;
-    char** donor_names;
-    char has_soft_seats;
-    char location_name[10];
-    short height;
- cse_building;
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>4, 3</li>
-	<li>5, 2</li>
-	<li>0, 7</li>
-	<li>4, 0</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Assume that variables p1, p2 and n are defined as follows:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int *p1 = (int *) malloc(2 * sizeof(int));
-int *p2 = p1 + 1;
-int n = 1;
-</pre>
-
-<p><br>
-Given 4 programs and 4 types of issues below, Check which program is likely to cause which type of issue.</p>
-
-<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=6031670848100274113"></p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Prog1-C, Prog2-C, Prog3-A, Prog4-D</li>
-	<li>Prog1-C, Prog2-D, Prog3-A, Prog4-B</li>
-	<li>Prog1-C, Prog2-D, Prog3-A, Prog4-D</li>
-	<li>Prog1-D, Prog2-C, Prog3-A, Prog4-B</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Which of the following may lead to a runtime error for the given declaration of p?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int (*p)[5];
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-p[1][1]
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-*p[1]
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-(*p)[1]
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-p[1]
-</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What is the maximum value of i that will not cause this code to overflow?</p>
-
-<p>It is given that  and </p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int *p = malloc(sizeof(int *) * 2);
-p[i] = 2501;
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the output of the program below-</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int u[] = 1, 7, 8, 3;
-int v[] = -4, 9, 33;
-int w[] = 12, 2, 57;
-
-struct t
-    char *c;
-    int *t;
-go[] = "GATE", u, "GOClasses", v, "GATEOVERFLOW", w;
-
-main()
-
-    struct t *p = go;
-    printf("
-    printf("
-    printf("
-    printf("
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>ATE 1  9 GATEOVERFLOW</li>
-	<li>GATE -4  2 GATEOVERFLOW</li>
-	<li>ATE 2  7 GOClasses</li>
-	<li>None of the above</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What will be the output of the following lines of C code?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int a[] = 1,2,3,4;
-int *p = (int *)(   amp;a+1);
-printf("
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>1</li>
-	<li>2</li>
-	<li>3</li>
-	<li>4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following C code?</p>
+<div><span>Q1</span> - <p>Consider the following C program.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
-void strXpos(char * dest, char * src) 
-    if (src[0] == '') 
-        dest[0] = '';
-        return;
-    
-    if (src[1] == '') 
-        dest[0] = src[0];
-        dest[1] = src[1];
-        return;
-    
-    dest[0] = src[1];
-    dest[1] = src[0];
-    strXpos(dest + 2, src + 2);
+void fun (int a[5])
+    for (int i =0; i   lt;8; i++)
+        a[i] = a[i]+1;
 
-int main() 
-    char s1[10] = "GOGATE";
-    char s2[10] = "GO";
-    strXpos(s2, s1);
+main ()
+
+    int a[8] = 1,2,3,4,5,6,7,8;
+    fun(a);
+    for (int i =0; i   lt;8; i++)
     printf("
 
 </pre>
 
-<ol style="list-style-type:upper-alpha">
-	<li>GOGATE</li>
-	<li>OGAG</li>
-	<li>OGAGET</li>
-	<li>GOAGET</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following declarations of variables in a system having 4 bytes for integers.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int a[4][4];
-int (*p1)[2];
-int (*p2)[2];
-int (*t1)[4];
-int (*t2)[4];
-</pre>
-
-<p>Suppose array a has base address of 1000 and initial values of p1, p2, t1, and t2 are 1040,1064,1044 and 1076 respectively.</p>
-
-<p>What will be the value of p2-p1 and t2-t1 respectively?</p>
+<p><br>
+Which of the following is/are true about the given program?</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>6, 8</li>
-	<li>3, 2</li>
-	<li>12, 8</li>
-	<li>32, 24</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>The C code printed below is a version of the C string library call strlen(), which returns the length of a given string.</p>
+	<li>Program will exhibit a compiler error since array “a” is of size 5 in function fun() but for loop in fun() runs till 8.</li>
+	<li>Program will exhibit run time error since array “a” is of size 5 in function fun() but for loop in fun() runs till 8.</li>
+	<li>On running the program, the output will be 23456789</li>
+	<li>None of the above</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>The C code printed below is a version of the C string library call strlen(), which returns the length of a given string.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 unsigned int mystrlen(char *c)
@@ -204,7 +57,7 @@ while(*c++    amp;   amp; i++);</pre>
 	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 while (c[i++] != ''); </pre>
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the given declaration</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider the given declaration</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 int arr[3][4];
@@ -229,75 +82,83 @@ printf("
 	<li>8  8  48</li>
 	<li>16  8  8</li>
 	<li>16  8  48</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Which of the following is/are valid assignment(s) of the pointer for the given declaration. An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>Consider the following declarations of variables in a system having 4 bytes for integers.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 int a[4][4];
-int *t, **pp;
+int (*p1)[2];
+int (*p2)[2];
+int (*t1)[4];
+int (*t2)[4];
 </pre>
 
+<p>Suppose array a has base address of 1000 and initial values of p1, p2, t1, and t2 are 1040,1064,1044 and 1076 respectively.</p>
+
+<p>What will be the value of p2-p1 and t2-t1 respectively?</p>
+
 <ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-pp = a;</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-pp =    amp;a;</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-pp = *a;</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-t = a[2];</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following C program.</p>
+	<li>6, 8</li>
+	<li>3, 2</li>
+	<li>12, 8</li>
+	<li>32, 24</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>What will be the output of the program below-</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-void fun (int a[5])
-    for (int i =0; i   lt;8; i++)
-        a[i] = a[i]+1;
+int u[] = 1, 7, 8, 3;
+int v[] = -4, 9, 33;
+int w[] = 12, 2, 57;
 
-main ()
+struct t
+    char *c;
+    int *t;
+go[] = "GATE", u, "GOClasses", v, "GATEOVERFLOW", w;
 
-    int a[8] = 1,2,3,4,5,6,7,8;
-    fun(a);
-    for (int i =0; i   lt;8; i++)
+main()
+
+    struct t *p = go;
     printf("
-
+    printf("
+    printf("
+    printf("
 </pre>
 
-<p><br>
-Which of the following is/are true about the given program?</p>
-
 <ol style="list-style-type:upper-alpha">
-	<li>Program will exhibit a compiler error since array “a” is of size 5 in function fun() but for loop in fun() runs till 8.</li>
-	<li>Program will exhibit run time error since array “a” is of size 5 in function fun() but for loop in fun() runs till 8.</li>
-	<li>On running the program, the output will be 23456789</li>
+	<li>ATE 1  9 GATEOVERFLOW</li>
+	<li>GATE -4  2 GATEOVERFLOW</li>
+	<li>ATE 2  7 GOClasses</li>
 	<li>None of the above</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>In which of the following case(s) character array must end with null char?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Consider struct alignment rules as described below –</p>
+
+<ol>
+	<li>Each primitive data (int, char, float etc) type requiring K bytes must be stored at the address must be multiple of K.</li>
+	<li>Address of structure and structure length must be multiples of K_max. Where K_max is the largest size of any primitive element of the struct.</li>
+</ol>
+
+<p>Also, we define internal and external fragmentation of struct as follows–</p>
+
+<ul>
+	<li>Internal fragmentation is padding used between any two primitive data types of the struct.</li>
+	<li>External fragmentation is padding used at the end of the last element of struct to fulfill 2^nd rule requirement of alignment above.</li>
+</ul>
+
+<p>For a given struct below, what will be internal and external fragmentation, respectively? Consider that the system has 8 bytes of address lines, 4 bytes of integers, 2 bytes of short, and 1 byte of the character.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+typedef struct 
+    int num_donors;
+    char** donor_names;
+    char has_soft_seats;
+    char location_name[10];
+    short height;
+ cse_building;
+</pre>
 
 <ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-char c[] = "abcd";</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-char c[] = 'a', 'b', 'c', 'd';</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-char c[5] = "abcd";</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-char c[4] = "abcd";</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output of the following program?</p>
+	<li>4, 3</li>
+	<li>5, 2</li>
+	<li>0, 7</li>
+	<li>4, 0</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
@@ -328,7 +189,7 @@ main()
 	<li>GO Classes GATE 2023</li>
 	<li>GATE GO 2023 Classes</li>
 	<li>GATE 2023 GO Classes</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>What will be the output of a given program in a little endian system?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>What will be the output of a given program in a little endian system?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include
@@ -347,9 +208,147 @@ int main()
 	<li>d</li>
 	<li>e</li>
 	<li>f</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Assume that variables p1, p2 and n are defined as follows:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int *p1 = (int *) malloc(2 * sizeof(int));
+int *p2 = p1 + 1;
+int n = 1;
+</pre>
+
+<p><br>
+Given 4 programs and 4 types of issues below, Check which program is likely to cause which type of issue.</p>
+
+<p style="text-align:center"><img src="https://gateoverflow.in/?qa=blob&qa_blobid=6031670848100274113"></p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Prog1-C, Prog2-C, Prog3-A, Prog4-D</li>
+	<li>Prog1-C, Prog2-D, Prog3-A, Prog4-B</li>
+	<li>Prog1-C, Prog2-D, Prog3-A, Prog4-D</li>
+	<li>Prog1-D, Prog2-C, Prog3-A, Prog4-B</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What is the maximum value of i that will not cause this code to overflow?</p>
+
+<p>It is given that  and </p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int *p = malloc(sizeof(int *) * 2);
+p[i] = 2501;
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>In which of the following case(s) character array must end with null char?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char c[] = "abcd";</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char c[] = 'a', 'b', 'c', 'd';</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char c[5] = "abcd";</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+char c[4] = "abcd";</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which of the following may lead to a runtime error for the given declaration of p?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int (*p)[5];
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+p[1][1]
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+*p[1]
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+(*p)[1]
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+p[1]
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>What will be the output of the following lines of C code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[] = 1,2,3,4;
+int *p = (int *)(   amp;a+1);
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>What will be the output of the following C code?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+void strXpos(char * dest, char * src) 
+    if (src[0] == '') 
+        dest[0] = '';
+        return;
+    
+    if (src[1] == '') 
+        dest[0] = src[0];
+        dest[1] = src[1];
+        return;
+    
+    dest[0] = src[1];
+    dest[1] = src[0];
+    strXpos(dest + 2, src + 2);
+
+int main() 
+    char s1[10] = "GOGATE";
+    char s2[10] = "GO";
+    strXpos(s2, s1);
+    printf("
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>GOGATE</li>
+	<li>OGAG</li>
+	<li>OGAGET</li>
+	<li>GOAGET</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Which of the following is/are valid assignment(s) of the pointer for the given declaration. An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int a[4][4];
+int *t, **pp;
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+pp = a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+pp =    amp;a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+pp = *a;</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+t = a[2];</pre>
+	</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '374718', 'text': '<p>Consider struct alignment rules as described below –</p>\n\n<ol>\n\t<li>Each primitive data (int, char, float etc) type requiring $\\text{K}$ bytes must be stored at the address must be multiple of $\\text{K}.$</li>\n\t<li>Address of structure and structure length must be multiples of $\\text{K}_{\\max}.$ Where $\\text{K}_{\\max}$ is the largest size of any primitive element of the struct.</li>\n</ol>\n\n<p>Also, we define internal and external fragmentation of struct as follows–</p>\n\n<ul>\n\t<li>Internal fragmentation is padding used between any two primitive data types of the struct.</li>\n\t<li>External fragmentation is padding used at the end of the last element of struct to fulfill $2^{\\text{nd}}$ rule requirement of alignment above.</li>\n</ul>\n\n<p>For a given struct below, what will be internal and external fragmentation, respectively? Consider that the system has $8$ bytes of address lines, $4$ bytes of integers, $2$ bytes of short, and $1$ byte of the character.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ntypedef struct {\n    int num_donors;\n    char** donor_names;\n    char has_soft_seats;\n    char location_name[10];\n    short height;\n} cse_building;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4, 3$</li>\n\t<li>$5, 2$</li>\n\t<li>$0, 7$</li>\n\t<li>$4, 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374721', 'text': '<p>Assume that variables $p1, p2$ and $n$ are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p1 = (int *) malloc(2 * sizeof(int));\nint *p2 = p1 + 1;\nint n = 1;\n</pre>\n\n<p><br>\nGiven $4$ programs and $4$ types of issues below, Check which program is likely to cause which type of issue.</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6031670848100274113"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{Prog1-C, Prog2-C, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-B}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-D, Prog2-C, Prog3-A, Prog4-B}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374743', 'text': '<p>Which of the following may lead to a runtime error for the given declaration of $p?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[5];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1][1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*p[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*p)[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1]\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374728', 'text': '<p>What is the maximum value of i that will not cause this code to overflow?</p>\n\n<p>It is given that $\\textsf{sizeof(int) = 4}$ and $\\textsf{sizeof(int *) = 8.}$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p = malloc(sizeof(int *) * 2);\np[i] = 2501;\n</pre>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,numerical-answers,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374722', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint u[] = {1, 7, 8, 3};\nint v[] = {-4, 9, 33};\nint w[] = {12, 2, 57};\n\nstruct t{\n    char *c;\n    int *t;\n}go[] = {"GATE", u, "GOClasses", v, "GATEOVERFLOW", w};\n\nmain()\n{\n    struct t *p = go;\n    printf("%s ", ++p -&gt; c);\n    printf("%d ", ++*p -&gt; t);\n    printf("%d ", *++p[0].t);\n    printf("%s ", (++p) -&gt; c);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ATE $1\\; 9$ GATEOVERFLOW</li>\n\t<li>GATE $-4 \\;2$ GATEOVERFLOW</li>\n\t<li>ATE $2\\; 7$ GOClasses</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374733', 'text': '<p>What will be the output of the following lines of C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[] = {1,2,3,4};\nint *p = (int *)(&amp;a+1);\nprintf("%d", *(p-1));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374732', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid strXpos(char * dest, char * src) {\n    if (src[0] == \'\\0\') {\n        dest[0] = \'\\0\';\n        return;\n    }\n    if (src[1] == \'\\0\') {\n        dest[0] = src[0];\n        dest[1] = src[1];\n        return;\n    }\n    dest[0] = src[1];\n    dest[1] = src[0];\n    strXpos(dest + 2, src + 2);\n}\nint main() {\n    char s1[10] = "GOGATE";\n    char s2[10] = "GO";\n    strXpos(s2, s1);\n    printf("%s", s2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GOGATE</li>\n\t<li>OGAG</li>\n\t<li>OGAGET</li>\n\t<li>GOAGET</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,functions,strings,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374717', 'text': '<p>Consider the following declarations of variables in a system having $4$ bytes for integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint (*p1)[2];\nint (*p2)[2];\nint (*t1)[4];\nint (*t2)[4];\n</pre>\n\n<p>Suppose array a has base address of $1000$ and initial values of $p1, p2, t1$, and $t2$ are $1040,1064,1044$ and $1076$ respectively.</p>\n\n<p>What will be the value of $p2-p1$ and $t2-t1$ respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$6, 8$</li>\n\t<li>$3, 2$</li>\n\t<li>$12, 8$</li>\n\t<li>$32, 24$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374734', 'text': '<p>The C code printed below is a version of the C string library call strlen(), which returns the length of a given string.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nunsigned int mystrlen(char *c)\n{\n    unsigned int i =0;\n    /* Your code here. */\n    return i;\n}\n</pre>\n\n<p>Which line of code creates a working and accurate version of strlen()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c!=\'\\0\'){\n    i++;\n    c++;\n  }\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++!=\'\\0\') i++;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++ &amp;&amp; i++);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (c[i++] != \'\\0\'); </pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374735', 'text': '<p>Consider the given declaration</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint arr[3][4];\nint (*p)[12];\np = malloc(sizeof(int) * 24); // assume malloc() is successful\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes and sizeof(int *) = 8 bytes.\n</pre>\n\n<p>What will be the output of the following lines of C code ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d " , sizeof(arr[2]));\nprintf("%d ", sizeof(p));\nprintf("%d", sizeof(*p));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$8\\; 8\\; 8$</li>\n\t<li>$8\\; 8\\; 48$</li>\n\t<li>$16\\; 8\\; 8$</li>\n\t<li>$16\\; 8\\; 48$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374740', 'text': '<p>Which of the following is/are valid assignment(s) of the pointer for the given declaration. An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint *t, **pp;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = &amp;a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = *a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nt = a[2];</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374742', 'text': '<p>Consider the following C program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (int a[5]){\n    for (int i =0; i&lt;8; i++)\n        a[i] = a[i]+1;\n}\nmain ()\n{\n    int a[8] = {1,2,3,4,5,6,7,8};\n    fun(a);\n    for (int i =0; i&lt;8; i++)\n    printf("%d", a[i]);\n}\n</pre>\n\n<p><br>\nWhich of the following is/are true about the given program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will exhibit a compiler error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>Program will exhibit run time error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>On running the program, the output will be $23456789$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374745', 'text': '<p>In which of the following case(s) character array must end with null char?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = {\'a\', \'b\', \'c\', \'d\'};</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[5] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[4] = "abcd";</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374726', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\n\nstruct _info {\n    char **strs;\n};\ntypedef struct _info info;\nmain(){\n    info arr_str[2];\n    char *strs1[] = {"GO", "Classes"};\n    char *strs2[] = {"GATE", "2023"};\n    arr_str[0].strs =strs1;\n    arr_str[1].strs =strs2;\n    info **da, *a;\n    a =arr_str;\n    da = &amp;a;\n    for (int i = 0; i&lt;2; i++)\n        for (int j = 0; j&lt; 2; j++){\n            printf("%s ", (((*da)+i)-&gt;strs)[j]);\n        }\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>GO GATE Classes $2023$</li>\n\t<li>GO Classes GATE $2023$</li>\n\t<li>GATE GO $2023$ Classes</li>\n\t<li>GATE $2023$ GO Classes</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374744', 'text': '<p>What will be the output of a given program in a little endian system?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include\nint main()\n{\n    char t[] = "abcdefg";\n    int *p = t;\n    p++;\n    char *c = p;\n    printf("%c", *c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>b</li>\n\t<li>d</li>\n\t<li>e</li>\n\t<li>f</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,1-mark', 'category': 'Programming in C'}]
-      let data={'name': 'GO Classes Test Series 2024 | Programming | Test 3', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '374718', 'text': '<p>Consider struct alignment rules as described below –</p>\n\n<ol>\n\t<li>Each primitive data (int, char, float etc) type requiring $\\text{K}$ bytes must be stored at the address must be multiple of $\\text{K}.$</li>\n\t<li>Address of structure and structure length must be multiples of $\\text{K}_{\\max}.$ Where $\\text{K}_{\\max}$ is the largest size of any primitive element of the struct.</li>\n</ol>\n\n<p>Also, we define internal and external fragmentation of struct as follows–</p>\n\n<ul>\n\t<li>Internal fragmentation is padding used between any two primitive data types of the struct.</li>\n\t<li>External fragmentation is padding used at the end of the last element of struct to fulfill $2^{\\text{nd}}$ rule requirement of alignment above.</li>\n</ul>\n\n<p>For a given struct below, what will be internal and external fragmentation, respectively? Consider that the system has $8$ bytes of address lines, $4$ bytes of integers, $2$ bytes of short, and $1$ byte of the character.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ntypedef struct {\n    int num_donors;\n    char** donor_names;\n    char has_soft_seats;\n    char location_name[10];\n    short height;\n} cse_building;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4, 3$</li>\n\t<li>$5, 2$</li>\n\t<li>$0, 7$</li>\n\t<li>$4, 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374721', 'text': '<p>Assume that variables $p1, p2$ and $n$ are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p1 = (int *) malloc(2 * sizeof(int));\nint *p2 = p1 + 1;\nint n = 1;\n</pre>\n\n<p><br>\nGiven $4$ programs and $4$ types of issues below, Check which program is likely to cause which type of issue.</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6031670848100274113"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{Prog1-C, Prog2-C, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-B}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-D, Prog2-C, Prog3-A, Prog4-B}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374743', 'text': '<p>Which of the following may lead to a runtime error for the given declaration of $p?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[5];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1][1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*p[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*p)[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1]\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374728', 'text': '<p>What is the maximum value of i that will not cause this code to overflow?</p>\n\n<p>It is given that $\\textsf{sizeof(int) = 4}$ and $\\textsf{sizeof(int *) = 8.}$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p = malloc(sizeof(int *) * 2);\np[i] = 2501;\n</pre>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,numerical-answers,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374722', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint u[] = {1, 7, 8, 3};\nint v[] = {-4, 9, 33};\nint w[] = {12, 2, 57};\n\nstruct t{\n    char *c;\n    int *t;\n}go[] = {"GATE", u, "GOClasses", v, "GATEOVERFLOW", w};\n\nmain()\n{\n    struct t *p = go;\n    printf("%s ", ++p -&gt; c);\n    printf("%d ", ++*p -&gt; t);\n    printf("%d ", *++p[0].t);\n    printf("%s ", (++p) -&gt; c);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ATE $1\\; 9$ GATEOVERFLOW</li>\n\t<li>GATE $-4 \\;2$ GATEOVERFLOW</li>\n\t<li>ATE $2\\; 7$ GOClasses</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374733', 'text': '<p>What will be the output of the following lines of C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[] = {1,2,3,4};\nint *p = (int *)(&amp;a+1);\nprintf("%d", *(p-1));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374732', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid strXpos(char * dest, char * src) {\n    if (src[0] == \'\\0\') {\n        dest[0] = \'\\0\';\n        return;\n    }\n    if (src[1] == \'\\0\') {\n        dest[0] = src[0];\n        dest[1] = src[1];\n        return;\n    }\n    dest[0] = src[1];\n    dest[1] = src[0];\n    strXpos(dest + 2, src + 2);\n}\nint main() {\n    char s1[10] = "GOGATE";\n    char s2[10] = "GO";\n    strXpos(s2, s1);\n    printf("%s", s2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GOGATE</li>\n\t<li>OGAG</li>\n\t<li>OGAGET</li>\n\t<li>GOAGET</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,functions,strings,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374717', 'text': '<p>Consider the following declarations of variables in a system having $4$ bytes for integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint (*p1)[2];\nint (*p2)[2];\nint (*t1)[4];\nint (*t2)[4];\n</pre>\n\n<p>Suppose array a has base address of $1000$ and initial values of $p1, p2, t1$, and $t2$ are $1040,1064,1044$ and $1076$ respectively.</p>\n\n<p>What will be the value of $p2-p1$ and $t2-t1$ respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$6, 8$</li>\n\t<li>$3, 2$</li>\n\t<li>$12, 8$</li>\n\t<li>$32, 24$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374734', 'text': '<p>The C code printed below is a version of the C string library call strlen(), which returns the length of a given string.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nunsigned int mystrlen(char *c)\n{\n    unsigned int i =0;\n    /* Your code here. */\n    return i;\n}\n</pre>\n\n<p>Which line of code creates a working and accurate version of strlen()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c!=\'\\0\'){\n    i++;\n    c++;\n  }\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++!=\'\\0\') i++;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++ &amp;&amp; i++);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (c[i++] != \'\\0\'); </pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374735', 'text': '<p>Consider the given declaration</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint arr[3][4];\nint (*p)[12];\np = malloc(sizeof(int) * 24); // assume malloc() is successful\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes and sizeof(int *) = 8 bytes.\n</pre>\n\n<p>What will be the output of the following lines of C code ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d " , sizeof(arr[2]));\nprintf("%d ", sizeof(p));\nprintf("%d", sizeof(*p));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$8\\; 8\\; 8$</li>\n\t<li>$8\\; 8\\; 48$</li>\n\t<li>$16\\; 8\\; 8$</li>\n\t<li>$16\\; 8\\; 48$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374740', 'text': '<p>Which of the following is/are valid assignment(s) of the pointer for the given declaration. An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint *t, **pp;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = &amp;a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = *a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nt = a[2];</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374742', 'text': '<p>Consider the following C program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (int a[5]){\n    for (int i =0; i&lt;8; i++)\n        a[i] = a[i]+1;\n}\nmain ()\n{\n    int a[8] = {1,2,3,4,5,6,7,8};\n    fun(a);\n    for (int i =0; i&lt;8; i++)\n    printf("%d", a[i]);\n}\n</pre>\n\n<p><br>\nWhich of the following is/are true about the given program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will exhibit a compiler error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>Program will exhibit run time error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>On running the program, the output will be $23456789$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374745', 'text': '<p>In which of the following case(s) character array must end with null char?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = {\'a\', \'b\', \'c\', \'d\'};</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[5] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[4] = "abcd";</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374726', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\n\nstruct _info {\n    char **strs;\n};\ntypedef struct _info info;\nmain(){\n    info arr_str[2];\n    char *strs1[] = {"GO", "Classes"};\n    char *strs2[] = {"GATE", "2023"};\n    arr_str[0].strs =strs1;\n    arr_str[1].strs =strs2;\n    info **da, *a;\n    a =arr_str;\n    da = &amp;a;\n    for (int i = 0; i&lt;2; i++)\n        for (int j = 0; j&lt; 2; j++){\n            printf("%s ", (((*da)+i)-&gt;strs)[j]);\n        }\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>GO GATE Classes $2023$</li>\n\t<li>GO Classes GATE $2023$</li>\n\t<li>GATE GO $2023$ Classes</li>\n\t<li>GATE $2023$ GO Classes</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374744', 'text': '<p>What will be the output of a given program in a little endian system?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include\nint main()\n{\n    char t[] = "abcdefg";\n    int *p = t;\n    p++;\n    char *c = p;\n    printf("%c", *c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>b</li>\n\t<li>d</li>\n\t<li>e</li>\n\t<li>f</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,1-mark', 'category': 'Programming in C'}]}]}
+      let data={'name': 'GO Classes Test Series 2024 | Programming | Test 3', 'duration': '45', 'total_qs': '15', 'total_qs_one': 5, 'total_qs_two': 10, 'apti_num_qs': 0, 'technical_num_qs': 15, 'apti_marks': 0, 'technical_marks': 25, 'total_marks': 25, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 15, 'marks': 25, 'question': [{'contents': '', 'post_id': '374742', 'text': '<p>Consider the following C program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid fun (int a[5]){\n    for (int i =0; i&lt;8; i++)\n        a[i] = a[i]+1;\n}\nmain ()\n{\n    int a[8] = {1,2,3,4,5,6,7,8};\n    fun(a);\n    for (int i =0; i&lt;8; i++)\n    printf("%d", a[i]);\n}\n</pre>\n\n<p><br>\nWhich of the following is/are true about the given program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will exhibit a compiler error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>Program will exhibit run time error since array “a” is of size $5$ in function fun() but for loop in fun() runs till $8.$</li>\n\t<li>On running the program, the output will be $23456789$</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374734', 'text': '<p>The C code printed below is a version of the C string library call strlen(), which returns the length of a given string.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nunsigned int mystrlen(char *c)\n{\n    unsigned int i =0;\n    /* Your code here. */\n    return i;\n}\n</pre>\n\n<p>Which line of code creates a working and accurate version of strlen()?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c!=\'\\0\'){\n    i++;\n    c++;\n  }\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++!=\'\\0\') i++;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(*c++ &amp;&amp; i++);</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile (c[i++] != \'\\0\'); </pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,loop,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374735', 'text': '<p>Consider the given declaration</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint arr[3][4];\nint (*p)[12];\np = malloc(sizeof(int) * 24); // assume malloc() is successful\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nsizeof(int) = 4 bytes and sizeof(int *) = 8 bytes.\n</pre>\n\n<p>What will be the output of the following lines of C code ?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nprintf("%d " , sizeof(arr[2]));\nprintf("%d ", sizeof(p));\nprintf("%d", sizeof(*p));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$8\\; 8\\; 8$</li>\n\t<li>$8\\; 8\\; 48$</li>\n\t<li>$16\\; 8\\; 8$</li>\n\t<li>$16\\; 8\\; 48$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374717', 'text': '<p>Consider the following declarations of variables in a system having $4$ bytes for integers.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint (*p1)[2];\nint (*p2)[2];\nint (*t1)[4];\nint (*t2)[4];\n</pre>\n\n<p>Suppose array a has base address of $1000$ and initial values of $p1, p2, t1$, and $t2$ are $1040,1064,1044$ and $1076$ respectively.</p>\n\n<p>What will be the value of $p2-p1$ and $t2-t1$ respectively?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$6, 8$</li>\n\t<li>$3, 2$</li>\n\t<li>$12, 8$</li>\n\t<li>$32, 24$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374722', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint u[] = {1, 7, 8, 3};\nint v[] = {-4, 9, 33};\nint w[] = {12, 2, 57};\n\nstruct t{\n    char *c;\n    int *t;\n}go[] = {"GATE", u, "GOClasses", v, "GATEOVERFLOW", w};\n\nmain()\n{\n    struct t *p = go;\n    printf("%s ", ++p -&gt; c);\n    printf("%d ", ++*p -&gt; t);\n    printf("%d ", *++p[0].t);\n    printf("%s ", (++p) -&gt; c);\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>ATE $1\\; 9$ GATEOVERFLOW</li>\n\t<li>GATE $-4 \\;2$ GATEOVERFLOW</li>\n\t<li>ATE $2\\; 7$ GOClasses</li>\n\t<li>None of the above</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,structure,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374718', 'text': '<p>Consider struct alignment rules as described below –</p>\n\n<ol>\n\t<li>Each primitive data (int, char, float etc) type requiring $\\text{K}$ bytes must be stored at the address must be multiple of $\\text{K}.$</li>\n\t<li>Address of structure and structure length must be multiples of $\\text{K}_{\\max}.$ Where $\\text{K}_{\\max}$ is the largest size of any primitive element of the struct.</li>\n</ol>\n\n<p>Also, we define internal and external fragmentation of struct as follows–</p>\n\n<ul>\n\t<li>Internal fragmentation is padding used between any two primitive data types of the struct.</li>\n\t<li>External fragmentation is padding used at the end of the last element of struct to fulfill $2^{\\text{nd}}$ rule requirement of alignment above.</li>\n</ul>\n\n<p>For a given struct below, what will be internal and external fragmentation, respectively? Consider that the system has $8$ bytes of address lines, $4$ bytes of integers, $2$ bytes of short, and $1$ byte of the character.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\ntypedef struct {\n    int num_donors;\n    char** donor_names;\n    char has_soft_seats;\n    char location_name[10];\n    short height;\n} cse_building;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4, 3$</li>\n\t<li>$5, 2$</li>\n\t<li>$0, 7$</li>\n\t<li>$4, 0$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,structure,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374726', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\n#include&lt;string.h&gt;\n\nstruct _info {\n    char **strs;\n};\ntypedef struct _info info;\nmain(){\n    info arr_str[2];\n    char *strs1[] = {"GO", "Classes"};\n    char *strs2[] = {"GATE", "2023"};\n    arr_str[0].strs =strs1;\n    arr_str[1].strs =strs2;\n    info **da, *a;\n    a =arr_str;\n    da = &amp;a;\n    for (int i = 0; i&lt;2; i++)\n        for (int j = 0; j&lt; 2; j++){\n            printf("%s ", (((*da)+i)-&gt;strs)[j]);\n        }\n}\n</pre>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>GO GATE Classes $2023$</li>\n\t<li>GO Classes GATE $2023$</li>\n\t<li>GATE GO $2023$ Classes</li>\n\t<li>GATE $2023$ GO Classes</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'B', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374744', 'text': '<p>What will be the output of a given program in a little endian system?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include\nint main()\n{\n    char t[] = "abcdefg";\n    int *p = t;\n    p++;\n    char *c = p;\n    printf("%c", *c);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>b</li>\n\t<li>d</li>\n\t<li>e</li>\n\t<li>f</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374721', 'text': '<p>Assume that variables $p1, p2$ and $n$ are defined as follows:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p1 = (int *) malloc(2 * sizeof(int));\nint *p2 = p1 + 1;\nint n = 1;\n</pre>\n\n<p><br>\nGiven $4$ programs and $4$ types of issues below, Check which program is likely to cause which type of issue.</p>\n\n<p style="text-align:center"><img alt="" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=6031670848100274113"></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{Prog1-C, Prog2-C, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-B}$</li>\n\t<li>$\\text{Prog1-C, Prog2-D, Prog3-A, Prog4-D}$</li>\n\t<li>$\\text{Prog1-D, Prog2-C, Prog3-A, Prog4-B}$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374728', 'text': '<p>What is the maximum value of i that will not cause this code to overflow?</p>\n\n<p>It is given that $\\textsf{sizeof(int) = 4}$ and $\\textsf{sizeof(int *) = 8.}$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint *p = malloc(sizeof(int *) * 2);\np[i] = 2501;\n</pre>', 'type': 'Numerical', 'answer': '3', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,numerical-answers,goclasses,programming,programming-in-c,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374745', 'text': '<p>In which of the following case(s) character array must end with null char?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[] = {\'a\', \'b\', \'c\', \'d\'};</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[5] = "abcd";</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nchar c[4] = "abcd";</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374743', 'text': '<p>Which of the following may lead to a runtime error for the given declaration of $p?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint (*p)[5];\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1][1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n*p[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n(*p)[1]\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\np[1]\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array-of-pointers,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374733', 'text': '<p>What will be the output of the following lines of C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[] = {1,2,3,4};\nint *p = (int *)(&amp;a+1);\nprintf("%d", *(p-1));\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$2$</li>\n\t<li>$3$</li>\n\t<li>$4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374732', 'text': '<p>What will be the output of the following C code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid strXpos(char * dest, char * src) {\n    if (src[0] == \'\\0\') {\n        dest[0] = \'\\0\';\n        return;\n    }\n    if (src[1] == \'\\0\') {\n        dest[0] = src[0];\n        dest[1] = src[1];\n        return;\n    }\n    dest[0] = src[1];\n    dest[1] = src[0];\n    strXpos(dest + 2, src + 2);\n}\nint main() {\n    char s1[10] = "GOGATE";\n    char s2[10] = "GO";\n    strXpos(s2, s1);\n    printf("%s", s2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>GOGATE</li>\n\t<li>OGAG</li>\n\t<li>OGAGET</li>\n\t<li>GOAGET</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,functions,strings,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374740', 'text': '<p>Which of the following is/are valid assignment(s) of the pointer for the given declaration. An assignment is valid if both pointers are of the same type (pointers are compatible) and get successfully compiled with no warning or error.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint a[4][4];\nint *t, **pp;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = &amp;a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\npp = *a;</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nt = a[2];</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-3,goclasses,programming,programming-in-c,array,pointers,multiple-selects,1-mark', 'category': 'Programming in C'}]}]}
       </script>
       

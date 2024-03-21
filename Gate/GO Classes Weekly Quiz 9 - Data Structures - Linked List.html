@@ -1,4 +1,64 @@
-<div><span>Q1</span> - <p>Consider the following program. printlist() is a function that takes the head of a linked list and prints all nodes values separated by comma. Node is typedefed singly linked list type struct.</p>
+<div><span>Q1</span> - <p>Which of the following statement(s) is/are true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If T1(x) = O(f(x)) and T2(x) = O(g(x)) then T1(x) + T2(x) = O (max(f(x), g(x))</li>
+	<li>If T(x) = O(cf(x)), where c is some positive constant then T(x) = O(f(x)).</li>
+	<li>If T1(x) = O(f(x)) and T2(x) = O(g(x)) then T1(x) ∗T2(x) = O(f(x) ∗ g(x))</li>
+	<li>2^(n+1) = O(2^n ).</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>Consider the following Doubly Linked List:</p>
+
+<p><br>
+<strong><img src="https://lh6.googleusercontent.com/0Ls5DjJ0cfyFry2hINdIAxmGw8lvj_gjx7pW6dTykz9p_RB5MS4m3zlVrtnec7ahG3MDNurT3B678z4XtZDNnT9ZZlgKvBT_-B7fFHygjqOQpJCaMGkRHEQ17_dcC6lo8AOP5xVVXP4jMk3JCQ"></strong></p>
+
+<p>If head points to the first node of the linked list then what will be the output of the following node?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+head=head-   gt;next-   gt;next-   gt;next-   gt;prev;
+head-   gt;next-   gt;next-   gt;prev=head;
+printf("
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>1</li>
+	<li>3</li>
+	<li>5</li>
+	<li>7</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What is the run-time complexity of inserting a new element at the beginning of a circular, doubly-linked list with a head?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>O(1)</li>
+	<li>O(logN)</li>
+	<li>O(N)</li>
+	<li>O(N^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>If f(n) = O(g(n)) and f(n) = Ω(g(n)), then it is always true that</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>f(n) = o(g(n)).</li>
+	<li>f(n) = θ(g(n)).</li>
+	<li>f(n) = ω(g(n)).</li>
+	<li>both A and B are always true.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider two statements below -</p>
+
+<ul>
+	<li>S1: For all positive f(n), f(n) + o(f(n)) = θ(f(n)).</li>
+	<li>S2: For all positive f(n), g(n) and h(n), if f(n) = O(g(n)) and f(n) = Ω(h(n)), then g(n) + h(n) = Ω(f(n))</li>
+</ul>
+
+<p>Which of the following is the correct option.</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>S1 is True but S2 is False.</li>
+	<li>S2 is True but S1 is False.</li>
+	<li>Both are True.</li>
+	<li>Both are False.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Which of the following(s) is/are true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>If f(n) = O(n^2) then f(n) = O(n).</li>
+	<li>If f(n) is O(3^log_10n), then f(n) is O(n^2).</li>
+	<li>The function f(n) = (n!) = O(n  n).</li>
+	<li>Growth of the sum 1 + 1/2 + 1/3 + … + 1/n can be described by θ(log n).</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following program. printlist() is a function that takes the head of a linked list and prints all nodes values separated by comma. Node is typedefed singly linked list type struct.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 void insert1(Node *head,int data)
@@ -36,113 +96,34 @@ and head points to the first node.*/
 	<li>Line Y prints 9,1,2,3,4,5</li>
 	<li>Line X prints 1,2,3,4,5</li>
 	<li>Line Y prints 1,2,3,4,5</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What is the run-time complexity of inserting a new element at the beginning of a circular, doubly-linked list with a head?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>O(1)</li>
-	<li>O(logN)</li>
-	<li>O(N)</li>
-	<li>O(N^2)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>Consider the following function that takes reference to head of a Doubly Linked List as parameter. Assume that a node of doubly linked list has previous pointer as prev and next pointer as next.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following function foo() which takes the head pointer of two singly-linked lists.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(struct node **head_ref) 
- 
-    struct node *temp=NULL; 
-    struct node *current=*head_ref; 
-    while(current!=NULL) 
-     
-        temp=current-   gt;prev; 
-        current-   gt;prev=current-   gt;next; 
-        current-   gt;next=temp; 
-        current=current-   gt;prev; 
-     
-    if(temp!=NULL) 
-        *head_ref=temp-   gt;prev; 
- </pre>
+struct node *foo(struct node *head1, struct node *head2)
 
-<p>Assume that reference of head of following doubly linked list is passed to above function</p>
-
-<p>1 ↔   nbsp;2 ↔ 3 ↔ 4 ↔ 5 ↔ 6. What should be the modified linked list after the function call?   nbsp;</p>
-
-<ol start="1" style="list-style-type:upper-alpha">
-	<li>2 ↔ 1 ↔ 4 ↔ 3 ↔ 6 ↔ 5</li>
-	<li>5 ↔ 4 ↔ 3 ↔ 2 ↔ 1 ↔ 6</li>
-	<li>6   nbsp; ↔ 5 ↔ 4 ↔ 3 ↔ 2 ↔ 1</li>
-	<li>6 ↔ 5 ↔ 4 ↔ 3 ↔ 1 ↔ 2</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>If f(n) = O(g(n)) and f(n) = Ω(g(n)), then it is always true that</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>f(n) = o(g(n)).</li>
-	<li>f(n) = θ(g(n)).</li>
-	<li>f(n) = ω(g(n)).</li>
-	<li>both A and B are always true.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider a function findCLL that takes a doubly circular linked list head and an integer value as input.</p>
-
-<p>One example of doubly circular linked list is given below –</p>
-
-<p><strong><img src="https://lh4.googleusercontent.com/sxY8JwjRr2XdCpqU02eJeocIprDrCTXFdo0gcN-V25kwzWG4cdNARKj1w7plxBe7QZGk6TgCR-gvvAQn_Fi7wOhY5glwTMvKwN5TsB7ND-c4wW8FkScoYKixsj8Y84JeGdMp18hrYmO7P6xFjg"></strong></p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int findCLL(struct node * first, int n) 
-
-    while (first -   gt; value != n)
-        first = first -   gt; next;
-
-    if (first -   gt; value == n)
-        return 1;
-    else
-        return -1;
+    struct node *final, *temp;
+    if (head1 == NULL) return head2;
+    if (head2 == NULL) return head1;
+    temp = foo(head1-   gt;next, head2-   gt;next);
+    final = head1;
+    head1 -   gt; next = head2;
+    head2 -   gt; next = temp;
+    return final;
 
 </pre>
 
 <p><br>
-Consider two statements S1 and S2 given below.</p>
+What will be the final linked list returned by foo() if executed upon following linked lists?</p>
 
-<ul>
-	<li>S1: Function returns 1 if there exists a value in linked list</li>
-	<li>S2: Function returns -1 if value does not exist in linked list</li>
-</ul>
+<p><strong><img src="https://lh6.googleusercontent.com/77vc76YU2XsivCfNo_9oLPh3-wy9gMdxzJ3MHG0LvFIBSzCXWkWQVXDQuJnu8f3cATsyEnH1JZVN5SxsnnKsTXKJYBgEJR3v6aWWSNjyoTFw_d4RD48ypwaRk6iGl4ulneXwCf_85pJroNRE7Q"></strong></p>
 
-<p>Which of the following is the correct option.</p>
+<p><strong><img src="https://lh3.googleusercontent.com/6bGoQUB2SETmuz8EmIDLC_ys09NX-W8eNYKtbE9kfS5U8OmNB02qqTphTPVti1ZpNaEdfv5hPMmCByWwoBFjxJGj2txD_i4SK07o7BS-C-A2TTSDEBE7_ezYlCJdLgGHO3Bx-UuxGFW4G9W7Kg"></strong></p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>S1 is True but S2 is False.</li>
-	<li>S2 is True but S1 is False.</li>
-	<li>Both are True.</li>
-	<li>Both are False.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>Given a circular, doubly-linked list whose contents are sorted in ascending order, what is the run-time complexity for inserting a new element into the list so that it remains correctly sorted? (Including the time required to search for the element’s correct position.)</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>O(1)</li>
-	<li>O(logN)</li>
-	<li>O(N)</li>
-	<li>O(N^2)</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Which of the following statement(s) is/are true?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>If T1(x) = O(f(x)) and T2(x) = O(g(x)) then T1(x) + T2(x) = O (max(f(x), g(x))</li>
-	<li>If T(x) = O(cf(x)), where c is some positive constant then T(x) = O(f(x)).</li>
-	<li>If T1(x) = O(f(x)) and T2(x) = O(g(x)) then T1(x) ∗T2(x) = O(f(x) ∗ g(x))</li>
-	<li>2^(n+1) = O(2^n ).</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following Doubly Linked List:</p>
-
-<p><br>
-<strong><img src="https://lh6.googleusercontent.com/0Ls5DjJ0cfyFry2hINdIAxmGw8lvj_gjx7pW6dTykz9p_RB5MS4m3zlVrtnec7ahG3MDNurT3B678z4XtZDNnT9ZZlgKvBT_-B7fFHygjqOQpJCaMGkRHEQ17_dcC6lo8AOP5xVVXP4jMk3JCQ"></strong></p>
-
-<p>If head points to the first node of the linked list then what will be the output of the following node?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-head=head-   gt;next-   gt;next-   gt;next-   gt;prev;
-head-   gt;next-   gt;next-   gt;prev=head;
-printf("
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>1</li>
-	<li>3</li>
-	<li>5</li>
-	<li>7</li>
+	<li>1,2,3,4,5,7,8,9,10</li>
+	<li>1,2,3,4,5,7,8,10,9,10</li>
+	<li>1,2,3,4,5,8,7,10,9,10</li>
+	<li>None of these</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>Consider the following function fun() that takes the head of a linked list.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
@@ -177,7 +158,34 @@ We say, a linked list has a loop if the last node of linked list points to some 
 	<li>Returns 1 is there is loop in linked list</li>
 	<li>Returns 0 is length of the linked list is even</li>
 	<li>Function may go to infinite loop if there is a loop in linked list</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>A doubly linked list is declared as:</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Consider the following function that takes reference to head of a Doubly Linked List as parameter. Assume that a node of doubly linked list has previous pointer as prev and next pointer as next.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+void fun(struct node **head_ref) 
+ 
+    struct node *temp=NULL; 
+    struct node *current=*head_ref; 
+    while(current!=NULL) 
+     
+        temp=current-   gt;prev; 
+        current-   gt;prev=current-   gt;next; 
+        current-   gt;next=temp; 
+        current=current-   gt;prev; 
+     
+    if(temp!=NULL) 
+        *head_ref=temp-   gt;prev; 
+ </pre>
+
+<p>Assume that reference of head of following doubly linked list is passed to above function</p>
+
+<p>1 ↔   nbsp;2 ↔ 3 ↔ 4 ↔ 5 ↔ 6. What should be the modified linked list after the function call?   nbsp;</p>
+
+<ol start="1" style="list-style-type:upper-alpha">
+	<li>2 ↔ 1 ↔ 4 ↔ 3 ↔ 6 ↔ 5</li>
+	<li>5 ↔ 4 ↔ 3 ↔ 2 ↔ 1 ↔ 6</li>
+	<li>6   nbsp; ↔ 5 ↔ 4 ↔ 3 ↔ 2 ↔ 1</li>
+	<li>6 ↔ 5 ↔ 4 ↔ 3 ↔ 1 ↔ 2</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>A doubly linked list is declared as:</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 struct Node 
@@ -194,11 +202,38 @@ struct Node
 	<li>X→ prev.next = X→ next ; X. next → prev = X→ prev; free(X);</li>
 	<li>X→. prev → next = X.prev ; X→ next.prev = X.prev; free(X);</li>
 	<li>X→ prev → next = X→ prev ; X→ next → prev = X→ next; free(X);</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Consider two statements below -</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Given a circular, doubly-linked list whose contents are sorted in ascending order, what is the run-time complexity for inserting a new element into the list so that it remains correctly sorted? (Including the time required to search for the element’s correct position.)</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>O(1)</li>
+	<li>O(logN)</li>
+	<li>O(N)</li>
+	<li>O(N^2)</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider a function findCLL that takes a doubly circular linked list head and an integer value as input.</p>
+
+<p>One example of doubly circular linked list is given below –</p>
+
+<p><strong><img src="https://lh4.googleusercontent.com/sxY8JwjRr2XdCpqU02eJeocIprDrCTXFdo0gcN-V25kwzWG4cdNARKj1w7plxBe7QZGk6TgCR-gvvAQn_Fi7wOhY5glwTMvKwN5TsB7ND-c4wW8FkScoYKixsj8Y84JeGdMp18hrYmO7P6xFjg"></strong></p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int findCLL(struct node * first, int n) 
+
+    while (first -   gt; value != n)
+        first = first -   gt; next;
+
+    if (first -   gt; value == n)
+        return 1;
+    else
+        return -1;
+
+</pre>
+
+<p><br>
+Consider two statements S1 and S2 given below.</p>
 
 <ul>
-	<li>S1: For all positive f(n), f(n) + o(f(n)) = θ(f(n)).</li>
-	<li>S2: For all positive f(n), g(n) and h(n), if f(n) = O(g(n)) and f(n) = Ω(h(n)), then g(n) + h(n) = Ω(f(n))</li>
+	<li>S1: Function returns 1 if there exists a value in linked list</li>
+	<li>S2: Function returns -1 if value does not exist in linked list</li>
 </ul>
 
 <p>Which of the following is the correct option.</p>
@@ -208,7 +243,7 @@ struct Node
 	<li>S2 is True but S1 is False.</li>
 	<li>Both are True.</li>
 	<li>Both are False.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider the following function Merge() that takes the head of two linked lists.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the following function Merge() that takes the head of two linked lists.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 struct node 
@@ -245,44 +280,8 @@ return head;
 		<li>List2: 2→ 4→ 6→   nbsp;8→ 10 →   nbsp;12→Null</li>
 	</ul>
 	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Which of the following(s) is/are true?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>If f(n) = O(n^2) then f(n) = O(n).</li>
-	<li>If f(n) is O(3^log_10n), then f(n) is O(n^2).</li>
-	<li>The function f(n) = (n!) = O(n  n).</li>
-	<li>Growth of the sum 1 + 1/2 + 1/3 + … + 1/n can be described by θ(log n).</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the following function foo() which takes the head pointer of two singly-linked lists.</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-struct node *foo(struct node *head1, struct node *head2)
-
-    struct node *final, *temp;
-    if (head1 == NULL) return head2;
-    if (head2 == NULL) return head1;
-    temp = foo(head1-   gt;next, head2-   gt;next);
-    final = head1;
-    head1 -   gt; next = head2;
-    head2 -   gt; next = temp;
-    return final;
-
-</pre>
-
-<p><br>
-What will be the final linked list returned by foo() if executed upon following linked lists?</p>
-
-<p><strong><img src="https://lh6.googleusercontent.com/77vc76YU2XsivCfNo_9oLPh3-wy9gMdxzJ3MHG0LvFIBSzCXWkWQVXDQuJnu8f3cATsyEnH1JZVN5SxsnnKsTXKJYBgEJR3v6aWWSNjyoTFw_d4RD48ypwaRk6iGl4ulneXwCf_85pJroNRE7Q"></strong></p>
-
-<p><strong><img src="https://lh3.googleusercontent.com/6bGoQUB2SETmuz8EmIDLC_ys09NX-W8eNYKtbE9kfS5U8OmNB02qqTphTPVti1ZpNaEdfv5hPMmCByWwoBFjxJGj2txD_i4SK07o7BS-C-A2TTSDEBE7_ezYlCJdLgGHO3Bx-UuxGFW4G9W7Kg"></strong></p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>1,2,3,4,5,7,8,9,10</li>
-	<li>1,2,3,4,5,7,8,10,9,10</li>
-	<li>1,2,3,4,5,8,7,10,9,10</li>
-	<li>None of these</li>
 </ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '374988', 'text': '<p>Consider the following program. printlist() is a function that takes the head of a linked list and prints all nodes values separated by comma. Node is typedefed singly linked list type struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid insert1(Node *head,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=head;\n    head=NewNode;\n}\nvoid insert2(Node **head_ref,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=*(head_ref);\n    *(head_ref)=NewNode;\n}\nint main()\n{\n    /* create a linked list 1-&gt;2-&gt;3-&gt;4-&gt;5 \nand head points to the first node.*/\n    insert1(head,9);\n    printlist(head); //Line X\n\n    //The list is restored to its initial state\n\n    insert2(&amp;head,9);\n    printlist(head); //Line Y\n}\n</pre>\n\n<p>Which of the following is/are true about the above program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Line $\\text{X}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{X}$ prints $1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $1,2,3,4,5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374992', 'text': '<p>What is the run-time complexity of inserting a new element at the beginning of a circular, doubly-linked list with a head?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(\\text{N})$</li>\n\t<li>$O(\\text{N}^2)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374994', 'text': '<p>Consider the following function that takes reference to head of a Doubly Linked List as parameter. Assume that a node of doubly linked list has previous pointer as $\\textit{prev}$ and next pointer as $\\textit{next}$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(struct node **head_ref) \n{ \n    struct node *temp=NULL; \n    struct node *current=*head_ref; \n    while(current!=NULL) \n    { \n        temp=current-&gt;prev; \n        current-&gt;prev=current-&gt;next; \n        current-&gt;next=temp; \n        current=current-&gt;prev; \n    } \n    if(temp!=NULL) \n        *head_ref=temp-&gt;prev; \n} </pre>\n\n<p>Assume that reference of head of following doubly linked list is passed to above function</p>\n\n<p>$1 \\leftrightarrow&nbsp;2 \\leftrightarrow 3 \\leftrightarrow 4 \\leftrightarrow 5 \\leftrightarrow 6$. What should be the modified linked list after the function call?&nbsp;</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$2 \\leftrightarrow 1 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 6 \\leftrightarrow 5$</li>\n\t<li>$5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1 \\leftrightarrow 6$</li>\n\t<li>$6&nbsp; \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1$</li>\n\t<li>$6 \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 1 \\leftrightarrow 2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374987', 'text': '<p>If $f(n) = O(g(n))$ and $f(n) = \\Omega(g(n)),$ then it is always true that</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(n) = o(g(n)).$</li>\n\t<li>$f(n) = \\theta(g(n)).$</li>\n\t<li>$f(n) = \\omega(g(n)).$</li>\n\t<li>both A and B are always true.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374990', 'text': '<p>Consider a function findCLL that takes a doubly circular linked list head and an integer value as input.</p>\n\n<p>One example of doubly circular linked list is given below –</p>\n\n<p><strong><img alt="" height="65" src="https://lh4.googleusercontent.com/sxY8JwjRr2XdCpqU02eJeocIprDrCTXFdo0gcN-V25kwzWG4cdNARKj1w7plxBe7QZGk6TgCR-gvvAQn_Fi7wOhY5glwTMvKwN5TsB7ND-c4wW8FkScoYKixsj8Y84JeGdMp18hrYmO7P6xFjg" width="672"></strong></p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint findCLL(struct node * first, int n) {\n\n    while (first -&gt; value != n)\n        first = first -&gt; next;\n\n    if (first -&gt; value == n)\n        return 1;\n    else\n        return -1;\n}\n</pre>\n\n<p><br>\nConsider two statements $\\text{S1}$ and $\\text{S2}$ given below.</p>\n\n<ul>\n\t<li>$\\text{S1}:$ Function returns $1$ if there exists a value in linked list</li>\n\t<li>$\\text{S2}:$ Function returns $-1$ if value does not exist in linked list</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374991', 'text': '<p>Given a circular, doubly-linked list whose contents are sorted in ascending order, what is the run-time complexity for inserting a new element into the list so that it remains correctly sorted? (Including the time required to search for the element’s correct position.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(N)$</li>\n\t<li>$O(\\text{N}^{2})$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374983', 'text': '<p>Which of the following statement(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) + \\text{T2}(x) = \\text{O} (\\max(f(x), g(x))$</li>\n\t<li>If $\\text{T}(x) = \\text{O}(cf(x)),$ where $c$ is some positive constant then $\\text{T}(x) = \\text{O}(f(x)).$</li>\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) \\ast \\text{T2}(x) = \\text{O}(f(x) \\ast g(x))$</li>\n\t<li>$2^{(n+1)} = \\text{O}(2^{n} ).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374989', 'text': '<p>Consider the following Doubly Linked List:</p>\n\n<p><br>\n<strong><img alt="" height="37" src="https://lh6.googleusercontent.com/0Ls5DjJ0cfyFry2hINdIAxmGw8lvj_gjx7pW6dTykz9p_RB5MS4m3zlVrtnec7ahG3MDNurT3B678z4XtZDNnT9ZZlgKvBT_-B7fFHygjqOQpJCaMGkRHEQ17_dcC6lo8AOP5xVVXP4jMk3JCQ" width="624"></strong></p>\n\n<p>If head points to the first node of the linked list then what will be the output of the following node?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nhead=head-&gt;next-&gt;next-&gt;next-&gt;prev;\nhead-&gt;next-&gt;next-&gt;prev=head;\nprintf("%d",head-&gt;next-&gt;next-&gt;prev-&gt;next-&gt;value);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$5$</li>\n\t<li>$7$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374986', 'text': '<p>Consider the following function fun() that takes the head of a linked list.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nint fun(Node *head){\n    if(head== NULL) return 1;\n    Node *p,*q;\n    p = head;\n    q = p-&gt;next;\n    while(q!=NULL &amp;&amp; q!=p){\n        q = q-&gt;next;\n    if(q==NULL) return 1;\n    q = q-&gt;next;\n    p = p-&gt;next;\n    }\nreturn (q==NULL);\n}\n</pre>\n\n<p><br>\nWe say, a linked list has a loop if the last node of linked list points to some node of linked list and does not point to NULL.</p>\n\n<p>What does the above function do?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Returns $0$ is there is loop in linked list</li>\n\t<li>Returns $1$ is there is loop in linked list</li>\n\t<li>Returns $0$ is length of the linked list is even</li>\n\t<li>Function may go to infinite loop if there is a loop in linked list</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374984', 'text': '<p>A doubly linked list is declared as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct Node {\n    int Value;\n    struct Node *prev;\n    struct Node *next;\n};\n</pre>\n\n<p>Which of the following segment of code deletes the node pointed to by $\\text{X}$ from the doubly linked list, if it is assumed that $\\text{X}$ points to neither the first nor the last node of the list?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow $ next $= \\text{X} \\rightarrow$ next $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev.next $ = \\text{X} \\rightarrow$ next $; X.$ next $\\rightarrow$ prev $ = \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow.$ prev $\\rightarrow$ next $= \\text{X}.$prev $; \\text{X} \\rightarrow$ next.prev $= \\text{X}.$prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow$ next $= \\text{X} \\rightarrow$ prev $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ next; free(X);</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374982', 'text': '<p>Consider two statements below -</p>\n\n<ul>\n\t<li>$\\text{S1}:$ For all positive $f(n), f(n) + o(f(n)) = \\theta(f(n)).$</li>\n\t<li>$\\text{S2}:$ For all positive $f(n), g(n)$ and $h(n),$ if $f(n) = O(g(n))$ and $f(n) = \\Omega(h(n)),$ then $g(n) + h(n) = \\Omega(f(n))$</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374993', 'text': '<p>Consider the following function Merge() that takes the head of two linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nNode * Merge(Node * head1, Node * head2) {\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    Node * head = NULL;\n    if (head1 -&gt; value &lt; head2 -&gt; value) {\n        head = head1;\n        head -&gt; next = Merge(head1 -&gt; next, head2);\n    }\n    else if (head1 -&gt; value &gt; head2 -&gt; value) {\n        head = head2;\n        head -&gt; next = Merge(head1, head2 -&gt; next);\n    }\nreturn head;\n}\n</pre>\n\n<p>Assume that the input lists are correctly sorted. Which of the following are some of the possible behaviors when Merge() is executed with well-formed and valid inputs? Correctly merged linked list is merged&nbsp;sorted linked list.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The function will produce a correctly merged linked list.</li>\n\t<li>The function may lead to a null pointer dereference.</li>\n\t<li>The function may result in an incorrectly merged linked list.</li>\n\t<li>Merge() will work on the following two lists.\n\t<ul>\n\t\t<li>$\\text{List}1: 1 \\rightarrow 3 \\rightarrow 5\\rightarrow 7\\rightarrow&nbsp;\\text{Null}$</li>\n\t\t<li>$\\text{List}2: 2\\rightarrow 4\\rightarrow 6\\rightarrow&nbsp;8\\rightarrow 10 \\rightarrow&nbsp;12\\rightarrow \\text{Null}$</li>\n\t</ul>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374981', 'text': '<p>Which of the following(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $f(n) = O(n^2)$ then $f(n) = O(n).$</li>\n\t<li>If $f(n)$ is $O(3^{\\log_{10}n}),$ then $f(n)$ is $O(n^2).$</li>\n\t<li>The function $f(n) = \\lg(n!) = O(n \\lg n).$</li>\n\t<li>Growth of the sum $1 + \\frac{1}{2} + \\frac{1}{3} + \\dots + \\frac{1}{n}$ can be described by $\\theta(\\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374985', 'text': '<p>Consider the following function foo() which takes the head pointer of two singly-linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node *foo(struct node *head1, struct node *head2)\n{\n    struct node *final, *temp;\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    temp = foo(head1-&gt;next, head2-&gt;next);\n    final = head1;\n    head1 -&gt; next = head2;\n    head2 -&gt; next = temp;\n    return final;\n}\n</pre>\n\n<p><br>\nWhat will be the final linked list returned by foo() if executed upon following linked lists?</p>\n\n<p><strong><img alt="" height="43" src="https://lh6.googleusercontent.com/77vc76YU2XsivCfNo_9oLPh3-wy9gMdxzJ3MHG0LvFIBSzCXWkWQVXDQuJnu8f3cATsyEnH1JZVN5SxsnnKsTXKJYBgEJR3v6aWWSNjyoTFw_d4RD48ypwaRk6iGl4ulneXwCf_85pJroNRE7Q" width="624"></strong></p>\n\n<p><strong><img alt="" height="43" src="https://lh3.googleusercontent.com/6bGoQUB2SETmuz8EmIDLC_ys09NX-W8eNYKtbE9kfS5U8OmNB02qqTphTPVti1ZpNaEdfv5hPMmCByWwoBFjxJGj2txD_i4SK07o7BS-C-A2TTSDEBE7_ezYlCJdLgGHO3Bx-UuxGFW4G9W7Kg" width="407"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1,2,3,4,5,7,8,9,10$</li>\n\t<li>$1,2,3,4,5,7,8,10,9,10$</li>\n\t<li>$1,2,3,4,5,8,7,10,9,10$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}]
-      let data={'name': 'GO Classes Weekly Quiz 9 | Data Structures | Linked List', 'duration': '45', 'total_qs': '14', 'total_qs_one': 8, 'total_qs_two': 6, 'apti_num_qs': 0, 'technical_num_qs': 14, 'apti_marks': 0, 'technical_marks': 20, 'total_marks': 20, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 14, 'marks': 20, 'question': [{'contents': '', 'post_id': '374988', 'text': '<p>Consider the following program. printlist() is a function that takes the head of a linked list and prints all nodes values separated by comma. Node is typedefed singly linked list type struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid insert1(Node *head,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=head;\n    head=NewNode;\n}\nvoid insert2(Node **head_ref,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=*(head_ref);\n    *(head_ref)=NewNode;\n}\nint main()\n{\n    /* create a linked list 1-&gt;2-&gt;3-&gt;4-&gt;5 \nand head points to the first node.*/\n    insert1(head,9);\n    printlist(head); //Line X\n\n    //The list is restored to its initial state\n\n    insert2(&amp;head,9);\n    printlist(head); //Line Y\n}\n</pre>\n\n<p>Which of the following is/are true about the above program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Line $\\text{X}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{X}$ prints $1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $1,2,3,4,5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374992', 'text': '<p>What is the run-time complexity of inserting a new element at the beginning of a circular, doubly-linked list with a head?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(\\text{N})$</li>\n\t<li>$O(\\text{N}^2)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374994', 'text': '<p>Consider the following function that takes reference to head of a Doubly Linked List as parameter. Assume that a node of doubly linked list has previous pointer as $\\textit{prev}$ and next pointer as $\\textit{next}$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(struct node **head_ref) \n{ \n    struct node *temp=NULL; \n    struct node *current=*head_ref; \n    while(current!=NULL) \n    { \n        temp=current-&gt;prev; \n        current-&gt;prev=current-&gt;next; \n        current-&gt;next=temp; \n        current=current-&gt;prev; \n    } \n    if(temp!=NULL) \n        *head_ref=temp-&gt;prev; \n} </pre>\n\n<p>Assume that reference of head of following doubly linked list is passed to above function</p>\n\n<p>$1 \\leftrightarrow&nbsp;2 \\leftrightarrow 3 \\leftrightarrow 4 \\leftrightarrow 5 \\leftrightarrow 6$. What should be the modified linked list after the function call?&nbsp;</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$2 \\leftrightarrow 1 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 6 \\leftrightarrow 5$</li>\n\t<li>$5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1 \\leftrightarrow 6$</li>\n\t<li>$6&nbsp; \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1$</li>\n\t<li>$6 \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 1 \\leftrightarrow 2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374987', 'text': '<p>If $f(n) = O(g(n))$ and $f(n) = \\Omega(g(n)),$ then it is always true that</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(n) = o(g(n)).$</li>\n\t<li>$f(n) = \\theta(g(n)).$</li>\n\t<li>$f(n) = \\omega(g(n)).$</li>\n\t<li>both A and B are always true.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374990', 'text': '<p>Consider a function findCLL that takes a doubly circular linked list head and an integer value as input.</p>\n\n<p>One example of doubly circular linked list is given below –</p>\n\n<p><strong><img alt="" height="65" src="https://lh4.googleusercontent.com/sxY8JwjRr2XdCpqU02eJeocIprDrCTXFdo0gcN-V25kwzWG4cdNARKj1w7plxBe7QZGk6TgCR-gvvAQn_Fi7wOhY5glwTMvKwN5TsB7ND-c4wW8FkScoYKixsj8Y84JeGdMp18hrYmO7P6xFjg" width="672"></strong></p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint findCLL(struct node * first, int n) {\n\n    while (first -&gt; value != n)\n        first = first -&gt; next;\n\n    if (first -&gt; value == n)\n        return 1;\n    else\n        return -1;\n}\n</pre>\n\n<p><br>\nConsider two statements $\\text{S1}$ and $\\text{S2}$ given below.</p>\n\n<ul>\n\t<li>$\\text{S1}:$ Function returns $1$ if there exists a value in linked list</li>\n\t<li>$\\text{S2}:$ Function returns $-1$ if value does not exist in linked list</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374991', 'text': '<p>Given a circular, doubly-linked list whose contents are sorted in ascending order, what is the run-time complexity for inserting a new element into the list so that it remains correctly sorted? (Including the time required to search for the element’s correct position.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(N)$</li>\n\t<li>$O(\\text{N}^{2})$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374983', 'text': '<p>Which of the following statement(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) + \\text{T2}(x) = \\text{O} (\\max(f(x), g(x))$</li>\n\t<li>If $\\text{T}(x) = \\text{O}(cf(x)),$ where $c$ is some positive constant then $\\text{T}(x) = \\text{O}(f(x)).$</li>\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) \\ast \\text{T2}(x) = \\text{O}(f(x) \\ast g(x))$</li>\n\t<li>$2^{(n+1)} = \\text{O}(2^{n} ).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374989', 'text': '<p>Consider the following Doubly Linked List:</p>\n\n<p><br>\n<strong><img alt="" height="37" src="https://lh6.googleusercontent.com/0Ls5DjJ0cfyFry2hINdIAxmGw8lvj_gjx7pW6dTykz9p_RB5MS4m3zlVrtnec7ahG3MDNurT3B678z4XtZDNnT9ZZlgKvBT_-B7fFHygjqOQpJCaMGkRHEQ17_dcC6lo8AOP5xVVXP4jMk3JCQ" width="624"></strong></p>\n\n<p>If head points to the first node of the linked list then what will be the output of the following node?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nhead=head-&gt;next-&gt;next-&gt;next-&gt;prev;\nhead-&gt;next-&gt;next-&gt;prev=head;\nprintf("%d",head-&gt;next-&gt;next-&gt;prev-&gt;next-&gt;value);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$5$</li>\n\t<li>$7$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374986', 'text': '<p>Consider the following function fun() that takes the head of a linked list.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nint fun(Node *head){\n    if(head== NULL) return 1;\n    Node *p,*q;\n    p = head;\n    q = p-&gt;next;\n    while(q!=NULL &amp;&amp; q!=p){\n        q = q-&gt;next;\n    if(q==NULL) return 1;\n    q = q-&gt;next;\n    p = p-&gt;next;\n    }\nreturn (q==NULL);\n}\n</pre>\n\n<p><br>\nWe say, a linked list has a loop if the last node of linked list points to some node of linked list and does not point to NULL.</p>\n\n<p>What does the above function do?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Returns $0$ is there is loop in linked list</li>\n\t<li>Returns $1$ is there is loop in linked list</li>\n\t<li>Returns $0$ is length of the linked list is even</li>\n\t<li>Function may go to infinite loop if there is a loop in linked list</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374984', 'text': '<p>A doubly linked list is declared as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct Node {\n    int Value;\n    struct Node *prev;\n    struct Node *next;\n};\n</pre>\n\n<p>Which of the following segment of code deletes the node pointed to by $\\text{X}$ from the doubly linked list, if it is assumed that $\\text{X}$ points to neither the first nor the last node of the list?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow $ next $= \\text{X} \\rightarrow$ next $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev.next $ = \\text{X} \\rightarrow$ next $; X.$ next $\\rightarrow$ prev $ = \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow.$ prev $\\rightarrow$ next $= \\text{X}.$prev $; \\text{X} \\rightarrow$ next.prev $= \\text{X}.$prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow$ next $= \\text{X} \\rightarrow$ prev $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ next; free(X);</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374982', 'text': '<p>Consider two statements below -</p>\n\n<ul>\n\t<li>$\\text{S1}:$ For all positive $f(n), f(n) + o(f(n)) = \\theta(f(n)).$</li>\n\t<li>$\\text{S2}:$ For all positive $f(n), g(n)$ and $h(n),$ if $f(n) = O(g(n))$ and $f(n) = \\Omega(h(n)),$ then $g(n) + h(n) = \\Omega(f(n))$</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374993', 'text': '<p>Consider the following function Merge() that takes the head of two linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nNode * Merge(Node * head1, Node * head2) {\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    Node * head = NULL;\n    if (head1 -&gt; value &lt; head2 -&gt; value) {\n        head = head1;\n        head -&gt; next = Merge(head1 -&gt; next, head2);\n    }\n    else if (head1 -&gt; value &gt; head2 -&gt; value) {\n        head = head2;\n        head -&gt; next = Merge(head1, head2 -&gt; next);\n    }\nreturn head;\n}\n</pre>\n\n<p>Assume that the input lists are correctly sorted. Which of the following are some of the possible behaviors when Merge() is executed with well-formed and valid inputs? Correctly merged linked list is merged&nbsp;sorted linked list.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The function will produce a correctly merged linked list.</li>\n\t<li>The function may lead to a null pointer dereference.</li>\n\t<li>The function may result in an incorrectly merged linked list.</li>\n\t<li>Merge() will work on the following two lists.\n\t<ul>\n\t\t<li>$\\text{List}1: 1 \\rightarrow 3 \\rightarrow 5\\rightarrow 7\\rightarrow&nbsp;\\text{Null}$</li>\n\t\t<li>$\\text{List}2: 2\\rightarrow 4\\rightarrow 6\\rightarrow&nbsp;8\\rightarrow 10 \\rightarrow&nbsp;12\\rightarrow \\text{Null}$</li>\n\t</ul>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374981', 'text': '<p>Which of the following(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $f(n) = O(n^2)$ then $f(n) = O(n).$</li>\n\t<li>If $f(n)$ is $O(3^{\\log_{10}n}),$ then $f(n)$ is $O(n^2).$</li>\n\t<li>The function $f(n) = \\lg(n!) = O(n \\lg n).$</li>\n\t<li>Growth of the sum $1 + \\frac{1}{2} + \\frac{1}{3} + \\dots + \\frac{1}{n}$ can be described by $\\theta(\\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374985', 'text': '<p>Consider the following function foo() which takes the head pointer of two singly-linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node *foo(struct node *head1, struct node *head2)\n{\n    struct node *final, *temp;\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    temp = foo(head1-&gt;next, head2-&gt;next);\n    final = head1;\n    head1 -&gt; next = head2;\n    head2 -&gt; next = temp;\n    return final;\n}\n</pre>\n\n<p><br>\nWhat will be the final linked list returned by foo() if executed upon following linked lists?</p>\n\n<p><strong><img alt="" height="43" src="https://lh6.googleusercontent.com/77vc76YU2XsivCfNo_9oLPh3-wy9gMdxzJ3MHG0LvFIBSzCXWkWQVXDQuJnu8f3cATsyEnH1JZVN5SxsnnKsTXKJYBgEJR3v6aWWSNjyoTFw_d4RD48ypwaRk6iGl4ulneXwCf_85pJroNRE7Q" width="624"></strong></p>\n\n<p><strong><img alt="" height="43" src="https://lh3.googleusercontent.com/6bGoQUB2SETmuz8EmIDLC_ys09NX-W8eNYKtbE9kfS5U8OmNB02qqTphTPVti1ZpNaEdfv5hPMmCByWwoBFjxJGj2txD_i4SK07o7BS-C-A2TTSDEBE7_ezYlCJdLgGHO3Bx-UuxGFW4G9W7Kg" width="407"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1,2,3,4,5,7,8,9,10$</li>\n\t<li>$1,2,3,4,5,7,8,10,9,10$</li>\n\t<li>$1,2,3,4,5,8,7,10,9,10$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}]}]}
+      let data={'name': 'GO Classes Weekly Quiz 9 | Data Structures | Linked List', 'duration': '45', 'total_qs': '14', 'total_qs_one': 8, 'total_qs_two': 6, 'apti_num_qs': 0, 'technical_num_qs': 14, 'apti_marks': 0, 'technical_marks': 20, 'total_marks': 20, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 14, 'marks': 20, 'question': [{'contents': '', 'post_id': '374983', 'text': '<p>Which of the following statement(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) + \\text{T2}(x) = \\text{O} (\\max(f(x), g(x))$</li>\n\t<li>If $\\text{T}(x) = \\text{O}(cf(x)),$ where $c$ is some positive constant then $\\text{T}(x) = \\text{O}(f(x)).$</li>\n\t<li>If $\\text{T1}(x) = \\text{O}(f(x))$ and $\\text{T2}(x) = \\text{O}(g(x))$ then $\\text{T1}(x) \\ast \\text{T2}(x) = \\text{O}(f(x) \\ast g(x))$</li>\n\t<li>$2^{(n+1)} = \\text{O}(2^{n} ).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374989', 'text': '<p>Consider the following Doubly Linked List:</p>\n\n<p><br>\n<strong><img alt="" height="37" src="https://lh6.googleusercontent.com/0Ls5DjJ0cfyFry2hINdIAxmGw8lvj_gjx7pW6dTykz9p_RB5MS4m3zlVrtnec7ahG3MDNurT3B678z4XtZDNnT9ZZlgKvBT_-B7fFHygjqOQpJCaMGkRHEQ17_dcC6lo8AOP5xVVXP4jMk3JCQ" width="624"></strong></p>\n\n<p>If head points to the first node of the linked list then what will be the output of the following node?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nhead=head-&gt;next-&gt;next-&gt;next-&gt;prev;\nhead-&gt;next-&gt;next-&gt;prev=head;\nprintf("%d",head-&gt;next-&gt;next-&gt;prev-&gt;next-&gt;value);\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1$</li>\n\t<li>$3$</li>\n\t<li>$5$</li>\n\t<li>$7$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374992', 'text': '<p>What is the run-time complexity of inserting a new element at the beginning of a circular, doubly-linked list with a head?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(\\text{N})$</li>\n\t<li>$O(\\text{N}^2)$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374987', 'text': '<p>If $f(n) = O(g(n))$ and $f(n) = \\Omega(g(n)),$ then it is always true that</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$f(n) = o(g(n)).$</li>\n\t<li>$f(n) = \\theta(g(n)).$</li>\n\t<li>$f(n) = \\omega(g(n)).$</li>\n\t<li>both A and B are always true.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374982', 'text': '<p>Consider two statements below -</p>\n\n<ul>\n\t<li>$\\text{S1}:$ For all positive $f(n), f(n) + o(f(n)) = \\theta(f(n)).$</li>\n\t<li>$\\text{S2}:$ For all positive $f(n), g(n)$ and $h(n),$ if $f(n) = O(g(n))$ and $f(n) = \\Omega(h(n)),$ then $g(n) + h(n) = \\Omega(f(n))$</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374981', 'text': '<p>Which of the following(s) is/are true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>If $f(n) = O(n^2)$ then $f(n) = O(n).$</li>\n\t<li>If $f(n)$ is $O(3^{\\log_{10}n}),$ then $f(n)$ is $O(n^2).$</li>\n\t<li>The function $f(n) = \\lg(n!) = O(n \\lg n).$</li>\n\t<li>Growth of the sum $1 + \\frac{1}{2} + \\frac{1}{3} + \\dots + \\frac{1}{n}$ can be described by $\\theta(\\log n).$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c;d', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses_wq9,goclasses,algorithms,asymptotic-notation,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374988', 'text': '<p>Consider the following program. printlist() is a function that takes the head of a linked list and prints all nodes values separated by comma. Node is typedefed singly linked list type struct.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid insert1(Node *head,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=head;\n    head=NewNode;\n}\nvoid insert2(Node **head_ref,int data)\n{\n    Node *NewNode= (Node *)malloc(sizeof(Node));\n    NewNode-&gt;value=data;\n    NewNode-&gt;next=*(head_ref);\n    *(head_ref)=NewNode;\n}\nint main()\n{\n    /* create a linked list 1-&gt;2-&gt;3-&gt;4-&gt;5 \nand head points to the first node.*/\n    insert1(head,9);\n    printlist(head); //Line X\n\n    //The list is restored to its initial state\n\n    insert2(&amp;head,9);\n    printlist(head); //Line Y\n}\n</pre>\n\n<p>Which of the following is/are true about the above program?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Line $\\text{X}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $9,1,2,3,4,5$</li>\n\t<li>Line $\\text{X}$ prints $1,2,3,4,5$</li>\n\t<li>Line $\\text{Y}$ prints $1,2,3,4,5$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374985', 'text': '<p>Consider the following function foo() which takes the head pointer of two singly-linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node *foo(struct node *head1, struct node *head2)\n{\n    struct node *final, *temp;\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    temp = foo(head1-&gt;next, head2-&gt;next);\n    final = head1;\n    head1 -&gt; next = head2;\n    head2 -&gt; next = temp;\n    return final;\n}\n</pre>\n\n<p><br>\nWhat will be the final linked list returned by foo() if executed upon following linked lists?</p>\n\n<p><strong><img alt="" height="43" src="https://lh6.googleusercontent.com/77vc76YU2XsivCfNo_9oLPh3-wy9gMdxzJ3MHG0LvFIBSzCXWkWQVXDQuJnu8f3cATsyEnH1JZVN5SxsnnKsTXKJYBgEJR3v6aWWSNjyoTFw_d4RD48ypwaRk6iGl4ulneXwCf_85pJroNRE7Q" width="624"></strong></p>\n\n<p><strong><img alt="" height="43" src="https://lh3.googleusercontent.com/6bGoQUB2SETmuz8EmIDLC_ys09NX-W8eNYKtbE9kfS5U8OmNB02qqTphTPVti1ZpNaEdfv5hPMmCByWwoBFjxJGj2txD_i4SK07o7BS-C-A2TTSDEBE7_ezYlCJdLgGHO3Bx-UuxGFW4G9W7Kg" width="407"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$1,2,3,4,5,7,8,9,10$</li>\n\t<li>$1,2,3,4,5,7,8,10,9,10$</li>\n\t<li>$1,2,3,4,5,8,7,10,9,10$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374986', 'text': '<p>Consider the following function fun() that takes the head of a linked list.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nint fun(Node *head){\n    if(head== NULL) return 1;\n    Node *p,*q;\n    p = head;\n    q = p-&gt;next;\n    while(q!=NULL &amp;&amp; q!=p){\n        q = q-&gt;next;\n    if(q==NULL) return 1;\n    q = q-&gt;next;\n    p = p-&gt;next;\n    }\nreturn (q==NULL);\n}\n</pre>\n\n<p><br>\nWe say, a linked list has a loop if the last node of linked list points to some node of linked list and does not point to NULL.</p>\n\n<p>What does the above function do?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Returns $0$ is there is loop in linked list</li>\n\t<li>Returns $1$ is there is loop in linked list</li>\n\t<li>Returns $0$ is length of the linked list is even</li>\n\t<li>Function may go to infinite loop if there is a loop in linked list</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374994', 'text': '<p>Consider the following function that takes reference to head of a Doubly Linked List as parameter. Assume that a node of doubly linked list has previous pointer as $\\textit{prev}$ and next pointer as $\\textit{next}$.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(struct node **head_ref) \n{ \n    struct node *temp=NULL; \n    struct node *current=*head_ref; \n    while(current!=NULL) \n    { \n        temp=current-&gt;prev; \n        current-&gt;prev=current-&gt;next; \n        current-&gt;next=temp; \n        current=current-&gt;prev; \n    } \n    if(temp!=NULL) \n        *head_ref=temp-&gt;prev; \n} </pre>\n\n<p>Assume that reference of head of following doubly linked list is passed to above function</p>\n\n<p>$1 \\leftrightarrow&nbsp;2 \\leftrightarrow 3 \\leftrightarrow 4 \\leftrightarrow 5 \\leftrightarrow 6$. What should be the modified linked list after the function call?&nbsp;</p>\n\n<ol start="1" style="list-style-type:upper-alpha">\n\t<li>$2 \\leftrightarrow 1 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 6 \\leftrightarrow 5$</li>\n\t<li>$5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1 \\leftrightarrow 6$</li>\n\t<li>$6&nbsp; \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 2 \\leftrightarrow 1$</li>\n\t<li>$6 \\leftrightarrow 5 \\leftrightarrow 4 \\leftrightarrow 3 \\leftrightarrow 1 \\leftrightarrow 2$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374984', 'text': '<p>A doubly linked list is declared as:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct Node {\n    int Value;\n    struct Node *prev;\n    struct Node *next;\n};\n</pre>\n\n<p>Which of the following segment of code deletes the node pointed to by $\\text{X}$ from the doubly linked list, if it is assumed that $\\text{X}$ points to neither the first nor the last node of the list?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow $ next $= \\text{X} \\rightarrow$ next $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev.next $ = \\text{X} \\rightarrow$ next $; X.$ next $\\rightarrow$ prev $ = \\text{X} \\rightarrow$ prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow.$ prev $\\rightarrow$ next $= \\text{X}.$prev $; \\text{X} \\rightarrow$ next.prev $= \\text{X}.$prev; free(X);</li>\n\t<li>$\\text{X} \\rightarrow$ prev $\\rightarrow$ next $= \\text{X} \\rightarrow$ prev $; \\text{X} \\rightarrow$ next $\\rightarrow$ prev $= \\text{X} \\rightarrow$ next; free(X);</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,2-marks', 'category': 'DS'}, {'contents': '', 'post_id': '374991', 'text': '<p>Given a circular, doubly-linked list whose contents are sorted in ascending order, what is the run-time complexity for inserting a new element into the list so that it remains correctly sorted? (Including the time required to search for the element’s correct position.)</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$O(1)$</li>\n\t<li>$O(\\log \\text{N})$</li>\n\t<li>$O(N)$</li>\n\t<li>$O(\\text{N}^{2})$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,time-complexity,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374990', 'text': '<p>Consider a function findCLL that takes a doubly circular linked list head and an integer value as input.</p>\n\n<p>One example of doubly circular linked list is given below –</p>\n\n<p><strong><img alt="" height="65" src="https://lh4.googleusercontent.com/sxY8JwjRr2XdCpqU02eJeocIprDrCTXFdo0gcN-V25kwzWG4cdNARKj1w7plxBe7QZGk6TgCR-gvvAQn_Fi7wOhY5glwTMvKwN5TsB7ND-c4wW8FkScoYKixsj8Y84JeGdMp18hrYmO7P6xFjg" width="672"></strong></p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint findCLL(struct node * first, int n) {\n\n    while (first -&gt; value != n)\n        first = first -&gt; next;\n\n    if (first -&gt; value == n)\n        return 1;\n    else\n        return -1;\n}\n</pre>\n\n<p><br>\nConsider two statements $\\text{S1}$ and $\\text{S2}$ given below.</p>\n\n<ul>\n\t<li>$\\text{S1}:$ Function returns $1$ if there exists a value in linked list</li>\n\t<li>$\\text{S2}:$ Function returns $-1$ if value does not exist in linked list</li>\n</ul>\n\n<p>Which of the following is the correct option.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{S1}$ is True but $\\text{S2}$ is False.</li>\n\t<li>$\\text{S2}$ is True but $\\text{S1}$ is False.</li>\n\t<li>Both are True.</li>\n\t<li>Both are False.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,1-mark', 'category': 'DS'}, {'contents': '', 'post_id': '374993', 'text': '<p>Consider the following function Merge() that takes the head of two linked lists.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nstruct node {\n    int value;\n    struct node *next;\n};\ntypedef struct node Node;\n\nNode * Merge(Node * head1, Node * head2) {\n    if (head1 == NULL) return head2;\n    if (head2 == NULL) return head1;\n    Node * head = NULL;\n    if (head1 -&gt; value &lt; head2 -&gt; value) {\n        head = head1;\n        head -&gt; next = Merge(head1 -&gt; next, head2);\n    }\n    else if (head1 -&gt; value &gt; head2 -&gt; value) {\n        head = head2;\n        head -&gt; next = Merge(head1, head2 -&gt; next);\n    }\nreturn head;\n}\n</pre>\n\n<p>Assume that the input lists are correctly sorted. Which of the following are some of the possible behaviors when Merge() is executed with well-formed and valid inputs? Correctly merged linked list is merged&nbsp;sorted linked list.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>The function will produce a correctly merged linked list.</li>\n\t<li>The function may lead to a null pointer dereference.</li>\n\t<li>The function may result in an incorrectly merged linked list.</li>\n\t<li>Merge() will work on the following two lists.\n\t<ul>\n\t\t<li>$\\text{List}1: 1 \\rightarrow 3 \\rightarrow 5\\rightarrow 7\\rightarrow&nbsp;\\text{Null}$</li>\n\t\t<li>$\\text{List}2: 2\\rightarrow 4\\rightarrow 6\\rightarrow&nbsp;8\\rightarrow 10 \\rightarrow&nbsp;12\\rightarrow \\text{Null}$</li>\n\t</ul>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-ds-1,goclasses,data-structures,linked-list,multiple-selects,2-marks', 'category': 'DS'}]}]}
       </script>
       

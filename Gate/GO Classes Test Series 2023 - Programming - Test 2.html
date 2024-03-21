@@ -1,123 +1,64 @@
-<div><span>Q1</span> - <p>Which of the following C -functions will correctly return true if its argument is an odd integer?</p>
-
-<ol style="list-style-type:upper-roman">
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-bool IsOdd (int x) 
-    return (x 
-
-</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-bool IsOdd (int x) 
-    return (x / 2 == 1);
-
-</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-bool IsOdd (int x) 
-if (x 
-    return true;
-else
-    return false;
-
-</pre>
-	</li>
-	<li>   nbsp;
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-bool IsOdd (int x)  
-    if (x / 2 == 1) 
-        return true;
-    else 
-        return false;
-</pre>
-	</li>
-</ol>
-
-<p>   nbsp;</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>I</li>
-	<li>II</li>
-	<li>III</li>
-	<li>IV</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What is/are possible choice(s) for “Line 1” to produce output 2123?</p>
+<div><span>Q1</span> - <p>What will be the output of running file main.c?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-void fun(int n)
+write.c
+***********************
+extern int count;
 
-    printf("
-    static int i = 0;
-    //Line 1
-    
-        i++;
-        fun(i);
-    
+void write_extern()
 
-int main()
-
-    fun(2);
-
+    count +=2;
 </pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-if(i   lt;=2)
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-while(i   lt;=2)
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-if(i   gt;2) return;
-</pre>
-	</li>
-	<li>
-	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-if(i   gt;2)
-</pre>
-	</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>What will be the output of the program below-</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int i = 1;
-void my_extern1(void);
-void my_extern2(void);
+main.c
+***********************
+#include "write.c"
+#include   lt;stdio.h   gt;
+int count = 5;
 
-int main() 
-    int count = 0;
-    
-    while (i++   lt;5) 
-        static int i = 3;
-        i++;
-        count +=i;
-        my_extern1();
-    
+main()
+
+    write_extern();
+    write_extern();
     printf("
 
-
-void my_extern1()
-    extern int i;
-    if(i++    gt; 0) my_extern2();
-
-
-void my_extern2()
-    extern int i;
-    if (i++    lt; 3) my_extern1();
 </pre>
 
 <ol style="list-style-type:upper-alpha">
-	<li>Infinite recursion</li>
+	<li>0</li>
+	<li>5</li>
 	<li>9</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q2</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt; 
+int rec(int x, int y) 
+static int count = 0;
+if (x == 0)
+  return count;
+count++;
+if (x    gt; y)
+  rec(x - y, y);
+else
+  rec(x, y - x);
+return count;
+
+main() 
+    int i = 10, j = 2, n;
+    n = rec(i, j);
+    printf("
+
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
 	<li>4</li>
 	<li>5</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>In C language, the Order of evaluation of any part of any expression is unspecified.</p>
+	<li>6</li>
+	<li>Infinite loop</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q3</span> - <p>In C language, the Order of evaluation of any part of any expression is unspecified.</p>
 
 <p>That means if we have two functions f() and g(), in a single expression, then it is unspecified which one will be called first.</p>
 
@@ -148,14 +89,7 @@ main()
     a()+b()+c();
 
 
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>The default storage class for functions in C language is –</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Static</li>
-	<li>Auto</li>
-	<li>Extern</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What will be the output if you compile and execute the following C   nbsp;code?</p>
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q4</span> - <p>What will be the output if you compile and execute the following C   nbsp;code?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 int extern x;
@@ -172,7 +106,20 @@ int x=23;
 	<li>2</li>
 	<li>23</li>
 	<li>Compiler error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>What will be the output of the following program (which is broken down into two files: f1.c and f2.c).</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q5</span> - <p>Consider the below program written into 2 files.</p>
+
+<p><strong><img src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9"></strong></p>
+
+<p>Note that compilation of   nbsp;f1.c and f2.c happens independently of each other.</p>
+
+<p>Which of the following is TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>f1.c and f2.c can be compiled independently.</li>
+	<li>f1.c will produce a compilation error since variable x does not get any memory, and we are using it in printf.</li>
+	<li>f1.c and f2.c can be compiled and linked. The output of the program will be 00.</li>
+	<li>f2.c will produce a compilation error since function fun() is not defined in   nbsp;f2.c.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q6</span> - <p>What will be the output of the following program (which is broken down into two files: f1.c and f2.c).</p>
 
 <p><strong><img src="https://lh6.googleusercontent.com/p2oOVtxzMAZc-DD6wt9Q46DBCB8FLbCkTXeAwoAYRnHLyhYsZYePLQPMwG_34wglBJsrFdRYRCYOjqbtd_SSFE16scpeMd4YLBYfyWCvA8SZ0F2iCEyZHZMu_OcGRZv3iQ-EAUOi"></strong></p>
 
@@ -197,66 +144,104 @@ int x=23;
 	g: 1  1<br>
 	p: 2  3<br>
 	s: 2  3</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider below two files p1.c and p2.c<br>
-<strong><img src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt"></strong></p>
-
-<p>We compile both files independently and link them in case the compilation is successful.<br>
-<br>
-Which of the following(s) is/are TRUE?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>p1.c can not be compiled as there is no main function in the file.</li>
-	<li>Line 3 in p1.c will produce a compilation error because of the redefinition of variable a.</li>
-	<li>Line 6 in p2.c will produce a compilation error since the extern does not allocate   nbsp;memory to variables.</li>
-	<li>Line 7 in p2.c will produce a compilation error.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the following program?</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q7</span> - <p>Consider the following C-program.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt; 
-int sum() 
-  static int n =5;
-  if (n == 2) return 2;
-  return sum(n-1)*n ;
+#include   lt;stdio.h   gt;
+int Count(int x, int y)
 
-int main() 
+    if(x    lt; y) return 0;
+    else if(x==y) return x + Count(x-1,y);
+    else return y + Count(x-2,y-1);
+
+int main()
+
     printf("
     return 0;
 
 </pre>
 
-<ol style="list-style-type:upper-alpha">
-	<li>54</li>
-	<li>120</li>
-	<li>16</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>What will be the output of the following program?</p>
+<p><br>
+The output of the program is _________</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q8</span> - <p>Consider the following pair of mutually recursive functions. What does g(g(2)) evaluate to?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int f(int n)
+    if (n==0) return 0;
+    return f(n-1)+g(n-1);
+
+int g(int n)
+    if (n==0) return 1;
+    return g(n-1) + f(n);
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q9</span> - <p>What will be the output of the following program -</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
-int y = 20;
-int fun()
+int recur (int *a, int n)
+    if (n   lt;=0) return 0;
+    else return *a-recur(a+1,n-1);
 
-    int static x = 22;
-    return x -= 2;
-
-int GOClasses(int n)
-
-    if (n 
-    
-        y += n+fun();
-        return y;  
-    
-    else  return GOClasses (n+3);
-
-int main()
-
-    int p;
-    for (int i =0; i    lt;2; i++)
-    p = GOClasses(GOClasses(i));
+main ()
+    int a[10] = 10,9,8,7,6,5,4,3,2,1;
+    int n = recur(a,10);
     printf("
-    return 0;
 
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>Which of the following is NOT   nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>5</li>
+	<li>-35</li>
+	<li>-37</li>
+	<li>35</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q10</span> - <p>Which of the following(s) are true for following function?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int mystery(int a) 
+    if(a == 256) return 3;
+    return 1 + 2 * mystery(a*4); //line 3
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>mystery(255) is an example of infinite recursion</li>
+	<li>if we replace line 3by following line return 1 + mystery(a*4)+ mystery(a*4); then also output is same</li>
+	<li>Only possible outputs are 3, 7, 15, 31</li>
+	<li>mystery(i) gives output if and only if i is 1 or multiple of 4</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q11</span> - <p>As shown below, the file f.c defines a function f whose code refers to the variable x that is not a local variable or a parameter. The file g.c defines a function g whose code refers to the variable x that is not a local variable or a parameter.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+// file f.c
+// declaration for x
+
+void f(int a)
+    ...
+    x = ...
+</pre>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+// file g.c
+// declaration for x
+
+void g(char* p)
+    ...
+    x = ...
+</pre>
+
+<p><br>
+The following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>
+
+    [                               nbsp;    Column A                   nbsp;       amp;     Column B           amp; Column C; nbsp;declaration in f.c                    amp; nbsp;declaration in g.c  amp; SAME or DIFFERENT;                                    nbsp; int x;      amp; extern int x;               amp; SAME;                                           nbsp;        nbsp; int x = 0;      amp; static int x;                    amp;;           static int x;      amp; static int x;                    amp;;           static int x;  amp; extern int x = 0;                    amp;;                                           nbsp; ]
+</p>
+
+<p>The first row of column C has been filled for hints. What will be in the 2nd, 3rd, and 4th row of Column C, respectively?<br>
+   nbsp;</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>SAME, DIFFERENT, DIFFERENT</li>
+	<li>SAME, SAME, SAME</li>
+	<li>DIFFERENT, DIFFERENT, DIFFERENT</li>
+	<li>DIFFERENT, SAME, DIFFERENT</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Which of the following is NOT   nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 Program 1
@@ -315,7 +300,71 @@ main ()
 	<li>Program 2</li>
 	<li>Program 3</li>
 	<li>Program 4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q12</span> - <p>Consider two files given below.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>Consider below two files p1.c and p2.c<br>
+<strong><img src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt"></strong></p>
+
+<p>We compile both files independently and link them in case the compilation is successful.<br>
+<br>
+Which of the following(s) is/are TRUE?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>p1.c can not be compiled as there is no main function in the file.</li>
+	<li>Line 3 in p1.c will produce a compilation error because of the redefinition of variable a.</li>
+	<li>Line 6 in p2.c will produce a compilation error since the extern does not allocate   nbsp;memory to variables.</li>
+	<li>Line 7 in p2.c will produce a compilation error.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Which of the following is/are TRUE about storage classes in C programming</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>static local variables are NOT available to the linker.</li>
+	<li>static global variables are available to the linker.</li>
+	<li>extern local variables are available to the linker.</li>
+	<li>extern global variables are NOT available to the linker.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the program:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt;
+int main() 
+    int k = 0;
+    int j = 0;
+    while(k == j)
+    
+        int k;
+        for(k = 0; k    lt; 3; k++)
+        j = j+k;
+    
+    k++;
+    printf(“
+    printf(“
+    return 0;
+</pre>
+
+<p>Which of the following is true?</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>There is a compilation error.</li>
+	<li>There is no compilation error, and 31 is printed.</li>
+	<li>There is a run time error.</li>
+	<li>There is no compilation error, and 34 is printed.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Consider the below program.</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt; 
+void fun (int);
+static int i = 3;
+main()
+
+    fun(3);
+    printf("
+
+
+</pre>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Program will get compiled successfully but linker will produce error</li>
+	<li>Program will not get compiled i.e. it will produce compiler error</li>
+	<li>Program will produce run time error.</li>
+	<li>On running the Program, it will produce output 3.</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Consider two files given below.</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
  
@@ -352,67 +401,41 @@ main ()
 	<li>file1.c can be compiled and linked independently of file2.c.</li>
 </ol>
 
-<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q13</span> - <p>As shown below, the file f.c defines a function f whose code refers to the variable x that is not a local variable or a parameter. The file g.c defines a function g whose code refers to the variable x that is not a local variable or a parameter.</p>
+<p>   nbsp;</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>What will be the output of the program below-</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-// file f.c
-// declaration for x
+int i = 1;
+void my_extern1(void);
+void my_extern2(void);
 
-void f(int a)
-    ...
-    x = ...
-</pre>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-// file g.c
-// declaration for x
-
-void g(char* p)
-    ...
-    x = ...
-</pre>
-
-<p><br>
-The following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>
-
-    [                               nbsp;    Column A                   nbsp;       amp;     Column B           amp; Column C; nbsp;declaration in f.c                    amp; nbsp;declaration in g.c  amp; SAME or DIFFERENT;                                    nbsp; int x;      amp; extern int x;               amp; SAME;                                           nbsp;        nbsp; int x = 0;      amp; static int x;                    amp;;           static int x;      amp; static int x;                    amp;;           static int x;  amp; extern int x = 0;                    amp;;                                           nbsp; ]
-</p>
-
-<p>The first row of column C has been filled for hints. What will be in the 2nd, 3rd, and 4th row of Column C, respectively?<br>
-   nbsp;</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>SAME, DIFFERENT, DIFFERENT</li>
-	<li>SAME, SAME, SAME</li>
-	<li>DIFFERENT, DIFFERENT, DIFFERENT</li>
-	<li>DIFFERENT, SAME, DIFFERENT</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q14</span> - <p>Consider the program:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
 int main() 
-    int k = 0;
-    int j = 0;
-    while(k == j)
+    int count = 0;
     
-        int k;
-        for(k = 0; k    lt; 3; k++)
-        j = j+k;
+    while (i++   lt;5) 
+        static int i = 3;
+        i++;
+        count +=i;
+        my_extern1();
     
-    k++;
-    printf(“
-    printf(“
-    return 0;
+    printf("
+
+
+void my_extern1()
+    extern int i;
+    if(i++    gt; 0) my_extern2();
+
+
+void my_extern2()
+    extern int i;
+    if (i++    lt; 3) my_extern1();
 </pre>
 
-<p>Which of the following is true?</p>
-
 <ol style="list-style-type:upper-alpha">
-	<li>There is a compilation error.</li>
-	<li>There is no compilation error, and 31 is printed.</li>
-	<li>There is a run time error.</li>
-	<li>There is no compilation error, and 34 is printed.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q15</span> - <p>Consider the following two .c files, which both include the same .h file:</p>
+	<li>Infinite recursion</li>
+	<li>9</li>
+	<li>4</li>
+	<li>5</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>Consider the following two .c files, which both include the same .h file:</p>
 
 <p><img src="https://gateoverflow.in/?qa=blob&qa_blobid=10746269507857044941"><br>
 When compiled, linked, and executed, the following output results:</p>
@@ -470,53 +493,127 @@ When compiled, linked, and executed, the following output results:</p>
 	Line(8) - static<br>
 	Line(9) - empty<br>
 	Line(10) - static</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q16</span> - <p>Which of the following is/are TRUE about storage classes in C programming</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>static local variables are NOT available to the linker.</li>
-	<li>static global variables are available to the linker.</li>
-	<li>extern local variables are available to the linker.</li>
-	<li>extern global variables are NOT available to the linker.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q17</span> - <p>Consider the below program.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>What is/are possible choice(s) for “Line 1” to produce output 2123?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt; 
-void fun (int);
-static int i = 3;
-main()
+void fun(int n)
 
-    fun(3);
     printf("
+    static int i = 0;
+    //Line 1
+    
+        i++;
+        fun(i);
+    
 
+int main()
+
+    fun(2);
 
 </pre>
 
 <ol style="list-style-type:upper-alpha">
-	<li>Program will get compiled successfully but linker will produce error</li>
-	<li>Program will not get compiled i.e. it will produce compiler error</li>
-	<li>Program will produce run time error.</li>
-	<li>On running the Program, it will produce output 3.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q18</span> - <p>What will be the output of the following program -</p>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if(i   lt;=2)
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+while(i   lt;=2)
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if(i   gt;2) return;
+</pre>
+	</li>
+	<li>
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+if(i   gt;2)
+</pre>
+	</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>Consider the following variable and function definitions:</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+int g=10;
+int q3() 
+    static int g=5;
+    return ++g;
+
+int q4() 
+    extern int g;
+    return ++g;
+
+int q5() 
+    int g=1;
+    return ++g;
+
+</pre>
+
+<p><br>
+What is the value of the expression q3() + q3() + q4() + q4() + q5() + q5()?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>What will be the output of the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
-int recur (int *a, int n)
-    if (n   lt;=0) return 0;
-    else return *a-recur(a+1,n-1);
+int y = 20;
+int fun()
 
-main ()
-    int a[10] = 10,9,8,7,6,5,4,3,2,1;
-    int n = recur(a,10);
+    int static x = 22;
+    return x -= 2;
+
+int GOClasses(int n)
+
+    if (n 
+    
+        y += n+fun();
+        return y;  
+    
+    else  return GOClasses (n+3);
+
+int main()
+
+    int p;
+    for (int i =0; i    lt;2; i++)
+    p = GOClasses(GOClasses(i));
     printf("
+    return 0;
+
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>The default storage class for global variables in the C language is –</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Static</li>
+	<li>Auto</li>
+	<li>Extern</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>What will be the output of the following program?</p>
+
+<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+#include   lt;stdio.h   gt; 
+int sum() 
+  static int n =5;
+  if (n == 2) return 2;
+  return sum(n-1)*n ;
+
+int main() 
+    printf("
+    return 0;
 
 </pre>
 
 <ol style="list-style-type:upper-alpha">
-	<li>5</li>
-	<li>-35</li>
-	<li>-37</li>
-	<li>35</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q19</span> - <p>What will be the output if we compile and execute the following C   nbsp;code?</p>
+	<li>54</li>
+	<li>120</li>
+	<li>16</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>The default storage class for functions in C language is –</p>
+
+<ol style="list-style-type:upper-alpha">
+	<li>Static</li>
+	<li>Auto</li>
+	<li>Extern</li>
+	<li>None of these</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>What will be the output if we compile and execute the following C   nbsp;code?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt;
@@ -537,122 +634,52 @@ else
 	<li>Greater than</li>
 	<li>Less than</li>
 	<li>Compiler error</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q20</span> - <p>Consider the following C-program.</p>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>Which of the following C -functions will correctly return true if its argument is an odd integer?</p>
 
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt;
-int Count(int x, int y)
-
-    if(x    lt; y) return 0;
-    else if(x==y) return x + Count(x-1,y);
-    else return y + Count(x-2,y-1);
-
-int main()
-
-    printf("
-    return 0;
+<ol style="list-style-type:upper-roman">
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+bool IsOdd (int x) 
+    return (x 
 
 </pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+bool IsOdd (int x) 
+    return (x / 2 == 1);
 
-<p><br>
-The output of the program is _________</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q21</span> - <p>The default storage class for global variables in the C language is –</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>Static</li>
-	<li>Auto</li>
-	<li>Extern</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q22</span> - <p>Consider the following pair of mutually recursive functions. What does g(g(2)) evaluate to?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int f(int n)
-    if (n==0) return 0;
-    return f(n-1)+g(n-1);
-
-int g(int n)
-    if (n==0) return 1;
-    return g(n-1) + f(n);
-
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q23</span> - <p>What will be the output of the following program?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-#include   lt;stdio.h   gt; 
-int rec(int x, int y) 
-static int count = 0;
-if (x == 0)
-  return count;
-count++;
-if (x    gt; y)
-  rec(x - y, y);
+</pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+bool IsOdd (int x) 
+if (x 
+    return true;
 else
-  rec(x, y - x);
-return count;
-
-main() 
-    int i = 10, j = 2, n;
-    n = rec(i, j);
-    printf("
-
+    return false;
 
 </pre>
+	</li>
+	<li>   nbsp;
+	<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
+bool IsOdd (int x)  
+    if (x / 2 == 1) 
+        return true;
+    else 
+        return false;
+</pre>
+	</li>
+</ol>
+
+<p>   nbsp;</p>
 
 <ol style="list-style-type:upper-alpha">
-	<li>4</li>
-	<li>5</li>
-	<li>6</li>
-	<li>Infinite loop</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q24</span> - <p>Consider the following variable and function definitions:</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int g=10;
-int q3() 
-    static int g=5;
-    return ++g;
-
-int q4() 
-    extern int g;
-    return ++g;
-
-int q5() 
-    int g=1;
-    return ++g;
-
-</pre>
-
-<p><br>
-What is the value of the expression q3() + q3() + q4() + q4() + q5() + q5()?</p><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q25</span> - <p>What will be the output of running file main.c?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-write.c
-***********************
-extern int count;
-
-void write_extern()
-
-    count +=2;
-</pre>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-main.c
-***********************
-#include "write.c"
-#include   lt;stdio.h   gt;
-int count = 5;
-
-main()
-
-    write_extern();
-    write_extern();
-    printf("
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>0</li>
-	<li>5</li>
-	<li>9</li>
-	<li>None of these</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q26</span> - <p>What will be the output of the following program?</p>
+	<li>I</li>
+	<li>II</li>
+	<li>III</li>
+	<li>IV</li>
+</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>What will be the output of the following program?</p>
 
 <pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
 #include   lt;stdio.h   gt; 
@@ -667,36 +694,8 @@ main()
     int a[10] = 4, 10, 5, 6, 9, 3, 1, 20, 7;
     printf("
 
-</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q27</span> - <p>Consider the below program written into 2 files.</p>
-
-<p><strong><img src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9"></strong></p>
-
-<p>Note that compilation of   nbsp;f1.c and f2.c happens independently of each other.</p>
-
-<p>Which of the following is TRUE?</p>
-
-<ol style="list-style-type:upper-alpha">
-	<li>f1.c and f2.c can be compiled independently.</li>
-	<li>f1.c will produce a compilation error since variable x does not get any memory, and we are using it in printf.</li>
-	<li>f1.c and f2.c can be compiled and linked. The output of the program will be 00.</li>
-	<li>f2.c will produce a compilation error since function fun() is not defined in   nbsp;f2.c.</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div><div><span>Q28</span> - <p>Which of the following(s) are true for following function?</p>
-
-<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">
-int mystery(int a) 
-    if(a == 256) return 3;
-    return 1 + 2 * mystery(a*4); //line 3
-
-</pre>
-
-<ol style="list-style-type:upper-alpha">
-	<li>mystery(255) is an example of infinite recursion</li>
-	<li>if we replace line 3by following line return 1 + mystery(a*4)+ mystery(a*4); then also output is same</li>
-	<li>Only possible outputs are 3, 7, 15, 31</li>
-	<li>mystery(i) gives output if and only if i is 1 or multiple of 4</li>
-</ol><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
+</pre><hr style="height:2px;border-width:0;color:gray;background-color:gray"></div>
       <script>
-      let q = [{'contents': '', 'post_id': '374446', 'text': '<p>Which of the following C -functions will correctly return true if its argument is an odd integer?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x % 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x / 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\nif (x % 2 == 1)\n    return true;\nelse\n    return false;\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) { \n    if (x / 2 == 1) \n        return true;\n    else \n        return false;\n}</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>II</li>\n\t<li>III</li>\n\t<li>IV</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374452', 'text': '<p>What is/are possible choice(s) for $\\text{“Line 1”}$ to produce output $2123?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(int n)\n{\n    printf("%d",n);\n    static int i = 0;\n    //Line 1\n    {\n        i++;\n        fun(i);\n    }\n}\nint main()\n{\n    fun(2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2) return;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374439', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 1;\nvoid my_extern1(void);\nvoid my_extern2(void);\n\nint main() {\n    int count = 0;\n    \n    while (i++&lt;5) {\n        static int i = 3;\n        i++;\n        count +=i;\n        my_extern1();\n    }\n    printf("%d", count);\n}\n\nvoid my_extern1(){\n    extern int i;\n    if(i++ &gt; 0) my_extern2();\n}\n\nvoid my_extern2(){\n    extern int i;\n    if (i++ &lt; 3) my_extern1();\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Infinite recursion</li>\n\t<li>$9$</li>\n\t<li>$4$</li>\n\t<li>$5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374434', 'text': '<p>In C language, the Order of evaluation of any part of any expression is unspecified.</p>\n\n<p>That means if we have two functions $f()$ and $g(),$ in a single expression, then it is unspecified which one will be called first.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n int x = f(2) + g(3); \n// unspecified whether f() or g() is called first\n</pre>\n\n<p>Consider below the C program.</p>\n\n<p>How many outcomes are possible if we execute the given program on different compilers?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint a() {\n    printf("a");\n    return 1;\n}\nint b() {\n    printf("b");\n    return 1;\n}\nint c() {\n    printf("c");\n    return 1;\n}\nmain() {\n    a()+b()+c();\n}\n\n</pre>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374463', 'text': '<p>The default storage class for functions in C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374445', 'text': '<p>What will be the output of the following program (which is broken down into two files: f$1$.c and f$2$.c).</p>\n\n<p><strong><img alt="" height="553" src="https://lh6.googleusercontent.com/p2oOVtxzMAZc-DD6wt9Q46DBCB8FLbCkTXeAwoAYRnHLyhYsZYePLQPMwG_34wglBJsrFdRYRCYOjqbtd_SSFE16scpeMd4YLBYfyWCvA8SZ0F2iCEyZHZMu_OcGRZv3iQ-EAUOi" width="624"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tg: $1\\; 0$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 0$<br>\n\tg: $1\\; 3$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 3$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374450', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint sum() {\n  static int n =5;\n  if (n == 2) return 2;\n  return sum(n-1)*n ;\n}\nint main() {\n    printf("%d\\n", sum() );\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$54$</li>\n\t<li>$120$</li>\n\t<li>$16$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374436', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint y = 20;\nint fun()\n{\n    int static x = 22;\n    return x -= 2;\n}\nint GOClasses(int n)\n{\n    if (n % 5)\n    {\n        y += n+fun();\n        return y;  \n    }\n    else  return GOClasses (n+3);\n}\nint main()\n{\n    int p;\n    for (int i =0; i &lt;2; i++)\n    p = GOClasses(GOClasses(i));\n    printf("%d", p);\n    return 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '256', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374466', 'text': '<p>Which of the following is NOT&nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nauto int a; \nmain ()\n{\n  auto int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    auto int a = b; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstatic int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nextern int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374464', 'text': '<p>Consider two files given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file1.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  extern int i;\n  printf("file1");\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file2.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  int i =1;\n  printf("file2");\n}\n</pre>\n\n<p>We compile both files independently. And link them in case compilation is successful.</p>\n\n<p>Which of the following is/are TRUE&nbsp;?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>file$1$.c and file$2$.c can be compiled independently and linked together</li>\n\t<li>file$1$.c has a compilation error since extern is a local variable</li>\n\t<li>file$1$.c and file$2$.c can be compiled independently but can not be linked together</li>\n\t<li>file$1$.c can be compiled and linked independently of file$2$.c.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374454', 'text': '<p>As shown below, the file $f.c$ defines a function f whose code refers to the variable $x$ that is not a local variable or a parameter. The file $g.c$ defines a function $g$ whose code refers to the variable $x$ that is not a local variable or a parameter.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file f.c\n// declaration for x\n\nvoid f(int a){\n    ...\n    x = ...\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file g.c\n// declaration for x\n\nvoid g(char* p){\n    ...\n    x = ...\n}</pre>\n\n<p><br>\nThe following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>\n$$\\begin{array} {|l|l|c|} \\hline&nbsp;\\qquad \\textbf{Column A}&nbsp;&amp; \\qquad \\textbf{Column B} &amp; \\textbf{Column C} \\\\&nbsp;\\textbf{declaration in f.c} &amp;&nbsp;\\textbf{declaration in g.c} &amp; \\textbf{SAME or DIFFERENT} \\\\\\hline&nbsp; \\text{int x;} &amp; \\text{extern int x;} &amp; {\\color{Red} {\\textbf{SAME}}} \\\\\\hline&nbsp;&nbsp; \\text{int x = 0;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{extern int x = 0;} &amp; \\\\\\hline &nbsp;\\end{array}$$</p>\n\n<p>The first row of column C has been filled for hints. What will be in the $2$nd, $3$rd, and $4$th row of Column C, respectively?<br>\n&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>SAME, DIFFERENT, DIFFERENT</li>\n\t<li>SAME, SAME, SAME</li>\n\t<li>DIFFERENT, DIFFERENT, DIFFERENT</li>\n\t<li>DIFFERENT, SAME, DIFFERENT</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374448', 'text': '<p>Consider the program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    int k = 0;\n    int j = 0;\n    while(k == j)\n    {\n        int k;\n        for(k = 0; k &lt; 3; k++)\n        j = j+k;\n    }\n    k++;\n    printf(“%d”, j);\n    printf(“%d”, k);\n    return 0;\n}</pre>\n\n<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>There is a compilation error.</li>\n\t<li>There is no compilation error, and $31$ is printed.</li>\n\t<li>There is a run time error.</li>\n\t<li>There is no compilation error, and $34$ is printed.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374442', 'text': '<p>Consider the following two .c files, which both include the same .h file:</p>\n\n<p><img alt="" height="522" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="706"><br>\nWhen compiled, linked, and executed, the following output results:</p>\n\n<p>$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$</p>\n\n<p>Assuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.</p>\n\n<p>Leave them blank if neither modifier would be appropriate.</p>\n\n<p>For example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374465', 'text': '<p>Which of the following is/are TRUE about storage classes in C programming</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>static local variables are NOT available to the linker.</li>\n\t<li>static global variables are available to the linker.</li>\n\t<li>extern local variables are available to the linker.</li>\n\t<li>extern global variables are NOT available to the linker.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374453', 'text': '<p>Consider the below program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nvoid fun (int);\nstatic int i = 3;\nmain()\n{\n    fun(3);\n    printf("%d", i);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will get compiled successfully but linker will produce error</li>\n\t<li>Program will not get compiled i.e. it will produce compiler error</li>\n\t<li>Program will produce run time error.</li>\n\t<li>On running the Program, it will produce output $3.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374440', 'text': '<p>What will be the output of the following program -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint recur (int *a, int n){\n    if (n&lt;=0) return 0;\n    else return *a-recur(a+1,n-1);\n}\nmain (){\n    int a[10] = {10,9,8,7,6,5,4,3,2,1};\n    int n = recur(a,10);\n    printf("%d", n);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>$-35$</li>\n\t<li>$-37$</li>\n\t<li>$35$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374432', 'text': '<p>Consider the following C-program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint Count(int x, int y)\n{\n    if(x &lt; y) return 0;\n    else if(x==y) return x + Count(x-1,y);\n    else return y + Count(x-2,y-1);\n}\nint main()\n{\n    printf("%d" , Count(9,6));\n    return 0;\n}\n</pre>\n\n<p><br>\nThe output of the program is _________</p>', 'type': 'Numerical', 'answer': '18', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374462', 'text': '<p>The default storage class for global variables in the C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374438', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374441', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint rec(int x, int y) {\nstatic int count = 0;\nif (x == 0)\n  return count;\ncount++;\nif (x &gt; y)\n  rec(x - y, y);\nelse\n  rec(x, y - x);\nreturn count;\n}\nmain() {\n    int i = 10, j = 2, n;\n    n = rec(i, j);\n    printf("%d", n);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4$</li>\n\t<li>$5$</li>\n\t<li>$6$</li>\n\t<li>Infinite loop</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374443', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}\n</pre>\n\n<p><br>\nWhat is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>', 'type': 'Numerical', 'answer': '40', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,functions,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374456', 'text': '<p>What will be the output of running file main.c?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwrite.c\n***********************\nextern int count;\n\nvoid write_extern()\n{\n    count +=2;\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain.c\n***********************\n#include "write.c"\n#include&lt;stdio.h&gt;\nint count = 5;\n\nmain()\n{\n    write_extern();\n    write_extern();\n    printf("%d", count);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$5$</li>\n\t<li>$9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374437', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint find(int *a, int n)\n{\n    if (n == 1)\n        return a[0];\n    n--;\n    return find(a + (a[0] &lt; a[n]), n);\n}\nmain() {\n    int a[10] = {4, 10, 5, 6, 9, 3, 1, 20, 7};\n    printf("%d\\n", find(a , 10) );\n}\n</pre>', 'type': 'Numerical', 'answer': '20', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374455', 'text': '<p>Consider the below program written into $2$ files.</p>\n\n<p><strong><img alt="" height="349" src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9" width="624"></strong></p>\n\n<p>Note that compilation of&nbsp;f$1$.c and f$2$.c happens independently of each other.</p>\n\n<p>Which of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>f$1$.c and f$2$.c can be compiled independently.</li>\n\t<li>f$1$.c will produce a compilation error since variable $x$ does not get any memory, and we are using it in printf.</li>\n\t<li>f$1$.c and f$2$.c can be compiled and linked. The output of the program will be $00.$</li>\n\t<li>f$2$.c will produce a compilation error since function fun() is not defined in&nbsp;f$2$.c.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374444', 'text': '<p>Which of the following(s) are true for following function?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\n    if(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$by following line return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,multiple-selects,2-marks', 'category': 'Programming in C'}]
-      let data={'name': 'GO Classes Test Series 2023 | Programming | Test 2', 'duration': '75', 'total_qs': '28', 'total_qs_one': 16, 'total_qs_two': 12, 'apti_num_qs': 0, 'technical_num_qs': 28, 'apti_marks': 0, 'technical_marks': 40, 'total_marks': 40, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 28, 'marks': 40, 'question': [{'contents': '', 'post_id': '374446', 'text': '<p>Which of the following C -functions will correctly return true if its argument is an odd integer?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x % 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x / 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\nif (x % 2 == 1)\n    return true;\nelse\n    return false;\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) { \n    if (x / 2 == 1) \n        return true;\n    else \n        return false;\n}</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>II</li>\n\t<li>III</li>\n\t<li>IV</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374452', 'text': '<p>What is/are possible choice(s) for $\\text{“Line 1”}$ to produce output $2123?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(int n)\n{\n    printf("%d",n);\n    static int i = 0;\n    //Line 1\n    {\n        i++;\n        fun(i);\n    }\n}\nint main()\n{\n    fun(2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2) return;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374439', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 1;\nvoid my_extern1(void);\nvoid my_extern2(void);\n\nint main() {\n    int count = 0;\n    \n    while (i++&lt;5) {\n        static int i = 3;\n        i++;\n        count +=i;\n        my_extern1();\n    }\n    printf("%d", count);\n}\n\nvoid my_extern1(){\n    extern int i;\n    if(i++ &gt; 0) my_extern2();\n}\n\nvoid my_extern2(){\n    extern int i;\n    if (i++ &lt; 3) my_extern1();\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Infinite recursion</li>\n\t<li>$9$</li>\n\t<li>$4$</li>\n\t<li>$5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374434', 'text': '<p>In C language, the Order of evaluation of any part of any expression is unspecified.</p>\n\n<p>That means if we have two functions $f()$ and $g(),$ in a single expression, then it is unspecified which one will be called first.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n int x = f(2) + g(3); \n// unspecified whether f() or g() is called first\n</pre>\n\n<p>Consider below the C program.</p>\n\n<p>How many outcomes are possible if we execute the given program on different compilers?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint a() {\n    printf("a");\n    return 1;\n}\nint b() {\n    printf("b");\n    return 1;\n}\nint c() {\n    printf("c");\n    return 1;\n}\nmain() {\n    a()+b()+c();\n}\n\n</pre>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374463', 'text': '<p>The default storage class for functions in C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374445', 'text': '<p>What will be the output of the following program (which is broken down into two files: f$1$.c and f$2$.c).</p>\n\n<p><strong><img alt="" height="553" src="https://lh6.googleusercontent.com/p2oOVtxzMAZc-DD6wt9Q46DBCB8FLbCkTXeAwoAYRnHLyhYsZYePLQPMwG_34wglBJsrFdRYRCYOjqbtd_SSFE16scpeMd4YLBYfyWCvA8SZ0F2iCEyZHZMu_OcGRZv3iQ-EAUOi" width="624"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tg: $1\\; 0$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 0$<br>\n\tg: $1\\; 3$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 3$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374450', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint sum() {\n  static int n =5;\n  if (n == 2) return 2;\n  return sum(n-1)*n ;\n}\nint main() {\n    printf("%d\\n", sum() );\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$54$</li>\n\t<li>$120$</li>\n\t<li>$16$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374436', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint y = 20;\nint fun()\n{\n    int static x = 22;\n    return x -= 2;\n}\nint GOClasses(int n)\n{\n    if (n % 5)\n    {\n        y += n+fun();\n        return y;  \n    }\n    else  return GOClasses (n+3);\n}\nint main()\n{\n    int p;\n    for (int i =0; i &lt;2; i++)\n    p = GOClasses(GOClasses(i));\n    printf("%d", p);\n    return 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '256', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374466', 'text': '<p>Which of the following is NOT&nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nauto int a; \nmain ()\n{\n  auto int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    auto int a = b; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstatic int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nextern int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374464', 'text': '<p>Consider two files given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file1.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  extern int i;\n  printf("file1");\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file2.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  int i =1;\n  printf("file2");\n}\n</pre>\n\n<p>We compile both files independently. And link them in case compilation is successful.</p>\n\n<p>Which of the following is/are TRUE&nbsp;?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>file$1$.c and file$2$.c can be compiled independently and linked together</li>\n\t<li>file$1$.c has a compilation error since extern is a local variable</li>\n\t<li>file$1$.c and file$2$.c can be compiled independently but can not be linked together</li>\n\t<li>file$1$.c can be compiled and linked independently of file$2$.c.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374454', 'text': '<p>As shown below, the file $f.c$ defines a function f whose code refers to the variable $x$ that is not a local variable or a parameter. The file $g.c$ defines a function $g$ whose code refers to the variable $x$ that is not a local variable or a parameter.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file f.c\n// declaration for x\n\nvoid f(int a){\n    ...\n    x = ...\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file g.c\n// declaration for x\n\nvoid g(char* p){\n    ...\n    x = ...\n}</pre>\n\n<p><br>\nThe following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>\n$$\\begin{array} {|l|l|c|} \\hline&nbsp;\\qquad \\textbf{Column A}&nbsp;&amp; \\qquad \\textbf{Column B} &amp; \\textbf{Column C} \\\\&nbsp;\\textbf{declaration in f.c} &amp;&nbsp;\\textbf{declaration in g.c} &amp; \\textbf{SAME or DIFFERENT} \\\\\\hline&nbsp; \\text{int x;} &amp; \\text{extern int x;} &amp; {\\color{Red} {\\textbf{SAME}}} \\\\\\hline&nbsp;&nbsp; \\text{int x = 0;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{extern int x = 0;} &amp; \\\\\\hline &nbsp;\\end{array}$$</p>\n\n<p>The first row of column C has been filled for hints. What will be in the $2$nd, $3$rd, and $4$th row of Column C, respectively?<br>\n&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>SAME, DIFFERENT, DIFFERENT</li>\n\t<li>SAME, SAME, SAME</li>\n\t<li>DIFFERENT, DIFFERENT, DIFFERENT</li>\n\t<li>DIFFERENT, SAME, DIFFERENT</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374448', 'text': '<p>Consider the program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    int k = 0;\n    int j = 0;\n    while(k == j)\n    {\n        int k;\n        for(k = 0; k &lt; 3; k++)\n        j = j+k;\n    }\n    k++;\n    printf(“%d”, j);\n    printf(“%d”, k);\n    return 0;\n}</pre>\n\n<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>There is a compilation error.</li>\n\t<li>There is no compilation error, and $31$ is printed.</li>\n\t<li>There is a run time error.</li>\n\t<li>There is no compilation error, and $34$ is printed.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374442', 'text': '<p>Consider the following two .c files, which both include the same .h file:</p>\n\n<p><img alt="" height="522" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="706"><br>\nWhen compiled, linked, and executed, the following output results:</p>\n\n<p>$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$</p>\n\n<p>Assuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.</p>\n\n<p>Leave them blank if neither modifier would be appropriate.</p>\n\n<p>For example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374465', 'text': '<p>Which of the following is/are TRUE about storage classes in C programming</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>static local variables are NOT available to the linker.</li>\n\t<li>static global variables are available to the linker.</li>\n\t<li>extern local variables are available to the linker.</li>\n\t<li>extern global variables are NOT available to the linker.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374453', 'text': '<p>Consider the below program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nvoid fun (int);\nstatic int i = 3;\nmain()\n{\n    fun(3);\n    printf("%d", i);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will get compiled successfully but linker will produce error</li>\n\t<li>Program will not get compiled i.e. it will produce compiler error</li>\n\t<li>Program will produce run time error.</li>\n\t<li>On running the Program, it will produce output $3.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374440', 'text': '<p>What will be the output of the following program -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint recur (int *a, int n){\n    if (n&lt;=0) return 0;\n    else return *a-recur(a+1,n-1);\n}\nmain (){\n    int a[10] = {10,9,8,7,6,5,4,3,2,1};\n    int n = recur(a,10);\n    printf("%d", n);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>$-35$</li>\n\t<li>$-37$</li>\n\t<li>$35$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374432', 'text': '<p>Consider the following C-program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint Count(int x, int y)\n{\n    if(x &lt; y) return 0;\n    else if(x==y) return x + Count(x-1,y);\n    else return y + Count(x-2,y-1);\n}\nint main()\n{\n    printf("%d" , Count(9,6));\n    return 0;\n}\n</pre>\n\n<p><br>\nThe output of the program is _________</p>', 'type': 'Numerical', 'answer': '18', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374462', 'text': '<p>The default storage class for global variables in the C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374438', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374441', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint rec(int x, int y) {\nstatic int count = 0;\nif (x == 0)\n  return count;\ncount++;\nif (x &gt; y)\n  rec(x - y, y);\nelse\n  rec(x, y - x);\nreturn count;\n}\nmain() {\n    int i = 10, j = 2, n;\n    n = rec(i, j);\n    printf("%d", n);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4$</li>\n\t<li>$5$</li>\n\t<li>$6$</li>\n\t<li>Infinite loop</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374443', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}\n</pre>\n\n<p><br>\nWhat is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>', 'type': 'Numerical', 'answer': '40', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,functions,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374456', 'text': '<p>What will be the output of running file main.c?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwrite.c\n***********************\nextern int count;\n\nvoid write_extern()\n{\n    count +=2;\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain.c\n***********************\n#include "write.c"\n#include&lt;stdio.h&gt;\nint count = 5;\n\nmain()\n{\n    write_extern();\n    write_extern();\n    printf("%d", count);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$5$</li>\n\t<li>$9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374437', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint find(int *a, int n)\n{\n    if (n == 1)\n        return a[0];\n    n--;\n    return find(a + (a[0] &lt; a[n]), n);\n}\nmain() {\n    int a[10] = {4, 10, 5, 6, 9, 3, 1, 20, 7};\n    printf("%d\\n", find(a , 10) );\n}\n</pre>', 'type': 'Numerical', 'answer': '20', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374455', 'text': '<p>Consider the below program written into $2$ files.</p>\n\n<p><strong><img alt="" height="349" src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9" width="624"></strong></p>\n\n<p>Note that compilation of&nbsp;f$1$.c and f$2$.c happens independently of each other.</p>\n\n<p>Which of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>f$1$.c and f$2$.c can be compiled independently.</li>\n\t<li>f$1$.c will produce a compilation error since variable $x$ does not get any memory, and we are using it in printf.</li>\n\t<li>f$1$.c and f$2$.c can be compiled and linked. The output of the program will be $00.$</li>\n\t<li>f$2$.c will produce a compilation error since function fun() is not defined in&nbsp;f$2$.c.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374444', 'text': '<p>Which of the following(s) are true for following function?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\n    if(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$by following line return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,multiple-selects,2-marks', 'category': 'Programming in C'}]}]}
+      let data={'name': 'GO Classes Test Series 2023 | Programming | Test 2', 'duration': '75', 'total_qs': '28', 'total_qs_one': 16, 'total_qs_two': 12, 'apti_num_qs': 0, 'technical_num_qs': 28, 'apti_marks': 0, 'technical_marks': 40, 'total_marks': 40, 'num_options': '4', 'section': [{'name': 'Technical', 'num_qs': 28, 'marks': 40, 'question': [{'contents': '', 'post_id': '374456', 'text': '<p>What will be the output of running file main.c?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwrite.c\n***********************\nextern int count;\n\nvoid write_extern()\n{\n    count +=2;\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nmain.c\n***********************\n#include "write.c"\n#include&lt;stdio.h&gt;\nint count = 5;\n\nmain()\n{\n    write_extern();\n    write_extern();\n    printf("%d", count);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$5$</li>\n\t<li>$9$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374441', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint rec(int x, int y) {\nstatic int count = 0;\nif (x == 0)\n  return count;\ncount++;\nif (x &gt; y)\n  rec(x - y, y);\nelse\n  rec(x, y - x);\nreturn count;\n}\nmain() {\n    int i = 10, j = 2, n;\n    n = rec(i, j);\n    printf("%d", n);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$4$</li>\n\t<li>$5$</li>\n\t<li>$6$</li>\n\t<li>Infinite loop</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374434', 'text': '<p>In C language, the Order of evaluation of any part of any expression is unspecified.</p>\n\n<p>That means if we have two functions $f()$ and $g(),$ in a single expression, then it is unspecified which one will be called first.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n int x = f(2) + g(3); \n// unspecified whether f() or g() is called first\n</pre>\n\n<p>Consider below the C program.</p>\n\n<p>How many outcomes are possible if we execute the given program on different compilers?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint a() {\n    printf("a");\n    return 1;\n}\nint b() {\n    printf("b");\n    return 1;\n}\nint c() {\n    printf("c");\n    return 1;\n}\nmain() {\n    a()+b()+c();\n}\n\n</pre>', 'type': 'Numerical', 'answer': '6', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374458', 'text': '<p>What will be the output if you compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint extern x;\nvoid main()\n{\n    printf("%d",x);\n    x=2;\n}\nint x=23;\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$0$</li>\n\t<li>$2$</li>\n\t<li>$23$</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374455', 'text': '<p>Consider the below program written into $2$ files.</p>\n\n<p><strong><img alt="" height="349" src="https://lh4.googleusercontent.com/PbsCcTsdb9ttXVg_78SXyYAYL6B-x598DVi5gDmxJg7LxNqaUcR1sFi3LdhN5A1CCZPnNVfl18i9tdHR9mU36yPE2ooYfrtOgcbcovHZYxx4HBXBGCzE4hm8BdF8GSa19QHsCCG9" width="624"></strong></p>\n\n<p>Note that compilation of&nbsp;f$1$.c and f$2$.c happens independently of each other.</p>\n\n<p>Which of the following is TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>f$1$.c and f$2$.c can be compiled independently.</li>\n\t<li>f$1$.c will produce a compilation error since variable $x$ does not get any memory, and we are using it in printf.</li>\n\t<li>f$1$.c and f$2$.c can be compiled and linked. The output of the program will be $00.$</li>\n\t<li>f$2$.c will produce a compilation error since function fun() is not defined in&nbsp;f$2$.c.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq15,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374445', 'text': '<p>What will be the output of the following program (which is broken down into two files: f$1$.c and f$2$.c).</p>\n\n<p><strong><img alt="" height="553" src="https://lh6.googleusercontent.com/p2oOVtxzMAZc-DD6wt9Q46DBCB8FLbCkTXeAwoAYRnHLyhYsZYePLQPMwG_34wglBJsrFdRYRCYOjqbtd_SSFE16scpeMd4YLBYfyWCvA8SZ0F2iCEyZHZMu_OcGRZv3iQ-EAUOi" width="624"></strong></p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tg: $1\\; 0$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 0$</li>\n\t<li><br>\n\tg: $2\\; 0$<br>\n\tg: $1\\; 3$<br>\n\tp: $2\\; 3$<br>\n\ts: $0\\; 3$</li>\n\t<li><br>\n\tg: $2\\; 3$<br>\n\tg: $1\\; 1$<br>\n\tp: $2\\; 3$<br>\n\ts: $2\\; 3$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374432', 'text': '<p>Consider the following C-program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint Count(int x, int y)\n{\n    if(x &lt; y) return 0;\n    else if(x==y) return x + Count(x-1,y);\n    else return y + Count(x-2,y-1);\n}\nint main()\n{\n    printf("%d" , Count(9,6));\n    return 0;\n}\n</pre>\n\n<p><br>\nThe output of the program is _________</p>', 'type': 'Numerical', 'answer': '18', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374438', 'text': '<p>Consider the following pair of mutually recursive functions. What does $g(g(2))$ evaluate to?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint f(int n){\n    if (n==0) return 0;\n    return f(n-1)+g(n-1);\n}\nint g(int n){\n    if (n==0) return 1;\n    return g(n-1) + f(n);\n}\n</pre>', 'type': 'Numerical', 'answer': '89', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374440', 'text': '<p>What will be the output of the following program -</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint recur (int *a, int n){\n    if (n&lt;=0) return 0;\n    else return *a-recur(a+1,n-1);\n}\nmain (){\n    int a[10] = {10,9,8,7,6,5,4,3,2,1};\n    int n = recur(a,10);\n    printf("%d", n);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$5$</li>\n\t<li>$-35$</li>\n\t<li>$-37$</li>\n\t<li>$35$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374444', 'text': '<p>Which of the following(s) are true for following function?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint mystery(int a) {\n    if(a == 256) return 3;\n    return 1 + 2 * mystery(a*4); //line 3\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$\\text{mystery(255)}$ is an example of infinite recursion</li>\n\t<li>if we replace line $3$by following line return $1 +\\text{ mystery(a*4)+ mystery(a*4)};$ then also output is same</li>\n\t<li>Only possible outputs are $3, 7, 15, 31$</li>\n\t<li>$\\text{mystery(i)}$ gives output if and only if $i$ is $1$ or multiple of $4$</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,multiple-selects,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374454', 'text': '<p>As shown below, the file $f.c$ defines a function f whose code refers to the variable $x$ that is not a local variable or a parameter. The file $g.c$ defines a function $g$ whose code refers to the variable $x$ that is not a local variable or a parameter.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file f.c\n// declaration for x\n\nvoid f(int a){\n    ...\n    x = ...\n}</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n// file g.c\n// declaration for x\n\nvoid g(char* p){\n    ...\n    x = ...\n}</pre>\n\n<p><br>\nThe following table below shows how the variable x is defined in each file. For each row in the table, indicate in Column (c) whether the two functions at run-time refer to the SAME identifier (memory location) or to DIFFERENT identifiers (memory locations)<br>\n$$\\begin{array} {|l|l|c|} \\hline&nbsp;\\qquad \\textbf{Column A}&nbsp;&amp; \\qquad \\textbf{Column B} &amp; \\textbf{Column C} \\\\&nbsp;\\textbf{declaration in f.c} &amp;&nbsp;\\textbf{declaration in g.c} &amp; \\textbf{SAME or DIFFERENT} \\\\\\hline&nbsp; \\text{int x;} &amp; \\text{extern int x;} &amp; {\\color{Red} {\\textbf{SAME}}} \\\\\\hline&nbsp;&nbsp; \\text{int x = 0;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{static int x;} &amp; \\\\\\hline \\text{static int x;} &amp; \\text{extern int x = 0;} &amp; \\\\\\hline &nbsp;\\end{array}$$</p>\n\n<p>The first row of column C has been filled for hints. What will be in the $2$nd, $3$rd, and $4$th row of Column C, respectively?<br>\n&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>SAME, DIFFERENT, DIFFERENT</li>\n\t<li>SAME, SAME, SAME</li>\n\t<li>DIFFERENT, DIFFERENT, DIFFERENT</li>\n\t<li>DIFFERENT, SAME, DIFFERENT</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374466', 'text': '<p>Which of the following is NOT&nbsp;a valid C program? A valid program is a program having no compile-time errors.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 1\nauto int a; \nmain ()\n{\n  auto int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    auto int a = b; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 2\nstatic int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 3\nint a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nProgram 4\nextern int a; \nmain ()\n{\n  static int b; \n  for (b = 0; b &lt; 10; b++)\n  {\n    static int a = 1; \n  }\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program $1$</li>\n\t<li>Program $2$</li>\n\t<li>Program $3$</li>\n\t<li>Program $4$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374457', 'text': '<p>Consider below two files p$1$.c and p$2$.c<br>\n<strong><img alt="" height="467" src="https://lh6.googleusercontent.com/cGKN4LfeXEdBiGvVRdQQMP-XVjRZcj0ExbG7dfM0NcGjfggDSLAola4irujVqcXOSx-temL8PMcd_pGa8feYsGE2ZHiPDcrwpufcBgQaHnEb1aNRALpVwWDP_A_NvxwsFOJutBSt" width="624"></strong></p>\n\n<p>We compile both files independently and link them in case the compilation is successful.<br>\n<br>\nWhich of the following(s) is/are TRUE?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>p$1$.c can not be compiled as there is no main function in the file.</li>\n\t<li>Line $3$ in p$1$.c will produce a compilation error because of the redefinition of variable $a.$</li>\n\t<li>Line $6$ in p$2$.c will produce a compilation error since the extern does not allocate&nbsp;memory to variables.</li>\n\t<li>Line $7$ in p$2$.c will produce a compilation error.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'd', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374465', 'text': '<p>Which of the following is/are TRUE about storage classes in C programming</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>static local variables are NOT available to the linker.</li>\n\t<li>static global variables are available to the linker.</li>\n\t<li>extern local variables are available to the linker.</li>\n\t<li>extern global variables are NOT available to the linker.</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374448', 'text': '<p>Consider the program:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint main() {\n    int k = 0;\n    int j = 0;\n    while(k == j)\n    {\n        int k;\n        for(k = 0; k &lt; 3; k++)\n        j = j+k;\n    }\n    k++;\n    printf(“%d”, j);\n    printf(“%d”, k);\n    return 0;\n}</pre>\n\n<p>Which of the following is true?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>There is a compilation error.</li>\n\t<li>There is no compilation error, and $31$ is printed.</li>\n\t<li>There is a run time error.</li>\n\t<li>There is no compilation error, and $34$ is printed.</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,loop,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374453', 'text': '<p>Consider the below program.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nvoid fun (int);\nstatic int i = 3;\nmain()\n{\n    fun(3);\n    printf("%d", i);\n}\n\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Program will get compiled successfully but linker will produce error</li>\n\t<li>Program will not get compiled i.e. it will produce compiler error</li>\n\t<li>Program will produce run time error.</li>\n\t<li>On running the Program, it will produce output $3.$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'a', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374464', 'text': '<p>Consider two files given below.</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file1.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  extern int i;\n  printf("file1");\n}\n</pre>\n\n<p>&nbsp;</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n \n//file2.c\n#include&lt;stdio.h&gt;\nmain ()\n{\n  int i =1;\n  printf("file2");\n}\n</pre>\n\n<p>We compile both files independently. And link them in case compilation is successful.</p>\n\n<p>Which of the following is/are TRUE&nbsp;?</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>file$1$.c and file$2$.c can be compiled independently and linked together</li>\n\t<li>file$1$.c has a compilation error since extern is a local variable</li>\n\t<li>file$1$.c and file$2$.c can be compiled independently but can not be linked together</li>\n\t<li>file$1$.c can be compiled and linked independently of file$2$.c.</li>\n</ol>\n\n<p>&nbsp;</p>', 'type': 'Multiple Select', 'answer': 'c;d', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374439', 'text': '<p>What will be the output of the program below-</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint i = 1;\nvoid my_extern1(void);\nvoid my_extern2(void);\n\nint main() {\n    int count = 0;\n    \n    while (i++&lt;5) {\n        static int i = 3;\n        i++;\n        count +=i;\n        my_extern1();\n    }\n    printf("%d", count);\n}\n\nvoid my_extern1(){\n    extern int i;\n    if(i++ &gt; 0) my_extern2();\n}\n\nvoid my_extern2(){\n    extern int i;\n    if (i++ &lt; 3) my_extern1();\n}</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Infinite recursion</li>\n\t<li>$9$</li>\n\t<li>$4$</li>\n\t<li>$5$</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374442', 'text': '<p>Consider the following two .c files, which both include the same .h file:</p>\n\n<p><img alt="" height="522" src="https://gateoverflow.in/?qa=blob&amp;qa_blobid=10746269507857044941" width="706"><br>\nWhen compiled, linked, and executed, the following output results:</p>\n\n<p>$x = 1 \\; y = 2\\; z = 3\\; w = 4\\; v = 5$</p>\n\n<p>Assuming that this program compiled and linked successfully, and based on the output shown above, add static and/or extern modifiers to the blank lines $(1)$ through $(10)$.</p>\n\n<p>Leave them blank if neither modifier would be appropriate.</p>\n\n<p>For example, if we say line $(2)$ is static then we consider line $(2)$ as $\\text{“static int x”}$. Or if we say line $(9)$ is empty then we treat line $9$ as $\\text{“int w = 4”}$.</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - extern<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - extern<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - extern<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – static<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – empty<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n\t<li><br>\n\tLine$(1)$ – empty<br>\n\tLine$(2)$ - static<br>\n\tLine$(3)$ - empty<br>\n\tLine$(4)$ - empty<br>\n\tLine$(5)$ – extern<br>\n\tLine$(6)$ - empty<br>\n\tLine$(7)$ - empty<br>\n\tLine$(8)$ - static<br>\n\tLine$(9)$ - empty<br>\n\tLine$(10)$ - static</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'b', 'award': 2, 'penalty': '0.6666', 'tags': 'goclasses2024-programming-2-weekly-quiz,goclasses,programming,programming-in-c,storage-classes-in-c,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374452', 'text': '<p>What is/are possible choice(s) for $\\text{“Line 1”}$ to produce output $2123?$</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nvoid fun(int n)\n{\n    printf("%d",n);\n    static int i = 0;\n    //Line 1\n    {\n        i++;\n        fun(i);\n    }\n}\nint main()\n{\n    fun(2);\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nwhile(i&lt;=2)\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2) return;\n</pre>\n\t</li>\n\t<li>\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nif(i&gt;2)\n</pre>\n\t</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;b;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,storage-classes-in-c,output,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374443', 'text': '<p>Consider the following variable and function definitions:</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nint g=10;\nint q3() {\n    static int g=5;\n    return ++g;\n}\nint q4() {\n    extern int g;\n    return ++g;\n}\nint q5() {\n    int g=1;\n    return ++g;\n}\n</pre>\n\n<p><br>\nWhat is the value of the expression $q3() + q3() + q4() + q4() + q5() + q5()?$</p>', 'type': 'Numerical', 'answer': '40', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,functions,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374436', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nint y = 20;\nint fun()\n{\n    int static x = 22;\n    return x -= 2;\n}\nint GOClasses(int n)\n{\n    if (n % 5)\n    {\n        y += n+fun();\n        return y;  \n    }\n    else  return GOClasses (n+3);\n}\nint main()\n{\n    int p;\n    for (int i =0; i &lt;2; i++)\n    p = GOClasses(GOClasses(i));\n    printf("%d", p);\n    return 0;\n}\n</pre>', 'type': 'Numerical', 'answer': '256', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374462', 'text': '<p>The default storage class for global variables in the C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374450', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint sum() {\n  static int n =5;\n  if (n == 2) return 2;\n  return sum(n-1)*n ;\n}\nint main() {\n    printf("%d\\n", sum() );\n    return 0;\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>$54$</li>\n\t<li>$120$</li>\n\t<li>$16$</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,recursion,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374463', 'text': '<p>The default storage class for functions in C language is –</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Static</li>\n\t<li>Auto</li>\n\t<li>Extern</li>\n\t<li>None of these</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'c', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq17,goclasses,programming,programming-in-c,storage-classes-in-c,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374460', 'text': '<p>What will be the output if we compile and execute the following C&nbsp;code?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt;\nvoid main(){\nint i=10;\nstatic int x=i;\nif(x==i)\n    printf("Equal");\nelse if(x&gt;i)\n    printf("Greater than");\nelse\n    printf("Less than");\n}\n</pre>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>Equal</li>\n\t<li>Greater than</li>\n\t<li>Less than</li>\n\t<li>Compiler error</li>\n</ol>', 'type': 'Multiple Choice', 'answer': 'd', 'award': 1, 'penalty': '0.3333', 'tags': 'goclasses2024_wq18,goclasses,programming,programming-in-c,storage-classes-in-c,output,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374446', 'text': '<p>Which of the following C -functions will correctly return true if its argument is an odd integer?</p>\n\n<ol style="list-style-type:upper-roman">\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x % 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\n    return (x / 2 == 1);\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) {\nif (x % 2 == 1)\n    return true;\nelse\n    return false;\n}\n</pre>\n\t</li>\n\t<li>&nbsp;\n\t<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\nbool IsOdd (int x) { \n    if (x / 2 == 1) \n        return true;\n    else \n        return false;\n}</pre>\n\t</li>\n</ol>\n\n<p>&nbsp;</p>\n\n<ol style="list-style-type:upper-alpha">\n\t<li>I</li>\n\t<li>II</li>\n\t<li>III</li>\n\t<li>IV</li>\n</ol>', 'type': 'Multiple Select', 'answer': 'a;c', 'award': 1, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,goclasses,programming,programming-in-c,functions,multiple-selects,1-mark', 'category': 'Programming in C'}, {'contents': '', 'post_id': '374437', 'text': '<p>What will be the output of the following program?</p>\n\n<pre class="prettyprint linenums lang-c_cpp" data-pbcklang="c_cpp" data-pbcktabsize="4">\n#include&lt;stdio.h&gt; \nint find(int *a, int n)\n{\n    if (n == 1)\n        return a[0];\n    n--;\n    return find(a + (a[0] &lt; a[n]), n);\n}\nmain() {\n    int a[10] = {4, 10, 5, 6, 9, 3, 1, 20, 7};\n    printf("%d\\n", find(a , 10) );\n}\n</pre>', 'type': 'Numerical', 'answer': '20', 'award': 2, 'penalty': '0.0000', 'tags': 'goclasses2024-programming-2,numerical-answers,goclasses,programming,programming-in-c,recursion,output,2-marks', 'category': 'Programming in C'}]}]}
       </script>
       
