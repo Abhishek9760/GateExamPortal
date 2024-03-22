@@ -23,7 +23,7 @@ const Header = ({ title }) => {
     <div className="header2">
       <div className="headerTable">
         <div className="examHeaderItem examLogo">
-          <a href="https://gateoverflow.in/">
+          <a href="/">
             <img src="./Assessment Examination Center_files/logo1.png" />
           </a>
         </div>
