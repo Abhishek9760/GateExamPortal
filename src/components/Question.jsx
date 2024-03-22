@@ -51,7 +51,7 @@ export const Question = ({ ques, ques_num }) => {
   };
 
   return (
-    <MathJaxContext config={config}>
+    <MathJaxContext config={config} hideUntilTypeset={true}>
       <div id="currentQues" style={{ overflow: "scroll" }}>
         <div className="questionTypeCont">
           <span className="contents">
