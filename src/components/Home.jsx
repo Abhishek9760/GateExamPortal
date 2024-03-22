@@ -1,44 +1,99 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { QuestionDataContext } from "../context/QuestionDataContext";
-import json5 from "json5";
 import { useNavigate } from "react-router-dom";
+import {
+  MenuMenu,
+  MenuItem,
+  Input,
+  Menu,
+  Segment,
+  Button,
+} from "semantic-ui-react";
 
 const Home = () => {
-  // const [fileContent, setFileContent] = useState("");
-  const { setData } = useContext(QuestionDataContext);
+  const { data, setData } = useContext(QuestionDataContext);
+  const [activeItem, setActiveItem] = useState("2021");
   const navigate = useNavigate();
 
-  const handleFileRead = (e) => {
-    const content = e.target.result;
-    const htmlText = stringToDOM(content);
-    let data = htmlText.querySelector("script").text;
-    data = new Function(`${data};return data`)();
-    setData(data);
-    navigate("/home");
-  };
-
-  function stringToDOM(str) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(str, "text/html");
-    return doc.body; // Assuming you only want the first element
-  }
-
-  const handleFileChosen = (file) => {
-    const reader = new FileReader();
-    reader.onloadend = handleFileRead;
-    reader.readAsText(file);
-  };
+  const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
     <div>
-      <input
-        type="file"
-        onChange={(e) => handleFileChosen(e.target.files[0])}
-      />
+      <Menu pointing>
+        <MenuItem
+          name="2021"
+          active={activeItem === "2021"}
+          onClick={handleItemClick}
+        />
+        <MenuItem
+          name="2022"
+          active={activeItem === "2022"}
+          onClick={handleItemClick}
+        />
+        <MenuItem
+          name="2023"
+          active={activeItem === "2023"}
+          onClick={handleItemClick}
+        />
+        <MenuItem
+          name="2024"
+          active={activeItem === "2024"}
+          onClick={handleItemClick}
+        />
+        <MenuItem
+          name="other"
+          active={activeItem === "other"}
+          onClick={handleItemClick}
+        />
+
+        <MenuMenu position="right">
+          <MenuItem>
+            <Input icon="search" placeholder="Search..." />
+          </MenuItem>
+        </MenuMenu>
+      </Menu>
+
+      <Segment>
+        {data &&
+          data[activeItem]
+            .sort((a, b) => {
+              if (a.name < b.name) {
+                return -1;
+              } else if (a.name > b.name) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((i) => (
+              <div key={i["name"]}>
+                <Button
+                  basic
+                  compact
+                  onClick={async () => {
+                    setData(i);
+                    navigate("/home");
+                  }}
+                >
+                  {i["name"]}
+                </Button>
+              </div>
+            ))}
+      </Segment>
     </div>
   );
 
   // return <h1>Home</h1>;
 };
+
+// class MenuExamplePointing extends Component {
+//   state = { activeItem: 'home' }
+
+//
+
+//   render() {
+//     const { activeItem } = this.state
+
+//   }
+// }
 
 export default Home;

@@ -2,7 +2,6 @@ import { useContext, useEffect, useState, useRef } from "react";
 import {
   CurrentSectionContext,
   CurrentQuestionNumberContext,
-  CurrentQuestionContext,
 } from "../context";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
 import { QuestionDataContext } from "../context/QuestionDataContext";
@@ -11,7 +10,6 @@ export const RightMenu = () => {
   const { data } = useContext(QuestionDataContext);
   const { currentSection } = useContext(CurrentSectionContext);
   const { setCurrentQuestionNumber } = useContext(CurrentQuestionNumberContext);
-  // const { currentQuestion } = useContext(CurrentQuestionContext);
   const { questionStatus } = useContext(QuestionStatusContext);
 
   const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
