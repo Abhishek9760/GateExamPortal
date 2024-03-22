@@ -178,8 +178,8 @@ const LeftMenu = () => {
             <input
               type="button"
               id="savenext"
-              onClick={() => {
-                saveAnswer();
+              onClick={async () => {
+                await saveAnswer();
                 setCurrentQuestionNumber({
                   id: Math.floor(Math.random() * 1000),
                   num: currentQuestionNumber.num + 1,

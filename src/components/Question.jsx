@@ -14,8 +14,6 @@ export const Question = ({ ques, ques_num }) => {
   useEffect(() => {
     let doc = new DOMParser().parseFromString(ques.text, "text/html");
     let element = doc.firstChild;
-    console.log(element);
-    console.log(ques);
     if (ques.type !== "Numerical")
       setSelectCount(element.querySelector("ol").childElementCount);
   }, [ques]);
@@ -172,7 +170,7 @@ export const Question = ({ ques, ques_num }) => {
                                   ques.type === "Multiple Select"
                                     ? typeof answer !== "string"
                                       ? answer.findIndex(
-                                          (i) => i == index - 1
+                                          (i) => i == index + 1
                                         ) !== -1
                                       : false
                                     : false

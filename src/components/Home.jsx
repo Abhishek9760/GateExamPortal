@@ -17,6 +17,10 @@ const Home = () => {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
+  // useEffect(() => {
+  //   localStorage.clear();
+  // }, []);
+
   return (
     <div>
       <Menu pointing>
@@ -70,7 +74,6 @@ const Home = () => {
                   basic
                   compact
                   onClick={async () => {
-                    await localStorage.clear();
                     setData(i);
                     navigate("/home");
                   }}
@@ -82,19 +85,6 @@ const Home = () => {
       </Segment>
     </div>
   );
-
-  // return <h1>Home</h1>;
 };
-
-// class MenuExamplePointing extends Component {
-//   state = { activeItem: 'home' }
-
-//
-
-//   render() {
-//     const { activeItem } = this.state
-
-//   }
-// }
 
 export default Home;

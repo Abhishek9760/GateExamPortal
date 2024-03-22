@@ -9,14 +9,46 @@ import { QuestionDataContext } from "../context/QuestionDataContext";
 export const RightMenu = () => {
   const { data } = useContext(QuestionDataContext);
   const { currentSection } = useContext(CurrentSectionContext);
-  const { setCurrentQuestionNumber } = useContext(CurrentQuestionNumberContext);
+  const { setCurrentQuestionNumber, currentQuestionNumber } = useContext(
+    CurrentQuestionNumberContext
+  );
   const { questionStatus } = useContext(QuestionStatusContext);
 
   const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
   const intervalRef = useRef(null);
 
+  const [totalAnswered, setTotalAnswered] = useState(0);
+  const [notAnswered, setNotAnswered] = useState(0);
+  const [notVisited, setNotVisited] = useState(0);
+
+  useEffect(() => {
+    const answers = localStorage.getItem("answers");
+    const status = localStorage.getItem("status");
+
+    if (answers) {
+      const storedQuestions = new Set(Object.keys(JSON.parse(answers)));
+      const totalQuestionsCount = data.section[currentSection].question.filter(
+        (element) => storedQuestions.has(element.post_id)
+      ).length;
+      setTotalAnswered(totalQuestionsCount);
+    }
+    if (status) {
+      const parsedStatus = JSON.parse(status);
+      const totalNotAnswered = data.section[currentSection].question.filter(
+        (element) => parsedStatus[element.post_id] === "not_answered"
+      ).length;
+      setNotAnswered(totalNotAnswered);
+
+      const totalNotVisited = data.section[currentSection].question.filter(
+        (element) => parsedStatus[element.post_id] === "not_visited"
+      ).length;
+
+      setNotVisited(totalNotVisited);
+    }
+  }, [currentQuestionNumber]);
+
   const startTimer = () => {
-    if (intervalRef.current) return; // Prevent duplicate interval creation
+    if (intervalRef.current) return;
 
     console.log("running");
     intervalRef.current = setInterval(() => {
@@ -30,26 +62,9 @@ export const RightMenu = () => {
     }, 1000); // Update every second
   };
 
-  // const stopTimer = () => {
-  //   if (!intervalRef.current) return;
-  //   clearInterval(intervalRef.current);
-  //   intervalRef.current = null;
-  // };
-
-  // const resetTimer = () => {
-  //   setTimeLeft(3 * 60 * 60);
-  //   stopTimer();
-  // };
-
   useEffect(() => {
-    // startTimer();
     return () => clearInterval(intervalRef.current); // Cleanup on unmount
   }, []);
-
-  // useEffect(() => {
-  //   console.log(intervalRef);
-  //   if (!intervalRef.current) startTimer();
-  // }, [intervalRef.current]);
 
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / (60 * 60));
@@ -190,7 +205,7 @@ export const RightMenu = () => {
                     id="exam-answered-count"
                     className="answered_small button_item"
                   >
-                    0
+                    {totalAnswered}
                   </span>
                 </td>
                 <td>
@@ -201,7 +216,7 @@ export const RightMenu = () => {
                     id="exam-not-answered-count"
                     className="not_answered_small button_item"
                   >
-                    1
+                    {notAnswered}
                   </span>
                 </td>
                 <td>
@@ -214,7 +229,7 @@ export const RightMenu = () => {
                     id="exam-not-visited-count"
                     className="not_visited_small button_item"
                   >
-                    9
+                    {notVisited}
                   </span>
                 </td>
                 <td>

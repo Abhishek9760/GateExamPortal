@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import jsonData from "../data.json";
-import { json } from "react-router-dom";
 export const QuestionDataContext = createContext(null);
 
 export const QuestionDataContextProvider = ({ children }) => {
