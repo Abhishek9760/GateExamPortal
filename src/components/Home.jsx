@@ -70,6 +70,7 @@ const Home = () => {
                   basic
                   compact
                   onClick={async () => {
+                    await localStorage.clear();
                     setData(i);
                     navigate("/home");
                   }}
