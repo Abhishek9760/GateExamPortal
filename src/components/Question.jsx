@@ -14,6 +14,7 @@ export const Question = ({ ques, ques_num }) => {
   useEffect(() => {
     let doc = new DOMParser().parseFromString(ques.text, "text/html");
     let element = doc.firstChild;
+    console.log(element);
     setSelectCount(element.querySelector("ol").childElementCount);
   }, []);
 
@@ -51,7 +52,7 @@ export const Question = ({ ques, ques_num }) => {
   };
 
   return (
-    <MathJaxContext config={config} hideUntilTypeset={true}>
+    <MathJaxContext config={config}>
       <div id="currentQues" style={{ overflow: "scroll" }}>
         <div className="questionTypeCont">
           <span className="contents">
