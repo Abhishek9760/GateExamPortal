@@ -15,8 +15,10 @@ export const Question = ({ ques, ques_num }) => {
     let doc = new DOMParser().parseFromString(ques.text, "text/html");
     let element = doc.firstChild;
     console.log(element);
-    setSelectCount(element.querySelector("ol").childElementCount);
-  }, []);
+    console.log(ques);
+    if (ques.type !== "Numerical")
+      setSelectCount(element.querySelector("ol").childElementCount);
+  }, [ques]);
 
   useEffect(() => {
     if (!answers) return;
@@ -92,7 +94,11 @@ export const Question = ({ ques, ques_num }) => {
           </div>
           <form id="gateAnswerForm">
             <div id="quesContents" style={{ overflow: "auto" }}>
-              <MathJax dangerouslySetInnerHTML={{ __html: ques.text }} />
+              <MathJax
+                inline
+                dynamic
+                dangerouslySetInnerHTML={{ __html: ques.text }}
+              />
               <div
                 style={{
                   padding: "0 10px 20px 10px",
