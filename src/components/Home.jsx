@@ -50,12 +50,6 @@ const Home = () => {
           active={activeItem === "other"}
           onClick={handleItemClick}
         />
-
-        <MenuMenu position="right">
-          <MenuItem>
-            <Input icon="search" placeholder="Search..." />
-          </MenuItem>
-        </MenuMenu>
       </Menu>
 
       <Segment>
