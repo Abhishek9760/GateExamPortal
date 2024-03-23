@@ -14,16 +14,18 @@ export const RightMenu = () => {
   );
   const { questionStatus } = useContext(QuestionStatusContext);
 
-  const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
+  // const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
+  const [timeLeft, setTimeLeft] = useState(10); // Initial time in seconds (3 hours)
   const intervalRef = useRef(null);
 
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [notAnswered, setNotAnswered] = useState(0);
   const [notVisited, setNotVisited] = useState(0);
+  const [reviewCount, setReviewCount] = useState(0);
+  const [answeredAndReviewCount, setAnsweredAndReviewCount] = useState(0);
 
   useEffect(() => {
     const answers = localStorage.getItem("answers");
-    const status = localStorage.getItem("status");
 
     if (answers) {
       const storedQuestions = new Set(Object.keys(JSON.parse(answers)));
@@ -32,20 +34,34 @@ export const RightMenu = () => {
       ).length;
       setTotalAnswered(totalQuestionsCount);
     }
-    if (status) {
-      const parsedStatus = JSON.parse(status);
-      const totalNotAnswered = data.section[currentSection].question.filter(
-        (element) => parsedStatus[element.post_id] === "not_answered"
-      ).length;
-      setNotAnswered(totalNotAnswered);
+    if (questionStatus) {
+      setTotalAnswered(
+        document.querySelectorAll("#quesNavPanel0 span.answered").length
+      );
 
-      const totalNotVisited = data.section[currentSection].question.filter(
-        (element) => parsedStatus[element.post_id] === "not_visited"
-      ).length;
+      setReviewCount(
+        document.querySelectorAll("#quesNavPanel0 span.review").length
+      );
 
-      setNotVisited(totalNotVisited);
+      setAnsweredAndReviewCount(
+        document.querySelectorAll("#quesNavPanel0 span.review_answered").length
+      );
+
+      setNotAnswered(
+        document.querySelectorAll("#quesNavPanel0 span.not_answered").length
+      );
+
+      setNotVisited(
+        document.querySelectorAll("#quesNavPanel0 span.not_visited").length
+      );
     }
-  }, [currentQuestionNumber]);
+  }, [currentQuestionNumber, questionStatus]);
+
+  useEffect(() => {
+    if (timeLeft === 0) {
+      alert("done");
+    }
+  }, [timeLeft]);
 
   const startTimer = () => {
     if (intervalRef.current) return;
@@ -240,7 +256,7 @@ export const RightMenu = () => {
                     id="exam-marked-count"
                     className="review_small button_item"
                   >
-                    0
+                    {reviewCount}
                   </span>
                 </td>
                 <td>
@@ -253,7 +269,7 @@ export const RightMenu = () => {
                     id="exam-marked-answered-count"
                     className="review_answered_small button_item"
                   >
-                    0
+                    {answeredAndReviewCount}
                   </span>
                 </td>
                 <td>
@@ -289,23 +305,22 @@ export const RightMenu = () => {
                       className="button1"
                       defaultValue="Instructions"
                       title="View Instructions"
-                      //   onclick="WebApp.DisplayExamPage('instructions');"
-                    />{" "}
+                    />
                   </center>
                 </td>
               </tr>
               <tr>
                 <td id="viewQPTD">
                   <center>
-                    {" "}
                     <input
                       id="viewQPButton"
+                      style={{ borderColor: "##f5c56d" }}
                       type="button"
                       className="button1"
-                      defaultValue="Question Paper"
-                      title="View Entire Question Paper"
-                      //   onclick="WebApp.DisplayExamPage('questions');"
-                    />{" "}
+                      defaultValue="Start Exam"
+                      title="Start the Exam"
+                      onClick={startTimer}
+                    />
                   </center>
                 </td>
                 <td id="submitTD">
@@ -314,7 +329,6 @@ export const RightMenu = () => {
                       type="button"
                       className="button1"
                       id="finalSub"
-                      //   onclick="WebApp.DisplayExamPage('summary');"
                       defaultValue="Submit"
                       title="Submit Group"
                     />

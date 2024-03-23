@@ -10,11 +10,15 @@ import { AnswerContextProvider } from "./context/AnswerContext";
 import { QuestionStatusContextProvider } from "./context/QuestionStatusContext";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+import Result from "./components/Result";
+
 import {
   QuestionDataContext,
   QuestionDataContextProvider,
 } from "./context/QuestionDataContext";
 import { useContext } from "react";
+
+import { TimerContext, TimerContextProvider } from "./context/TimerContext";
 
 // import { MathJaxContext } from "better-react-mathjax";
 
@@ -62,24 +66,27 @@ const Main = () => {
 
 function App() {
   return (
-    <QuestionDataContextProvider>
-      <QuestionStatusContextProvider>
-        <AnswerContextProvider>
-          <CurrentQuestionContextProvider>
-            <CurrentQuestionNumberContextProvider>
-              <CurrentSectionContextProvider>
-                <Router>
-                  <Routes>
-                    <Route path="/home" element={<Main />}></Route>
-                    <Route path="/" element={<Home />}></Route>
-                  </Routes>
-                </Router>
-              </CurrentSectionContextProvider>
-            </CurrentQuestionNumberContextProvider>
-          </CurrentQuestionContextProvider>
-        </AnswerContextProvider>
-      </QuestionStatusContextProvider>
-    </QuestionDataContextProvider>
+    <TimerContextProvider>
+      <QuestionDataContextProvider>
+        <QuestionStatusContextProvider>
+          <AnswerContextProvider>
+            <CurrentQuestionContextProvider>
+              <CurrentQuestionNumberContextProvider>
+                <CurrentSectionContextProvider>
+                  <Router>
+                    <Routes>
+                      <Route path="/home" element={<Main />}></Route>
+                      <Route path="/" element={<Home />}></Route>
+                      <Route path="/result" element={<Result />}></Route>
+                    </Routes>
+                  </Router>
+                </CurrentSectionContextProvider>
+              </CurrentQuestionNumberContextProvider>
+            </CurrentQuestionContextProvider>
+          </AnswerContextProvider>
+        </QuestionStatusContextProvider>
+      </QuestionDataContextProvider>
+    </TimerContextProvider>
   );
 }
 

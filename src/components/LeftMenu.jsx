@@ -9,6 +9,7 @@ import {
 import { AnswerContext } from "../context/AnswerContext";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
 import { QuestionDataContext } from "../context/QuestionDataContext";
+import Summary from "./Summary";
 
 const LeftMenu = () => {
   const { data } = useContext(QuestionDataContext);
@@ -21,6 +22,8 @@ const LeftMenu = () => {
   const { currentQuestion, setCurrentQuestion } = useContext(
     CurrentQuestionContext
   );
+
+  const [showSummary, setShowSummary] = useState(false);
 
   const { setAnswers, answers } = useContext(AnswerContext);
   const { saveQuestionStatus } = useContext(QuestionStatusContext);
@@ -90,6 +93,13 @@ const LeftMenu = () => {
   useEffect(() => {
     setCurrentQuestionNumber({ id: Math.floor(Math.random() * 1000), num: 0 });
   }, [currentSection]);
+
+  useEffect(() => {
+    document
+      .querySelector("#finalSub")
+      .addEventListener("click", () => setShowSummary(true));
+  }, []);
+
   return (
     <div className="mainLeft">
       <div id="sectionsField">
@@ -146,7 +156,10 @@ const LeftMenu = () => {
           </div>
         </fieldset>
       </div>
-      <div id="questionCont">
+      <div
+        id="questionCont"
+        style={{ display: showSummary ? "none" : "inherit" }}
+      >
         {currentQuestion && (
           <Question
             ques={currentQuestion}
@@ -197,51 +210,11 @@ const LeftMenu = () => {
               defaultValue="Calculator"
             />
           </div>
+
           <div className="clear" />
         </div>
       </div>
-      <div
-        id="sectionSummaryDiv"
-        style={{ display: "none", overflow: "hidden" }}
-      >
-        <div className="examSummaryHeader">
-          <span style={{ fontSize: 16, fontWeight: "bold" }}>Exam Summary</span>
-        </div>
-        <div style={{ overflow: "auto", textAlign: "center" }}>
-          <table
-            className="bordertable"
-            cellSpacing={0}
-            width="80%"
-            align="center"
-            style={{ marginTop: "5%" }}
-          >
-            <tbody id="group_summary" />
-          </table>
-        </div>
-        <div id="confirmation_buttons" className="buttonDiv">
-          <table align="center">
-            <tbody>
-              <tr>
-                <td colSpan={2}>Are you sure you want to submit the Exam?</td>
-              </tr>
-              <tr>
-                <td style={{ textAlign: "center" }}>
-                  <input
-                    // onClick="WebApp.SubmitResults();"
-                    type="button"
-                    className="button"
-                    defaultValue="Yes"
-                  />
-                </td>
-                <td style={{ textAlign: "center" }}>
-                  <input type="button" className="button" defaultValue="No" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div />
-        </div>
-      </div>
+      <Summary showSummary={showSummary} setShowSummary={setShowSummary} />
     </div>
   );
 };
