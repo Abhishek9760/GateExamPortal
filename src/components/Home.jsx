@@ -8,6 +8,7 @@ import {
   Menu,
   Segment,
   Button,
+  Icon,
 } from "semantic-ui-react";
 
 const Home = () => {
@@ -71,6 +72,8 @@ const Home = () => {
             .map((i) => (
               <div key={i["name"]}>
                 <Button
+                  // icon
+                  // labelPosition="left"
                   basic
                   compact
                   onClick={async () => {
@@ -78,6 +81,8 @@ const Home = () => {
                     navigate("/home");
                   }}
                 >
+                  {/* <Icon name="lock" /> */}
+
                   {i["name"]}
                 </Button>
               </div>

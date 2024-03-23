@@ -65,7 +65,7 @@ export const Question = ({ ques, ques_num }) => {
             </font>
             ; Negative Marks{" "}
             <font style={{ color: "red" }} id="quesPenalty">
-              {ques.penalty}
+              {Math.round(ques.penality * 100) / 100}
             </font>
           </span>
         </div>

@@ -15,8 +15,8 @@ export const RightMenu = () => {
   const { questionStatus } = useContext(QuestionStatusContext);
 
   // const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
-  const [timeLeft, setTimeLeft] = useState(10); // Initial time in seconds (3 hours)
-  const intervalRef = useRef(null);
+  const [timeLeft, setTimeLeft] = useState(30); // Initial time in seconds (3 hours)
+  const [startTimer, setStartTimer] = useState(false);
 
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [notAnswered, setNotAnswered] = useState(0);
@@ -63,24 +63,19 @@ export const RightMenu = () => {
     }
   }, [timeLeft]);
 
-  const startTimer = () => {
-    if (intervalRef.current) return;
-
-    console.log("running");
-    intervalRef.current = setInterval(() => {
-      console.log(timeLeft);
-      if (timeLeft > 0) {
-        setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
-      } else {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null; // Clear interval reference
-      }
-    }, 1000); // Update every second
-  };
-
   useEffect(() => {
-    return () => clearInterval(intervalRef.current); // Cleanup on unmount
-  }, []);
+    if (timeLeft === 0) return;
+    let timer;
+    if (startTimer) {
+      const timer = setTimeout(() => {
+        if (timeLeft === 0) clearTimeout(timer);
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [timeLeft, startTimer]);
 
   const formatTime = (seconds) => {
     const hours = Math.floor(seconds / (60 * 60));
@@ -120,10 +115,7 @@ export const RightMenu = () => {
           <div style={{ height: 50 }}>
             <div style={{ paddingTop: 8, width: "100%" }} id="showTime">
               <b>
-                Time Left :
-                <span id="timeInMins" onClick={startTimer}>
-                  {formatTime(timeLeft)}
-                </span>
+                Time Left :<span id="timeInMins">{formatTime(timeLeft)}</span>
               </b>
             </div>
             <div style={{ width: "100%" }}>
@@ -319,7 +311,8 @@ export const RightMenu = () => {
                       className="button1"
                       defaultValue="Start Exam"
                       title="Start the Exam"
-                      onClick={startTimer}
+                      disabled={startTimer}
+                      onClick={() => setStartTimer(true)}
                     />
                   </center>
                 </td>
