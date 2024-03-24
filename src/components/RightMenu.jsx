@@ -138,7 +138,7 @@ export const RightMenu = () => {
       <div className="numberpanel">
         <div>
           <span id="viewingSect">You are viewing</span>&nbsp;
-          <b id="viewSection">{currentSection ? "Technical" : "Aptitude"}</b>
+          <b id="viewSection">{data.section[currentSection]?.name}</b>
           &nbsp;
           <span className="sect">Section</span>
         </div>
