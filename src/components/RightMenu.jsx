@@ -25,7 +25,7 @@ export const RightMenu = () => {
   const [answeredAndReviewCount, setAnsweredAndReviewCount] = useState(0);
 
   useEffect(() => {
-    const answers = localStorage.getItem("answers");
+    const answers = localStorage.getItem(`${data.name}-answer`);
 
     if (answers) {
       const storedQuestions = new Set(Object.keys(JSON.parse(answers)));

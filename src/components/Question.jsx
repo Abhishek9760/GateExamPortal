@@ -3,8 +3,10 @@ import { useContext, useEffect, useState } from "react";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { AnswerContext } from "../context/AnswerContext";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
+import { QuestionDataContext } from "../context/QuestionDataContext";
 export const Question = ({ ques, ques_num }) => {
   const [answer, setAnswer] = useState("");
+  const { data } = useContext(QuestionDataContext);
   const { answers } = useContext(AnswerContext);
   const { questionStatus, saveQuestionStatus } = useContext(
     QuestionStatusContext
@@ -23,10 +25,11 @@ export const Question = ({ ques, ques_num }) => {
   }, [ques, answers]);
 
   useEffect(() => {
+    console.log(questionStatus);
     if (!questionStatus.hasOwnProperty(ques.post_id)) {
-      saveQuestionStatus(ques.post_id, "not_answered");
+      saveQuestionStatus(data.name, ques.post_id, "not_answered");
     }
-  }, [questionStatus, ques]);
+  }, [ques, questionStatus]);
 
   const config = {
     loader: { load: ["[tex]/html"] },

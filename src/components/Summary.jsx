@@ -38,7 +38,7 @@ const Summary = ({ showSummary, setShowSummary }) => {
     data.section.forEach((sec) => {
       totalQuestion += sec.question.length;
     });
-    let answers = localStorage.getItem("answers");
+    let answers = localStorage.getItem(`${data.name}-answer`);
     let correctAttempts = 0;
     let incorrectAttempts = 0;
     let correctMarks = 0;

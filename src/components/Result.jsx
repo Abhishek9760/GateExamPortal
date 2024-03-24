@@ -12,8 +12,11 @@ const Result = () => {
   const [answers, setAnswers] = useState();
 
   useEffect(() => {
-    const ans = localStorage.getItem("answers");
-    if (ans) setAnswers(JSON.parse(ans));
+    let ans = localStorage.getItem(`${data?.name}-answer`);
+    if (ans) {
+      ans = JSON.parse(ans)?.answer;
+      if (ans) setAnswers(ans);
+    }
   }, []);
   const config = {
     loader: { load: ["[tex]/html"] },

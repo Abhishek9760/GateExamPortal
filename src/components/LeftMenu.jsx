@@ -25,25 +25,13 @@ const LeftMenu = () => {
 
   const [showSummary, setShowSummary] = useState(false);
 
-  const { setAnswers, answers } = useContext(AnswerContext);
+  const { saveAnswerToStorage } = useContext(AnswerContext);
   const { saveQuestionStatus } = useContext(QuestionStatusContext);
 
-  const saveAnswerToStorage = (postId, answer) => {
-    const answers = localStorage.getItem("answers");
-    if (!answers) {
-      localStorage.setItem("answers", JSON.stringify({ [postId]: answer }));
-    } else {
-      const answersObj = JSON.parse(answers);
-      answersObj[postId] = answer;
-      localStorage.setItem("answers", JSON.stringify(answersObj));
-      setAnswers(answersObj);
-    }
-    saveQuestionStatus(currentQuestion.post_id, "answered");
-  };
   const saveAnswer = () => {
     const answerForm = document.querySelector("#gateAnswerForm");
-    const data = new FormData(answerForm);
-    const answers = Object.fromEntries(data.entries());
+    const formData = new FormData(answerForm);
+    const answers = Object.fromEntries(formData.entries());
     let answer;
     if (
       currentQuestion.type === "Numerical" ||
@@ -59,8 +47,10 @@ const LeftMenu = () => {
         }
       });
     }
-    if (answer && answer.trim())
-      saveAnswerToStorage(currentQuestion.post_id, answer);
+    if (answer && answer.trim()) {
+      saveAnswerToStorage(data.name, currentQuestion.post_id, answer);
+      saveQuestionStatus(data.name, currentQuestion.post_id, "answered");
+    }
     clearAnswer();
     return true;
   };
@@ -68,16 +58,22 @@ const LeftMenu = () => {
   const clearAnswer = () => {
     const answerForm = document.querySelector("#gateAnswerForm");
     answerForm.reset();
+    document
+      .querySelectorAll(".multipleAnswer")
+      .forEach((i) => (i.checked = false));
+    document
+      .querySelectorAll('input[type="radio"]')
+      .forEach((i) => (i.checked = false));
   };
 
   const handleMarkForReviewAndNext = () => {
     const answerForm = document.querySelector("#gateAnswerForm");
     const formData = new FormData(answerForm);
-    const data = Object.fromEntries(formData.entries());
+    const dataObj = Object.fromEntries(formData.entries());
     saveAnswer();
-    if (data.hasOwnProperty(currentQuestion.type))
-      saveQuestionStatus(currentQuestion.post_id, "review_answered");
-    else saveQuestionStatus(currentQuestion.post_id, "review");
+    if (dataObj.hasOwnProperty(currentQuestion.type))
+      saveQuestionStatus(data.name, currentQuestion.post_id, "review_answered");
+    else saveQuestionStatus(data.name, currentQuestion.post_id, "review");
     setCurrentQuestionNumber({
       id: Math.floor(Math.random() * 1000),
       num: currentQuestionNumber.num + 1,

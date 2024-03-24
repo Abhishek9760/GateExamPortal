@@ -12,6 +12,14 @@ const Home = () => {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
+  const clearExamData = () => {
+    const isTrue = confirm("Are you sure?");
+    if (isTrue) {
+      localStorage.clear();
+      window.location.href = "/";
+    }
+  };
+
   return isLoggedIn ? (
     <div>
       <Menu pointing>
@@ -39,6 +47,11 @@ const Home = () => {
           name="other"
           active={activeItem === "other"}
           onClick={handleItemClick}
+        />
+        <MenuItem
+          position="right"
+          name="Clear Exam Data"
+          onClick={clearExamData}
         />
       </Menu>
 

@@ -1,19 +1,27 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { QuestionDataContext } from "./QuestionDataContext";
 
 export const QuestionStatusContext = createContext(null);
 
 export const QuestionStatusContextProvider = ({ children }) => {
-  const [questionStatus, setQuestionStatus] = useState(
-    localStorage.getItem("status")
-      ? JSON.parse(localStorage.getItem("status"))
-      : {}
-  );
+  const { data } = useContext(QuestionDataContext);
+  const [questionStatus, setQuestionStatus] = useState({});
 
-  const saveQuestionStatus = (postId, status) => {
+  useEffect(() => {
+    if (data?.name) {
+      let status = localStorage.getItem(`${data.name}-status`);
+      if (status) {
+        status = JSON.parse(status);
+        setQuestionStatus(status);
+      }
+    }
+  }, [data]);
+
+  const saveQuestionStatus = (examName, postId, status) => {
     console.log(postId, status);
     const newStatus = { ...questionStatus };
     newStatus[postId] = status;
-    localStorage.setItem("status", JSON.stringify(newStatus));
+    localStorage.setItem(`${examName}-status`, JSON.stringify(newStatus));
     setQuestionStatus(newStatus);
   };
 
