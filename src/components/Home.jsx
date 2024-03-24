@@ -61,7 +61,7 @@ const Home = () => {
                   basic
                   compact
                   onClick={async () => {
-                    localStorage.clear();
+                    // localStorage.clear();
                     // setTimeout(() => {
                     setData(i);
                     navigate("/home");

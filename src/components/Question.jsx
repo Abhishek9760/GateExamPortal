@@ -4,19 +4,11 @@ import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { AnswerContext } from "../context/AnswerContext";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
 export const Question = ({ ques, ques_num }) => {
-  const [selectCount, setSelectCount] = useState(0);
   const [answer, setAnswer] = useState("");
   const { answers } = useContext(AnswerContext);
   const { questionStatus, saveQuestionStatus } = useContext(
     QuestionStatusContext
   );
-
-  useEffect(() => {
-    let doc = new DOMParser().parseFromString(ques.text, "text/html");
-    let element = doc.firstChild;
-    if (ques.type !== "Numerical")
-      setSelectCount(element.querySelector("ol").childElementCount);
-  }, [ques]);
 
   useEffect(() => {
     if (!answers) return;
@@ -123,7 +115,7 @@ export const Question = ({ ques, ques_num }) => {
                 <table>
                   <tbody>
                     <tr>
-                      {Array(selectCount)
+                      {Array(4)
                         .fill(null)
                         .map((_, index) => {
                           return (
@@ -159,7 +151,7 @@ export const Question = ({ ques, ques_num }) => {
                 <table>
                   <tbody>
                     <tr>
-                      {Array(selectCount)
+                      {Array(4)
                         .fill(null)
                         .map((_, index) => {
                           return (

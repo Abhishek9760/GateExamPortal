@@ -1,13 +1,5 @@
-import { useState } from "react";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment,
-} from "semantic-ui-react";
+import { useEffect, useState } from "react";
+import { Button, Form, Grid, Message, Segment } from "semantic-ui-react";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -17,6 +9,14 @@ const Login = ({ setIsLoggedIn }) => {
   const [showSecret, setShowSecret] = useState(false);
 
   const [isSignUp, setIsSignUp] = useState(true);
+
+  useEffect(() => {
+    let auth = localStorage.getItem("auth");
+    if (auth) {
+      auth = JSON.parse(auth);
+      readKey(auth.key, auth.email);
+    }
+  }, []);
 
   const readKey = async (key, email) => {
     try {
@@ -30,6 +30,7 @@ const Login = ({ setIsLoggedIn }) => {
           newData.forEach((i) => {
             if (isAuth) return;
             if (i["id"] === key && i["email"] === email) {
+              localStorage.setItem("auth", JSON.stringify({ key, email }));
               isAuth = true;
               setIsLoggedIn(isAuth);
             }

@@ -2,9 +2,11 @@ import { useContext, useRef, useState } from "react";
 import { QuestionDataContext } from "../context/QuestionDataContext";
 import { useNavigate } from "react-router-dom";
 import { CurrentSectionContext } from "../context/currentSectionContext";
+import { Button } from "semantic-ui-react";
 
 const Summary = ({ showSummary, setShowSummary }) => {
   const { data } = useContext(QuestionDataContext);
+  const [isLoading, setIsLoading] = useState(false);
   // const { currectSection } = useContext(CurrentSectionContext);
   const navigate = useNavigate();
 
@@ -27,7 +29,8 @@ const Summary = ({ showSummary, setShowSummary }) => {
     return letters;
   }
 
-  const submitExamResult = () => {
+  const submitExamResult = async () => {
+    await setIsLoading(true);
     const questionAttempted = document.querySelectorAll(
       "#quesNavPanel0 span.answered"
     ).length;
@@ -75,6 +78,7 @@ const Summary = ({ showSummary, setShowSummary }) => {
       );
     }
     const resultantMarks = correctMarks - penalityMarks;
+    await setIsLoading(false);
 
     navigate("/result", {
       state: {
@@ -176,22 +180,18 @@ const Summary = ({ showSummary, setShowSummary }) => {
             </tr>
             <tr>
               <td style={{ textAlign: "center" }}>
-                <input
-                  // onclick="WebApp.SubmitResults();"
+                <Button
+                  loading={isLoading}
                   type="button"
-                  className="button"
-                  defaultValue="Yes"
                   onClick={submitExamResult}
-                />
+                >
+                  Yes
+                </Button>
               </td>
               <td style={{ textAlign: "center" }}>
-                <input
-                  // onclick="WebApp.DisplayExamPage('active');"
-                  type="button"
-                  className="button"
-                  defaultValue="No"
-                  onClick={() => setShowSummary(false)}
-                />
+                <Button type="button" onClick={() => setShowSummary(false)}>
+                  No
+                </Button>
               </td>
             </tr>
           </tbody>
