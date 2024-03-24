@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Button, Form, Grid, Message, Segment } from "semantic-ui-react";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { db, isAuthUser, isUserExist } from "../firebase";
+import ExamList from "./ExamList";
+import demoData from "../demoData.json";
 
 const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState("");
   const [key, setKey] = useState("");
   const [showSecret, setShowSecret] = useState(false);
-
   const [isSignUp, setIsSignUp] = useState(true);
 
   useEffect(() => {
@@ -19,36 +20,26 @@ const Login = ({ setIsLoggedIn }) => {
   }, []);
 
   const readKey = async (key, email) => {
-    try {
-      const docRef = await getDocs(collection(db, "keys")).then(
-        (querySnapshot) => {
-          const newData = querySnapshot.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }));
-          let isAuth = false;
-          newData.forEach((i) => {
-            if (isAuth) return;
-            if (i["id"] === key && i["email"] === email) {
-              localStorage.setItem("auth", JSON.stringify({ key, email }));
-              isAuth = true;
-              setIsLoggedIn(isAuth);
-            }
-          });
-          if (!isAuth) alert("Sorry wrong email or key");
-        }
-      );
-    } catch (e) {
-      console.error("Error adding document: ", e);
+    const isRealUser = await isAuthUser(email, key);
+    if (isRealUser === true) {
+      localStorage.setItem("auth", JSON.stringify({ key, email }));
+      setIsLoggedIn(isRealUser);
+    } else {
+      alert("Sorry wrong email or key");
     }
   };
 
   const addDataToDB = async (email) => {
     try {
-      const docRef = await addDoc(collection(db, "keys"), {
-        email,
-      });
-      console.log("Document written with ID: ", docRef.id);
+      const userExists = await isUserExist(email);
+      if (!userExists) {
+        const docRef = await addDoc(collection(db, "keys"), {
+          email,
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } else {
+        alert("Email already in use.");
+      }
     } catch (e) {
       console.error("Error adding document: ", e);
     }
@@ -114,6 +105,8 @@ const Login = ({ setIsLoggedIn }) => {
             {!isSignUp ? "Sign up" : "Login"} here
           </Button>
         </Message>
+        <h3>Some Unlocked Tests</h3>
+        <ExamList data={demoData} />
         {showSecret && (
           <Message>
             <Message.Header

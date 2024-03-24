@@ -3,6 +3,7 @@ import { QuestionDataContext } from "../context/QuestionDataContext";
 import { useNavigate } from "react-router-dom";
 import { MenuItem, Menu, Segment, Button, Icon } from "semantic-ui-react";
 import Login from "./Login";
+import ExamList from "./ExamList";
 
 const Home = () => {
   const { data, setData } = useContext(QuestionDataContext);
@@ -57,37 +58,7 @@ const Home = () => {
       </Menu>
 
       <Segment>
-        {data &&
-          data[activeItem]
-            .sort((a, b) => {
-              if (a.name < b.name) {
-                return -1;
-              } else if (a.name > b.name) {
-                return 1;
-              }
-              return 0;
-            })
-            .map((i) => (
-              <div key={i["name"]}>
-                <Button
-                  icon
-                  labelPosition="left"
-                  basic
-                  compact
-                  onClick={async () => {
-                    // localStorage.clear();
-                    // setTimeout(() => {
-                    setData(i);
-                    navigate("/home");
-                    // }, 1000);
-                  }}
-                >
-                  <Icon name="lock" />
-
-                  {i["name"]}
-                </Button>
-              </div>
-            ))}
+        <ExamList activeItem={activeItem} data={data} />
       </Segment>
     </div>
   ) : (
