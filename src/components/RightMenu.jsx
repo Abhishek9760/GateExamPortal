@@ -23,6 +23,7 @@ export const RightMenu = () => {
   const [notVisited, setNotVisited] = useState(0);
   const [reviewCount, setReviewCount] = useState(0);
   const [answeredAndReviewCount, setAnsweredAndReviewCount] = useState(0);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const answers = localStorage.getItem(`${data.name}-answer`);
@@ -87,9 +88,19 @@ export const RightMenu = () => {
       .padStart(2, "0")}:${secondsLeft.toString().padStart(2, "0")}`;
   };
 
+  const handleDrawer = () => {
+    if (!drawerOpen) {
+      setDrawerOpen(true);
+      document.querySelector(".mainRight").style.transform = "translateX(0)";
+    } else {
+      document.querySelector(".mainRight").style.transform = "translateX(100%)";
+      setDrawerOpen(false);
+    }
+  };
+
   return (
     <div className="mainRight mainRightQuiz">
-      <div id="examNavButton" />
+      <div id="examNavButton" onClick={handleDrawer} />
       <div id="timer" style={{ height: 90 }}>
         <div id="timerLeftSideDiv">
           <div id="candImg">
