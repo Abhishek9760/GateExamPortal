@@ -317,7 +317,10 @@ export const RightMenu = () => {
                   <center>
                     <input
                       id="viewQPButton"
-                      style={{ borderColor: "##f5c56d" }}
+                      style={{
+                        borderColor: "#efc068",
+                        backgroundColor: "#f7e2ba",
+                      }}
                       type="button"
                       className="button1"
                       defaultValue="Start Exam"
