@@ -18,8 +18,6 @@ import {
 } from "./context/QuestionDataContext";
 import { useContext } from "react";
 
-import { TimerContext, TimerContextProvider } from "./context/TimerContext";
-
 // import { MathJaxContext } from "better-react-mathjax";
 
 const Header = ({ title }) => {
@@ -66,27 +64,25 @@ const Main = () => {
 
 function App() {
   return (
-    <TimerContextProvider>
-      <QuestionDataContextProvider>
-        <QuestionStatusContextProvider>
-          <AnswerContextProvider>
-            <CurrentQuestionContextProvider>
-              <CurrentQuestionNumberContextProvider>
-                <CurrentSectionContextProvider>
-                  <Router>
-                    <Routes>
-                      <Route path="/home" element={<Main />}></Route>
-                      <Route path="/" element={<Home />}></Route>
-                      <Route path="/result" element={<Result />}></Route>
-                    </Routes>
-                  </Router>
-                </CurrentSectionContextProvider>
-              </CurrentQuestionNumberContextProvider>
-            </CurrentQuestionContextProvider>
-          </AnswerContextProvider>
-        </QuestionStatusContextProvider>
-      </QuestionDataContextProvider>
-    </TimerContextProvider>
+    <QuestionDataContextProvider>
+      <QuestionStatusContextProvider>
+        <AnswerContextProvider>
+          <CurrentQuestionContextProvider>
+            <CurrentQuestionNumberContextProvider>
+              <CurrentSectionContextProvider>
+                <Router>
+                  <Routes>
+                    <Route path="/home" element={<Main />}></Route>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/result" element={<Result />}></Route>
+                  </Routes>
+                </Router>
+              </CurrentSectionContextProvider>
+            </CurrentQuestionNumberContextProvider>
+          </CurrentQuestionContextProvider>
+        </AnswerContextProvider>
+      </QuestionStatusContextProvider>
+    </QuestionDataContextProvider>
   );
 }
 

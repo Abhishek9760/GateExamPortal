@@ -1,28 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { QuestionDataContext } from "../context/QuestionDataContext";
 import { useNavigate } from "react-router-dom";
-import {
-  MenuMenu,
-  MenuItem,
-  Input,
-  Menu,
-  Segment,
-  Button,
-  Icon,
-} from "semantic-ui-react";
+import { MenuItem, Menu, Segment, Button, Icon } from "semantic-ui-react";
+import Login from "./Login";
 
 const Home = () => {
   const { data, setData } = useContext(QuestionDataContext);
   const [activeItem, setActiveItem] = useState("2021");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  // useEffect(() => {
-  //   localStorage.clear();
-  // }, []);
-
-  return (
+  return isLoggedIn ? (
     <div>
       <Menu pointing>
         <MenuItem
@@ -66,16 +56,19 @@ const Home = () => {
             .map((i) => (
               <div key={i["name"]}>
                 <Button
-                  // icon
-                  // labelPosition="left"
+                  icon
+                  labelPosition="left"
                   basic
                   compact
                   onClick={async () => {
+                    localStorage.clear();
+                    // setTimeout(() => {
                     setData(i);
                     navigate("/home");
+                    // }, 1000);
                   }}
                 >
-                  {/* <Icon name="lock" /> */}
+                  <Icon name="lock" />
 
                   {i["name"]}
                 </Button>
@@ -83,6 +76,8 @@ const Home = () => {
             ))}
       </Segment>
     </div>
+  ) : (
+    <Login setIsLoggedIn={setIsLoggedIn} />
   );
 };
 
