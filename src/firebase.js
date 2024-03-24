@@ -42,6 +42,7 @@ export const isAuthUser = async (email, key) => {
     return auth;
   } catch (e) {
     console.error("Error adding document: ", e);
+
     return false;
   }
 };
