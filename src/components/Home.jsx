@@ -52,6 +52,7 @@ const Home = () => {
           position="right"
           name="Clear Exam Data"
           onClick={clearExamData}
+          style={{ backgroundColor: "cyan" }}
         />
       </Menu>
 
