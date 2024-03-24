@@ -16,7 +16,7 @@ const Login = ({ setIsLoggedIn }) => {
   const [key, setKey] = useState("");
   const [showSecret, setShowSecret] = useState(false);
 
-  const [isSignUp, setIsSignUp] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(true);
 
   const readKey = async (key, email) => {
     try {
