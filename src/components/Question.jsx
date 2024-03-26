@@ -54,13 +54,13 @@ export const Question = ({ ques, ques_num }) => {
             Question Type : <span id="quesType">{ques.type}</span>
           </span>
           <span className="marks">
-            Marks for correct answer{" "}
+            Marks for correct answer
             <font style={{ color: "green" }} id="quesAward">
               {ques.award}
             </font>
-            ; Negative Marks{" "}
+            ; Negative Marks
             <font style={{ color: "red" }} id="quesPenalty">
-              {Math.round(ques.penality * 100) / 100}
+              {Math.round(ques.penalty * 100) / 100}
             </font>
           </span>
         </div>

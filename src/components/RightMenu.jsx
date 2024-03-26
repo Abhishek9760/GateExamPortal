@@ -15,7 +15,7 @@ export const RightMenu = () => {
   const { questionStatus } = useContext(QuestionStatusContext);
 
   const [timeLeft, setTimeLeft] = useState(data ? data.duration * 60 : 0); // Initial time in seconds (3 hours)
-  // const [timeLeft, setTimeLeft] = useState(30); // Initial time in seconds (3 hours)
+  // const [timeLeft, setTimeLeft] = useState(10); // Initial time in seconds (3 hours)
   const [startTimer, setStartTimer] = useState(false);
 
   const [totalAnswered, setTotalAnswered] = useState(0);
@@ -61,6 +61,7 @@ export const RightMenu = () => {
   useEffect(() => {
     if (timeLeft === 0) {
       alert("done");
+      document.querySelector(".confirmSubmit").click();
     }
   }, [timeLeft]);
 

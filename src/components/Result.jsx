@@ -117,16 +117,6 @@ const Result = () => {
                 <span className="exam_num_item">
                   {Math.round(state.penalityMarks * 100) / 100}
                 </span>
-                {/* <span className="exam_result_header">
-                <span className="exam_result_header_one" title="1 Mark">
-                  0
-                </span>
-                +{" "}
-                <span className="exam_result_headrer_two" title="2 Marks">
-                  {" "}
-                  0
-                </span>
-              </span> */}
               </p>
             </div>
             <div className="exam_table_item exam_result_marks">
@@ -183,7 +173,9 @@ const Result = () => {
             <div className="exam_table_item exam_time_taken">
               <p className="exam_qs_title">Time Taken: </p>
               <p className="res_num">
-                <span className="exam_min_taken">{state.timeTaken}</span>
+                <span className="exam_min_taken">
+                  {Math.round(state.timeTaken * 100) / 100} Minutes
+                </span>
               </p>
             </div>
           </div>
@@ -230,11 +222,11 @@ const Result = () => {
                             Award: {ques.award}
                           </span>
                           <span className="res_qs_top_meta1 res_qs_penalty badge badge-secondary">
-                            Penalty: {ques.penality}
+                            {Math.round(ques.penalty * 100) / 100}
                           </span>
-                          <span className="res_qs_top_meta1 res_qs_category badge badge-secondary">
+                          {/* <span className="res_qs_top_meta1 res_qs_category badge badge-secondary">
                             Combinatory
-                          </span>
+                          </span> */}
                         </div>
                         <div className="res_question_text">
                           <MathJax

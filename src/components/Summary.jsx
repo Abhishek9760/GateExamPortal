@@ -1,13 +1,11 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useState } from "react";
 import { QuestionDataContext } from "../context/QuestionDataContext";
 import { useNavigate } from "react-router-dom";
-import { CurrentSectionContext } from "../context/currentSectionContext";
 import { Button } from "semantic-ui-react";
 
 const Summary = ({ showSummary, setShowSummary }) => {
   const { data } = useContext(QuestionDataContext);
   const [isLoading, setIsLoading] = useState(false);
-  // const { currectSection } = useContext(CurrentSectionContext);
   const navigate = useNavigate();
 
   const sumArrays = (arr) => {
@@ -29,6 +27,21 @@ const Summary = ({ showSummary, setShowSummary }) => {
     return letters;
   }
 
+  function convertTimeToMinutes(timeString) {
+    // Split the time string into an array of hour, minute, and second strings
+    const [hours, minutes, seconds] = timeString.split(":");
+
+    // Convert each value to a number
+    const hoursInMinutes = parseInt(hours) * 60;
+    const minutesAsNumber = parseInt(minutes);
+    const secondsInMinutes = parseInt(seconds) / 60;
+
+    // Calculate total minutes by adding hours, minutes, and seconds converted to minutes
+    const totalMinutes = hoursInMinutes + minutesAsNumber + secondsInMinutes;
+
+    return totalMinutes;
+  }
+
   const submitExamResult = async () => {
     await setIsLoading(true);
     const questionAttempted = document.querySelectorAll(
@@ -44,7 +57,9 @@ const Summary = ({ showSummary, setShowSummary }) => {
     let correctMarks = 0;
     let penalityMarks = 0;
     let examDuration = data.duration;
-    let timeTaken = document.querySelector("#timeInMins").textContent;
+    let timeTaken =
+      data.duration -
+      convertTimeToMinutes(document.querySelector("#timeInMins").textContent);
     const totalMarks = data.total_marks;
     if (answers) {
       const parsedAnswers = JSON.parse(answers);
@@ -159,7 +174,7 @@ const Summary = ({ showSummary, setShowSummary }) => {
           style={{ marginTop: "5%" }}
         >
           <tbody id="group_summary">
-            <tr>
+            <tr key="4343">
               <th>Section Name</th>
               <th>No. of Questions</th>
               <th>Answered</th>
@@ -183,6 +198,7 @@ const Summary = ({ showSummary, setShowSummary }) => {
                 <Button
                   loading={isLoading}
                   type="button"
+                  className="confirmSubmit"
                   onClick={submitExamResult}
                 >
                   Yes
