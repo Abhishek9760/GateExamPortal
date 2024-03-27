@@ -9,8 +9,9 @@ export const AnswerContextProvider = ({ children }) => {
 
   useEffect(() => {
     const ans = localStorage.getItem(`${data?.name}-answer`);
+    console.log(ans);
     if (ans) setAnswers(JSON.parse(ans));
-  }, []);
+  }, [data]);
 
   const saveAnswerToStorage = (examName, postId, answer) => {
     const answers = localStorage.getItem(`${examName}-answer`);

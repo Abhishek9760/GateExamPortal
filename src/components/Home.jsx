@@ -9,7 +9,6 @@ const Home = () => {
   const { data, setData } = useContext(QuestionDataContext);
   const [activeItem, setActiveItem] = useState("2021");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate = useNavigate();
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 

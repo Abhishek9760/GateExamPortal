@@ -10,8 +10,31 @@ import { AnswerContext } from "../context/AnswerContext";
 import { QuestionStatusContext } from "../context/QuestionStatusContext";
 import { QuestionDataContext } from "../context/QuestionDataContext";
 import Summary from "./Summary";
+import Calculator from "./Calculator";
 
+const addScript = (url) => {
+  const script = document.createElement("script");
+
+  console.log("script added", called);
+  script.src = url;
+  script.async = true;
+
+  document.body.appendChild(script);
+};
+
+let called = false;
 const LeftMenu = () => {
+  useEffect(() => {
+    if (!called) {
+      addScript("./Assessment Examination Center_files/calc.js");
+      addScript("./Assessment Examination Center_files/calc2.js");
+    }
+    called = true;
+    return () => {
+      const calc = document.querySelectorAll("script[async]");
+      console.log(calc);
+    };
+  }, []);
   const { data } = useContext(QuestionDataContext);
   const { currentQuestionNumber, setCurrentQuestionNumber } = useContext(
     CurrentQuestionNumberContext
@@ -211,6 +234,7 @@ const LeftMenu = () => {
         </div>
       </div>
       <Summary showSummary={showSummary} setShowSummary={setShowSummary} />
+      <Calculator />
     </div>
   );
 };
